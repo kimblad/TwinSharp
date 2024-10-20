@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwinSharp", "TC#\TwinSharp.csproj", "{59406487-58EB-4A87-A0A4-DB069CF302D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59406487-58EB-4A87-A0A4-DB069CF302D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59406487-58EB-4A87-A0A4-DB069CF302D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59406487-58EB-4A87-A0A4-DB069CF302D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59406487-58EB-4A87-A0A4-DB069CF302D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E88FD08-D9A9-4596-BEA5-81AD95C8EDA8}
+	EndGlobalSection
+EndGlobal

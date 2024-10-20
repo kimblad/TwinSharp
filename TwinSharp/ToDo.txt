@@ -1,0 +1,21 @@
+﻿* Control Scope over ADS.
+* Remove extension methods and use ".ReadAny<double>" instead of ReadAny<double>.
+* Use CoPilot to describe classes. Do this when they are pretty much complete so that CoPilot has more information.
+* Add a class that describes an IPC
+* Add a class that describes IO/EtherCAT master and slaves
+* AdsTool has a method for ListECatMasters
+* Class that describes channels
+* Class that describes the groups
+* Class that describes CNC
+* Class that describes an EtherCAT device
+* TcTouchLock
+* Check if IpcDisplayDevice works correctly
+* Seperate namespace for: CNC, IPC, something else?
+
+
+CNC:
+It is advisable to use the logical access. The advantage here is that access to channel 6 remains unchanged
+if channel 1 is deactivated. With index-based access, the index group of channel 6 changes from 0x21302 to
+0x21301 in this case and it becomes the ‘first’ channel
+
+Tre olika portar. GEO 551, SDA 552, COM 553
