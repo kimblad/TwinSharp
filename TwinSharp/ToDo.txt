@@ -10,7 +10,7 @@
 * Class that describes an EtherCAT device
 * TcTouchLock
 * Check if IpcDisplayDevice works correctly
-* Seperate namespace for: CNC, IPC, something else?
+* Move CNCAxis Status ChannelStatus to be under a CncAxis under the Channel.
 
 
 CNC:
