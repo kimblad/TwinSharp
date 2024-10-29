@@ -35,6 +35,27 @@
 
         public ushort AlignmentBytes;
     }
+
+    public struct HLI_ADD_CMD_VALUE
+    {
+        public int m_add_pos_value;
+        public int m_add_speed_value;
+        public int sgn32_free_1;
+        public int sgn32_free_2;
+        public int sgn32_free_3;
+        public int sgn32_free_4;
+        public int sgn32_free_5;
+        public int sgn32_free_6;
+    }
+
+    public struct MC_CONTROL_BOOL_UNIT
+    {
+        public bool reqeust_r;
+        public bool enable_w;
+        public bool command_w;
+        public bool state_r;
+        //public int fill_up_1;
+    }
 }
 
 

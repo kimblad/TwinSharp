@@ -10,13 +10,16 @@ namespace TwinSharp.CNC
         readonly AdsClient comClient;
 
         public readonly AxisStatus Status;
+        public readonly ExternalAxisCommanding ExternalAxisCommanding;
 
-        internal CncAxis(uint index, AmsNetId target, AdsClient comClient)
+        internal CncAxis(uint index, AmsNetId target, AdsClient plcClient, AdsClient comClient)
         {
             this.index = index;
             this.target = target;
             this.comClient = comClient;
             this.Status = new AxisStatus(index, comClient);
+
+            ExternalAxisCommanding = new ExternalAxisCommanding(index, plcClient);
         }
 
 

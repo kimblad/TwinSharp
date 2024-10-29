@@ -12,6 +12,7 @@ namespace TwinSharp.CNC
         public AdsClient geoClient; //("GEO CNC") operates in the interpolation cycle of the CNC. Among other tasks, it calculates the respective set values for the axes and controls the axes.
         public AdsClient sdaClient; //The "SDA CNC task" deals with decoding and processing of the NC programs and should therefore have a lower priority than the GEO task.
         public AdsClient comClient; //The "COM CNC task" deals with the communication integration of the CNC kernel.
+        public AdsClient plcClient;
 
         public CNC(AmsNetId target)
         {
@@ -24,6 +25,9 @@ namespace TwinSharp.CNC
             comClient = new AdsClient();
             comClient.Connect(target, 553);
 
+            plcClient = new AdsClient();
+            plcClient.Connect(target, 851);
+
             var comDescriptions = CreateComDictionary(comClient);
 
             Platform = new CncPlatform(comClient, comDescriptions);
@@ -31,13 +35,13 @@ namespace TwinSharp.CNC
             Channels = new CncChannel[Platform.ChannelCount];
             for (int i = 0; i < Channels.Length; i++)
             {
-                Channels[i] = new CncChannel(geoClient, comClient, i + 1, comDescriptions);
+                Channels[i] = new CncChannel(plcClient, geoClient, comClient, i + 1, comDescriptions);
             }
 
             Axes = new CncAxis[Platform.AxisCount];
             for (int i = 0; i < Axes.Length; i++)
             {
-                Axes[i] = new CncAxis((uint)(i + 1), target, comClient);
+                Axes[i] = new CncAxis((uint)(i + 1), target, plcClient, comClient);
             }
         }
 

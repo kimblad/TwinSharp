@@ -1,30 +1,43 @@
-﻿using TwinCAT.Ads;
+﻿using System;
+using System.Text;
+using TwinCAT.Ads;
 
 namespace TwinSharp.CNC
 {
     public class CncChannel
     {
-        readonly int Id;
-        readonly Dictionary<string, ObjectDescription> descriptions;
+        readonly int ChannelNumber;
+        public readonly Dictionary<string, ObjectDescription> Descriptions;
         readonly AdsClient comClient;
 
         public readonly OperationModeManager OperationModeManager;
         public readonly Interpolator Interpolator;
         public readonly ControlCommands ControlCommands;
         public readonly ContourVisualization ContourVisualization;
+        public readonly FeedOverride FeedOverride;
+        public readonly BackwardsOnPath BackwardsOnPath;
+        public readonly SingleBlock SingleBlock;
+        public readonly BlockSearch BlockSearch;
+        public readonly DeleteDistanceToGo DeleteDistanceToGo;
+        public readonly DataStreaming DataStreaming;
 
-
-        internal CncChannel(AdsClient geoClient, AdsClient comClient, int id, Dictionary<string, ObjectDescription> descriptions)
+        internal CncChannel(AdsClient plcClient, AdsClient geoClient, AdsClient comClient, int channelNumber, Dictionary<string, ObjectDescription> descriptions)
         {
             this.comClient = comClient;
-            Id = id;
-            this.descriptions = descriptions;
+            ChannelNumber = channelNumber;
+            this.Descriptions = descriptions;
 
-            Interpolator = new Interpolator(geoClient, id);
+            Interpolator = new Interpolator(geoClient, channelNumber);
 
-            OperationModeManager = new OperationModeManager(geoClient, comClient, id);
+            OperationModeManager = new OperationModeManager(geoClient, comClient, channelNumber);
             ControlCommands = new ControlCommands(comClient, descriptions);
-            ContourVisualization = new ContourVisualization(comClient, id);
+            ContourVisualization = new ContourVisualization(comClient, channelNumber);
+            FeedOverride = new FeedOverride(comClient, channelNumber);
+            BackwardsOnPath = new BackwardsOnPath(plcClient, channelNumber);
+            SingleBlock = new SingleBlock(comClient, channelNumber);
+            BlockSearch = new BlockSearch(comClient, channelNumber);
+            DeleteDistanceToGo = new DeleteDistanceToGo(plcClient, channelNumber);
+            DataStreaming = new DataStreaming(comClient, channelNumber);
         }
 
         /// <summary>
@@ -35,7 +48,7 @@ namespace TwinSharp.CNC
         {
             get
             {
-                var obj = descriptions["mc_cmd_bs_covered_distance_r"];
+                var obj = Descriptions["mc_cmd_bs_covered_distance_r"];
                 double tens = comClient.ReadAny<double>(obj.IndexGroup, obj.IndexOffset);
                 return tens / 10.0;
             }
@@ -49,7 +62,7 @@ namespace TwinSharp.CNC
         {
             get
             {
-                var obj = descriptions["mc_cmd_bs_distance_prog_start_r"];
+                var obj = Descriptions["mc_cmd_bs_distance_prog_start_r"];
                 return comClient.ReadAny<double>(obj.IndexGroup, obj.IndexOffset);
             }
         }
@@ -62,7 +75,7 @@ namespace TwinSharp.CNC
         {
             get
             {
-                var obj = descriptions["mc_block_count_r"];
+                var obj = Descriptions["mc_block_count_r"];
                 return comClient.ReadAny<uint>(obj.IndexGroup, obj.IndexOffset);
             }
         }
@@ -76,7 +89,7 @@ namespace TwinSharp.CNC
         {
             get
             {
-                var obj = descriptions["mc_command_feedrate_r"];
+                var obj = Descriptions["mc_command_feedrate_r"];
                 return comClient.ReadAny<double>(obj.IndexGroup, obj.IndexOffset);
             }
         }
@@ -85,36 +98,236 @@ namespace TwinSharp.CNC
         /// Path feed was programmed in the NC program<value> Weighted by the current real-time influences such as override.
         /// Unit: 1 µm/s
         /// </summary>
-        public double PathFeedActual
+        public double PathFeedProgrammedWeighted
         {
             get
             {
-                var obj = descriptions["mc_active_feedrate_r"];
+                var obj = Descriptions["mc_active_feedrate_r"];
                 return comClient.ReadAny<double>(obj.IndexGroup, obj.IndexOffset);
             }
         }
     }
+
+    public class DataStreaming
+    {
+        readonly AdsClient comClient;
+        readonly uint indexGroup;
+        readonly uint indexOffset;
+        public DataStreaming(AdsClient comClient, int channelNumber)
+        {
+            this.comClient = comClient;
+
+            indexGroup = 0x120100 + (uint)channelNumber;
+            indexOffset = 0x90;
+        }
+
+
+        /// <summary>
+        /// This COM interface object can write the data stream with incremental NC commands.
+        /// One complete NC line must always be written.Several NC lines may also be written jointly in one write access.
+        /// Each NC line must be terminated by a carriage return (ASCII value = 13) and line feed(ASCII value = 10).
+        /// </summary>
+        /// <param name="ncLines"></param>
+        public void Write(string ncLines)
+        {
+            comClient.WriteAny(indexGroup, indexOffset, ncLines);
+        }
+
+
+    }
+
+    public class BackwardsOnPath
+    {
+        readonly AdsClient plcClient;
+        readonly Dictionary<Identifier, uint> variableHandles;
+        public BackwardsOnPath(AdsClient plcClient, int channelNumber)
+        {
+            this.plcClient = plcClient;
+            variableHandles = CreateVariableHandles(plcClient, channelNumber);
+        }
+
+        private Dictionary<Identifier, uint> CreateVariableHandles(AdsClient plcClient, int channelNumber)
+        {
+            var handles = new Dictionary<Identifier, uint>();
+            uint handle;
+
+            string prefix = string.Format("HLI_Global_Variables.gpCh[{0}]^.bahn_mc_control", channelNumber - 1);
+            
+            handle = plcClient.CreateVariableHandle(prefix + ".backward_motion.command_w");
+            handles.Add(Identifier.SetSelectBackwardMotion, handle);
+
+            handle = plcClient.CreateVariableHandle(prefix + ".backward_motion.enable_w");
+            handles.Add(Identifier.SetEnableBackwardMotion, handle);
+
+            handle = plcClient.CreateVariableHandle(prefix + ".backward_motion.state_r");
+            handles.Add(Identifier.GetSelectBackwardMotion, handle);
+
+
+            handle = plcClient.CreateVariableHandle(prefix + ".simulate_motion.command_w");
+            handles.Add(Identifier.SetSelectSimulatedMotion, handle);
+
+            handle = plcClient.CreateVariableHandle(prefix + ".simulate_motion.state_r");
+            handles.Add(Identifier.GetSelectSimulatedMotion, handle);
+
+
+            handle = plcClient.CreateVariableHandle(prefix + ".backward_storage_off.command_w");
+            handles.Add(Identifier.SetResetBackwardMotionMemory, handle);
+
+            handle = plcClient.CreateVariableHandle(prefix + ".backward_storage_off.state_r");
+            handles.Add(Identifier.GetResetBackwardMotionMemory, handle);
+
+
+            handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed.command_w");
+            handles.Add(Identifier.SetSpecifyExternalPathVelocity, handle);
+
+            handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed.state_r");
+            handles.Add(Identifier.GetSpecifyExternalPathVelocity, handle);
+
+
+            handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed_valid.command_w");
+            handles.Add(Identifier.SetActivateExternalPathVelocity, handle);
+
+            handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed_valid.state_r");
+            handles.Add(Identifier.GetActivateExternalPathVelocity, handle);
+
+            return handles;
+        }
+
+
+        /// <summary>
+        /// Select/deselect backward motion on the path In basic setting, M/H functions are executed without synchronisation(MOS) in this mode.
+        /// </summary>
+        public bool SelectBackwardMotion
+        {
+            get => plcClient.ReadAny<bool>(variableHandles[Identifier.GetSelectBackwardMotion]);
+            set => plcClient.WriteAny(variableHandles[Identifier.SetSelectBackwardMotion], value);
+        }
+
+
+        public bool EnableInterface
+        {
+            set => plcClient.WriteAny(variableHandles[Identifier.SetEnableBackwardMotion], value);
+        }
+
+        /// <summary>
+        /// Select/deselect simulated forward motion on the path In basic setting, M/H functions are executed without synchronisation (MOS) in this mode. Sections in the NC program can be skipped during program runtime in combination with the NC command #OPTIONAL EXECUTION.
+        /// </summary>
+        public bool SelectSimulatedForwardMotion
+        {
+            get => plcClient.ReadAny<bool>(variableHandles[Identifier.GetSelectSimulatedMotion]);
+            set => plcClient.WriteAny(variableHandles[Identifier.SetSelectSimulatedMotion], value);
+        }
+
+        /// <summary>
+        /// Deselects backward motion memory No further NC block is saved in the memory. The memory is deleted. The backward motion memory can only be cleared if no NC program is active.
+        /// </summary>
+        public bool ResetBackwardMotionMemory
+        {
+            get => plcClient.ReadAny<bool>(variableHandles[Identifier.GetResetBackwardMotionMemory]);
+            set => plcClient.WriteAny(variableHandles[Identifier.SetResetBackwardMotionMemory], value);
+        }
+
+        /// <summary>
+        /// External path velocity specified. The path velocity setting is activated by the control unit ext_command_speed_valid. If the velocity specified in negative, the tool moves backwards along the path
+        /// Unit: 1 μm/s
+        /// </summary>
+        public uint ExternalPathVelocity
+        {
+            //ToDo: Why is this an uint when documentation says it can be negative. Check with Beckhoff.
+            get => plcClient.ReadAny<uint>(variableHandles[Identifier.GetSpecifyExternalPathVelocity]);
+            set => plcClient.WriteAny(variableHandles[Identifier.SetSpecifyExternalPathVelocity], value);
+        }
+
+        /// <summary>
+        /// Activate the velocity commanded in the ext_command_speed control unit. To reach the commanded velocity, all axes involved in the motion are accelerated or decelerated. If this value is TRUE, the sign is considered in the current path feed (active_feed_r control unit).
+        /// </summary>
+        public bool ActivateExternalPathVelocity
+        {
+            get => plcClient.ReadAny<bool>(variableHandles[Identifier.GetActivateExternalPathVelocity]);
+            set => plcClient.WriteAny(variableHandles[Identifier.SetActivateExternalPathVelocity], value);
+        }
+
+
+        enum Identifier
+        {
+            SetSelectBackwardMotion,
+            GetSelectBackwardMotion,
+            SetSelectSimulatedMotion,
+            GetSelectSimulatedMotion,
+            SetResetBackwardMotionMemory,
+            GetResetBackwardMotionMemory,
+            SetSpecifyExternalPathVelocity,
+            GetSpecifyExternalPathVelocity,
+            SetActivateExternalPathVelocity,
+            GetActivateExternalPathVelocity,
+            SetEnableBackwardMotion,
+        }
+    }
+
+    public class FeedOverride
+    {
+        public readonly FeedOverrideAdresses Adresses;
+
+        readonly AdsClient comClient;
+        readonly uint indexGroup;
+        internal FeedOverride(AdsClient comClient, int channelNumber)
+        {
+            this.comClient = comClient;
+            indexGroup = 0x120100 + (uint)channelNumber;
+
+            Adresses = new FeedOverrideAdresses(indexGroup);
+        }
+
+        public ushort CommandedFeedOverride
+        {
+            set => comClient.WriteAny(indexGroup, 0x09, value);
+            get => comClient.ReadAny<ushort>(indexGroup, 0x0A);
+        }
+
+        public ushort ActualFeedOverride
+        {
+            get => comClient.ReadAny<ushort>(indexGroup, Adresses.ActualFeedOverride);
+        }
+    }
+
+    public class FeedOverrideAdresses
+    {
+        readonly uint indexGroup;
+        internal FeedOverrideAdresses(uint indexGroup)
+        {
+            this.indexGroup = indexGroup;
+        }
+
+        public uint IndexGroup => indexGroup;
+
+        public uint ActualFeedOverride => 0x0C;
+
+    }
+
     public class OperationModeManager
     {
         readonly AdsClient geoClient;
         readonly AdsClient comClient;
         readonly uint geoIndexGroup;
         readonly uint comIndexGroup;
+        public readonly OperationModeAdresses Adresses;
         internal OperationModeManager(AdsClient geoClient, AdsClient comClient, int channelIndex)
         {
             this.geoClient = geoClient;
             this.comClient = comClient;
             geoIndexGroup = 0x123300 + (uint)channelIndex;
             comIndexGroup = 0x120100 + (uint)channelIndex;
+
+            Adresses = new OperationModeAdresses(geoIndexGroup);
         }
 
-        public OperationStates OperationStateActual
+        public OperationState OperationStateActual
         {
-            get => (OperationStates)geoClient.ReadAny<uint>(geoIndexGroup, 0x1F);
+            get => (OperationState)geoClient.ReadAny<uint>(geoIndexGroup, Adresses.OperationStateActual);
         }
-        public OperationModes OperationModeActual
+        public OperationMode OperationModeActual
         {
-            get => (OperationModes)geoClient.ReadAny<uint>(geoIndexGroup, 0x20);
+            get => (OperationMode)geoClient.ReadAny<uint>(geoIndexGroup, Adresses.OperationModeActual);
         }
 
         /// <summary>
@@ -138,12 +351,12 @@ namespace TwinSharp.CNC
             set => geoClient.WriteAny(geoIndexGroup, 0x2F, value);
         }
 
-        public OperationModes SetOperationMode
+        public OperationMode SetOperationMode
         {
             set => comClient.WriteAny(comIndexGroup, 0x104, (uint)value);
         }
 
-        public OperationStates SetOperationState
+        public OperationState SetOperationState
         {
             set => comClient.WriteAny(comIndexGroup, 0x105, (uint)value);
         }
@@ -153,6 +366,24 @@ namespace TwinSharp.CNC
             set => comClient.WriteAny(comIndexGroup, 0x108, value);
         }
 
+        public void Reset()
+        {
+            comClient.WriteAny(comIndexGroup, 0x11D, true);
+        }
+
+    }
+
+    public class OperationModeAdresses
+    {
+        uint geoIndexGroup;
+        internal OperationModeAdresses(uint geoIndexGroup)
+        {
+            this.geoIndexGroup = geoIndexGroup;
+        }
+
+        public uint GeoIndexGroup => geoIndexGroup;
+        public uint OperationStateActual => 0x1F;
+        public uint OperationModeActual => 0x20;
     }
 
     public class ControlCommands
@@ -338,6 +569,7 @@ namespace TwinSharp.CNC
         readonly uint index;
         readonly uint offset;
         readonly AdsClient geoClient;
+        public readonly InterpolatorAdresses Adresses;
 
         internal Interpolator(AdsClient geoClient, int channelId)
         {
@@ -346,6 +578,8 @@ namespace TwinSharp.CNC
             this.geoClient = geoClient;
             this.index = index;
             this.offset = offset;
+
+            Adresses = new InterpolatorAdresses(index, offset);
         }
 
         public bool Exists
@@ -541,7 +775,7 @@ namespace TwinSharp.CNC
 
         public int BlockNumberActual
         {
-            get => geoClient.ReadAny<int>(index, offset + 0x21);
+            get => geoClient.ReadAny<int>(index, Adresses.BlockNumberActual);
         }
 
         public double DwellTimeRemaning
@@ -835,5 +1069,22 @@ namespace TwinSharp.CNC
         {
             get => geoClient.ReadAny<uint>(index, offset + 0x72);
         }
+    }
+
+    public class InterpolatorAdresses
+    {
+        uint index;
+        uint baseOffset;
+        internal InterpolatorAdresses(uint index, uint offset)
+        {
+            this.index = index;
+            baseOffset = offset;
+        }
+
+        public uint GroupIndex => index;
+
+        public uint BlockNumberActual => baseOffset + 0x21;
+
+
     }
 }

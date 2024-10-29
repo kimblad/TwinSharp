@@ -1,9 +1,6 @@
 ﻿* Control Scope over ADS.
-* Remove extension methods and use ".ReadAny<double>" instead of ReadAny<double>.
 * Use CoPilot to describe classes. Do this when they are pretty much complete so that CoPilot has more information.
-* Add a class that describes an IPC
 * Add a class that describes IO/EtherCAT master and slaves
-* AdsTool has a method for ListECatMasters
 * Class that describes channels
 * Class that describes the groups
 * Class that describes CNC
@@ -11,11 +8,7 @@
 * TcTouchLock
 * Check if IpcDisplayDevice works correctly
 * Move CNCAxis Status ChannelStatus to be under a CncAxis under the Channel.
+* Remove existing status info from channel and replace with everything found in HLI Channel Status Info.
 
-
-CNC:
-It is advisable to use the logical access. The advantage here is that access to channel 6 remains unchanged
-if channel 1 is deactivated. With index-based access, the index group of channel 6 changes from 0x21302 to
-0x21301 in this case and it becomes the ‘first’ channel
-
-Tre olika portar. GEO 551, SDA 552, COM 553
+InfoSys måste vara fel här, de har bytt rubrik på de olika tabellerna: https://infosys.beckhoff.com/english.php?content=../content/1033/tf5200_blocksearch/348532363.html&id=5306263596625704412
+Answer on Stackoverflow, someone searching for a way to find all EtherCAT masters without knowing anything about the system. It is possible using ListEtherCATMasters()

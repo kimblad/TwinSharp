@@ -32,7 +32,7 @@
         SUPPRESS_TECHNO_OUTPUT = 0x2000, // Without output of technology functions (M/H/T). Set implicitly in connection with syntax check.
     }
 
-    public enum OperationModes
+    public enum OperationMode
     {
         STANDBY_MODE = 1,
         AUTOMATIC_MODE = 2,
@@ -41,7 +41,7 @@
         REFERENCE_MODE = 5
     }
 
-    public enum OperationStates
+    public enum OperationState
     {
         NoSignificance = 0,
         PROCESS_DESELECTED = 1,
