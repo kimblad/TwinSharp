@@ -4,9 +4,9 @@ using TwinCAT.Ads;
 
 namespace TwinSharp.CNC
 {
-    public class CncChannel
+    public class CncChannel : IDisposable
     {
-        readonly int ChannelNumber;
+        public readonly int ChannelNumber;
         public readonly Dictionary<string, ObjectDescription> Descriptions;
         readonly AdsClient comClient;
 
@@ -20,6 +20,7 @@ namespace TwinSharp.CNC
         public readonly BlockSearch BlockSearch;
         public readonly DeleteDistanceToGo DeleteDistanceToGo;
         public readonly DataStreaming DataStreaming;
+        public readonly TechnologyProcesses TechnologyProcesses;
 
         internal CncChannel(AdsClient plcClient, AdsClient geoClient, AdsClient comClient, int channelNumber, Dictionary<string, ObjectDescription> descriptions)
         {
@@ -29,7 +30,7 @@ namespace TwinSharp.CNC
 
             Interpolator = new Interpolator(geoClient, channelNumber);
 
-            OperationModeManager = new OperationModeManager(geoClient, comClient, channelNumber);
+            OperationModeManager = new OperationModeManager(plcClient, geoClient, comClient, channelNumber);
             ControlCommands = new ControlCommands(comClient, descriptions);
             ContourVisualization = new ContourVisualization(comClient, channelNumber);
             FeedOverride = new FeedOverride(comClient, channelNumber);
@@ -38,6 +39,7 @@ namespace TwinSharp.CNC
             BlockSearch = new BlockSearch(comClient, channelNumber);
             DeleteDistanceToGo = new DeleteDistanceToGo(plcClient, channelNumber);
             DataStreaming = new DataStreaming(comClient, channelNumber);
+            TechnologyProcesses = new TechnologyProcesses(plcClient, channelNumber);
         }
 
         /// <summary>
@@ -105,6 +107,13 @@ namespace TwinSharp.CNC
                 var obj = Descriptions["mc_active_feedrate_r"];
                 return comClient.ReadAny<double>(obj.IndexGroup, obj.IndexOffset);
             }
+        }
+
+        public void Dispose()
+        {
+            OperationModeManager?.Dispose();
+
+            GC.SuppressFinalize(this);
         }
     }
 
@@ -233,7 +242,7 @@ namespace TwinSharp.CNC
         /// </summary>
         public uint ExternalPathVelocity
         {
-            //ToDo: Why is this an uint when documentation says it can be negative. Check with Beckhoff.
+            //TODO: Why is this an uint when documentation says it can be negative. Check with Beckhoff.
             get => plcClient.ReadAny<uint>(variableHandles[Identifier.GetSpecifyExternalPathVelocity]);
             set => plcClient.WriteAny(variableHandles[Identifier.SetSpecifyExternalPathVelocity], value);
         }
@@ -304,75 +313,6 @@ namespace TwinSharp.CNC
 
     }
 
-    public class OperationModeManager
-    {
-        readonly AdsClient geoClient;
-        readonly AdsClient comClient;
-        readonly uint geoIndexGroup;
-        readonly uint comIndexGroup;
-        public readonly OperationModeAdresses Adresses;
-        internal OperationModeManager(AdsClient geoClient, AdsClient comClient, int channelIndex)
-        {
-            this.geoClient = geoClient;
-            this.comClient = comClient;
-            geoIndexGroup = 0x123300 + (uint)channelIndex;
-            comIndexGroup = 0x120100 + (uint)channelIndex;
-
-            Adresses = new OperationModeAdresses(geoIndexGroup);
-        }
-
-        public OperationState OperationStateActual
-        {
-            get => (OperationState)geoClient.ReadAny<uint>(geoIndexGroup, Adresses.OperationStateActual);
-        }
-        public OperationMode OperationModeActual
-        {
-            get => (OperationMode)geoClient.ReadAny<uint>(geoIndexGroup, Adresses.OperationModeActual);
-        }
-
-        /// <summary>
-        /// It may be necessary to specify parameters when commanding an operation mode change to ensure the successful change to a specific state of an operation mode. These parameters are saved in this element.
-        /// Automatic mode
-        /// The NC program name as character string.
-        /// Manual block
-        /// NC block(blocks)
-        /// Manual mode
-        /// no parameter: all axes are activated(G200)
-        /// explicit activation of specific axes with G200[Axis_1, ...]
-        /// General NC block sequence comprising several lines,
-        /// e.g.activate a kinematic
-        /// #KIN ID[1] $R$N G200
-        /// Homing
-        /// no parameter: NC program rpf.nc is started
-        /// explicit selection of axes by manual block(e.g.: G74 X1 Z2 )
-        /// </summary>
-        public string OperationModeChangeParameter
-        {
-            set => geoClient.WriteAny(geoIndexGroup, 0x2F, value);
-        }
-
-        public OperationMode SetOperationMode
-        {
-            set => comClient.WriteAny(comIndexGroup, 0x104, (uint)value);
-        }
-
-        public OperationState SetOperationState
-        {
-            set => comClient.WriteAny(comIndexGroup, 0x105, (uint)value);
-        }
-
-        public string SetOperationParameter
-        {
-            set => comClient.WriteAny(comIndexGroup, 0x108, value);
-        }
-
-        public void Reset()
-        {
-            comClient.WriteAny(comIndexGroup, 0x11D, true);
-        }
-
-    }
-
     public class OperationModeAdresses
     {
         uint geoIndexGroup;
@@ -420,24 +360,24 @@ namespace TwinSharp.CNC
         /// <summary>
         /// Current special channel mode such as syntax check or machining time calculation
         /// </summary>
-        public ChannelModes ChannelModeActive
+        public ChannelMode ChannelModeActive
         {
             get
             {
                 var obj = descriptions["mc_active_execution_mode_r"];
-                return (ChannelModes)comClient.ReadAny<int>(obj.IndexGroup, obj.IndexOffset);
+                return (ChannelMode)comClient.ReadAny<int>(obj.IndexGroup, obj.IndexOffset);
             }
         }
 
         /// <summary>
         /// Selection of a special channel mode such as syntax check or machining time calculation
         /// </summary>
-        public ChannelModes ChannelModeCommanded
+        public ChannelMode ChannelModeCommanded
         {
             get
             {
                 var obj = descriptions["mc_command_execution_mode_r"];
-                return (ChannelModes)comClient.ReadAny<int>(obj.IndexGroup, obj.IndexOffset);
+                return (ChannelMode)comClient.ReadAny<int>(obj.IndexGroup, obj.IndexOffset);
             }
             set
             {
@@ -482,7 +422,7 @@ namespace TwinSharp.CNC
         {
             get
             {
-                //ToDo: Don't use the COM dictionary, we need another dictionary for GEO objects.
+                //TODO: Don't use the COM dictionary, we need another dictionary for GEO objects.
                 var obj = descriptions["cnc_plc_present_r"];
                 return geoClient.ReadAny<bool>(obj.IndexGroup, obj.IndexOffset);
             }
@@ -508,10 +448,10 @@ namespace TwinSharp.CNC
         /// 0x0004 ON_LINE Online-Visu
         /// 0x0008 SYNCHK Syntax check
         /// </summary>
-        public uint ExecutionMode
+        public ChannelMode ExecutionMode
         {
-            get => comClient.ReadAny<uint>(group, 0x40);
-            set => comClient.WriteAny(group, 0x3F, value);
+            get => (ChannelMode)comClient.ReadAny<uint>(group, 0x40);
+            set => comClient.WriteAny(group, 0x3F, (uint)value);
         }
 
         /// <summary>

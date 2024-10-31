@@ -28,6 +28,13 @@ namespace TwinSharp.CNC
             plcClient = new AdsClient();
             plcClient.Connect(target, 851);
 
+#if DEBUG
+            geoClient.Timeout = 60_0000;
+            sdaClient.Timeout = 60_0000;
+            comClient.Timeout = 60_0000;
+            plcClient.Timeout = 60_0000;
+#endif
+
             var comDescriptions = CreateComDictionary(comClient);
 
             Platform = new CncPlatform(comClient, comDescriptions);
@@ -83,6 +90,7 @@ namespace TwinSharp.CNC
             comClient?.Dispose();
             geoClient?.Dispose();
             sdaClient?.Dispose();
+            plcClient?.Dispose();
 
             GC.SuppressFinalize(this);
         }

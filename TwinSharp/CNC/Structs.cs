@@ -1,4 +1,7 @@
-﻿namespace TwinSharp.CNC
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.Runtime.InteropServices;
+
+namespace TwinSharp.CNC
 {
     public struct SOLLKONT_VISU_PDU
     {
@@ -55,6 +58,69 @@
         public bool command_w;
         public bool state_r;
         //public int fill_up_1;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct TECHNO_UNIT_CH
+    {
+        [MarshalAs(UnmanagedType.I1)]
+        public bool please_rw;
+        [MarshalAs(UnmanagedType.I1)]
+        public bool done_w;
+        public TechnologyFunction TechnologyType; //M code, H code, S or T
+        public int fill_up_1;
+
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 39)]
+        public byte[] MSTH_PROCESS_CH;
+    }
+
+    /// <summary>
+    /// Further describes the TECHNO_UNIT_CH struct when it is a M or H function.
+    /// </summary>
+    public struct HLI_M_H_PROZESS
+    {
+        public uint Number; //Number of the M or H technology function.
+        public int ExpectedTime; //Expexted time for handling of the M or H technology function in [ms].
+        public uint BlockNumber; //NC Block number of the M or H technology function.
+        public uint ProgramRow; //NC program row of the M or H technology function.
+        public int additionalValue; //Additional value, if programmed in NC program.
+        public ushort nr_late_sync; //Counter of written late sync, if active sync present.
+        public ushort fill_up_1; //unused
+        public uint synchMode; //Synchronisation mode
+        public int fill_up_2; //unused
+    }
+
+
+    /// <summary>
+    /// Control unit to switch over the operation mode and poll the current state of operation mode management, including flow control of user data.
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_PROC_TRANS_TO_MODE_STATE
+    {
+        [MarshalAs(UnmanagedType.U4)]
+        public OperationMode FromMode;
+        [MarshalAs(UnmanagedType.U4)]
+        public OperationState FromState;
+        [MarshalAs(UnmanagedType.U4)]
+        public OperationMode ToMode;
+        [MarshalAs(UnmanagedType.U4)]
+        public OperationState ToState;
+        [MarshalAs(UnmanagedType.U4)]
+        public uint ChannelNumber; //Not used (only for compatibility with the HÜMNOS standard).
+        public int fill_up_1;
+
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 299)]
+        public string Parameter;
+        public int fill_up_2;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_IMCM_MODE_STATE
+    {
+        [MarshalAs(UnmanagedType.U4)]
+        public OperationMode Mode;
+        [MarshalAs(UnmanagedType.U4)]
+        public OperationState State;
     }
 }
 

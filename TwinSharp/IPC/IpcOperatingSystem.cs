@@ -36,7 +36,7 @@ namespace TwinSharp.IPC
 
         public string CSDVersion
         {
-            //ToDo: This throws an exception. Find out why.
+            //TODO: This throws an exception. Find out why.
             get => ""; // client.ReadString(0xF302, subIndexTable1 + 0x04, 16);
         }
 

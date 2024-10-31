@@ -29,7 +29,7 @@ namespace TwinSharp
         string name;
         public string Name
         {
-            //ToDo: Unknown how to get the name of the EtherCAT master from this class.
+            //TODO: Unknown how to get the name of the EtherCAT master from this class.
             //Can only be found when searching for all masters in the system.
             get => name;
             internal set => name = value;

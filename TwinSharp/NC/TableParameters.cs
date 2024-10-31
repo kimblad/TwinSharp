@@ -132,7 +132,7 @@ namespace TwinSharp.NC
 
             client.Read(indexGroup, 0x20, ms.ToArray());
 
-            //ToDo: Check if this is working.
+            //TODO: Check if this is working.
             var br = new BinaryReader(ms);
             br.ReadUInt32(); //Skip line
             br.ReadUInt32(); //Skip column

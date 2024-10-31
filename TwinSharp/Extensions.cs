@@ -11,12 +11,6 @@ namespace TwinSharp
             return client.ReadAny<bool>(handle);
         }
 
-        public static ushort ReadUShort(this AdsClient client, string symbol)
-        {
-            var handle = client.CreateVariableHandle(symbol);
-            return client.ReadAny<ushort>(handle);
-        }
-
 
         public static uint ReadUInt(this AdsClient client, string symbol)
         {

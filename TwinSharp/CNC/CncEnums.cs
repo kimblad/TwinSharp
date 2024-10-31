@@ -15,7 +15,7 @@
         SkipLevel10 = 0x200,
     }
 
-    public enum ChannelModes
+    public enum ChannelMode
     {
         ISG_STANDARD = 0x0000, // Normal mode
         SOLLKON_BlockSearch = 0x0001, // Block search
@@ -50,6 +50,8 @@
         PROCESS_ACTIVE = 4,
         PROCESS_HOLD = 5,
         PROCESS_ERROR = 6
+
+            
     }
 
     public enum AxisState : uint
@@ -58,5 +60,13 @@
         HLI_AXIS_ACTIVE = 3, //The axis is currently moved by the CNC due to an NC command or manual mode.
         HLI_AXIS_HOLD = 5, //The CNC cannot move the axis because an external signal is set, such as feedhold or tracking mode, or the required drive enables are missing.
         HLI_AXIS_ERROR = 7 //After an error (in the drive or CNC, e.g. a software limit switch violation) the axis is in error state. Commanding a new motion is only possible after a CNC reset.
+    }
+
+    public enum TechnologyFunction : ushort
+    {
+        HLI_INTF_M_FKT = 1,
+        HLI_INTF_H_FKT = 2,
+        HLI_INTF_SPINDEL = 3,
+        HLI_INTF_TOOL = 4,
     }
 }
