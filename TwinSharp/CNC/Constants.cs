@@ -17,5 +17,11 @@
         public const int ANZ_SIMU_KOORD = 32;
         public const int MAX_M_H_DATA = 20;
         public const int MAX_SPINDLE_DATA = 6;
+
+
+        public const int HLI_MODUL_NAME_LAENGE = 15;
+        public const int HLI_ERR_MASK_MAXIDX = 583;
+        public const int HLI_WERT_B_DATA_MAXIDX = 23;
+        public const int HLI_WERT_DATA_MAXIDX = 7;
     }
 }

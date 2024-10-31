@@ -21,6 +21,7 @@ namespace TwinSharp.CNC
         public readonly DeleteDistanceToGo DeleteDistanceToGo;
         public readonly DataStreaming DataStreaming;
         public readonly TechnologyProcesses TechnologyProcesses;
+        public readonly ErrorManagement ErrorManager;
 
         internal CncChannel(AdsClient plcClient, AdsClient geoClient, AdsClient comClient, int channelNumber, Dictionary<string, ObjectDescription> descriptions)
         {
@@ -40,6 +41,7 @@ namespace TwinSharp.CNC
             DeleteDistanceToGo = new DeleteDistanceToGo(plcClient, channelNumber);
             DataStreaming = new DataStreaming(comClient, channelNumber);
             TechnologyProcesses = new TechnologyProcesses(plcClient, channelNumber);
+            ErrorManager = new ErrorManagement(plcClient, channelNumber);
         }
 
         /// <summary>

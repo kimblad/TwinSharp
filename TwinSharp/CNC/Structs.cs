@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Runtime.InteropServices;
+using TwinCAT.TypeSystem;
 
 namespace TwinSharp.CNC
 {
@@ -121,6 +123,116 @@ namespace TwinSharp.CNC
         public OperationMode Mode;
         [MarshalAs(UnmanagedType.U4)]
         public OperationState State;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_ERROR_SATZ
+    {
+        public HLI_ERROR_SATZ_KOPF Head;
+        public HLI_ERROR_SATZ_RUMPF Tail;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_ERROR_SATZ_KOPF
+    {
+        public uint ErrorId;
+        public int FillUp1; 
+        public HLI_MODUL_NAME ModulName; 
+        public int Line;
+        public uint UtilErrorId; 
+        public HLI_MODUL_NAME UtilModulName; 
+        public int UtilLine;
+        public ushort MultipleId;
+        public ushort BfType;
+        public ushort CncChannel;
+        public ushort KommuId;
+        [MarshalAs(UnmanagedType.I1)]
+        public bool SuppressTc2EventLogOutput; //no log error message by event logger
+        [MarshalAs(UnmanagedType.I1)]
+        public bool FillUp2;
+        public short FillUp3; 
+        public HLI_FB_ZEITANGABE TimeStamp; 
+        public HLI_INTF_VERSION_NAME VersionName;
+        public int FillUp4; //Undocumented, found through trial and error.
+        public int FillUp5; //Undocumented, found through trial and error.
+        public ushort RectificationType;
+        public ushort ReactionType;
+        public uint BodyType; 
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_MODUL_NAME
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_MODUL_NAME_LAENGE + 1)]
+        public string Name;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_FB_ZEITANGABE
+    {
+        public uint DateCounter;
+        public uint CycleCounter;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_INTF_VERSION_NAME
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_MODUL_NAME_LAENGE + 1)]
+        public string Name;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_ERROR_SATZ_RUMPF
+    {
+        public HLI_ERROR_MASKE Mask;
+        public HLI_WERT_B Value1;
+        public HLI_WERT_B Value2;
+        public HLI_WERT_B Value3;
+        public HLI_WERT_B Value4;
+        public HLI_WERT_B Value5;
+        public HLI_WERT Identifier1;
+        public HLI_WERT Identifier2;
+        public HLI_WERT Identifier3;
+        public HLI_WERT Identifier4;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_ERROR_MASKE
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.HLI_ERR_MASK_MAXIDX)]
+        public byte[] ErrorMask;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_WERT_B
+    {
+        public uint Type;
+        public uint Dimension;
+        public uint Importance;
+        public int FillUp1;
+        public HLI_WERT_B_DATA Content;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_WERT_B_DATA
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.HLI_WERT_B_DATA_MAXIDX)]
+        public byte[] Data;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_WERT
+    {
+        public uint Type;
+        public int FillUp1;
+        public HLI_WERT_DATA Content;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_WERT_DATA
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.HLI_WERT_DATA_MAXIDX)]
+        public byte[] Data;
     }
 }
 
