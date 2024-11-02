@@ -129,7 +129,7 @@ namespace TwinSharp.CNC
     public struct HLI_ERROR_SATZ
     {
         public HLI_ERROR_SATZ_KOPF Head;
-        public HLI_ERROR_SATZ_RUMPF Tail;
+        public HLI_ERROR_SATZ_RUMPF Body;
     }
 
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
@@ -233,6 +233,26 @@ namespace TwinSharp.CNC
     {
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.HLI_WERT_DATA_MAXIDX)]
         public byte[] Data;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_RUMPF_NC_PROG
+    {
+        public ushort LogicalPathNumber;
+        [MarshalAs(UnmanagedType.I1)]
+        public bool FileEncrypted;
+        [MarshalAs(UnmanagedType.I1)]
+        bool FillUp1;
+        int FillUp3;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_LAENGE_NAME + 1)]
+        public string ProgramName;
+        int FillUp4;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_LAENGE_NAME + 1)]
+        public string FileName;
+        public uint FileOffset;
+        public ushort PositionOffsetNcBlock;
+        public ushort TokenOffsetNcBlock;
+        public uint BlockNumber;
     }
 }
 

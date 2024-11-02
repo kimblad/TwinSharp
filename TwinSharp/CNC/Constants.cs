@@ -23,5 +23,6 @@
         public const int HLI_ERR_MASK_MAXIDX = 583;
         public const int HLI_WERT_B_DATA_MAXIDX = 23;
         public const int HLI_WERT_DATA_MAXIDX = 7;
+        public const int HLI_LAENGE_NAME = 259;
     }
 }
