@@ -45,6 +45,10 @@ namespace TwinSharp
             return dt;
         }
 
+        public static uint ToUint(this byte[] buffer)
+        {
+            return ((uint)buffer[3] << 24) | ((uint)buffer[2] << 16) | ((uint)buffer[1] << 8) | (uint)buffer[0];
+        }
 
     }
 }

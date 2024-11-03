@@ -42,7 +42,7 @@ namespace TwinSharp.CNC
             Channels = new CncChannel[Platform.ChannelCount];
             for (int i = 0; i < Channels.Length; i++)
             {
-                Channels[i] = new CncChannel(plcClient, geoClient, comClient, i + 1, comDescriptions);
+                Channels[i] = new CncChannel(plcClient, geoClient, sdaClient, comClient, i + 1, comDescriptions);
             }
 
             Axes = new CncAxis[Platform.AxisCount];

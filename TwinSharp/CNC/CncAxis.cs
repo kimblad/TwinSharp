@@ -5,21 +5,21 @@ namespace TwinSharp.CNC
 {
     public class CncAxis
     {
-        readonly uint index;
+        readonly uint Number;
         readonly AmsNetId target;
         readonly AdsClient comClient;
 
         public readonly AxisStatus Status;
         public readonly ExternalAxisCommanding ExternalAxisCommanding;
 
-        internal CncAxis(uint index, AmsNetId target, AdsClient plcClient, AdsClient comClient)
+        internal CncAxis(uint number, AmsNetId target, AdsClient plcClient, AdsClient comClient)
         {
-            this.index = index;
+            this.Number = number;
             this.target = target;
             this.comClient = comClient;
-            this.Status = new AxisStatus(index, comClient);
+            this.Status = new AxisStatus(number, comClient);
 
-            ExternalAxisCommanding = new ExternalAxisCommanding(index, plcClient);
+            ExternalAxisCommanding = new ExternalAxisCommanding(number, plcClient);
         }
 
 
@@ -32,7 +32,7 @@ namespace TwinSharp.CNC
             client.Connect(target, AmsPort.R0_TComServer);
 
 
-            int bytesAvailable = client.ReadAny<int>(group, 0x550_0808 + index);
+            int bytesAvailable = client.ReadAny<int>(group, 0x550_0808 + Number);
 
             //Get size of the parameter list
             //Axis 1 = 0x550_0409
@@ -42,7 +42,7 @@ namespace TwinSharp.CNC
             //Get the parameter list
             var buffer = new byte[bytesAvailable];
             var memory = new Memory<byte>(buffer);
-            int byteCountRead = client.Read(group, 0x550_0408 + index, memory);
+            int byteCountRead = client.Read(group, 0x550_0408 + Number, memory);
 
             var ms = new MemoryStream(buffer);
             var br = new BinaryReader(ms);
@@ -64,11 +64,11 @@ namespace TwinSharp.CNC
             comClient.WriteAny(jogGroupIndex, 0x307, true);
         }
 
-        private uint jogGroupIndex => 0x20100 + index;
+        private uint jogGroupIndex => 0x20100 + Number;
 
         public override string ToString()
         {
-            return $"Axis {index}";
+            return $"Axis {Number}";
         }
     }
 }

@@ -13,7 +13,8 @@
 * Axis coupling with HLI.
 * Draw colored parts in HMI
 * Set PLC present flag here, not in TC PLC.
-* Draw rapid arrows.
+* Add jogging to the HMI.
+* NC viewer/editor. Open correct line when NC error occurs.
 
 InfoSys måste vara fel här, de har bytt rubrik på de olika tabellerna: https://infosys.beckhoff.com/english.php?content=../content/1033/tf5200_blocksearch/348532363.html&id=5306263596625704412
 Answer on Stackoverflow, someone searching for a way to find all EtherCAT masters without knowing anything about the system. It is possible using ListEtherCATMasters()
