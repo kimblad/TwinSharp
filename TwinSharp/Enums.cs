@@ -49,7 +49,7 @@
         RelativePosition = 2,
         ContinousPositionPositive = 3,
         ContinousPositionNegative = 4,
-        ModuloPosition =5,
+        ModuloPosition = 5,
     }
 
     public enum ActualPositionType
@@ -167,7 +167,7 @@
         SPECIFIC
     }
 
-    public enum  ControllerType
+    public enum ControllerType
     {
         NOT_DEFINED = 0,
         P_ControllerPosition = 1,
@@ -192,7 +192,7 @@
     public enum ProbeMode
     {
         Single = 1,
-        Continous =2
+        Continous = 2
     }
 
     public enum TableInterpolationType
@@ -242,5 +242,15 @@
         UserDefined = 0, //default
         WithAutoOffset = 1,
         Off = 2,
+    }
+
+    public enum FileOpenModeFlags
+    {
+        FOPEN_MODEREAD = 0x1,       // "r": Opens for reading. If the file does not exist or cannot be found, the call fails. 
+        FOPEN_MODEWRITE = 0x2,      // "w": Opens an empty file for writing. If the given file exists, its contents are destroyed. 
+        FOPEN_MODEAPPEND = 0x4,     // "a": Opens for writing at the end of the file (appending) without removing the EOF marker before writing new data to the file; creates the file first if it doesnot exist. 
+        FOPEN_MODEPLUS = 0x8,       // "+": Opens for reading and writing 
+        FOPEN_MODEBINARY = 0x10,    // "b": Open in binary (untranslated) mode. 
+        FOPEN_MODETEXT = 0x20,      // "t": Open in text (translated) mode.     }
     }
 }

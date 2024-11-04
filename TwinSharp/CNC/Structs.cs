@@ -254,6 +254,68 @@ namespace TwinSharp.CNC
         public ushort TokenOffsetNcBlock;
         public uint BlockNumber;
     }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_HB_ACTIVATION
+    {
+        public ushort LogicalAxisNumber;
+        public ushort ControlElement;
+        public ushort OperationMode;
+        public ushort ParameterIndex;
+        public ushort FillUp1;
+        public ushort FillUp2;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_HB_RAPID_KEY
+    {
+        public ushort LogicalKeyNumber;
+        public ushort KeyPressed;
+        public uint FillUp1;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_HB_KEY
+    {
+        public ushort LogicalKeyNumber;
+        public short Direction;
+        public uint LifeTime;
+        [MarshalAs(UnmanagedType.I1)]
+        public bool F_Refresh;
+        [MarshalAs(UnmanagedType.I1)]
+        public bool FillUp1;
+        [MarshalAs(UnmanagedType.I1)]
+        public bool FillUp2;
+        [MarshalAs(UnmanagedType.I1)]
+        public bool FillUp3;
+        public int FillUp4;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_HB_TIP_PARAMETER
+    {
+        public ushort LogicalAxisNumber;
+        public ushort FillUp1;
+        public uint Speed;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_HB_JOG_PARAMETER
+    {
+        public ushort LogicalAxisNumber;
+        public ushort FillUp1;
+        public uint Distance;
+        public uint Speed;
+        public int FillUp2;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
+    public struct HLI_HB_HR_PARAMETER
+    {
+        public ushort LogicalAxisNumber;
+        public ushort FillUp1;
+        public int Resolution;
+    }
 }
 
 

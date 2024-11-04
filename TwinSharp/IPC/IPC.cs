@@ -33,8 +33,7 @@ namespace TwinSharp.IPC
             var unkown = new List<uint>();
             //Read all available MDP modules
             // Reads the numbers of modules. First ushort in list is the count of items 
-            ushort mdpModuleCount = client.ReadAny<ushort>(0xF302,     // CoE = CAN over EtherCAT (profil definition)
-                                                    0xF0200000); // index to get modul ID List - Flag and Subindex 0
+            ushort mdpModuleCount = client.ReadAny<ushort>(0xF302, 0xF0200000); // index to get modul ID List - Flag and Subindex 0
 
 
             // Iterate through the list of modules to get the index and the type of each module

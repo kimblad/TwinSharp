@@ -23,7 +23,7 @@ namespace TwinSharp.CNC
         public readonly TechnologyProcesses TechnologyProcesses;
         public readonly ErrorManagement ErrorManager;
         public readonly ZeroOffsets ZeroOffsets;
-
+        public readonly ManualOperation ManualOperation;
         internal CncChannel(AdsClient plcClient, AdsClient geoClient, AdsClient sdaClient, AdsClient comClient, int channelNumber, Dictionary<string, ObjectDescription> descriptions)
         {
             this.comClient = comClient;
@@ -44,6 +44,7 @@ namespace TwinSharp.CNC
             TechnologyProcesses = new TechnologyProcesses(plcClient, channelNumber);
             ErrorManager = new ErrorManagement(plcClient, channelNumber);
             ZeroOffsets = new ZeroOffsets(sdaClient, channelNumber);
+            ManualOperation = new ManualOperation(plcClient, channelNumber);
         }
 
         /// <summary>

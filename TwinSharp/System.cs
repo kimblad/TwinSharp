@@ -6,12 +6,14 @@ namespace TwinSharp
     {
         public Realtime Realtime;
         public License License;
+        public FileSystem FileSystem;
 
 
-        public System()
+        public System(AmsNetId target)
         {
             Realtime = new Realtime();
             License = new License();
+            FileSystem = new FileSystem(target);
         }
 
         public EtherCatMaster[] ListEcatMasters()

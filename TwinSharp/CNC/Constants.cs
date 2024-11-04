@@ -24,5 +24,7 @@
         public const int HLI_WERT_B_DATA_MAXIDX = 23;
         public const int HLI_WERT_DATA_MAXIDX = 7;
         public const int HLI_LAENGE_NAME = 259;
+        public const short HLI_KEY_MAXIDX = 11;
+        public const short HLI_HW_MAXIDX = 5;
     }
 }
