@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
+using System.Xml.Linq;
 
 namespace TwinSharp
 {
@@ -191,7 +193,7 @@ namespace TwinSharp
         }
     }
 
-     /// <summary>
+    /// <summary>
     /// The structure ST_PortAddr contains EtherCAT topology information for EtherCAT slave device. EtherCAT slave devices typically have 2 to 4 ports.
     /// </summary>
     public class ST_PortAddr
@@ -214,6 +216,33 @@ namespace TwinSharp
             PortC = br.ReadUInt16();
             PortD = br.ReadUInt16();
         }
+    }
+    public struct ST_FindFileEntry
+    {
+        public string FileName;                     //Zero-terminated string with the name of the file or directory (type: T_MaxString).
+        public string AlternateFileName;            //Zero-terminated string with the alternative name of the file or directory in conventional 8.3 format(filename.ext).
+        public ST_FileAttributes FileAttributes;    //File attributes (type: T_FileAttributes).
+        public ulong FileSize;                      //Size of the file in bytes.
+        public DateTime CreationTime;               //Creation time of the file.
+        public DateTime LastAccessTime;             //For a file the structure indicates when it was last accessed (read or write). For a directory the structure indicates when it was created.
+        public DateTime LastWriteTime;              //Last write time of the file.
+    }
 
+    public struct ST_FileAttributes
+    {
+        public bool ReadOnly;          // FILE_ATTRIBUTE_READONLY
+        public bool Hidden;            // FILE_ATTRIBUTE_HIDDEN
+        public bool System;            // FILE_ATTRIBUTE_SYSTEM
+        public bool Directory;         // FILE_ATTRIBUTE_DIRECTORY
+        public bool Archive;           // FILE_ATTRIBUTE_ARCHIVE
+        public bool Device;            // FILE_ATTRIBUTE_DEVICE. Under CE: FILE_ATTRIBUTE_INROM or FILE_ATTRIBUTE_ENCRYPTED
+        public bool Normal;            // FILE_ATTRIBUTE_NORMAL
+        public bool Temporary;         // FILE_ATTRIBUTE_TEMPORARY
+        public bool SparseFile;        // FILE_ATTRIBUTE_SPARSE_FILE
+        public bool ReparsePoint;      // FILE_ATTRIBUTE_REPARSE_POINT
+        public bool Compressed;        // FILE_ATTRIBUTE_COMPRESSED
+        public bool Offline;           // FILE_ATTRIBUTE_OFFLINE. Under CE: FILE_ATTRIBUTE_ROMSTATICREF
+        public bool NotContentIndexed; // FILE_ATTRIBUTE_NOT_CONTENT_INDEXED. Under CE: FILE_ATTRIBUTE_ROMMODULE
+        public bool Encrypted;         // FILE_ATTRIBUTE_ENCRYPTED
     }
 }

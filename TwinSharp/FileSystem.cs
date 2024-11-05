@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Buffers.Binary;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection.Metadata;
 using System.Text;
@@ -274,6 +275,97 @@ namespace TwinSharp
 
             client.ReadWrite(0x8B, 0x1, readMemory, writeMemory);
         }
+
+        public ST_FindFileEntry GetFileProperties(string path)
+        {
+            var ascii = new ASCIIEncoding();
+            var writeBytes = ascii.GetBytes(path);
+            var writeMemory = new ReadOnlyMemory<byte>(writeBytes);
+
+            var readBytes = new byte[324];
+            var readMemory = new Memory<byte>(readBytes);
+
+            int bytesReturned = client.ReadWrite(0x85, 0x1, readMemory, writeMemory);
+
+
+            var ms = new MemoryStream(readBytes);
+            var br = new BinaryReader(ms);
+            ST_FindFileEntry entry = new ST_FindFileEntry();
+
+
+            ushort someSortOfUndocumentedHandle = br.ReadUInt16(); //Not found in documentation.
+            br.ReadUInt16();
+
+            int attributeFlags = br.ReadInt32();
+
+            entry.FileAttributes.ReadOnly = BitIsSet(attributeFlags, 0);
+            entry.FileAttributes.Hidden = BitIsSet(attributeFlags, 1);
+            entry.FileAttributes.System = BitIsSet(attributeFlags, 2);
+            entry.FileAttributes.Directory = BitIsSet(attributeFlags, 4); //Not a typo, found with ADS Monitor.
+            entry.FileAttributes.Archive = BitIsSet(attributeFlags, 5);
+            entry.FileAttributes.Device = BitIsSet(attributeFlags, 6);
+            entry.FileAttributes.Normal = BitIsSet(attributeFlags, 7);
+            entry.FileAttributes.Temporary = BitIsSet(attributeFlags, 8);
+            entry.FileAttributes.SparseFile = BitIsSet(attributeFlags, 9);
+            entry.FileAttributes.ReparsePoint = BitIsSet(attributeFlags, 10);
+            entry.FileAttributes.Compressed = BitIsSet(attributeFlags, 11);
+            entry.FileAttributes.Offline = BitIsSet(attributeFlags, 12);
+            entry.FileAttributes.NotContentIndexed = BitIsSet(attributeFlags, 13);
+            entry.FileAttributes.Encrypted = BitIsSet(attributeFlags, 14);
+
+            ulong creationTimeTicks = br.ReadUInt64();
+            entry.CreationTime = CreateWin32EpochFileTime(creationTimeTicks);
+
+            ulong accessedTimeTicks = br.ReadUInt64();
+            entry.LastAccessTime = CreateWin32EpochFileTime(accessedTimeTicks);
+
+            ulong lastWriteTimeTicks = br.ReadUInt64();
+            entry.LastWriteTime = CreateWin32EpochFileTime(lastWriteTimeTicks);
+
+            //ulong fileSize = br.ReadUInt64();
+
+            //uint lowPart = br.ReadUInt32();
+            //uint highPart = br.ReadUInt32();
+            //ulong fileSize = br.ReadUInt64();
+
+            ulong fileSizeLegacyFormat = br.ReadUInt64();
+            entry.FileSize = BinaryPrimitives.ReverseEndianness(fileSizeLegacyFormat);
+
+
+
+
+            int position = bytesReturned - Constants.MAX_STRING_LENGTH -1 - 13 -1;
+
+
+            string untrimmed = ascii.GetString(readBytes, position, Constants.MAX_STRING_LENGTH -1).TrimEnd('\0');
+
+            string trimmed = untrimmed.TrimEnd('\0'); //Remove trailing null chars.
+            if (trimmed.Length > 5)
+                trimmed = trimmed.Substring(0, untrimmed.Length - 5); //There's 5 unkown chars added (null d null r e) remove them.
+
+            entry.FileName = trimmed;
+
+            position += Constants.MAX_STRING_LENGTH - 1;
+            entry.AlternateFileName = ascii.GetString(readBytes, position, 13).TrimEnd('\0');
+            return entry;
+        }
+
+        private bool BitIsSet(int number, int bitPosition)
+        {
+            var mask = 0;
+            mask |= (1 << bitPosition);
+            return (number & mask) == mask;
+        }
+
+
+        private DateTime CreateWin32EpochFileTime(ulong ticks)
+        {
+            var dt = new DateTime(1601, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            dt = dt.AddTicks((long)ticks);
+
+            return dt;
+        }
+
 
         public void Dispose()
         {
