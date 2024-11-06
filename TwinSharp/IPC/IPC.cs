@@ -4,25 +4,53 @@ namespace TwinSharp.IPC
 {
     public class IPC : IDisposable
     {
-        public IpcNIC[] NICs;
-        public IpcTime? Time;
-        public IpcTwinCAT? TwinCAT;
-        public IpcCpu? Cpu;
-        public IpcMemory? Memory;
-        public IpcDisplayDevice[] DisplayDevices;
-        public IpcOperatingSystem? OperatingSystem;
-        public IpcFan[] Fans;
-        public IpcMainBoard? MainBoard;
-        public IpcUPS? UPS;
-        public IpcMiscellaneous? Miscellaneous;
+        public readonly IpcNIC[] NICs;
+        public readonly IpcTime? Time;
+        public readonly IpcTwinCAT? TwinCAT;
+        public readonly IpcCpu? Cpu;
+        public readonly IpcMemory? Memory;
+        public readonly IpcDisplayDevice[] DisplayDevices;
+        public readonly IpcOperatingSystem? OperatingSystem;
+        public readonly IpcFan[] Fans;
+        public readonly IpcMainBoard? MainBoard;
+        public readonly IpcUps? UPS;
+        public readonly IpcMiscellaneous? Miscellaneous;
 
 
-        AdsClient client;
+        readonly AdsClient client;
 
+        /// <summary>
+        /// Represents a localhost Beckhoff IPC.
+        /// </summary>
+        public IPC()
+        {
+            var target = AmsNetId.Local;
+            Init(target, out client, out NICs, out DisplayDevices, out Fans, out Time, out TwinCAT, out Cpu, out Memory, out OperatingSystem, out UPS, out MainBoard, out Miscellaneous);
+        }
+
+        /// <summary>
+        /// Represents a Beckhoff IPC on a remote target.
+        /// </summary>
+        /// <param name="target"></param>
         public IPC(AmsNetId target)
         {
-            client = new AdsClient();
+            Init(target, out client, out NICs, out DisplayDevices, out Fans, out Time, out TwinCAT, out Cpu, out Memory, out OperatingSystem, out UPS, out MainBoard, out Miscellaneous);
+        }
 
+
+        /// <summary>
+        /// Set multiple readonly objects for constructors.
+        /// </summary>
+        private void Init(AmsNetId target, out AdsClient client, out IpcNIC[] NICs, out IpcDisplayDevice[] DisplayDevices, out IpcFan[] Fans, 
+            out IpcTime? Time, out IpcTwinCAT? TwinCAT, out IpcCpu? Cpu, out IpcMemory? Memory, out IpcOperatingSystem? OperatingSystem,
+            out IpcUps? UPS, out IpcMainBoard? MainBoard, out IpcMiscellaneous? Miscellaneous)
+        {
+            //Variables must be assigned to out parameters.
+            //If not found on IPC they will remain null.
+            Time = null; TwinCAT = null; Cpu = null; Memory = null; OperatingSystem = null; UPS = null; MainBoard = null; Miscellaneous = null;
+
+
+            client = new AdsClient();
             client.Connect(target, AmsPort.SystemService);
 
             //Some modules exists more then once due to hardware config.
@@ -79,8 +107,8 @@ namespace TwinSharp.IPC
                     case IpcMainBoard.ModuleType:
                         MainBoard = new IpcMainBoard(client, mdpId);
                         break;
-                    case IpcUPS.ModuleType:
-                        UPS = new IpcUPS(client, mdpId);
+                    case IpcUps.ModuleType:
+                        UPS = new IpcUps(client, mdpId);
                         break;
                     case IpcMiscellaneous.ModuleType:
                         Miscellaneous = new IpcMiscellaneous(client, mdpId);

@@ -6,7 +6,7 @@ namespace TwinSharp.IPC
     {
         public const ushort ModuleType = 0x000C;
 
-        AdsClient client;
+        readonly AdsClient client;
         readonly uint subIndex;
 
         internal IpcMemory(AdsClient client, ushort mdpId)

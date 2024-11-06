@@ -11,6 +11,11 @@ namespace TwinSharp
             client.Connect(AmsPort.R0_Realtime);
         }
 
+        /// <summary>
+        /// Sets the shared cores configuration for the TwinCAT system.
+        /// </summary>
+        /// <param name="sharedCores"></param>
+        /// <returns></returns>
         public AdsErrorCode SetSharedCores(uint sharedCores)
         {
             var oldSettings = ReadCpuSettings();
@@ -47,7 +52,10 @@ namespace TwinSharp
         }
 
 
-
+        /// <summary>
+        /// Reads the CPU settings of the TwinCAT system.
+        /// </summary>
+        /// <returns></returns>
         public RTimeCpuSettings ReadCpuSettings()
         {
             var client = new AdsClient();

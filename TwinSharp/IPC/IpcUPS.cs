@@ -2,14 +2,14 @@
 
 namespace TwinSharp.IPC
 {
-    public class IpcUPS
+    public class IpcUps
     {
         public const ushort ModuleType = 0x001E;
 
         readonly AdsClient client;
         readonly uint subIndex;
 
-        internal IpcUPS(AdsClient client, ushort mdpId)
+        internal IpcUps(AdsClient client, ushort mdpId)
         {
             this.client = client;
 

@@ -4,16 +4,82 @@ namespace TwinSharp
 {
     public class System
     {
-        public Realtime Realtime;
-        public License License;
-        public FileSystem FileSystem;
+        public readonly Realtime Realtime;
+        public readonly License License;
+        public readonly FileSystem FileSystem;
 
+        readonly AmsNetId target;
 
+        /// <summary>
+        /// Create a representation of a TwinCAT system on the local machine.
+        /// </summary>
+        public System()
+        {
+            target = AmsNetId.Local;
+            Init(target, out Realtime, out License, out FileSystem);
+        }
+
+        /// <summary>
+        /// Create a representation of a TwinCAT system on a remote target machine.
+        /// </summary>
+        /// <param name="target"></param>
         public System(AmsNetId target)
         {
-            Realtime = new Realtime();
-            License = new License();
-            FileSystem = new FileSystem(target);
+            this.target = target;
+            Init(target, out Realtime, out License, out FileSystem);
+        }
+
+
+        //Called by mulitple constructors to set readonly objects.
+        private void Init(AmsNetId target, out Realtime realtime, out License license, out FileSystem fileSystem)
+        {
+            realtime = new Realtime();
+            license = new License();
+            fileSystem = new FileSystem(target);
+        }
+
+        /// <summary>
+        /// A TwinCAT system in RUN mode (green TwinCAT system icon) can be switched to CONFIG mode (blue TwinCAT system icon) via the function block "TC_Config".
+        /// If the system is already in CONFIG mode, it is first switched to STOP mode (red TwinCAT system icon) and then to CONFIG mode.
+        /// </summary>
+        public void SwitchToConfigMode()
+        {
+            using (var client = new AdsClient())
+            {
+                client.Connect(target, 10000);
+
+                var stateInfo = new StateInfo(AdsState.Reconfig, 0);
+                client.WriteControl(stateInfo);
+            }
+        }
+
+        /// <summary>
+        /// Can be used to restart the TwinCAT system. 
+        /// Corresponds to the Restart command on the TwinCAT system menu (on the right of the Windows taskbar). Restarting the TwinCAT system involves the TwinCAT system first being stopped, and then immediately started again
+        /// </summary>
+        public void Restart()
+        {
+            using (var client = new AdsClient())
+            {
+                client.Connect(target, 10000);
+
+                var stateInfo = new StateInfo(AdsState.Reset, 0);
+                client.WriteControl(stateInfo);
+            }
+        }
+
+        /// <summary>
+        /// Can be used to stop the TwinCAT system. The function corresponds to the Stop command on the TwinCAT system menu (on the right of the Windows taskbar).
+        /// </summary>
+        public void Stop()
+        {
+            using (var client = new AdsClient())
+            {
+                client.Connect(target, 10000);
+
+                var stateInfo = new StateInfo(AdsState.Stop, 0);
+                client.WriteControl(stateInfo);
+            }
         }
 
         public EtherCatMaster[] ListEcatMasters()
@@ -77,9 +143,11 @@ namespace TwinSharp
 
                     var amsNetId = new AmsNetId(amsBuffer.ToArray());
 
-                    var ecMaster = new EtherCatMaster(amsNetId);
-                    ecMaster.DeviceType = deviceType;
-                    ecMaster.Name = deviceName;
+                    var ecMaster = new EtherCatMaster(amsNetId)
+                    {
+                        DeviceType = deviceType,
+                        Name = deviceName
+                    };
 
                     etherCatMasters[i - 1] = ecMaster;
                 }

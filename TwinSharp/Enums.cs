@@ -1,4 +1,6 @@
-﻿namespace TwinSharp
+﻿using System;
+
+namespace TwinSharp
 {
 
     public enum E_LicenseHResult : long
@@ -252,5 +254,12 @@
         FOPEN_MODEPLUS = 0x8,       // "+": Opens for reading and writing 
         FOPEN_MODEBINARY = 0x10,    // "b": Open in binary (untranslated) mode. 
         FOPEN_MODETEXT = 0x20,      // "t": Open in text (translated) mode.     }
+    }
+
+    public enum E_EnumCmdType
+    {
+        First = 0,
+        Next,
+        Abort
     }
 }
