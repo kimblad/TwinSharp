@@ -11,6 +11,7 @@ namespace TwinSharp.CNC
 
         public readonly AxisStatus Status;
         public readonly ExternalAxisCommanding ExternalAxisCommanding;
+        public readonly DynamicPositionLimitation DynamicPositionLimitation;
 
         internal CncAxis(uint number, AmsNetId target, AdsClient plcClient, AdsClient comClient)
         {
@@ -20,6 +21,7 @@ namespace TwinSharp.CNC
             this.Status = new AxisStatus(number, comClient);
 
             ExternalAxisCommanding = new ExternalAxisCommanding(number, plcClient);
+            DynamicPositionLimitation = new DynamicPositionLimitation(number, plcClient);
         }
 
 

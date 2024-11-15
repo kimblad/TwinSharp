@@ -1,11 +1,11 @@
 ﻿using TwinCAT.Ads;
 
-namespace TwinSharp
+namespace TwinSharp.CNC
 {
     /// <summary>
-    /// Specifying velocity or position command values by the SPS effective in addition to the interpolator. No monitoring takes place of transferred values for compliance with the dynamic axis limits. To activate this interface, set the parameter P-AXIS-00732 to 1.
+    /// Specifying velocity or position command values by the PLC effective in addition to the interpolator. No monitoring takes place of transferred values for compliance with the dynamic axis limits. To activate this interface, set the parameter P-AXIS-00732 to 1.
     /// </summary>
-    public class ExternalAxisCommanding
+    public class ExternalAxisCommanding : IDisposable
     {
         readonly AdsClient plcClient;
         readonly Dictionary<Identifier, uint> variableHandles;
@@ -39,6 +39,8 @@ namespace TwinSharp
             return handles;
         }
 
+
+
         public bool InterfaceExists
         {
             set => plcClient.WriteAny(variableHandles[Identifier.InterfaceExists], value);
@@ -66,6 +68,16 @@ namespace TwinSharp
             InterfaceExists,
             AddedPosition,
             AddedVelocity
+        }
+
+        public void Dispose()
+        {
+            foreach (var handle in variableHandles)
+            {
+                plcClient.DeleteVariableHandle(handle.Value);
+            }
+
+            GC.SuppressFinalize(this);
         }
     }
 }

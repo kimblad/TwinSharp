@@ -38,23 +38,63 @@ namespace TwinSharp.CNC
             }
         }
 
+        public ushort GetManualModeState(int axisIndex)
+        {
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.bahn_state.coord_r[{axisIndex}].hb_display_r.state";
+            uint handle = plcClient.CreateVariableHandle(symbol);
+            return plcClient.ReadAny<ushort>(handle);
+        }
+
+        public ushort GetOperationModeState(int axisIndex)
+        {
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.bahn_state.coord_r[{axisIndex}].hb_display_r.operation_mode";
+            uint handle = plcClient.CreateVariableHandle(symbol);
+            return plcClient.ReadAny<ushort>(handle);
+        }
+
+        /// <summary>
+        /// Logical number of the control element currently linked to the axis in question. 
+        /// </summary>
+        /// <param name="axisIndex"></param>
+        /// <returns></returns>
+        public ushort GetControlElementNumber(int axisIndex)
+        {
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.bahn_state.coord_r[{axisIndex}].hb_display_r.control_element";
+            uint handle = plcClient.CreateVariableHandle(symbol);
+            return plcClient.ReadAny<ushort>(handle);
+        }
+
+        /// <summary>
+        /// Path velocity of the axis in question when moved in continuous jog mode.
+        /// </summary>
+        /// <param name="axisIndex"></param>
+        /// <returns></returns>
+        public int GetPathVelocityContinous(int axisIndex)
+        {
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.bahn_state.coord_r[{axisIndex}].hb_display_r.tipp_geschw";
+            uint handle = plcClient.CreateVariableHandle(symbol);
+            return plcClient.ReadAny<int>(handle);
+        }
+
+
+
         public void EnableControlElement(bool enabled)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.activation.enable_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.activation.enable_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, enabled);
         }
 
         public void WriteCommandElement(HLI_HB_ACTIVATION controlElement)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.activation.command_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.activation.command_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, controlElement);
         }
 
         public void SignalCommandSemaphor(bool signal)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.activation.command_semaphor_rw";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.activation.command_semaphor_rw";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, signal);
         }
@@ -75,14 +115,14 @@ namespace TwinSharp.CNC
 
         public void EnableControlElement(bool enabled)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.handwheel_incs[{handWheelIndex}].enable_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.handwheel_incs[{handWheelIndex}].enable_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, enabled);
         }
 
         public void WriteCommandElement(short data)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.handwheel_incs[{handWheelIndex}].command_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.handwheel_incs[{handWheelIndex}].command_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, data);
         }
@@ -101,21 +141,21 @@ namespace TwinSharp.CNC
 
         public void EnableControlElement(bool enabled)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.hr_parameter.enable_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.hr_parameter.enable_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, enabled);
         }
 
         public void WriteCommandElement(HLI_HB_HR_PARAMETER data)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.hr_parameter.command_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.hr_parameter.command_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, data);
         }
 
         public void SignalCommandSemaphor(bool signal)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.hr_paramater.command_semaphor_rw";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.hr_paramater.command_semaphor_rw";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, signal);
         }
@@ -135,21 +175,21 @@ namespace TwinSharp.CNC
 
         public void EnableControlElement(bool enabled)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.jog_parameter.enable_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.jog_parameter.enable_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, enabled);
         }
 
         public void WriteCommandElement(HLI_HB_JOG_PARAMETER data)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.jog_parameter.command_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.jog_parameter.command_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, data);
         }
 
         public void SignalCommandSemaphor(bool signal)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.jog_paramater.command_semaphor_rw";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.jog_paramater.command_semaphor_rw";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, signal);
         }
@@ -168,21 +208,21 @@ namespace TwinSharp.CNC
 
         public void EnableControlElement(bool enabled)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.enable_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.enable_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, enabled);
         }
 
         public void WriteCommandElement(HLI_HB_TIP_PARAMETER data)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.command_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.command_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, data);
         }
 
         public void SignalCommandSemaphor(bool signal)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.tip_paramater.command_semaphor_rw";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.command_semaphor_rw";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, signal);
         }
@@ -203,21 +243,21 @@ namespace TwinSharp.CNC
 
         public void EnableControlElement(bool enabled)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].enable_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].enable_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, enabled);
         }
 
         public void WriteCommandElement(HLI_HB_KEY data)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].command_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].command_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, data);
         }
 
         public void SignalCommandSemaphor(bool signal)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].command_semaphor_rw";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].command_semaphor_rw";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, signal);
         }
@@ -236,21 +276,21 @@ namespace TwinSharp.CNC
         }
         public void EnableControlElement(bool enabled)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.enable_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.enable_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, enabled);
         }
 
         public void WriteCommandElement(HLI_HB_RAPID_KEY data)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.command_w";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.command_w";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, data);
         }
 
         public void SignalCommandSemaphor(bool signal)
         {
-            string symbol = $"gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.command_semaphor_rw";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.command_semaphor_rw";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, signal);
         }

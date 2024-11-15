@@ -82,7 +82,7 @@ namespace TwinSharp
             }
         }
 
-        public EtherCatMaster[] ListEcatMasters()
+        public EtherCatMaster[] ListEtherCatMasters()
         {
             const uint IOADS_IGR_IODEVICESTATE_BASE = 0x5000;
             const uint IOADS_IOF_READDEVIDS = 0x1;
@@ -94,7 +94,7 @@ namespace TwinSharp
 
             using (var client = new AdsClient())
             {
-                client.Connect(AmsPort.R0_IO);
+                client.Connect(target, AmsPort.R0_IO);
 
 
                 uint deviceCount = client.ReadAny<uint>(IOADS_IGR_IODEVICESTATE_BASE, IOADS_IOF_READDEVCOUNT);
@@ -142,8 +142,17 @@ namespace TwinSharp
                         IOADS_IOF_READDEVNETID, amsBuffer);
 
                     var amsNetId = new AmsNetId(amsBuffer.ToArray());
+                    //EtherCAT masters AmsNetId is typically in the form:
+                    //Combine it with the targets ams net id to create a valid AmsNetId
+                    //That can be reached remote 
 
-                    var ecMaster = new EtherCatMaster(amsNetId)
+                    byte[] combined = target.ToBytes();
+                    combined[4] = amsNetId.ToBytes()[4];
+                    combined[5] = amsNetId.ToBytes()[5];
+
+                    var combinedAms = new AmsNetId(combined);
+
+                    var ecMaster = new EtherCatMaster(combinedAms)
                     {
                         DeviceType = deviceType,
                         Name = deviceName

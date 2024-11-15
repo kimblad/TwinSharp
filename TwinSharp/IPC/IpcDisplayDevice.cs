@@ -1,6 +1,4 @@
 ﻿using TwinCAT.Ads;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using TwinCAT.TypeSystem;
 
 namespace TwinSharp.IPC
 {
