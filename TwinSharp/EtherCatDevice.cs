@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using TwinCAT.Ads;
 
 namespace TwinSharp
@@ -71,6 +66,17 @@ namespace TwinSharp
         {
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1018, 0x4));
         }
+
+        public void CoeWriteAny(uint index, uint subIndex, object value)
+        {
+            client.WriteAny(indexGroup, CombineIndexAndSubIndex(index, subIndex), value);
+        }
+
+        public T CoeReadAny<T>(uint index, uint subIndex)
+        {
+            return client.ReadAny<T>(indexGroup, CombineIndexAndSubIndex(index, subIndex));
+        }
+
 
         /// <summary>
         /// When using the ADS and reading CoE objects the index and subindex should be combined.

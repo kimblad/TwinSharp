@@ -14,6 +14,12 @@ namespace TwinSharp.NC
             indexGroup = 0x4100 + id;
         }
 
+        public byte[] OnlineData
+        {
+            get => client.ReadAny<byte[]>(indexGroup, 0x00, [256]);
+            //get => client.ReadAny<NCAXISSTATE_ONLINESTRUCT>(indexGroup, 0x00);
+        }
+
         public uint ErrorCode
         {
             get => client.ReadAny<uint>(indexGroup, 0x01);

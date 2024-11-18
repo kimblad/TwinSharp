@@ -33,8 +33,8 @@ namespace TwinSharp
         //Called by mulitple constructors to set readonly objects.
         private void Init(AmsNetId target, out Realtime realtime, out License license, out FileSystem fileSystem)
         {
-            realtime = new Realtime();
-            license = new License();
+            realtime = new Realtime(target);
+            license = new License(target);
             fileSystem = new FileSystem(target);
         }
 

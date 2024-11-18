@@ -5,10 +5,10 @@ namespace TwinSharp
     public class Realtime
     {
         readonly AdsClient client;
-        internal Realtime()
+        internal Realtime(AmsNetId target)
         {
             client = new AdsClient();
-            client.Connect(AmsPort.R0_Realtime);
+            client.Connect(target, AmsPort.R0_Realtime);
         }
 
         /// <summary>

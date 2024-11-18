@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using TwinCAT.Ads;
+using TwinCAT.Ads.TypeSystem;
 
 namespace TwinSharp
 {
@@ -35,15 +36,15 @@ namespace TwinSharp
             return client.ReadAnyString(indexGroup, indexOffset, len, Encoding.UTF8);
         }
 
-        public static DateTime ReadDateTime(this AdsClient client, string symbol)
+        public static DateTime ReadDateTime(this AdsClient client, uint handle)
         {
-            var handle = client.CreateVariableHandle(symbol);
             var seconds = (uint)client.ReadAny(handle, typeof(uint));
 
             var dt = new DateTime(1970, 1, 1);
             dt = dt.AddSeconds(seconds);
             return dt;
         }
+
 
         public static uint ToUint(this byte[] buffer)
         {

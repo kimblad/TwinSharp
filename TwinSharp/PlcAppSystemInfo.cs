@@ -1,13 +1,17 @@
-﻿using TwinCAT.Ads;
+﻿using System.Text;
+using TwinCAT.Ads;
 
 namespace TwinSharp
 {
     public class PlcAppSystemInfo
     {
         readonly AdsClient client;
+        readonly Dictionary<string, uint> variableHandles;
+
         internal PlcAppSystemInfo(AdsClient client)
         {
             this.client = client;
+            variableHandles = new Dictionary<string, uint>();
         }
 
 
@@ -16,7 +20,11 @@ namespace TwinSharp
         /// </summary>
         public ulong ObjId
         {
-            get => client.ReadULong("TwinCAT_SystemInfoVarList._AppInfo.ObjId");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.ObjId");
+                return client.ReadAny<ulong>(handle);
+            }
         }
 
         /// <summary>
@@ -24,7 +32,11 @@ namespace TwinSharp
         /// </summary>
         public uint Flags
         {
-            get => client.ReadUInt("TwinCAT_SystemInfoVarList._AppInfo.Flags");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.Flags");
+                return client.ReadAny<uint>(handle);
+            }
         }
 
         /// <summary>
@@ -32,7 +44,11 @@ namespace TwinSharp
         /// </summary>
         public uint AdsPort
         {
-            get => client.ReadUInt("TwinCAT_SystemInfoVarList._AppInfo.AdsPort");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.AdsPort");
+                return client.ReadAny<uint>(handle);
+            }
         }
 
         /// <summary>
@@ -40,7 +56,11 @@ namespace TwinSharp
         /// </summary>
         public bool BootDataLoaded
         {
-            get => client.ReadBool("TwinCAT_SystemInfoVarList._AppInfo.BootDataLoaded");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.BootDataLoaded");
+                return client.ReadAny<bool>(handle);
+            }
         }
 
         /// <summary>
@@ -48,7 +68,11 @@ namespace TwinSharp
         /// </summary>
         public bool OldBootData
         {
-            get => client.ReadBool("TwinCAT_SystemInfoVarList._AppInfo.OldBootData");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.OldBootData");
+                return client.ReadAny<bool>(handle);
+            }
         }
 
         /// <summary>
@@ -56,7 +80,11 @@ namespace TwinSharp
         /// </summary>
         public DateTime AppTimestamp
         {
-            get => client.ReadDateTime("TwinCAT_SystemInfoVarList._AppInfo.AppTimestamp");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.AppTimestamp");
+                return client.ReadDateTime(handle);
+            }
         }
 
         /// <summary>
@@ -66,11 +94,12 @@ namespace TwinSharp
         {
             get
             {
-                return client.ReadBool("TwinCAT_SystemInfoVarList._AppInfo.KeepOutputsOnBP");
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.KeepOutputsOnBP");
+                return client.ReadAny<bool>(handle);
             }
             set
             {
-                var handle = client.CreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.KeepOutputsOnBP");
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.KeepOutputsOnBP");
                 client.WriteAny(handle, value);
             }
         }
@@ -80,7 +109,11 @@ namespace TwinSharp
         /// </summary>
         public bool ShutdownInProgress
         {
-            get => client.ReadBool("TwinCAT_SystemInfoVarList._AppInfo.ShutdownInProgress");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.ShutdownInProgress");
+                return client.ReadAny<bool>(handle);
+            }
         }
 
         /// <summary>
@@ -88,7 +121,11 @@ namespace TwinSharp
         /// </summary>
         public bool LicensesPending
         {
-            get => client.ReadBool("TwinCAT_SystemInfoVarList._AppInfo.LicensesPending");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.LicensesPending");
+                return client.ReadAny<bool>(handle);
+            }
         }
 
         /// <summary>
@@ -96,7 +133,11 @@ namespace TwinSharp
         /// </summary>
         public bool BSODOccured
         {
-            get => client.ReadBool("TwinCAT_SystemInfoVarList._AppInfo.BSODOccured");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.BSODOccured");
+                return client.ReadAny<bool>(handle);
+            }
         }
 
         
@@ -105,7 +146,11 @@ namespace TwinSharp
         /// </summary>
         public ulong TaskCnt
         {
-            get => client.ReadULong("TwinCAT_SystemInfoVarList._AppInfo.TaskCnt");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.TaskCnt");
+                return client.ReadAny<ulong>(handle);
+            }
         }
 
         /// <summary>
@@ -113,7 +158,11 @@ namespace TwinSharp
         /// </summary>
         public ulong OnlineChangeCnt
         {
-            get => client.ReadULong("TwinCAT_SystemInfoVarList._AppInfo.OnlineChangeCnt");
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.OnlineChangeCnt");
+                return client.ReadAny<ulong>(handle);
+            }
         }
 
 
@@ -122,7 +171,11 @@ namespace TwinSharp
         /// </summary>
         public string AppName
         {
-            get => client.ReadString("TwinCAT_SystemInfoVarList._AppInfo.AppName", 63);
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.AppName");
+                return client.ReadAnyString(handle, 63, Encoding.ASCII);
+            }
         }
 
         /// <summary>
@@ -130,7 +183,23 @@ namespace TwinSharp
         /// </summary>
         public string ProjectName
         {
-            get => client.ReadString("TwinCAT_SystemInfoVarList._AppInfo.ProjectName", 63);
+            get
+            {
+                uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.ProjectName");
+                return client.ReadAnyString(handle, 63, Encoding.ASCII);
+            }
+        }
+
+
+        private uint GetOrCreateVariableHandle(string symbol)
+        {
+            if (variableHandles.TryGetValue(symbol, out uint handle))
+                return handle;
+
+            //Symbol and handle do not exist, create them
+            handle = client.CreateVariableHandle(symbol);
+            variableHandles.Add(symbol, handle);
+            return handle;
         }
     }
 }

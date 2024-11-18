@@ -8,7 +8,7 @@ namespace TwinSharp
 
         public readonly AmsNetId AmsNetId;
 
-        AdsClient client;
+        readonly AdsClient client;
         internal EtherCatMaster(AmsNetId netId)
         {
             AmsNetId = netId;
