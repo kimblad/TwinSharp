@@ -43,5 +43,11 @@ namespace TwinSharp.NC
             }
         }
 
+
+        public override string ToString()
+        {
+            return $"Axis {Parameters.Name}";
+        }
+
     }
 }

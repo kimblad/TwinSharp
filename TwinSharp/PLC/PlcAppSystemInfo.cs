@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using TwinCAT.Ads;
 
-namespace TwinSharp
+namespace TwinSharp.PLC
 {
     public class PlcAppSystemInfo
     {
@@ -140,7 +140,7 @@ namespace TwinSharp
             }
         }
 
-        
+
         /// <summary>
         /// Number of tasks in the runtime system
         /// </summary>

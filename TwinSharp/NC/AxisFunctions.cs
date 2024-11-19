@@ -63,7 +63,7 @@ namespace TwinSharp.NC
 
         public void ReferenceAxis()
         {
-            client.WriteAny(indexGroup, 0x10, true);
+            client.Write(indexGroup, 0x10);
         }
 
         public void NewEndPositionAxis(EndPositionType endPositionType, double newEndPosition)

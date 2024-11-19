@@ -5,8 +5,10 @@ namespace TwinSharp
     public class Realtime
     {
         readonly AdsClient client;
+        readonly AmsNetId target;
         internal Realtime(AmsNetId target)
         {
+            this.target = target;
             client = new AdsClient();
             client.Connect(target, AmsPort.R0_Realtime);
         }
@@ -59,7 +61,7 @@ namespace TwinSharp
         public RTimeCpuSettings ReadCpuSettings()
         {
             var client = new AdsClient();
-            client.Connect(AmsPort.R0_Realtime);
+            client.Connect(target, AmsPort.R0_Realtime);
 
             var settings = new RTimeCpuSettings();
 
@@ -87,7 +89,7 @@ namespace TwinSharp
         {
             using (AdsClient client = new AdsClient())
             {
-                client.Connect(AmsPort.R0_Realtime);
+                client.Connect(target, AmsPort.R0_Realtime);
 
                 var info = new RTimeCpuLatency();
 

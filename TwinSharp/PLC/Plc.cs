@@ -1,6 +1,6 @@
 ﻿using TwinCAT.Ads;
 
-namespace TwinSharp
+namespace TwinSharp.PLC
 {
     public class PLC
     {
@@ -14,7 +14,7 @@ namespace TwinSharp
         }
 
         /// <summary>
-        /// Can be used to start a PLC runtime system on a TwinCAT computer. The function block can, for instance, be used to start the PLC on a remote PC.
+        /// Can be used to start a PLC runtime system on a TwinCAT system. The function block can, for instance, be used to start the PLC on a remote PC.
         /// Equivavalent to the function block PLC_Start.
         /// </summary>
         public void Start()
@@ -29,7 +29,7 @@ namespace TwinSharp
         }
 
         /// <summary>
-        /// Can be used to stop a PLC runtime system on a TwinCAT computer. The function block can, for instance, be used to stop the PLC on a remote or a local PC.
+        /// Can be used to stop a PLC runtime system on a TwinCAT system. The function block can, for instance, be used to stop the PLC on a remote or a local PC.
         /// Equivavalent to the function block PLC_Stop.
         /// </summary>
         public void Stop()
