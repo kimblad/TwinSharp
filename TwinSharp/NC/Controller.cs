@@ -12,5 +12,6 @@ namespace TwinSharp.NC
             Parameters = new ControllerParameters(client, id);
             State = new ControllerState(client, id);
         }
+
     }
 }

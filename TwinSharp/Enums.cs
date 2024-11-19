@@ -29,20 +29,7 @@ namespace TwinSharp
         E_LHR_LicensePlatformLevelInv = (0x98110700 + 0x33)
     }
 
-    public enum GroupAxisStartType
-    {
-        NOT_DEFINED = 0,
-        AbsoluteStart = 1,
-        RelativeStart = 2,
-        ContinousStartPositive = 3,
-        ContinousStartNegative = 4,
-        ModuloStartOLD = 5,
-        ModuloStartShortestDistance = 261,
-        ModuloStartPositiveDirection = 517,
-        ModuloStartNegativeDirection = 773,
-        StopAndLock = 4096,
-        Halt = 8192,
-    }
+
 
     public enum EndPositionType
     {

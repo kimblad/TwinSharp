@@ -28,6 +28,10 @@ namespace TwinSharp.NC
             get => (ControllerType)client.ReadAny<uint>(indexGroup, 0x03);
         }
 
-
+        public double ProportionalGainKpOrKv
+        {
+            get => client.ReadAny<double>(indexGroup, 0x00000102);
+            set => client.WriteAny(indexGroup, 0x00000102, value);
+        }
     }
 }

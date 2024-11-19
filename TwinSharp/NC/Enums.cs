@@ -1,5 +1,24 @@
 ﻿namespace TwinSharp.NC
 {
+    public enum GroupAxisStartType
+    {
+        NOT_DEFINED = 0,
+        AbsoluteStart = 1,
+        RelativeStart = 2,
+        ContinousStartPositive = 3,
+        ContinousStartNegative = 4,
+        ModuloStartOLD = 5,
+        ModuloStartShortestDistance = 261,
+        JogPositiveSlow = 272, //Undocumented
+        JogNegativeSlow = 273, //Undocumented
+        ModuloStartPositiveDirection = 517,
+        JogPositiveFast = 528, //Undocumented
+        JogNegativeFast = 529, //Undocumented
+        ModuloStartNegativeDirection = 773,
+        StopAndLock = 4096,
+        Halt = 8192,
+    }
+
     [Flags]
     public enum StateDWordFlags : uint
     {

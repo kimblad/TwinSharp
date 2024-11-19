@@ -7,6 +7,7 @@ namespace TwinSharp.NC
         public readonly AxisFunctions Functions;
         public readonly AxisParameters Parameters;
         public readonly AxisState State;
+        public readonly AxisCyclicProcessData CyclicProcessData;
 
         public readonly Encoder[] Encoders;
         public readonly Controller[] Controllers;
@@ -16,6 +17,7 @@ namespace TwinSharp.NC
             Functions = new AxisFunctions(client, id);
             Parameters = new AxisParameters(client, id);
             State = new AxisState(client, id);
+            CyclicProcessData = new AxisCyclicProcessData(client, id);
 
 
             //Create the sub elements for encoders, controllers and drives.
