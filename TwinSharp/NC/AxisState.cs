@@ -1,4 +1,5 @@
-﻿using TwinCAT.Ads;
+﻿using System.Collections.Generic;
+using TwinCAT.Ads;
 
 namespace TwinSharp.NC
 {
@@ -116,6 +117,10 @@ namespace TwinSharp.NC
             get => client.ReadAny<int>(indexGroup, 0x15);
         }
 
+        /// <summary>
+        /// Positioning time of the last motion command
+        /// (start → target position window)
+        /// </summary>
         public double PositioningTimeLastMotionCommand
         {
             get => client.ReadAny<double>(indexGroup, 0x16);

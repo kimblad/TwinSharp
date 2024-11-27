@@ -305,5 +305,14 @@ namespace TwinSharp.NC
             set => client.WriteAny(indexGroup, 0x103, value);
         }
 
+        /// <summary>
+        /// Reference velocity at reference output (velocity pre-control)
+        /// </summary>
+        public double RefVelocityAtRefOutput
+        {
+            get => client.ReadAny<double>(indexGroup, 0x00030101);
+            set => client.WriteAny(indexGroup, 0x00030101, value);
+        }
+
     }
 }

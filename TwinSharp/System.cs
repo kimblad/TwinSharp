@@ -1,4 +1,7 @@
-﻿using TwinCAT.Ads;
+﻿using System.Xml.Serialization;
+using System.Xml;
+using TwinCAT.Ads;
+using System.Globalization;
 
 namespace TwinSharp
 {
@@ -46,7 +49,7 @@ namespace TwinSharp
         {
             using (var client = new AdsClient())
             {
-                client.Connect(target, 10000);
+                client.Connect(target, AmsPort.SystemService);
 
                 var stateInfo = new StateInfo(AdsState.Reconfig, 0);
                 client.WriteControl(stateInfo);
@@ -61,7 +64,7 @@ namespace TwinSharp
         {
             using (var client = new AdsClient())
             {
-                client.Connect(target, 10000);
+                client.Connect(target, AmsPort.SystemService);
 
                 var stateInfo = new StateInfo(AdsState.Reset, 0);
                 client.WriteControl(stateInfo);
@@ -75,7 +78,7 @@ namespace TwinSharp
         {
             using (var client = new AdsClient())
             {
-                client.Connect(target, 10000);
+                client.Connect(target, AmsPort.SystemService);
 
                 var stateInfo = new StateInfo(AdsState.Stop, 0);
                 client.WriteControl(stateInfo);
@@ -142,10 +145,9 @@ namespace TwinSharp
                         IOADS_IOF_READDEVNETID, amsBuffer);
 
                     var amsNetId = new AmsNetId(amsBuffer.ToArray());
-                    //EtherCAT masters AmsNetId is typically in the form:
-                    //Combine it with the targets ams net id to create a valid AmsNetId
-                    //That can be reached remote 
 
+                    //EtherCAT masters AmsNetId is typically in the form: [192.168.5.89].2.1
+                    //Combine the last two digits with the targets ams net id to create a AmsNetId that can be reached from remote 
                     byte[] combined = target.ToBytes();
                     combined[4] = amsNetId.ToBytes()[4];
                     combined[5] = amsNetId.ToBytes()[5];
@@ -163,6 +165,57 @@ namespace TwinSharp
 
                 return etherCatMasters;
             }
+        }
+
+
+        public static AmsRoute[] ListLocalStaticRoutes()
+        {
+            const string filePath = "C:\\TwinCAT\\3.1\\Target\\StaticRoutes.xml";
+
+            if (!File.Exists(filePath))
+            {
+                throw new FileNotFoundException("The file StaticRoutes.xml was not found. Make sure the path is correct.");
+            }
+
+
+            var settings = new XmlReaderSettings() { ConformanceLevel = ConformanceLevel.Document };
+
+            XmlSerializer ser = new XmlSerializer(typeof(TcConfig));
+            TcConfig? configs;
+            
+            using (XmlReader reader = XmlReader.Create(filePath, settings))
+            {
+                configs = ser.Deserialize(reader) as TcConfig;
+            }
+
+
+            if (configs == null)
+                return [];
+
+            if (configs.Items == null || configs.Items.Length == 0)
+                return [];
+
+
+            //Convert from the parsed xml format where everything is strings.
+            var xmlRoutes = configs.Items[0].Route;
+            var routes = new AmsRoute[xmlRoutes.Length];
+
+
+            for (int i = 0; i < xmlRoutes.Length; i++)
+            {
+                var amsNetId = new AmsNetId(xmlRoutes[i].NetId); //Xml parsed netId as string. Create a real AmsNetId object.
+
+
+                if (!int.TryParse(xmlRoutes[i].Flags, CultureInfo.InvariantCulture, out int flags))
+                    flags = 0;
+
+
+                var route = new AmsRoute(xmlRoutes[i].Name, xmlRoutes[i].Address, amsNetId, xmlRoutes[i].Type, flags);
+
+                routes[i] = route;
+            }
+
+            return routes;
         }
     }
 }
