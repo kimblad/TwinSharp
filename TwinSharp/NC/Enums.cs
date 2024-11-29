@@ -50,6 +50,66 @@
         KinematicTransformation = 4
     }
 
+    public enum InterpreterType
+    {
+        NotDefined = 0,
+        NCInterpreterDIN66025GST = 1,
+        NCInterpreterDIN66025ClassicDialect = 2
+    }
+
+    public enum InterpolationLoadLogMode
+    {
+        LoaderLogOff = 0,
+        SourceOnly = 1,
+        SourceAndCompiled = 2
+    }
+
+    public enum InterpolationTraceMode
+    {
+        TraceOff = 0,
+        TraceLineNumbers = 1,
+        TraceSource = 2,
+    }
+
+
+    public enum InterpreterState
+    {
+        ITP_STATE_INITFAILED = 0,
+        ITP_STATE_IDLE = 1,
+        ITP_STATE_READY = 2,
+        ITP_STATE_STARTED = 3,
+        ITP_STATE_SCANNING = 4,
+        ITP_STATE_RUNNING = 5,
+        ITP_STATE_STAY_RUNNING = 6,
+        ITP_STATE_WRITETABLE = 7,
+        ITP_STATE_SEARCHLINE = 8,
+        ITP_STATE_END = 9,
+        ITP_STATE_SINGLESTOP = 10,
+        ITP_STATE_ABORTING = 11,
+        ITP_STATE_ABORTED = 12,
+        ITP_STATE_FAULT = 13,
+        ITP_STATE_RESET = 14,
+        ITP_STATE_STOP = 15,
+        ITP_STATE_WAITFUNC = 16,
+        ITP_STATE_FLUSHBUFFERS = 17,
+    }
+
+    public enum InterpreterOperationMode
+    {
+        /// <summary>
+        /// Default (deactivates the other modes)
+        /// </summary>
+        Default = 0x0,
+        /// <summary>
+        /// Single block mode in the NC core (Block execution task/SAF)
+        /// </summary>
+        SingleBlockNC = 0x1,
+        /// <summary>
+        /// Single block mode in the interpreter
+        /// </summary>
+        SingleBlockInterpreter = 0x4000,
+    }
+
     public enum GroupType
     {
         NOT_DEFINED = 0,
@@ -65,6 +125,19 @@
         KinematicTransformationGroup = 12,
     }
 
+
+    public enum FifoInterpolationType
+    {
+        INTERPOLATIONTYPE_LINEAR = 0,
+        INTERPOLATIONTYPE_4POINT = 1,
+        INTERPOLATIONTYPE_CUBICSPLINE = 4
+    }
+
+    public enum FifoOverrideType
+    {
+        OVERRIDETYPE_INSTANTANEOUS = 1,
+        OVERRIDETYPE_PT2 = 2
+    }
     public enum DriveType
     {
         NOT_DEFINED = 0,

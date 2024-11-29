@@ -1,8 +1,8 @@
 ﻿* Control Scope over ADS.
 * Use CoPilot to describe classes. Do this when they are pretty much complete so that CoPilot has more information.
 * Add a class that describes IO/EtherCAT master and slaves
-* Class that describes channels!!
-* Class that describes the groups!!
+* Complete the class that describes channels
+* Complete the class that describes the groups
 * Class that describes CNC
 * Check if IpcDisplayDevice works correctly
 * Move CNCAxis Status ChannelStatus to be under a CncAxis under the Channel.

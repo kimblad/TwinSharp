@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace TwinSharp
 {
-    public class System
+    public class TcSystem
     {
         public readonly Realtime Realtime;
         public readonly License License;
@@ -16,7 +16,7 @@ namespace TwinSharp
         /// <summary>
         /// Create a representation of a TwinCAT system on the local machine.
         /// </summary>
-        public System()
+        public TcSystem()
         {
             target = AmsNetId.Local;
             Init(target, out Realtime, out License, out FileSystem);
@@ -26,7 +26,7 @@ namespace TwinSharp
         /// Create a representation of a TwinCAT system on a remote target machine.
         /// </summary>
         /// <param name="target"></param>
-        public System(AmsNetId target)
+        public TcSystem(AmsNetId target)
         {
             this.target = target;
             Init(target, out Realtime, out License, out FileSystem);
