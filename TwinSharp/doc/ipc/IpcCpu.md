@@ -1,5 +1,9 @@
 # IpcCpu `Public class`
 
+## Description
+The IpcCpu class provides methods to interact with the CPU of a device via ADS (Automation Device Specification).
+            It allows reading the CPU frequency, current CPU usage percentage, and current CPU temperature in Celsius.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -15,14 +19,18 @@
 #### Public  properties
 | Type | Name | Methods |
 | --- | --- | --- |
-| `uint` | [`Frequency`](#frequency) | `get` |
-| `short` | [`TemperatureCelsius`](#temperaturecelsius)<br>Requires BIOS API | `get` |
-| `ushort` | [`UsagePercent`](#usagepercent) | `get` |
+| `uint` | [`Frequency`](#frequency)<br>CPU frequency (constant) | `get` |
+| `short` | [`TemperatureCelsius`](#temperaturecelsius)<br>Current CPU Temperature (°C). Requires BIOS API. | `get` |
+| `ushort` | [`UsagePercent`](#usagepercent)<br>Current CPU Usage (%) | `get` |
 
 ## Details
+### Summary
+The IpcCpu class provides methods to interact with the CPU of a device via ADS (Automation Device Specification).
+            It allows reading the CPU frequency, current CPU usage percentage, and current CPU temperature in Celsius.
+
 ### Constructors
 #### IpcCpu
-[*Source code*](https://github.com///blob//TwinSharp/IPC/IpcCpu.cs#L12)
+[*Source code*](https://github.com///blob//TwinSharp/IPC/IpcCpu.cs#L16)
 ```csharp
 internal IpcCpu(AdsClient client, ushort mdpId)
 ```
@@ -37,17 +45,21 @@ internal IpcCpu(AdsClient client, ushort mdpId)
 ```csharp
 public uint Frequency { get; }
 ```
+##### Summary
+CPU frequency (constant)
 
 #### UsagePercent
 ```csharp
 public ushort UsagePercent { get; }
 ```
+##### Summary
+Current CPU Usage (%)
 
 #### TemperatureCelsius
 ```csharp
 public short TemperatureCelsius { get; }
 ```
 ##### Summary
-Requires BIOS API
+Current CPU Temperature (°C). Requires BIOS API.
 
 *Generated with* [*ModularDoc*](https://github.com/hailstorm75/ModularDoc)

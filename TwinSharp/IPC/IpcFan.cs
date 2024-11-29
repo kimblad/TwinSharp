@@ -7,7 +7,7 @@ namespace TwinSharp.IPC
     /// </summary>
     public class IpcFan
     {
-        public const ushort ModuleType = 0x001B;
+        internal const ushort ModuleType = 0x001B;
 
         readonly AdsClient client;
         readonly uint subIndex;
@@ -20,6 +20,9 @@ namespace TwinSharp.IPC
             subIndex = (uint)(mdpId << 20) | 0x80010000; //Table 0x8nn1, just add the desired subIndex later.
         }
 
+        /// <summary>
+        /// Fan speed (rpm)
+        /// </summary>
         public short FanSpeedRPM
         {
             get => client.ReadAny<short>(0xF302, subIndex + 01);

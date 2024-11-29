@@ -1,8 +1,13 @@
 ﻿using TwinCAT.Ads;
-using TwinCAT.Router.Native;
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The TableFunctions class provides methods to generate and delete various types of tables
+    /// with specified dimensions and interpolation types. It interacts with a TwinCAT AdsClient
+    /// to perform these operations. The class supports generating general tables, valve diagram
+    /// tables, and motion function tables, each with specific table types and dimensions.
+    /// </summary>
     public class TableFunctions
     {
         readonly AdsClient client;

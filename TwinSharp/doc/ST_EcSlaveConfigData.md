@@ -1,5 +1,8 @@
 # ST_EcSlaveConfigData `Public class`
 
+## Description
+The structure ST_EcSlaveConfigData contains the EtherCAT configuration data for an EtherCAT slave device.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -11,15 +14,26 @@
 ```
 
 ## Details
+### Summary
+The structure ST_EcSlaveConfigData contains the EtherCAT configuration data for an EtherCAT slave device.
+
 ### Constructors
 #### ST_EcSlaveConfigData
-[*Source code*](https://github.com///blob//TwinSharp/Structs.cs#L118)
+[*Source code*](https://github.com///blob//TwinSharp/Structs.cs#L232)
 ```csharp
 public ST_EcSlaveConfigData(byte[] bytes)
 ```
 ##### Arguments
 | Type | Name | Description |
 | --- | --- | --- |
-| `byte``[]` | bytes |   |
+| `byte``[]` | bytes |  |
+
+##### Summary
+Constructor for ST_EcSlaveConfigData from a byte array of length 80.
+
+##### Exceptions
+| Name | Description |
+| --- | --- |
+| Exception |  |
 
 *Generated with* [*ModularDoc*](https://github.com/hailstorm75/ModularDoc)

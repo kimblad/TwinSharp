@@ -2,12 +2,17 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The GroupFunctions class provides methods to control and manage an axis group in a TwinCAT NC (Numerical Control) system.
+    /// It allows for resetting, stopping, clearing, and performing an emergency stop on the group.
+    /// Additionally, it supports starting and managing FIFO (First In, First Out) operations for the group.
+    /// </summary>
     public class GroupFunctions
     {
         readonly AdsClient client;
         readonly uint indexGroup;
 
-        public GroupFunctions(AdsClient client, uint id)
+        internal GroupFunctions(AdsClient client, uint id)
         {
             this.client = client;
             indexGroup = 0x3200 + id;

@@ -2,6 +2,7 @@
 
 namespace TwinSharp.NC
 {
+
     public class ChannelCyclicProcessData
     {
         private readonly AdsClient client;

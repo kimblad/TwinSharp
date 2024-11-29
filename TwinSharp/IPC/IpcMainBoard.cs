@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TwinCAT.Ads;
+﻿using TwinCAT.Ads;
 
 namespace TwinSharp.IPC
 {
@@ -13,7 +8,7 @@ namespace TwinSharp.IPC
     /// </summary>
     public class IpcMainBoard
     {
-        public const ushort ModuleType = 0x001C;
+        internal const ushort ModuleType = 0x001C;
 
         AdsClient client;
         readonly uint subIndexTable1;
@@ -28,26 +23,41 @@ namespace TwinSharp.IPC
             subIndexTable2 = (uint)(mdpId << 20) | 0x80020000; //Table 0x8nn2, just add the desired subIndex later.
         }
 
+        /// <summary>
+        /// Type of the mainboard.
+        /// </summary>
         public string Type
         {
             get => client.ReadString(0xF302, subIndexTable1 + 01, 80);
         }
 
+        /// <summary>
+        /// Serial number of the mainboard.
+        /// </summary>
         public string SerialNumber
         {
             get => client.ReadString(0xF302, subIndexTable1 + 02, 80);
         }
 
+        /// <summary>
+        /// Production date of the mainboard.
+        /// </summary>
         public string ProductionDate
         {
             get => client.ReadString(0xF302, subIndexTable1 + 03, 80);
         }
 
+        /// <summary>
+        /// Number of times the device has been booted.
+        /// </summary>
         public uint BootCount
         {
             get => client.ReadAny<uint>(0xF302, subIndexTable1 + 04);
         }
 
+        /// <summary>
+        /// Operating time in minutes.
+        /// </summary>
         public uint OperatingTimeMinutes
         {
             get => client.ReadAny<uint>(0xF302, subIndexTable1 + 05);
@@ -85,26 +95,41 @@ namespace TwinSharp.IPC
             get => client.ReadAny<int>(0xF302, subIndexTable1 + 09);
         }
 
+        /// <summary>
+        /// Current mainboard temperature °C.
+        /// </summary>
         public short TemperatureCelsius
         {
             get => client.ReadAny<short>(0xF302, subIndexTable1 + 10);
         }
 
+        /// <summary>
+        /// Mainboard revision
+        /// </summary>
         public byte MainBoardRevision
         {
             get => client.ReadAny<byte>(0xF302, subIndexTable2 + 01);
         }
 
+        /// <summary>
+        /// BIOS major version
+        /// </summary>
         public byte BiosMajorVersion
         {
             get => client.ReadAny<byte>(0xF302, subIndexTable2 + 02);
         }
 
+        /// <summary>
+        /// BIOS minor version
+        /// </summary>
         public byte BiosMinorVersion
         {
             get => client.ReadAny<byte>(0xF302, subIndexTable2 + 03);
         }
 
+        /// <summary>
+        /// BIOS version
+        /// </summary>
         public string BiosVersion
         {
             get => client.ReadString(0xF302, subIndexTable2 + 04, 80);

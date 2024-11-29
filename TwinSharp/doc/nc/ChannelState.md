@@ -1,5 +1,8 @@
 # ChannelState `Public class`
 
+## Description
+Represents the state of an NC (Numerical Control) channel, providing access to various channel properties such as error codes, group count, interpreter state, operation mode, and program information using an AdsClient.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -15,19 +18,22 @@
 #### Public  properties
 | Type | Name | Methods |
 | --- | --- | --- |
-| `string` | [`CurrentLoadedProgramName`](#currentloadedprogramname) | `get` |
-| `uint` | [`CurrentLoadedProgramNumber`](#currentloadedprogramnumber) | `get` |
+| `string` | [`CurrentLoadedProgramName`](#currentloadedprogramname)<br>Program name of currently loaded program<br>            (100 characters, null-terminated) | `get` |
+| `uint` | [`CurrentLoadedProgramNumber`](#currentloadedprogramnumber)<br>Current loaded program number | `get` |
 | `int` | [`ErrorCode`](#errorcode)<br>Error code Channel | `get` |
 | `uint` | [`GroupCount`](#groupcount)<br>Number of groups in the Channel | `get` |
-| [`InterpreterOperationMode`](./InterpreterOperationMode.md) | [`InterpreterOperationMode`](#interpreteroperationmode) | `get` |
+| [`InterpreterOperationMode`](./InterpreterOperationMode.md) | [`InterpreterOperationMode`](#interpreteroperationmode)<br>Interpreter/channel operation mode | `get` |
 | `uint` | [`InterpreterSimulationMode`](#interpretersimulationmode)<br>Interpreter simulation mode 0: off (default) 1: on | `get` |
-| [`InterpreterState`](./InterpreterState.md) | [`InterpreterState`](#interpreterstate) | `get` |
+| [`InterpreterState`](./InterpreterState.md) | [`InterpreterState`](#interpreterstate)<br>Interpreter status | `get` |
 | `uint` | [`TextIndex`](#textindex)<br>If the interpreter is in the aborted state, the current text index can be read out here | `get` |
 
 ## Details
+### Summary
+Represents the state of an NC (Numerical Control) channel, providing access to various channel properties such as error codes, group count, interpreter state, operation mode, and program information using an AdsClient.
+
 ### Constructors
 #### ChannelState
-[*Source code*](https://github.com///blob//TwinSharp/NC/ChannelState.cs#L10)
+[*Source code*](https://github.com///blob//TwinSharp/NC/ChannelState.cs#L13)
 ```csharp
 internal ChannelState(AdsClient client, uint id)
 ```
@@ -56,21 +62,30 @@ Number of groups in the Channel
 ```csharp
 public InterpreterState InterpreterState { get; }
 ```
+##### Summary
+Interpreter status
 
 #### InterpreterOperationMode
 ```csharp
 public InterpreterOperationMode InterpreterOperationMode { get; }
 ```
+##### Summary
+Interpreter/channel operation mode
 
 #### CurrentLoadedProgramNumber
 ```csharp
 public uint CurrentLoadedProgramNumber { get; }
 ```
+##### Summary
+Current loaded program number
 
 #### CurrentLoadedProgramName
 ```csharp
 public string CurrentLoadedProgramName { get; }
 ```
+##### Summary
+Program name of currently loaded program
+            (100 characters, null-terminated)
 
 #### InterpreterSimulationMode
 ```csharp

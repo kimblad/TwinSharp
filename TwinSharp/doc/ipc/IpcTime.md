@@ -1,5 +1,10 @@
 # IpcTime `Public class`
 
+## Description
+The IpcTime class provides methods to interact with time settings on the IPC.
+            It allows getting and setting various time-related properties such as SNTP server address, 
+            SNTP refresh interval, seconds since 1970, textual date-time representation, timezone, and time offset.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -23,9 +28,14 @@
 | `ushort` | [`Timezone`](#timezone)<br>Timezone - Zero based index of currently active timezone as listed in object 0x8nn2.Sub indizes in Oject 0x8nn2 are one based.To lookup timezone information you need to query sub idx @ "this value"+1<br>            Not for TC/RTOS | `get, set` |
 
 ## Details
+### Summary
+The IpcTime class provides methods to interact with time settings on the IPC.
+            It allows getting and setting various time-related properties such as SNTP server address, 
+            SNTP refresh interval, seconds since 1970, textual date-time representation, timezone, and time offset.
+
 ### Constructors
 #### IpcTime
-[*Source code*](https://github.com///blob//TwinSharp/IPC/IpcTime.cs#L18)
+[*Source code*](https://github.com///blob//TwinSharp/IPC/IpcTime.cs#L17)
 ```csharp
 internal IpcTime(AdsClient client, ushort mdpId)
 ```

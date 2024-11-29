@@ -1,5 +1,9 @@
 # Ring0Parameters `Public class`
 
+## Description
+Represents the parameters for Ring 0, providing access to various settings and configurations
+            related to the SAF and SVB tasks, global time compensation, and cyclic data consistency.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -21,9 +25,13 @@
 | `int` | [`GlobalTimeCompensationShift`](#globaltimecompensationshift)<br>Global Time Compensation Shift (for SAF Task).<br>            Unit: ns | `get` |
 
 ## Details
+### Summary
+Represents the parameters for Ring 0, providing access to various settings and configurations
+            related to the SAF and SVB tasks, global time compensation, and cyclic data consistency.
+
 ### Constructors
 #### Ring0Parameters
-[*Source code*](https://github.com///blob//TwinSharp/NC/Ring0Parameters.cs#L9)
+[*Source code*](https://github.com///blob//TwinSharp/NC/Ring0Parameters.cs#L13)
 ```csharp
 internal Ring0Parameters(AdsClient client)
 ```

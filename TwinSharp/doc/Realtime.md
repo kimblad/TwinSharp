@@ -1,5 +1,10 @@
 # Realtime `Public class`
 
+## Description
+The Realtime class provides methods to interact with the TwinCAT systems real-time settings.
+            It allows setting shared cores configuration, reading CPU settings, reading CPU latency,
+            and getting the current CPU usage. It uses the AdsClient to communicate with the TwinCAT system.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -22,13 +27,18 @@
 | Returns | Name |
 | --- | --- |
 | [`RTimeCpuSettings`](./RTimeCpuSettings.md) | [`ReadCpuSettings`](#readcpusettings)()<br>Reads the CPU settings of the TwinCAT system. |
-| [`RTimeCpuLatency`](./RTimeCpuLatency.md) | [`ReadLatency`](#readlatency)() |
+| [`RTimeCpuLatency`](./RTimeCpuLatency.md) | [`ReadLatency`](#readlatency)()<br>Reads the CPU latency of the TwinCAT system. |
 | `AdsErrorCode` | [`SetSharedCores`](#setsharedcores)(`uint` sharedCores)<br>Sets the shared cores configuration for the TwinCAT system. |
 
 ## Details
+### Summary
+The Realtime class provides methods to interact with the TwinCAT systems real-time settings.
+            It allows setting shared cores configuration, reading CPU settings, reading CPU latency,
+            and getting the current CPU usage. It uses the AdsClient to communicate with the TwinCAT system.
+
 ### Constructors
 #### Realtime
-[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L9)
+[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L14)
 ```csharp
 internal Realtime(AmsNetId target)
 ```
@@ -39,7 +49,7 @@ internal Realtime(AmsNetId target)
 
 ### Methods
 #### SetSharedCores
-[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L22)
+[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L27)
 ```csharp
 public AdsErrorCode SetSharedCores(uint sharedCores)
 ```
@@ -55,7 +65,7 @@ Sets the shared cores configuration for the TwinCAT system.
 
 
 #### ReadCpuSettings
-[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L62)
+[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L67)
 ```csharp
 public RTimeCpuSettings ReadCpuSettings()
 ```
@@ -66,10 +76,15 @@ Reads the CPU settings of the TwinCAT system.
 
 
 #### ReadLatency
-[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L89)
+[*Source code*](https://github.com///blob//TwinSharp/Realtime.cs#L98)
 ```csharp
 public RTimeCpuLatency ReadLatency()
 ```
+##### Summary
+Reads the CPU latency of the TwinCAT system.
+
+##### Returns
+
 
 ### Properties
 #### CpuUsage

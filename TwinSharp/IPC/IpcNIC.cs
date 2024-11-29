@@ -2,9 +2,16 @@
 
 namespace TwinSharp.IPC
 {
+    /// <summary>
+    /// The IpcNIC class provides an interface to interact with network interface card (NIC) settings 
+    /// through the TwinCAT ADS protocol. It allows reading and writing of various NIC properties 
+    /// such as MAC address, IPv4 address, subnet mask, DHCP status, default gateway, DNS servers, 
+    /// and virtual device name. The class handles specific behaviors for different operating systems 
+    /// like Windows, WinCE, TC/BSD, and TC/RTOS.
+    /// </summary>
     public class IpcNIC
     {
-        public const ushort ModuleType = 0x0002;
+        internal const ushort ModuleType = 0x0002;
 
         readonly AdsClient client;
         readonly uint subIndex;
@@ -17,6 +24,9 @@ namespace TwinSharp.IPC
             subIndex = (uint)(mdpId << 20) | 0x80010000; //Table 0x8nn1, just add the desired subIndex later.
         }
 
+        /// <summary>
+        /// MAC address of the card.
+        /// </summary>
         public string MACAddress
         {
             get => client.ReadString(0xF302, subIndex + 01, 80);
@@ -40,6 +50,9 @@ namespace TwinSharp.IPC
             set => client.WriteAny(0xF302, subIndex + 03, value);
         }
 
+        /// <summary>
+        /// DHCP active.
+        /// </summary>
         public bool DHCP
         {
             get => client.ReadAny<bool>(0xF302, subIndex + 04);

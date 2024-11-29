@@ -2,54 +2,23 @@
 
 namespace TwinSharp.IPC
 {
+    /// <summary>
+    /// The IPC class represents a Beckhoff Industrial PC (IPC) and provides access to various hardware modules such as network cards, CPU, memory, display devices, operating system, fans, mainboard, UPS, and miscellaneous modules.
+    /// It uses the AdsClient to connect to the IPC and read the available MDP modules, initializing the corresponding module objects based on their types.
+    /// The class implements IDisposable to ensure proper disposal of the AdsClient.
+    /// </summary>
     public class IPC : IDisposable
     {
-        public readonly IpcNIC[] NICs;
-        public readonly IpcTime? Time;
-        public readonly IpcTwinCAT? TwinCAT;
-        public readonly IpcCpu? Cpu;
-        public readonly IpcMemory? Memory;
-        public readonly IpcDisplayDevice[] DisplayDevices;
-        public readonly IpcOperatingSystem? OperatingSystem;
-        public readonly IpcFan[] Fans;
-        public readonly IpcMainBoard? MainBoard;
-        public readonly IpcUps? UPS;
-        public readonly IpcMiscellaneous? Miscellaneous;
-
-
         readonly AdsClient client;
 
-        /// <summary>
-        /// Represents a localhost Beckhoff IPC.
-        /// </summary>
-        public IPC()
-        {
-            var target = AmsNetId.Local;
-            Init(target, out client, out NICs, out DisplayDevices, out Fans, out Time, out TwinCAT, out Cpu, out Memory, out OperatingSystem, out UPS, out MainBoard, out Miscellaneous);
-        }
+
 
         /// <summary>
-        /// Represents a Beckhoff IPC on a remote target.
+        /// Creates an representation of a Beckhoff IPC.
         /// </summary>
-        /// <param name="target"></param>
+        /// <param name="target">Target where to find IPC. Use AmsNetId.Local for local access.</param>
         public IPC(AmsNetId target)
         {
-            Init(target, out client, out NICs, out DisplayDevices, out Fans, out Time, out TwinCAT, out Cpu, out Memory, out OperatingSystem, out UPS, out MainBoard, out Miscellaneous);
-        }
-
-
-        /// <summary>
-        /// Set multiple readonly objects for constructors.
-        /// </summary>
-        private void Init(AmsNetId target, out AdsClient client, out IpcNIC[] NICs, out IpcDisplayDevice[] DisplayDevices, out IpcFan[] Fans, 
-            out IpcTime? Time, out IpcTwinCAT? TwinCAT, out IpcCpu? Cpu, out IpcMemory? Memory, out IpcOperatingSystem? OperatingSystem,
-            out IpcUps? UPS, out IpcMainBoard? MainBoard, out IpcMiscellaneous? Miscellaneous)
-        {
-            //Variables must be assigned to out parameters.
-            //If not found on IPC they will remain null.
-            Time = null; TwinCAT = null; Cpu = null; Memory = null; OperatingSystem = null; UPS = null; MainBoard = null; Miscellaneous = null;
-
-
             client = new AdsClient();
             client.Connect(target, AmsPort.SystemService);
 
@@ -58,7 +27,7 @@ namespace TwinSharp.IPC
             var displays = new List<IpcDisplayDevice>();
             var fans = new List<IpcFan>();
 
-            var unkown = new List<uint>();
+            var unknown = new List<uint>();
             //Read all available MDP modules
             // Reads the numbers of modules. First ushort in list is the count of items 
             ushort mdpModuleCount = client.ReadAny<ushort>(0xF302, 0xF0200000); // index to get modul ID List - Flag and Subindex 0
@@ -114,7 +83,7 @@ namespace TwinSharp.IPC
                         Miscellaneous = new IpcMiscellaneous(client, mdpId);
                         break;
                     default:
-                        unkown.Add(mdpType);
+                        unknown.Add(mdpType);
                         break;
                 }
             }
@@ -125,6 +94,65 @@ namespace TwinSharp.IPC
         }
 
 
+        /// <summary>
+        /// Represents the network cards of the IPC.
+        /// </summary>
+        public IpcNIC[] NICs { get; private set; }
+
+        /// <summary>
+        /// Module for viewing and setting the time on the IPC.
+        /// </summary>
+        public IpcTime? Time { get; private set; }
+
+        /// <summary>
+        /// Represents the TwinCAT module of the IPC.
+        /// </summary>
+        public IpcTwinCAT? TwinCAT { get; private set; }
+
+        /// <summary>
+        /// Represents the CPU module of the IPC.
+        /// </summary>
+        public IpcCpu? Cpu { get; private set; }
+
+        /// <summary>
+        /// Represents the memory module of the IPC.
+        /// </summary>
+        public IpcMemory? Memory { get; private set; }
+
+        /// <summary>
+        /// Represents the display devices of the IPC.
+        /// </summary>
+        public IpcDisplayDevice[] DisplayDevices { get; private set; }
+
+        /// <summary>
+        /// Represents the operating system module of the IPC.
+        /// </summary>
+        public IpcOperatingSystem? OperatingSystem { get; private set; }
+
+        /// <summary>
+        /// Represents the fans of the IPC.
+        /// </summary>
+        public IpcFan[] Fans { get; private set; }
+
+        /// <summary>
+        /// Represents the mainboard module of the IPC.
+        /// </summary>
+        public IpcMainBoard? MainBoard { get; private set; }
+
+        /// <summary>
+        /// Represents the UPS module of the IPC.
+        /// </summary>
+        public IpcUps? UPS { get; private set; }
+
+        /// <summary>
+        /// Represents the miscellaneous module of the IPC.
+        /// </summary>
+        public IpcMiscellaneous? Miscellaneous { get; private set; }
+
+
+        /// <summary>
+        /// Disposes the ads client.
+        /// </summary>
         public void Dispose()
         {
             client?.Dispose();

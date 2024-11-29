@@ -2,6 +2,12 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The AxisCyclicProcessData class provides properties to interact with the cyclic process data of an axis in a TwinCAT NC system.
+    /// It uses an AdsClient to read and write various control and status parameters of the axis, such as control word, controller enable,
+    /// feed enable, referencing cam, velocity override, operation mode, actual position correction value, and external controller component.
+    /// If the axis is linked to a PLC object, most of these values will be refused.
+    /// </summary>
     public class AxisCyclicProcessData
     {
         readonly uint indexGroup;

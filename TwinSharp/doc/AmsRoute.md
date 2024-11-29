@@ -25,7 +25,7 @@
 #### Public  methods
 | Returns | Name |
 | --- | --- |
-| `StateInfo` | [`GetStateInfo`](#getstateinfo)() |
+| `StateInfo` | [`GetStateInfo`](#getstateinfo)()<br>Gets the state information for this ams route. |
 | `string` | [`ToString`](#tostring)() |
 
 ## Details
@@ -46,13 +46,18 @@ internal AmsRoute(string name, string adress, AmsNetId amsNetId, string protocol
 
 ### Methods
 #### GetStateInfo
-[*Source code*](https://github.com///blob//TwinSharp/AmsRoute.cs#L40)
+[*Source code*](https://github.com///blob//TwinSharp/AmsRoute.cs#L44)
 ```csharp
 public StateInfo GetStateInfo()
 ```
+##### Summary
+Gets the state information for this ams route.
+
+##### Returns
+
 
 #### ToString
-[*Source code*](https://github.com///blob//TwinSharp/AmsRoute.cs#L48)
+[*Source code*](https://github.com///blob//TwinSharp/AmsRoute.cs#L52)
 ```csharp
 public override string ToString()
 ```

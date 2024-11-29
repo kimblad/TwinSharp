@@ -1,9 +1,5 @@
 ﻿using System.Buffers.Binary;
-using System.Diagnostics;
-using System.IO;
-using System.Reflection.Metadata;
 using System.Text;
-using TwinCAT;
 using TwinCAT.Ads;
 
 namespace TwinSharp
@@ -37,12 +33,17 @@ namespace TwinSharp
             var readMemory = new Memory<byte>(readBytes);
 
             uint subIndex = 0x10_000 + (uint)mode;
-            int bytesReturned = client.ReadWrite(0x78, subIndex, readMemory, writeMemory);
+            client.ReadWrite(0x78, subIndex, readMemory, writeMemory);
 
             ushort handle = BitConverter.ToUInt16(readBytes, 0);
             return handle;
         }
 
+        /// <summary>
+        /// The function block FB_FileClose closes the file, thereby putting it in a defined state for further processing by other programs.
+        /// Equivavelent to the TwinCAT function block FB_FileClose.
+        /// </summary>
+        /// <param name="handle"></param>
         public void FileClose(ushort handle)
         {
             var writeBytes = Array.Empty<byte>();
@@ -61,6 +62,7 @@ namespace TwinSharp
         /// Equivavelent to the function block FB_FileGets.
         /// </summary>
         /// <param name="handle"></param>
+        /// <param name="endOfFile"> True if end of file is reached.</param>
         /// <returns></returns>
         public string FileGetString(ushort handle, out bool endOfFile)
         {
@@ -92,7 +94,8 @@ namespace TwinSharp
         /// Writes strings into a file. The string is written to the file up to the null termination, but without the null character. The file must have been opened in text mode.
         /// Equivalent to the function block FB_FilePuts
         /// </summary>
-        /// <param name="line"></param>
+        /// <param name="fileHandle"></param>
+        /// <param name="str"></param>
         public void FilePutString(ushort fileHandle, string str)
         {
             var ascii = new ASCIIEncoding();
@@ -103,7 +106,7 @@ namespace TwinSharp
             var readMemory = new Memory<byte>(readBytes);
 
             //Index offset is the handle.
-            int byteCountRead = client.ReadWrite(0x7F, fileHandle, readMemory, writeMemory);
+            client.ReadWrite(0x7F, fileHandle, readMemory, writeMemory);
         }
 
         /// <summary>
@@ -255,7 +258,7 @@ namespace TwinSharp
             var readBytes = Array.Empty<byte>();
             var readMemory = new Memory<byte>(readBytes);
 
-            int bytesReturned = client.ReadWrite(0x8A, 0x1, readMemory, writeMemory);
+            client.ReadWrite(0x8A, 0x1, readMemory, writeMemory);
         }
 
 
@@ -277,6 +280,11 @@ namespace TwinSharp
             client.ReadWrite(0x8B, 0x1, readMemory, writeMemory);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public ST_FindFileEntry GetFileProperties(string path)
         {
             var ascii = new ASCIIEncoding();
@@ -286,7 +294,7 @@ namespace TwinSharp
             var readBytes = new byte[324];
             var readMemory = new Memory<byte>(readBytes);
 
-            int bytesReturned = client.ReadWrite(0x85, 0x1, readMemory, writeMemory);
+            client.ReadWrite(0x85, 0x1, readMemory, writeMemory);
 
             var entry = CreateFileEntry(readBytes);
 
@@ -467,7 +475,7 @@ namespace TwinSharp
             var readBytes = new byte[324];
             var readMemory = new Memory<byte>(readBytes);
 
-            int bytesReturned = client.ReadWrite(0x85, 0x1, readMemory, writeMemory);
+            client.ReadWrite(0x85, 0x1, readMemory, writeMemory);
 
             using var ms = new MemoryStream(readBytes);
             using var br = new BinaryReader(ms);

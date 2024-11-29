@@ -1,16 +1,15 @@
-using Microsoft.VisualBasic;
-using System.Buffers.Text;
-using System.Linq;
-using System;
-using System.Runtime.Intrinsics.X86;
 using TwinCAT.Ads;
-using TwinCAT;
 
 namespace TwinSharp.IPC
 {
+    /// <summary>
+    /// The IpcTime class provides methods to interact with time settings on the IPC.
+    /// It allows getting and setting various time-related properties such as SNTP server address, 
+    /// SNTP refresh interval, seconds since 1970, textual date-time representation, timezone, and time offset.
+    /// </summary>
     public class IpcTime
     {
-        public const ushort ModuleType = 0x0003;
+        internal const ushort ModuleType = 0x0003;
 
         readonly AdsClient client;
         readonly uint subIndexTable1;

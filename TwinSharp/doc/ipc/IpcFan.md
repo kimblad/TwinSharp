@@ -18,7 +18,7 @@ Each fan for which information is available is represented by a dedicated MDP mo
 #### Public  properties
 | Type | Name | Methods |
 | --- | --- | --- |
-| `short` | [`FanSpeedRPM`](#fanspeedrpm) | `get` |
+| `short` | [`FanSpeedRPM`](#fanspeedrpm)<br>Fan speed (rpm) | `get` |
 
 ## Details
 ### Summary
@@ -41,5 +41,7 @@ internal IpcFan(AdsClient client, ushort mdpId)
 ```csharp
 public short FanSpeedRPM { get; }
 ```
+##### Summary
+Fan speed (rpm)
 
 *Generated with* [*ModularDoc*](https://github.com/hailstorm75/ModularDoc)

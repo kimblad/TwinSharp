@@ -27,7 +27,7 @@ System.IDisposable --> TwinSharp.FileSystem
 | [`FileFinder`](./FileFinder.md) | [`CreateFileFinder`](#createfilefinder)(`string` searchQuery)<br>Use a file finder to search for files on target device. |
 | `void` | [`DeleteDirectory`](#deletedirectory)(`string` path)<br>Can be used to delete a directory from the data storage device.<br>            A directory containing files cannot be deleted.<br>            Equivavalent to the function block FB_RemoveDir. |
 | `void` | [`Dispose`](#dispose)() |
-| `void` | [`FileClose`](#fileclose)(`ushort` handle) |
+| `void` | [`FileClose`](#fileclose)(`ushort` handle)<br>The function block FB_FileClose closes the file, thereby putting it in a defined state for further processing by other programs.<br>            Equivavelent to the TwinCAT function block FB_FileClose. |
 | `void` | [`FileDelete`](#filedelete)(`string` pathName)<br>Deletes a file from the data storage device.<br>            Equivavalent to the function block FB_FileDelete. |
 | `string` | [`FileGetString`](#filegetstring)(`ushort` handle, out `bool` endOfFile) |
 | `ushort` | [`FileOpen`](#fileopen)(`string` path, [`FileOpenModeFlags`](./FileOpenModeFlags.md) mode)<br>Creates a new file or opens an existing file for editing.<br>            Equivavelent to the TwinCAT function block FB_FileOpen |
@@ -54,7 +54,7 @@ The FileSystem class provides methods for interacting with the file system on a 
 
 ### Constructors
 #### FileSystem
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L18)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L14)
 ```csharp
 internal FileSystem(AmsNetId target)
 ```
@@ -65,7 +65,7 @@ internal FileSystem(AmsNetId target)
 
 ### Methods
 #### FileOpen
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L31)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L27)
 ```csharp
 public ushort FileOpen(string path, FileOpenModeFlags mode)
 ```
@@ -80,17 +80,21 @@ Creates a new file or opens an existing file for editing.
             Equivavelent to the TwinCAT function block FB_FileOpen
 
 #### FileClose
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L47)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L48)
 ```csharp
 public void FileClose(ushort handle)
 ```
 ##### Arguments
 | Type | Name | Description |
 | --- | --- | --- |
-| `ushort` | handle |   |
+| `ushort` | handle |  |
+
+##### Summary
+The function block FB_FileClose closes the file, thereby putting it in a defined state for further processing by other programs.
+            Equivavelent to the TwinCAT function block FB_FileClose.
 
 #### FileGetString
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L66)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L68)
 ```csharp
 public string FileGetString(ushort handle, out bool endOfFile)
 ```
@@ -101,22 +105,22 @@ public string FileGetString(ushort handle, out bool endOfFile)
 | `out` `bool` | endOfFile |   |
 
 #### FilePutString
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L97)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L100)
 ```csharp
 public void FilePutString(ushort fileHandle, string str)
 ```
 ##### Arguments
 | Type | Name | Description |
 | --- | --- | --- |
-| `ushort` | fileHandle |   |
-| `string` | str |   |
+| `ushort` | fileHandle |  |
+| `string` | str |  |
 
 ##### Summary
 Writes strings into a file. The string is written to the file up to the null termination, but without the null character. The file must have been opened in text mode.
             Equivalent to the function block FB_FilePuts
 
 #### FileRead
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L117)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L120)
 ```csharp
 public byte FileRead(ushort handle, int byteCountToRead)
 ```
@@ -134,7 +138,7 @@ The contents of an already opened file can be read. Before a read access, the fi
 
 
 #### FileWrite
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L147)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L150)
 ```csharp
 public uint FileWrite(ushort handle, byte[] data)
 ```
@@ -152,7 +156,7 @@ Writes data into a file. For write access the file must have been opened in the 
 The number of bytes that were sucessfully written.
 
 #### FileSeek
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L169)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L172)
 ```csharp
 public void FileSeek(ushort handle, int position, SeekOrigin origin)
 ```
@@ -168,7 +172,7 @@ Sets the file pointer of an open file to a definable position.
             Equivavalent to the function block FB_FileSeek.
 
 #### FileTell
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L196)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L199)
 ```csharp
 public int FileTell(uint handle)
 ```
@@ -188,7 +192,7 @@ Determines the current position of the file pointer. The position indicates the 
 The current position of the file pointer.
 
 #### FileDelete
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L216)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L219)
 ```csharp
 public void FileDelete(string pathName)
 ```
@@ -202,7 +206,7 @@ Deletes a file from the data storage device.
             Equivavalent to the function block FB_FileDelete.
 
 #### FileRename
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L234)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L237)
 ```csharp
 public void FileRename(string oldPath, string newPath)
 ```
@@ -217,7 +221,7 @@ Can be used to rename a file.
             Equivavalent to the function block FB_FileRename.
 
 #### CreateDirectory
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L250)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L253)
 ```csharp
 public void CreateDirectory(string path)
 ```
@@ -230,7 +234,7 @@ public void CreateDirectory(string path)
 Create a new folder on the target. Note: does not create folders recursively.
 
 #### DeleteDirectory
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L269)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L272)
 ```csharp
 public void DeleteDirectory(string path)
 ```
@@ -245,17 +249,23 @@ Can be used to delete a directory from the data storage device.
             Equivavalent to the function block FB_RemoveDir.
 
 #### GetFileProperties
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L281)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L289)
 ```csharp
 public ST_FindFileEntry GetFileProperties(string path)
 ```
 ##### Arguments
 | Type | Name | Description |
 | --- | --- | --- |
-| `string` | path |   |
+| `string` | path |  |
+
+##### Summary
+
+
+##### Returns
+
 
 #### CreateFileEntry
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L303)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L311)
 ```csharp
 internal static ST_FindFileEntry CreateFileEntry(byte[] buffer)
 ```
@@ -265,7 +275,7 @@ internal static ST_FindFileEntry CreateFileEntry(byte[] buffer)
 | `byte``[]` | buffer |   |
 
 #### CreateFileFinder
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L373)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L381)
 ```csharp
 public FileFinder CreateFileFinder(string searchQuery)
 ```
@@ -281,7 +291,7 @@ Use a file finder to search for files on target device.
 
 
 #### Dispose
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L395)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L403)
 ```csharp
 public virtual void Dispose()
 ```

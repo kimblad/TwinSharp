@@ -19,13 +19,21 @@ The structure ST_PortAddr contains EtherCAT topology information for EtherCAT sl
 
 ### Constructors
 #### ST_PortAddr
-[*Source code*](https://github.com///blob//TwinSharp/Structs.cs#L206)
+[*Source code*](https://github.com///blob//TwinSharp/Structs.cs#L382)
 ```csharp
 public ST_PortAddr(byte[] bytes)
 ```
 ##### Arguments
 | Type | Name | Description |
 | --- | --- | --- |
-| `byte``[]` | bytes |   |
+| `byte``[]` | bytes |  |
+
+##### Summary
+Constructor for ST_PortAddr
+
+##### Exceptions
+| Name | Description |
+| --- | --- |
+| Exception |  |
 
 *Generated with* [*ModularDoc*](https://github.com/hailstorm75/ModularDoc)

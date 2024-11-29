@@ -2,12 +2,18 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The GroupState class provides properties to interact with and retrieve various states and information
+    /// from a TwinCAT NC group via an AdsClient. It includes properties for error codes, axis counts, group states,
+    /// and emergency stop status, among others. Each property reads or writes data from the TwinCAT system using
+    /// specific index groups and offsets.
+    /// </summary>
     public class GroupState
     {
         readonly AdsClient client;
         readonly uint indexGroup;
 
-        public GroupState(AdsClient client, uint id)
+        internal GroupState(AdsClient client, uint id)
         {
             this.client = client;
             indexGroup = 0x3100 + id;

@@ -8,38 +8,52 @@ namespace TwinSharp.NC
     /// </summary>
     public class NC
     {
-        public readonly Ring0Manager Ring0Manager;
-        public readonly Axis[] Axes;
-        public readonly Channel[] Channels;
-        public readonly Group[] Groups;
-        public readonly Table[] Tables;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NC"/> class.
+        /// This constructor sets up the Ring0Manager and establishes a connection to the TwinCAT ADS client.
+        /// It also initializes the Axes, Channels, Groups, and Tables components using the provided target AmsNetId.
+        /// </summary>
+        /// <param name="target">The AmsNetId of the target device to connect to.</param>
 
-        public NC(AmsNetId target) 
+        public NC(AmsNetId target)
         {
-            Init(target, out Ring0Manager, out Axes, out Channels, out Groups, out Tables);
-        }
-
-        public NC()
-        {
-            var target = AmsNetId.Local;
-            Init(target, out Ring0Manager, out Axes, out Channels, out Groups, out Tables);
-        }
-
-
-        private void Init(AmsNetId target, out Ring0Manager ring0Manager, out Axis[] axes, out Channel[] channels, out Group[] groups, out Table[] tables)
-        {
-            ring0Manager = new Ring0Manager(target);
+            Ring0Manager = new Ring0Manager(target);
 
             var client = new AdsClient();
             client.Connect(target, AmsPort.R0_NCSAF);
 
 
-            axes = InitAxes(client, ring0Manager);
-            channels = InitChannels(client, ring0Manager);
-            groups = InitGroups(client, ring0Manager);
-            tables = InitTables(client, ring0Manager);
+            Axes = InitAxes(client, Ring0Manager);
+            Channels = InitChannels(client, Ring0Manager);
+            Groups = InitGroups(client, Ring0Manager);
+            Tables = InitTables(client, Ring0Manager);
         }
+
+        /// <summary>
+        /// Gets the Ring0Manager instance which manages the low-level operations and state of the NC system.
+        /// </summary>
+        public Ring0Manager Ring0Manager { get; private set; }
+
+        /// <summary>
+        /// Gets the array of Axis objects representing the axes in the NC system.
+        /// </summary>
+        public Axis[] Axes { get; private set; }
+
+        /// <summary>
+        /// Gets the array of Channel objects representing the channels in the NC system.
+        /// </summary>
+        public Channel[] Channels { get; private set; }
+
+        /// <summary>
+        /// Gets the array of Group objects representing the groups in the NC system.
+        /// </summary>
+        public Group[] Groups { get; private set; }
+
+        /// <summary>
+        /// Gets the array of Table objects representing the tables in the NC system.
+        /// </summary>
+        public Table[] Tables { get; private set; }
 
 
 

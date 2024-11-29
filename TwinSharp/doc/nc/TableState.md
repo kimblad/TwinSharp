@@ -1,5 +1,10 @@
 # TableState `Public class`
 
+## Description
+Represents the state of a table in a TwinCAT NC (Numerical Control) system.
+            This class provides access to the 'User Counter'.
+            It uses an AdsClient to communicate with the TwinCAT system and read the necessary data.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -18,9 +23,14 @@
 | `int` | [`UserCounter`](#usercounter)<br>'User Counter' (number of table user) | `get` |
 
 ## Details
+### Summary
+Represents the state of a table in a TwinCAT NC (Numerical Control) system.
+            This class provides access to the 'User Counter'.
+            It uses an AdsClient to communicate with the TwinCAT system and read the necessary data.
+
 ### Constructors
 #### TableState
-[*Source code*](https://github.com///blob//TwinSharp/NC/TableState.cs#L10)
+[*Source code*](https://github.com///blob//TwinSharp/NC/TableState.cs#L15)
 ```csharp
 internal TableState(AdsClient client, uint id)
 ```

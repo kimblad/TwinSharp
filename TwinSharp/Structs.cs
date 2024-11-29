@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Xml.Linq;
+﻿using System.Text;
 
 namespace TwinSharp
 {
@@ -23,15 +21,47 @@ namespace TwinSharp
         public uint limit;
     };
 
+    /// <summary>
+    /// Structure with license information.
+    /// </summary>
     public class ST_CheckLicense
     {
-        public readonly Guid stLicenseId;
-        public readonly DateTime tExpirationTime;
-        public readonly string sExpirationTime;
-        public readonly E_LicenseHResult eResult;
-        public readonly uint nCount;
-        public string sLicenseName;
+        /// <summary>
+        /// License ID
+        /// </summary>
+        public readonly Guid LicenseId;
 
+        /// <summary>
+        /// Expiration time of the license
+        /// </summary>
+        public readonly DateTime ExpirationTime;
+
+        /// <summary>
+        /// Expiration time of the license as a string
+        /// </summary>
+        public readonly string ExpirationTimeString;
+
+        /// <summary>
+        /// License status
+        /// </summary>
+        public readonly E_LicenseHResult eResult;
+
+        /// <summary>
+        /// Number of instances for this license (0=unlimited)
+        /// </summary>
+        public readonly uint nCount;
+
+        /// <summary>
+        /// Name of the license
+        /// </summary>
+        public string LicenseName;
+
+        /// <summary>
+        /// Constructor for ST_CheckLicense from a byte array of length 48.
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <param name="descriptionText"></param>
+        /// <exception cref="Exception"></exception>
         public ST_CheckLicense(byte[] bytes, string descriptionText)
         {
             if (bytes.Length != 48)
@@ -43,33 +73,51 @@ namespace TwinSharp
 
             byte[] guidArray = new byte[16];
             br.ReadBytes(16);
-            stLicenseId = new Guid(guidArray);
+            LicenseId = new Guid(guidArray);
 
             DateTime origin = new DateTime(1601, 1, 1, 0, 0, 0, 0, DateTimeKind.Local);
             long ticks = br.ReadInt64();
-            tExpirationTime = origin.Add(new TimeSpan(ticks));
+            ExpirationTime = origin.Add(new TimeSpan(ticks));
 
-            sExpirationTime = tExpirationTime.ToLongDateString() + " " + tExpirationTime.ToLongTimeString();
+            ExpirationTimeString = ExpirationTime.ToLongDateString() + " " + ExpirationTime.ToLongTimeString();
 
             eResult = (E_LicenseHResult)br.ReadUInt32();
 
             nCount = br.ReadUInt32();
 
-            sLicenseName = descriptionText;
+            LicenseName = descriptionText;
         }
 
-
+        /// <summary>
+        /// Returns a string representation of the license.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            return sLicenseName + " " + sExpirationTime + " " + eResult;
+            return LicenseName + " " + ExpirationTimeString + " " + eResult;
         }
     }
 
+    /// <summary>
+    /// The structure ST_EcSlaveState contains the EtherCAT state and the link state of an EtherCAT slave device.
+    /// </summary>
     public class ST_EcSlaveState
     {
+        /// <summary>
+        /// EtherCAT state of a slave
+        /// </summary>
         public byte DeviceState;
+
+        /// <summary>
+        /// Link state of a slave
+        /// </summary>
         public byte LinkState;
 
+        /// <summary>
+        /// Constructor for ST_EcSlaveState from a byte array of length 2.
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <exception cref="Exception"></exception>
         public ST_EcSlaveState(byte[] bytes)
         {
             if (bytes.Length != 2)
@@ -80,14 +128,36 @@ namespace TwinSharp
         }
     }
 
+    /// <summary>
+    /// The structure ST_EcSlaveIdentity contains the EtherCAT identity data for an EtherCAT slave device.
+    /// </summary>
     public class ST_EcSlaveIdentity
     {
-        public uint vendorId;
-        public uint productCode;
-        public uint revisionNo;
-        public uint serialNo;
+        /// <summary>
+        /// Vendor-ID of the slave device
+        /// </summary>
+        public uint VendorId;
 
+        /// <summary>
+        /// Product code of the slave device
+        /// </summary>
+        public uint ProductCode;
 
+        /// <summary>
+        /// Indicates the revision number of the slave device.
+        /// </summary>
+        public uint RevisionNo;
+
+        /// <summary>
+        /// Indicates the serial number of the slave device.
+        /// </summary>
+        public uint SerialNo;
+
+        /// <summary>
+        /// Constructor for ST_EcSlaveIdentity from a byte array of length 16.
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <exception cref="Exception"></exception>
         public ST_EcSlaveIdentity(byte[] bytes)
         {
             if (bytes.Length != 16)
@@ -96,25 +166,69 @@ namespace TwinSharp
             var ms = new MemoryStream(bytes);
             var br = new BinaryReader(ms);
 
-            vendorId = br.ReadUInt32();
-            productCode = br.ReadUInt32();
-            revisionNo = br.ReadUInt32();
-            serialNo = br.ReadUInt32();
+            VendorId = br.ReadUInt32();
+            ProductCode = br.ReadUInt32();
+            RevisionNo = br.ReadUInt32();
+            SerialNo = br.ReadUInt32();
         }
     }
 
+    /// <summary>
+    /// The structure ST_EcSlaveConfigData contains the EtherCAT configuration data for an EtherCAT slave device.
+    /// </summary>
     public class ST_EcSlaveConfigData
     {
-        public ushort nEntries;
-        public ushort nAddr;
-        public string sType; //15 long
-        public string sName; //31 long
-        public uint nDevType;
-        public ST_EcSlaveIdentity stSlaveIdentity;
-        public ushort nMailboxOutSize;
-        public ushort nMailboxInSize;
-        public byte nLinkStatus;
+        /// <summary>
+        /// Used internally.
+        /// </summary>
+        public ushort Entries;
 
+        /// <summary>
+        /// Adress of an EtherCAT slave.
+        /// </summary>
+        public ushort Addr;
+
+        /// <summary>
+        /// EtherCAT type of a slave.
+        /// </summary>
+        public string Type; //15 long
+
+        /// <summary>
+        /// Name of an EtherCAT slave.
+        /// </summary>
+        public string Name; //31 long
+
+        /// <summary>
+        /// EtherCAT device type of a slave
+        /// </summary>
+        public uint DevType;
+
+        /// <summary>
+        /// EtherCAT identity data of a slave
+        /// </summary>
+        public ST_EcSlaveIdentity SlaveIdentity;
+
+        /// <summary>
+        /// Mailbox OutSize of an EtherCAT slave
+        /// </summary>
+        public ushort MailboxOutSize;
+
+        /// <summary>
+        /// Mailbox InSize of an EtherCAT slave
+        /// </summary>
+        public ushort MailboxInSize;
+
+        /// <summary>
+        /// Link status of an EtherCAT slave
+        /// </summary>
+        public byte LinkStatus;
+
+
+        /// <summary>
+        /// Constructor for ST_EcSlaveConfigData from a byte array of length 80.
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <exception cref="Exception"></exception>
         public ST_EcSlaveConfigData(byte[] bytes)
         {
             if (bytes.Length != 80)
@@ -125,36 +239,78 @@ namespace TwinSharp
             var ascii = new ASCIIEncoding();
 
 
-            nEntries = br.ReadUInt16();
-            nAddr = br.ReadUInt16();
+            Entries = br.ReadUInt16();
+            Addr = br.ReadUInt16();
 
-            sType = ascii.GetString(br.ReadBytes(16), 0, 16).TrimEnd('\0');
-            sName = ascii.GetString(br.ReadBytes(32), 0, 32).TrimEnd('\0');
+            Type = ascii.GetString(br.ReadBytes(16), 0, 16).TrimEnd('\0');
+            Name = ascii.GetString(br.ReadBytes(32), 0, 32).TrimEnd('\0');
 
-            nDevType = br.ReadUInt32();
+            DevType = br.ReadUInt32();
 
             byte[] identityBytes = br.ReadBytes(16);
-            stSlaveIdentity = new ST_EcSlaveIdentity(identityBytes);
+            SlaveIdentity = new ST_EcSlaveIdentity(identityBytes);
 
-            nMailboxOutSize = br.ReadUInt16();
-            nMailboxInSize = br.ReadUInt16();
-            nLinkStatus = br.ReadByte();
+            MailboxOutSize = br.ReadUInt16();
+            MailboxInSize = br.ReadUInt16();
+            LinkStatus = br.ReadByte();
         }
     }
 
+    /// <summary>
+    /// The structure ST_TopologyDataEx contains information on EtherCAT topology and hot-connect groups.
+    /// </summary>
     public class ST_TopologyDataEx
     {
-        public ushort nOwnPhysicalAddr; //Dedicated physical EtherCAT address of the EtherCAT slave device
-        public ushort nOwnAutoIncAddr; //Dedicated auto-increment EtherCAT address of the EtherCAT slave device
-        public ST_PortAddr stPhysicalAddr; //Physical address information of the EtherCAT slave devices at port A…D
-        public ST_PortAddr stAutoIncAddr; //Auto-increment address information of the EtherCAT slave devices at port A…D
+        /// <summary>
+        /// Dedicated physical EtherCAT address of the EtherCAT slave device
+        /// </summary>
+        public ushort nOwnPhysicalAddr;
+
+        /// <summary>
+        /// Dedicated auto-increment EtherCAT address of the EtherCAT slave device
+        /// </summary>
+        public ushort nOwnAutoIncAddr;
+
+        /// <summary>
+        /// Physical and auto-increment address information of the EtherCAT slave devices at port A…D
+        /// </summary>
+        public ST_PortAddr stPhysicalAddr;
+
+        /// <summary>
+        /// Auto-increment address information of the EtherCAT slave devices at port A…D
+        /// </summary>
+        public ST_PortAddr stAutoIncAddr;
+
+        /// <summary>
+        /// Reserved for future use
+        /// </summary>
         public uint[] aReserved1;
+
+        /// <summary>
+        /// Status bits of the EtherCAT slave device
+        /// </summary>
         public uint nStatusBits;
-        public ushort nHCSlaveCountCfg; //Configured number of Hot Connect group devices
+
+        /// <summary>
+        /// Configured number of Hot Connect group devices
+        /// </summary>
+        public ushort nHCSlaveCountCfg;
+
+        /// <summary>
+        /// Found number of Hot Connect group devices
+        /// </summary>
         public ushort nHCSlaveCountAct; //Found number of Hot Connect group devices
+
+        /// <summary>
+        /// Reserved for future use
+        /// </summary>
         public uint[] aReserved2;
 
-
+        /// <summary>
+        /// Constructor for ST_TopologyDataEx from a byte array of length 64.
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <exception cref="Exception"></exception>
         public ST_TopologyDataEx(byte[] bytes)
         {
             if (bytes.Length != 64)
@@ -198,11 +354,31 @@ namespace TwinSharp
     /// </summary>
     public class ST_PortAddr
     {
-        public ushort PortA; //Address of the previous EtherCAT slave at port A of the current EtherCAT slave
-        public ushort PortB; //Address of the optional subsequent EtherCAT slave at port B of the current EtherCAT slave
-        public ushort PortC; //Address of the optional subsequent EtherCAT slave at port C of the current EtherCAT slave
-        public ushort PortD; //Address of the optional subsequent EtherCAT slave at port D of the current EtherCAT slave
+        /// <summary>
+        /// Address of the previous EtherCAT slave at port A of the current EtherCAT slave
+        /// </summary>
+        public ushort PortA;
 
+        /// <summary>
+        /// Address of the optional subsequent EtherCAT slave at port B of the current EtherCAT slave
+        /// </summary>
+        public ushort PortB;
+
+        /// <summary>
+        /// Address of the optional subsequent EtherCAT slave at port C of the current EtherCAT slave
+        /// </summary>
+        public ushort PortC; 
+
+        /// <summary>
+        /// Address of the optional subsequent EtherCAT slave at port D of the current EtherCAT slave
+        /// </summary>
+        public ushort PortD;
+
+        /// <summary>
+        /// Constructor for ST_PortAddr
+        /// </summary>
+        /// <param name="bytes"></param>
+        /// <exception cref="Exception"></exception>
         public ST_PortAddr(byte[] bytes)
         {
             if (bytes.Length != 8)
@@ -217,15 +393,46 @@ namespace TwinSharp
             PortD = br.ReadUInt16();
         }
     }
+
+    /// <summary>
+    /// The structure ST_FindFileEntry contains information about a file or directory found by the FindFirstFile and FindNextFile functions.
+    /// </summary>
     public struct ST_FindFileEntry
     {
-        public string FileName;                     //Zero-terminated string with the name of the file or directory (type: T_MaxString).
-        public string AlternateFileName;            //Zero-terminated string with the alternative name of the file or directory in conventional 8.3 format(filename.ext).
-        public ST_FileAttributes FileAttributes;    //File attributes (type: T_FileAttributes).
-        public ulong FileSize;                      //Size of the file in bytes.
-        public DateTime CreationTime;               //Creation time of the file.
-        public DateTime LastAccessTime;             //For a file the structure indicates when it was last accessed (read or write). For a directory the structure indicates when it was created.
-        public DateTime LastWriteTime;              //Last write time of the file.
+        /// <summary>
+        /// Zero-terminated string with the name of the file or directory (type: T_MaxString).
+        /// </summary>
+        public string FileName;
+
+        /// <summary>
+        /// Zero-terminated string with the alternative name of the file or directory in conventional 8.3 format(filename.ext).
+        /// </summary>
+        public string AlternateFileName;
+
+        /// <summary>
+        /// File attributes.
+        /// </summary>
+        public ST_FileAttributes FileAttributes;
+
+        /// <summary>
+        /// File size in bytes.
+        /// </summary>
+        public ulong FileSize;
+
+        /// <summary>
+        /// Creation time of the file.
+        /// </summary>
+        public DateTime CreationTime;
+
+        /// <summary>
+        /// For a file the structure indicates when it was last accessed (read or write). For a directory the structure indicates when it was created.
+        /// </summary>
+        public DateTime LastAccessTime;
+
+        /// <summary>
+        /// Last write time of the file.
+        /// </summary>
+        public DateTime LastWriteTime;
     }
 
     public struct ST_FileAttributes

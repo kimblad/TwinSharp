@@ -2,11 +2,15 @@
 
 namespace TwinSharp.IPC
 {
+    /// <summary>
+    /// The IpcCpu class provides methods to interact with the CPU of a device via ADS (Automation Device Specification).
+    /// It allows reading the CPU frequency, current CPU usage percentage, and current CPU temperature in Celsius.
+    /// </summary>
     public class IpcCpu
     {
-        public const ushort ModuleType = 0x000B;
+        internal const ushort ModuleType = 0x000B;
 
-        AdsClient client;
+        readonly AdsClient client;
         readonly uint subIndex;
 
         internal IpcCpu(AdsClient client, ushort mdpId)
@@ -17,18 +21,24 @@ namespace TwinSharp.IPC
             subIndex = (uint)(mdpId << 20) | 0x80010000; //Table 0x8nn1, just add the desired subIndex later.
         }
 
+        /// <summary>
+        /// CPU frequency (constant)
+        /// </summary>
         public uint Frequency
         {
             get => client.ReadAny<uint>(0xF302, subIndex + 01);
         }
 
+        /// <summary>
+        /// Current CPU Usage (%)
+        /// </summary>
         public ushort UsagePercent
         {
             get => client.ReadAny<ushort>(0xF302, subIndex + 02);
         }
 
         /// <summary>
-        /// Requires BIOS API
+        /// Current CPU Temperature (°C). Requires BIOS API.
         /// </summary>
         public short TemperatureCelsius
         {

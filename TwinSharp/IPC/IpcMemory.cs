@@ -2,9 +2,14 @@
 
 namespace TwinSharp.IPC
 {
+    /// <summary>
+    /// The IpcMemory class provides methods to interact with the memory of a TwinCAT ADS device.
+    /// It allows reading the allocated and available program memory, as well as storage memory and memory division.
+    /// The class handles different subindexes for devices with more than 4 GB of RAM and WindowsCE devices.
+    /// </summary>
     public class IpcMemory
     {
-        public const ushort ModuleType = 0x000C;
+        internal const ushort ModuleType = 0x000C;
 
         readonly AdsClient client;
         readonly uint subIndex;
@@ -18,7 +23,9 @@ namespace TwinSharp.IPC
         }
 
 
-
+        /// <summary>
+        /// Program Memory Allocated.
+        /// </summary>
         public ulong ProgramMemoryAllocated
         {
             get
@@ -43,6 +50,9 @@ namespace TwinSharp.IPC
             }
         }
 
+        /// <summary>
+        /// Program Memory Available.
+        /// </summary>
         public ulong ProgramMemoryAvailable
         {
             get

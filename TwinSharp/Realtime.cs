@@ -2,6 +2,11 @@
 
 namespace TwinSharp
 {
+    /// <summary>
+    /// The Realtime class provides methods to interact with the TwinCAT systems real-time settings.
+    /// It allows setting shared cores configuration, reading CPU settings, reading CPU latency,
+    /// and getting the current CPU usage. It uses the AdsClient to communicate with the TwinCAT system.
+    /// </summary>
     public class Realtime
     {
         readonly AdsClient client;
@@ -44,7 +49,7 @@ namespace TwinSharp
             // We have to apply changes to the current core configuration. For this we
             // have to talk to a different AdsDevice, the system service.
 
-            using (AdsClient client = new AdsClient())
+            using (var client = new AdsClient())
             {
                 client.Connect(AmsPort.R3_CTRLPROG);
                 client.WriteAny(1200, 0, sharedCores);
@@ -85,29 +90,31 @@ namespace TwinSharp
             return settings;
         }
 
+        /// <summary>
+        /// Reads the CPU latency of the TwinCAT system.
+        /// </summary>
+        /// <returns></returns>
         public RTimeCpuLatency ReadLatency()
         {
-            using (AdsClient client = new AdsClient())
-            {
-                client.Connect(target, AmsPort.R0_Realtime);
+            using var client = new AdsClient();
+            client.Connect(target, AmsPort.R0_Realtime);
 
-                var info = new RTimeCpuLatency();
+            var info = new RTimeCpuLatency();
 
-                var readBytes = new byte[24];
-                var memoryToReadInto = new Memory<byte>(readBytes);
+            var readBytes = new byte[24];
+            var memoryToReadInto = new Memory<byte>(readBytes);
 
-                int bytesRead = client.Read(0x01, 0x2, memoryToReadInto);
+            int bytesRead = client.Read(0x01, 0x2, memoryToReadInto);
 
-                //Create a memory stream and binary reader to read the bytes
-                var ms = new MemoryStream(readBytes);
-                var br = new BinaryReader(ms);
+            //Create a memory stream and binary reader to read the bytes
+            var ms = new MemoryStream(readBytes);
+            var br = new BinaryReader(ms);
 
-                info.current = br.ReadUInt32();
-                info.maximum = br.ReadUInt32();
-                info.limit = br.ReadUInt32();
+            info.current = br.ReadUInt32();
+            info.maximum = br.ReadUInt32();
+            info.limit = br.ReadUInt32();
 
-                return info;
-            }
+            return info;
         }
 
         /// <summary>

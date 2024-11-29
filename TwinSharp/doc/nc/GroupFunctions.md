@@ -1,5 +1,10 @@
 # GroupFunctions `Public class`
 
+## Description
+The GroupFunctions class provides methods to control and manage an axis group in a TwinCAT NC (Numerical Control) system.
+            It allows for resetting, stopping, clearing, and performing an emergency stop on the group.
+            Additionally, it supports starting and managing FIFO (First In, First Out) operations for the group.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -24,11 +29,16 @@
 | `void` | [`Stop`](#stop)()<br>Stop group |
 
 ## Details
+### Summary
+The GroupFunctions class provides methods to control and manage an axis group in a TwinCAT NC (Numerical Control) system.
+            It allows for resetting, stopping, clearing, and performing an emergency stop on the group.
+            Additionally, it supports starting and managing FIFO (First In, First Out) operations for the group.
+
 ### Constructors
 #### GroupFunctions
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L10)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L15)
 ```csharp
-public GroupFunctions(AdsClient client, uint id)
+internal GroupFunctions(AdsClient client, uint id)
 ```
 ##### Arguments
 | Type | Name | Description |
@@ -38,7 +48,7 @@ public GroupFunctions(AdsClient client, uint id)
 
 ### Methods
 #### Reset
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L20)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L25)
 ```csharp
 public void Reset()
 ```
@@ -46,7 +56,7 @@ public void Reset()
 Reset group
 
 #### Stop
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L28)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L33)
 ```csharp
 public void Stop()
 ```
@@ -54,7 +64,7 @@ public void Stop()
 Stop group
 
 #### Clear
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L36)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L41)
 ```csharp
 public void Clear()
 ```
@@ -62,7 +72,7 @@ public void Clear()
 Clear group (buffer/task)
 
 #### EmergencyStop
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L46)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L51)
 ```csharp
 public void EmergencyStop(double deceleration, double jerk)
 ```
@@ -76,7 +86,7 @@ public void EmergencyStop(double deceleration, double jerk)
 Emergency stop(E-stop) (emergency stop with controlled ramp)
 
 #### FifoStart
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L59)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L64)
 ```csharp
 public void FifoStart()
 ```
@@ -84,7 +94,7 @@ public void FifoStart()
 Start FIFO group(FIFO table must have been filled in advance)
 
 #### FifoWrite
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L68)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L73)
 ```csharp
 public void FifoWrite(double[] entries)
 ```
@@ -97,7 +107,7 @@ public void FifoWrite(double[] entries)
 Write x FIFO entries (lines): (x*m)-values (one or more lines) n: FIFO length (number of lines) m: FIFO dimension (number of columns) range of values x: [1 ... n]
 
 #### FifoOverwrite
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L77)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupFunctions.cs#L82)
 ```csharp
 public void FifoOverwrite(double[] entries)
 ```

@@ -27,7 +27,7 @@
 ## Details
 ### Constructors
 #### FileFinder
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L406)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L414)
 ```csharp
 internal FileFinder(AdsClient client, string searchQuery)
 ```
@@ -39,7 +39,7 @@ internal FileFinder(AdsClient client, string searchQuery)
 
 ### Methods
 #### Abort
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L422)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L430)
 ```csharp
 public void Abort()
 ```
@@ -47,7 +47,7 @@ public void Abort()
 Call this when you dont want to continue enumeration of files. Releases resources on TwinCAT side.
 
 #### GetNextFileOrNull
-[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L432)
+[*Source code*](https://github.com///blob//TwinSharp/FileSystem.cs#L440)
 ```csharp
 public Nullable<ST_FindFileEntry> GetNextFileOrNull()
 ```

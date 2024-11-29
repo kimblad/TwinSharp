@@ -1,5 +1,8 @@
 # ST_EcSlaveState `Public class`
 
+## Description
+The structure ST_EcSlaveState contains the EtherCAT state and the link state of an EtherCAT slave device.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -11,15 +14,26 @@
 ```
 
 ## Details
+### Summary
+The structure ST_EcSlaveState contains the EtherCAT state and the link state of an EtherCAT slave device.
+
 ### Constructors
 #### ST_EcSlaveState
-[*Source code*](https://github.com///blob//TwinSharp/Structs.cs#L73)
+[*Source code*](https://github.com///blob//TwinSharp/Structs.cs#L121)
 ```csharp
 public ST_EcSlaveState(byte[] bytes)
 ```
 ##### Arguments
 | Type | Name | Description |
 | --- | --- | --- |
-| `byte``[]` | bytes |   |
+| `byte``[]` | bytes |  |
+
+##### Summary
+Constructor for ST_EcSlaveState from a byte array of length 2.
+
+##### Exceptions
+| Name | Description |
+| --- | --- |
+| Exception |  |
 
 *Generated with* [*ModularDoc*](https://github.com/hailstorm75/ModularDoc)

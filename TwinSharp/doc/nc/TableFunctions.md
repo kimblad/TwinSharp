@@ -1,5 +1,11 @@
 # TableFunctions `Public class`
 
+## Description
+The TableFunctions class provides methods to generate and delete various types of tables
+            with specified dimensions and interpolation types. It interacts with a TwinCAT AdsClient
+            to perform these operations. The class supports generating general tables, valve diagram
+            tables, and motion function tables, each with specific table types and dimensions.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -21,9 +27,15 @@
 | `void` | [`GenerateValveDiagramTable`](#generatevalvediagramtable)([`TableInterpolationType`](./TableInterpolationType.md) tableType, `uint` lineCount, `uint` columnCount)<br>Generates valve diagram table with dimension (n*m):<br>            Table types: 1,3 <br>            Dimension: at least 2x1 |
 
 ## Details
+### Summary
+The TableFunctions class provides methods to generate and delete various types of tables
+            with specified dimensions and interpolation types. It interacts with a TwinCAT AdsClient
+            to perform these operations. The class supports generating general tables, valve diagram
+            tables, and motion function tables, each with specific table types and dimensions.
+
 ### Constructors
 #### TableFunctions
-[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L11)
+[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L16)
 ```csharp
 internal TableFunctions(AdsClient client, uint id)
 ```
@@ -35,7 +47,7 @@ internal TableFunctions(AdsClient client, uint id)
 
 ### Methods
 #### GenerateTable
-[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L26)
+[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L31)
 ```csharp
 public void GenerateTable(TableInterpolationType tableType, uint lineCount, uint columnCount)
 ```
@@ -52,7 +64,7 @@ Generates table with dimension (n*m):
             Dimension: at least 2x1
 
 #### GenerateValveDiagramTable
-[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L46)
+[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L51)
 ```csharp
 public void GenerateValveDiagramTable(TableInterpolationType tableType, uint lineCount, uint columnCount)
 ```
@@ -69,7 +81,7 @@ Generates valve diagram table with dimension (n*m):
             Dimension: at least 2x1
 
 #### GenerateMotionFunctionTable
-[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L66)
+[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L71)
 ```csharp
 public void GenerateMotionFunctionTable(TableInterpolationType tableType, uint lineCount, uint columnCount)
 ```
@@ -86,7 +98,7 @@ Generates "Motion Function" table with dimension (n*m):
             Dimension: at least 2x1
 
 #### DeleteTable
-[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L82)
+[*Source code*](https://github.com///blob//TwinSharp/NC/TableFunctions.cs#L87)
 ```csharp
 public void DeleteTable()
 ```

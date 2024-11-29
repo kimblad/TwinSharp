@@ -2,6 +2,10 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// Represents the parameters for Ring 0, providing access to various settings and configurations
+    /// related to the SAF and SVB tasks, global time compensation, and cyclic data consistency.
+    /// </summary>
     public class Ring0Parameters
     {
         readonly AdsClient client;

@@ -9,7 +9,7 @@ namespace TwinSharp.IPC
 {
     public class IpcFileSystem
     {
-        public const ushort ModuleType = 0x0010;
+        internal const ushort ModuleType = 0x0010;
 
         AdsClient client;
         readonly uint subIndexTable1;

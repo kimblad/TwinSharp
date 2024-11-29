@@ -2,12 +2,16 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// Represents the state of the Ring 0 system, providing access to various counts and IDs
+    /// for channels, groups, axes, encoders, controllers, drives, and tables.
+    /// </summary>
     public class Ring0State
     {
         private readonly AdsClient client;
         const uint indexGroup = 0x1100;
 
-        public Ring0State(AdsClient client)
+        internal Ring0State(AdsClient client)
         {
             this.client = client;
         }

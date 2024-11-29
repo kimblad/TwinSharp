@@ -2,11 +2,17 @@
 
 namespace TwinSharp.IPC
 {
+
+    /// <summary>
+    /// The IpcMiscellaneous class allows reading and writing of settings such as the startup state of the Numlock key, 
+    /// CE remote display state, security wizard enabled state, auto logon username, and auto-generate certificates. 
+    /// The class uses an AdsClient to communicate with the system and perform these operations.
+    /// </summary>
     public class IpcMiscellaneous
     {
-        public const ushort ModuleType = 0x0100;
+        internal const ushort ModuleType = 0x0100;
 
-        AdsClient client;
+        readonly AdsClient client;
         readonly uint subIndex;
 
         internal IpcMiscellaneous(AdsClient client, ushort mdpId)
@@ -45,17 +51,26 @@ namespace TwinSharp.IPC
             set => client.WriteAny(0xF302, subIndex + 0x03, value);
         }
 
+        /// <summary>
+        /// Security Wizard Enabled
+        /// </summary>
         public bool SecurityWizardEnabled
         {
             get => client.ReadAny<bool>(0xF302, subIndex + 0x04);
             set => client.WriteAny(0xF302, subIndex + 0x04, value);
         }
 
+        /// <summary>
+        /// Auto Logon Username
+        /// </summary>
         public string AutoLogonUsername
         {
             get => client.ReadString(0xF302, subIndex + 0x05, 80);
         }
 
+        /// <summary>
+        /// Auto Generate Certificates
+        /// </summary>
         public bool AutoGenerateCertificates
         {
             get => client.ReadAny<bool>(0xF302, subIndex + 0x06);

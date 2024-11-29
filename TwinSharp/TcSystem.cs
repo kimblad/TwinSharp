@@ -5,41 +5,51 @@ using System.Globalization;
 
 namespace TwinSharp
 {
+    /// <summary>
+    /// The TcSystem class represents a TwinCAT system and provides methods to interact with it.
+    /// It allows switching the system to different modes (Config, Restart, Stop), listing EtherCAT masters,
+    /// and listing local static routes. It also provides access to the system's real-time properties, license information,
+    /// and file system through the Realtime, License, and FileSystem properties respectively.
+    /// </summary>
     public class TcSystem
     {
-        public readonly Realtime Realtime;
-        public readonly License License;
-        public readonly FileSystem FileSystem;
-
         readonly AmsNetId target;
 
-        /// <summary>
-        /// Create a representation of a TwinCAT system on the local machine.
-        /// </summary>
-        public TcSystem()
-        {
-            target = AmsNetId.Local;
-            Init(target, out Realtime, out License, out FileSystem);
-        }
+
 
         /// <summary>
-        /// Create a representation of a TwinCAT system on a remote target machine.
+        /// Creates a representation of a TwinCAT system.
         /// </summary>
-        /// <param name="target"></param>
+        /// <param name="target">Use AmsNetId.Local for a local system.</param>
         public TcSystem(AmsNetId target)
         {
             this.target = target;
-            Init(target, out Realtime, out License, out FileSystem);
+
+            Realtime = new Realtime(target);
+            License = new License(target);
+            FileSystem = new FileSystem(target);
         }
 
 
-        //Called by mulitple constructors to set readonly objects.
-        private void Init(AmsNetId target, out Realtime realtime, out License license, out FileSystem fileSystem)
-        {
-            realtime = new Realtime(target);
-            license = new License(target);
-            fileSystem = new FileSystem(target);
-        }
+
+
+        /// <summary>
+        /// Gets the Realtime object which provides access to the TwinCAT system's real-time properties.
+        /// </summary>
+        public Realtime Realtime { get; private set; }
+
+        /// <summary>
+        /// Gets the License object which provides access to the TwinCAT system's license information.
+        /// </summary>
+
+        public License License { get; private set; }
+
+
+        /// <summary>
+        /// Gets the FileSystem object which provides access to the TwinCAT system's file system. Can be used to read and delete files on the remote system.
+        /// </summary>
+        public FileSystem FileSystem { get; private set; }
+
 
         /// <summary>
         /// A TwinCAT system in RUN mode (green TwinCAT system icon) can be switched to CONFIG mode (blue TwinCAT system icon) via the function block "TC_Config".
@@ -47,13 +57,11 @@ namespace TwinSharp
         /// </summary>
         public void SwitchToConfigMode()
         {
-            using (var client = new AdsClient())
-            {
-                client.Connect(target, AmsPort.SystemService);
+            using var client = new AdsClient();
+            client.Connect(target, AmsPort.SystemService);
 
-                var stateInfo = new StateInfo(AdsState.Reconfig, 0);
-                client.WriteControl(stateInfo);
-            }
+            var stateInfo = new StateInfo(AdsState.Reconfig, 0);
+            client.WriteControl(stateInfo);
         }
 
         /// <summary>
@@ -62,13 +70,11 @@ namespace TwinSharp
         /// </summary>
         public void Restart()
         {
-            using (var client = new AdsClient())
-            {
-                client.Connect(target, AmsPort.SystemService);
+            using var client = new AdsClient();
+            client.Connect(target, AmsPort.SystemService);
 
-                var stateInfo = new StateInfo(AdsState.Reset, 0);
-                client.WriteControl(stateInfo);
-            }
+            var stateInfo = new StateInfo(AdsState.Reset, 0);
+            client.WriteControl(stateInfo);
         }
 
         /// <summary>
@@ -76,15 +82,17 @@ namespace TwinSharp
         /// </summary>
         public void Stop()
         {
-            using (var client = new AdsClient())
-            {
-                client.Connect(target, AmsPort.SystemService);
+            using var client = new AdsClient();
+            client.Connect(target, AmsPort.SystemService);
 
-                var stateInfo = new StateInfo(AdsState.Stop, 0);
-                client.WriteControl(stateInfo);
-            }
+            var stateInfo = new StateInfo(AdsState.Stop, 0);
+            client.WriteControl(stateInfo);
         }
 
+        /// <summary>
+        /// Lists all the existing EtherCAT masters on the TwinCAT system.
+        /// </summary>
+        /// <returns></returns>
         public EtherCatMaster[] ListEtherCatMasters()
         {
             const uint IOADS_IGR_IODEVICESTATE_BASE = 0x5000;
@@ -95,79 +103,81 @@ namespace TwinSharp
             const uint IOADS_IOF_READDEVTYPE = 0x7;
 
 
-            using (var client = new AdsClient())
+            using var client = new AdsClient();
+            client.Connect(target, AmsPort.R0_IO);
+
+
+            uint deviceCount = client.ReadAny<uint>(IOADS_IGR_IODEVICESTATE_BASE, IOADS_IOF_READDEVCOUNT);
+            var etherCatMasters = new EtherCatMaster[deviceCount];
+
+            //Get the device IDs
+            // the first element of the array is set to devCount,
+            // so the actual device Ids start at index 1
+
+            Memory<byte> buffer = new byte[(deviceCount + 1) * sizeof(ushort)];
+            client.Read(IOADS_IGR_IODEVICESTATE_BASE, IOADS_IOF_READDEVIDS, buffer);
+
+            var ms = new MemoryStream(buffer.ToArray());
+            var br = new BinaryReader(ms);
+
+            ushort[] deviceIDs = new ushort[(deviceCount + 1)];
+
+            // Copy the buffer to the deviceIDs array
+            for (int i = 0; i < deviceIDs.Length; i++)
             {
-                client.Connect(target, AmsPort.R0_IO);
-
-
-                uint deviceCount = client.ReadAny<uint>(IOADS_IGR_IODEVICESTATE_BASE, IOADS_IOF_READDEVCOUNT);
-                var etherCatMasters = new EtherCatMaster[deviceCount];
-
-                //Get the device IDs
-                // the first element of the array is set to devCount,
-                // so the actual device Ids start at index 1
-
-                Memory<byte> buffer = new byte[(deviceCount + 1) * sizeof(ushort)];
-                client.Read(IOADS_IGR_IODEVICESTATE_BASE, IOADS_IOF_READDEVIDS, buffer);
-
-                var ms = new MemoryStream(buffer.ToArray());
-                var br = new BinaryReader(ms);
-
-                ushort[] deviceIDs = new ushort[(deviceCount + 1)];
-
-                // Copy the buffer to the deviceIDs array
-                for (int i = 0; i < deviceIDs.Length; i++)
-                {
-                    deviceIDs[i] = br.ReadUInt16();
-                }
-
-                // Skip the device count, which is at the first index
-                for (int i = 1; i <= deviceCount; i++)
-                {
-                    ushort deviceID = deviceIDs[i];
-
-                    ushort deviceType = client.ReadAny<ushort>(
-                        IOADS_IGR_IODEVICESTATE_BASE + deviceID,
-                        IOADS_IOF_READDEVTYPE);
-
-                    string deviceName = client.ReadString(
-                        IOADS_IGR_IODEVICESTATE_BASE + deviceID,
-                        IOADS_IOF_READDEVNAME, 256);
-
-                    deviceName = deviceName.TrimEnd('\0');
-
-
-                    //Read the ams net id. It is stored as a 6 byte array.
-                    Memory<byte> amsBuffer = new byte[6];
-
-                    client.Read(
-                        IOADS_IGR_IODEVICESTATE_BASE + deviceID,
-                        IOADS_IOF_READDEVNETID, amsBuffer);
-
-                    var amsNetId = new AmsNetId(amsBuffer.ToArray());
-
-                    //EtherCAT masters AmsNetId is typically in the form: [192.168.5.89].2.1
-                    //Combine the last two digits with the targets ams net id to create a AmsNetId that can be reached from remote 
-                    byte[] combined = target.ToBytes();
-                    combined[4] = amsNetId.ToBytes()[4];
-                    combined[5] = amsNetId.ToBytes()[5];
-
-                    var combinedAms = new AmsNetId(combined);
-
-                    var ecMaster = new EtherCatMaster(combinedAms)
-                    {
-                        DeviceType = deviceType,
-                        Name = deviceName
-                    };
-
-                    etherCatMasters[i - 1] = ecMaster;
-                }
-
-                return etherCatMasters;
+                deviceIDs[i] = br.ReadUInt16();
             }
+
+            // Skip the device count, which is at the first index
+            for (int i = 1; i <= deviceCount; i++)
+            {
+                ushort deviceID = deviceIDs[i];
+
+                ushort deviceType = client.ReadAny<ushort>(
+                    IOADS_IGR_IODEVICESTATE_BASE + deviceID,
+                    IOADS_IOF_READDEVTYPE);
+
+                string deviceName = client.ReadString(
+                    IOADS_IGR_IODEVICESTATE_BASE + deviceID,
+                    IOADS_IOF_READDEVNAME, 256);
+
+                deviceName = deviceName.TrimEnd('\0');
+
+
+                //Read the ams net id. It is stored as a 6 byte array.
+                Memory<byte> amsBuffer = new byte[6];
+
+                client.Read(
+                    IOADS_IGR_IODEVICESTATE_BASE + deviceID,
+                    IOADS_IOF_READDEVNETID, amsBuffer);
+
+                var amsNetId = new AmsNetId(amsBuffer.ToArray());
+
+                //EtherCAT masters AmsNetId is typically in the form: [192.168.5.89].2.1
+                //Combine the last two digits with the targets ams net id to create a AmsNetId that can be reached from remote 
+                byte[] combined = target.ToBytes();
+                combined[4] = amsNetId.ToBytes()[4];
+                combined[5] = amsNetId.ToBytes()[5];
+
+                var combinedAms = new AmsNetId(combined);
+
+                var ecMaster = new EtherCatMaster(combinedAms)
+                {
+                    DeviceType = deviceType,
+                    Name = deviceName
+                };
+
+                etherCatMasters[i - 1] = ecMaster;
+            }
+
+            return etherCatMasters;
         }
 
-
+        /// <summary>
+        /// List all the existing static routes on the local TwinCAT system.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="FileNotFoundException"></exception>
         public static AmsRoute[] ListLocalStaticRoutes()
         {
             const string filePath = "C:\\TwinCAT\\3.1\\Target\\StaticRoutes.xml";
@@ -180,12 +190,12 @@ namespace TwinSharp
 
             var settings = new XmlReaderSettings() { ConformanceLevel = ConformanceLevel.Document };
 
-            XmlSerializer ser = new XmlSerializer(typeof(TcConfig));
+            var serializer = new XmlSerializer(typeof(TcConfig));
             TcConfig? configs;
             
             using (XmlReader reader = XmlReader.Create(filePath, settings))
             {
-                configs = ser.Deserialize(reader) as TcConfig;
+                configs = serializer.Deserialize(reader) as TcConfig;
             }
 
 

@@ -1,5 +1,11 @@
 # AxisCyclicProcessData `Public class`
 
+## Description
+The AxisCyclicProcessData class provides properties to interact with the cyclic process data of an axis in a TwinCAT NC system.
+            It uses an AdsClient to read and write various control and status parameters of the axis, such as control word, controller enable,
+            feed enable, referencing cam, velocity override, operation mode, actual position correction value, and external controller component.
+            If the axis is linked to a PLC object, most of these values will be refused.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -26,9 +32,15 @@
 | `uint` | [`VelocityOverride`](#velocityoverride)<br>Velocity override (1000000 == 100%) | `get, set` |
 
 ## Details
+### Summary
+The AxisCyclicProcessData class provides properties to interact with the cyclic process data of an axis in a TwinCAT NC system.
+            It uses an AdsClient to read and write various control and status parameters of the axis, such as control word, controller enable,
+            feed enable, referencing cam, velocity override, operation mode, actual position correction value, and external controller component.
+            If the axis is linked to a PLC object, most of these values will be refused.
+
 ### Constructors
 #### AxisCyclicProcessData
-[*Source code*](https://github.com///blob//TwinSharp/NC/AxisCyclicProcessData.cs#L9)
+[*Source code*](https://github.com///blob//TwinSharp/NC/AxisCyclicProcessData.cs#L15)
 ```csharp
 internal AxisCyclicProcessData(AdsClient client, uint id)
 ```

@@ -1,8 +1,12 @@
 ﻿using TwinCAT.Ads;
-using TwinCAT.PlcOpen;
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The TableParameters class provides methods to interact with table parameters in a TwinCAT ADS system.
+    /// It allows reading and writing various table properties such as ID, Name, SubType, MainType, LineCount, ColumnCount, TotalCount, StepWidth, MasterPeriod, and SlaveDifferencePerMasterPeriod.
+    /// It also provides methods to get and set the activation mode for online changes, read and write single values in the table, and convert slave positions to master positions.
+    /// </summary>
     public class TableParameters
     {
         readonly AdsClient client;
@@ -14,36 +18,57 @@ namespace TwinSharp.NC
             indexGroup = 0xA000 + id;
         }
 
+        /// <summary>
+        /// Table ID
+        /// </summary>
         public uint ID
         {
             get => client.ReadAny<uint>(indexGroup, 0x01);
         }
 
+        /// <summary>
+        /// Table name
+        /// </summary>
         public string Name
         {
             get => client.ReadString(indexGroup, 0x02, 30);
         }
 
+        /// <summary>
+        /// Table sub type
+        /// </summary>
         public TableSubType SubTupe
         {
             get => (TableSubType)client.ReadAny<uint>(indexGroup, 0x03);
         }
 
+        /// <summary>
+        /// Table main type
+        /// </summary>
         public TableMainType MainType
         {
             get => (TableMainType)client.ReadAny<uint>(indexGroup, 0x04);
         }
 
+        /// <summary>
+        /// Number of lines (n)
+        /// </summary>
         public uint LineCount
         {
             get => client.ReadAny<uint>(indexGroup, 0x10);
         }
 
+        /// <summary>
+        /// Number of columns (m)
+        /// </summary>
         public uint ColumnCount
         {
             get => client.ReadAny<uint>(indexGroup, 0x11);
         }
 
+        /// <summary>
+        /// Total number of elements (n*m)
+        /// </summary>
         public uint TotalCount
         {
             get => client.ReadAny<uint>(indexGroup, 0x12);
@@ -119,6 +144,12 @@ namespace TwinSharp.NC
             client.Write(indexGroup, 0x1A, ms.ToArray());
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="line"></param>
+        /// <param name="column"></param>
+        /// <returns></returns>
         public double GetSingleValue(uint line, uint column)
         {
             var buffer = new Memory<byte>(new byte[16]);

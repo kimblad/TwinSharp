@@ -2,16 +2,16 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// Represents an axis in a TwinCAT NC system, encapsulating its functions, parameters, state, cyclic process data, and associated sub-elements such as encoders, controllers, and drives.
+    /// </summary>
     public class Axis
     {
-        public readonly AxisFunctions Functions;
-        public readonly AxisParameters Parameters;
-        public readonly AxisState State;
-        public readonly AxisCyclicProcessData CyclicProcessData;
-
-        public readonly Encoder[] Encoders;
-        public readonly Controller[] Controllers;
-        public readonly Drive[] Drives;
+        /// <summary>
+        /// Creates a new axis object representation of the given ID.
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="id"></param>
         public Axis(AdsClient client, uint id)
         {
             Functions = new AxisFunctions(client, id);
@@ -43,7 +43,45 @@ namespace TwinSharp.NC
             }
         }
 
+        /// <summary>
+        /// Gets the array of encoders associated with the axis.
+        /// </summary>
+        public Encoder[] Encoders { get; private set; }
 
+        /// <summary>
+        /// Gets the functions available for the axis.
+        /// </summary>
+        public AxisFunctions Functions { get; private set; }
+
+        /// <summary>
+        /// Gets the parameters of the axis.
+        /// </summary>
+        public AxisParameters Parameters { get; private set; }
+
+        /// <summary>
+        /// Gets the state of the axis.
+        /// </summary>
+        public AxisState State { get; private set; }
+
+        /// <summary>
+        /// Gets the array of controllers associated with the axis.
+        /// </summary>
+        public Controller[] Controllers { get; private set; }
+
+        /// <summary>
+        /// Gets the array of drives associated with the axis.
+        /// </summary>
+        public Drive[] Drives { get; private set; }
+
+        /// <summary>
+        /// Gets the cyclic process data of the axis.
+        /// </summary>
+        public AxisCyclicProcessData CyclicProcessData { get; private set; }
+
+        /// <summary>
+        /// Returns the name of the axis.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Axis {Parameters.Name}";

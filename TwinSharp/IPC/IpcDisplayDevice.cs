@@ -2,9 +2,16 @@
 
 namespace TwinSharp.IPC
 {
+    /// <summary>
+    /// The IpcDisplayDevice class provides an interface to interact with a display device
+    /// connected via TwinCAT ADS. It allows reading and writing various properties of the
+    /// display such as active display mode, display mode description, primary display status,
+    /// COM port, version, brightness, and light enabled status. It also provides a method to
+    /// save the brightness setting persistently across power cycles.
+    /// </summary>
     public class IpcDisplayDevice
     {
-        public const ushort ModuleType = 0x0013;
+        internal const ushort ModuleType = 0x0013;
 
         readonly AdsClient client;
         readonly uint subIndexTable1;
@@ -25,12 +32,18 @@ namespace TwinSharp.IPC
             subIndexTable5 = (uint)(mdpId << 20) | 0xB0010000; //Table 0xBnn1, just add the desired subIndex later.
         }
 
+        /// <summary>
+        /// ID of active display mode
+        /// </summary>
         public byte ActiveDisplayModeID
         {
             get => client.ReadAny<byte>(0xF302, subIndexTable1 + 01);
             set => client.WriteAny(0xF302, subIndexTable1 + 01, value);
         }
 
+        /// <summary>
+        /// Description of active display mode
+        /// </summary>
         public string DisplayModeDescription
         {
             get
@@ -40,6 +53,9 @@ namespace TwinSharp.IPC
             }
         }
 
+        /// <summary>
+        /// True if this display is the primary display
+        /// </summary>
         public bool IsPrimaryDisplay
         {
             get => client.ReadAny<bool>(0xF302, subIndexTable3 + 01);
@@ -64,6 +80,9 @@ namespace TwinSharp.IPC
             }
         }
 
+        /// <summary>
+        /// Version of the display device
+        /// </summary>
         public uint Version
         {
             get => client.ReadAny<uint>(0xF302, subIndexTable3 + 03);
@@ -87,6 +106,9 @@ namespace TwinSharp.IPC
             set => client.WriteAny(0xF302, subIndexTable3 + 05, value);
         }
 
+        /// <summary>
+        /// Save brightness persistent between power cycles.
+        /// </summary>
         public void SaveBrightnessPersistent()
         {
             client.WriteAny(0xF302, subIndexTable5, true);

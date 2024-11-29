@@ -21,7 +21,7 @@
 ## Details
 ### Constructors
 #### ChannelCyclicProcessData
-[*Source code*](https://github.com///blob//TwinSharp/NC/ChannelCyclicProcessData.cs#L10)
+[*Source code*](https://github.com///blob//TwinSharp/NC/ChannelCyclicProcessData.cs#L11)
 ```csharp
 internal ChannelCyclicProcessData(AdsClient client, uint id)
 ```

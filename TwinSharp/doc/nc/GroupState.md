@@ -1,5 +1,11 @@
 # GroupState `Public class`
 
+## Description
+The GroupState class provides properties to interact with and retrieve various states and information
+            from a TwinCAT NC group via an AdsClient. It includes properties for error codes, axis counts, group states,
+            and emergency stop status, among others. Each property reads or writes data from the TwinCAT system using
+            specific index groups and offsets.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -33,11 +39,17 @@
 | `uint` | [`SvbGroupState`](#svbgroupstate)<br>SVB group state (state) | `get` |
 
 ## Details
+### Summary
+The GroupState class provides properties to interact with and retrieve various states and information
+            from a TwinCAT NC group via an AdsClient. It includes properties for error codes, axis counts, group states,
+            and emergency stop status, among others. Each property reads or writes data from the TwinCAT system using
+            specific index groups and offsets.
+
 ### Constructors
 #### GroupState
-[*Source code*](https://github.com///blob//TwinSharp/NC/GroupState.cs#L10)
+[*Source code*](https://github.com///blob//TwinSharp/NC/GroupState.cs#L16)
 ```csharp
-public GroupState(AdsClient client, uint id)
+internal GroupState(AdsClient client, uint id)
 ```
 ##### Arguments
 | Type | Name | Description |

@@ -36,6 +36,10 @@ namespace TwinSharp
         public int Flags { get; }
 
 
+        /// <summary>
+        /// Gets the state information for this ams route.
+        /// </summary>
+        /// <returns></returns>
         public StateInfo GetStateInfo()
         {
             using var client = new AdsClient();

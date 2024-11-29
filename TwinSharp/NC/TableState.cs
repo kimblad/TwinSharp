@@ -2,6 +2,11 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// Represents the state of a table in a TwinCAT NC (Numerical Control) system.
+    /// This class provides access to the 'User Counter'.
+    /// It uses an AdsClient to communicate with the TwinCAT system and read the necessary data.
+    /// </summary>
     public class TableState
     {
         readonly AdsClient client;

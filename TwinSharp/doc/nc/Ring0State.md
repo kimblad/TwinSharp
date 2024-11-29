@@ -1,5 +1,9 @@
 # Ring0State `Public class`
 
+## Description
+Represents the state of the Ring 0 system, providing access to various counts and IDs
+            for channels, groups, axes, encoders, controllers, drives, and tables.
+
 ## Diagram
 ```mermaid
   flowchart LR
@@ -31,11 +35,15 @@
 | `uint``[]` | [`TableIds`](#tableids)<br>Supplies the table IDs for all tables in the system | `get` |
 
 ## Details
+### Summary
+Represents the state of the Ring 0 system, providing access to various counts and IDs
+            for channels, groups, axes, encoders, controllers, drives, and tables.
+
 ### Constructors
 #### Ring0State
-[*Source code*](https://github.com///blob//TwinSharp/NC/Ring0State.cs#L10)
+[*Source code*](https://github.com///blob//TwinSharp/NC/Ring0State.cs#L14)
 ```csharp
-public Ring0State(AdsClient client)
+internal Ring0State(AdsClient client)
 ```
 ##### Arguments
 | Type | Name | Description |
