@@ -1,29 +1,13 @@
-﻿using System;
-using System.Text;
-using TwinCAT.Ads;
+﻿using TwinCAT.Ads;
 
 namespace TwinSharp.CNC
 {
     public class CncChannel : IDisposable
     {
-        public readonly int ChannelNumber;
         public readonly Dictionary<string, ObjectDescription> Descriptions;
         readonly AdsClient comClient;
 
-        public readonly OperationModeManager OperationModeManager;
-        public readonly Interpolator Interpolator;
-        public readonly ControlCommands ControlCommands;
-        public readonly ContourVisualization ContourVisualization;
-        public readonly FeedOverride FeedOverride;
-        public readonly BackwardsOnPath BackwardsOnPath;
-        public readonly SingleBlock SingleBlock;
-        public readonly BlockSearch BlockSearch;
-        public readonly DeleteDistanceToGo DeleteDistanceToGo;
-        public readonly DataStreaming DataStreaming;
-        public readonly TechnologyProcesses TechnologyProcesses;
-        public readonly ErrorManagement ErrorManager;
-        public readonly ZeroOffsets ZeroOffsets;
-        public readonly ManualOperation ManualOperation;
+
         internal CncChannel(AdsClient plcClient, AdsClient geoClient, AdsClient sdaClient, AdsClient comClient, int channelNumber, Dictionary<string, ObjectDescription> descriptions)
         {
             this.comClient = comClient;
@@ -46,6 +30,27 @@ namespace TwinSharp.CNC
             ZeroOffsets = new ZeroOffsets(sdaClient, channelNumber);
             ManualOperation = new ManualOperation(plcClient, channelNumber);
         }
+
+        public int ChannelNumber { get; private set; }
+
+        public OperationModeManager OperationModeManager { get; private set; }
+        public Interpolator Interpolator { get; private set; }
+        public ControlCommands ControlCommands { get; private set; }
+        public ContourVisualization ContourVisualization { get; private set; }
+        public FeedOverride FeedOverride { get; private set; }
+        public BackwardsOnPath BackwardsOnPath { get; private set; }
+
+        /// <summary>
+        /// When single-step mode is active, the machine operator has the option to execute an NC program step by step. The operator releases every NC line one by one. Comment lines or comment blocks and skipped blocks are skipped
+        /// </summary>
+        public SingleBlock SingleBlock { get; private set; }
+        public BlockSearch BlockSearch { get; private set; }
+        public DeleteDistanceToGo DeleteDistanceToGo { get; private set; }
+        public DataStreaming DataStreaming { get; private set; }
+        public TechnologyProcesses TechnologyProcesses { get; private set; }
+        public ErrorManagement ErrorManager { get; private set; }
+        public ZeroOffsets ZeroOffsets { get; private set; }
+        public ManualOperation ManualOperation { get; private set; }
 
         /// <summary>
         /// Part of the path motion traversed in the current block in relation to the total path.
@@ -102,7 +107,7 @@ namespace TwinSharp.CNC
         }
 
         /// <summary>
-        /// Path feed was programmed in the NC program<value> Weighted by the current real-time influences such as override.
+        /// Path feed was programmed in the NC program Weighted by the current real-time influences such as override.
         /// Unit: 1 µm/s
         /// </summary>
         public double PathFeedProgrammedWeighted
@@ -1029,7 +1034,5 @@ namespace TwinSharp.CNC
         public uint GroupIndex => index;
 
         public uint BlockNumberActual => baseOffset + 0x21;
-
-
     }
 }

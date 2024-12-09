@@ -3,6 +3,11 @@ using TwinCAT.Ads;
 
 namespace TwinSharp.PLC
 {
+    /// <summary>
+    /// The PlcAppSystemInfo class provides access to various system information and status variables
+    /// of a TwinCAT PLC application. It uses an AdsClient to read and write these variables, which include
+    /// object ID, flags, ADS port, boot data status, application timestamp, and more.
+    /// </summary>
     public class PlcAppSystemInfo
     {
         readonly AdsClient client;

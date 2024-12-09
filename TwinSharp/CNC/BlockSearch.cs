@@ -1,7 +1,12 @@
 ﻿using TwinCAT.Ads;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// The operator can start machining at what is called the continuation position at any point in the program. After a program is interrupted (e.g. tool breakage), this is a quick method to reactivate machining at the point of interruption.
+    /// The continuation position can be defined using a number of different block search types(file offset, block counter, block number, etc.). 
+    /// </summary>
     public class BlockSearch
     {
         readonly AdsClient comClient;

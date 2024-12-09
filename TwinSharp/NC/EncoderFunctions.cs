@@ -2,6 +2,12 @@
 
 namespace TwinSharp.NC
 {
+
+    /// <summary>
+    /// The EncoderFunctions class provides methods to interact with and control encoder devices via the TwinCAT ADS protocol.
+    /// It includes functionalities to set and reinitialize the actual position of the encoder, activate and deactivate touch probes and external latches,
+    /// and set external latch events. The class uses an AdsClient to communicate with the encoder and sends commands using specific index groups and offsets.
+    /// </summary>
     public class EncoderFunctions
     {
         readonly AdsClient client;

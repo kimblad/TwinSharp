@@ -154,6 +154,10 @@ namespace TwinSharp
             get => client.ReadAny<uint>(0x6, 0x0);
         }
 
+
+        /// <summary>
+        /// Count of number of slaves configured in TwinCAT.
+        /// </summary>
         public ushort SlaveCountConfigured
         {
             get => client.ReadAny<ushort>(0xF302, 0xF0200000);
@@ -250,6 +254,10 @@ namespace TwinSharp
             return slaveStates;
         }
 
+        /// <summary>
+        /// Can be used to determine topology information. Equivavalent to the function block FB_EcGetSlaveTopolgyInfo.
+        /// </summary>
+        /// <returns>An array of structures of type ST_TopologyDataEx, which contains the topology data.</returns>
         public ST_TopologyDataEx[] GetSlaveTopologyInfo()
         {
             const int oneTopologySize = 64;
@@ -275,6 +283,10 @@ namespace TwinSharp
             return topologyInfos;
         }
 
+        /// <summary>
+        /// Returns a string representation of the EtherCAT master. 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Name + " " + AmsNetId.ToString();

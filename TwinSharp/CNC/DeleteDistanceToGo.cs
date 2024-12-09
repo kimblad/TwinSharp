@@ -8,7 +8,7 @@ namespace TwinSharp.CNC
         private int channelNumber;
 
         Dictionary<Identifier, uint> variableHandles;
-        public DeleteDistanceToGo(AdsClient plcClient, int channelNumber)
+        internal DeleteDistanceToGo(AdsClient plcClient, int channelNumber)
         {
             this.plcClient = plcClient;
             this.channelNumber = channelNumber;

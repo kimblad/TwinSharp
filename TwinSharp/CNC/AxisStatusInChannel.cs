@@ -119,7 +119,7 @@ namespace TwinSharp.CNC
     }
 
 
-    //Contains the index group and index offsets of Axis Channel Status objects. Can be used if you want to add ADS Device notifications, or SumRead commands.
+    ///Contains the index group and index offsets of Axis Channel Status objects. Can be used if you want to add ADS Device notifications, or SumRead commands.
     public class AxisStatusInChannelAdresses
     {
         uint baseOffset;

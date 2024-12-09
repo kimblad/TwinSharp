@@ -2,6 +2,13 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The EncoderState class provides access to various encoder states and properties 
+    /// through an AdsClient instance. It allows reading and writing of encoder-related 
+    /// data such as error codes, actual positions, velocities, accelerations, and other 
+    /// relevant metrics.
+    /// </summary>
+
     public class EncoderState
     {
         readonly AdsClient client;
@@ -12,41 +19,65 @@ namespace TwinSharp.NC
             indexGroup = 0x5100 + id;
         }
 
+        /// <summary>
+        /// Error state encoder
+        /// </summary>
         public uint ErrorCode
         {
             get => client.ReadAny<uint>(indexGroup, 0x01);
         }
 
+        /// <summary>
+        /// Actual position (charge with actual position compensation value). Symbol: "ActPos".
+        /// </summary>
         public double ActualPosition
         {
             get => client.ReadAny<double>(indexGroup, 0x02);
         }
 
+        /// <summary>
+        /// Modulo actual position. Symbol: "ActPosModulo".
+        /// </summary>
         public double ActualPositionModulo
         {
             get => client.ReadAny<double>(indexGroup, 0x03);
         }
 
+        /// <summary>
+        /// Modulo actual rotation.
+        /// </summary>
         public int ActualModuloRotation
         {
             get => client.ReadAny<int>(indexGroup, 0x04);
         }
 
+        /// <summary>
+        /// Optional: Actual velocity. Symbol: "ActVel".
+        /// </summary>
         public double ActualVelocity
         {
             get => client.ReadAny<double>(indexGroup, 0x05);
         }
 
+        /// <summary>
+        /// Optional: Actual acceleration. Symbol: "ActAcc".
+        /// </summary>
         public double ActualAcceleration
         {
             get => client.ReadAny<double>(indexGroup, 0x06);
         }
 
+        /// <summary>
+        /// Encoder actual increments.
+        /// </summary>
         public int ActualIncrements
         {
             get => client.ReadAny<int>(indexGroup, 0x07);
         }
 
+        /// <summary>
+        /// Software actual increment counter.
+        /// </summary>
         public int SoftwareActualIncrements
         {
             get => client.ReadAny<int>(indexGroup, 0x08);
@@ -72,18 +103,24 @@ namespace TwinSharp.NC
 
 
         /// <summary>
-        /// Measuring system error correction
+        /// Actual position correction value (measuring system error correction).
         /// </summary>
         public double ActualPositionCorrectionValue
         {
             get => client.ReadAny<double>(indexGroup, 0x0A);
         }
 
+        /// <summary>
+        /// Actual position without actual position compensation value.
+        /// </summary>
         public double ActualPositionWithoutCompensation
         {
             get => client.ReadAny<double>(indexGroup, 0x0B);
         }
 
+        /// <summary>
+        /// Actual position compensation value due to the dead time compensation.
+        /// </summary>
         public double ActualPositionDueToDeadTimeCompensation
         {
             get => client.ReadAny<double>(indexGroup, 0x0C);
@@ -136,15 +173,23 @@ namespace TwinSharp.NC
         }
 
 
-        public void ReadActualPositionBuffer(out double position, out double time)
+        /// <summary>
+        /// Read the actual position buffer.
+        /// </summary>
+        /// <param name="timestamp"></param>
+        /// <param name="position"></param>
+        public void ReadActualPositionBuffer(out uint timestamp, out double position)
         {
             //TODO: check on real CoE drive (not soft encoder).
-            var buffer = new Memory<byte>(new byte[16]);
+            var buffer = new byte [16];
 
-            client.Read(indexGroup, 0x10, buffer);
+            client.Read(indexGroup, 0x16, buffer.AsMemory());
 
-            position = BitConverter.ToDouble(buffer.Span.Slice(0, 8));
-            time = BitConverter.ToDouble(buffer.Span.Slice(8, 8));
+            var br = new BinaryReader(new MemoryStream(buffer));
+
+            timestamp = br.ReadUInt32();
+            br.ReadUInt32(); //skip 4 bytes
+            position = br.ReadDouble();
         }
     }
 }

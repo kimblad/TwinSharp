@@ -14,17 +14,22 @@ namespace TwinSharp
         public uint nCpuFreq;
     };
 
+
     public struct RTimeCpuLatency
     {
-        public uint current;
-        public uint maximum;
-        public uint limit;
+        /// <summary> The current latency time of a TwinCAT system in µs.</summary>
+        public uint Current;
+
+        /// <summary> The maximum latency time of a TwinCAT system in µs (maximum latency time since the TwinCAT system was last started).</summary>
+        public uint Maximum;
+
+        public uint Limit;
     };
 
     /// <summary>
     /// Structure with license information.
     /// </summary>
-    public class ST_CheckLicense
+    public struct ST_CheckLicense
     {
         /// <summary>
         /// License ID
@@ -101,7 +106,7 @@ namespace TwinSharp
     /// <summary>
     /// The structure ST_EcSlaveState contains the EtherCAT state and the link state of an EtherCAT slave device.
     /// </summary>
-    public class ST_EcSlaveState
+    public struct ST_EcSlaveState
     {
         /// <summary>
         /// EtherCAT state of a slave
@@ -131,7 +136,7 @@ namespace TwinSharp
     /// <summary>
     /// The structure ST_EcSlaveIdentity contains the EtherCAT identity data for an EtherCAT slave device.
     /// </summary>
-    public class ST_EcSlaveIdentity
+    public struct ST_EcSlaveIdentity
     {
         /// <summary>
         /// Vendor-ID of the slave device
@@ -176,7 +181,7 @@ namespace TwinSharp
     /// <summary>
     /// The structure ST_EcSlaveConfigData contains the EtherCAT configuration data for an EtherCAT slave device.
     /// </summary>
-    public class ST_EcSlaveConfigData
+    public struct ST_EcSlaveConfigData
     {
         /// <summary>
         /// Used internally.
@@ -254,12 +259,21 @@ namespace TwinSharp
             MailboxInSize = br.ReadUInt16();
             LinkStatus = br.ReadByte();
         }
+
+        /// <summary>
+        /// Returns a string representation of the slave configuration data.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
     /// <summary>
     /// The structure ST_TopologyDataEx contains information on EtherCAT topology and hot-connect groups.
     /// </summary>
-    public class ST_TopologyDataEx
+    public struct ST_TopologyDataEx
     {
         /// <summary>
         /// Dedicated physical EtherCAT address of the EtherCAT slave device
@@ -352,7 +366,7 @@ namespace TwinSharp
     /// <summary>
     /// The structure ST_PortAddr contains EtherCAT topology information for EtherCAT slave device. EtherCAT slave devices typically have 2 to 4 ports.
     /// </summary>
-    public class ST_PortAddr
+    public struct ST_PortAddr
     {
         /// <summary>
         /// Address of the previous EtherCAT slave at port A of the current EtherCAT slave
@@ -435,21 +449,51 @@ namespace TwinSharp
         public DateTime LastWriteTime;
     }
 
+    /// <summary>
+    /// Describes the different attributes that a file can have. Such as readonly, hidden, system etc.
+    /// </summary>
     public struct ST_FileAttributes
     {
-        public bool ReadOnly;          // FILE_ATTRIBUTE_READONLY
-        public bool Hidden;            // FILE_ATTRIBUTE_HIDDEN
-        public bool System;            // FILE_ATTRIBUTE_SYSTEM
-        public bool Directory;         // FILE_ATTRIBUTE_DIRECTORY
-        public bool Archive;           // FILE_ATTRIBUTE_ARCHIVE
-        public bool Device;            // FILE_ATTRIBUTE_DEVICE. Under CE: FILE_ATTRIBUTE_INROM or FILE_ATTRIBUTE_ENCRYPTED
-        public bool Normal;            // FILE_ATTRIBUTE_NORMAL
-        public bool Temporary;         // FILE_ATTRIBUTE_TEMPORARY
-        public bool SparseFile;        // FILE_ATTRIBUTE_SPARSE_FILE
-        public bool ReparsePoint;      // FILE_ATTRIBUTE_REPARSE_POINT
-        public bool Compressed;        // FILE_ATTRIBUTE_COMPRESSED
-        public bool Offline;           // FILE_ATTRIBUTE_OFFLINE. Under CE: FILE_ATTRIBUTE_ROMSTATICREF
-        public bool NotContentIndexed; // FILE_ATTRIBUTE_NOT_CONTENT_INDEXED. Under CE: FILE_ATTRIBUTE_ROMMODULE
-        public bool Encrypted;         // FILE_ATTRIBUTE_ENCRYPTED
+        /// <summary> FILE_ATTRIBUTE_READONLY </summary>
+        public bool ReadOnly;
+        
+        /// <summary> FILE_ATTRIBUTE_HIDDEN </summary>
+        public bool Hidden;             
+        
+        /// <summary> FILE_ATTRIBUTE_SYSTEM </summary>
+        public bool System;             
+        
+        /// <summary> FILE_ATTRIBUTE_DIRECTORY </summary>
+        public bool Directory;          
+        
+        /// <summary> FILE_ATTRIBUTE_ARCHIVE </summary>
+        public bool Archive;
+
+        /// <summary> FILE_ATTRIBUTE_DEVICE. Under CE: FILE_ATTRIBUTE_INROM or FILE_ATTRIBUTE_ENCRYPTED </summary>
+        public bool Device;             
+        
+        /// <summary> FILE_ATTRIBUTE_NORMAL </summary>
+        public bool Normal;             
+        
+        /// <summary> FILE_ATTRIBUTE_TEMPORARY </summary>
+        public bool Temporary;          
+        
+        /// <summary> FILE_ATTRIBUTE_SPARSE_FILE </summary>
+        public bool SparseFile;         
+        
+        /// <summary> FILE_ATTRIBUTE_REPARSE_POINT </summary>
+        public bool ReparsePoint;       
+        
+        /// <summary> FILE_ATTRIBUTE_COMPRESSED </summary>
+        public bool Compressed;
+
+        /// <summary> FILE_ATTRIBUTE_OFFLINE. Under CE: FILE_ATTRIBUTE_ROMSTATICREF</summary>
+        public bool Offline;            
+
+        /// <summary> FILE_ATTRIBUTE_NOT_CONTENT_INDEXED. Under CE: FILE_ATTRIBUTE_ROMMODULE </summary>
+        public bool NotContentIndexed;
+
+        /// <summary> FILE_ATTRIBUTE_ENCRYPTED </summary>
+        public bool Encrypted;          
     }
 }

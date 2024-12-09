@@ -1,5 +1,4 @@
 ﻿using TwinCAT.Ads;
-using TwinCAT.TypeSystem;
 
 namespace TwinSharp.CNC
 {
@@ -7,13 +6,9 @@ namespace TwinSharp.CNC
     {
         readonly AdsClient plcClient;
         readonly int channelNumber;
-        
-        public readonly TipParameters TipParameters;
-        public readonly JogParameters JogParameters;
-        public readonly HrParameters HrParameters;
-        public readonly Key[] Keys;
-        public readonly RapidKey RapidKey;
-        public readonly HandWheelInc[] HandWheelIncs;
+
+
+
 
         public ManualOperation(AdsClient plcClient, int channelNumber)
         {
@@ -37,6 +32,18 @@ namespace TwinSharp.CNC
                 HandWheelIncs[i] = new HandWheelInc(plcClient, channelNumber, i);
             }
         }
+
+        public TipParameters TipParameters { get; private set; }
+
+        public JogParameters JogParameters { get; private set; }
+
+        public HrParameters HrParameters { get; private set; }
+
+        public Key[] Keys { get; private set; }
+
+        public RapidKey RapidKey { get; private set; }
+
+        public HandWheelInc[] HandWheelIncs { get; private set; }
 
         public ushort GetManualModeState(int axisIndex)
         {

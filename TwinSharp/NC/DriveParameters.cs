@@ -23,9 +23,9 @@ namespace TwinSharp.NC
             get => client.ReadString(indexGroup, 0x02, 30);
         }
 
-        public DriveType Type
+        public NcDriveType Type
         {
-            get => (DriveType)client.ReadAny<uint>(indexGroup, 0x03);
+            get => (NcDriveType)client.ReadAny<uint>(indexGroup, 0x03);
         }
 
 

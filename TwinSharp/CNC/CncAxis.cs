@@ -9,21 +9,23 @@ namespace TwinSharp.CNC
         readonly AmsNetId target;
         readonly AdsClient comClient;
 
-        public readonly AxisStatus Status;
-        public readonly ExternalAxisCommanding ExternalAxisCommanding;
-        public readonly DynamicPositionLimitation DynamicPositionLimitation;
 
         internal CncAxis(uint number, AmsNetId target, AdsClient plcClient, AdsClient comClient)
         {
             this.Number = number;
             this.target = target;
             this.comClient = comClient;
-            this.Status = new AxisStatus(number, comClient);
-
+            
+            Status = new AxisStatus(number, comClient);
             ExternalAxisCommanding = new ExternalAxisCommanding(number, plcClient);
             DynamicPositionLimitation = new DynamicPositionLimitation(number, plcClient);
         }
 
+        public AxisStatus Status { get; private set; }
+
+        public ExternalAxisCommanding ExternalAxisCommanding { get; private set; }
+
+        public DynamicPositionLimitation DynamicPositionLimitation { get; private set; }
 
 
         public string GetParameters()
@@ -67,6 +69,7 @@ namespace TwinSharp.CNC
         }
 
         private uint jogGroupIndex => 0x20100 + Number;
+
 
         public override string ToString()
         {

@@ -33,25 +33,41 @@ namespace TwinSharp
             get => client.ReadAny<byte>(indexGroup, CombineIndexAndSubIndex(0x1001, 0x00));
         }
 
+        /// <summary>
+        /// This parameter specifies the manufacturers device name of the device.
+        /// </summary>
         public string ManufacturerDeviceName
         {
             get => client.ReadAnyString(indexGroup, CombineIndexAndSubIndex(0x1008, 0x00), 80, Encoding.ASCII);
         }
 
+        /// <summary>
+        /// This parameter specifies the hardware version of the device.
+        /// </summary>
         public string ManufacturerHardwareVersion
         {
             get => client.ReadAnyString(indexGroup, CombineIndexAndSubIndex(0x1009, 0x00), 80, Encoding.ASCII);
         }
+
+        /// <summary>
+        /// The Software Version object has the following parameter:
+        /// </summary>
         public string ManufacturerSoftwareVersion
         {
             get => client.ReadAnyString(indexGroup, CombineIndexAndSubIndex(0x100A, 0x00), 80, Encoding.ASCII);
         }
 
+        /// <summary>
+        /// This parameter specifies the vendor ID of the device.
+        /// </summary>
         public uint VendorID
         {
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1018, 0x1));
         }
 
+        /// <summary>
+        /// This parameter specifies the product code of the device.
+        /// </summary>
         public uint ProductCode
         {
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1018, 0x2));

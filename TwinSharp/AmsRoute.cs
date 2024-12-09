@@ -2,6 +2,10 @@
 
 namespace TwinSharp
 {
+    /// <summary>
+    /// Represents a route to a TwinCAT target system, including its name, address, AmsNetId, protocol, and flags.
+    /// Provides functionality to retrieve the state information of the route.
+    /// </summary>
     public class AmsRoute
     {
         internal AmsRoute(string name, string adress, AmsNetId amsNetId, string protocol, int flags)
@@ -48,6 +52,10 @@ namespace TwinSharp
         }
 
 
+        /// <summary>
+        /// Returns a string representation of the route.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Name + " " + AmsNetId.ToString();

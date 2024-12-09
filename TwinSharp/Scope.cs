@@ -1,5 +1,4 @@
-﻿using System;
-using TwinCAT.Ads;
+﻿using TwinCAT.Ads;
 
 namespace TwinSharp
 {

@@ -110,9 +110,9 @@ namespace TwinSharp
             var ms = new MemoryStream(readBytes);
             var br = new BinaryReader(ms);
 
-            info.current = br.ReadUInt32();
-            info.maximum = br.ReadUInt32();
-            info.limit = br.ReadUInt32();
+            info.Current = br.ReadUInt32();
+            info.Maximum = br.ReadUInt32();
+            info.Limit = br.ReadUInt32();
 
             return info;
         }

@@ -4,14 +4,18 @@ namespace TwinSharp.PLC
 {
     public class PLC
     {
-        public readonly PlcAppSystemInfo AppInfo;
 
         readonly AdsClient client;
+
+
         public PLC(AdsClient client)
         {
             this.client = client;
             AppInfo = new PlcAppSystemInfo(client);
         }
+
+        public PlcAppSystemInfo AppInfo { get; private set; }
+
 
         /// <summary>
         /// Can be used to start a PLC runtime system on a TwinCAT system. The function block can, for instance, be used to start the PLC on a remote PC.
