@@ -2,6 +2,11 @@
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// Platform data is data which cannot be assigned to a specific axis or a channel but has an effect on the entire NC control.
+    /// It allows reading various properties of the CNC platform such as the tick counter, cycle time, version, 
+    /// number of axes, number of channels, and their respective maximum allowable counts. 
+    /// </summary>
     public class CncPlatform
     {
         readonly AdsClient client;
@@ -12,6 +17,9 @@ namespace TwinSharp.CNC
             this.descriptions = descriptions;
         }
 
+        /// <summary>
+        /// Tick counter of the CNC platform. Always increasing when CNC is running.
+        /// </summary>
         public uint TickCounter
         {
             get
@@ -21,6 +29,9 @@ namespace TwinSharp.CNC
             }
         }
 
+        /// <summary>
+        /// Cycle time of the CNC platform. Constant.
+        /// </summary>
         public uint CycleTime
         {
             get
@@ -30,6 +41,9 @@ namespace TwinSharp.CNC
             }
         }
 
+        /// <summary>
+        /// Version of the CNC platform.
+        /// </summary>
         public string Version
         {
             get
@@ -39,6 +53,9 @@ namespace TwinSharp.CNC
             }
         }
 
+        /// <summary>
+        /// Number of axes configured in the CNC platform.
+        /// </summary>
         public uint AxisCount
         {
             get
@@ -48,7 +65,9 @@ namespace TwinSharp.CNC
             }
         }
 
-
+        /// <summary>
+        /// Number of channels configured in the CNC platform.
+        /// </summary>
         public ushort ChannelCount
         {
             get
@@ -59,6 +78,9 @@ namespace TwinSharp.CNC
 
         }
 
+        /// <summary>
+        /// Maximum allowable number of axes that can be configured in the CNC platform.
+        /// </summary>
         public uint MaxAxisCount
         {
             get
@@ -68,6 +90,9 @@ namespace TwinSharp.CNC
             }
         }
 
+        /// <summary>
+        /// Maximum allowable number of spindles that can be configured in the CNC platform.
+        /// </summary>
         public uint MaxSpindleCount
         {
             get
@@ -77,6 +102,9 @@ namespace TwinSharp.CNC
             }
         }
 
+        /// <summary>
+        /// Maximum allowable number of channels that can be configured in the CNC platform.
+        /// </summary>
         public ushort MaxChannelCount
         {
             get

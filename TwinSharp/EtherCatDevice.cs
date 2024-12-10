@@ -23,11 +23,17 @@ namespace TwinSharp
             this.client = client;
         }
 
+        /// <summary>
+        /// The device type of the EtherCAT device.
+        /// </summary>
         public uint DeviceType
         {
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1000, 0x0));
         }
 
+        /// <summary>
+        /// Returns the error register of the EtherCAT device.
+        /// </summary>
         public byte ErrorRegister
         {
             get => client.ReadAny<byte>(indexGroup, CombineIndexAndSubIndex(0x1001, 0x00));
@@ -73,21 +79,40 @@ namespace TwinSharp
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1018, 0x2));
         }
 
+        /// <summary>
+        /// The revision number of the EtherCAT device.
+        /// </summary>
         public uint RevisionNumber
         {
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1018, 0x3));
         }
 
+        /// <summary>
+        /// The serial number of the EtherCAT device.
+        /// </summary>
         public uint SerialNumber
         {
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1018, 0x4));
         }
 
+        /// <summary>
+        /// Write any object to the CoE object dictionary.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="subIndex"></param>
+        /// <param name="value"></param>
         public void CoeWriteAny(uint index, uint subIndex, object value)
         {
             client.WriteAny(indexGroup, CombineIndexAndSubIndex(index, subIndex), value);
         }
 
+        /// <summary>
+        /// Read any object from the CoE object dictionary.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="index"></param>
+        /// <param name="subIndex"></param>
+        /// <returns></returns>
         public T CoeReadAny<T>(uint index, uint subIndex)
         {
             return client.ReadAny<T>(indexGroup, CombineIndexAndSubIndex(index, subIndex));

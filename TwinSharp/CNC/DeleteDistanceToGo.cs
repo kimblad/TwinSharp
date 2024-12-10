@@ -2,6 +2,9 @@
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// The "Delete distance to go" function interrupts the actual path motion and starts a short cut by straight line to the target position of next block. The distance to go of the current (interrupted) block is then deleted.
+    /// </summary>
     public class DeleteDistanceToGo
     {
         private AdsClient plcClient;
@@ -33,6 +36,9 @@ namespace TwinSharp.CNC
             }
         }
 
+        /// <summary>
+        /// Signal to CNC that the interface exists and we want to use it.
+        /// </summary>
         public bool InterfaceExists
         {
             set

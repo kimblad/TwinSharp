@@ -1,8 +1,13 @@
 ﻿namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// Lists all the known error codes and descriptions that can be returned by the CNC system.
+    /// </summary>
     public static class ErrorCodes
     {
-
+        /// <summary>
+        /// Dictionary with the error codes as keys and the error description as values.
+        /// </summary>
         public static readonly Dictionary<uint, string> CodesAndDescriptions = new Dictionary<uint, string>()
         {
             { 0, "VERSION_v300_18.07.2024_13:00:00" },

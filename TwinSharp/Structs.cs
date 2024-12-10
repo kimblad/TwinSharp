@@ -2,19 +2,37 @@
 
 namespace TwinSharp
 {
-
+    /// <summary>
+    /// Struct that describes the amount of Windows (shared) cores and isolated cores for TwinCAT.
+    /// </summary>
     public struct RTimeCpuSettings
     {
-        public uint nWinCPUs;
-        public uint nNonWinCPUs;
-        public ulong affinityMask;
-        public uint nRtCpus;
-        public uint nCpuType;
-        public uint nCpuFamily;
-        public uint nCpuFreq;
+        /// <summary> Number of Windows (shared) cores. </summary>
+        public uint WinCPUs;
+        
+        /// <summary> Number of non windows cores. </summary>
+        public uint NonWinCPUs;
+        
+        /// <summary> Affinity mask. </summary>
+        public ulong AffinityMask;
+        
+        /// <summary> Number of real time cores. </summary>
+        public uint RtCpus;
+        
+        /// <summary> CPU type. </summary>
+        public uint CpuType;
+        
+        /// <summary> CPU family. </summary>
+        public uint CpuFamily;
+
+        /// <summary> CPU frequency. </summary>
+        public uint CpuFreq;
     };
 
 
+    /// <summary>
+    /// Struct that describes the realtime latency of the CPU.
+    /// </summary>
     public struct RTimeCpuLatency
     {
         /// <summary> The current latency time of a TwinCAT system in µs.</summary>
@@ -23,6 +41,7 @@ namespace TwinSharp
         /// <summary> The maximum latency time of a TwinCAT system in µs (maximum latency time since the TwinCAT system was last started).</summary>
         public uint Maximum;
 
+        /// <summary> Limit. </summary>
         public uint Limit;
     };
 
@@ -97,7 +116,7 @@ namespace TwinSharp
         /// Returns a string representation of the license.
         /// </summary>
         /// <returns></returns>
-        public override string ToString()
+        public override readonly string ToString()
         {
             return LicenseName + " " + ExpirationTimeString + " " + eResult;
         }
@@ -264,7 +283,7 @@ namespace TwinSharp
         /// Returns a string representation of the slave configuration data.
         /// </summary>
         /// <returns></returns>
-        public override string ToString()
+        public override readonly string ToString()
         {
             return Name;
         }

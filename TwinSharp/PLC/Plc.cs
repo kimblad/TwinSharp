@@ -2,18 +2,30 @@
 
 namespace TwinSharp.PLC
 {
+    /// <summary>
+    /// The PLC class provides methods to control a TwinCAT PLC runtime system using an AdsClient.
+    /// It allows starting, stopping, and resetting the PLC, as well as accessing various system information
+    /// and status variables through the PlcAppSystemInfo instance.
+    /// </summary>
     public class PLC
     {
 
         readonly AdsClient client;
 
-
+        /// <summary>
+        /// Initializes a new instance of the PLC class with the specified AdsClient.
+        /// The AdsClient should typically be connected to the target system at port AmsPort.PlcRuntime_851 (851).
+        /// </summary>
         public PLC(AdsClient client)
         {
             this.client = client;
             AppInfo = new PlcAppSystemInfo(client);
         }
 
+
+        /// <summary>
+        /// Gets the PlcAppSystemInfo instance which provides access to various system information and status variables of a TwinCAT PLC application.
+        /// </summary>
         public PlcAppSystemInfo AppInfo { get; private set; }
 
 

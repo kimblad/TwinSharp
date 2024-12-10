@@ -1,4 +1,5 @@
-﻿using TwinCAT.Ads;
+﻿using System.Security.Cryptography;
+using TwinCAT.Ads;
 
 namespace TwinSharp.CNC
 {
@@ -11,7 +12,6 @@ namespace TwinSharp.CNC
         private const uint indexGroup = 0x120200;
         readonly private uint indexOffset;
 
-        public readonly AxisStatusInChannel? StatusInChannel;
 
         internal AxisStatus(uint index, AdsClient comClient)
         {
@@ -22,7 +22,22 @@ namespace TwinSharp.CNC
                 StatusInChannel = new AxisStatusInChannel(comClient, index);
         }
 
+        /// <summary>
+        /// If the axis belongs to a channel, this class can be used to get the status of the axis in that channel.
+        /// </summary>
+        public AxisStatusInChannel? StatusInChannel
+        {
+            get;
+            private set;
+        }
 
+
+        /// <summary>
+        /// Type of axis.
+        /// 1 = Translator.
+        /// 2 = Rotator.
+        /// 4 = Spindle.
+        /// </summary>
         public ushort Type
         {
             get => comClient.ReadAny<ushort>(indexGroup, indexOffset + 0x01);
@@ -52,36 +67,62 @@ namespace TwinSharp.CNC
             get => comClient.ReadAny<int>(indexGroup, indexOffset + 0x04);
         }
 
+        /// <summary>
+        /// Active feedrate of the axis in mm/s.
+        /// </summary>
         public double ActiveFeedrate
         {
             get => comClient.ReadAny<double>(indexGroup, indexOffset + 0x05);
         }
 
+        /// <summary>
+        /// Current feedrate of the axis in mm/s.
+        /// </summary>
         public double CurrentFeedrate
         {
             get => comClient.ReadAny<double>(indexGroup, indexOffset + 0x06);
         }
 
+        /// <summary>
+        /// Positive sign if the last output setpoint generated led to a positive direction of motion.
+        /// Negative sign if the last output setpoint generated led to a negative direction of motion.
+        /// 0 if stationary.
+        /// </summary>
         public sbyte Direction
         {
             get => comClient.ReadAny<sbyte>(indexGroup, indexOffset + 0x07);
         }
 
+        /// <summary>
+        /// The axis mode configured in the axis parameter list (P-AXIS-00015) is indicated.
+        /// </summary>
         public uint Mode
         {
             get => comClient.ReadAny<uint>(indexGroup, indexOffset + 0x08);
         }
 
+        /// <summary>
+        /// Name of the logical axis used for the current reference in the current automatic
+        /// program / manual block(e.g.X, Y, Z). This may be changed by default when the
+        /// channel(SDA-MDS list) is programmed or dynamically in the NC program by
+        /// means of a swap command.
+        /// </summary>
         public string AxisName
         {
             get => comClient.ReadAny<string>(indexGroup, indexOffset + 0x09);
         }
 
+        /// <summary>
+        /// The axis is located in position, i.e. the control window is reached and the axis is not interpolated
+        /// </summary>
         public bool InPosition
         {
             get => comClient.ReadAny<bool>(indexGroup, indexOffset + 0x0A);
         }
 
+        /// <summary>
+        /// The axis completed homing successfully and is now referenced.
+        /// </summary>
         public bool HomingDone
         {
             get => comClient.ReadAny<bool>(indexGroup, indexOffset + 0x0B);

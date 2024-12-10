@@ -116,6 +116,7 @@ public partial class TcConfigRemoteConnectionsRoute
         }
     }
 
+    /// <remarks/>
     public AmsNetId AmsNetId
     {
         get

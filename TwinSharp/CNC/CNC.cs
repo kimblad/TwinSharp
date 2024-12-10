@@ -3,54 +3,88 @@ using TwinCAT.Ads;
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// Represents the TwinCAT CNC system. This class provides access to the CNC's platform, axes, and channels,
+    /// </summary>
     public class CNC : IDisposable
     {
-        public CncPlatform Platform;
-        public CncAxis[] Axes;
-        public CncChannel[] Channels;
-
-        public AdsClient geoClient; //("GEO CNC") operates in the interpolation cycle of the CNC. Among other tasks, it calculates the respective set values for the axes and controls the axes.
-        public AdsClient sdaClient; //The "SDA CNC task" deals with decoding and processing of the NC programs and should therefore have a lower priority than the GEO task.
-        public AdsClient comClient; //The "COM CNC task" deals with the communication integration of the CNC kernel.
-        public AdsClient plcClient;
-
+        /// <summary>
+        /// Creates a new representation of a existing TwinCAT CNC system at the specified target AmsNetId.
+        /// </summary>
+        /// <param name="target"></param>
         public CNC(AmsNetId target)
         {
-            geoClient = new AdsClient();
-            geoClient.Connect(target, 551);
+            ClientGeo = new AdsClient();
+            ClientGeo.Connect(target, 551);
 
-            sdaClient = new AdsClient();
-            sdaClient.Connect(target, 552);
+            ClientSda = new AdsClient();
+            ClientSda.Connect(target, 552);
 
-            comClient = new AdsClient();
-            comClient.Connect(target, 553);
+            ClientCom = new AdsClient();
+            ClientCom.Connect(target, 553);
 
-            plcClient = new AdsClient();
-            plcClient.Connect(target, 851);
+            ClientPlc = new AdsClient();
+            ClientPlc.Connect(target, 851);
 
 #if DEBUG
-            geoClient.Timeout = 60_0000;
-            sdaClient.Timeout = 60_0000;
-            comClient.Timeout = 60_0000;
-            plcClient.Timeout = 60_0000;
+            ClientGeo.Timeout = 60_0000;
+            ClientSda.Timeout = 60_0000;
+            ClientCom.Timeout = 60_0000;
+            ClientPlc.Timeout = 60_0000;
 #endif
 
-            var comDescriptions = CreateComDictionary(comClient);
+            var comDescriptions = CreateComDictionary(ClientCom);
 
-            Platform = new CncPlatform(comClient, comDescriptions);
+            Platform = new CncPlatform(ClientCom, comDescriptions);
 
             Channels = new CncChannel[Platform.ChannelCount];
             for (int i = 0; i < Channels.Length; i++)
             {
-                Channels[i] = new CncChannel(plcClient, geoClient, sdaClient, comClient, i + 1, comDescriptions);
+                Channels[i] = new CncChannel(ClientPlc, ClientGeo, ClientSda, ClientCom, i + 1, comDescriptions);
             }
 
             Axes = new CncAxis[Platform.AxisCount];
             for (int i = 0; i < Axes.Length; i++)
             {
-                Axes[i] = new CncAxis((uint)(i + 1), target, plcClient, comClient);
+                Axes[i] = new CncAxis((uint)(i + 1), ClientPlc, ClientCom);
             }
         }
+
+        /// <summary>
+        /// Platform data is data which cannot be assigned to a specific axis or a channel but has an effect on the entire NC control.
+        /// </summary>
+        public CncPlatform Platform { get; private set; }
+
+        /// <summary>
+        /// Array of all existing CNC axes.
+        /// </summary>
+        public CncAxis[] Axes { get; private set; }
+
+
+        /// <summary>
+        /// Array of all existing CNC channels.
+        /// </summary>
+        public CncChannel[] Channels { get; private set; }
+
+        /// <summary>
+        /// ADS client connected to the GEO CNC. Operates in the interpolation cycle of the CNC. Among other tasks, it calculates the respective set values for the axes and controls the axes.
+        /// </summary>
+        public AdsClient ClientGeo { get; private set; }
+
+        /// <summary>
+        /// ADS client connected to the "SDA CNC task" deals with decoding and processing of the NC programs and should therefore have a lower priority than the GEO task.
+        /// </summary>
+        public AdsClient ClientSda { get; private set; }
+
+        /// <summary>
+        /// ADS client connected to the "COM CNC task" deals with the communication integration of the CNC kernel
+        /// </summary>
+        public AdsClient ClientCom { get; private set; }
+
+        /// <summary>
+        /// ADS Client connected to the PLC. Used by HLI interface.
+        /// </summary>
+        public AdsClient ClientPlc { get; private set; }
 
         private static Dictionary<string, ObjectDescription> CreateComDictionary(AdsClient comClient)
         {
@@ -84,30 +118,52 @@ namespace TwinSharp.CNC
         }
 
 
-
+        /// <summary>
+        /// Dispose the CNC object. Releases ADS handles internally.
+        /// </summary>
         public void Dispose()
         {
-            comClient?.Dispose();
-            geoClient?.Dispose();
-            sdaClient?.Dispose();
-            plcClient?.Dispose();
+            ClientCom?.Dispose();
+            ClientGeo?.Dispose();
+            ClientSda?.Dispose();
+            ClientPlc?.Dispose();
 
             GC.SuppressFinalize(this);
         }
     }
+
+    /// <summary>
+    /// Represents the description of a TASK COM object.
+    /// </summary>
     public class ObjectDescription
     {
+        /// <summary> Internal unique ID of an object. </summary>
         public uint Id;
+        
+        /// <summary> Size of object in bytes. </summary>
         public uint Size;
+        
+        /// <summary> TRUE if object is describable. </summary>
         public ushort WriteAccess;
+
+        /// <summary> Index group for direct object access to the content. </summary>
         public uint IndexGroup;
+
+        /// <summary> Index offset for direct object access to the content. </summary>
         public uint IndexOffset;
+        
+        /// <summary> Name of the object.  </summary>
         public string Name;
+
+        /// <summary> 
+        /// Object data type BOOL, BYTE, SINT, WORD, INT,
+        /// DWORD, DINT, LWORD, LINT, REAL, LREAL, STRING
+        /// </summary>
         public string Type;
 
 
 
-        public ObjectDescription(byte[] bytes)
+        internal ObjectDescription(byte[] bytes)
         {
             if (bytes.Length != 84)
                 throw new Exception("Invalid length when creating Object Description");
@@ -126,6 +182,10 @@ namespace TwinSharp.CNC
             Type = ascii.GetString(br.ReadBytes(32), 0, 32).TrimEnd('\0');
         }
 
+        /// <summary>
+        /// Returns the name of the object.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString() => Name;
 
     }

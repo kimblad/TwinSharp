@@ -2,21 +2,30 @@
 
 namespace TwinSharp
 {
+    /// <summary>
+    /// Class to interact with a TwinCAT 2 scope. Note: not compatible with TwinCAT 3.
+    /// </summary>
     public class Scope
     {
-        AdsClient client;
+        readonly AdsClient client;
 
         const uint indexGroupStates = 0x1000;
         const uint indexGroupFunctions = 0x2000;
         const uint indexGroupView = 0x3000;
 
+        /// <summary>
+        /// Creates a new instance of the Scope class. The AmsNetId should typically point to a TwinCAT 2 runtime.
+        /// </summary>
+        /// <param name="amsNetId"></param>
         public Scope(AmsNetId amsNetId)
         {
             client = new AdsClient();
             client.Connect(amsNetId, 14000);
         }
 
-
+        /// <summary>
+        /// Gets or sets the online mode of the scope. If true, the scope is online and can be triggered. If false, the scope is offline.
+        /// </summary>
         public bool OnlineMode
         {
             get

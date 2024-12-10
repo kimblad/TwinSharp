@@ -2,9 +2,20 @@
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// The TechnologyProcesses class manages the interaction with CNC technology units via an ADS client.
+    /// It handles the acknowledgment of M and H codes, processes notifications from the CNC, and provides methods to read and acknowledge technology units.
+    /// </summary>
     public class TechnologyProcesses : IDisposable
     {
+        /// <summary>
+        /// Event that is triggered when a M code needs to be acknowledged.
+        /// </summary>
         public event EventHandler<McodeNeedsAcknowledgeEventArgs>? McodeNeedsAcknowledge;
+
+        /// <summary>
+        /// Event that is triggered when a H code needs to be acknowledged.
+        /// </summary>
         public event EventHandler<HcodeNeedsAcknowledgeEventArgs>? HcodeNeedsAcknowledge;
 
         readonly AdsClient plcClient;
@@ -12,13 +23,13 @@ namespace TwinSharp.CNC
 
 
         readonly Dictionary<Identifier, uint> variableHandles;
-        public readonly int HLI_TU_CH_STD_SYNC_MAXIDX;
+        readonly int HLI_TU_CH_STD_SYNC_MAXIDX;
         readonly int HLI_TECH_UNIT_CH_MAXIDX;
 
         const int sizeOfOneUnit = 50;
         readonly uint notificationHandle; //ADS handle that recieves notifications.
 
-        public TechnologyProcesses(AdsClient plcClient, int channelNumber)
+        internal TechnologyProcesses(AdsClient plcClient, int channelNumber)
         {
             this.plcClient = plcClient;
             this.channelNumber = channelNumber;
@@ -61,7 +72,7 @@ namespace TwinSharp.CNC
                 if (unit.TechnologyType == TechnologyFunction.HLI_INTF_M_FKT)
                 {
                     var mHProcess = ReadMHinfo(unit.MSTH_PROCESS_CH);
-                    //Confirm that we have read all data.
+                    //Confirm to CNC that we have read all data.
                     string symbol = string.Format("HLI_Global_Variables.gpCh[{0}]^.techno_unit_std_sync[{1}].please_rw", channelNumber - 1, i);
                     uint handle = plcClient.CreateVariableHandle(symbol);
                     plcClient.WriteAny(handle, false);
@@ -71,7 +82,8 @@ namespace TwinSharp.CNC
                 else if (unit.TechnologyType == TechnologyFunction.HLI_INTF_H_FKT)
                 {
                     var mHProcess = ReadMHinfo(unit.MSTH_PROCESS_CH);
-                    HcodeNeedsAcknowledge?.Invoke(this, new HcodeNeedsAcknowledgeEventArgs(mHProcess));
+
+                    TriggerHcodeNeedsAck(mHProcess, i);
                 }
             }
         }
@@ -80,6 +92,12 @@ namespace TwinSharp.CNC
         {
             var ea = new McodeNeedsAcknowledgeEventArgs(indexToAck, unitInfo);
             McodeNeedsAcknowledge?.Invoke(this, ea);
+        }
+
+        private void TriggerHcodeNeedsAck(HLI_M_H_PROZESS unitInfo, int indexToAck)
+        {
+            var ea = new HcodeNeedsAcknowledgeEventArgs(indexToAck, unitInfo);
+            HcodeNeedsAcknowledge?.Invoke(this, ea);
         }
 
         private Dictionary<Identifier, uint> CreateVariableHandles(int channelNumber)
@@ -129,6 +147,10 @@ namespace TwinSharp.CNC
             return technoUnits;
         }
 
+        /// <summary>
+        /// Acknowledge a technology unit. This is necessary to inform the CNC that processing of the NC program should continue.
+        /// </summary>
+        /// <param name="unitsIndex"></param>
         public void AcknowledgeTecnologyUnit(int unitsIndex)
         {
             //string symbol = string.Format("HLI_Global_Variables.gpCh[{0}]^.techno_unit_std_sync[{1}].please_rw", channelNumber - 1, unitsIndex);
@@ -143,7 +165,7 @@ namespace TwinSharp.CNC
 
         /// <summary>
         /// The technology unit contains a byte[] (MSTH_PROCESS_CH) with additional information.
-        /// This byte[] can be cast to a HLI_M_H_PROZESS struct if it is a M or H function.
+        /// This byte[] can be cast to a HLI_M_H_PROZESS struct if the technology unit is a M or H function.
         /// </summary>
         private HLI_M_H_PROZESS ReadMHinfo(byte[] bytes)
         {
@@ -164,6 +186,9 @@ namespace TwinSharp.CNC
             return mh;
         }
 
+        /// <summary>
+        /// Dispose the object. Deletes device notifications and handles on ADS side.
+        /// </summary>
         public void Dispose()
         {
             plcClient.DeleteDeviceNotification(notificationHandle);
@@ -193,22 +218,35 @@ namespace TwinSharp.CNC
         }
     }
 
+    /// <summary>
+    /// Event args supplied when a H code needs to be acknowledged.
+    /// </summary>
     public class HcodeNeedsAcknowledgeEventArgs
     {
+        /// <summary> Index of technology to acknowledge when you are done processing this H-code.</summary>
+        public readonly int IndexToAcknowledge;
+
+        /// <summary> Description of the H-code. </summary>
         public readonly HLI_M_H_PROZESS MhProcess;
 
-        public HcodeNeedsAcknowledgeEventArgs(HLI_M_H_PROZESS mHProcess)
+        internal HcodeNeedsAcknowledgeEventArgs(int indexToAck, HLI_M_H_PROZESS mHProcess)
         {
             this.MhProcess = mHProcess;
         }
     }
 
+    /// <summary>
+    /// Event args supplied when a M code needs to be acknowledged.
+    /// </summary>
     public class McodeNeedsAcknowledgeEventArgs
     {
+        /// <summary> Index of technology to acknowledge when you are done processing this M-code.</summary>
         public readonly int IndexToAcknowledge;
+
+        /// <summary> Description of the M-code. </summary>
         public readonly HLI_M_H_PROZESS MhProcess;
         
-        public McodeNeedsAcknowledgeEventArgs(int indexToAck, HLI_M_H_PROZESS mhProcess)
+        internal McodeNeedsAcknowledgeEventArgs(int indexToAck, HLI_M_H_PROZESS mhProcess)
         {
             IndexToAcknowledge = indexToAck;
             MhProcess = mhProcess;

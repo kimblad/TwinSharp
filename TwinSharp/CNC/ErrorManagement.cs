@@ -2,8 +2,15 @@
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// The ErrorManagement class is responsible for handling error messages from the CNC.
+    /// It subscribes to error notifications, reads error messages, and provides functions to acknowledge them. When an error is received, it triggers the ErrorRecieved event with detailed error information.
+    /// </summary>
     public class ErrorManagement
     {
+        /// <summary>
+        /// When an error is received, it triggers the ErrorRecieved event with detailed error information
+        /// </summary>
         public event EventHandler<ErrorRecievedEventArgs>? ErrorRecieved;
 
         private AdsClient plcClient;
@@ -11,7 +18,7 @@ namespace TwinSharp.CNC
         readonly uint variableHandleErrorMessageValid;
         readonly uint handleErrorMessage;
 
-        public ErrorManagement(AdsClient plcClient, int channelNumber)
+        internal ErrorManagement(AdsClient plcClient, int channelNumber)
         {
             this.plcClient = plcClient;
 
@@ -75,10 +82,16 @@ namespace TwinSharp.CNC
 
     }
 
+
+    /// <summary>
+    /// Event arguments for when an error is received. Contains the error information and a description of the error.
+    /// </summary>
     public class ErrorRecievedEventArgs
     {
-
+        /// <summary> Information about the occured error. </summary>
         public readonly HLI_ERROR_SATZ_KOPF Error;
+
+        /// <summary> String description of the occured error. </summary>
         public readonly string Description;
         internal ErrorRecievedEventArgs(HLI_ERROR_SATZ_KOPF error, string description)
         {

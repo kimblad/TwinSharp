@@ -30,7 +30,7 @@ namespace TwinSharp
             if (sharedCores == uint.MaxValue)
             {
                 // 0xffffffff means RESET -> no isolated cores, all shared.
-                if (oldSettings.nNonWinCPUs == 0)
+                if (oldSettings.NonWinCPUs == 0)
                 {
                     //Requested shared core configuration already active, no change applied.
                     return AdsErrorCode.DeviceExists;
@@ -39,7 +39,7 @@ namespace TwinSharp
             else
             {
                 // All other values mean limit the number of shared cores -> use remaining cores as isolated.
-                if (sharedCores == oldSettings.nWinCPUs)
+                if (sharedCores == oldSettings.WinCPUs)
                 {
                     //Requested shared core configuration already active, no change applied.;
                     return AdsErrorCode.DeviceExists;
@@ -79,13 +79,13 @@ namespace TwinSharp
             var ms = new MemoryStream(readBytes);
             var br = new BinaryReader(ms);
 
-            settings.nWinCPUs = br.ReadUInt32();
-            settings.nNonWinCPUs = br.ReadUInt32();
-            settings.affinityMask = br.ReadUInt64();
-            settings.nRtCpus = br.ReadUInt32();
-            settings.nCpuType = br.ReadUInt32();
-            settings.nCpuFamily = br.ReadUInt32();
-            settings.nCpuFreq = br.ReadUInt32();
+            settings.WinCPUs = br.ReadUInt32();
+            settings.NonWinCPUs = br.ReadUInt32();
+            settings.AffinityMask = br.ReadUInt64();
+            settings.RtCpus = br.ReadUInt32();
+            settings.CpuType = br.ReadUInt32();
+            settings.CpuFamily = br.ReadUInt32();
+            settings.CpuFreq = br.ReadUInt32();
 
             return settings;
         }

@@ -2,6 +2,10 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// Represents the state of a drive in a TwinCAT system.
+    /// Provides properties to access various drive parameters such as error state, total output in absolute units, percent, and volts.
+    /// </summary>
     public class DriveState
     {
         readonly AdsClient client;
@@ -13,6 +17,9 @@ namespace TwinSharp.NC
             indexGroup = 0x7100 + id;
         }
 
+        /// <summary>
+        /// Error state of the drive.
+        /// </summary>
         public int ErrorState
         {
             get => client.ReadAny<int>(indexGroup, 0x01);

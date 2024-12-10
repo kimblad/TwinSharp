@@ -1,27 +1,60 @@
 ﻿namespace TwinSharp.NC
 {
+    /// <summary>
+    /// Enumeration of the different types of end position types (new end position) that exist in TwinCAT NC.
+    /// </summary>
     public enum EndPositionType
     {
+        /// <summary> End position not defined. </summary>
         NOT_DEFINED = 0,
+
+        /// <summary> Absolute position </summary>
         AbsolutePosition = 1,
+
+        /// <summary> Relative position </summary>
         RelativePosition = 2,
+
+        /// <summary> Continuous position positive </summary>
         ContinousPositionPositive = 3,
+
+        /// <summary> Continuous position negative </summary>
         ContinousPositionNegative = 4,
+
+        /// <summary> Modulo position </summary>
         ModuloPosition = 5,
     }
 
+
+    /// <summary>
+    /// Enumeration of the different types of actual position that exist in TwinCAT NC.
+    /// </summary>
     public enum ActualPositionType
     {
+        /// <summary> Actual position type not defined. </summary>
         NOT_DEFINED = 0,
+        
+        /// <summary> Absolute position </summary>
         AbsolutePosition = 1,
+
+        /// <summary> Relative position </summary>
         RelativePosition = 2,
+
+        /// <summary> Modulo position </summary>
         ModuloPosition = 5,
     }
 
+    /// <summary>
+    /// Enumeration of the different types of drive output start that exist in TwinCAT NC.
+    /// </summary>
     public enum DriveOutputStartType
     {
+        /// <summary> Drive start type not defined. </summary>
         NOT_DEFINED = 0,
+        
+        /// <summary> Output in percent. </summary>
         Percent = 1,
+
+        /// <summary> Output in velocity. </summary>
         Velocity = 2,
     }
 
@@ -71,67 +104,155 @@
         Specific = 100
     }
 
+    /// <summary>
+    /// Enumeration of the possible error reaction modes that exist in TwinCAT NC.
+    /// </summary>
     public enum ErrorReactionMode
     {
-        /// <summary>  Immediate, default. </summary>
+        /// <summary> Immediate, default. </summary>
         Instantaneous = 0,
 
         /// <summary> Delayed. E.g. for master/slave coupling.  </summary>
         Delayed = 1,
     }
 
+    /// <summary>
+    /// Enumeration of the different types of channels that exists in TwinCAT NC.
+    /// </summary>
     public enum ChannelType
     {
+        /// <summary> Standard channel. </summary>
         Standard = 1,
+        
+        /// <summary> Interpreter channel. </summary>
         Interpreter = 2,
+        
+        /// <summary> FIFO channel. </summary>
         FIFO = 3,
+
+        /// <summary> Kinematic transformation channel. </summary>
         KinematicTransformation = 4
     }
 
+
+    /// <summary>
+    /// Enumeration of the different types of interpreters that exist in TwinCAT NC.
+    /// </summary>
     public enum InterpreterType
     {
+        /// <summary> Interpreter type not defined. </summary>
         NotDefined = 0,
+
+        /// <summary> NC Interpreter DIN 66025 (GST). </summary>
         NCInterpreterDIN66025GST = 1,
+
+        /// <summary> NC Interpreter DIN 66025 (Classic Dialect). </summary>
         NCInterpreterDIN66025ClassicDialect = 2
     }
 
+    /// <summary>
+    /// Enumeration of the different types of interpolation load log modes that exist in TwinCAT NC.
+    /// </summary>
     public enum InterpolationLoadLogMode
     {
+        /// <summary> Loader log off. </summary>
         LoaderLogOff = 0,
+
+        /// <summary> Source only. </summary>
         SourceOnly = 1,
+
+        /// <summary> Source and Compiled. </summary>
         SourceAndCompiled = 2
     }
 
+    /// <summary>
+    /// Enumeration of the different types of interpolation trace modes that exist in TwinCAT NC.
+    /// </summary>
     public enum InterpolationTraceMode
     {
+        /// <summary> Trace off </summary>
         TraceOff = 0,
+
+        /// <summary> Trace line numbers </summary>
         TraceLineNumbers = 1,
+
+        /// <summary> Trace Source </summary>
         TraceSource = 2,
     }
 
 
+    /// <summary>
+    /// Enumeration of all possible states of the interpreter in TwinCAT NC. The interpreter state reflects the current state of the Interpreter State Machine. The complete list is given below.
+    /// </summary>
     public enum InterpreterState
     {
+        /// <summary> Initilization of interpreter failed. </summary>
         ITP_STATE_INITFAILED = 0,
+
+        /// <summary>
+        /// The interpreter is in idle state if no NC program is loaded yet or if a group reset is executed. The interpreter also goes into idle state when a current program is stopped. In the case a group reset must be executed in order to prevent error 0x42C5. It is therefore recommended to execute a group reset after stopping via the PLC.
+        /// </summary>
         ITP_STATE_IDLE = 1,
+
+        /// <summary>
+        /// After successful loading of an NC program, the interpreter is in ready state. After a program has been successfully processed and exited, the interpreter goes into ready state. In the meantime, however, other states are accepted. 
+        /// </summary>
         ITP_STATE_READY = 2,
+
+        /// <summary> Interpreter started. </summary>
         ITP_STATE_STARTED = 3,
+
+        /// <summary> Interpreter scanning. </summary>
         ITP_STATE_SCANNING = 4,
+
+        /// <summary> Interpreter running. </summary>
         ITP_STATE_RUNNING = 5,
+
+        /// <summary> Interpreter stay running. </summary>
         ITP_STATE_STAY_RUNNING = 6,
+
+        /// <summary> Interpereter writing table. </summary>
         ITP_STATE_WRITETABLE = 7,
+
+        /// <summary> Interpreter block searching. </summary>
         ITP_STATE_SEARCHLINE = 8,
+
+        /// <summary> Interpreter reached end. </summary>
         ITP_STATE_END = 9,
+
+        /// <summary>
+        /// This state is only accepted in Single Block Mode. As soon as the entry has been sent from the interpreter to the NC core, the interpreter goes into this mode.
+        /// </summary>
         ITP_STATE_SINGLESTOP = 10,
+
+        /// <summary> Interpreter aborting. </summary>
         ITP_STATE_ABORTING = 11,
+
+        /// <summary>
+        /// If a runtime error occurs during the processing of an NC program, the interpreter goes into aborted state. The actual error code is given in Channel State.
+        /// </summary>
         ITP_STATE_ABORTED = 12,
+
+        /// <summary> Interpreter has a fault. </summary>
         ITP_STATE_FAULT = 13,
+
+        /// <summary> Interpreter is reset. </summary>
         ITP_STATE_RESET = 14,
+
+        /// <summary> Interpreter is stopped. </summary>
         ITP_STATE_STOP = 15,
+
+        /// <summary> Interpreter is waiting for acknowledgement of M-functtion. </summary>
         ITP_STATE_WAITFUNC = 16,
+
+        /// <summary> Interpeter is flushing buffers. </summary>
         ITP_STATE_FLUSHBUFFERS = 17,
     }
 
+
+    /// <summary>
+    /// Enumeration of the different modes that the TwinCAT NC interpreter can operate in. 
+    /// </summary>
     public enum InterpreterOperationMode
     {
         /// <summary> Default (deactivates the other modes) </summary>
@@ -144,32 +265,70 @@
         SingleBlockInterpreter = 0x4000,
     }
 
+    /// <summary>
+    /// Enumeration of all possible group types in TwinCAT NC.
+    /// </summary>
     public enum GroupType
     {
+        /// <summary> Group not defined. </summary>
         NOT_DEFINED = 0,
+
+        /// <summary> PTP-Group + x Slave </summary>
         PTPGroup = 1,
+
+        /// <summary> 1D-Group + x Slave </summary>
         Group1D = 2,
+
+        /// <summary> 2D-Group + x Slave </summary>
         Group2D = 3,
+
+        /// <summary> 3D-Group + x Slave </summary>
         Group3D = 4,
+
+        /// <summary> High/low speed + x Slave </summary>
         HighLowSpeed = 5,
+
+        /// <summary> Low cost stepper motor (dig. IO) + x Slave </summary>
         LowCostStepperMotor = 6,
+
+        /// <summary> Table Group + x Slave </summary>
         TableGroup = 7,
+
+        /// <summary> Encoder Group + x Slave </summary>
         EncoderGroup = 9,
+
+        /// <summary> FIFO Group + x Slave </summary>
         FIFOGroup = 11,
+
+        /// <summary> Kinematic Transformation Group + x Slave </summary>
         KinematicTransformationGroup = 12,
     }
 
 
+    /// <summary>
+    /// Enumeration of the different ways that the TwinCAT NC FIFO can interpolate between supplied points.
+    /// </summary>
     public enum FifoInterpolationType
-    {
+    { 
+        /// <summary> Linear interpolation between points. </summary>
         INTERPOLATIONTYPE_LINEAR = 0,
+        
+        /// <summary> 4 point interpolation. </summary>
         INTERPOLATIONTYPE_4POINT = 1,
+
+        /// <summary> Cubic spline interpolation. </summary>
         INTERPOLATIONTYPE_CUBICSPLINE = 4
     }
 
+    /// <summary>
+    /// Determines the behaviour how quickly the FIFO should adapt to a new override.
+    /// </summary>
     public enum FifoOverrideType
     {
+        /// <summary> Instantenous override. Changes the override instantaneously to the desired value. This means that it is up to the user to modify the override slowly enough that excessive following errors do not result from the change in override. </summary>
         OVERRIDETYPE_INSTANTANEOUS = 1,
+
+        /// <summary> Gradually adapt to the new override value, using the parameter P-T2 time. </summary>
         OVERRIDETYPE_PT2 = 2
     }
 
@@ -178,26 +337,34 @@
     /// </summary>
     public enum NcDriveType
     {
-        /// <summary>
-        /// Not defined
-        /// </summary>
+        /// <summary> Not defined. </summary>
         NOT_DEFINED = 0,
+
+        /// <summary> Analog Servo Drive: M2400 DAC 1. </summary>
         M2400_DAC1 = 1,
+
+        /// <summary> Analog Servo Drive: M2400 DAC 2. </summary>
         M2400_DAC2 = 2,
+
+        /// <summary> Analog Servo Drive: M2400 DAC 3. </summary>
         M2400_DAC3 = 3,
+
+        /// <summary> Analog Servo Drive: M2400 DAC 4. </summary>
         M2400_DAC4 = 4,
 
-        /// <summary>
-        /// MDP 252/253: KL4xxx, PWM KL2502_30K (Frq-Cnt pulse mode), KL4132 (16-bit), Pulse-Train KL2521, IP2512
-        /// </summary>
+        /// <summary> MDP 252/253: KL4xxx, PWM KL2502_30K (Frq-Cnt pulse mode), KL4132 (16-bit), Pulse-Train KL2521, IP2512- </summary>
         KL4xxx = 5,
 
-        /// <summary>
-        /// MDP 252/253: analog type for non-linear characteristics
-        /// </summary>
+        /// <summary> MDP 252/253: analog type for non-linear characteristics. </summary>
         KL4xxx_NonLinear = 6,
+
+        /// <summary> High/low speed drive (digital) </summary>
         Discete_TwoSpeed = 7,
+
+        /// <summary> Stepper motot drive (digital) </summary>
         Stepper = 8,
+
+        /// <summary> SERCOS-Drive (digital) </summary>
         Sercos = 9,
 
         /// <summary>
@@ -268,7 +435,7 @@
 
 
     /// <summary>
-    /// List of all possible encoder types.
+    /// Enumeration of all possible encoder types in TwinCAT NC.
     /// </summary>
     public enum EncoderType
     {
@@ -418,40 +585,58 @@
         SPECIFIC
     }
 
+    /// <summary>
+    /// Enumeration of the different types of controllers that exist in TwinCAT NC.
+    /// </summary>
     public enum ControllerType
     {
+        /// <summary> Controller not defined. </summary>
         NOT_DEFINED = 0,
+
+        /// <summary> P-controller (standard) (position). </summary>
         P_ControllerPosition = 1,
+
+        /// <summary> PP Controller (with ka) (position). </summary>
         PP_Controller = 2,
+
+        /// <summary> PID Controller (with ka) (position). </summary>
         PID_Controller = 3,
+
+        /// <summary> P Controller (velocity). </summary>
         P_ControllerVelocity = 5,
+
+        /// <summary> PI Controller (velocity). </summary>
         PI_ControllerVelocity = 6,
+
+        /// <summary> High/low speed controller (position). </summary>
         High_LowSpeedController = 7,
+
+        /// <summary> Stepper motor controller (position). </summary>
         StepperMotorController = 8,
+
+        /// <summary> Sercos Controller (Position in the drive) </summary>
         SercosController = 9,
+
+        /// <summary> TCom Controller (Soft Drive) (Position in the drive) </summary>
         TComController = 14,
     }
 
+
+    /// <summary>
+    /// Enumeration of the different types of encoder modes that exist in TwinCAT NC.
+    /// </summary>
     public enum EncoderMode
     {
-        /// <summary>
-        /// Not defined
-        /// </summary>
+        /// <summary> Encoder mode not defined </summary>
         NotDefined = 0,
 
-        /// <summary>
-        /// Determination of position.
-        /// </summary>
+        /// <summary> Determination of position. </summary>
         Position = 1,
 
-        /// <summary>
-        /// Determination of position and velocity.
-        /// </summary>
+        /// <summary> Determination of position and velocity. </summary>
         PositionVelocity = 2,
 
-        /// <summary>
-        /// Determination of position, velocity and acceleration.
-        /// </summary>
+        /// <summary> Determination of position, velocity and acceleration. </summary>
         PositionVelocityAcceleration = 3,
     }
 
@@ -482,15 +667,28 @@
         EvaluationBlocked = 3
     }
 
+
+    /// <summary>
+    /// Enumeration of the two types of signal edges that exist. Rising edge and falling edge.
+    /// </summary>
     public enum SignalEdge
     {
+        /// <summary> Rising edge. Signal goes from low to high. </summary>
         RisingEdge = 0,
+        
+        /// <summary> Falling edge. Signal goes from high to low. </summary>
         FallingEdge = 1
     }
 
+    /// <summary>
+    /// Enumeration of the different types of probe modes that exist in TwinCAT NC.
+    /// </summary>
     public enum ProbeMode
     {
+        /// <summary> Single probe mode. </summary>
         Single = 1,
+
+        /// <summary> Continous probe mode. </summary>
         Continous = 2
     }
 
@@ -509,10 +707,14 @@
         /// <summary> Cubic spline interpolation of all reference points ("global spline") (NC_INTERPOLATIONTYPE_SPLINE) </summary>
         CubicSpline = 2,
 
-        /// <summary> Moving cubic spline interpolation with n sampling points ('local spline') <summary>
+        /// <summary> Moving cubic spline interpolation with n sampling points ('local spline') </summary>
         SlidingCubicSpline = 3,
     }
 
+
+    /// <summary>
+    /// Enumeration of the different types of table subtypes that exist in TwinCAT NC.
+    /// </summary>
     public enum TableSubType
     {
         /// <summary> (n*m) Table with equidistant master positions and no cyclic continuation of the master profile (equidistant linear) </summary>
@@ -528,6 +730,10 @@
         NonEquidistantMasterCyclicContinuation = 4,
     }
 
+
+    /// <summary>
+    /// Enumeration of the different types of main tables that exist in TwinCAT NC.
+    /// </summary>
     public enum TableMainType
     {
         /// <summary> (n*m) Cam plate tables (Camming) </summary>
@@ -540,31 +746,52 @@
         MotionFunction = 16,
     }
 
+
+    /// <summary>
+    /// Enumeration of the different types of table activation modes that exist in TwinCAT NC.
+    /// </summary>
     public enum TableActivationMode
     {
-        Instantaneous = 0, //default
+        /// <summary> The change takes effect immediately. (default) </summary>
+        Instantaneous = 0,
+
+        /// <summary> The change takes effect at a certain cam plate position (master position within the cam plate). The command must be issued ahead of this position </summary>
         MasterCamPosition = 1,
+
+        /// <summary> The change takes effect at a certain absolute position of the master axis. The command must be issued ahead of this position. </summary>
         MasterAxisPosition = 2,
+
+        /// <summary> For a cyclic cam plate, the change takes effect at the transition to the next period. </summary>
         NextCycle = 3,
+
+        /// <summary> Modify the data at the beginning of the next cam table cycle, activation is valid for one cycle only </summary>
         NextCycleOnce = 4,
+
+        /// <summary> Modified cam plate data take effect as soon as system dynamics allow. </summary>
         AsSoonAsPossible = 5,
+
+        /// <summary> Changes in cam plate data are ignored. </summary>
         Off = 6,
+
+        /// <summary> Queued cam plate data are deleted. Data are queued if the change was requested at a certain master position or at the end of the cycle, for example. </summary>
         DeleteQueuedData = 7
     }
 
-    public enum MasterScalingType
+    /// <summary>
+    /// Enumeration of type and scope of the scaling of a cam plate coupling.
+    /// </summary>
+    public enum CamScalingMode
     {
+        /// <summary> User defines scaling parameters -scaling and -offset </summary>
         UserDefined = 0, //default
+
+        /// <summary> Offset is calculated automatically for best result </summary>
         WithAutoOffset = 1,
+
+        /// <summary> No modificaiton accepted. </summary>
         Off = 2,
     }
 
-    public enum SlaveScalingType
-    {
-        UserDefined = 0, //default
-        WithAutoOffset = 1,
-        Off = 2,
-    }
 
     /// <summary>
     /// Used by NC axis functions such as StandardAxisStart to define the start type of the axis.

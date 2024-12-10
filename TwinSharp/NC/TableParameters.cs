@@ -109,7 +109,7 @@ namespace TwinSharp.NC
         /// <param name="activationPosition">Activation position (e.g. mm)</param>
         /// <param name="masterScalingType">Master scaling type 0: user defined (default) 1: scaling with auto offset 2: off</param>
         /// <param name="slaveScalingType">Slave scaling type 0: user defined (default) 1: scaling with auto offset 2: off</param>
-        public void GetActivationMode(out TableActivationMode activationMode, out double activationPosition, out MasterScalingType masterScalingType, out SlaveScalingType slaveScalingType)
+        public void GetActivationMode(out TableActivationMode activationMode, out double activationPosition, out CamScalingMode masterScalingType, out CamScalingMode slaveScalingType)
         {
             var buffer = new Memory<byte>(new byte[20]);
 
@@ -120,8 +120,8 @@ namespace TwinSharp.NC
 
             activationMode = (TableActivationMode)br.ReadUInt32();
             activationPosition = br.ReadDouble();
-            masterScalingType = (MasterScalingType)br.ReadUInt32();
-            slaveScalingType = (SlaveScalingType)br.ReadUInt32();
+            masterScalingType = (CamScalingMode)br.ReadUInt32();
+            slaveScalingType = (CamScalingMode)br.ReadUInt32();
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace TwinSharp.NC
         /// <param name="activationPosition">Activation position (e.g. mm)</param>
         /// <param name="masterScalingType">Master scaling type 0: user defined (default) 1: scaling with auto offset 2: off</param>
         /// <param name="slaveScalingType">Slave scaling type 0: user defined (default) 1: scaling with auto offset 2: off</param>
-        public void SetActivationMode(TableActivationMode activationMode, double activationPosition, MasterScalingType masterScalingType, SlaveScalingType slaveScalingType)
+        public void SetActivationMode(TableActivationMode activationMode, double activationPosition, CamScalingMode masterScalingType, CamScalingMode slaveScalingType)
         {
             var ms = new MemoryStream();
             var bw = new BinaryWriter(ms);

@@ -3,15 +3,14 @@
 namespace TwinSharp.CNC
 {
     /// <summary>
-    /// If the axis belongs to a channel, this class can be used to get the status of the axis in that channel.
+    /// If an axis belongs to a channel, this class describes the status of that axis in that channel.
     /// </summary>
     public class AxisStatusInChannel
     {
         private readonly AdsClient comClient;
-        public const uint IndexGroup = 0x120101;
+        const uint IndexGroup = 0x120101;
         private readonly uint indexOffset;
 
-        public readonly AxisStatusInChannelAdresses Adresses;
 
         internal AxisStatusInChannel(AdsClient comClient, uint axisIndex)
         {
@@ -21,16 +20,35 @@ namespace TwinSharp.CNC
             Adresses = new AxisStatusInChannelAdresses(axisIndex);
         }
 
+        /// <summary>
+        /// Contains the index group and index offsets of Axis Channel Status objects. Can be used if you want to add ADS Device notifications, or SumRead commands.
+        /// </summary>
+        public AxisStatusInChannelAdresses Adresses { get; private set; }
+
+
+        /// <summary>
+        /// Logical number of the axis.
+        /// </summary>
         public ushort LogicalNumber
         {
             get => comClient.ReadAny<ushort>(IndexGroup, indexOffset + 0x01);
         }
 
+        /// <summary>
+        /// Name of the axis.
+        /// </summary>
         public string Name
         {
             get => comClient.ReadString(IndexGroup, indexOffset + 0x02, 16);
         }
 
+
+        /// <summary>
+        /// Type of axis.
+        /// 1 = Translator.
+        /// 2 = Rotator.
+        /// 4 = Spindle.
+        /// </summary>
         public ushort Type
         {
             get => comClient.ReadAny<ushort>(IndexGroup, indexOffset + 0x03);
@@ -76,41 +94,65 @@ namespace TwinSharp.CNC
             get => comClient.ReadAny<bool>(IndexGroup, indexOffset + 0x08);
         }
 
+        /// <summary>
+        /// Axis state in the PCS.
+        /// </summary>
         public AxisState AxisStatePCS
         {
             get => (AxisState)comClient.ReadAny<ushort>(IndexGroup, indexOffset + 0x09);
         }
 
+        /// <summary>
+        /// Manual state.
+        /// </summary>
         public ushort ManualState
         {
             get => comClient.ReadAny<ushort>(IndexGroup, indexOffset + 0x0A);
         }
 
+        /// <summary>
+        /// Operation mode.
+        /// </summary>
         public ushort OperationMode
         {
             get => comClient.ReadAny<ushort>(IndexGroup, indexOffset + 0x0B);
         }
 
+        /// <summary>
+        /// Control element.
+        /// </summary>
         public ushort ControlElement
         {
             get => comClient.ReadAny<ushort>(IndexGroup, indexOffset + 0x0C);
         }
 
+        /// <summary>
+        /// Continuous speed.
+        /// </summary>
         public uint ContinuousSpeed
         {
             get => comClient.ReadAny<uint>(IndexGroup, indexOffset + 0x0D);
         }
 
+        /// <summary>
+        /// Incremental speed.
+        /// </summary>
         public uint IncrementalSpeed
         {
             get => comClient.ReadAny<uint>(IndexGroup, indexOffset + 0x0E);
         }
 
+        /// <summary>
+        /// Incremental distance.
+        /// </summary>
         public uint IncrementalDistance
         {
             get => comClient.ReadAny<uint>(IndexGroup, indexOffset + 0x0F);
         }
 
+        /// <summary>
+        /// Handwheel resolution.
+        /// </summary>
         public double HandwheelResolution
         {
             get => comClient.ReadAny<double>(IndexGroup, indexOffset + 0x10);
@@ -129,8 +171,14 @@ namespace TwinSharp.CNC
 
         }
 
+        /// <summary>
+        /// Index group for all Axis Channel Status objects.
+        /// </summary>
         public uint IndexGroup => 0x120101;
-        
+
+        /// <summary>
+        /// Sub index group of the actual position in the PCS.
+        /// </summary>
         public uint ActualPositionPCS => baseOffset + 0x07;
 
     }

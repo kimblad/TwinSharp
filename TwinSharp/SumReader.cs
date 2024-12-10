@@ -11,7 +11,6 @@ namespace TwinSharp
         readonly AdsClient client;
         readonly List<SumReadVariable> variablesToRead;
 
-        public AdsErrorCode[] AdsErrorCodes;
 
         byte[] bufferToWrite;
         byte[] bufferToRead;
@@ -20,6 +19,10 @@ namespace TwinSharp
 
         byte[] valuesWithoutErrorCodes;
 
+        /// <summary>
+        /// Creates a new sum reader. Used for reading multiple variables in one ADS command.
+        /// </summary>
+        /// <param name="client"></param>
         public SumReader(AdsClient client)
         {
             this.client = client;
@@ -31,13 +34,34 @@ namespace TwinSharp
             AdsErrorCodes = [];
             valuesWithoutErrorCodes = [];
         }
+
+        /// <summary>
+        /// The ADS return codes for the variables that were read.
+        /// </summary>
+        public AdsErrorCode[] AdsErrorCodes { get; private set; }
+
+
+        /// <summary>
+        /// Add a variable based on symbol name to this sum reader.
+        /// </summary>
+        /// <param name="symbolName"></param>
+        /// <param name="type"></param>
+        /// <exception cref="NotImplementedException"></exception>
         public void AddVariable(string symbolName, Type type)
         {
+            throw new NotImplementedException();
+            //TODO: Implement this method. I think we can find the index group and offset of this symbol and then use the other
+            // AddVariable method to add the variable.
 
-            RegenerateBuffers();
-            // Add the variable to the list of variables to read
+            //RegenerateBuffers();
         }
 
+        /// <summary>
+        /// Add a variable based on index group and index offset to this sum reader.
+        /// </summary>
+        /// <param name="indexGroup"></param>
+        /// <param name="indexOffset"></param>
+        /// <param name="type"></param>
         public void AddVariable(uint indexGroup, uint indexOffset, Type type)
         {
             var variable = new SumReadVariable(indexGroup, indexOffset, type);
@@ -82,7 +106,7 @@ namespace TwinSharp
         /// If the operation is not succesful, false is returned and the field "AdsErrorCodes" will contain the error codes for the respective variable.
         /// </summary>
         /// <param name="returnedValues"></param>
-        /// <returns>If the operation was succesful without ADS errors.</returns>
+        /// <returns>If the operation was succesful without ADS errors. If not succesful, user should examine the <see cref="AdsErrorCodes"/> </returns>
         public bool ReadVariables(out byte[] returnedValues)
         {
             const uint indexSumCommand = 0xF080;
@@ -128,11 +152,6 @@ namespace TwinSharp
         {
             get => bufferToRead.Length - SizeOfAdsErrorCodes;
         }
-
-
-
-
-
 
         private class SumReadVariable
         {

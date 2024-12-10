@@ -2,6 +2,11 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The ControllerState class provides an interface to interact with a controller's state
+    /// using an AdsClient. It allows reading various parameters of the controller such as
+    /// error state, output in absolute units, output in percent, and output in volts.
+    /// </summary>
     public class ControllerState
     {
         readonly AdsClient client;

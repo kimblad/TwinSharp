@@ -2,8 +2,18 @@
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// Contains extension methods for various classes.
+    /// </summary>
     public static class Extensions
     {
+        /// <summary>
+        /// Converts a byte array to a structure of the specified type.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="bytes"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
         public static T ByteArrayToStructure<T>(byte[] bytes) where T : struct
         {
             var handle = GCHandle.Alloc(bytes, GCHandleType.Pinned);

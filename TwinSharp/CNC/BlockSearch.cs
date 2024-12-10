@@ -12,12 +12,15 @@ namespace TwinSharp.CNC
         readonly AdsClient comClient;
         readonly uint indexGroup;
 
-        public BlockSearch(AdsClient comClient, int channelNumber)
+        internal BlockSearch(AdsClient comClient, int channelNumber)
         {
             this.comClient = comClient;
             indexGroup =  0x120100 + (uint)channelNumber;
         }
 
+        /// <summary>
+        /// The continuation position can be defined using a number of different block search types (file offset, block counter, block number, etc.)
+        /// </summary>
         public BlockSearchType BlockSearchType
         {
             get => (BlockSearchType)comClient.ReadAny<ushort>(indexGroup, 0x61);
@@ -101,12 +104,27 @@ namespace TwinSharp.CNC
         }
     }
 
+    /// <summary>
+    /// The block search type defines the method used to define the continuation position in the NC program.
+    /// </summary>
     public enum BlockSearchType
     {
+        /// <summary> No block search. Normal operation. </summary>
         NoBlockSearch = 0,
+
+        /// <summary> Continuation position and end position by file offset. </summary>
         FileOffset = 1,
+
+        /// <summary> Continuation position by block counter. </summary>
         BlockCounter = 3,
+
+        /// <summary> Continuation position by block number and program name. </summary>
         BlockNumber = 4,
+
+        /// <summary> 
+        /// Continuation position at program end 
+        /// This special block search type is used in particular in job planning on a simulation system for a rapid test of NC programs. 
+        /// </summary>
         ProgramEnd = 5
     }
 }

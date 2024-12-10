@@ -62,7 +62,7 @@ namespace TwinSharp.NC
         }
 
         /// <summary>
-        /// <summary>Ref. velocity in cam direction
+        /// Ref. velocity in cam direction
         /// </summary>
         public double RefVelocityCamDirection
         {

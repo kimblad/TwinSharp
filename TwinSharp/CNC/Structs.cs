@@ -2,6 +2,9 @@
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// Container that hold visualization data in any of the 11 existing versions.
+    /// </summary>
     public struct SOLLKONT_VISU_PDU
     {
         ///<summary> number of structures SOLLKONT_VISU_DATA_V0 … SOLLKONT_VISU_DATA_V5 in the current message </summary>
@@ -12,12 +15,24 @@ namespace TwinSharp.CNC
 
         ///<summary> Structure with visualisation data if P-STUP-00039 has the value 0. </summary>
         public SOLLKONT_VISU_DATA_V0[] v0;
-    }   
+    }
+
+    /// <summary>
+    /// Version 0 format of visualisation data.
+    /// </summary>
     public struct SOLLKONT_VISU_DATA_V0
     {
+        /// <summary> Visualization data </summary>
         public SOLLKONT_VISU_CH_DATA_STD Visu_data_std;
-        public SOLLKONT_VISU_ACHS_DATA_STD[] Simu_achs_data_std; //Axis-specific visualisation data.
+
+        ///<summary> Axis-specific visualisation data. </summary>
+        public SOLLKONT_VISU_ACHS_DATA_STD[] Simu_achs_data_std;
     }
+
+
+    /// <summary>
+    /// Struct that contains standard visualisation data.
+    /// </summary>
     public struct SOLLKONT_VISU_CH_DATA_STD
     {
         ///<summary> Block number in the NC program</summary>
@@ -51,10 +66,15 @@ namespace TwinSharp.CNC
         public double[] CircleCenterPoint;
     }
 
+    /// <summary>
+    /// Struct that contains axis-specific visualisation data.
+    /// </summary>
     public struct SOLLKONT_VISU_ACHS_DATA_STD
     {
         /// <summary> Current Command position in [0.1 µm] </summary>
         public int CommandPosition;
+
+        /// <summary> Logical axis number of the axis that the commanded position belongs to. </summary>
         public ushort LogicalAxisNumber;
 
         /// <summary> Bytes for alignment. </summary>
@@ -100,15 +120,10 @@ namespace TwinSharp.CNC
         public int sgn32_free_6;
     }
 
-    public struct MC_CONTROL_BOOL_UNIT
-    {
-        public bool reqeust_r;
-        public bool enable_w;
-        public bool command_w;
-        public bool state_r;
-        //public int fill_up_1;
-    }
 
+    /// <summary>
+    /// A technology control unit contains elements for commanding, acknowledging and transferring any required parameters
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct TECHNO_UNIT_CH
     {
@@ -235,6 +250,9 @@ namespace TwinSharp.CNC
         public OperationState State;
     }
 
+    /// <summary>
+    /// This structure contains user data of an error message.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_ERROR_SATZ
     {
@@ -337,9 +355,13 @@ namespace TwinSharp.CNC
         public uint BodyType; 
     }
 
+    /// <summary>
+    /// Structure that contains the name of one module.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_MODUL_NAME
     {
+        /// <summary> Name of the module. </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_MODUL_NAME_LAENGE + 1)]
         public string Name;
     }
@@ -470,7 +492,7 @@ namespace TwinSharp.CNC
     }
 
     /// <summary>
-    /// Control unit to manage data to activate a control element and assign it to an axis in manual mode,
+    /// Control unit to manage data to activate a control element and assign it to an axis in manual mode.
     /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_HB_ACTIVATION
@@ -483,6 +505,8 @@ namespace TwinSharp.CNC
 
         /// <summary>
         /// Number of the logical control element to be assigned to the logical axis.
+        /// </summary>
+        /// <remarks>
         /// When continuous and incremental jog mode is activated:
         /// one of the values which are defined as logical button pair numbers in the
         /// configuration list hand_mds.lis for the characteristics tasten_data[X].log_tasten_nr.
@@ -490,26 +514,30 @@ namespace TwinSharp.CNC
         /// one of the values which are defined as logical handwheel numbers in the
         /// configuration list hand_mds.lis for the characteristics hr_data[0].log_hr_nr.
         /// If 0 is specified as the control element, the current operation mode of an axis is deselected
-        /// </summary>
+        /// </remarks>
         public ushort ControlElement;
 
         /// <summary>
         /// Manual operation mode to be assigned to the logical axis.
+        /// </summary>
+        /// <remarks>
         /// 0: no operation mode, current operation mode selected
         /// 1: Handwheel mode
         /// 2: Continuous jog mode
         /// 3: jog mode
-        /// </summary>
+        /// </remarks>
         public ushort OperationMode;
 
         /// <summary>
         /// Specifies the index of the parameter set to be used for the manual mode.
         /// Value range [0; 2]
+        /// </summary>
+        /// <remarks>
         /// The first value set in the parameter table (index = 0) is overwritten by the PLC
         /// interface when individual parameters are specified.The remaining parameter sets
         /// are not changed. This means, they correspond to the values specified in the axis-
         /// specific parameter lists.
-        /// </summary>
+        /// </remarks>
         public ushort ParameterIndex;
 
         /// <summary> Reserved for future use. </summary>

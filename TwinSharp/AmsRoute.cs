@@ -37,6 +37,10 @@ namespace TwinSharp
         /// Protocol used for communication with the target system.
         /// </summary>
         public string Protocol { get; }
+
+        /// <summary>
+        /// Bitmask of flags that describe the route.
+        /// </summary>
         public int Flags { get; }
 
 

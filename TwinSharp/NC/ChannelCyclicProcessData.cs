@@ -2,7 +2,10 @@
 
 namespace TwinSharp.NC
 {
-
+    /// <summary>
+    /// The ChannelCyclicProcessData class provides methods to interact with the cyclic process data of a channel in a TwinCAT system.
+    /// It allows reading and writing of speed override values for both the channel axis and the spindle.
+    /// </summary>
     public class ChannelCyclicProcessData
     {
         private readonly AdsClient client;

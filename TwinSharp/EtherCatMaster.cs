@@ -3,30 +3,52 @@ using TwinCAT.Ads;
 
 namespace TwinSharp
 {
+
+    /// <summary>
+    /// The EtherCatMaster class provides methods to interact with an EtherCAT master device.
+    /// It allows for reading the current state, device type, and name of the master, as well as
+    /// retrieving information about connected slaves, such as their configuration, state, and topology.
+    /// Additionally, it can read unexpected state changes and convert device status to a string representation.
+    /// </summary>
     public class EtherCatMaster
     {
-
-        public readonly AmsNetId AmsNetId;
-
         readonly AdsClient client;
+        string name;
+
+
         internal EtherCatMaster(AmsNetId netId)
         {
             AmsNetId = netId;
             name = "";
 
             client = new AdsClient();
-            client.Connect(AmsNetId, AmsPort.USEDEFAULT);
+            client.Connect(netId, AmsPort.USEDEFAULT);
         }
 
 
-        ushort deviceType;
+        /// <summary>
+        /// The AmsNetId of the EtherCAT master.
+        /// </summary>
+        public AmsNetId AmsNetId
+        {
+            get;
+            private set;
+        }
+
+
+        /// <summary>
+        /// The device type of the EtherCAT master.
+        /// </summary>
         public ushort DeviceType
         {
-            get => deviceType;
-            internal set => deviceType = value;
+            get;
+            internal set;
         }
 
-        string name;
+
+        /// <summary>
+        /// The name of the EtherCAT master.
+        /// </summary>
         public string Name
         {
             //TODO: Unknown how to get the name of the EtherCAT master from this class.
@@ -162,7 +184,6 @@ namespace TwinSharp
         {
             get => client.ReadAny<ushort>(0xF302, 0xF0200000);
         }
-
 
 
         /// <summary>

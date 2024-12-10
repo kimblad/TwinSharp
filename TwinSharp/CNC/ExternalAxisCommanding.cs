@@ -10,7 +10,7 @@ namespace TwinSharp.CNC
         readonly AdsClient plcClient;
         readonly Dictionary<Identifier, uint> variableHandles;
 
-        public ExternalAxisCommanding(uint index, AdsClient plcClient)
+        internal ExternalAxisCommanding(uint index, AdsClient plcClient)
         {
             this.plcClient = plcClient;
 
@@ -40,7 +40,9 @@ namespace TwinSharp.CNC
         }
 
 
-
+        /// <summary>
+        /// Signal to CNC that the interface exists and we want to use it.
+        /// </summary>
         public bool InterfaceExists
         {
             set => plcClient.WriteAny(variableHandles[Identifier.InterfaceExists], value);
@@ -70,6 +72,9 @@ namespace TwinSharp.CNC
             AddedVelocity
         }
 
+        /// <summary>
+        /// Disposes of the ADS variable handles.
+        /// </summary>
         public void Dispose()
         {
             foreach (var handle in variableHandles)

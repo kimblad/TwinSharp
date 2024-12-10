@@ -399,6 +399,9 @@ namespace TwinSharp
         }
 
 
+        /// <summary>
+        /// Disposes the File System object. Disposes the ADS client used.
+        /// </summary>
         public void Dispose()
         {
             client?.Dispose();
@@ -406,6 +409,10 @@ namespace TwinSharp
         }
     }
 
+
+    /// <summary>
+    /// This class can search for files and enumerate them on a remote TwinCAT target.
+    /// </summary>
     public class FileFinder
     {
         readonly AdsClient client;
@@ -436,6 +443,10 @@ namespace TwinSharp
             client.WriteAny(0x6F, 0x0, fileFinderHandle);
         }
 
+        /// <summary>
+        /// Returns the next file found or null if no more files are found.
+        /// </summary>
+        /// <returns></returns>
         public ST_FindFileEntry? GetNextFileOrNull()
         {
             var writeBytes = Array.Empty<byte>();

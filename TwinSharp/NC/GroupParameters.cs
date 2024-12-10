@@ -2,12 +2,17 @@
 
 namespace TwinSharp.NC
 {
+    /// <summary>
+    /// The GroupParameters class provides access to various parameters of a group in the TwinCAT NC system.
+    /// It allows reading and writing of group-specific settings such as ID, name, type, cycle times, and FIFO configurations.
+    /// This class interacts with the TwinCAT ADS client to perform read and write operations on the group parameters.
+    /// </summary>
     public class GroupParameters
     {
         private readonly AdsClient client;
         private readonly uint indexGroup;
 
-        public GroupParameters(AdsClient client, uint id)
+        internal GroupParameters(AdsClient client, uint id)
         {
             this.client = client;
             indexGroup = 0x3000 + id;
