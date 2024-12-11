@@ -239,13 +239,16 @@ namespace TwinSharp.CNC
     }
 
     /// <summary>
-    /// Control unit to switch over the operation mode and poll the current state of operation mode management.
+    /// Struct for operation mode management that combines mode and state into one struct.
     /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_IMCM_MODE_STATE
     {
+        /// <summary> Operation mode. </summary>
         [MarshalAs(UnmanagedType.U4)]
         public OperationMode Mode;
+
+        /// <summary> State within the operation mode. </summary>
         [MarshalAs(UnmanagedType.U4)]
         public OperationState State;
     }
@@ -256,7 +259,10 @@ namespace TwinSharp.CNC
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_ERROR_SATZ
     {
+        /// <summary> Head portion of error message. </summary>
         public HLI_ERROR_SATZ_KOPF Head;
+
+        /// <summary> Body portion of error message. </summary>
         public HLI_ERROR_SATZ_RUMPF Body;
     }
 
@@ -389,61 +395,114 @@ namespace TwinSharp.CNC
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_MODUL_NAME_LAENGE + 1)]
         public string Name;
     }
-
+    
+    /// <summary>
+    /// Body portion of that an error message.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_ERROR_SATZ_RUMPF
     {
+        /// <summary> Error mask. </summary>
         public HLI_ERROR_MASKE Mask;
+
+        /// <summary> Individual error information 1. </summary>
         public HLI_WERT_B Value1;
+
+        /// <summary> Individual error information 2. </summary>
         public HLI_WERT_B Value2;
+
+        /// <summary> Individual error information 3. </summary>
         public HLI_WERT_B Value3;
+
+        /// <summary> Individual error information 4. </summary>
         public HLI_WERT_B Value4;
+
+        /// <summary> Individual error information 5. </summary>
         public HLI_WERT_B Value5;
+
+        /// <summary> Identifier 1. </summary>
         public HLI_WERT Identifier1;
+
+        /// <summary> Identifier 2. </summary>
         public HLI_WERT Identifier2;
+
+        /// <summary> Identifier 3. </summary>
         public HLI_WERT Identifier3;
+
+        /// <summary> Identifier 4. </summary>
         public HLI_WERT Identifier4;
     }
 
+    /// <summary>
+    /// Error mask.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_ERROR_MASKE
     {
+        /// <summary> Data of error mask. </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.HLI_ERR_MASK_MAXIDX)]
         public byte[] ErrorMask;
     }
 
+    /// <summary>
+    /// Additional error information.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_WERT_B
     {
+        /// <summary> Data type. </summary>
         public uint Type;
+
+        /// <summary> Dimension of datum. </summary>
         public uint Dimension;
+
+        /// <summary> Significance of datum. </summary>
         public uint Importance;
 
         /// <summary> Reserved for future use. </summary>
         public int FillUp1;
+
+        /// <summary> Datum itself. </summary>
         public HLI_WERT_B_DATA Content;
     }
 
+
+    /// <summary>
+    /// Contains the actual data of an error message.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_WERT_B_DATA
     {
+
+        /// <summary> Data. </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.HLI_WERT_B_DATA_MAXIDX)]
         public byte[] Data;
     }
 
+
+    /// <summary>
+    /// Error value.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_WERT
     {
+        /// <summary> Data type. </summary>
         public uint Type;
 
         /// <summary> Reserved for future use. </summary>
         public int FillUp1;
+
+        /// <summary> Content. </summary>
         public HLI_WERT_DATA Content;
     }
 
+    /// <summary>
+    /// Error value data.
+    /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
     public struct HLI_WERT_DATA
     {
+        /// <summary> Content data. </summary>
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = Constants.HLI_WERT_DATA_MAXIDX)]
         public byte[] Data;
     }
@@ -457,22 +516,23 @@ namespace TwinSharp.CNC
         /// <summary> Logical path number (see start-up list). </summary>
         public ushort LogicalPathNumber;
 
+        /// <summary> Is file that gave the error encrypted. </summary>
         [MarshalAs(UnmanagedType.I1)]
         public bool FileEncrypted;
 
         /// <summary> Reserved for future use. </summary>
         [MarshalAs(UnmanagedType.I1)]
-        bool FillUp1;
+        public bool FillUp1;
 
         /// <summary> Reserved for future use. </summary>
-        int FillUp3;
+        public int FillUp3;
 
         /// <summary> File name. </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_LAENGE_NAME + 1)]
         public string ProgramName;
 
         /// <summary> Reserved for future use. </summary>
-        int FillUp4;
+        public int FillUp4;
 
         /// <summary> File offset in bytes. </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = Constants.HLI_LAENGE_NAME + 1)]

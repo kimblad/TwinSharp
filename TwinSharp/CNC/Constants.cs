@@ -47,9 +47,17 @@
 
         /// <summary> Maximum length of string of type module name. </summary>
         public const int HLI_MODUL_NAME_LAENGE = 15;
+
+        /// <summary> Maximum index of HLI error mask. </summary>
         public const int HLI_ERR_MASK_MAXIDX = 583;
+
+        /// <summary> Maximum index of HLI error value B data. </summary>
         public const int HLI_WERT_B_DATA_MAXIDX = 23;
+
+        /// <summary> Maximum index of HLI error value  data. </summary>
         public const int HLI_WERT_DATA_MAXIDX = 7;
+
+        /// <summary> Maximum string length of HLI objects. </summary>
         public const int HLI_LAENGE_NAME = 259;
 
         /// <summary> Maximum count of number of keys for manual jogging. </summary>

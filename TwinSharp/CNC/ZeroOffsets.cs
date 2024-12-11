@@ -3,6 +3,9 @@ using TwinCAT.Ads;
 
 namespace TwinSharp.CNC
 {
+    /// <summary>
+    /// The ZeroOffsets class is responsible for handling zero offsets (G54 etc) in the CNC system.
+    /// </summary>
     public class ZeroOffsets
     {
         readonly AdsClient sdaClient;
@@ -15,8 +18,12 @@ namespace TwinSharp.CNC
         }
 
 
-
-        public uint GetZeroPointHandle(int zeroPointIndex)
+        /// <summary>
+        /// Gets an handle to a zero point based of the zero point index. G54 is index 1.
+        /// </summary>
+        /// <param name="zeroPointIndex"></param>
+        /// <returns></returns>
+        private uint GetZeroPointHandle(int zeroPointIndex)
         {
             //SDA clients global variables are stored dynamically, so we need to find the correct handle first.
             var ascii = new ASCIIEncoding();
@@ -35,6 +42,12 @@ namespace TwinSharp.CNC
 
             return handleToZeroPoint;
         }
+
+        /// <summary>
+        /// Gets the zero offsets for a specific zero point index. G54 is index 1.
+        /// </summary>
+        /// <param name="zeroPointIndex"></param>
+        /// <returns>An array of all axes zero point.</returns>
         public int[] GetZeroOffsets(int zeroPointIndex)
         {
             uint handleToZeroPoint = GetZeroPointHandle(zeroPointIndex);
@@ -58,6 +71,12 @@ namespace TwinSharp.CNC
             return currentZeros;
         }
 
+        /// <summary>
+        /// Sets the zero offsets for a specific zero point index. G54 is index 1.
+        /// </summary>
+        /// <param name="zeroPointIndex"></param>
+        /// <param name="axisIndex"></param>
+        /// <param name="offset"></param>
         public void SetZeroOffset(int zeroPointIndex, int axisIndex, int offset)
         {
             //First get a copy of existing zeros.

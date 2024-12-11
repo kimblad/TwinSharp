@@ -13,7 +13,7 @@ namespace TwinSharp.CNC
         /// </summary>
         public event EventHandler<ErrorRecievedEventArgs>? ErrorRecieved;
 
-        private AdsClient plcClient;
+        readonly AdsClient plcClient;
         readonly uint notificationHandleErrorMessageValid;
         readonly uint variableHandleErrorMessageValid;
         readonly uint handleErrorMessage;

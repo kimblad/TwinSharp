@@ -78,7 +78,7 @@ namespace TwinSharp
                 return "OK";
             }
 
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
 
             if((masterDevState & 0x0001) != 0)
             {
@@ -211,7 +211,7 @@ namespace TwinSharp
 
                 client.Read(0xF302, index, readBuffer);
 
-                ST_EcSlaveConfigData description = new ST_EcSlaveConfigData(descriptionBytes);
+                var description = new ST_EcSlaveConfigData(descriptionBytes);
 
                 descriptions[i] = description;
             }
