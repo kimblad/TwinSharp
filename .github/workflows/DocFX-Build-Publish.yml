@@ -23,7 +23,7 @@ jobs:
         with:
           args: install docfx
       - name: Install dependencies
-        run: dotnet restore
+        run: msbuild -t:build -restore
       - name: DocFX Build
         working-directory: docs
         run: docfx docfx.json
