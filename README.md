@@ -125,7 +125,7 @@ AmsRoute[] routes = TcSystem.ListLocalStaticRoutes();
 ```
 
 # Installation
-Clone/download this project and build with Visual Studio or get the NuGet package. 
+Clone/download this project and build with Visual Studio. Or get the NuGet package: https://www.nuget.org/packages/TwinSharp.Core
 
 # Additional info
 Development has been focused on TwinCAT 3 systems.
