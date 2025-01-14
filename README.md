@@ -26,6 +26,13 @@ Here's a list of some major components that can be viewed, altered and controlle
  - Read the TwinCAT system CPU latency.
 
 ## PLC
+Create a representation of a TwinCAT PLC like this:
+```csharp
+var plcClient = new AdsClient();
+plcClient.Connect(AmsPort.PlcRuntime_851);
+var plc = new PLC(plcClient);
+```
+
  - Start, stop and reset a PLC on the local or remote TwinCAT system.
  - Read the number of "online changes" in the PLC.
  - Read if Windows is in a BSOD.
@@ -45,7 +52,11 @@ Here's a list of some major components that can be viewed, altered and controlle
  - Control, modify and delete NC tables.
 
 ## IPC
-The IPC class describes a Beckhoff Industrial PC.
+The IPC class describes a Beckhoff Industrial PC. Create a TwinSharp representation of a local IPC like this:
+```csharp
+var target = AmsNetId.Local;
+var ipc = new IPC(target);
+```
  - Read temperatures of CPU and main board.
  - Read the boot count and current uptime.
  - Read BIOS version.
