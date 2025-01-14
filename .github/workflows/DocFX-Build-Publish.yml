@@ -1,0 +1,23 @@
+name: Docs Only Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-docs:
+    name: Build Docs
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build Documentation
+      uses: nikeee/docfx-action@v1.0.0
+      with:
+        args: /home/runner/work/TwinSharp/TwinSharp/docfx.json
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
