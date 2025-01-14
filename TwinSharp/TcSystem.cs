@@ -16,7 +16,6 @@ namespace TwinSharp
         readonly AmsNetId target;
 
 
-
         /// <summary>
         /// Creates a representation of a TwinCAT system.
         /// </summary>
@@ -184,7 +183,7 @@ namespace TwinSharp
 
             if (!File.Exists(filePath))
             {
-                throw new FileNotFoundException("The file StaticRoutes.xml was not found. Make sure the path is correct.");
+                throw new FileNotFoundException("The file StaticRoutes.xml was not found. Make sure that TwinCAT is installed locally.");
             }
 
 

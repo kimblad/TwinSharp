@@ -34,7 +34,7 @@ namespace TwinSharp.NC
         /// </summary>
         public string Name
         {
-            get => client.ReadString(indexGroup, 0x02, 80);
+            get => client.ReadString(indexGroup, 0x02, 80).TrimEnd('\0');
         }
 
         /// <summary>

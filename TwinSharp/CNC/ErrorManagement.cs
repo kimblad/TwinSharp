@@ -77,9 +77,6 @@ namespace TwinSharp.CNC
 
             ErrorRecieved?.Invoke(this, new ErrorRecievedEventArgs(error.Head, description));
         }
-
-
-
     }
 
 
