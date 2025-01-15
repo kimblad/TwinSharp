@@ -8,12 +8,6 @@ on:
     - src/**
     - docs/**
     - .github/workflows/docs.yml
-  pull_request:
-    branches:
-    - main
-    paths:
-    - docs/**
-    - .github/workflows/docs.yml
   workflow_dispatch:
 
 jobs:
@@ -40,7 +34,6 @@ jobs:
       continue-on-error: false
 
     - name: Publish
-      if: github.event_name == 'push'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
