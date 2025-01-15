@@ -1,40 +1,23 @@
-name: Docs
+name: Docs Only Build
 
 on:
-  push:
-    branches:
-    - main
-    paths:
-    - src/**
-    - docs/**
-    - .github/workflows/docs.yml
   workflow_dispatch:
 
 jobs:
-  generate-docs:
-
-    runs-on: windows-latest
-
+  build-docs:
+    name: Build Docs
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
 
-    - name: Setup .NET 8.0
-      uses: actions/setup-dotnet@v1
+    - name: Build Documentation
+      uses: nikeee/docfx-action@v1.0.0
       with:
-        dotnet-version: 8.0.x
+        args: docfx.json
 
-    - name: Setup DocFX
-      uses: crazy-max/ghaction-chocolatey@v1
-      with:
-        args: install docfx
-
-    - name: DocFX Build 
-      run: docfx docfx.json
-      continue-on-error: false
-
-    - name: Publish
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/_site
-        force_orphan: true
+        publish_dir: ./docs
