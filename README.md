@@ -20,25 +20,39 @@ Here's a list of some major components that can be viewed, altered and controlle
  - Read abnormal state change count of slaves.
  - CoE read and write to masters and slaves.
 
+To find all EtherCAT masters on a target system, first create a TcSystem and then ues the method ListEtherCatMasters().
+```csharp
+var target = AmsNetId.Local;
+var tcSystem = new TcSystem(target);
+var masters = tcSystem.ListEtherCatMasters();
+```
+
 ## Realtime system
  - Read and set the number of shared/isolated cores.
  - Read the CPU usage.
  - Read the TwinCAT system CPU latency.
 
-## PLC
-Create a representation of a TwinCAT PLC like this:
+To create a TwinSharp representation of the realtime system, first create a TcSystem object. Then the real time object can be found there.
 ```csharp
-var plcClient = new AdsClient();
-plcClient.Connect(AmsPort.PlcRuntime_851);
-var plc = new PLC(plcClient);
+var target = AmsNetId.Local;
+var tcSystem = new TcSystem(target);
+var realtime = tcSystem.Realtime;
 ```
 
+## PLC
  - Start, stop and reset a PLC on the local or remote TwinCAT system.
  - Read the number of "online changes" in the PLC.
  - Read if Windows is in a BSOD.
  - Read if Windows on the TwinCAT system is shutting down.
  - Read the timestamp of when the PLC was compiled.
  - Control if outputs should be zeroed when a breakpoint is hit in the PLC.
+
+Create a representation of a TwinCAT PLC like this:
+```csharp
+var plcClient = new AdsClient();
+plcClient.Connect(AmsPort.PlcRuntime_851);
+var plc = new PLC(plcClient);
+```
    
 ## NC Motion
  - View all available axes on a TwinCAT system.
@@ -51,12 +65,14 @@ var plc = new PLC(plcClient);
  - Control axis channels and axis groups.
  - Control, modify and delete NC tables.
 
-## IPC
-The IPC class describes a Beckhoff Industrial PC. Create a TwinSharp representation of a local IPC like this:
+Create an NC object that contains all axes, channels, groups and tables on a target like this:
 ```csharp
 var target = AmsNetId.Local;
-var ipc = new IPC(target);
+var nc = new NC(target);
 ```
+
+## IPC
+The IPC class describes a Beckhoff Industrial PC.
  - Read temperatures of CPU and main board.
  - Read the boot count and current uptime.
  - Read BIOS version.
@@ -68,14 +84,48 @@ var ipc = new IPC(target);
  - Disable/enable the Beckhoff security wizard.
  - Control current time and timezone of the TwinCAT system.
 
+
+To create a TwinSharp representation of a local IPC do like this:
+```csharp
+var target = AmsNetId.Local;
+var ipc = new IPC(target);
+```
+
 ## File system
  - Create, delete, rename, view or write files and folders on a TwinCAT system.
  - Search for files.
  - View file properties and attributes.
 
+
+To create a file system object, first create a TcSystem object. Then the file system object can be found there.
+```csharp
+var target = AmsNetId.Local;
+var tcSystem = new TcSystem(target);
+var fileSystem = tcSystem.FileSystem;
+```
+
 ## License system
  - Get a list of valid licenses that exists on a remote or local target.
  - Get a list of invalid licenses.
+
+
+To get the License object which provides access to the TwinCAT system's license information, you first create a TcSystem with your desired AmsNetId. 
+```csharp
+var target = AmsNetId.Local; 
+var tcSystem = new TcSystem(target);
+var licenseSystem = tcSystem.License;
+```
+
+## Various
+TwinSharp can list all AMS routes that exists on the local system. It is a static method in the TcSystem class.
+
+
+```csharp
+AmsRoute[] routes = TcSystem.ListLocalStaticRoutes();
+```
+
+# Installation
+Clone/download this project and build with Visual Studio. Or get the NuGet package: https://www.nuget.org/packages/TwinSharp.Core
 
 # Additional info
 Development has been focused on TwinCAT 3 systems.
