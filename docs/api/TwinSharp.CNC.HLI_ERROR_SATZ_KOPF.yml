@@ -1,0 +1,1017 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  commentId: T:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  id: HLI_ERROR_SATZ_KOPF
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BfType
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BodyType
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.CncChannel
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ErrorId
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp1
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp2
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp3
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp4
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp5
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.KommuId
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.Line
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ModulName
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.MultipleId
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ReactionType
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.RectificationType
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.SuppressTc2EventLogOutput
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.TimeStamp
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilErrorId
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilLine
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilModulName
+  - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.VersionName
+  langs:
+  - csharp
+  - vb
+  name: HLI_ERROR_SATZ_KOPF
+  nameWithType: HLI_ERROR_SATZ_KOPF
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_ERROR_SATZ_KOPF
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 271
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: This structure contains user data of an error message.
+  example: []
+  syntax:
+    content: public struct HLI_ERROR_SATZ_KOPF
+    content.vb: Public Structure HLI_ERROR_SATZ_KOPF
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ErrorId
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ErrorId
+  id: ErrorId
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: ErrorId
+  nameWithType: HLI_ERROR_SATZ_KOPF.ErrorId
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ErrorId
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ErrorId
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 275
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unique error number.
+  example: []
+  syntax:
+    content: public uint ErrorId
+    return:
+      type: System.UInt32
+    content.vb: Public ErrorId As UInteger
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp1
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp1
+  id: FillUp1
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: FillUp1
+  nameWithType: HLI_ERROR_SATZ_KOPF.FillUp1
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 278
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int FillUp1
+    return:
+      type: System.Int32
+    content.vb: Public FillUp1 As Integer
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ModulName
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ModulName
+  id: ModulName
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: ModulName
+  nameWithType: HLI_ERROR_SATZ_KOPF.ModulName
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ModulName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ModulName
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 281
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Module name of the module signalling an error.
+  example: []
+  syntax:
+    content: public HLI_MODUL_NAME ModulName
+    return:
+      type: TwinSharp.CNC.HLI_MODUL_NAME
+    content.vb: Public ModulName As HLI_MODUL_NAME
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.Line
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.Line
+  id: Line
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: Line
+  nameWithType: HLI_ERROR_SATZ_KOPF.Line
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.Line
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Line
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 284
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Line number in the module on which the error occurred.
+  example: []
+  syntax:
+    content: public int Line
+    return:
+      type: System.Int32
+    content.vb: Public Line As Integer
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilErrorId
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilErrorId
+  id: UtilErrorId
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: UtilErrorId
+  nameWithType: HLI_ERROR_SATZ_KOPF.UtilErrorId
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilErrorId
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: UtilErrorId
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 287
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Error number when a utility function is used.
+  example: []
+  syntax:
+    content: public uint UtilErrorId
+    return:
+      type: System.UInt32
+    content.vb: Public UtilErrorId As UInteger
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilModulName
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilModulName
+  id: UtilModulName
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: UtilModulName
+  nameWithType: HLI_ERROR_SATZ_KOPF.UtilModulName
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilModulName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: UtilModulName
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 290
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Module name of the module with utility functions signalling an error.
+  example: []
+  syntax:
+    content: public HLI_MODUL_NAME UtilModulName
+    return:
+      type: TwinSharp.CNC.HLI_MODUL_NAME
+    content.vb: Public UtilModulName As HLI_MODUL_NAME
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilLine
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilLine
+  id: UtilLine
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: UtilLine
+  nameWithType: HLI_ERROR_SATZ_KOPF.UtilLine
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.UtilLine
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: UtilLine
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 293
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Line number of the line in which the error occurred in a module with utility function.
+  example: []
+  syntax:
+    content: public int UtilLine
+    return:
+      type: System.Int32
+    content.vb: Public UtilLine As Integer
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.MultipleId
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.MultipleId
+  id: MultipleId
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: MultipleId
+  nameWithType: HLI_ERROR_SATZ_KOPF.MultipleId
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.MultipleId
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MultipleId
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 299
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Error messages may be issued at several different points in the NC kernel. A
+
+    unique multiple error number is issued to distinguish multiple usage.
+  example: []
+  syntax:
+    content: public ushort MultipleId
+    return:
+      type: System.UInt16
+    content.vb: Public MultipleId As UShort
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BfType
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BfType
+  id: BfType
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: BfType
+  nameWithType: HLI_ERROR_SATZ_KOPF.BfType
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BfType
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BfType
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 302
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Type of commandable function in which an error occurred.
+  example: []
+  syntax:
+    content: public ushort BfType
+    return:
+      type: System.UInt16
+    content.vb: Public BfType As UShort
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.CncChannel
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.CncChannel
+  id: CncChannel
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: CncChannel
+  nameWithType: HLI_ERROR_SATZ_KOPF.CncChannel
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.CncChannel
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CncChannel
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 305
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Channel number of the channel in which the signalled error occurred.
+  example: []
+  syntax:
+    content: public ushort CncChannel
+    return:
+      type: System.UInt16
+    content.vb: Public CncChannel As UShort
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.KommuId
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.KommuId
+  id: KommuId
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: KommuId
+  nameWithType: HLI_ERROR_SATZ_KOPF.KommuId
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.KommuId
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KommuId
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 308
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Communication ID of the BF signalling an error in the CNC.
+  example: []
+  syntax:
+    content: public ushort KommuId
+    return:
+      type: System.UInt16
+    content.vb: Public KommuId As UShort
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.SuppressTc2EventLogOutput
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.SuppressTc2EventLogOutput
+  id: SuppressTc2EventLogOutput
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: SuppressTc2EventLogOutput
+  nameWithType: HLI_ERROR_SATZ_KOPF.SuppressTc2EventLogOutput
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.SuppressTc2EventLogOutput
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SuppressTc2EventLogOutput
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 312
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: No log error message by event logger.
+  example: []
+  syntax:
+    content: public bool SuppressTc2EventLogOutput
+    return:
+      type: System.Boolean
+    content.vb: Public SuppressTc2EventLogOutput As Boolean
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp2
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp2
+  id: FillUp2
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: FillUp2
+  nameWithType: HLI_ERROR_SATZ_KOPF.FillUp2
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp2
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 316
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public bool FillUp2
+    return:
+      type: System.Boolean
+    content.vb: Public FillUp2 As Boolean
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp3
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp3
+  id: FillUp3
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: FillUp3
+  nameWithType: HLI_ERROR_SATZ_KOPF.FillUp3
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp3
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp3
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 319
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public short FillUp3
+    return:
+      type: System.Int16
+    content.vb: Public FillUp3 As Short
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.TimeStamp
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.TimeStamp
+  id: TimeStamp
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: TimeStamp
+  nameWithType: HLI_ERROR_SATZ_KOPF.TimeStamp
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.TimeStamp
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimeStamp
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 322
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Time specification on output of an error message.
+  example: []
+  syntax:
+    content: public HLI_FB_ZEITANGABE TimeStamp
+    return:
+      type: TwinSharp.CNC.HLI_FB_ZEITANGABE
+    content.vb: Public TimeStamp As HLI_FB_ZEITANGABE
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.VersionName
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.VersionName
+  id: VersionName
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: VersionName
+  nameWithType: HLI_ERROR_SATZ_KOPF.VersionName
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.VersionName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: VersionName
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 325
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Version name of the CNC specified in the error message.
+  example: []
+  syntax:
+    content: public HLI_INTF_VERSION_NAME VersionName
+    return:
+      type: TwinSharp.CNC.HLI_INTF_VERSION_NAME
+    content.vb: Public VersionName As HLI_INTF_VERSION_NAME
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp4
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp4
+  id: FillUp4
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: FillUp4
+  nameWithType: HLI_ERROR_SATZ_KOPF.FillUp4
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp4
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp4
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 328
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Undocumented, found through trial and error.
+  example: []
+  syntax:
+    content: public int FillUp4
+    return:
+      type: System.Int32
+    content.vb: Public FillUp4 As Integer
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp5
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp5
+  id: FillUp5
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: FillUp5
+  nameWithType: HLI_ERROR_SATZ_KOPF.FillUp5
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.FillUp5
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp5
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 331
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Undocumented, found through trial and error.
+  example: []
+  syntax:
+    content: public int FillUp5
+    return:
+      type: System.Int32
+    content.vb: Public FillUp5 As Integer
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.RectificationType
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.RectificationType
+  id: RectificationType
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: RectificationType
+  nameWithType: HLI_ERROR_SATZ_KOPF.RectificationType
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.RectificationType
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RectificationType
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 337
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Recovery class of an error.
+
+    Value range [0, 8]
+  example: []
+  syntax:
+    content: public ushort RectificationType
+    return:
+      type: System.UInt16
+    content.vb: Public RectificationType As UShort
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ReactionType
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ReactionType
+  id: ReactionType
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: ReactionType
+  nameWithType: HLI_ERROR_SATZ_KOPF.ReactionType
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.ReactionType
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReactionType
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 343
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reaction class of an error.
+
+    Value range [0, 8]
+  example: []
+  syntax:
+    content: public ushort ReactionType
+    return:
+      type: System.UInt16
+    content.vb: Public ReactionType As UShort
+- uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BodyType
+  commentId: F:TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BodyType
+  id: BodyType
+  parent: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+  langs:
+  - csharp
+  - vb
+  name: BodyType
+  nameWithType: HLI_ERROR_SATZ_KOPF.BodyType
+  fullName: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.BodyType
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BodyType
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 360
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Body type of an error. Depending on the error type, the error set body contains
+
+    further information on the error which occurred.
+
+    1: HLI_RUMPF_TYP_NC_PROG
+
+    2: HLI_RUMPF_TYP_MDS
+
+    3: HLI_RUMPF_TYP_KOMMU
+
+    4: HLI_RUMPF_TYP_RAMDISK
+
+    5: HLI_RUMPF_TYP_FILE
+
+    6: HLI_RUMPF_TYP_INTPR_FILE
+
+    7: HLI_RUMPF_TYP_LISTE_BINAER
+
+    8: HLI_RUMPF_TYP_GCM
+
+    9: HLI_RUMPF_TYP_LEER
+
+    10: HLI_RUMPF_TYP_HLI
+
+    11: HLI_RUMPF_TYP_NC_PROG_LR
+  example: []
+  syntax:
+    content: public uint BodyType
+    return:
+      type: System.UInt32
+    content.vb: Public BodyType As UInteger
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.CNC.HLI_MODUL_NAME
+  commentId: T:TwinSharp.CNC.HLI_MODUL_NAME
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_MODUL_NAME.html
+  name: HLI_MODUL_NAME
+  nameWithType: HLI_MODUL_NAME
+  fullName: TwinSharp.CNC.HLI_MODUL_NAME
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: TwinSharp.CNC.HLI_FB_ZEITANGABE
+  commentId: T:TwinSharp.CNC.HLI_FB_ZEITANGABE
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_FB_ZEITANGABE.html
+  name: HLI_FB_ZEITANGABE
+  nameWithType: HLI_FB_ZEITANGABE
+  fullName: TwinSharp.CNC.HLI_FB_ZEITANGABE
+- uid: TwinSharp.CNC.HLI_INTF_VERSION_NAME
+  commentId: T:TwinSharp.CNC.HLI_INTF_VERSION_NAME
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_INTF_VERSION_NAME.html
+  name: HLI_INTF_VERSION_NAME
+  nameWithType: HLI_INTF_VERSION_NAME
+  fullName: TwinSharp.CNC.HLI_INTF_VERSION_NAME

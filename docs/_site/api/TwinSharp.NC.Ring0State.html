@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Ring0State | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Ring0State | TwinSharp ">
+      
+      <meta name="description" content="Represents the state of the Ring 0 system, providing access to various counts and IDs for channels, groups, axes, encoders, controllers, drives, and tables.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_NC_Ring0State.md&amp;value=---%0Auid%3A%20TwinSharp.NC.Ring0State%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.NC.Ring0State">
+
+
+
+  <h1 id="TwinSharp_NC_Ring0State" data-uid="TwinSharp.NC.Ring0State" class="text-break">
+Class Ring0State  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.NC.html">NC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents the state of the Ring 0 system, providing access to various counts and IDs
+for channels, groups, axes, encoders, controllers, drives, and tables.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Ring0State</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Ring0State</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TwinSharp_NC_Ring0State_AxisCount_" data-uid="TwinSharp.NC.Ring0State.AxisCount*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_AxisCount" data-uid="TwinSharp.NC.Ring0State.AxisCount">
+  AxisCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Quantity of Axis
+0, 1...255</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint AxisCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_AxisIds_" data-uid="TwinSharp.NC.Ring0State.AxisIds*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_AxisIds" data-uid="TwinSharp.NC.Ring0State.AxisIds">
+  AxisIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies the axis IDs for all axes in the system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] AxisIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_ChannelCount_" data-uid="TwinSharp.NC.Ring0State.ChannelCount*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_ChannelCount" data-uid="TwinSharp.NC.Ring0State.ChannelCount">
+  ChannelCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Quantity of Channel
+0, 1...255</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ChannelCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_ChannelIds_" data-uid="TwinSharp.NC.Ring0State.ChannelIds*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_ChannelIds" data-uid="TwinSharp.NC.Ring0State.ChannelIds">
+  ChannelIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies the Channel IDs for all Channels in the system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] ChannelIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_ControllerCount_" data-uid="TwinSharp.NC.Ring0State.ControllerCount*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_ControllerCount" data-uid="TwinSharp.NC.Ring0State.ControllerCount">
+  ControllerCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Quantity of controller
+0, 1...255</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ControllerCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_ControllerIds_" data-uid="TwinSharp.NC.Ring0State.ControllerIds*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_ControllerIds" data-uid="TwinSharp.NC.Ring0State.ControllerIds">
+  ControllerIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies the controller IDs for all controllers in the system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] ControllerIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_DriveCount_" data-uid="TwinSharp.NC.Ring0State.DriveCount*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_DriveCount" data-uid="TwinSharp.NC.Ring0State.DriveCount">
+  DriveCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Quantity of Drives
+0, 1...255</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint DriveCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_DriveIds_" data-uid="TwinSharp.NC.Ring0State.DriveIds*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_DriveIds" data-uid="TwinSharp.NC.Ring0State.DriveIds">
+  DriveIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies the drive IDs for all drives in the system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] DriveIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_EncoderCount_" data-uid="TwinSharp.NC.Ring0State.EncoderCount*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_EncoderCount" data-uid="TwinSharp.NC.Ring0State.EncoderCount">
+  EncoderCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Quantity of Encoder
+0, 1...255</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint EncoderCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_EncoderIds_" data-uid="TwinSharp.NC.Ring0State.EncoderIds*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_EncoderIds" data-uid="TwinSharp.NC.Ring0State.EncoderIds">
+  EncoderIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies the encoder IDs for all encoders in the system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] EncoderIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_GroupCount_" data-uid="TwinSharp.NC.Ring0State.GroupCount*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_GroupCount" data-uid="TwinSharp.NC.Ring0State.GroupCount">
+  GroupCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Quantity of group
+0, 1...255</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GroupCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_GroupIds_" data-uid="TwinSharp.NC.Ring0State.GroupIds*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_GroupIds" data-uid="TwinSharp.NC.Ring0State.GroupIds">
+  GroupIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies the group IDs for all groups in the system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] GroupIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_TableCount_" data-uid="TwinSharp.NC.Ring0State.TableCount*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_TableCount" data-uid="TwinSharp.NC.Ring0State.TableCount">
+  TableCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Quantity of table (n x m)
+0, 1...255</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint TableCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_Ring0State_TableIds_" data-uid="TwinSharp.NC.Ring0State.TableIds*"></a>
+
+  <h3 id="TwinSharp_NC_Ring0State_TableIds" data-uid="TwinSharp.NC.Ring0State.TableIds">
+  TableIds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Supplies the table IDs for all tables in the system</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] TableIds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Ring0State.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

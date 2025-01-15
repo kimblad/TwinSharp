@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>TwinSharp | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="TwinSharp | TwinSharp ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="twinsharp">TwinSharp</h1>
+
+<p>TwinSharp is a free open source library for .NET that makes it easy to represent and control TwinCAT objects in C#. It communicates with ADS to a TwinCAT XAR system running locally or on a remote target.</p>
+<p>TwinSharp connects to all TwinCAT 3 systems and does not require any special adaptation or PLC code running on the targeted system.</p>
+<p>For example TwinSharp can be used to connect to a remote TwinCAT axis and read its status and settings.
+Here's a custom user control built using TwinSharp. It mimics the &quot;Axis online&quot; view from TwinCAT but does not require TwinCAT XAE to be installed.</p>
+<p><img src="https://github.com/user-attachments/assets/88c7e236-9325-401d-b033-34c99c4f91be" alt="online-view"></p>
+<p>Here's a list of some major components that can be viewed, altered and controlled with TwinSharp. For a full list, please refer to the documentation or ask :)</p>
+<h2 id="ethercat">EtherCAT</h2>
+<ul>
+<li>List all EtherCAT masters that exists in a local or remote system.</li>
+<li>Get information about all configured EtherCAT slaves.</li>
+<li>Get information about all connected EtherCAT slaves.</li>
+<li>Get information about the topology of the network.</li>
+<li>Read abnormal state change count of slaves.</li>
+<li>CoE read and write to masters and slaves.</li>
+</ul>
+<h2 id="realtime-system">Realtime system</h2>
+<ul>
+<li>Read and set the number of shared/isolated cores.</li>
+<li>Read the CPU usage.</li>
+<li>Read the TwinCAT system CPU latency.</li>
+</ul>
+<h2 id="plc">PLC</h2>
+<p>Create a representation of a TwinCAT PLC like this:</p>
+<pre><code class="lang-csharp">var plcClient = new AdsClient();
+plcClient.Connect(AmsPort.PlcRuntime_851);
+var plc = new PLC(plcClient);
+</code></pre>
+<ul>
+<li>Start, stop and reset a PLC on the local or remote TwinCAT system.</li>
+<li>Read the number of &quot;online changes&quot; in the PLC.</li>
+<li>Read if Windows is in a BSOD.</li>
+<li>Read if Windows on the TwinCAT system is shutting down.</li>
+<li>Read the timestamp of when the PLC was compiled.</li>
+<li>Control if outputs should be zeroed when a breakpoint is hit in the PLC.</li>
+</ul>
+<h2 id="nc-motion">NC Motion</h2>
+<ul>
+<li>View all available axes on a TwinCAT system.</li>
+<li>Command motion to axes.</li>
+<li>Couple axes.</li>
+<li>Change axis encoder scaling, on the fly.</li>
+<li>Set current position.</li>
+<li>Enable or disable axis monitoring functions.</li>
+<li>View and change axis settings including those of the encoder and drive.</li>
+<li>Control axis channels and axis groups.</li>
+<li>Control, modify and delete NC tables.</li>
+</ul>
+<h2 id="ipc">IPC</h2>
+<p>The IPC class describes a Beckhoff Industrial PC. Create a TwinSharp representation of a local IPC like this:</p>
+<pre><code class="lang-csharp">var target = AmsNetId.Local;
+var ipc = new IPC(target);
+</code></pre>
+<ul>
+<li>Read temperatures of CPU and main board.</li>
+<li>Read the boot count and current uptime.</li>
+<li>Read BIOS version.</li>
+<li>Read fan speed RPM.</li>
+<li>Control Network cards, IP adresses, DHCP etc.</li>
+<li>Read status of connected UPS, such as battery capacity, power fail count, fan error etc.</li>
+<li>Read version of installed TwinCAT version and operating system version.</li>
+<li>Control screen brightness of connected Beckhoff screens.</li>
+<li>Disable/enable the Beckhoff security wizard.</li>
+<li>Control current time and timezone of the TwinCAT system.</li>
+</ul>
+<h2 id="file-system">File system</h2>
+<ul>
+<li>Create, delete, rename, view or write files and folders on a TwinCAT system.</li>
+<li>Search for files.</li>
+<li>View file properties and attributes.</li>
+</ul>
+<h2 id="license-system">License system</h2>
+<ul>
+<li>Get a list of valid licenses that exists on a remote or local target.</li>
+<li>Get a list of invalid licenses.</li>
+</ul>
+<h1 id="additional-info">Additional info</h1>
+<p>Development has been focused on TwinCAT 3 systems.</p>
+<p>This project is not affiliated or endorsed with Beckhoff in any way. I'm simply a guy who love all stuff Beckhoff/EtherCAT and try to make it available to as many as possible.</p>
+<p>Beckhoff®, TwinCAT®, TwinCAT/BSD®, TC/BSD®, EtherCAT®, EtherCAT G®, EtherCAT G10®, EtherCAT P®, Safety over EtherCAT®, TwinSAFE®, XFC®, XTS® and XPlanar® are registered trademarks of and licensed by Beckhoff Automation GmbH.</p>
+<h2 id="license">License</h2>
+<p>TwinSharp is provided under the permissive MIT license and is free to modify and use for any purpose.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

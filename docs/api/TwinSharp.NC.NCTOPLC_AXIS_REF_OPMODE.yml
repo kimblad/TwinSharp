@@ -1,0 +1,795 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  commentId: T:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  id: NCTOPLC_AXIS_REF_OPMODE
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowExtSetAxisCommands
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowSlaveCommands
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.BacklashCompensation
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.DelayedErrorReaction
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.LoopMode
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.ModuloPositioning
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.MotionMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.NcApplicationRequested
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.None
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PEHTimeMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionAreaMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionCorrection
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionLagMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SimulationAxis
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMaxMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMinMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.StopMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.TargetPositionMonitoring
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused1
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused2
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused3
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused4
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused5
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused6
+  - TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.VeloLagMonitoring
+  langs:
+  - csharp
+  - vb
+  name: NCTOPLC_AXIS_REF_OPMODE
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NCTOPLC_AXIS_REF_OPMODE
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 955
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: The AxisControlDWord is a 32 bit data word in the axis interface PLC-&gt;NC.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum NCTOPLC_AXIS_REF_OPMODE : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum NCTOPLC_AXIS_REF_OPMODE As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.None
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.None
+  id: None
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.None
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.None
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: None
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 959
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: No active bits set.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionAreaMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionAreaMonitoring
+  id: PositionAreaMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: PositionAreaMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.PositionAreaMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionAreaMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PositionAreaMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 962
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Position range monitoring.
+  example: []
+  syntax:
+    content: PositionAreaMonitoring = 1
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.TargetPositionMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.TargetPositionMonitoring
+  id: TargetPositionMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: TargetPositionMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.TargetPositionMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.TargetPositionMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TargetPositionMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 965
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Target position window monitoring.
+  example: []
+  syntax:
+    content: TargetPositionMonitoring = 2
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.LoopMode
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.LoopMode
+  id: LoopMode
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: LoopMode
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.LoopMode
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.LoopMode
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LoopMode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 968
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Loop movement.
+  example: []
+  syntax:
+    content: LoopMode = 4
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.MotionMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.MotionMonitoring
+  id: MotionMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: MotionMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.MotionMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.MotionMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MotionMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 971
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Physical movement monitoring.
+  example: []
+  syntax:
+    content: MotionMonitoring = 8
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PEHTimeMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PEHTimeMonitoring
+  id: PEHTimeMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: PEHTimeMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.PEHTimeMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PEHTimeMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PEHTimeMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 974
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: PEH time monitoring.
+  example: []
+  syntax:
+    content: PEHTimeMonitoring = 16
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.BacklashCompensation
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.BacklashCompensation
+  id: BacklashCompensation
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: BacklashCompensation
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.BacklashCompensation
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.BacklashCompensation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BacklashCompensation
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 977
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Backlash compensation.
+  example: []
+  syntax:
+    content: BacklashCompensation = 32
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.DelayedErrorReaction
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.DelayedErrorReaction
+  id: DelayedErrorReaction
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: DelayedErrorReaction
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.DelayedErrorReaction
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.DelayedErrorReaction
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DelayedErrorReaction
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 980
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Delayed error reaction of the NC.
+  example: []
+  syntax:
+    content: DelayedErrorReaction = 64
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.ModuloPositioning
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.ModuloPositioning
+  id: ModuloPositioning
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: ModuloPositioning
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.ModuloPositioning
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.ModuloPositioning
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ModuloPositioning
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 983
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Modulo axis (modulo display).
+  example: []
+  syntax:
+    content: ModuloPositioning = 128
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SimulationAxis
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SimulationAxis
+  id: SimulationAxis
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: SimulationAxis
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.SimulationAxis
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SimulationAxis
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SimulationAxis
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 986
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Simulation axis.
+  example: []
+  syntax:
+    content: SimulationAxis = 256
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused1
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused1
+  id: Unused1
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: Unused1
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.Unused1
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Unused1
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 989
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: Unused1 = 512
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused2
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused2
+  id: Unused2
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: Unused2
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.Unused2
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Unused2
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 992
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: Unused2 = 1024
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused3
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused3
+  id: Unused3
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: Unused3
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.Unused3
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused3
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Unused3
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 995
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: Unused3 = 2048
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.StopMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.StopMonitoring
+  id: StopMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: StopMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.StopMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.StopMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StopMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 998
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Standstill monitoring.
+  example: []
+  syntax:
+    content: StopMonitoring = 4096
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused4
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused4
+  id: Unused4
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: Unused4
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.Unused4
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused4
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Unused4
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1001
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: Unused4 = 8192
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused5
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused5
+  id: Unused5
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: Unused5
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.Unused5
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused5
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Unused5
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1004
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: Unused5 = 16384
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused6
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused6
+  id: Unused6
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: Unused6
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.Unused6
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.Unused6
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Unused6
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1007
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: Unused6 = 32768
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionLagMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionLagMonitoring
+  id: PositionLagMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: PositionLagMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.PositionLagMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionLagMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PositionLagMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1010
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Lag monitoring - position.
+  example: []
+  syntax:
+    content: PositionLagMonitoring = 65536
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.VeloLagMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.VeloLagMonitoring
+  id: VeloLagMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: VeloLagMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.VeloLagMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.VeloLagMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: VeloLagMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1013
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Lag monitoring - velocity.
+  example: []
+  syntax:
+    content: VeloLagMonitoring = 131072
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMinMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMinMonitoring
+  id: SoftLimitMinMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: SoftLimitMinMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.SoftLimitMinMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMinMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SoftLimitMinMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1016
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: End position monitoring min.
+  example: []
+  syntax:
+    content: SoftLimitMinMonitoring = 262144
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMaxMonitoring
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMaxMonitoring
+  id: SoftLimitMaxMonitoring
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: SoftLimitMaxMonitoring
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.SoftLimitMaxMonitoring
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.SoftLimitMaxMonitoring
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SoftLimitMaxMonitoring
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1019
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: End position monitoring max.
+  example: []
+  syntax:
+    content: SoftLimitMaxMonitoring = 524288
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionCorrection
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionCorrection
+  id: PositionCorrection
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: PositionCorrection
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.PositionCorrection
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.PositionCorrection
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PositionCorrection
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1022
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Position correction ("Measuring system error compensation")
+  example: []
+  syntax:
+    content: PositionCorrection = 1048576
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowSlaveCommands
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowSlaveCommands
+  id: AllowSlaveCommands
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: AllowSlaveCommands
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.AllowSlaveCommands
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowSlaveCommands
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AllowSlaveCommands
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1025
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Allow motion commands to slave axes.
+  example: []
+  syntax:
+    content: AllowSlaveCommands = 2097152
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowExtSetAxisCommands
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowExtSetAxisCommands
+  id: AllowExtSetAxisCommands
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: AllowExtSetAxisCommands
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.AllowExtSetAxisCommands
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.AllowExtSetAxisCommands
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AllowExtSetAxisCommands
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1028
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Allow motion commands to an axis that is fed by an external setpoint generator.
+  example: []
+  syntax:
+    content: AllowExtSetAxisCommands = 4194304
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.NcApplicationRequested
+  commentId: F:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.NcApplicationRequested
+  id: NcApplicationRequested
+  parent: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  langs:
+  - csharp
+  - vb
+  name: NcApplicationRequested
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE.NcApplicationRequested
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.NcApplicationRequested
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NcApplicationRequested
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 1031
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Request bit for the application software (PLC code), e.g. for an "ApplicationHomingRequest".
+  example: []
+  syntax:
+    content: NcApplicationRequested = 8388608
+    return:
+      type: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  commentId: T:TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.html
+  name: NCTOPLC_AXIS_REF_OPMODE
+  nameWithType: NCTOPLC_AXIS_REF_OPMODE
+  fullName: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE

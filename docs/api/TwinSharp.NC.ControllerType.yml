@@ -1,0 +1,350 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.ControllerType
+  commentId: T:TwinSharp.NC.ControllerType
+  id: ControllerType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.ControllerType.High_LowSpeedController
+  - TwinSharp.NC.ControllerType.NOT_DEFINED
+  - TwinSharp.NC.ControllerType.PID_Controller
+  - TwinSharp.NC.ControllerType.PI_ControllerVelocity
+  - TwinSharp.NC.ControllerType.PP_Controller
+  - TwinSharp.NC.ControllerType.P_ControllerPosition
+  - TwinSharp.NC.ControllerType.P_ControllerVelocity
+  - TwinSharp.NC.ControllerType.SercosController
+  - TwinSharp.NC.ControllerType.StepperMotorController
+  - TwinSharp.NC.ControllerType.TComController
+  langs:
+  - csharp
+  - vb
+  name: ControllerType
+  nameWithType: ControllerType
+  fullName: TwinSharp.NC.ControllerType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControllerType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 590
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of controllers that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum ControllerType
+    content.vb: Public Enum ControllerType
+- uid: TwinSharp.NC.ControllerType.NOT_DEFINED
+  commentId: F:TwinSharp.NC.ControllerType.NOT_DEFINED
+  id: NOT_DEFINED
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: NOT_DEFINED
+  nameWithType: ControllerType.NOT_DEFINED
+  fullName: TwinSharp.NC.ControllerType.NOT_DEFINED
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NOT_DEFINED
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 593
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Controller not defined.
+  example: []
+  syntax:
+    content: NOT_DEFINED = 0
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.P_ControllerPosition
+  commentId: F:TwinSharp.NC.ControllerType.P_ControllerPosition
+  id: P_ControllerPosition
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: P_ControllerPosition
+  nameWithType: ControllerType.P_ControllerPosition
+  fullName: TwinSharp.NC.ControllerType.P_ControllerPosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: P_ControllerPosition
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 596
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: P-controller (standard) (position).
+  example: []
+  syntax:
+    content: P_ControllerPosition = 1
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.PP_Controller
+  commentId: F:TwinSharp.NC.ControllerType.PP_Controller
+  id: PP_Controller
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: PP_Controller
+  nameWithType: ControllerType.PP_Controller
+  fullName: TwinSharp.NC.ControllerType.PP_Controller
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PP_Controller
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 599
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: PP Controller (with ka) (position).
+  example: []
+  syntax:
+    content: PP_Controller = 2
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.PID_Controller
+  commentId: F:TwinSharp.NC.ControllerType.PID_Controller
+  id: PID_Controller
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: PID_Controller
+  nameWithType: ControllerType.PID_Controller
+  fullName: TwinSharp.NC.ControllerType.PID_Controller
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PID_Controller
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 602
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: PID Controller (with ka) (position).
+  example: []
+  syntax:
+    content: PID_Controller = 3
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.P_ControllerVelocity
+  commentId: F:TwinSharp.NC.ControllerType.P_ControllerVelocity
+  id: P_ControllerVelocity
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: P_ControllerVelocity
+  nameWithType: ControllerType.P_ControllerVelocity
+  fullName: TwinSharp.NC.ControllerType.P_ControllerVelocity
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: P_ControllerVelocity
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 605
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: P Controller (velocity).
+  example: []
+  syntax:
+    content: P_ControllerVelocity = 5
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.PI_ControllerVelocity
+  commentId: F:TwinSharp.NC.ControllerType.PI_ControllerVelocity
+  id: PI_ControllerVelocity
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: PI_ControllerVelocity
+  nameWithType: ControllerType.PI_ControllerVelocity
+  fullName: TwinSharp.NC.ControllerType.PI_ControllerVelocity
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PI_ControllerVelocity
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 608
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: PI Controller (velocity).
+  example: []
+  syntax:
+    content: PI_ControllerVelocity = 6
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.High_LowSpeedController
+  commentId: F:TwinSharp.NC.ControllerType.High_LowSpeedController
+  id: High_LowSpeedController
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: High_LowSpeedController
+  nameWithType: ControllerType.High_LowSpeedController
+  fullName: TwinSharp.NC.ControllerType.High_LowSpeedController
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: High_LowSpeedController
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 611
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: High/low speed controller (position).
+  example: []
+  syntax:
+    content: High_LowSpeedController = 7
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.StepperMotorController
+  commentId: F:TwinSharp.NC.ControllerType.StepperMotorController
+  id: StepperMotorController
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: StepperMotorController
+  nameWithType: ControllerType.StepperMotorController
+  fullName: TwinSharp.NC.ControllerType.StepperMotorController
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StepperMotorController
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 614
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Stepper motor controller (position).
+  example: []
+  syntax:
+    content: StepperMotorController = 8
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.SercosController
+  commentId: F:TwinSharp.NC.ControllerType.SercosController
+  id: SercosController
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: SercosController
+  nameWithType: ControllerType.SercosController
+  fullName: TwinSharp.NC.ControllerType.SercosController
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SercosController
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 617
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Sercos Controller (Position in the drive)
+  example: []
+  syntax:
+    content: SercosController = 9
+    return:
+      type: TwinSharp.NC.ControllerType
+- uid: TwinSharp.NC.ControllerType.TComController
+  commentId: F:TwinSharp.NC.ControllerType.TComController
+  id: TComController
+  parent: TwinSharp.NC.ControllerType
+  langs:
+  - csharp
+  - vb
+  name: TComController
+  nameWithType: ControllerType.TComController
+  fullName: TwinSharp.NC.ControllerType.TComController
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TComController
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 620
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: TCom Controller (Soft Drive) (Position in the drive)
+  example: []
+  syntax:
+    content: TComController = 14
+    return:
+      type: TwinSharp.NC.ControllerType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.ControllerType
+  commentId: T:TwinSharp.NC.ControllerType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.ControllerType.html
+  name: ControllerType
+  nameWithType: ControllerType
+  fullName: TwinSharp.NC.ControllerType

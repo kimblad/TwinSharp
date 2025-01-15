@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.TableSubType
+  commentId: T:TwinSharp.NC.TableSubType
+  id: TableSubType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.TableSubType.EquidistantMasterCyclicContinuation
+  - TwinSharp.NC.TableSubType.EquidistantMasterNonCyclicContinuation
+  - TwinSharp.NC.TableSubType.NonEquidistantMasterCyclicContinuation
+  - TwinSharp.NC.TableSubType.NonEquidistantMasterNonCyclicContinuation
+  langs:
+  - csharp
+  - vb
+  name: TableSubType
+  nameWithType: TableSubType
+  fullName: TwinSharp.NC.TableSubType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TableSubType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 717
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of table subtypes that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum TableSubType
+    content.vb: Public Enum TableSubType
+- uid: TwinSharp.NC.TableSubType.EquidistantMasterNonCyclicContinuation
+  commentId: F:TwinSharp.NC.TableSubType.EquidistantMasterNonCyclicContinuation
+  id: EquidistantMasterNonCyclicContinuation
+  parent: TwinSharp.NC.TableSubType
+  langs:
+  - csharp
+  - vb
+  name: EquidistantMasterNonCyclicContinuation
+  nameWithType: TableSubType.EquidistantMasterNonCyclicContinuation
+  fullName: TwinSharp.NC.TableSubType.EquidistantMasterNonCyclicContinuation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EquidistantMasterNonCyclicContinuation
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 720
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: (n*m) Table with equidistant master positions and no cyclic continuation of the master profile (equidistant linear)
+  example: []
+  syntax:
+    content: EquidistantMasterNonCyclicContinuation = 1
+    return:
+      type: TwinSharp.NC.TableSubType
+- uid: TwinSharp.NC.TableSubType.EquidistantMasterCyclicContinuation
+  commentId: F:TwinSharp.NC.TableSubType.EquidistantMasterCyclicContinuation
+  id: EquidistantMasterCyclicContinuation
+  parent: TwinSharp.NC.TableSubType
+  langs:
+  - csharp
+  - vb
+  name: EquidistantMasterCyclicContinuation
+  nameWithType: TableSubType.EquidistantMasterCyclicContinuation
+  fullName: TwinSharp.NC.TableSubType.EquidistantMasterCyclicContinuation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EquidistantMasterCyclicContinuation
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 723
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: (n*m) Table with equidistant master positions and cyclic continuation of the master profile (equidistant cyclic)
+  example: []
+  syntax:
+    content: EquidistantMasterCyclicContinuation = 2
+    return:
+      type: TwinSharp.NC.TableSubType
+- uid: TwinSharp.NC.TableSubType.NonEquidistantMasterNonCyclicContinuation
+  commentId: F:TwinSharp.NC.TableSubType.NonEquidistantMasterNonCyclicContinuation
+  id: NonEquidistantMasterNonCyclicContinuation
+  parent: TwinSharp.NC.TableSubType
+  langs:
+  - csharp
+  - vb
+  name: NonEquidistantMasterNonCyclicContinuation
+  nameWithType: TableSubType.NonEquidistantMasterNonCyclicContinuation
+  fullName: TwinSharp.NC.TableSubType.NonEquidistantMasterNonCyclicContinuation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NonEquidistantMasterNonCyclicContinuation
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 726
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: (n*m) Table with non-equidistant, but strictly monotonously increasing master positions and a non-cyclic continuation of the master profile (monotonously linear)
+  example: []
+  syntax:
+    content: NonEquidistantMasterNonCyclicContinuation = 3
+    return:
+      type: TwinSharp.NC.TableSubType
+- uid: TwinSharp.NC.TableSubType.NonEquidistantMasterCyclicContinuation
+  commentId: F:TwinSharp.NC.TableSubType.NonEquidistantMasterCyclicContinuation
+  id: NonEquidistantMasterCyclicContinuation
+  parent: TwinSharp.NC.TableSubType
+  langs:
+  - csharp
+  - vb
+  name: NonEquidistantMasterCyclicContinuation
+  nameWithType: TableSubType.NonEquidistantMasterCyclicContinuation
+  fullName: TwinSharp.NC.TableSubType.NonEquidistantMasterCyclicContinuation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NonEquidistantMasterCyclicContinuation
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 729
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: (n*m) Table with non-equidistant, but strictly monotonously increasing master positions and a cyclic continuation of the master profile (monotonously cyclic)
+  example: []
+  syntax:
+    content: NonEquidistantMasterCyclicContinuation = 4
+    return:
+      type: TwinSharp.NC.TableSubType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.TableSubType
+  commentId: T:TwinSharp.NC.TableSubType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.TableSubType.html
+  name: TableSubType
+  nameWithType: TableSubType
+  fullName: TwinSharp.NC.TableSubType

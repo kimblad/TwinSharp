@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>AxisParameters Public class | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="AxisParameters Public class | TwinSharp ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/AxisParameters.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="axisparameters-public-class">AxisParameters <code>Public class</code></h1>
+
+<h2 id="description">Description</h2>
+<p>Represents the parameters of an axis in a TwinCAT NC system.
+This class provides properties to get and set various parameters of an axis,
+such as ID, name, type, cycle time, physical unit, velocities, monitoring settings,
+error reaction mode, and more. It uses an AdsClient to read and write these parameters
+from a TwinCAT system. The class also includes methods to read all sub-elements like
+encoder IDs, controller IDs, and drive IDs.</p>
+<h2 id="diagram">Diagram</h2>
+<pre><code class="lang-mermaid">  flowchart LR
+  classDef interfaceStyle stroke-dasharray: 5 5;
+  classDef abstractStyle stroke-width:4px
+  subgraph TwinSharp.NC
+  TwinSharp.NC.AxisParameters[[AxisParameters]]
+  end
+</code></pre>
+<h2 id="members">Members</h2>
+<h3 id="properties">Properties</h3>
+<h4 id="public--properties">Public  properties</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>double</code></td>
+<td><a href="#acceleration"><code>Acceleration</code></a><br>Default data set (e.g. mm/s^2)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#channelid"><code>ChannelID</code></a><br>Channel ID</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#channelname"><code>ChannelName</code></a><br>Channel name</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="ChannelType.html"><code>ChannelType</code></a></td>
+<td><a href="#channeltype"><code>ChannelType</code></a><br>Channel type</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#controllercount"><code>ControllerCount</code></a><br>Number of controllers that belong to this axis.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#cycletime"><code>CycleTime</code></a><br>Cycle time axis (SEC)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#deceleration"><code>Deceleration</code></a><br>Default data set (e.g. mm/s^2)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#drivecount"><code>DriveCount</code></a><br>Number of drives that belong to this axis.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#encodercount"><code>EncoderCount</code></a><br>Number of encoders that belong to this axis.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint``[]</code></td>
+<td><a href="#encoderids"><code>EncoderIDs</code></a><br>Axis encoder IDs</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#errordelayseconds"><code>ErrorDelaySeconds</code></a><br>Error delay time (if delayed error reaction is selected)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><a href="ErrorReactionMode.html"><code>ErrorReactionMode</code></a></td>
+<td><a href="#errorreactionmode"><code>ErrorReactionMode</code></a><br>Error reaction mode: 0: instantaneous (default) 1: delayed (e.g. for Master/Slave-coupling)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#groupid"><code>GroupID</code></a><br>Group ID</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#groupname"><code>GroupName</code></a><br>Group name</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="GroupType.html"><code>GroupType</code></a></td>
+<td><a href="#grouptype"><code>GroupType</code></a><br>Group type</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#id"><code>ID</code></a><br>Axis ID</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#jerk"><code>Jerk</code></a><br>Default data set (e.g. mm/s^3)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><a href="#loopenabled"><code>LoopEnabled</code></a><br>Loop enabled</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#loopingdistance"><code>LoopingDistance</code></a><br>Looping distance (±) e.g. mm</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#maxpermittedacceleration"><code>MaxPermittedAcceleration</code></a><br>Maximum permitted acceleration</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#maxpermitteddeceleration"><code>MaxPermittedDeceleration</code></a><br>Maximum permitted deceleration</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><a href="#motionmonitoringenabled"><code>MotionMonitoringEnabled</code></a><br>Motion monitoring enabled</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#motionmonitoringseconds"><code>MotionMonitoringSeconds</code></a><br>Motion monitoring time.</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#name"><code>Name</code></a><br>Axis name</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#physicalunit"><code>PhysicalUnit</code></a><br>Physical unit</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><a href="#positionrangemonitoringenabled"><code>PositionRangeMonitoringEnabled</code></a><br>Position range monitoring?</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#positionrangemonitoringwindow"><code>PositionRangeMonitoringWindow</code></a><br>Position range monitoring window</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#pulsewaynegativedirection"><code>PulseWayNegativeDirection</code></a><br>Pulse way in neg. direction e.g. mm</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#pulsewaypositivedirection"><code>PulseWayPositiveDirection</code></a><br>Pulse way in pos. direction e.g. mm</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#refvelocityatrefoutput"><code>RefVelocityAtRefOutput</code></a><br>Reference velocity at reference output (velocity pre-control)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#refvelocitycamdirection"><code>RefVelocityCamDirection</code></a></td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#refvelocitysyncdirection"><code>RefVelocitySyncDirection</code></a><br>Ref. velocity in sync direction</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><a href="#targetpositionmonitoringenabled"><code>TargetPositionMonitoringEnabled</code></a><br>Target position monitoring enabled</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#targetpositionmonitoringseconds"><code>TargetPositionMonitoringSeconds</code></a><br>Target position monitoring time in seconds.</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#targetpositionmonitoringwindow"><code>TargetPositionMonitoringWindow</code></a><br>Target position monitoring window e.g. mm</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><a href="AxisType.html"><code>AxisType</code></a></td>
+<td><a href="#type"><code>Type</code></a><br>Axis type</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#velocityhandfast"><code>VelocityHandFast</code></a><br>Velocity hand fast</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#velocityhandslow"><code>VelocityHandSlow</code></a><br>Velocity hand slow</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#velocityrapidtraverse"><code>VelocityRapidTraverse</code></a><br>Velocity rapid traverse</td>
+<td><code>get, set</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<h4 id="internal--methods">Internal  methods</h4>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><a href="#readallsubelements"><code>ReadAllSubElements</code></a>(out <code>uint``[]</code> encoderIDs, out <code>uint``[]</code> controllerIDs, out <code>uint``[]</code> driveIDs)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<h3 id="summary">Summary</h3>
+<p>Represents the parameters of an axis in a TwinCAT NC system.
+This class provides properties to get and set various parameters of an axis,
+such as ID, name, type, cycle time, physical unit, velocities, monitoring settings,
+error reaction mode, and more. It uses an AdsClient to read and write these parameters
+from a TwinCAT system. The class also includes methods to read all sub-elements like
+encoder IDs, controller IDs, and drive IDs.</p>
+<h3 id="constructors">Constructors</h3>
+<h4 id="axisparameters">AxisParameters</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/AxisParameters.cs#L18"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">internal AxisParameters(AdsClient client, uint id)
+</code></pre>
+<h5 id="arguments">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AdsClient</code></td>
+<td>client</td>
+<td></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods-1">Methods</h3>
+<h4 id="readallsubelements">ReadAllSubElements</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/AxisParameters.cs#L318"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">internal void ReadAllSubElements(out uint[] encoderIDs, out uint[] controllerIDs, out uint[] driveIDs)
+</code></pre>
+<h5 id="arguments-1">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>out</code> <code>uint``[]</code></td>
+<td>encoderIDs</td>
+<td></td>
+</tr>
+<tr>
+<td><code>out</code> <code>uint``[]</code></td>
+<td>controllerIDs</td>
+<td></td>
+</tr>
+<tr>
+<td><code>out</code> <code>uint``[]</code></td>
+<td>driveIDs</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties-1">Properties</h3>
+<h4 id="id">ID</h4>
+<pre><code class="lang-csharp">public uint ID { get; }
+</code></pre>
+<h5 id="summary-1">Summary</h5>
+<p>Axis ID</p>
+<h4 id="name">Name</h4>
+<pre><code class="lang-csharp">public string Name { get; }
+</code></pre>
+<h5 id="summary-2">Summary</h5>
+<p>Axis name</p>
+<h4 id="type">Type</h4>
+<pre><code class="lang-csharp">public AxisType Type { get; }
+</code></pre>
+<h5 id="summary-3">Summary</h5>
+<p>Axis type</p>
+<h4 id="cycletime">CycleTime</h4>
+<pre><code class="lang-csharp">public uint CycleTime { get; }
+</code></pre>
+<h5 id="summary-4">Summary</h5>
+<p>Cycle time axis (SEC)</p>
+<h4 id="physicalunit">PhysicalUnit</h4>
+<pre><code class="lang-csharp">public string PhysicalUnit { get; }
+</code></pre>
+<h5 id="summary-5">Summary</h5>
+<p>Physical unit</p>
+<h4 id="refvelocitycamdirection">RefVelocityCamDirection</h4>
+<pre><code class="lang-csharp">public double RefVelocityCamDirection { get; set; }
+</code></pre>
+<h4 id="refvelocitysyncdirection">RefVelocitySyncDirection</h4>
+<pre><code class="lang-csharp">public double RefVelocitySyncDirection { get; set; }
+</code></pre>
+<h5 id="summary-6">Summary</h5>
+<p>Ref. velocity in sync direction</p>
+<h4 id="velocityhandslow">VelocityHandSlow</h4>
+<pre><code class="lang-csharp">public double VelocityHandSlow { get; set; }
+</code></pre>
+<h5 id="summary-7">Summary</h5>
+<p>Velocity hand slow</p>
+<h4 id="velocityhandfast">VelocityHandFast</h4>
+<pre><code class="lang-csharp">public double VelocityHandFast { get; set; }
+</code></pre>
+<h5 id="summary-8">Summary</h5>
+<p>Velocity hand fast</p>
+<h4 id="velocityrapidtraverse">VelocityRapidTraverse</h4>
+<pre><code class="lang-csharp">public double VelocityRapidTraverse { get; set; }
+</code></pre>
+<h5 id="summary-9">Summary</h5>
+<p>Velocity rapid traverse</p>
+<h4 id="positionrangemonitoringenabled">PositionRangeMonitoringEnabled</h4>
+<pre><code class="lang-csharp">public bool PositionRangeMonitoringEnabled { get; set; }
+</code></pre>
+<h5 id="summary-10">Summary</h5>
+<p>Position range monitoring?</p>
+<h4 id="positionrangemonitoringwindow">PositionRangeMonitoringWindow</h4>
+<pre><code class="lang-csharp">public double PositionRangeMonitoringWindow { get; set; }
+</code></pre>
+<h5 id="summary-11">Summary</h5>
+<p>Position range monitoring window</p>
+<h4 id="motionmonitoringenabled">MotionMonitoringEnabled</h4>
+<pre><code class="lang-csharp">public bool MotionMonitoringEnabled { get; set; }
+</code></pre>
+<h5 id="summary-12">Summary</h5>
+<p>Motion monitoring enabled</p>
+<h4 id="motionmonitoringseconds">MotionMonitoringSeconds</h4>
+<pre><code class="lang-csharp">public double MotionMonitoringSeconds { get; set; }
+</code></pre>
+<h5 id="summary-13">Summary</h5>
+<p>Motion monitoring time.</p>
+<h4 id="loopenabled">LoopEnabled</h4>
+<pre><code class="lang-csharp">public bool LoopEnabled { get; set; }
+</code></pre>
+<h5 id="summary-14">Summary</h5>
+<p>Loop enabled</p>
+<h4 id="loopingdistance">LoopingDistance</h4>
+<pre><code class="lang-csharp">public double LoopingDistance { get; set; }
+</code></pre>
+<h5 id="summary-15">Summary</h5>
+<p>Looping distance (±) e.g. mm</p>
+<h4 id="targetpositionmonitoringenabled">TargetPositionMonitoringEnabled</h4>
+<pre><code class="lang-csharp">public bool TargetPositionMonitoringEnabled { get; set; }
+</code></pre>
+<h5 id="summary-16">Summary</h5>
+<p>Target position monitoring enabled</p>
+<h4 id="targetpositionmonitoringwindow">TargetPositionMonitoringWindow</h4>
+<pre><code class="lang-csharp">public double TargetPositionMonitoringWindow { get; set; }
+</code></pre>
+<h5 id="summary-17">Summary</h5>
+<p>Target position monitoring window e.g. mm</p>
+<h4 id="targetpositionmonitoringseconds">TargetPositionMonitoringSeconds</h4>
+<pre><code class="lang-csharp">public double TargetPositionMonitoringSeconds { get; set; }
+</code></pre>
+<h5 id="summary-18">Summary</h5>
+<p>Target position monitoring time in seconds.</p>
+<h4 id="pulsewaypositivedirection">PulseWayPositiveDirection</h4>
+<pre><code class="lang-csharp">public double PulseWayPositiveDirection { get; set; }
+</code></pre>
+<h5 id="summary-19">Summary</h5>
+<p>Pulse way in pos. direction e.g. mm</p>
+<h4 id="pulsewaynegativedirection">PulseWayNegativeDirection</h4>
+<pre><code class="lang-csharp">public double PulseWayNegativeDirection { get; set; }
+</code></pre>
+<h5 id="summary-20">Summary</h5>
+<p>Pulse way in neg. direction e.g. mm</p>
+<h4 id="errorreactionmode">ErrorReactionMode</h4>
+<pre><code class="lang-csharp">public ErrorReactionMode ErrorReactionMode { get; set; }
+</code></pre>
+<h5 id="summary-21">Summary</h5>
+<p>Error reaction mode: 0: instantaneous (default) 1: delayed (e.g. for Master/Slave-coupling)</p>
+<h4 id="errordelayseconds">ErrorDelaySeconds</h4>
+<pre><code class="lang-csharp">public double ErrorDelaySeconds { get; set; }
+</code></pre>
+<h5 id="summary-22">Summary</h5>
+<p>Error delay time (if delayed error reaction is selected)</p>
+<h4 id="channelid">ChannelID</h4>
+<pre><code class="lang-csharp">public uint ChannelID { get; }
+</code></pre>
+<h5 id="summary-23">Summary</h5>
+<p>Channel ID</p>
+<h4 id="channelname">ChannelName</h4>
+<pre><code class="lang-csharp">public string ChannelName { get; }
+</code></pre>
+<h5 id="summary-24">Summary</h5>
+<p>Channel name</p>
+<h4 id="channeltype">ChannelType</h4>
+<pre><code class="lang-csharp">public ChannelType ChannelType { get; }
+</code></pre>
+<h5 id="summary-25">Summary</h5>
+<p>Channel type</p>
+<h4 id="groupid">GroupID</h4>
+<pre><code class="lang-csharp">public uint GroupID { get; }
+</code></pre>
+<h5 id="summary-26">Summary</h5>
+<p>Group ID</p>
+<h4 id="groupname">GroupName</h4>
+<pre><code class="lang-csharp">public string GroupName { get; }
+</code></pre>
+<h5 id="summary-27">Summary</h5>
+<p>Group name</p>
+<h4 id="grouptype">GroupType</h4>
+<pre><code class="lang-csharp">public GroupType GroupType { get; }
+</code></pre>
+<h5 id="summary-28">Summary</h5>
+<p>Group type</p>
+<h4 id="encodercount">EncoderCount</h4>
+<pre><code class="lang-csharp">public uint EncoderCount { get; }
+</code></pre>
+<h5 id="summary-29">Summary</h5>
+<p>Number of encoders that belong to this axis.</p>
+<h4 id="encoderids">EncoderIDs</h4>
+<pre><code class="lang-csharp">public uint EncoderIDs { get; }
+</code></pre>
+<h5 id="summary-30">Summary</h5>
+<p>Axis encoder IDs</p>
+<h4 id="controllercount">ControllerCount</h4>
+<pre><code class="lang-csharp">public uint ControllerCount { get; }
+</code></pre>
+<h5 id="summary-31">Summary</h5>
+<p>Number of controllers that belong to this axis.</p>
+<h4 id="drivecount">DriveCount</h4>
+<pre><code class="lang-csharp">public uint DriveCount { get; }
+</code></pre>
+<h5 id="summary-32">Summary</h5>
+<p>Number of drives that belong to this axis.</p>
+<h4 id="maxpermittedacceleration">MaxPermittedAcceleration</h4>
+<pre><code class="lang-csharp">public double MaxPermittedAcceleration { get; set; }
+</code></pre>
+<h5 id="summary-33">Summary</h5>
+<p>Maximum permitted acceleration</p>
+<h4 id="maxpermitteddeceleration">MaxPermittedDeceleration</h4>
+<pre><code class="lang-csharp">public double MaxPermittedDeceleration { get; set; }
+</code></pre>
+<h5 id="summary-34">Summary</h5>
+<p>Maximum permitted deceleration</p>
+<h4 id="acceleration">Acceleration</h4>
+<pre><code class="lang-csharp">public double Acceleration { get; set; }
+</code></pre>
+<h5 id="summary-35">Summary</h5>
+<p>Default data set (e.g. mm/s^2)</p>
+<h4 id="deceleration">Deceleration</h4>
+<pre><code class="lang-csharp">public double Deceleration { get; set; }
+</code></pre>
+<h5 id="summary-36">Summary</h5>
+<p>Default data set (e.g. mm/s^2)</p>
+<h4 id="jerk">Jerk</h4>
+<pre><code class="lang-csharp">public double Jerk { get; set; }
+</code></pre>
+<h5 id="summary-37">Summary</h5>
+<p>Default data set (e.g. mm/s^3)</p>
+<h4 id="refvelocityatrefoutput">RefVelocityAtRefOutput</h4>
+<pre><code class="lang-csharp">public double RefVelocityAtRefOutput { get; set; }
+</code></pre>
+<h5 id="summary-38">Summary</h5>
+<p>Reference velocity at reference output (velocity pre-control)</p>
+<p><em>Generated with</em> <a href="https://github.com/hailstorm75/ModularDoc"><em>ModularDoc</em></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/AxisParameters.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

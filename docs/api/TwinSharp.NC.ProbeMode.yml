@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.ProbeMode
+  commentId: T:TwinSharp.NC.ProbeMode
+  id: ProbeMode
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.ProbeMode.Continous
+  - TwinSharp.NC.ProbeMode.Single
+  langs:
+  - csharp
+  - vb
+  name: ProbeMode
+  nameWithType: ProbeMode
+  fullName: TwinSharp.NC.ProbeMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbeMode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 685
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of probe modes that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum ProbeMode
+    content.vb: Public Enum ProbeMode
+- uid: TwinSharp.NC.ProbeMode.Single
+  commentId: F:TwinSharp.NC.ProbeMode.Single
+  id: Single
+  parent: TwinSharp.NC.ProbeMode
+  langs:
+  - csharp
+  - vb
+  name: Single
+  nameWithType: ProbeMode.Single
+  fullName: TwinSharp.NC.ProbeMode.Single
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Single
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 688
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Single probe mode.
+  example: []
+  syntax:
+    content: Single = 1
+    return:
+      type: TwinSharp.NC.ProbeMode
+- uid: TwinSharp.NC.ProbeMode.Continous
+  commentId: F:TwinSharp.NC.ProbeMode.Continous
+  id: Continous
+  parent: TwinSharp.NC.ProbeMode
+  langs:
+  - csharp
+  - vb
+  name: Continous
+  nameWithType: ProbeMode.Continous
+  fullName: TwinSharp.NC.ProbeMode.Continous
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Continous
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 691
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Continous probe mode.
+  example: []
+  syntax:
+    content: Continous = 2
+    return:
+      type: TwinSharp.NC.ProbeMode
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.ProbeMode
+  commentId: T:TwinSharp.NC.ProbeMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.ProbeMode.html
+  name: ProbeMode
+  nameWithType: ProbeMode
+  fullName: TwinSharp.NC.ProbeMode

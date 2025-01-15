@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.PLC
+  commentId: N:TwinSharp.PLC
+  id: TwinSharp.PLC
+  children:
+  - TwinSharp.PLC.PLC
+  - TwinSharp.PLC.PlcAppSystemInfo
+  langs:
+  - csharp
+  - vb
+  name: TwinSharp.PLC
+  nameWithType: TwinSharp.PLC
+  fullName: TwinSharp.PLC
+  type: Namespace
+  assemblies:
+  - TwinSharp
+references:
+- uid: TwinSharp.PLC.PLC
+  commentId: T:TwinSharp.PLC.PLC
+  href: TwinSharp.PLC.PLC.html
+  name: PLC
+  nameWithType: PLC
+  fullName: TwinSharp.PLC.PLC
+- uid: TwinSharp.PLC.PlcAppSystemInfo
+  commentId: T:TwinSharp.PLC.PlcAppSystemInfo
+  parent: TwinSharp.PLC
+  href: TwinSharp.PLC.PlcAppSystemInfo.html
+  name: PlcAppSystemInfo
+  nameWithType: PlcAppSystemInfo
+  fullName: TwinSharp.PLC.PlcAppSystemInfo
+- uid: TwinSharp.PLC
+  commentId: N:TwinSharp.PLC
+  href: TwinSharp.html
+  name: TwinSharp.PLC
+  nameWithType: TwinSharp.PLC
+  fullName: TwinSharp.PLC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.PLC
+    name: PLC
+    href: TwinSharp.PLC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.PLC
+    name: PLC
+    href: TwinSharp.PLC.html

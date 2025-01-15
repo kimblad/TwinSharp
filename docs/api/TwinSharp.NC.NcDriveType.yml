@@ -1,0 +1,727 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.NcDriveType
+  commentId: T:TwinSharp.NC.NcDriveType
+  id: NcDriveType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.NcDriveType.AX2000_B200
+  - TwinSharp.NC.NcDriveType.AX2000_B900
+  - TwinSharp.NC.NcDriveType.CANopen_DS402_MDP742
+  - TwinSharp.NC.NcDriveType.CANopen_Lenze
+  - TwinSharp.NC.NcDriveType.Discete_TwoSpeed
+  - TwinSharp.NC.NcDriveType.KL2531_Stepper
+  - TwinSharp.NC.NcDriveType.KL2532_DC
+  - TwinSharp.NC.NcDriveType.KL4xxx
+  - TwinSharp.NC.NcDriveType.KL4xxx_NonLinear
+  - TwinSharp.NC.NcDriveType.KL5051
+  - TwinSharp.NC.NcDriveType.M2400_DAC1
+  - TwinSharp.NC.NcDriveType.M2400_DAC2
+  - TwinSharp.NC.NcDriveType.M2400_DAC3
+  - TwinSharp.NC.NcDriveType.M2400_DAC4
+  - TwinSharp.NC.NcDriveType.MDP_703
+  - TwinSharp.NC.NcDriveType.MDP_733
+  - TwinSharp.NC.NcDriveType.NOT_DEFINED
+  - TwinSharp.NC.NcDriveType.NcBackplane
+  - TwinSharp.NC.NcDriveType.ProfilDrive
+  - TwinSharp.NC.NcDriveType.Sercos
+  - TwinSharp.NC.NcDriveType.Stepper
+  - TwinSharp.NC.NcDriveType.TCOM
+  - TwinSharp.NC.NcDriveType.Universal
+  langs:
+  - csharp
+  - vb
+  name: NcDriveType
+  nameWithType: NcDriveType
+  fullName: TwinSharp.NC.NcDriveType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NcDriveType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 337
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: TwinCAT supports different drives, these are defined in the enum DriveType.
+  example: []
+  syntax:
+    content: public enum NcDriveType
+    content.vb: Public Enum NcDriveType
+- uid: TwinSharp.NC.NcDriveType.NOT_DEFINED
+  commentId: F:TwinSharp.NC.NcDriveType.NOT_DEFINED
+  id: NOT_DEFINED
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: NOT_DEFINED
+  nameWithType: NcDriveType.NOT_DEFINED
+  fullName: TwinSharp.NC.NcDriveType.NOT_DEFINED
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NOT_DEFINED
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 340
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Not defined.
+  example: []
+  syntax:
+    content: NOT_DEFINED = 0
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.M2400_DAC1
+  commentId: F:TwinSharp.NC.NcDriveType.M2400_DAC1
+  id: M2400_DAC1
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: M2400_DAC1
+  nameWithType: NcDriveType.M2400_DAC1
+  fullName: TwinSharp.NC.NcDriveType.M2400_DAC1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: M2400_DAC1
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 343
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'Analog Servo Drive: M2400 DAC 1.'
+  example: []
+  syntax:
+    content: M2400_DAC1 = 1
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.M2400_DAC2
+  commentId: F:TwinSharp.NC.NcDriveType.M2400_DAC2
+  id: M2400_DAC2
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: M2400_DAC2
+  nameWithType: NcDriveType.M2400_DAC2
+  fullName: TwinSharp.NC.NcDriveType.M2400_DAC2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: M2400_DAC2
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 346
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'Analog Servo Drive: M2400 DAC 2.'
+  example: []
+  syntax:
+    content: M2400_DAC2 = 2
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.M2400_DAC3
+  commentId: F:TwinSharp.NC.NcDriveType.M2400_DAC3
+  id: M2400_DAC3
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: M2400_DAC3
+  nameWithType: NcDriveType.M2400_DAC3
+  fullName: TwinSharp.NC.NcDriveType.M2400_DAC3
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: M2400_DAC3
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 349
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'Analog Servo Drive: M2400 DAC 3.'
+  example: []
+  syntax:
+    content: M2400_DAC3 = 3
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.M2400_DAC4
+  commentId: F:TwinSharp.NC.NcDriveType.M2400_DAC4
+  id: M2400_DAC4
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: M2400_DAC4
+  nameWithType: NcDriveType.M2400_DAC4
+  fullName: TwinSharp.NC.NcDriveType.M2400_DAC4
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: M2400_DAC4
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 352
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'Analog Servo Drive: M2400 DAC 4.'
+  example: []
+  syntax:
+    content: M2400_DAC4 = 4
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.KL4xxx
+  commentId: F:TwinSharp.NC.NcDriveType.KL4xxx
+  id: KL4xxx
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: KL4xxx
+  nameWithType: NcDriveType.KL4xxx
+  fullName: TwinSharp.NC.NcDriveType.KL4xxx
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KL4xxx
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 355
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'MDP 252/253: KL4xxx, PWM KL2502_30K (Frq-Cnt pulse mode), KL4132 (16-bit), Pulse-Train KL2521, IP2512-'
+  example: []
+  syntax:
+    content: KL4xxx = 5
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.KL4xxx_NonLinear
+  commentId: F:TwinSharp.NC.NcDriveType.KL4xxx_NonLinear
+  id: KL4xxx_NonLinear
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: KL4xxx_NonLinear
+  nameWithType: NcDriveType.KL4xxx_NonLinear
+  fullName: TwinSharp.NC.NcDriveType.KL4xxx_NonLinear
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KL4xxx_NonLinear
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 358
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'MDP 252/253: analog type for non-linear characteristics.'
+  example: []
+  syntax:
+    content: KL4xxx_NonLinear = 6
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.Discete_TwoSpeed
+  commentId: F:TwinSharp.NC.NcDriveType.Discete_TwoSpeed
+  id: Discete_TwoSpeed
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: Discete_TwoSpeed
+  nameWithType: NcDriveType.Discete_TwoSpeed
+  fullName: TwinSharp.NC.NcDriveType.Discete_TwoSpeed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Discete_TwoSpeed
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 361
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: High/low speed drive (digital)
+  example: []
+  syntax:
+    content: Discete_TwoSpeed = 7
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.Stepper
+  commentId: F:TwinSharp.NC.NcDriveType.Stepper
+  id: Stepper
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: Stepper
+  nameWithType: NcDriveType.Stepper
+  fullName: TwinSharp.NC.NcDriveType.Stepper
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Stepper
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 364
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Stepper motot drive (digital)
+  example: []
+  syntax:
+    content: Stepper = 8
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.Sercos
+  commentId: F:TwinSharp.NC.NcDriveType.Sercos
+  id: Sercos
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: Sercos
+  nameWithType: NcDriveType.Sercos
+  fullName: TwinSharp.NC.NcDriveType.Sercos
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Sercos
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 367
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: SERCOS-Drive (digital)
+  example: []
+  syntax:
+    content: Sercos = 9
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.KL5051
+  commentId: F:TwinSharp.NC.NcDriveType.KL5051
+  id: KL5051
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: KL5051
+  nameWithType: NcDriveType.KL5051
+  fullName: TwinSharp.NC.NcDriveType.KL5051
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KL5051
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 372
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'MDP 510: BISSI Drive KL5051 with 32 bits (see KL4xxx)'
+  example: []
+  syntax:
+    content: KL5051 = 10
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.AX2000_B200
+  commentId: F:TwinSharp.NC.NcDriveType.AX2000_B200
+  id: AX2000_B200
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: AX2000_B200
+  nameWithType: NcDriveType.AX2000_B200
+  fullName: TwinSharp.NC.NcDriveType.AX2000_B200
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AX2000_B200
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 377
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: AX2000-B200 Lightbus, incremental with 32 bits (AX2000)
+  example: []
+  syntax:
+    content: AX2000_B200 = 11
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.ProfilDrive
+  commentId: F:TwinSharp.NC.NcDriveType.ProfilDrive
+  id: ProfilDrive
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: ProfilDrive
+  nameWithType: NcDriveType.ProfilDrive
+  fullName: TwinSharp.NC.NcDriveType.ProfilDrive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProfilDrive
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 382
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Incremental with 32 Bit
+  example: []
+  syntax:
+    content: ProfilDrive = 12
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.Universal
+  commentId: F:TwinSharp.NC.NcDriveType.Universal
+  id: Universal
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: Universal
+  nameWithType: NcDriveType.Universal
+  fullName: TwinSharp.NC.NcDriveType.Universal
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Universal
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 387
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Variable bit mask (max. 32 bits, signed value)
+  example: []
+  syntax:
+    content: Universal = 13
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.NcBackplane
+  commentId: F:TwinSharp.NC.NcDriveType.NcBackplane
+  id: NcBackplane
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: NcBackplane
+  nameWithType: NcDriveType.NcBackplane
+  fullName: TwinSharp.NC.NcDriveType.NcBackplane
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NcBackplane
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 392
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Variable bit mask (max. 32 bits, signed value)
+  example: []
+  syntax:
+    content: NcBackplane = 14
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.CANopen_Lenze
+  commentId: F:TwinSharp.NC.NcDriveType.CANopen_Lenze
+  id: CANopen_Lenze
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: CANopen_Lenze
+  nameWithType: NcDriveType.CANopen_Lenze
+  fullName: TwinSharp.NC.NcDriveType.CANopen_Lenze
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CANopen_Lenze
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 397
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: CANopen Lenze (max. 32 bits, signed value)
+  example: []
+  syntax:
+    content: CANopen_Lenze = 15
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.CANopen_DS402_MDP742
+  commentId: F:TwinSharp.NC.NcDriveType.CANopen_DS402_MDP742
+  id: CANopen_DS402_MDP742
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: CANopen_DS402_MDP742
+  nameWithType: NcDriveType.CANopen_DS402_MDP742
+  fullName: TwinSharp.NC.NcDriveType.CANopen_DS402_MDP742
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CANopen_DS402_MDP742
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 402
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'MDP 742 (DS402): CANopen and EtherCAT (AX2000-B510, AX2000-B1x0, EL7201, AX8000)'
+  example: []
+  syntax:
+    content: CANopen_DS402_MDP742 = 16
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.AX2000_B900
+  commentId: F:TwinSharp.NC.NcDriveType.AX2000_B900
+  id: AX2000_B900
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: AX2000_B900
+  nameWithType: NcDriveType.AX2000_B900
+  fullName: TwinSharp.NC.NcDriveType.AX2000_B900
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AX2000_B900
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 407
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: AX2000-B900 Ethernet (max. 32 bits, signed value)
+  example: []
+  syntax:
+    content: AX2000_B900 = 17
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.KL2531_Stepper
+  commentId: F:TwinSharp.NC.NcDriveType.KL2531_Stepper
+  id: KL2531_Stepper
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: KL2531_Stepper
+  nameWithType: NcDriveType.KL2531_Stepper
+  fullName: TwinSharp.NC.NcDriveType.KL2531_Stepper
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KL2531_Stepper
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 412
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Stepper motor terminal KL2531/KL2541
+  example: []
+  syntax:
+    content: KL2531_Stepper = 20
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.KL2532_DC
+  commentId: F:TwinSharp.NC.NcDriveType.KL2532_DC
+  id: KL2532_DC
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: KL2532_DC
+  nameWithType: NcDriveType.KL2532_DC
+  fullName: TwinSharp.NC.NcDriveType.KL2532_DC
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KL2532_DC
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 417
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 2-channel DC motor stage KL2532/KL2542, 2-channel PWM DC motor stage KL2535/KL2545
+  example: []
+  syntax:
+    content: KL2532_DC = 21
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.TCOM
+  commentId: F:TwinSharp.NC.NcDriveType.TCOM
+  id: TCOM
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: TCOM
+  nameWithType: NcDriveType.TCOM
+  fullName: TwinSharp.NC.NcDriveType.TCOM
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TCOM
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 422
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: TCOM Drive -&gt; Interface to Soft Drive
+  example: []
+  syntax:
+    content: TCOM = 22
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.MDP_733
+  commentId: F:TwinSharp.NC.NcDriveType.MDP_733
+  id: MDP_733
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: MDP_733
+  nameWithType: NcDriveType.MDP_733
+  fullName: TwinSharp.NC.NcDriveType.MDP_733
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MDP_733
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 427
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'MDP 733: Modular Device Profile MDP 733 for DC (e.g. EL7332/EL7342)'
+  example: []
+  syntax:
+    content: MDP_733 = 23
+    return:
+      type: TwinSharp.NC.NcDriveType
+- uid: TwinSharp.NC.NcDriveType.MDP_703
+  commentId: F:TwinSharp.NC.NcDriveType.MDP_703
+  id: MDP_703
+  parent: TwinSharp.NC.NcDriveType
+  langs:
+  - csharp
+  - vb
+  name: MDP_703
+  nameWithType: NcDriveType.MDP_703
+  fullName: TwinSharp.NC.NcDriveType.MDP_703
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MDP_703
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 432
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'MDP 703: Modular Device Profile MDP 703 for stepper (e.g. EL7031/EL7041)'
+  example: []
+  syntax:
+    content: MDP_703 = 24
+    return:
+      type: TwinSharp.NC.NcDriveType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.NcDriveType
+  commentId: T:TwinSharp.NC.NcDriveType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.NcDriveType.html
+  name: NcDriveType
+  nameWithType: NcDriveType
+  fullName: TwinSharp.NC.NcDriveType

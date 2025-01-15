@@ -1,0 +1,1099 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.GroupParameters
+  commentId: T:TwinSharp.NC.GroupParameters
+  id: GroupParameters
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.GroupParameters.FifoDimension
+  - TwinSharp.NC.GroupParameters.FifoInterpolationType
+  - TwinSharp.NC.GroupParameters.FifoLength
+  - TwinSharp.NC.GroupParameters.FifoOverrideType
+  - TwinSharp.NC.GroupParameters.FifoTimeDelta
+  - TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange
+  - TwinSharp.NC.GroupParameters.ID
+  - TwinSharp.NC.GroupParameters.MaxSafEntries
+  - TwinSharp.NC.GroupParameters.MaxSvbEntries
+  - TwinSharp.NC.GroupParameters.Name
+  - TwinSharp.NC.GroupParameters.NumberInTheChannel
+  - TwinSharp.NC.GroupParameters.ParentChannelID
+  - TwinSharp.NC.GroupParameters.ParentChannelName
+  - TwinSharp.NC.GroupParameters.ParentChannelType
+  - TwinSharp.NC.GroupParameters.SafCycleTime
+  - TwinSharp.NC.GroupParameters.SafCycleTimeDivisor
+  - TwinSharp.NC.GroupParameters.SingleBlockOperationMode
+  - TwinSharp.NC.GroupParameters.SvbCycleTime
+  - TwinSharp.NC.GroupParameters.Type
+  langs:
+  - csharp
+  - vb
+  name: GroupParameters
+  nameWithType: GroupParameters
+  fullName: TwinSharp.NC.GroupParameters
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GroupParameters
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 9
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The GroupParameters class provides access to various parameters of a group in the TwinCAT NC system.
+
+    It allows reading and writing of group-specific settings such as ID, name, type, cycle times, and FIFO configurations.
+
+    This class interacts with the TwinCAT ADS client to perform read and write operations on the group parameters.
+  example: []
+  syntax:
+    content: public class GroupParameters
+    content.vb: Public Class GroupParameters
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.NC.GroupParameters.ID
+  commentId: P:TwinSharp.NC.GroupParameters.ID
+  id: ID
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: GroupParameters.ID
+  fullName: TwinSharp.NC.GroupParameters.ID
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ID
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 23
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Group ID
+  example: []
+  syntax:
+    content: public uint ID { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property ID As UInteger
+  overload: TwinSharp.NC.GroupParameters.ID*
+- uid: TwinSharp.NC.GroupParameters.Name
+  commentId: P:TwinSharp.NC.GroupParameters.Name
+  id: Name
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: GroupParameters.Name
+  fullName: TwinSharp.NC.GroupParameters.Name
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Name
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 31
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Group name
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: TwinSharp.NC.GroupParameters.Name*
+- uid: TwinSharp.NC.GroupParameters.Type
+  commentId: P:TwinSharp.NC.GroupParameters.Type
+  id: Type
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: GroupParameters.Type
+  fullName: TwinSharp.NC.GroupParameters.Type
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Type
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 39
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Group type
+  example: []
+  syntax:
+    content: public GroupType Type { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.GroupType
+    content.vb: Public ReadOnly Property Type As GroupType
+  overload: TwinSharp.NC.GroupParameters.Type*
+- uid: TwinSharp.NC.GroupParameters.SafCycleTime
+  commentId: P:TwinSharp.NC.GroupParameters.SafCycleTime
+  id: SafCycleTime
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: SafCycleTime
+  nameWithType: GroupParameters.SafCycleTime
+  fullName: TwinSharp.NC.GroupParameters.SafCycleTime
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SafCycleTime
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 47
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: SAF cycle time group
+  example: []
+  syntax:
+    content: public uint SafCycleTime { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SafCycleTime As UInteger
+  overload: TwinSharp.NC.GroupParameters.SafCycleTime*
+- uid: TwinSharp.NC.GroupParameters.SvbCycleTime
+  commentId: P:TwinSharp.NC.GroupParameters.SvbCycleTime
+  id: SvbCycleTime
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: SvbCycleTime
+  nameWithType: GroupParameters.SvbCycleTime
+  fullName: TwinSharp.NC.GroupParameters.SvbCycleTime
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SvbCycleTime
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 55
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: SVB cycle time group
+  example: []
+  syntax:
+    content: public uint SvbCycleTime { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SvbCycleTime As UInteger
+  overload: TwinSharp.NC.GroupParameters.SvbCycleTime*
+- uid: TwinSharp.NC.GroupParameters.SingleBlockOperationMode
+  commentId: P:TwinSharp.NC.GroupParameters.SingleBlockOperationMode
+  id: SingleBlockOperationMode
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: SingleBlockOperationMode
+  nameWithType: GroupParameters.SingleBlockOperationMode
+  fullName: TwinSharp.NC.GroupParameters.SingleBlockOperationMode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SingleBlockOperationMode
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 63
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Single block operation mode.
+  example: []
+  syntax:
+    content: public bool SingleBlockOperationMode { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SingleBlockOperationMode As Boolean
+  overload: TwinSharp.NC.GroupParameters.SingleBlockOperationMode*
+- uid: TwinSharp.NC.GroupParameters.MaxSvbEntries
+  commentId: P:TwinSharp.NC.GroupParameters.MaxSvbEntries
+  id: MaxSvbEntries
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: MaxSvbEntries
+  nameWithType: GroupParameters.MaxSvbEntries
+  fullName: TwinSharp.NC.GroupParameters.MaxSvbEntries
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MaxSvbEntries
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 80
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Size of the SVB table (max. number of SVB entries
+  example: []
+  syntax:
+    content: public uint MaxSvbEntries { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property MaxSvbEntries As UInteger
+  overload: TwinSharp.NC.GroupParameters.MaxSvbEntries*
+- uid: TwinSharp.NC.GroupParameters.MaxSafEntries
+  commentId: P:TwinSharp.NC.GroupParameters.MaxSafEntries
+  id: MaxSafEntries
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: MaxSafEntries
+  nameWithType: GroupParameters.MaxSafEntries
+  fullName: TwinSharp.NC.GroupParameters.MaxSafEntries
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MaxSafEntries
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 88
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Size of the SAF table (max. number of SAF entries
+  example: []
+  syntax:
+    content: public uint MaxSafEntries { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property MaxSafEntries As UInteger
+  overload: TwinSharp.NC.GroupParameters.MaxSafEntries*
+- uid: TwinSharp.NC.GroupParameters.SafCycleTimeDivisor
+  commentId: P:TwinSharp.NC.GroupParameters.SafCycleTimeDivisor
+  id: SafCycleTimeDivisor
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: SafCycleTimeDivisor
+  nameWithType: GroupParameters.SafCycleTimeDivisor
+  fullName: TwinSharp.NC.GroupParameters.SafCycleTimeDivisor
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SafCycleTimeDivisor
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 96
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Internal SAF cycle time divisor (divides the internal SAF cycle time by this factor)
+  example: []
+  syntax:
+    content: public uint SafCycleTimeDivisor { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SafCycleTimeDivisor As UInteger
+  overload: TwinSharp.NC.GroupParameters.SafCycleTimeDivisor*
+- uid: TwinSharp.NC.GroupParameters.ParentChannelID
+  commentId: P:TwinSharp.NC.GroupParameters.ParentChannelID
+  id: ParentChannelID
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: ParentChannelID
+  nameWithType: GroupParameters.ParentChannelID
+  fullName: TwinSharp.NC.GroupParameters.ParentChannelID
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ParentChannelID
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 104
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Channel ID that this group belongs to.
+  example: []
+  syntax:
+    content: public uint ParentChannelID { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property ParentChannelID As UInteger
+  overload: TwinSharp.NC.GroupParameters.ParentChannelID*
+- uid: TwinSharp.NC.GroupParameters.ParentChannelName
+  commentId: P:TwinSharp.NC.GroupParameters.ParentChannelName
+  id: ParentChannelName
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: ParentChannelName
+  nameWithType: GroupParameters.ParentChannelName
+  fullName: TwinSharp.NC.GroupParameters.ParentChannelName
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ParentChannelName
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 112
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Channel name that this group belongs to.
+  example: []
+  syntax:
+    content: public string ParentChannelName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ParentChannelName As String
+  overload: TwinSharp.NC.GroupParameters.ParentChannelName*
+- uid: TwinSharp.NC.GroupParameters.ParentChannelType
+  commentId: P:TwinSharp.NC.GroupParameters.ParentChannelType
+  id: ParentChannelType
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: ParentChannelType
+  nameWithType: GroupParameters.ParentChannelType
+  fullName: TwinSharp.NC.GroupParameters.ParentChannelType
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ParentChannelType
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 120
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Channel type that this group belongs to.
+  example: []
+  syntax:
+    content: public ChannelType ParentChannelType { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.ChannelType
+    content.vb: Public ReadOnly Property ParentChannelType As ChannelType
+  overload: TwinSharp.NC.GroupParameters.ParentChannelType*
+- uid: TwinSharp.NC.GroupParameters.NumberInTheChannel
+  commentId: P:TwinSharp.NC.GroupParameters.NumberInTheChannel
+  id: NumberInTheChannel
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: NumberInTheChannel
+  nameWithType: GroupParameters.NumberInTheChannel
+  fullName: TwinSharp.NC.GroupParameters.NumberInTheChannel
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NumberInTheChannel
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 128
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Number in the channel
+  example: []
+  syntax:
+    content: public uint NumberInTheChannel { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property NumberInTheChannel As UInteger
+  overload: TwinSharp.NC.GroupParameters.NumberInTheChannel*
+- uid: TwinSharp.NC.GroupParameters.FifoDimension
+  commentId: P:TwinSharp.NC.GroupParameters.FifoDimension
+  id: FifoDimension
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: FifoDimension
+  nameWithType: GroupParameters.FifoDimension
+  fullName: TwinSharp.NC.GroupParameters.FifoDimension
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FifoDimension
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 136
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: FIFO dimension (m = number of axes)
+  example: []
+  syntax:
+    content: public uint FifoDimension { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property FifoDimension As UInteger
+  overload: TwinSharp.NC.GroupParameters.FifoDimension*
+- uid: TwinSharp.NC.GroupParameters.FifoLength
+  commentId: P:TwinSharp.NC.GroupParameters.FifoLength
+  id: FifoLength
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: FifoLength
+  nameWithType: GroupParameters.FifoLength
+  fullName: TwinSharp.NC.GroupParameters.FifoLength
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FifoLength
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 144
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: FIFO size(length) (n = number of FIFO entries)
+  example: []
+  syntax:
+    content: public uint FifoLength { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property FifoLength As UInteger
+  overload: TwinSharp.NC.GroupParameters.FifoLength*
+- uid: TwinSharp.NC.GroupParameters.FifoInterpolationType
+  commentId: P:TwinSharp.NC.GroupParameters.FifoInterpolationType
+  id: FifoInterpolationType
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: FifoInterpolationType
+  nameWithType: GroupParameters.FifoInterpolationType
+  fullName: TwinSharp.NC.GroupParameters.FifoInterpolationType
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FifoInterpolationType
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 152
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Interpolation type for FIFO setpoint generator
+  example: []
+  syntax:
+    content: public FifoInterpolationType FifoInterpolationType { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.FifoInterpolationType
+    content.vb: Public ReadOnly Property FifoInterpolationType As FifoInterpolationType
+  overload: TwinSharp.NC.GroupParameters.FifoInterpolationType*
+- uid: TwinSharp.NC.GroupParameters.FifoOverrideType
+  commentId: P:TwinSharp.NC.GroupParameters.FifoOverrideType
+  id: FifoOverrideType
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: FifoOverrideType
+  nameWithType: GroupParameters.FifoOverrideType
+  fullName: TwinSharp.NC.GroupParameters.FifoOverrideType
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FifoOverrideType
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 160
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Override type for FIFO setpoint generator
+  example: []
+  syntax:
+    content: public FifoOverrideType FifoOverrideType { get; set; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.FifoOverrideType
+    content.vb: Public Property FifoOverrideType As FifoOverrideType
+  overload: TwinSharp.NC.GroupParameters.FifoOverrideType*
+- uid: TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange
+  commentId: P:TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange
+  id: FifoTimeForOverrideChange
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: FifoTimeForOverrideChange
+  nameWithType: GroupParameters.FifoTimeForOverrideChange
+  fullName: TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FifoTimeForOverrideChange
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 169
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: P-T2 time for override change(T1= T2 = T0)
+  example: []
+  syntax:
+    content: public double FifoTimeForOverrideChange { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property FifoTimeForOverrideChange As Double
+  overload: TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange*
+- uid: TwinSharp.NC.GroupParameters.FifoTimeDelta
+  commentId: P:TwinSharp.NC.GroupParameters.FifoTimeDelta
+  id: FifoTimeDelta
+  parent: TwinSharp.NC.GroupParameters
+  langs:
+  - csharp
+  - vb
+  name: FifoTimeDelta
+  nameWithType: GroupParameters.FifoTimeDelta
+  fullName: TwinSharp.NC.GroupParameters.FifoTimeDelta
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupParameters.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FifoTimeDelta
+    path: ../TwinSharp/NC/GroupParameters.cs
+    startLine: 178
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Time delta for two sequenced FIFO entries (FIFO entry timebase)
+  example: []
+  syntax:
+    content: public double FifoTimeDelta { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property FifoTimeDelta As Double
+  overload: TwinSharp.NC.GroupParameters.FifoTimeDelta*
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.NC.GroupParameters.ID*
+  commentId: Overload:TwinSharp.NC.GroupParameters.ID
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_ID
+  name: ID
+  nameWithType: GroupParameters.ID
+  fullName: TwinSharp.NC.GroupParameters.ID
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.NC.GroupParameters.Name*
+  commentId: Overload:TwinSharp.NC.GroupParameters.Name
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_Name
+  name: Name
+  nameWithType: GroupParameters.Name
+  fullName: TwinSharp.NC.GroupParameters.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.NC.GroupParameters.Type*
+  commentId: Overload:TwinSharp.NC.GroupParameters.Type
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_Type
+  name: Type
+  nameWithType: GroupParameters.Type
+  fullName: TwinSharp.NC.GroupParameters.Type
+- uid: TwinSharp.NC.GroupType
+  commentId: T:TwinSharp.NC.GroupType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.GroupType.html
+  name: GroupType
+  nameWithType: GroupType
+  fullName: TwinSharp.NC.GroupType
+- uid: TwinSharp.NC.GroupParameters.SafCycleTime*
+  commentId: Overload:TwinSharp.NC.GroupParameters.SafCycleTime
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_SafCycleTime
+  name: SafCycleTime
+  nameWithType: GroupParameters.SafCycleTime
+  fullName: TwinSharp.NC.GroupParameters.SafCycleTime
+- uid: TwinSharp.NC.GroupParameters.SvbCycleTime*
+  commentId: Overload:TwinSharp.NC.GroupParameters.SvbCycleTime
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_SvbCycleTime
+  name: SvbCycleTime
+  nameWithType: GroupParameters.SvbCycleTime
+  fullName: TwinSharp.NC.GroupParameters.SvbCycleTime
+- uid: TwinSharp.NC.GroupParameters.SingleBlockOperationMode*
+  commentId: Overload:TwinSharp.NC.GroupParameters.SingleBlockOperationMode
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_SingleBlockOperationMode
+  name: SingleBlockOperationMode
+  nameWithType: GroupParameters.SingleBlockOperationMode
+  fullName: TwinSharp.NC.GroupParameters.SingleBlockOperationMode
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TwinSharp.NC.GroupParameters.MaxSvbEntries*
+  commentId: Overload:TwinSharp.NC.GroupParameters.MaxSvbEntries
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_MaxSvbEntries
+  name: MaxSvbEntries
+  nameWithType: GroupParameters.MaxSvbEntries
+  fullName: TwinSharp.NC.GroupParameters.MaxSvbEntries
+- uid: TwinSharp.NC.GroupParameters.MaxSafEntries*
+  commentId: Overload:TwinSharp.NC.GroupParameters.MaxSafEntries
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_MaxSafEntries
+  name: MaxSafEntries
+  nameWithType: GroupParameters.MaxSafEntries
+  fullName: TwinSharp.NC.GroupParameters.MaxSafEntries
+- uid: TwinSharp.NC.GroupParameters.SafCycleTimeDivisor*
+  commentId: Overload:TwinSharp.NC.GroupParameters.SafCycleTimeDivisor
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_SafCycleTimeDivisor
+  name: SafCycleTimeDivisor
+  nameWithType: GroupParameters.SafCycleTimeDivisor
+  fullName: TwinSharp.NC.GroupParameters.SafCycleTimeDivisor
+- uid: TwinSharp.NC.GroupParameters.ParentChannelID*
+  commentId: Overload:TwinSharp.NC.GroupParameters.ParentChannelID
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_ParentChannelID
+  name: ParentChannelID
+  nameWithType: GroupParameters.ParentChannelID
+  fullName: TwinSharp.NC.GroupParameters.ParentChannelID
+- uid: TwinSharp.NC.GroupParameters.ParentChannelName*
+  commentId: Overload:TwinSharp.NC.GroupParameters.ParentChannelName
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_ParentChannelName
+  name: ParentChannelName
+  nameWithType: GroupParameters.ParentChannelName
+  fullName: TwinSharp.NC.GroupParameters.ParentChannelName
+- uid: TwinSharp.NC.GroupParameters.ParentChannelType*
+  commentId: Overload:TwinSharp.NC.GroupParameters.ParentChannelType
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_ParentChannelType
+  name: ParentChannelType
+  nameWithType: GroupParameters.ParentChannelType
+  fullName: TwinSharp.NC.GroupParameters.ParentChannelType
+- uid: TwinSharp.NC.ChannelType
+  commentId: T:TwinSharp.NC.ChannelType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.ChannelType.html
+  name: ChannelType
+  nameWithType: ChannelType
+  fullName: TwinSharp.NC.ChannelType
+- uid: TwinSharp.NC.GroupParameters.NumberInTheChannel*
+  commentId: Overload:TwinSharp.NC.GroupParameters.NumberInTheChannel
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_NumberInTheChannel
+  name: NumberInTheChannel
+  nameWithType: GroupParameters.NumberInTheChannel
+  fullName: TwinSharp.NC.GroupParameters.NumberInTheChannel
+- uid: TwinSharp.NC.GroupParameters.FifoDimension*
+  commentId: Overload:TwinSharp.NC.GroupParameters.FifoDimension
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_FifoDimension
+  name: FifoDimension
+  nameWithType: GroupParameters.FifoDimension
+  fullName: TwinSharp.NC.GroupParameters.FifoDimension
+- uid: TwinSharp.NC.GroupParameters.FifoLength*
+  commentId: Overload:TwinSharp.NC.GroupParameters.FifoLength
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_FifoLength
+  name: FifoLength
+  nameWithType: GroupParameters.FifoLength
+  fullName: TwinSharp.NC.GroupParameters.FifoLength
+- uid: TwinSharp.NC.GroupParameters.FifoInterpolationType*
+  commentId: Overload:TwinSharp.NC.GroupParameters.FifoInterpolationType
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_FifoInterpolationType
+  name: FifoInterpolationType
+  nameWithType: GroupParameters.FifoInterpolationType
+  fullName: TwinSharp.NC.GroupParameters.FifoInterpolationType
+- uid: TwinSharp.NC.FifoInterpolationType
+  commentId: T:TwinSharp.NC.FifoInterpolationType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.FifoInterpolationType.html
+  name: FifoInterpolationType
+  nameWithType: FifoInterpolationType
+  fullName: TwinSharp.NC.FifoInterpolationType
+- uid: TwinSharp.NC.GroupParameters.FifoOverrideType*
+  commentId: Overload:TwinSharp.NC.GroupParameters.FifoOverrideType
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_FifoOverrideType
+  name: FifoOverrideType
+  nameWithType: GroupParameters.FifoOverrideType
+  fullName: TwinSharp.NC.GroupParameters.FifoOverrideType
+- uid: TwinSharp.NC.FifoOverrideType
+  commentId: T:TwinSharp.NC.FifoOverrideType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.FifoOverrideType.html
+  name: FifoOverrideType
+  nameWithType: FifoOverrideType
+  fullName: TwinSharp.NC.FifoOverrideType
+- uid: TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange*
+  commentId: Overload:TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_FifoTimeForOverrideChange
+  name: FifoTimeForOverrideChange
+  nameWithType: GroupParameters.FifoTimeForOverrideChange
+  fullName: TwinSharp.NC.GroupParameters.FifoTimeForOverrideChange
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TwinSharp.NC.GroupParameters.FifoTimeDelta*
+  commentId: Overload:TwinSharp.NC.GroupParameters.FifoTimeDelta
+  href: TwinSharp.NC.GroupParameters.html#TwinSharp_NC_GroupParameters_FifoTimeDelta
+  name: FifoTimeDelta
+  nameWithType: GroupParameters.FifoTimeDelta
+  fullName: TwinSharp.NC.GroupParameters.FifoTimeDelta

@@ -1,0 +1,511 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.ST_FindFileEntry
+  commentId: T:TwinSharp.ST_FindFileEntry
+  id: ST_FindFileEntry
+  parent: TwinSharp
+  children:
+  - TwinSharp.ST_FindFileEntry.AlternateFileName
+  - TwinSharp.ST_FindFileEntry.CreationTime
+  - TwinSharp.ST_FindFileEntry.FileAttributes
+  - TwinSharp.ST_FindFileEntry.FileName
+  - TwinSharp.ST_FindFileEntry.FileSize
+  - TwinSharp.ST_FindFileEntry.LastAccessTime
+  - TwinSharp.ST_FindFileEntry.LastWriteTime
+  langs:
+  - csharp
+  - vb
+  name: ST_FindFileEntry
+  nameWithType: ST_FindFileEntry
+  fullName: TwinSharp.ST_FindFileEntry
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ST_FindFileEntry
+    path: ../TwinSharp/Structs.cs
+    startLine: 432
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: The structure ST_FindFileEntry contains information about a file or directory found by the FindFirstFile and FindNextFile functions.
+  example: []
+  syntax:
+    content: public struct ST_FindFileEntry
+    content.vb: Public Structure ST_FindFileEntry
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.ST_FindFileEntry.FileName
+  commentId: F:TwinSharp.ST_FindFileEntry.FileName
+  id: FileName
+  parent: TwinSharp.ST_FindFileEntry
+  langs:
+  - csharp
+  - vb
+  name: FileName
+  nameWithType: ST_FindFileEntry.FileName
+  fullName: TwinSharp.ST_FindFileEntry.FileName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileName
+    path: ../TwinSharp/Structs.cs
+    startLine: 437
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: 'Zero-terminated string with the name of the file or directory (type: T_MaxString).'
+  example: []
+  syntax:
+    content: public string FileName
+    return:
+      type: System.String
+    content.vb: Public FileName As String
+- uid: TwinSharp.ST_FindFileEntry.AlternateFileName
+  commentId: F:TwinSharp.ST_FindFileEntry.AlternateFileName
+  id: AlternateFileName
+  parent: TwinSharp.ST_FindFileEntry
+  langs:
+  - csharp
+  - vb
+  name: AlternateFileName
+  nameWithType: ST_FindFileEntry.AlternateFileName
+  fullName: TwinSharp.ST_FindFileEntry.AlternateFileName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AlternateFileName
+    path: ../TwinSharp/Structs.cs
+    startLine: 442
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Zero-terminated string with the alternative name of the file or directory in conventional 8.3 format(filename.ext).
+  example: []
+  syntax:
+    content: public string AlternateFileName
+    return:
+      type: System.String
+    content.vb: Public AlternateFileName As String
+- uid: TwinSharp.ST_FindFileEntry.FileAttributes
+  commentId: F:TwinSharp.ST_FindFileEntry.FileAttributes
+  id: FileAttributes
+  parent: TwinSharp.ST_FindFileEntry
+  langs:
+  - csharp
+  - vb
+  name: FileAttributes
+  nameWithType: ST_FindFileEntry.FileAttributes
+  fullName: TwinSharp.ST_FindFileEntry.FileAttributes
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileAttributes
+    path: ../TwinSharp/Structs.cs
+    startLine: 447
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: File attributes.
+  example: []
+  syntax:
+    content: public ST_FileAttributes FileAttributes
+    return:
+      type: TwinSharp.ST_FileAttributes
+    content.vb: Public FileAttributes As ST_FileAttributes
+- uid: TwinSharp.ST_FindFileEntry.FileSize
+  commentId: F:TwinSharp.ST_FindFileEntry.FileSize
+  id: FileSize
+  parent: TwinSharp.ST_FindFileEntry
+  langs:
+  - csharp
+  - vb
+  name: FileSize
+  nameWithType: ST_FindFileEntry.FileSize
+  fullName: TwinSharp.ST_FindFileEntry.FileSize
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileSize
+    path: ../TwinSharp/Structs.cs
+    startLine: 452
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: File size in bytes.
+  example: []
+  syntax:
+    content: public ulong FileSize
+    return:
+      type: System.UInt64
+    content.vb: Public FileSize As ULong
+- uid: TwinSharp.ST_FindFileEntry.CreationTime
+  commentId: F:TwinSharp.ST_FindFileEntry.CreationTime
+  id: CreationTime
+  parent: TwinSharp.ST_FindFileEntry
+  langs:
+  - csharp
+  - vb
+  name: CreationTime
+  nameWithType: ST_FindFileEntry.CreationTime
+  fullName: TwinSharp.ST_FindFileEntry.CreationTime
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CreationTime
+    path: ../TwinSharp/Structs.cs
+    startLine: 457
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Creation time of the file.
+  example: []
+  syntax:
+    content: public DateTime CreationTime
+    return:
+      type: System.DateTime
+    content.vb: Public CreationTime As Date
+- uid: TwinSharp.ST_FindFileEntry.LastAccessTime
+  commentId: F:TwinSharp.ST_FindFileEntry.LastAccessTime
+  id: LastAccessTime
+  parent: TwinSharp.ST_FindFileEntry
+  langs:
+  - csharp
+  - vb
+  name: LastAccessTime
+  nameWithType: ST_FindFileEntry.LastAccessTime
+  fullName: TwinSharp.ST_FindFileEntry.LastAccessTime
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LastAccessTime
+    path: ../TwinSharp/Structs.cs
+    startLine: 462
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: For a file the structure indicates when it was last accessed (read or write). For a directory the structure indicates when it was created.
+  example: []
+  syntax:
+    content: public DateTime LastAccessTime
+    return:
+      type: System.DateTime
+    content.vb: Public LastAccessTime As Date
+- uid: TwinSharp.ST_FindFileEntry.LastWriteTime
+  commentId: F:TwinSharp.ST_FindFileEntry.LastWriteTime
+  id: LastWriteTime
+  parent: TwinSharp.ST_FindFileEntry
+  langs:
+  - csharp
+  - vb
+  name: LastWriteTime
+  nameWithType: ST_FindFileEntry.LastWriteTime
+  fullName: TwinSharp.ST_FindFileEntry.LastWriteTime
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LastWriteTime
+    path: ../TwinSharp/Structs.cs
+    startLine: 467
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Last write time of the file.
+  example: []
+  syntax:
+    content: public DateTime LastWriteTime
+    return:
+      type: System.DateTime
+    content.vb: Public LastWriteTime As Date
+references:
+- uid: TwinSharp
+  commentId: N:TwinSharp
+  href: TwinSharp.html
+  name: TwinSharp
+  nameWithType: TwinSharp
+  fullName: TwinSharp
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.ST_FileAttributes
+  commentId: T:TwinSharp.ST_FileAttributes
+  parent: TwinSharp
+  href: TwinSharp.ST_FileAttributes.html
+  name: ST_FileAttributes
+  nameWithType: ST_FileAttributes
+  fullName: TwinSharp.ST_FileAttributes
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date

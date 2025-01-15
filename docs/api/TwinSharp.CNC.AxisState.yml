@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.AxisState
+  commentId: T:TwinSharp.CNC.AxisState
+  id: AxisState
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.AxisState.HLI_AXIS_ACTIVE
+  - TwinSharp.CNC.AxisState.HLI_AXIS_ERROR
+  - TwinSharp.CNC.AxisState.HLI_AXIS_HOLD
+  - TwinSharp.CNC.AxisState.HLI_AXIS_READY
+  langs:
+  - csharp
+  - vb
+  name: AxisState
+  nameWithType: AxisState
+  fullName: TwinSharp.CNC.AxisState
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisState
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 142
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Enumeration that lists the possible states of an axis.
+  example: []
+  syntax:
+    content: 'public enum AxisState : uint'
+    content.vb: Public Enum AxisState As UInteger
+- uid: TwinSharp.CNC.AxisState.HLI_AXIS_READY
+  commentId: F:TwinSharp.CNC.AxisState.HLI_AXIS_READY
+  id: HLI_AXIS_READY
+  parent: TwinSharp.CNC.AxisState
+  langs:
+  - csharp
+  - vb
+  name: HLI_AXIS_READY
+  nameWithType: AxisState.HLI_AXIS_READY
+  fullName: TwinSharp.CNC.AxisState.HLI_AXIS_READY
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_AXIS_READY
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 147
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: The axis is ready and moves according to the specified command values after a command.
+  example: []
+  syntax:
+    content: HLI_AXIS_READY = 1
+    return:
+      type: TwinSharp.CNC.AxisState
+- uid: TwinSharp.CNC.AxisState.HLI_AXIS_ACTIVE
+  commentId: F:TwinSharp.CNC.AxisState.HLI_AXIS_ACTIVE
+  id: HLI_AXIS_ACTIVE
+  parent: TwinSharp.CNC.AxisState
+  langs:
+  - csharp
+  - vb
+  name: HLI_AXIS_ACTIVE
+  nameWithType: AxisState.HLI_AXIS_ACTIVE
+  fullName: TwinSharp.CNC.AxisState.HLI_AXIS_ACTIVE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_AXIS_ACTIVE
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 152
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: The axis is currently moved by the CNC due to an NC command or manual mode.
+  example: []
+  syntax:
+    content: HLI_AXIS_ACTIVE = 3
+    return:
+      type: TwinSharp.CNC.AxisState
+- uid: TwinSharp.CNC.AxisState.HLI_AXIS_HOLD
+  commentId: F:TwinSharp.CNC.AxisState.HLI_AXIS_HOLD
+  id: HLI_AXIS_HOLD
+  parent: TwinSharp.CNC.AxisState
+  langs:
+  - csharp
+  - vb
+  name: HLI_AXIS_HOLD
+  nameWithType: AxisState.HLI_AXIS_HOLD
+  fullName: TwinSharp.CNC.AxisState.HLI_AXIS_HOLD
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_AXIS_HOLD
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 157
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: The CNC cannot move the axis because an external signal is set, such as feedhold or tracking mode, or the required drive enables are missing.
+  example: []
+  syntax:
+    content: HLI_AXIS_HOLD = 5
+    return:
+      type: TwinSharp.CNC.AxisState
+- uid: TwinSharp.CNC.AxisState.HLI_AXIS_ERROR
+  commentId: F:TwinSharp.CNC.AxisState.HLI_AXIS_ERROR
+  id: HLI_AXIS_ERROR
+  parent: TwinSharp.CNC.AxisState
+  langs:
+  - csharp
+  - vb
+  name: HLI_AXIS_ERROR
+  nameWithType: AxisState.HLI_AXIS_ERROR
+  fullName: TwinSharp.CNC.AxisState.HLI_AXIS_ERROR
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_AXIS_ERROR
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 162
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: After an error (in the drive or CNC, e.g. a software limit switch violation) the axis is in error state. Commanding a new motion is only possible after a CNC reset.
+  example: []
+  syntax:
+    content: HLI_AXIS_ERROR = 7
+    return:
+      type: TwinSharp.CNC.AxisState
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.AxisState
+  commentId: T:TwinSharp.CNC.AxisState
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisState.html
+  name: AxisState
+  nameWithType: AxisState
+  fullName: TwinSharp.CNC.AxisState

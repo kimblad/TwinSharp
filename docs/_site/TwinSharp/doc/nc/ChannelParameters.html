@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>ChannelParameters Public class | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="ChannelParameters Public class | TwinSharp ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/ChannelParameters.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="channelparameters-public-class">ChannelParameters <code>Public class</code></h1>
+
+<h2 id="description">Description</h2>
+<p>Represents the parameters of a channel in the TwinCAT NC system.
+This class provides properties to access various channel parameters such as ID, Name, Type, InterpreterType,
+ProgramLoadBufferSize, ProgramNumberJobList, InterpolationLoadLogMode, InterpolationTraceMode,
+RecordAllFeederEntries, NcLoggerLevel, G70Factor, G71Factor, ActivationOfDefaultGcode, and GroupId.
+These properties interact with the TwinCAT ADS client to read and write the respective values.</p>
+<h2 id="diagram">Diagram</h2>
+<pre><code class="lang-mermaid">  flowchart LR
+  classDef interfaceStyle stroke-dasharray: 5 5;
+  classDef abstractStyle stroke-width:4px
+  subgraph TwinSharp.NC
+  TwinSharp.NC.ChannelParameters[[ChannelParameters]]
+  end
+</code></pre>
+<h2 id="members">Members</h2>
+<h3 id="properties">Properties</h3>
+<h4 id="public--properties">Public  properties</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#activationofdefaultgcode"><code>ActivationOfDefaultGcode</code></a><br>Activation of default G-code. 0/1 default: FALSE</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#g70factor"><code>G70Factor</code></a><br>Factor for G70.</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#g71factor"><code>G71Factor</code></a><br>Factor for G71.</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#groupid"><code>GroupId</code></a><br>Group ID (only explicit for 3D and FIFO channel)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#id"><code>ID</code></a><br>Channel ID</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="InterpolationLoadLogMode.html"><code>InterpolationLoadLogMode</code></a></td>
+<td><a href="#interpolationloadlogmode"><code>InterpolationLoadLogMode</code></a><br>Load log mode</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><a href="InterpolationTraceMode.html"><code>InterpolationTraceMode</code></a></td>
+<td><a href="#interpolationtracemode"><code>InterpolationTraceMode</code></a><br>Trace mode</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><a href="InterpreterType.html"><code>InterpreterType</code></a></td>
+<td><a href="#interpretertype"><code>InterpreterType</code></a><br>Interpreter type</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#name"><code>Name</code></a><br>Channel name</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#ncloggerlevel"><code>NcLoggerLevel</code></a><br>Channel specific level for NC logger messages 0: errors only 1: all NC messages</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#programloadbuffersize"><code>ProgramLoadBufferSize</code></a><br>Program load buffer size in bytes</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#programnumberjoblist"><code>ProgramNumberJobList</code></a><br>Program no. according to job list</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#recordallfeederentries"><code>RecordAllFeederEntries</code></a><br>Records all feeder entries in a log file named &quot;TcNci.log&quot;</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><a href="ChannelType.html"><code>ChannelType</code></a></td>
+<td><a href="#type"><code>Type</code></a><br>Channel type</td>
+<td><code>get</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<h3 id="summary">Summary</h3>
+<p>Represents the parameters of a channel in the TwinCAT NC system.
+This class provides properties to access various channel parameters such as ID, Name, Type, InterpreterType,
+ProgramLoadBufferSize, ProgramNumberJobList, InterpolationLoadLogMode, InterpolationTraceMode,
+RecordAllFeederEntries, NcLoggerLevel, G70Factor, G71Factor, ActivationOfDefaultGcode, and GroupId.
+These properties interact with the TwinCAT ADS client to read and write the respective values.</p>
+<h3 id="constructors">Constructors</h3>
+<h4 id="channelparameters">ChannelParameters</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelParameters.cs#L17"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">internal ChannelParameters(AdsClient client, uint id)
+</code></pre>
+<h5 id="arguments">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AdsClient</code></td>
+<td>client</td>
+<td></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties-1">Properties</h3>
+<h4 id="id">ID</h4>
+<pre><code class="lang-csharp">public uint ID { get; }
+</code></pre>
+<h5 id="summary-1">Summary</h5>
+<p>Channel ID</p>
+<h4 id="name">Name</h4>
+<pre><code class="lang-csharp">public string Name { get; }
+</code></pre>
+<h5 id="summary-2">Summary</h5>
+<p>Channel name</p>
+<h4 id="type">Type</h4>
+<pre><code class="lang-csharp">public ChannelType Type { get; }
+</code></pre>
+<h5 id="summary-3">Summary</h5>
+<p>Channel type</p>
+<h4 id="interpretertype">InterpreterType</h4>
+<pre><code class="lang-csharp">public InterpreterType InterpreterType { get; }
+</code></pre>
+<h5 id="summary-4">Summary</h5>
+<p>Interpreter type</p>
+<h4 id="programloadbuffersize">ProgramLoadBufferSize</h4>
+<pre><code class="lang-csharp">public uint ProgramLoadBufferSize { get; }
+</code></pre>
+<h5 id="summary-5">Summary</h5>
+<p>Program load buffer size in bytes</p>
+<h4 id="programnumberjoblist">ProgramNumberJobList</h4>
+<pre><code class="lang-csharp">public uint ProgramNumberJobList { get; }
+</code></pre>
+<h5 id="summary-6">Summary</h5>
+<p>Program no. according to job list</p>
+<h4 id="interpolationloadlogmode">InterpolationLoadLogMode</h4>
+<pre><code class="lang-csharp">public InterpolationLoadLogMode InterpolationLoadLogMode { get; set; }
+</code></pre>
+<h5 id="summary-7">Summary</h5>
+<p>Load log mode</p>
+<h4 id="interpolationtracemode">InterpolationTraceMode</h4>
+<pre><code class="lang-csharp">public InterpolationTraceMode InterpolationTraceMode { get; set; }
+</code></pre>
+<h5 id="summary-8">Summary</h5>
+<p>Trace mode</p>
+<h4 id="recordallfeederentries">RecordAllFeederEntries</h4>
+<pre><code class="lang-csharp">public uint RecordAllFeederEntries { get; set; }
+</code></pre>
+<h5 id="summary-9">Summary</h5>
+<p>Records all feeder entries in a log file named &quot;TcNci.log&quot;</p>
+<h4 id="ncloggerlevel">NcLoggerLevel</h4>
+<pre><code class="lang-csharp">public uint NcLoggerLevel { get; set; }
+</code></pre>
+<h5 id="summary-10">Summary</h5>
+<p>Channel specific level for NC logger messages 0: errors only 1: all NC messages</p>
+<h4 id="g70factor">G70Factor</h4>
+<pre><code class="lang-csharp">public double G70Factor { get; set; }
+</code></pre>
+<h5 id="summary-11">Summary</h5>
+<p>Factor for G70.</p>
+<h4 id="g71factor">G71Factor</h4>
+<pre><code class="lang-csharp">public double G71Factor { get; set; }
+</code></pre>
+<h5 id="summary-12">Summary</h5>
+<p>Factor for G71.</p>
+<h4 id="activationofdefaultgcode">ActivationOfDefaultGcode</h4>
+<pre><code class="lang-csharp">public ushort ActivationOfDefaultGcode { get; set; }
+</code></pre>
+<h5 id="summary-13">Summary</h5>
+<p>Activation of default G-code. 0/1 default: FALSE</p>
+<h4 id="groupid">GroupId</h4>
+<pre><code class="lang-csharp">public uint GroupId { get; }
+</code></pre>
+<h5 id="summary-14">Summary</h5>
+<p>Group ID (only explicit for 3D and FIFO channel)</p>
+<p><em>Generated with</em> <a href="https://github.com/hailstorm75/ModularDoc"><em>ModularDoc</em></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/ChannelParameters.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

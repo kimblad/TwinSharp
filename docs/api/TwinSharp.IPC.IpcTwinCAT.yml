@@ -1,0 +1,883 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.IPC.IpcTwinCAT
+  commentId: T:TwinSharp.IPC.IpcTwinCAT
+  id: IpcTwinCAT
+  parent: TwinSharp.IPC
+  children:
+  - TwinSharp.IPC.IpcTwinCAT.AmsNetID
+  - TwinSharp.IPC.IpcTwinCAT.BuildNumber
+  - TwinSharp.IPC.IpcTwinCAT.Length
+  - TwinSharp.IPC.IpcTwinCAT.LogFilePath
+  - TwinSharp.IPC.IpcTwinCAT.LogFileSize
+  - TwinSharp.IPC.IpcTwinCAT.MajorVersion
+  - TwinSharp.IPC.IpcTwinCAT.MinorVersion
+  - TwinSharp.IPC.IpcTwinCAT.RegLevel
+  - TwinSharp.IPC.IpcTwinCAT.Revision
+  - TwinSharp.IPC.IpcTwinCAT.RunAsDevice
+  - TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange
+  - TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu
+  - TwinSharp.IPC.IpcTwinCAT.Status
+  - TwinSharp.IPC.IpcTwinCAT.SystemID
+  langs:
+  - csharp
+  - vb
+  name: IpcTwinCAT
+  nameWithType: IpcTwinCAT
+  fullName: TwinSharp.IPC.IpcTwinCAT
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: IpcTwinCAT
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 10
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: >-
+    The IpcTwinCAT class provides an interface to interact with a TwinCAT system using an AdsClient.
+
+    It allows reading various system properties such as version, status, and configuration details.
+
+    The class handles specific TwinCAT system attributes and provides methods to read these attributes
+
+    from the TwinCAT system using ADS (Automation Device Specification) protocol.
+  example: []
+  syntax:
+    content: public class IpcTwinCAT
+    content.vb: Public Class IpcTwinCAT
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.IPC.IpcTwinCAT.Length
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.Length
+  id: Length
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: IpcTwinCAT.Length
+  fullName: TwinSharp.IPC.IpcTwinCAT.Length
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Length
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 30
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Length of the structure
+  example: []
+  syntax:
+    content: public ushort Length { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property Length As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.Length*
+- uid: TwinSharp.IPC.IpcTwinCAT.MajorVersion
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.MajorVersion
+  id: MajorVersion
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: MajorVersion
+  nameWithType: IpcTwinCAT.MajorVersion
+  fullName: TwinSharp.IPC.IpcTwinCAT.MajorVersion
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MajorVersion
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 38
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: TwinCAT major version.
+  example: []
+  syntax:
+    content: public ushort MajorVersion { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property MajorVersion As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.MajorVersion*
+- uid: TwinSharp.IPC.IpcTwinCAT.MinorVersion
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.MinorVersion
+  id: MinorVersion
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: MinorVersion
+  nameWithType: IpcTwinCAT.MinorVersion
+  fullName: TwinSharp.IPC.IpcTwinCAT.MinorVersion
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MinorVersion
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 46
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: TwinCAT minor version.
+  example: []
+  syntax:
+    content: public ushort MinorVersion { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property MinorVersion As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.MinorVersion*
+- uid: TwinSharp.IPC.IpcTwinCAT.BuildNumber
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.BuildNumber
+  id: BuildNumber
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: BuildNumber
+  nameWithType: IpcTwinCAT.BuildNumber
+  fullName: TwinSharp.IPC.IpcTwinCAT.BuildNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BuildNumber
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 54
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: TwinCAT build number.
+  example: []
+  syntax:
+    content: public ushort BuildNumber { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property BuildNumber As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.BuildNumber*
+- uid: TwinSharp.IPC.IpcTwinCAT.AmsNetID
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.AmsNetID
+  id: AmsNetID
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: AmsNetID
+  nameWithType: IpcTwinCAT.AmsNetID
+  fullName: TwinSharp.IPC.IpcTwinCAT.AmsNetID
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AmsNetID
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 62
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: AMS Net ID of the TwinCAT system. A restart of the computer is required in order to make a change to the Ams Net ID.
+  example: []
+  syntax:
+    content: public string AmsNetID { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property AmsNetID As String
+  overload: TwinSharp.IPC.IpcTwinCAT.AmsNetID*
+- uid: TwinSharp.IPC.IpcTwinCAT.RegLevel
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.RegLevel
+  id: RegLevel
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: RegLevel
+  nameWithType: IpcTwinCAT.RegLevel
+  fullName: TwinSharp.IPC.IpcTwinCAT.RegLevel
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RegLevel
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 70
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Only for TwinCAT 2.
+  example: []
+  syntax:
+    content: public uint RegLevel { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property RegLevel As UInteger
+  overload: TwinSharp.IPC.IpcTwinCAT.RegLevel*
+- uid: TwinSharp.IPC.IpcTwinCAT.Status
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.Status
+  id: Status
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: IpcTwinCAT.Status
+  fullName: TwinSharp.IPC.IpcTwinCAT.Status
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Status
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 96
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Status of the TwinCAT system.
+  example: []
+  syntax:
+    content: public ushort Status { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property Status As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.Status*
+- uid: TwinSharp.IPC.IpcTwinCAT.RunAsDevice
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.RunAsDevice
+  id: RunAsDevice
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: RunAsDevice
+  nameWithType: IpcTwinCAT.RunAsDevice
+  fullName: TwinSharp.IPC.IpcTwinCAT.RunAsDevice
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RunAsDevice
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 104
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Only for WindowsCE
+  example: []
+  syntax:
+    content: public ushort RunAsDevice { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property RunAsDevice As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.RunAsDevice*
+- uid: TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu
+  id: ShowTargetVisu
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: ShowTargetVisu
+  nameWithType: IpcTwinCAT.ShowTargetVisu
+  fullName: TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ShowTargetVisu
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 130
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Only for WindowsCE
+  example: []
+  syntax:
+    content: public ushort ShowTargetVisu { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property ShowTargetVisu As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu*
+- uid: TwinSharp.IPC.IpcTwinCAT.LogFileSize
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.LogFileSize
+  id: LogFileSize
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: LogFileSize
+  nameWithType: IpcTwinCAT.LogFileSize
+  fullName: TwinSharp.IPC.IpcTwinCAT.LogFileSize
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LogFileSize
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 156
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Only for WindowsCE
+  example: []
+  syntax:
+    content: public uint LogFileSize { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property LogFileSize As UInteger
+  overload: TwinSharp.IPC.IpcTwinCAT.LogFileSize*
+- uid: TwinSharp.IPC.IpcTwinCAT.LogFilePath
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.LogFilePath
+  id: LogFilePath
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: LogFilePath
+  nameWithType: IpcTwinCAT.LogFilePath
+  fullName: TwinSharp.IPC.IpcTwinCAT.LogFilePath
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LogFilePath
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 182
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Only for WindowsCE
+  example: []
+  syntax:
+    content: public string LogFilePath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property LogFilePath As String
+  overload: TwinSharp.IPC.IpcTwinCAT.LogFilePath*
+- uid: TwinSharp.IPC.IpcTwinCAT.SystemID
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.SystemID
+  id: SystemID
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: SystemID
+  nameWithType: IpcTwinCAT.SystemID
+  fullName: TwinSharp.IPC.IpcTwinCAT.SystemID
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SystemID
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 208
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: TwinCAT System ID
+  example: []
+  syntax:
+    content: public string SystemID { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SystemID As String
+  overload: TwinSharp.IPC.IpcTwinCAT.SystemID*
+- uid: TwinSharp.IPC.IpcTwinCAT.Revision
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.Revision
+  id: Revision
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: Revision
+  nameWithType: IpcTwinCAT.Revision
+  fullName: TwinSharp.IPC.IpcTwinCAT.Revision
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Revision
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 216
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: TwinCAT Revision
+  example: []
+  syntax:
+    content: public ushort Revision { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property Revision As UShort
+  overload: TwinSharp.IPC.IpcTwinCAT.Revision*
+- uid: TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange
+  commentId: P:TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange
+  id: SecondsSinceLastStatusChange
+  parent: TwinSharp.IPC.IpcTwinCAT
+  langs:
+  - csharp
+  - vb
+  name: SecondsSinceLastStatusChange
+  nameWithType: IpcTwinCAT.SecondsSinceLastStatusChange
+  fullName: TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcTwinCAT.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SecondsSinceLastStatusChange
+    path: ../TwinSharp/IPC/IpcTwinCAT.cs
+    startLine: 224
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Seconds since last TwinCAT status change
+  example: []
+  syntax:
+    content: public ulong SecondsSinceLastStatusChange { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property SecondsSinceLastStatusChange As ULong
+  overload: TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange*
+references:
+- uid: TwinSharp.IPC
+  commentId: N:TwinSharp.IPC
+  href: TwinSharp.html
+  name: TwinSharp.IPC
+  nameWithType: TwinSharp.IPC
+  fullName: TwinSharp.IPC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.IPC
+    name: IPC
+    href: TwinSharp.IPC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.IPC
+    name: IPC
+    href: TwinSharp.IPC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.IPC.IpcTwinCAT.Length*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.Length
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_Length
+  name: Length
+  nameWithType: IpcTwinCAT.Length
+  fullName: TwinSharp.IPC.IpcTwinCAT.Length
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: TwinSharp.IPC.IpcTwinCAT.MajorVersion*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.MajorVersion
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_MajorVersion
+  name: MajorVersion
+  nameWithType: IpcTwinCAT.MajorVersion
+  fullName: TwinSharp.IPC.IpcTwinCAT.MajorVersion
+- uid: TwinSharp.IPC.IpcTwinCAT.MinorVersion*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.MinorVersion
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_MinorVersion
+  name: MinorVersion
+  nameWithType: IpcTwinCAT.MinorVersion
+  fullName: TwinSharp.IPC.IpcTwinCAT.MinorVersion
+- uid: TwinSharp.IPC.IpcTwinCAT.BuildNumber*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.BuildNumber
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_BuildNumber
+  name: BuildNumber
+  nameWithType: IpcTwinCAT.BuildNumber
+  fullName: TwinSharp.IPC.IpcTwinCAT.BuildNumber
+- uid: TwinSharp.IPC.IpcTwinCAT.AmsNetID*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.AmsNetID
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_AmsNetID
+  name: AmsNetID
+  nameWithType: IpcTwinCAT.AmsNetID
+  fullName: TwinSharp.IPC.IpcTwinCAT.AmsNetID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.IPC.IpcTwinCAT.RegLevel*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.RegLevel
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_RegLevel
+  name: RegLevel
+  nameWithType: IpcTwinCAT.RegLevel
+  fullName: TwinSharp.IPC.IpcTwinCAT.RegLevel
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.IPC.IpcTwinCAT.Status*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.Status
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_Status
+  name: Status
+  nameWithType: IpcTwinCAT.Status
+  fullName: TwinSharp.IPC.IpcTwinCAT.Status
+- uid: TwinSharp.IPC.IpcTwinCAT.RunAsDevice*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.RunAsDevice
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_RunAsDevice
+  name: RunAsDevice
+  nameWithType: IpcTwinCAT.RunAsDevice
+  fullName: TwinSharp.IPC.IpcTwinCAT.RunAsDevice
+- uid: TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_ShowTargetVisu
+  name: ShowTargetVisu
+  nameWithType: IpcTwinCAT.ShowTargetVisu
+  fullName: TwinSharp.IPC.IpcTwinCAT.ShowTargetVisu
+- uid: TwinSharp.IPC.IpcTwinCAT.LogFileSize*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.LogFileSize
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_LogFileSize
+  name: LogFileSize
+  nameWithType: IpcTwinCAT.LogFileSize
+  fullName: TwinSharp.IPC.IpcTwinCAT.LogFileSize
+- uid: TwinSharp.IPC.IpcTwinCAT.LogFilePath*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.LogFilePath
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_LogFilePath
+  name: LogFilePath
+  nameWithType: IpcTwinCAT.LogFilePath
+  fullName: TwinSharp.IPC.IpcTwinCAT.LogFilePath
+- uid: TwinSharp.IPC.IpcTwinCAT.SystemID*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.SystemID
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_SystemID
+  name: SystemID
+  nameWithType: IpcTwinCAT.SystemID
+  fullName: TwinSharp.IPC.IpcTwinCAT.SystemID
+- uid: TwinSharp.IPC.IpcTwinCAT.Revision*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.Revision
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_Revision
+  name: Revision
+  nameWithType: IpcTwinCAT.Revision
+  fullName: TwinSharp.IPC.IpcTwinCAT.Revision
+- uid: TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange*
+  commentId: Overload:TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange
+  href: TwinSharp.IPC.IpcTwinCAT.html#TwinSharp_IPC_IpcTwinCAT_SecondsSinceLastStatusChange
+  name: SecondsSinceLastStatusChange
+  nameWithType: IpcTwinCAT.SecondsSinceLastStatusChange
+  fullName: TwinSharp.IPC.IpcTwinCAT.SecondsSinceLastStatusChange
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

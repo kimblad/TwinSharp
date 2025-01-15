@@ -1,0 +1,493 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.RTimeCpuSettings
+  commentId: T:TwinSharp.RTimeCpuSettings
+  id: RTimeCpuSettings
+  parent: TwinSharp
+  children:
+  - TwinSharp.RTimeCpuSettings.AffinityMask
+  - TwinSharp.RTimeCpuSettings.CpuFamily
+  - TwinSharp.RTimeCpuSettings.CpuFreq
+  - TwinSharp.RTimeCpuSettings.CpuType
+  - TwinSharp.RTimeCpuSettings.NonWinCPUs
+  - TwinSharp.RTimeCpuSettings.RtCpus
+  - TwinSharp.RTimeCpuSettings.WinCPUs
+  langs:
+  - csharp
+  - vb
+  name: RTimeCpuSettings
+  nameWithType: RTimeCpuSettings
+  fullName: TwinSharp.RTimeCpuSettings
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RTimeCpuSettings
+    path: ../TwinSharp/Structs.cs
+    startLine: 7
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Struct that describes the amount of Windows (shared) cores and isolated cores for TwinCAT.
+  example: []
+  syntax:
+    content: public struct RTimeCpuSettings
+    content.vb: Public Structure RTimeCpuSettings
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.RTimeCpuSettings.WinCPUs
+  commentId: F:TwinSharp.RTimeCpuSettings.WinCPUs
+  id: WinCPUs
+  parent: TwinSharp.RTimeCpuSettings
+  langs:
+  - csharp
+  - vb
+  name: WinCPUs
+  nameWithType: RTimeCpuSettings.WinCPUs
+  fullName: TwinSharp.RTimeCpuSettings.WinCPUs
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WinCPUs
+    path: ../TwinSharp/Structs.cs
+    startLine: 10
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Number of Windows (shared) cores.
+  example: []
+  syntax:
+    content: public uint WinCPUs
+    return:
+      type: System.UInt32
+    content.vb: Public WinCPUs As UInteger
+- uid: TwinSharp.RTimeCpuSettings.NonWinCPUs
+  commentId: F:TwinSharp.RTimeCpuSettings.NonWinCPUs
+  id: NonWinCPUs
+  parent: TwinSharp.RTimeCpuSettings
+  langs:
+  - csharp
+  - vb
+  name: NonWinCPUs
+  nameWithType: RTimeCpuSettings.NonWinCPUs
+  fullName: TwinSharp.RTimeCpuSettings.NonWinCPUs
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NonWinCPUs
+    path: ../TwinSharp/Structs.cs
+    startLine: 13
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Number of non windows cores.
+  example: []
+  syntax:
+    content: public uint NonWinCPUs
+    return:
+      type: System.UInt32
+    content.vb: Public NonWinCPUs As UInteger
+- uid: TwinSharp.RTimeCpuSettings.AffinityMask
+  commentId: F:TwinSharp.RTimeCpuSettings.AffinityMask
+  id: AffinityMask
+  parent: TwinSharp.RTimeCpuSettings
+  langs:
+  - csharp
+  - vb
+  name: AffinityMask
+  nameWithType: RTimeCpuSettings.AffinityMask
+  fullName: TwinSharp.RTimeCpuSettings.AffinityMask
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AffinityMask
+    path: ../TwinSharp/Structs.cs
+    startLine: 16
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Affinity mask.
+  example: []
+  syntax:
+    content: public ulong AffinityMask
+    return:
+      type: System.UInt64
+    content.vb: Public AffinityMask As ULong
+- uid: TwinSharp.RTimeCpuSettings.RtCpus
+  commentId: F:TwinSharp.RTimeCpuSettings.RtCpus
+  id: RtCpus
+  parent: TwinSharp.RTimeCpuSettings
+  langs:
+  - csharp
+  - vb
+  name: RtCpus
+  nameWithType: RTimeCpuSettings.RtCpus
+  fullName: TwinSharp.RTimeCpuSettings.RtCpus
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RtCpus
+    path: ../TwinSharp/Structs.cs
+    startLine: 19
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Number of real time cores.
+  example: []
+  syntax:
+    content: public uint RtCpus
+    return:
+      type: System.UInt32
+    content.vb: Public RtCpus As UInteger
+- uid: TwinSharp.RTimeCpuSettings.CpuType
+  commentId: F:TwinSharp.RTimeCpuSettings.CpuType
+  id: CpuType
+  parent: TwinSharp.RTimeCpuSettings
+  langs:
+  - csharp
+  - vb
+  name: CpuType
+  nameWithType: RTimeCpuSettings.CpuType
+  fullName: TwinSharp.RTimeCpuSettings.CpuType
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CpuType
+    path: ../TwinSharp/Structs.cs
+    startLine: 22
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: CPU type.
+  example: []
+  syntax:
+    content: public uint CpuType
+    return:
+      type: System.UInt32
+    content.vb: Public CpuType As UInteger
+- uid: TwinSharp.RTimeCpuSettings.CpuFamily
+  commentId: F:TwinSharp.RTimeCpuSettings.CpuFamily
+  id: CpuFamily
+  parent: TwinSharp.RTimeCpuSettings
+  langs:
+  - csharp
+  - vb
+  name: CpuFamily
+  nameWithType: RTimeCpuSettings.CpuFamily
+  fullName: TwinSharp.RTimeCpuSettings.CpuFamily
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CpuFamily
+    path: ../TwinSharp/Structs.cs
+    startLine: 25
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: CPU family.
+  example: []
+  syntax:
+    content: public uint CpuFamily
+    return:
+      type: System.UInt32
+    content.vb: Public CpuFamily As UInteger
+- uid: TwinSharp.RTimeCpuSettings.CpuFreq
+  commentId: F:TwinSharp.RTimeCpuSettings.CpuFreq
+  id: CpuFreq
+  parent: TwinSharp.RTimeCpuSettings
+  langs:
+  - csharp
+  - vb
+  name: CpuFreq
+  nameWithType: RTimeCpuSettings.CpuFreq
+  fullName: TwinSharp.RTimeCpuSettings.CpuFreq
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CpuFreq
+    path: ../TwinSharp/Structs.cs
+    startLine: 28
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: CPU frequency.
+  example: []
+  syntax:
+    content: public uint CpuFreq
+    return:
+      type: System.UInt32
+    content.vb: Public CpuFreq As UInteger
+references:
+- uid: TwinSharp
+  commentId: N:TwinSharp
+  href: TwinSharp.html
+  name: TwinSharp
+  nameWithType: TwinSharp
+  fullName: TwinSharp
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong

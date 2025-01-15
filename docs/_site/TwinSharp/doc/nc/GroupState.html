@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>GroupState Public class | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="GroupState Public class | TwinSharp ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/GroupState.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="groupstate-public-class">GroupState <code>Public class</code></h1>
+
+<h2 id="description">Description</h2>
+<p>The GroupState class provides properties to interact with and retrieve various states and information
+from a TwinCAT NC group via an AdsClient. It includes properties for error codes, axis counts, group states,
+and emergency stop status, among others. Each property reads or writes data from the TwinCAT system using
+specific index groups and offsets.</p>
+<h2 id="diagram">Diagram</h2>
+<pre><code class="lang-mermaid">  flowchart LR
+  classDef interfaceStyle stroke-dasharray: 5 5;
+  classDef abstractStyle stroke-width:4px
+  subgraph TwinSharp.NC
+  TwinSharp.NC.GroupState[[GroupState]]
+  end
+</code></pre>
+<h2 id="members">Members</h2>
+<h3 id="properties">Properties</h3>
+<h4 id="public--properties">Public  properties</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#couplingstate"><code>CouplingState</code></a><br>Coupling state (state)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#couplingtableindex"><code>CouplingTableIndex</code></a><br>Coupling table index</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#currentblocknumber"><code>CurrentBlockNumber</code></a><br>Current block number (only active for interpolation group)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#currentfreesafentries"><code>CurrentFreeSafEntries</code></a><br>Current number of free SAF entries/tasks</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#currentfreesvbentries"><code>CurrentFreeSvbEntries</code></a><br>Current number of free SVB entries/tasks</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#currentsafentries"><code>CurrentSafEntries</code></a><br>Current number of SAF entries/tasks</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#currentsvbentries"><code>CurrentSvbEntries</code></a><br>Current number of SVB entries/tasks</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><a href="#emergencystopactive"><code>EmergencyStopActive</code></a><br>Emergency Stop (E-Stop) active?</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td><a href="#errorcode"><code>ErrorCode</code></a><br>Error code group</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#masteraxiscount"><code>MasterAxisCount</code></a><br>Number of master axes</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#movingstate"><code>MovingState</code></a><br>Moving state (state)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#referencingstate"><code>ReferencingState</code></a><br>Referencing state (state)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#safgroupstate"><code>SafGroupState</code></a><br>SAF group state (main state)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#safsubgroupstate"><code>SafSubGroupState</code></a><br>SAF sub-group state (sub state)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#slaveaxiscount"><code>SlaveAxisCount</code></a><br>Number of slave axes</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#svbgroupstate"><code>SvbGroupState</code></a><br>SVB group state (state)</td>
+<td><code>get</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<h3 id="summary">Summary</h3>
+<p>The GroupState class provides properties to interact with and retrieve various states and information
+from a TwinCAT NC group via an AdsClient. It includes properties for error codes, axis counts, group states,
+and emergency stop status, among others. Each property reads or writes data from the TwinCAT system using
+specific index groups and offsets.</p>
+<h3 id="constructors">Constructors</h3>
+<h4 id="groupstate">GroupState</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/GroupState.cs#L16"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">internal GroupState(AdsClient client, uint id)
+</code></pre>
+<h5 id="arguments">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AdsClient</code></td>
+<td>client</td>
+<td></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties-1">Properties</h3>
+<h4 id="errorcode">ErrorCode</h4>
+<pre><code class="lang-csharp">public int ErrorCode { get; }
+</code></pre>
+<h5 id="summary-1">Summary</h5>
+<p>Error code group</p>
+<h4 id="masteraxiscount">MasterAxisCount</h4>
+<pre><code class="lang-csharp">public uint MasterAxisCount { get; }
+</code></pre>
+<h5 id="summary-2">Summary</h5>
+<p>Number of master axes</p>
+<h4 id="slaveaxiscount">SlaveAxisCount</h4>
+<pre><code class="lang-csharp">public uint SlaveAxisCount { get; }
+</code></pre>
+<h5 id="summary-3">Summary</h5>
+<p>Number of slave axes</p>
+<h4 id="svbgroupstate">SvbGroupState</h4>
+<pre><code class="lang-csharp">public uint SvbGroupState { get; }
+</code></pre>
+<h5 id="summary-4">Summary</h5>
+<p>SVB group state (state)</p>
+<h4 id="safgroupstate">SafGroupState</h4>
+<pre><code class="lang-csharp">public uint SafGroupState { get; }
+</code></pre>
+<h5 id="summary-5">Summary</h5>
+<p>SAF group state (main state)</p>
+<h4 id="movingstate">MovingState</h4>
+<pre><code class="lang-csharp">public uint MovingState { get; }
+</code></pre>
+<h5 id="summary-6">Summary</h5>
+<p>Moving state (state)</p>
+<h4 id="safsubgroupstate">SafSubGroupState</h4>
+<pre><code class="lang-csharp">public uint SafSubGroupState { get; }
+</code></pre>
+<h5 id="summary-7">Summary</h5>
+<p>SAF sub-group state (sub state)</p>
+<h4 id="referencingstate">ReferencingState</h4>
+<pre><code class="lang-csharp">public uint ReferencingState { get; }
+</code></pre>
+<h5 id="summary-8">Summary</h5>
+<p>Referencing state (state)</p>
+<h4 id="couplingstate">CouplingState</h4>
+<pre><code class="lang-csharp">public uint CouplingState { get; }
+</code></pre>
+<h5 id="summary-9">Summary</h5>
+<p>Coupling state (state)</p>
+<h4 id="couplingtableindex">CouplingTableIndex</h4>
+<pre><code class="lang-csharp">public uint CouplingTableIndex { get; }
+</code></pre>
+<h5 id="summary-10">Summary</h5>
+<p>Coupling table index</p>
+<h4 id="currentsvbentries">CurrentSvbEntries</h4>
+<pre><code class="lang-csharp">public uint CurrentSvbEntries { get; }
+</code></pre>
+<h5 id="summary-11">Summary</h5>
+<p>Current number of SVB entries/tasks</p>
+<h4 id="currentsafentries">CurrentSafEntries</h4>
+<pre><code class="lang-csharp">public uint CurrentSafEntries { get; }
+</code></pre>
+<h5 id="summary-12">Summary</h5>
+<p>Current number of SAF entries/tasks</p>
+<h4 id="currentblocknumber">CurrentBlockNumber</h4>
+<pre><code class="lang-csharp">public uint CurrentBlockNumber { get; }
+</code></pre>
+<h5 id="summary-13">Summary</h5>
+<p>Current block number (only active for interpolation group)</p>
+<h4 id="currentfreesvbentries">CurrentFreeSvbEntries</h4>
+<pre><code class="lang-csharp">public uint CurrentFreeSvbEntries { get; }
+</code></pre>
+<h5 id="summary-14">Summary</h5>
+<p>Current number of free SVB entries/tasks</p>
+<h4 id="currentfreesafentries">CurrentFreeSafEntries</h4>
+<pre><code class="lang-csharp">public uint CurrentFreeSafEntries { get; }
+</code></pre>
+<h5 id="summary-15">Summary</h5>
+<p>Current number of free SAF entries/tasks</p>
+<h4 id="emergencystopactive">EmergencyStopActive</h4>
+<pre><code class="lang-csharp">public bool EmergencyStopActive { get; set; }
+</code></pre>
+<h5 id="summary-16">Summary</h5>
+<p>Emergency Stop (E-Stop) active?</p>
+<p><em>Generated with</em> <a href="https://github.com/hailstorm75/ModularDoc"><em>ModularDoc</em></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/GroupState.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,699 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.ST_EcSlaveConfigData
+  commentId: T:TwinSharp.ST_EcSlaveConfigData
+  id: ST_EcSlaveConfigData
+  parent: TwinSharp
+  children:
+  - TwinSharp.ST_EcSlaveConfigData.#ctor(System.Byte[])
+  - TwinSharp.ST_EcSlaveConfigData.Addr
+  - TwinSharp.ST_EcSlaveConfigData.DevType
+  - TwinSharp.ST_EcSlaveConfigData.Entries
+  - TwinSharp.ST_EcSlaveConfigData.LinkStatus
+  - TwinSharp.ST_EcSlaveConfigData.MailboxInSize
+  - TwinSharp.ST_EcSlaveConfigData.MailboxOutSize
+  - TwinSharp.ST_EcSlaveConfigData.Name
+  - TwinSharp.ST_EcSlaveConfigData.SlaveIdentity
+  - TwinSharp.ST_EcSlaveConfigData.ToString
+  - TwinSharp.ST_EcSlaveConfigData.Type
+  langs:
+  - csharp
+  - vb
+  name: ST_EcSlaveConfigData
+  nameWithType: ST_EcSlaveConfigData
+  fullName: TwinSharp.ST_EcSlaveConfigData
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ST_EcSlaveConfigData
+    path: ../TwinSharp/Structs.cs
+    startLine: 202
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: The structure ST_EcSlaveConfigData contains the EtherCAT configuration data for an EtherCAT slave device.
+  example: []
+  syntax:
+    content: public struct ST_EcSlaveConfigData
+    content.vb: Public Structure ST_EcSlaveConfigData
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.ST_EcSlaveConfigData.Entries
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.Entries
+  id: Entries
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: ST_EcSlaveConfigData.Entries
+  fullName: TwinSharp.ST_EcSlaveConfigData.Entries
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Entries
+    path: ../TwinSharp/Structs.cs
+    startLine: 207
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Used internally.
+  example: []
+  syntax:
+    content: public ushort Entries
+    return:
+      type: System.UInt16
+    content.vb: Public Entries As UShort
+- uid: TwinSharp.ST_EcSlaveConfigData.Addr
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.Addr
+  id: Addr
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: Addr
+  nameWithType: ST_EcSlaveConfigData.Addr
+  fullName: TwinSharp.ST_EcSlaveConfigData.Addr
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Addr
+    path: ../TwinSharp/Structs.cs
+    startLine: 212
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Adress of an EtherCAT slave.
+  example: []
+  syntax:
+    content: public ushort Addr
+    return:
+      type: System.UInt16
+    content.vb: Public Addr As UShort
+- uid: TwinSharp.ST_EcSlaveConfigData.Type
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.Type
+  id: Type
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: ST_EcSlaveConfigData.Type
+  fullName: TwinSharp.ST_EcSlaveConfigData.Type
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Type
+    path: ../TwinSharp/Structs.cs
+    startLine: 217
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: EtherCAT type of a slave.
+  example: []
+  syntax:
+    content: public string Type
+    return:
+      type: System.String
+    content.vb: Public Type As String
+- uid: TwinSharp.ST_EcSlaveConfigData.Name
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.Name
+  id: Name
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ST_EcSlaveConfigData.Name
+  fullName: TwinSharp.ST_EcSlaveConfigData.Name
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Name
+    path: ../TwinSharp/Structs.cs
+    startLine: 222
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Name of an EtherCAT slave.
+  example: []
+  syntax:
+    content: public string Name
+    return:
+      type: System.String
+    content.vb: Public Name As String
+- uid: TwinSharp.ST_EcSlaveConfigData.DevType
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.DevType
+  id: DevType
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: DevType
+  nameWithType: ST_EcSlaveConfigData.DevType
+  fullName: TwinSharp.ST_EcSlaveConfigData.DevType
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DevType
+    path: ../TwinSharp/Structs.cs
+    startLine: 227
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: EtherCAT device type of a slave
+  example: []
+  syntax:
+    content: public uint DevType
+    return:
+      type: System.UInt32
+    content.vb: Public DevType As UInteger
+- uid: TwinSharp.ST_EcSlaveConfigData.SlaveIdentity
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.SlaveIdentity
+  id: SlaveIdentity
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: SlaveIdentity
+  nameWithType: ST_EcSlaveConfigData.SlaveIdentity
+  fullName: TwinSharp.ST_EcSlaveConfigData.SlaveIdentity
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SlaveIdentity
+    path: ../TwinSharp/Structs.cs
+    startLine: 232
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: EtherCAT identity data of a slave
+  example: []
+  syntax:
+    content: public ST_EcSlaveIdentity SlaveIdentity
+    return:
+      type: TwinSharp.ST_EcSlaveIdentity
+    content.vb: Public SlaveIdentity As ST_EcSlaveIdentity
+- uid: TwinSharp.ST_EcSlaveConfigData.MailboxOutSize
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.MailboxOutSize
+  id: MailboxOutSize
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: MailboxOutSize
+  nameWithType: ST_EcSlaveConfigData.MailboxOutSize
+  fullName: TwinSharp.ST_EcSlaveConfigData.MailboxOutSize
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MailboxOutSize
+    path: ../TwinSharp/Structs.cs
+    startLine: 237
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Mailbox OutSize of an EtherCAT slave
+  example: []
+  syntax:
+    content: public ushort MailboxOutSize
+    return:
+      type: System.UInt16
+    content.vb: Public MailboxOutSize As UShort
+- uid: TwinSharp.ST_EcSlaveConfigData.MailboxInSize
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.MailboxInSize
+  id: MailboxInSize
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: MailboxInSize
+  nameWithType: ST_EcSlaveConfigData.MailboxInSize
+  fullName: TwinSharp.ST_EcSlaveConfigData.MailboxInSize
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MailboxInSize
+    path: ../TwinSharp/Structs.cs
+    startLine: 242
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Mailbox InSize of an EtherCAT slave
+  example: []
+  syntax:
+    content: public ushort MailboxInSize
+    return:
+      type: System.UInt16
+    content.vb: Public MailboxInSize As UShort
+- uid: TwinSharp.ST_EcSlaveConfigData.LinkStatus
+  commentId: F:TwinSharp.ST_EcSlaveConfigData.LinkStatus
+  id: LinkStatus
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: LinkStatus
+  nameWithType: ST_EcSlaveConfigData.LinkStatus
+  fullName: TwinSharp.ST_EcSlaveConfigData.LinkStatus
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LinkStatus
+    path: ../TwinSharp/Structs.cs
+    startLine: 247
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Link status of an EtherCAT slave
+  example: []
+  syntax:
+    content: public byte LinkStatus
+    return:
+      type: System.Byte
+    content.vb: Public LinkStatus As Byte
+- uid: TwinSharp.ST_EcSlaveConfigData.#ctor(System.Byte[])
+  commentId: M:TwinSharp.ST_EcSlaveConfigData.#ctor(System.Byte[])
+  id: '#ctor(System.Byte[])'
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: ST_EcSlaveConfigData(byte[])
+  nameWithType: ST_EcSlaveConfigData.ST_EcSlaveConfigData(byte[])
+  fullName: TwinSharp.ST_EcSlaveConfigData.ST_EcSlaveConfigData(byte[])
+  type: Constructor
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: .ctor
+    path: ../TwinSharp/Structs.cs
+    startLine: 255
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Constructor for ST_EcSlaveConfigData from a byte array of length 80.
+  example: []
+  syntax:
+    content: public ST_EcSlaveConfigData(byte[] bytes)
+    parameters:
+    - id: bytes
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Sub New(bytes As Byte())
+  overload: TwinSharp.ST_EcSlaveConfigData.#ctor*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: ''
+  nameWithType.vb: ST_EcSlaveConfigData.New(Byte())
+  fullName.vb: TwinSharp.ST_EcSlaveConfigData.New(Byte())
+  name.vb: New(Byte())
+- uid: TwinSharp.ST_EcSlaveConfigData.ToString
+  commentId: M:TwinSharp.ST_EcSlaveConfigData.ToString
+  id: ToString
+  parent: TwinSharp.ST_EcSlaveConfigData
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ST_EcSlaveConfigData.ToString()
+  fullName: TwinSharp.ST_EcSlaveConfigData.ToString()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ToString
+    path: ../TwinSharp/Structs.cs
+    startLine: 285
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Returns a string representation of the slave configuration data.
+  example: []
+  syntax:
+    content: public override readonly string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: TwinSharp.ST_EcSlaveConfigData.ToString*
+references:
+- uid: TwinSharp
+  commentId: N:TwinSharp
+  href: TwinSharp.html
+  name: TwinSharp
+  nameWithType: TwinSharp
+  fullName: TwinSharp
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.ST_EcSlaveIdentity
+  commentId: T:TwinSharp.ST_EcSlaveIdentity
+  parent: TwinSharp
+  href: TwinSharp.ST_EcSlaveIdentity.html
+  name: ST_EcSlaveIdentity
+  nameWithType: ST_EcSlaveIdentity
+  fullName: TwinSharp.ST_EcSlaveIdentity
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: TwinSharp.ST_EcSlaveConfigData.#ctor*
+  commentId: Overload:TwinSharp.ST_EcSlaveConfigData.#ctor
+  href: TwinSharp.ST_EcSlaveConfigData.html#TwinSharp_ST_EcSlaveConfigData__ctor_System_Byte___
+  name: ST_EcSlaveConfigData
+  nameWithType: ST_EcSlaveConfigData.ST_EcSlaveConfigData
+  fullName: TwinSharp.ST_EcSlaveConfigData.ST_EcSlaveConfigData
+  nameWithType.vb: ST_EcSlaveConfigData.New
+  fullName.vb: TwinSharp.ST_EcSlaveConfigData.New
+  name.vb: New
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: TwinSharp.ST_EcSlaveConfigData.ToString*
+  commentId: Overload:TwinSharp.ST_EcSlaveConfigData.ToString
+  href: TwinSharp.ST_EcSlaveConfigData.html#TwinSharp_ST_EcSlaveConfigData_ToString
+  name: ToString
+  nameWithType: ST_EcSlaveConfigData.ToString
+  fullName: TwinSharp.ST_EcSlaveConfigData.ToString

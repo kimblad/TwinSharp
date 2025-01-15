@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TableParameters | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TableParameters | TwinSharp ">
+      
+      <meta name="description" content="The TableParameters class provides methods to interact with table parameters in a TwinCAT ADS system. It allows reading and writing various table properties such as ID, Name, SubType, MainType, LineCount, ColumnCount, TotalCount, StepWidth, MasterPeriod, and SlaveDifferencePerMasterPeriod. It also provides methods to get and set the activation mode for online changes, read and write single values in the table, and convert slave positions to master positions.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_NC_TableParameters.md&amp;value=---%0Auid%3A%20TwinSharp.NC.TableParameters%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.NC.TableParameters">
+
+
+
+  <h1 id="TwinSharp_NC_TableParameters" data-uid="TwinSharp.NC.TableParameters" class="text-break">
+Class TableParameters  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.NC.html">NC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The TableParameters class provides methods to interact with table parameters in a TwinCAT ADS system.
+It allows reading and writing various table properties such as ID, Name, SubType, MainType, LineCount, ColumnCount, TotalCount, StepWidth, MasterPeriod, and SlaveDifferencePerMasterPeriod.
+It also provides methods to get and set the activation mode for online changes, read and write single values in the table, and convert slave positions to master positions.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TableParameters</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TableParameters</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TwinSharp_NC_TableParameters_ColumnCount_" data-uid="TwinSharp.NC.TableParameters.ColumnCount*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_ColumnCount" data-uid="TwinSharp.NC.TableParameters.ColumnCount">
+  ColumnCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of columns (m)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ColumnCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_ID_" data-uid="TwinSharp.NC.TableParameters.ID*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_ID" data-uid="TwinSharp.NC.TableParameters.ID">
+  ID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Table ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_LineCount_" data-uid="TwinSharp.NC.TableParameters.LineCount*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_LineCount" data-uid="TwinSharp.NC.TableParameters.LineCount">
+  LineCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of lines (n)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint LineCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_MainType_" data-uid="TwinSharp.NC.TableParameters.MainType*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_MainType" data-uid="TwinSharp.NC.TableParameters.MainType">
+  MainType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Table main type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TableMainType MainType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.NC.TableMainType.html">TableMainType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_MasterPeriod_" data-uid="TwinSharp.NC.TableParameters.MasterPeriod*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_MasterPeriod" data-uid="TwinSharp.NC.TableParameters.MasterPeriod">
+  MasterPeriod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Master period (cyclic table).
+Base unit (e.g. degree)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MasterPeriod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_Name_" data-uid="TwinSharp.NC.TableParameters.Name*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_Name" data-uid="TwinSharp.NC.TableParameters.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Table name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_SlaveDifferencePerMasterPeriod_" data-uid="TwinSharp.NC.TableParameters.SlaveDifferencePerMasterPeriod*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_SlaveDifferencePerMasterPeriod" data-uid="TwinSharp.NC.TableParameters.SlaveDifferencePerMasterPeriod">
+  SlaveDifferencePerMasterPeriod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Slave difference per master period (cyclic table).
+Base unit (e.g. degree)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SlaveDifferencePerMasterPeriod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_SlavePositionToMaster_" data-uid="TwinSharp.NC.TableParameters.SlavePositionToMaster*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_SlavePositionToMaster" data-uid="TwinSharp.NC.TableParameters.SlavePositionToMaster">
+  SlavePositionToMaster
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Read slave position to the given master position (relates only to the &quot;row values&quot; of the table)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double SlavePositionToMaster { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_StepWidth_" data-uid="TwinSharp.NC.TableParameters.StepWidth*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_StepWidth" data-uid="TwinSharp.NC.TableParameters.StepWidth">
+  StepWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Step width (position delta) (equidistant table )
+Equidistant Tables
+Base unit (e.g. mm)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double StepWidth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_SubTupe_" data-uid="TwinSharp.NC.TableParameters.SubTupe*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_SubTupe" data-uid="TwinSharp.NC.TableParameters.SubTupe">
+  SubTupe
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Table sub type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TableSubType SubTupe { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.NC.TableSubType.html">TableSubType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_TotalCount_" data-uid="TwinSharp.NC.TableParameters.TotalCount*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_TotalCount" data-uid="TwinSharp.NC.TableParameters.TotalCount">
+  TotalCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total number of elements (n*m)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint TotalCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TwinSharp_NC_TableParameters_GetActivationMode_" data-uid="TwinSharp.NC.TableParameters.GetActivationMode*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_GetActivationMode_TwinSharp_NC_TableActivationMode__System_Double__TwinSharp_NC_CamScalingMode__TwinSharp_NC_CamScalingMode__" data-uid="TwinSharp.NC.TableParameters.GetActivationMode(TwinSharp.NC.TableActivationMode@,System.Double@,TwinSharp.NC.CamScalingMode@,TwinSharp.NC.CamScalingMode@)">
+  GetActivationMode(out TableActivationMode, out double, out CamScalingMode, out CamScalingMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get activation mode for online change from table data (only MF).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GetActivationMode(out TableActivationMode activationMode, out double activationPosition, out CamScalingMode masterScalingType, out CamScalingMode slaveScalingType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activationMode</code> <a class="xref" href="TwinSharp.NC.TableActivationMode.html">TableActivationMode</a></dt>
+    <dd><p>Activation mode: 0: 'instantaneous' (default) 1: 'master cam pos.' 2: 'master' axis pos.' 3: 'next cycle' 4: 'next cycle once' 5: 'as soon as possible' 6: 'off' 7: 'delete queued data'</p>
+</dd>
+    <dt><code>activationPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Activation position (e.g. mm)</p>
+</dd>
+    <dt><code>masterScalingType</code> <a class="xref" href="TwinSharp.NC.CamScalingMode.html">CamScalingMode</a></dt>
+    <dd><p>Master scaling type 0: user defined (default) 1: scaling with auto offset 2: off</p>
+</dd>
+    <dt><code>slaveScalingType</code> <a class="xref" href="TwinSharp.NC.CamScalingMode.html">CamScalingMode</a></dt>
+    <dd><p>Slave scaling type 0: user defined (default) 1: scaling with auto offset 2: off</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_GetSingleValue_" data-uid="TwinSharp.NC.TableParameters.GetSingleValue*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_GetSingleValue_System_UInt32_System_UInt32_" data-uid="TwinSharp.NC.TableParameters.GetSingleValue(System.UInt32,System.UInt32)">
+  GetSingleValue(uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetSingleValue(uint line, uint column)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_SetActivationMode_" data-uid="TwinSharp.NC.TableParameters.SetActivationMode*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_SetActivationMode_TwinSharp_NC_TableActivationMode_System_Double_TwinSharp_NC_CamScalingMode_TwinSharp_NC_CamScalingMode_" data-uid="TwinSharp.NC.TableParameters.SetActivationMode(TwinSharp.NC.TableActivationMode,System.Double,TwinSharp.NC.CamScalingMode,TwinSharp.NC.CamScalingMode)">
+  SetActivationMode(TableActivationMode, double, CamScalingMode, CamScalingMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set Activation mode for online change from table data (only MF).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActivationMode(TableActivationMode activationMode, double activationPosition, CamScalingMode masterScalingType, CamScalingMode slaveScalingType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activationMode</code> <a class="xref" href="TwinSharp.NC.TableActivationMode.html">TableActivationMode</a></dt>
+    <dd><p>Activation mode: 0: 'instantaneous' (default) 1: 'master cam pos.' 2: 'master' axis pos.' 3: 'next cycle' 4: 'next cycle once' 5: 'as soon as possible' 6: 'off' 7: 'delete queued data'</p>
+</dd>
+    <dt><code>activationPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Activation position (e.g. mm)</p>
+</dd>
+    <dt><code>masterScalingType</code> <a class="xref" href="TwinSharp.NC.CamScalingMode.html">CamScalingMode</a></dt>
+    <dd><p>Master scaling type 0: user defined (default) 1: scaling with auto offset 2: off</p>
+</dd>
+    <dt><code>slaveScalingType</code> <a class="xref" href="TwinSharp.NC.CamScalingMode.html">CamScalingMode</a></dt>
+    <dd><p>Slave scaling type 0: user defined (default) 1: scaling with auto offset 2: off</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_TableParameters_SetSingleValue_" data-uid="TwinSharp.NC.TableParameters.SetSingleValue*"></a>
+
+  <h3 id="TwinSharp_NC_TableParameters_SetSingleValue_System_UInt32_System_UInt32_System_Double_" data-uid="TwinSharp.NC.TableParameters.SetSingleValue(System.UInt32,System.UInt32,System.Double)">
+  SetSingleValue(uint, uint, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Write single value [n,m].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSingleValue(uint line, uint column, double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>n-th line</p>
+</dd>
+    <dt><code>column</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>m-th column</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Single value. Base unit (e.g. mm)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/TableParameters.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -15,11 +15,12 @@
 	<Description>C# wrapper to over ADS access most things Beckhoff, TwinCAT and EtherCAT.</Description>
 	<RepositoryUrl>https://github.com/kimblad/TwinSharp</RepositoryUrl>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	 
+	<PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Beckhoff.TwinCAT.Ads" Version="6.1.290" />
+	  <None Include="..\README.md" Pack="true" PackagePath="\"/>  
   </ItemGroup>
 
   <ItemGroup>

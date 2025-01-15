@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>IpcTwinCAT Public class | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="IpcTwinCAT Public class | TwinSharp ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/ipc/IpcTwinCAT.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ipctwincat-public-class">IpcTwinCAT <code>Public class</code></h1>
+
+<h2 id="description">Description</h2>
+<p>The IpcTwinCAT class provides an interface to interact with a TwinCAT system using an AdsClient.
+It allows reading various system properties such as version, status, and configuration details.
+The class handles specific TwinCAT system attributes and provides methods to read these attributes
+from the TwinCAT system using ADS (Automation Device Specification) protocol.</p>
+<h2 id="diagram">Diagram</h2>
+<pre><code class="lang-mermaid">  flowchart LR
+  classDef interfaceStyle stroke-dasharray: 5 5;
+  classDef abstractStyle stroke-width:4px
+  subgraph TwinSharp.IPC
+  TwinSharp.IPC.IpcTwinCAT[[IpcTwinCAT]]
+  end
+</code></pre>
+<h2 id="members">Members</h2>
+<h3 id="properties">Properties</h3>
+<h4 id="public--properties">Public  properties</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><a href="#amsnetid"><code>AmsNetID</code></a><br>AMS Net ID of the TwinCAT system. A restart of the computer is required in order to make a change to the Ams Net ID.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#buildnumber"><code>BuildNumber</code></a><br>TwinCAT build number.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#length"><code>Length</code></a><br>Length of the structure</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#logfilepath"><code>LogFilePath</code></a><br>Only for WindowsCE</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#logfilesize"><code>LogFileSize</code></a><br>Only for WindowsCE</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#majorversion"><code>MajorVersion</code></a><br>TwinCAT major version.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#minorversion"><code>MinorVersion</code></a><br>TwinCAT minor version.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#reglevel"><code>RegLevel</code></a><br>Only for TwinCAT 2.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#revision"><code>Revision</code></a><br>TwinCAT Revision</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#runasdevice"><code>RunAsDevice</code></a><br>Only for WindowsCE</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ulong</code></td>
+<td><a href="#secondssincelaststatuschange"><code>SecondsSinceLastStatusChange</code></a><br>Seconds since last TwinCAT status change</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#showtargetvisu"><code>ShowTargetVisu</code></a><br>Only for WindowsCE</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td><a href="#status"><code>Status</code></a><br>Status of the TwinCAT system.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#systemid"><code>SystemID</code></a><br>TwinCAT System ID</td>
+<td><code>get</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<h3 id="summary">Summary</h3>
+<p>The IpcTwinCAT class provides an interface to interact with a TwinCAT system using an AdsClient.
+It allows reading various system properties such as version, status, and configuration details.
+The class handles specific TwinCAT system attributes and provides methods to read these attributes
+from the TwinCAT system using ADS (Automation Device Specification) protocol.</p>
+<h3 id="constructors">Constructors</h3>
+<h4 id="ipctwincat">IpcTwinCAT</h4>
+<p><a href="https://github.com///blob//TwinSharp/IPC/IpcTwinCAT.cs#L19"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">internal IpcTwinCAT(AdsClient client, ushort mdpId)
+</code></pre>
+<h5 id="arguments">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AdsClient</code></td>
+<td>client</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td>mdpId</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties-1">Properties</h3>
+<h4 id="length">Length</h4>
+<pre><code class="lang-csharp">public ushort Length { get; }
+</code></pre>
+<h5 id="summary-1">Summary</h5>
+<p>Length of the structure</p>
+<h4 id="majorversion">MajorVersion</h4>
+<pre><code class="lang-csharp">public ushort MajorVersion { get; }
+</code></pre>
+<h5 id="summary-2">Summary</h5>
+<p>TwinCAT major version.</p>
+<h4 id="minorversion">MinorVersion</h4>
+<pre><code class="lang-csharp">public ushort MinorVersion { get; }
+</code></pre>
+<h5 id="summary-3">Summary</h5>
+<p>TwinCAT minor version.</p>
+<h4 id="buildnumber">BuildNumber</h4>
+<pre><code class="lang-csharp">public ushort BuildNumber { get; }
+</code></pre>
+<h5 id="summary-4">Summary</h5>
+<p>TwinCAT build number.</p>
+<h4 id="amsnetid">AmsNetID</h4>
+<pre><code class="lang-csharp">public string AmsNetID { get; }
+</code></pre>
+<h5 id="summary-5">Summary</h5>
+<p>AMS Net ID of the TwinCAT system. A restart of the computer is required in order to make a change to the Ams Net ID.</p>
+<h4 id="reglevel">RegLevel</h4>
+<pre><code class="lang-csharp">public uint RegLevel { get; }
+</code></pre>
+<h5 id="summary-6">Summary</h5>
+<p>Only for TwinCAT 2.</p>
+<h4 id="status">Status</h4>
+<pre><code class="lang-csharp">public ushort Status { get; }
+</code></pre>
+<h5 id="summary-7">Summary</h5>
+<p>Status of the TwinCAT system.</p>
+<h4 id="runasdevice">RunAsDevice</h4>
+<pre><code class="lang-csharp">public ushort RunAsDevice { get; }
+</code></pre>
+<h5 id="summary-8">Summary</h5>
+<p>Only for WindowsCE</p>
+<h4 id="showtargetvisu">ShowTargetVisu</h4>
+<pre><code class="lang-csharp">public ushort ShowTargetVisu { get; }
+</code></pre>
+<h5 id="summary-9">Summary</h5>
+<p>Only for WindowsCE</p>
+<h4 id="logfilesize">LogFileSize</h4>
+<pre><code class="lang-csharp">public uint LogFileSize { get; }
+</code></pre>
+<h5 id="summary-10">Summary</h5>
+<p>Only for WindowsCE</p>
+<h4 id="logfilepath">LogFilePath</h4>
+<pre><code class="lang-csharp">public string LogFilePath { get; }
+</code></pre>
+<h5 id="summary-11">Summary</h5>
+<p>Only for WindowsCE</p>
+<h4 id="systemid">SystemID</h4>
+<pre><code class="lang-csharp">public string SystemID { get; }
+</code></pre>
+<h5 id="summary-12">Summary</h5>
+<p>TwinCAT System ID</p>
+<h4 id="revision">Revision</h4>
+<pre><code class="lang-csharp">public ushort Revision { get; }
+</code></pre>
+<h5 id="summary-13">Summary</h5>
+<p>TwinCAT Revision</p>
+<h4 id="secondssincelaststatuschange">SecondsSinceLastStatusChange</h4>
+<pre><code class="lang-csharp">public ulong SecondsSinceLastStatusChange { get; }
+</code></pre>
+<h5 id="summary-14">Summary</h5>
+<p>Seconds since last TwinCAT status change</p>
+<p><em>Generated with</em> <a href="https://github.com/hailstorm75/ModularDoc"><em>ModularDoc</em></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/ipc/IpcTwinCAT.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

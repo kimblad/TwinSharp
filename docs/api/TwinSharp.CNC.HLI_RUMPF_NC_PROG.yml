@@ -1,0 +1,662 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  commentId: T:TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  id: HLI_RUMPF_NC_PROG
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.BlockNumber
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileEncrypted
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileName
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileOffset
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp1
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp3
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp4
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.LogicalPathNumber
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.PositionOffsetNcBlock
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.ProgramName
+  - TwinSharp.CNC.HLI_RUMPF_NC_PROG.TokenOffsetNcBlock
+  langs:
+  - csharp
+  - vb
+  name: HLI_RUMPF_NC_PROG
+  nameWithType: HLI_RUMPF_NC_PROG
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_RUMPF_NC_PROG
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 512
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Error information in relation to NC program.
+  example: []
+  syntax:
+    content: public struct HLI_RUMPF_NC_PROG
+    content.vb: Public Structure HLI_RUMPF_NC_PROG
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.LogicalPathNumber
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.LogicalPathNumber
+  id: LogicalPathNumber
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: LogicalPathNumber
+  nameWithType: HLI_RUMPF_NC_PROG.LogicalPathNumber
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.LogicalPathNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LogicalPathNumber
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 516
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Logical path number (see start-up list).
+  example: []
+  syntax:
+    content: public ushort LogicalPathNumber
+    return:
+      type: System.UInt16
+    content.vb: Public LogicalPathNumber As UShort
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileEncrypted
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileEncrypted
+  id: FileEncrypted
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: FileEncrypted
+  nameWithType: HLI_RUMPF_NC_PROG.FileEncrypted
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileEncrypted
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileEncrypted
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 520
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Is file that gave the error encrypted.
+  example: []
+  syntax:
+    content: public bool FileEncrypted
+    return:
+      type: System.Boolean
+    content.vb: Public FileEncrypted As Boolean
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp1
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp1
+  id: FillUp1
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: FillUp1
+  nameWithType: HLI_RUMPF_NC_PROG.FillUp1
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 524
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public bool FillUp1
+    return:
+      type: System.Boolean
+    content.vb: Public FillUp1 As Boolean
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp3
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp3
+  id: FillUp3
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: FillUp3
+  nameWithType: HLI_RUMPF_NC_PROG.FillUp3
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp3
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp3
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 527
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int FillUp3
+    return:
+      type: System.Int32
+    content.vb: Public FillUp3 As Integer
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.ProgramName
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.ProgramName
+  id: ProgramName
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: ProgramName
+  nameWithType: HLI_RUMPF_NC_PROG.ProgramName
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.ProgramName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProgramName
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 531
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: File name.
+  example: []
+  syntax:
+    content: public string ProgramName
+    return:
+      type: System.String
+    content.vb: Public ProgramName As String
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp4
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp4
+  id: FillUp4
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: FillUp4
+  nameWithType: HLI_RUMPF_NC_PROG.FillUp4
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FillUp4
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp4
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 534
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int FillUp4
+    return:
+      type: System.Int32
+    content.vb: Public FillUp4 As Integer
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileName
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileName
+  id: FileName
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: FileName
+  nameWithType: HLI_RUMPF_NC_PROG.FileName
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileName
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 538
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: File offset in bytes.
+  example: []
+  syntax:
+    content: public string FileName
+    return:
+      type: System.String
+    content.vb: Public FileName As String
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileOffset
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileOffset
+  id: FileOffset
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: FileOffset
+  nameWithType: HLI_RUMPF_NC_PROG.FileOffset
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.FileOffset
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileOffset
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 541
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: ''
+  example: []
+  syntax:
+    content: public uint FileOffset
+    return:
+      type: System.UInt32
+    content.vb: Public FileOffset As UInteger
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.PositionOffsetNcBlock
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.PositionOffsetNcBlock
+  id: PositionOffsetNcBlock
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: PositionOffsetNcBlock
+  nameWithType: HLI_RUMPF_NC_PROG.PositionOffsetNcBlock
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.PositionOffsetNcBlock
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PositionOffsetNcBlock
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 544
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Position in NC block in bytes.
+  example: []
+  syntax:
+    content: public ushort PositionOffsetNcBlock
+    return:
+      type: System.UInt16
+    content.vb: Public PositionOffsetNcBlock As UShort
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.TokenOffsetNcBlock
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.TokenOffsetNcBlock
+  id: TokenOffsetNcBlock
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: TokenOffsetNcBlock
+  nameWithType: HLI_RUMPF_NC_PROG.TokenOffsetNcBlock
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.TokenOffsetNcBlock
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TokenOffsetNcBlock
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 547
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Token offset in current NC line.
+  example: []
+  syntax:
+    content: public ushort TokenOffsetNcBlock
+    return:
+      type: System.UInt16
+    content.vb: Public TokenOffsetNcBlock As UShort
+- uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG.BlockNumber
+  commentId: F:TwinSharp.CNC.HLI_RUMPF_NC_PROG.BlockNumber
+  id: BlockNumber
+  parent: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  langs:
+  - csharp
+  - vb
+  name: BlockNumber
+  nameWithType: HLI_RUMPF_NC_PROG.BlockNumber
+  fullName: TwinSharp.CNC.HLI_RUMPF_NC_PROG.BlockNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockNumber
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 550
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Block number of current NC line.
+  example: []
+  syntax:
+    content: public uint BlockNumber
+    return:
+      type: System.UInt32
+    content.vb: Public BlockNumber As UInteger
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger

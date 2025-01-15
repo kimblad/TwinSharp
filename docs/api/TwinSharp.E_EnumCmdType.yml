@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.E_EnumCmdType
+  commentId: T:TwinSharp.E_EnumCmdType
+  id: E_EnumCmdType
+  parent: TwinSharp
+  children:
+  - TwinSharp.E_EnumCmdType.Abort
+  - TwinSharp.E_EnumCmdType.First
+  - TwinSharp.E_EnumCmdType.Next
+  langs:
+  - csharp
+  - vb
+  name: E_EnumCmdType
+  nameWithType: E_EnumCmdType
+  fullName: TwinSharp.E_EnumCmdType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: E_EnumCmdType
+    path: ../TwinSharp/Enums.cs
+    startLine: 152
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Control parameter for enumeration blocks. Not all parameters are used by each enumeration block!
+  example: []
+  syntax:
+    content: public enum E_EnumCmdType
+    content.vb: Public Enum E_EnumCmdType
+- uid: TwinSharp.E_EnumCmdType.First
+  commentId: F:TwinSharp.E_EnumCmdType.First
+  id: First
+  parent: TwinSharp.E_EnumCmdType
+  langs:
+  - csharp
+  - vb
+  name: First
+  nameWithType: E_EnumCmdType.First
+  fullName: TwinSharp.E_EnumCmdType.First
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: First
+    path: ../TwinSharp/Enums.cs
+    startLine: 157
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Lists the first element
+  example: []
+  syntax:
+    content: First = 0
+    return:
+      type: TwinSharp.E_EnumCmdType
+- uid: TwinSharp.E_EnumCmdType.Next
+  commentId: F:TwinSharp.E_EnumCmdType.Next
+  id: Next
+  parent: TwinSharp.E_EnumCmdType
+  langs:
+  - csharp
+  - vb
+  name: Next
+  nameWithType: E_EnumCmdType.Next
+  fullName: TwinSharp.E_EnumCmdType.Next
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Next
+    path: ../TwinSharp/Enums.cs
+    startLine: 162
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Lists the next element
+  example: []
+  syntax:
+    content: Next = 1
+    return:
+      type: TwinSharp.E_EnumCmdType
+- uid: TwinSharp.E_EnumCmdType.Abort
+  commentId: F:TwinSharp.E_EnumCmdType.Abort
+  id: Abort
+  parent: TwinSharp.E_EnumCmdType
+  langs:
+  - csharp
+  - vb
+  name: Abort
+  nameWithType: E_EnumCmdType.Abort
+  fullName: TwinSharp.E_EnumCmdType.Abort
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Abort
+    path: ../TwinSharp/Enums.cs
+    startLine: 167
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Cancels the listing (closes open handles)
+  example: []
+  syntax:
+    content: Abort = 2
+    return:
+      type: TwinSharp.E_EnumCmdType
+references:
+- uid: TwinSharp
+  commentId: N:TwinSharp
+  href: TwinSharp.html
+  name: TwinSharp
+  nameWithType: TwinSharp
+  fullName: TwinSharp
+- uid: TwinSharp.E_EnumCmdType
+  commentId: T:TwinSharp.E_EnumCmdType
+  parent: TwinSharp
+  href: TwinSharp.E_EnumCmdType.html
+  name: E_EnumCmdType
+  nameWithType: E_EnumCmdType
+  fullName: TwinSharp.E_EnumCmdType

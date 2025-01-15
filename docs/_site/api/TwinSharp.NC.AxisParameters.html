@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AxisParameters | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AxisParameters | TwinSharp ">
+      
+      <meta name="description" content="Represents the parameters of an axis in a TwinCAT NC system. This class provides properties to get and set various parameters of an axis, such as ID, name, type, cycle time, physical unit, velocities, monitoring settings, error reaction mode, and more. It uses an AdsClient to read and write these parameters from a TwinCAT system. The class also includes methods to read all sub-elements like encoder IDs, controller IDs, and drive IDs.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_NC_AxisParameters.md&amp;value=---%0Auid%3A%20TwinSharp.NC.AxisParameters%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.NC.AxisParameters">
+
+
+
+  <h1 id="TwinSharp_NC_AxisParameters" data-uid="TwinSharp.NC.AxisParameters" class="text-break">
+Class AxisParameters  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.NC.html">NC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents the parameters of an axis in a TwinCAT NC system.
+This class provides properties to get and set various parameters of an axis,
+such as ID, name, type, cycle time, physical unit, velocities, monitoring settings,
+error reaction mode, and more. It uses an AdsClient to read and write these parameters
+from a TwinCAT system. The class also includes methods to read all sub-elements like
+encoder IDs, controller IDs, and drive IDs.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AxisParameters</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AxisParameters</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TwinSharp_NC_AxisParameters_Acceleration_" data-uid="TwinSharp.NC.AxisParameters.Acceleration*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_Acceleration" data-uid="TwinSharp.NC.AxisParameters.Acceleration">
+  Acceleration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default data set (e.g. mm/s^2)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Acceleration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_ChannelID_" data-uid="TwinSharp.NC.AxisParameters.ChannelID*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_ChannelID" data-uid="TwinSharp.NC.AxisParameters.ChannelID">
+  ChannelID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Channel ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ChannelID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_ChannelName_" data-uid="TwinSharp.NC.AxisParameters.ChannelName*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_ChannelName" data-uid="TwinSharp.NC.AxisParameters.ChannelName">
+  ChannelName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Channel name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ChannelName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_ChannelType_" data-uid="TwinSharp.NC.AxisParameters.ChannelType*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_ChannelType" data-uid="TwinSharp.NC.AxisParameters.ChannelType">
+  ChannelType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Channel type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ChannelType ChannelType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.NC.ChannelType.html">ChannelType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_ControllerCount_" data-uid="TwinSharp.NC.AxisParameters.ControllerCount*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_ControllerCount" data-uid="TwinSharp.NC.AxisParameters.ControllerCount">
+  ControllerCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L361"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of controllers that belong to this axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ControllerCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_CycleTime_" data-uid="TwinSharp.NC.AxisParameters.CycleTime*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_CycleTime" data-uid="TwinSharp.NC.AxisParameters.CycleTime">
+  CycleTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cycle time axis (SEC)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint CycleTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_Deceleration_" data-uid="TwinSharp.NC.AxisParameters.Deceleration*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_Deceleration" data-uid="TwinSharp.NC.AxisParameters.Deceleration">
+  Deceleration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L404"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default data set (e.g. mm/s^2)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Deceleration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_DriveCount_" data-uid="TwinSharp.NC.AxisParameters.DriveCount*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_DriveCount" data-uid="TwinSharp.NC.AxisParameters.DriveCount">
+  DriveCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of drives that belong to this axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint DriveCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_EncoderCount_" data-uid="TwinSharp.NC.AxisParameters.EncoderCount*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_EncoderCount" data-uid="TwinSharp.NC.AxisParameters.EncoderCount">
+  EncoderCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L309"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of encoders that belong to this axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint EncoderCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_EncoderIDs_" data-uid="TwinSharp.NC.AxisParameters.EncoderIDs*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_EncoderIDs" data-uid="TwinSharp.NC.AxisParameters.EncoderIDs">
+  EncoderIDs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Axis encoder IDs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] EncoderIDs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_ErrorDelaySeconds_" data-uid="TwinSharp.NC.AxisParameters.ErrorDelaySeconds*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_ErrorDelaySeconds" data-uid="TwinSharp.NC.AxisParameters.ErrorDelaySeconds">
+  ErrorDelaySeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error delay time (if delayed error reaction is selected)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ErrorDelaySeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_ErrorReactionMode_" data-uid="TwinSharp.NC.AxisParameters.ErrorReactionMode*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_ErrorReactionMode" data-uid="TwinSharp.NC.AxisParameters.ErrorReactionMode">
+  ErrorReactionMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Error reaction mode: 0: instantaneous (default) 1: delayed (e.g. for Master/Slave-coupling)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorReactionMode ErrorReactionMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.NC.ErrorReactionMode.html">ErrorReactionMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_GroupID_" data-uid="TwinSharp.NC.AxisParameters.GroupID*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_GroupID" data-uid="TwinSharp.NC.AxisParameters.GroupID">
+  GroupID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Group ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint GroupID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_GroupName_" data-uid="TwinSharp.NC.AxisParameters.GroupName*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_GroupName" data-uid="TwinSharp.NC.AxisParameters.GroupName">
+  GroupName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Group name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GroupName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_GroupType_" data-uid="TwinSharp.NC.AxisParameters.GroupType*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_GroupType" data-uid="TwinSharp.NC.AxisParameters.GroupType">
+  GroupType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Group type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupType GroupType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.NC.GroupType.html">GroupType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_ID_" data-uid="TwinSharp.NC.AxisParameters.ID*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_ID" data-uid="TwinSharp.NC.AxisParameters.ID">
+  ID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Axis ID</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_Jerk_" data-uid="TwinSharp.NC.AxisParameters.Jerk*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_Jerk" data-uid="TwinSharp.NC.AxisParameters.Jerk">
+  Jerk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default data set (e.g. mm/s^3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Jerk { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_LoopEnabled_" data-uid="TwinSharp.NC.AxisParameters.LoopEnabled*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_LoopEnabled" data-uid="TwinSharp.NC.AxisParameters.LoopEnabled">
+  LoopEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loop enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LoopEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_LoopingDistance_" data-uid="TwinSharp.NC.AxisParameters.LoopingDistance*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_LoopingDistance" data-uid="TwinSharp.NC.AxisParameters.LoopingDistance">
+  LoopingDistance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Looping distance (±) e.g. mm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double LoopingDistance { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_MaxPermittedAcceleration_" data-uid="TwinSharp.NC.AxisParameters.MaxPermittedAcceleration*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_MaxPermittedAcceleration" data-uid="TwinSharp.NC.AxisParameters.MaxPermittedAcceleration">
+  MaxPermittedAcceleration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum permitted acceleration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MaxPermittedAcceleration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_MaxPermittedDeceleration_" data-uid="TwinSharp.NC.AxisParameters.MaxPermittedDeceleration*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_MaxPermittedDeceleration" data-uid="TwinSharp.NC.AxisParameters.MaxPermittedDeceleration">
+  MaxPermittedDeceleration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum permitted deceleration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MaxPermittedDeceleration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_MotionMonitoringEnabled_" data-uid="TwinSharp.NC.AxisParameters.MotionMonitoringEnabled*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_MotionMonitoringEnabled" data-uid="TwinSharp.NC.AxisParameters.MotionMonitoringEnabled">
+  MotionMonitoringEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Motion monitoring enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MotionMonitoringEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_MotionMonitoringSeconds_" data-uid="TwinSharp.NC.AxisParameters.MotionMonitoringSeconds*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_MotionMonitoringSeconds" data-uid="TwinSharp.NC.AxisParameters.MotionMonitoringSeconds">
+  MotionMonitoringSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Motion monitoring time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MotionMonitoringSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_Name_" data-uid="TwinSharp.NC.AxisParameters.Name*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_Name" data-uid="TwinSharp.NC.AxisParameters.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Axis name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_PhysicalUnit_" data-uid="TwinSharp.NC.AxisParameters.PhysicalUnit*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_PhysicalUnit" data-uid="TwinSharp.NC.AxisParameters.PhysicalUnit">
+  PhysicalUnit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Physical unit</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PhysicalUnit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_PositionRangeMonitoringEnabled_" data-uid="TwinSharp.NC.AxisParameters.PositionRangeMonitoringEnabled*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_PositionRangeMonitoringEnabled" data-uid="TwinSharp.NC.AxisParameters.PositionRangeMonitoringEnabled">
+  PositionRangeMonitoringEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position range monitoring?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PositionRangeMonitoringEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_PositionRangeMonitoringWindow_" data-uid="TwinSharp.NC.AxisParameters.PositionRangeMonitoringWindow*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_PositionRangeMonitoringWindow" data-uid="TwinSharp.NC.AxisParameters.PositionRangeMonitoringWindow">
+  PositionRangeMonitoringWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position range monitoring window</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PositionRangeMonitoringWindow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_PulseWayNegativeDirection_" data-uid="TwinSharp.NC.AxisParameters.PulseWayNegativeDirection*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_PulseWayNegativeDirection" data-uid="TwinSharp.NC.AxisParameters.PulseWayNegativeDirection">
+  PulseWayNegativeDirection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pulse way in neg. direction e.g. mm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PulseWayNegativeDirection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_PulseWayPositiveDirection_" data-uid="TwinSharp.NC.AxisParameters.PulseWayPositiveDirection*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_PulseWayPositiveDirection" data-uid="TwinSharp.NC.AxisParameters.PulseWayPositiveDirection">
+  PulseWayPositiveDirection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pulse way in pos. direction e.g. mm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PulseWayPositiveDirection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_RefVelocityAtRefOutput_" data-uid="TwinSharp.NC.AxisParameters.RefVelocityAtRefOutput*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_RefVelocityAtRefOutput" data-uid="TwinSharp.NC.AxisParameters.RefVelocityAtRefOutput">
+  RefVelocityAtRefOutput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference velocity at reference output (velocity pre-control)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RefVelocityAtRefOutput { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_RefVelocityCamDirection_" data-uid="TwinSharp.NC.AxisParameters.RefVelocityCamDirection*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_RefVelocityCamDirection" data-uid="TwinSharp.NC.AxisParameters.RefVelocityCamDirection">
+  RefVelocityCamDirection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ref. velocity in cam direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RefVelocityCamDirection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_RefVelocitySyncDirection_" data-uid="TwinSharp.NC.AxisParameters.RefVelocitySyncDirection*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_RefVelocitySyncDirection" data-uid="TwinSharp.NC.AxisParameters.RefVelocitySyncDirection">
+  RefVelocitySyncDirection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ref. velocity in sync direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RefVelocitySyncDirection { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_TargetPositionMonitoringEnabled_" data-uid="TwinSharp.NC.AxisParameters.TargetPositionMonitoringEnabled*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_TargetPositionMonitoringEnabled" data-uid="TwinSharp.NC.AxisParameters.TargetPositionMonitoringEnabled">
+  TargetPositionMonitoringEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Target position monitoring enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TargetPositionMonitoringEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_TargetPositionMonitoringSeconds_" data-uid="TwinSharp.NC.AxisParameters.TargetPositionMonitoringSeconds*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_TargetPositionMonitoringSeconds" data-uid="TwinSharp.NC.AxisParameters.TargetPositionMonitoringSeconds">
+  TargetPositionMonitoringSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Target position monitoring time in seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TargetPositionMonitoringSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_TargetPositionMonitoringWindow_" data-uid="TwinSharp.NC.AxisParameters.TargetPositionMonitoringWindow*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_TargetPositionMonitoringWindow" data-uid="TwinSharp.NC.AxisParameters.TargetPositionMonitoringWindow">
+  TargetPositionMonitoringWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Target position monitoring window e.g. mm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TargetPositionMonitoringWindow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_Type_" data-uid="TwinSharp.NC.AxisParameters.Type*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_Type" data-uid="TwinSharp.NC.AxisParameters.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Axis type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AxisType Type { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.NC.AxisType.html">AxisType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_VelocityHandFast_" data-uid="TwinSharp.NC.AxisParameters.VelocityHandFast*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_VelocityHandFast" data-uid="TwinSharp.NC.AxisParameters.VelocityHandFast">
+  VelocityHandFast
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Velocity hand fast</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double VelocityHandFast { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_VelocityHandSlow_" data-uid="TwinSharp.NC.AxisParameters.VelocityHandSlow*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_VelocityHandSlow" data-uid="TwinSharp.NC.AxisParameters.VelocityHandSlow">
+  VelocityHandSlow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Velocity hand slow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double VelocityHandSlow { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisParameters_VelocityRapidTraverse_" data-uid="TwinSharp.NC.AxisParameters.VelocityRapidTraverse*"></a>
+
+  <h3 id="TwinSharp_NC_AxisParameters_VelocityRapidTraverse" data-uid="TwinSharp.NC.AxisParameters.VelocityRapidTraverse">
+  VelocityRapidTraverse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Velocity rapid traverse</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double VelocityRapidTraverse { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisParameters.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

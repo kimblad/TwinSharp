@@ -1,0 +1,263 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.OperationState
+  commentId: T:TwinSharp.CNC.OperationState
+  id: OperationState
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.OperationState.NoSignificance
+  - TwinSharp.CNC.OperationState.PROCESS_ACTIVE
+  - TwinSharp.CNC.OperationState.PROCESS_DESELECTED
+  - TwinSharp.CNC.OperationState.PROCESS_ERROR
+  - TwinSharp.CNC.OperationState.PROCESS_HOLD
+  - TwinSharp.CNC.OperationState.PROCESS_READY
+  - TwinSharp.CNC.OperationState.PROCESS_SELECTED
+  langs:
+  - csharp
+  - vb
+  name: OperationState
+  nameWithType: OperationState
+  fullName: TwinSharp.CNC.OperationState
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OperationState
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 114
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Enumeration of the possible states of an operation mode. Depending on the actually selected operation mode, these states may contain a further meaning.
+  example: []
+  syntax:
+    content: public enum OperationState
+    content.vb: Public Enum OperationState
+- uid: TwinSharp.CNC.OperationState.NoSignificance
+  commentId: F:TwinSharp.CNC.OperationState.NoSignificance
+  id: NoSignificance
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: NoSignificance
+  nameWithType: OperationState.NoSignificance
+  fullName: TwinSharp.CNC.OperationState.NoSignificance
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NoSignificance
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 117
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: ''
+  example: []
+  syntax:
+    content: NoSignificance = 0
+    return:
+      type: TwinSharp.CNC.OperationState
+- uid: TwinSharp.CNC.OperationState.PROCESS_DESELECTED
+  commentId: F:TwinSharp.CNC.OperationState.PROCESS_DESELECTED
+  id: PROCESS_DESELECTED
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: PROCESS_DESELECTED
+  nameWithType: OperationState.PROCESS_DESELECTED
+  fullName: TwinSharp.CNC.OperationState.PROCESS_DESELECTED
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PROCESS_DESELECTED
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 120
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Operation mode is deselected.
+  example: []
+  syntax:
+    content: PROCESS_DESELECTED = 1
+    return:
+      type: TwinSharp.CNC.OperationState
+- uid: TwinSharp.CNC.OperationState.PROCESS_SELECTED
+  commentId: F:TwinSharp.CNC.OperationState.PROCESS_SELECTED
+  id: PROCESS_SELECTED
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: PROCESS_SELECTED
+  nameWithType: OperationState.PROCESS_SELECTED
+  fullName: TwinSharp.CNC.OperationState.PROCESS_SELECTED
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PROCESS_SELECTED
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 123
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Operation mode is selected.
+  example: []
+  syntax:
+    content: PROCESS_SELECTED = 2
+    return:
+      type: TwinSharp.CNC.OperationState
+- uid: TwinSharp.CNC.OperationState.PROCESS_READY
+  commentId: F:TwinSharp.CNC.OperationState.PROCESS_READY
+  id: PROCESS_READY
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: PROCESS_READY
+  nameWithType: OperationState.PROCESS_READY
+  fullName: TwinSharp.CNC.OperationState.PROCESS_READY
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PROCESS_READY
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 126
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: NC/Program is selected, or MDI block is selected, or manual mode is programmed or homing is programmed.
+  example: []
+  syntax:
+    content: PROCESS_READY = 3
+    return:
+      type: TwinSharp.CNC.OperationState
+- uid: TwinSharp.CNC.OperationState.PROCESS_ACTIVE
+  commentId: F:TwinSharp.CNC.OperationState.PROCESS_ACTIVE
+  id: PROCESS_ACTIVE
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: PROCESS_ACTIVE
+  nameWithType: OperationState.PROCESS_ACTIVE
+  fullName: TwinSharp.CNC.OperationState.PROCESS_ACTIVE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PROCESS_ACTIVE
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 129
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: NC program is running, or the MDI NC block(s) are running, or manual mode is running or homing is running.
+  example: []
+  syntax:
+    content: PROCESS_ACTIVE = 4
+    return:
+      type: TwinSharp.CNC.OperationState
+- uid: TwinSharp.CNC.OperationState.PROCESS_HOLD
+  commentId: F:TwinSharp.CNC.OperationState.PROCESS_HOLD
+  id: PROCESS_HOLD
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: PROCESS_HOLD
+  nameWithType: OperationState.PROCESS_HOLD
+  fullName: TwinSharp.CNC.OperationState.PROCESS_HOLD
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PROCESS_HOLD
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 132
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: NC program is interrupted, or the MDI NC block(s) are stopped, or manual mode is stopped, or homing is stopped.
+  example: []
+  syntax:
+    content: PROCESS_HOLD = 5
+    return:
+      type: TwinSharp.CNC.OperationState
+- uid: TwinSharp.CNC.OperationState.PROCESS_ERROR
+  commentId: F:TwinSharp.CNC.OperationState.PROCESS_ERROR
+  id: PROCESS_ERROR
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: PROCESS_ERROR
+  nameWithType: OperationState.PROCESS_ERROR
+  fullName: TwinSharp.CNC.OperationState.PROCESS_ERROR
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PROCESS_ERROR
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 135
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: An error occurred while the NC program is executed, or error state for other modes.
+  example: []
+  syntax:
+    content: PROCESS_ERROR = 6
+    return:
+      type: TwinSharp.CNC.OperationState
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.OperationState
+  commentId: T:TwinSharp.CNC.OperationState
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.OperationState.html
+  name: OperationState
+  nameWithType: OperationState
+  fullName: TwinSharp.CNC.OperationState

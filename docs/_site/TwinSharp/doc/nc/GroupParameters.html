@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>GroupParameters Public class | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="GroupParameters Public class | TwinSharp ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/GroupParameters.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="groupparameters-public-class">GroupParameters <code>Public class</code></h1>
+
+<h2 id="diagram">Diagram</h2>
+<pre><code class="lang-mermaid">  flowchart LR
+  classDef interfaceStyle stroke-dasharray: 5 5;
+  classDef abstractStyle stroke-width:4px
+  subgraph TwinSharp.NC
+  TwinSharp.NC.GroupParameters[[GroupParameters]]
+  end
+</code></pre>
+<h2 id="members">Members</h2>
+<h3 id="properties">Properties</h3>
+<h4 id="public--properties">Public  properties</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#fifodimension"><code>FifoDimension</code></a><br>FIFO dimension (m = number of axes)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="FifoInterpolationType.html"><code>FifoInterpolationType</code></a></td>
+<td><a href="#fifointerpolationtype"><code>FifoInterpolationType</code></a><br>Interpolation type for FIFO setpoint generator</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#fifolength"><code>FifoLength</code></a><br>FIFO size(length) (n = number of FIFO entries)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="FifoOverrideType.html"><code>FifoOverrideType</code></a></td>
+<td><a href="#fifooverridetype"><code>FifoOverrideType</code></a><br>Override type for FIFO setpoint generator</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#fifotimedelta"><code>FifoTimeDelta</code></a><br>Time delta for two sequenced FIFO entries (FIFO entry timebase)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><a href="#fifotimeforoverridechange"><code>FifoTimeForOverrideChange</code></a><br>P-T2 time for override change(T1= T2 = T0)</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#id"><code>ID</code></a><br>Group ID</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#maxsafentries"><code>MaxSafEntries</code></a><br>Size of the SAF table (max. number of SAF entries</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#maxsvbentries"><code>MaxSvbEntries</code></a><br>Size of the SVB table (max. number of SVB entries</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#name"><code>Name</code></a><br>Group name</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#numberinthechannel"><code>NumberInTheChannel</code></a><br>Number in the channel</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#parentchannelid"><code>ParentChannelID</code></a><br>Channel ID that this group belongs to.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><a href="#parentchannelname"><code>ParentChannelName</code></a><br>Channel name that this group belongs to.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="ChannelType.html"><code>ChannelType</code></a></td>
+<td><a href="#parentchanneltype"><code>ParentChannelType</code></a><br>Channel type that this group belongs to.</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#safcycletime"><code>SafCycleTime</code></a><br>SAF cycle time group</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#safcycletimedivisor"><code>SafCycleTimeDivisor</code></a><br>Internal SAF cycle time divisor (divides the internal SAF cycle time by this factor)</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><a href="#singleblockoperationmode"><code>SingleBlockOperationMode</code></a><br>Single block operation mode.</td>
+<td><code>get, set</code></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td><a href="#svbcycletime"><code>SvbCycleTime</code></a><br>SVB cycle time group</td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="GroupType.html"><code>GroupType</code></a></td>
+<td><a href="#type"><code>Type</code></a><br>Group type</td>
+<td><code>get</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<h3 id="constructors">Constructors</h3>
+<h4 id="groupparameters">GroupParameters</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/GroupParameters.cs#L10"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public GroupParameters(AdsClient client, uint id)
+</code></pre>
+<h5 id="arguments">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AdsClient</code></td>
+<td>client</td>
+<td></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties-1">Properties</h3>
+<h4 id="id">ID</h4>
+<pre><code class="lang-csharp">public uint ID { get; }
+</code></pre>
+<h5 id="summary">Summary</h5>
+<p>Group ID</p>
+<h4 id="name">Name</h4>
+<pre><code class="lang-csharp">public string Name { get; }
+</code></pre>
+<h5 id="summary-1">Summary</h5>
+<p>Group name</p>
+<h4 id="type">Type</h4>
+<pre><code class="lang-csharp">public GroupType Type { get; }
+</code></pre>
+<h5 id="summary-2">Summary</h5>
+<p>Group type</p>
+<h4 id="safcycletime">SafCycleTime</h4>
+<pre><code class="lang-csharp">public uint SafCycleTime { get; }
+</code></pre>
+<h5 id="summary-3">Summary</h5>
+<p>SAF cycle time group</p>
+<h4 id="svbcycletime">SvbCycleTime</h4>
+<pre><code class="lang-csharp">public uint SvbCycleTime { get; }
+</code></pre>
+<h5 id="summary-4">Summary</h5>
+<p>SVB cycle time group</p>
+<h4 id="singleblockoperationmode">SingleBlockOperationMode</h4>
+<pre><code class="lang-csharp">public bool SingleBlockOperationMode { get; set; }
+</code></pre>
+<h5 id="summary-5">Summary</h5>
+<p>Single block operation mode.</p>
+<h4 id="maxsvbentries">MaxSvbEntries</h4>
+<pre><code class="lang-csharp">public uint MaxSvbEntries { get; }
+</code></pre>
+<h5 id="summary-6">Summary</h5>
+<p>Size of the SVB table (max. number of SVB entries</p>
+<h4 id="maxsafentries">MaxSafEntries</h4>
+<pre><code class="lang-csharp">public uint MaxSafEntries { get; }
+</code></pre>
+<h5 id="summary-7">Summary</h5>
+<p>Size of the SAF table (max. number of SAF entries</p>
+<h4 id="safcycletimedivisor">SafCycleTimeDivisor</h4>
+<pre><code class="lang-csharp">public uint SafCycleTimeDivisor { get; }
+</code></pre>
+<h5 id="summary-8">Summary</h5>
+<p>Internal SAF cycle time divisor (divides the internal SAF cycle time by this factor)</p>
+<h4 id="parentchannelid">ParentChannelID</h4>
+<pre><code class="lang-csharp">public uint ParentChannelID { get; }
+</code></pre>
+<h5 id="summary-9">Summary</h5>
+<p>Channel ID that this group belongs to.</p>
+<h4 id="parentchannelname">ParentChannelName</h4>
+<pre><code class="lang-csharp">public string ParentChannelName { get; }
+</code></pre>
+<h5 id="summary-10">Summary</h5>
+<p>Channel name that this group belongs to.</p>
+<h4 id="parentchanneltype">ParentChannelType</h4>
+<pre><code class="lang-csharp">public ChannelType ParentChannelType { get; }
+</code></pre>
+<h5 id="summary-11">Summary</h5>
+<p>Channel type that this group belongs to.</p>
+<h4 id="numberinthechannel">NumberInTheChannel</h4>
+<pre><code class="lang-csharp">public uint NumberInTheChannel { get; }
+</code></pre>
+<h5 id="summary-12">Summary</h5>
+<p>Number in the channel</p>
+<h4 id="fifodimension">FifoDimension</h4>
+<pre><code class="lang-csharp">public uint FifoDimension { get; }
+</code></pre>
+<h5 id="summary-13">Summary</h5>
+<p>FIFO dimension (m = number of axes)</p>
+<h4 id="fifolength">FifoLength</h4>
+<pre><code class="lang-csharp">public uint FifoLength { get; }
+</code></pre>
+<h5 id="summary-14">Summary</h5>
+<p>FIFO size(length) (n = number of FIFO entries)</p>
+<h4 id="fifointerpolationtype">FifoInterpolationType</h4>
+<pre><code class="lang-csharp">public FifoInterpolationType FifoInterpolationType { get; }
+</code></pre>
+<h5 id="summary-15">Summary</h5>
+<p>Interpolation type for FIFO setpoint generator</p>
+<h4 id="fifooverridetype">FifoOverrideType</h4>
+<pre><code class="lang-csharp">public FifoOverrideType FifoOverrideType { get; set; }
+</code></pre>
+<h5 id="summary-16">Summary</h5>
+<p>Override type for FIFO setpoint generator</p>
+<h4 id="fifotimeforoverridechange">FifoTimeForOverrideChange</h4>
+<pre><code class="lang-csharp">public double FifoTimeForOverrideChange { get; set; }
+</code></pre>
+<h5 id="summary-17">Summary</h5>
+<p>P-T2 time for override change(T1= T2 = T0)</p>
+<h4 id="fifotimedelta">FifoTimeDelta</h4>
+<pre><code class="lang-csharp">public double FifoTimeDelta { get; set; }
+</code></pre>
+<h5 id="summary-18">Summary</h5>
+<p>Time delta for two sequenced FIFO entries (FIFO entry timebase)</p>
+<p><em>Generated with</em> <a href="https://github.com/hailstorm75/ModularDoc"><em>ModularDoc</em></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/GroupParameters.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

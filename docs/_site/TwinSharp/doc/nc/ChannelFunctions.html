@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>ChannelFunctions Public class | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="ChannelFunctions Public class | TwinSharp ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/ChannelFunctions.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="channelfunctions-public-class">ChannelFunctions <code>Public class</code></h1>
+
+<h2 id="description">Description</h2>
+<p>The ChannelFunctions class provides methods to interact with and control NC (Numerical Control) channels
+using an AdsClient. It allows loading NC programs by number or name, starting the interpreter, setting
+the interpreter operation mode, setting paths for subroutines, and controlling the channel with reset,
+stop, retry, and skip functionalities.</p>
+<h2 id="diagram">Diagram</h2>
+<pre><code class="lang-mermaid">  flowchart LR
+  classDef interfaceStyle stroke-dasharray: 5 5;
+  classDef abstractStyle stroke-width:4px
+  subgraph TwinSharp.NC
+  TwinSharp.NC.ChannelFunctions[[ChannelFunctions]]
+  end
+</code></pre>
+<h2 id="members">Members</h2>
+<h3 id="methods">Methods</h3>
+<h4 id="public--methods">Public  methods</h4>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><a href="#loadprogrambyname"><code>LoadProgramByName</code></a>(<code>string</code> programName)<br>Load NC program by name. The standard NC path does not have to be given although it may. Other paths are also permitted.</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#loadprogrambynumber"><code>LoadProgramByNumber</code></a>(<code>uint</code> programNumber)<br>Load NC program with program number</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#resetchannel"><code>ResetChannel</code></a>()<br>Reset channel</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#retrychannel"><code>RetryChannel</code></a>()<br>&quot;Retry&quot; Channel(restart Channel)</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#setinterpreteroperationmode"><code>SetInterpreterOperationMode</code></a>(<a href="InterpreterOperationMode.html"><code>InterpreterOperationMode</code></a> mode)<br>Set the interpreter/channel operation mode</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#setpathforsubroutines"><code>SetPathForSubRoutines</code></a>(<code>string</code> path)<br>Set the path for subroutines</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#skipchannel"><code>SkipChannel</code></a>()<br>&quot;Skip&quot; Channel (skip task/block)</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#startinterpreter"><code>StartInterpreter</code></a>()<br>Start interpreter</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#stopchannel"><code>StopChannel</code></a>()<br>Stop channel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<h3 id="summary">Summary</h3>
+<p>The ChannelFunctions class provides methods to interact with and control NC (Numerical Control) channels
+using an AdsClient. It allows loading NC programs by number or name, starting the interpreter, setting
+the interpreter operation mode, setting paths for subroutines, and controlling the channel with reset,
+stop, retry, and skip functionalities.</p>
+<h3 id="constructors">Constructors</h3>
+<h4 id="channelfunctions">ChannelFunctions</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L16"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">internal ChannelFunctions(AdsClient client, uint id)
+</code></pre>
+<h5 id="arguments">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AdsClient</code></td>
+<td>client</td>
+<td></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>id</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods-1">Methods</h3>
+<h4 id="loadprogrambynumber">LoadProgramByNumber</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L27"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void LoadProgramByNumber(uint programNumber)
+</code></pre>
+<h5 id="arguments-1">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uint</code></td>
+<td>programNumber</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="summary-1">Summary</h5>
+<p>Load NC program with program number</p>
+<h4 id="startinterpreter">StartInterpreter</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L35"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void StartInterpreter()
+</code></pre>
+<h5 id="summary-2">Summary</h5>
+<p>Start interpreter</p>
+<h4 id="loadprogrambyname">LoadProgramByName</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L44"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void LoadProgramByName(string programName)
+</code></pre>
+<h5 id="arguments-2">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>programName</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="summary-3">Summary</h5>
+<p>Load NC program by name. The standard NC path does not have to be given although it may. Other paths are also permitted.</p>
+<h4 id="setinterpreteroperationmode">SetInterpreterOperationMode</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L53"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void SetInterpreterOperationMode(InterpreterOperationMode mode)
+</code></pre>
+<h5 id="arguments-3">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="InterpreterOperationMode.html"><code>InterpreterOperationMode</code></a></td>
+<td>mode</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="summary-4">Summary</h5>
+<p>Set the interpreter/channel operation mode</p>
+<h4 id="setpathforsubroutines">SetPathForSubRoutines</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L62"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void SetPathForSubRoutines(string path)
+</code></pre>
+<h5 id="arguments-4">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>path</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="summary-5">Summary</h5>
+<p>Set the path for subroutines</p>
+<h4 id="resetchannel">ResetChannel</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L70"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void ResetChannel()
+</code></pre>
+<h5 id="summary-6">Summary</h5>
+<p>Reset channel</p>
+<h4 id="stopchannel">StopChannel</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L78"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void StopChannel()
+</code></pre>
+<h5 id="summary-7">Summary</h5>
+<p>Stop channel</p>
+<h4 id="retrychannel">RetryChannel</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L86"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void RetryChannel()
+</code></pre>
+<h5 id="summary-8">Summary</h5>
+<p>&quot;Retry&quot; Channel(restart Channel)</p>
+<h4 id="skipchannel">SkipChannel</h4>
+<p><a href="https://github.com///blob//TwinSharp/NC/ChannelFunctions.cs#L94"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void SkipChannel()
+</code></pre>
+<h5 id="summary-9">Summary</h5>
+<p>&quot;Skip&quot; Channel (skip task/block)</p>
+<p><em>Generated with</em> <a href="https://github.com/hailstorm75/ModularDoc"><em>ModularDoc</em></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/nc/ChannelFunctions.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

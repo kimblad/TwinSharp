@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.IPC
+  commentId: N:TwinSharp.IPC
+  id: TwinSharp.IPC
+  children:
+  - TwinSharp.IPC.IPC
+  - TwinSharp.IPC.IpcCpu
+  - TwinSharp.IPC.IpcDisplayDevice
+  - TwinSharp.IPC.IpcFan
+  - TwinSharp.IPC.IpcMainBoard
+  - TwinSharp.IPC.IpcMemory
+  - TwinSharp.IPC.IpcMiscellaneous
+  - TwinSharp.IPC.IpcNIC
+  - TwinSharp.IPC.IpcOperatingSystem
+  - TwinSharp.IPC.IpcTime
+  - TwinSharp.IPC.IpcTwinCAT
+  - TwinSharp.IPC.IpcUps
+  langs:
+  - csharp
+  - vb
+  name: TwinSharp.IPC
+  nameWithType: TwinSharp.IPC
+  fullName: TwinSharp.IPC
+  type: Namespace
+  assemblies:
+  - TwinSharp
+references:
+- uid: TwinSharp.IPC.IPC
+  commentId: T:TwinSharp.IPC.IPC
+  href: TwinSharp.IPC.IPC.html
+  name: IPC
+  nameWithType: IPC
+  fullName: TwinSharp.IPC.IPC
+- uid: TwinSharp.IPC.IpcCpu
+  commentId: T:TwinSharp.IPC.IpcCpu
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcCpu.html
+  name: IpcCpu
+  nameWithType: IpcCpu
+  fullName: TwinSharp.IPC.IpcCpu
+- uid: TwinSharp.IPC.IpcDisplayDevice
+  commentId: T:TwinSharp.IPC.IpcDisplayDevice
+  href: TwinSharp.IPC.IpcDisplayDevice.html
+  name: IpcDisplayDevice
+  nameWithType: IpcDisplayDevice
+  fullName: TwinSharp.IPC.IpcDisplayDevice
+- uid: TwinSharp.IPC.IpcFan
+  commentId: T:TwinSharp.IPC.IpcFan
+  href: TwinSharp.IPC.IpcFan.html
+  name: IpcFan
+  nameWithType: IpcFan
+  fullName: TwinSharp.IPC.IpcFan
+- uid: TwinSharp.IPC.IpcMainBoard
+  commentId: T:TwinSharp.IPC.IpcMainBoard
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcMainBoard.html
+  name: IpcMainBoard
+  nameWithType: IpcMainBoard
+  fullName: TwinSharp.IPC.IpcMainBoard
+- uid: TwinSharp.IPC.IpcMemory
+  commentId: T:TwinSharp.IPC.IpcMemory
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcMemory.html
+  name: IpcMemory
+  nameWithType: IpcMemory
+  fullName: TwinSharp.IPC.IpcMemory
+- uid: TwinSharp.IPC.IpcMiscellaneous
+  commentId: T:TwinSharp.IPC.IpcMiscellaneous
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcMiscellaneous.html
+  name: IpcMiscellaneous
+  nameWithType: IpcMiscellaneous
+  fullName: TwinSharp.IPC.IpcMiscellaneous
+- uid: TwinSharp.IPC.IpcNIC
+  commentId: T:TwinSharp.IPC.IpcNIC
+  href: TwinSharp.IPC.IpcNIC.html
+  name: IpcNIC
+  nameWithType: IpcNIC
+  fullName: TwinSharp.IPC.IpcNIC
+- uid: TwinSharp.IPC.IpcOperatingSystem
+  commentId: T:TwinSharp.IPC.IpcOperatingSystem
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcOperatingSystem.html
+  name: IpcOperatingSystem
+  nameWithType: IpcOperatingSystem
+  fullName: TwinSharp.IPC.IpcOperatingSystem
+- uid: TwinSharp.IPC.IpcTime
+  commentId: T:TwinSharp.IPC.IpcTime
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcTime.html
+  name: IpcTime
+  nameWithType: IpcTime
+  fullName: TwinSharp.IPC.IpcTime
+- uid: TwinSharp.IPC.IpcTwinCAT
+  commentId: T:TwinSharp.IPC.IpcTwinCAT
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcTwinCAT.html
+  name: IpcTwinCAT
+  nameWithType: IpcTwinCAT
+  fullName: TwinSharp.IPC.IpcTwinCAT
+- uid: TwinSharp.IPC.IpcUps
+  commentId: T:TwinSharp.IPC.IpcUps
+  parent: TwinSharp.IPC
+  href: TwinSharp.IPC.IpcUps.html
+  name: IpcUps
+  nameWithType: IpcUps
+  fullName: TwinSharp.IPC.IpcUps
+- uid: TwinSharp.IPC
+  commentId: N:TwinSharp.IPC
+  href: TwinSharp.html
+  name: TwinSharp.IPC
+  nameWithType: TwinSharp.IPC
+  fullName: TwinSharp.IPC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.IPC
+    name: IPC
+    href: TwinSharp.IPC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.IPC
+    name: IPC
+    href: TwinSharp.IPC.html

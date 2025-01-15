@@ -1,0 +1,437 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.ChannelMode
+  commentId: T:TwinSharp.CNC.ChannelMode
+  id: ChannelMode
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.ChannelMode.ADD_MDI_BLOCK
+  - TwinSharp.CNC.ChannelMode.BEARB_MODE_SCENE
+  - TwinSharp.CNC.ChannelMode.ISG_STANDARD
+  - TwinSharp.CNC.ChannelMode.KIN_TRAFO_OFF
+  - TwinSharp.CNC.ChannelMode.MACHINE_LOCK
+  - TwinSharp.CNC.ChannelMode.ONLINE_PROD_TIME
+  - TwinSharp.CNC.ChannelMode.ON_LINE
+  - TwinSharp.CNC.ChannelMode.PROD_TIME
+  - TwinSharp.CNC.ChannelMode.SOLLKON_BlockSearch
+  - TwinSharp.CNC.ChannelMode.SOLLKON_NominalContourVisualisation
+  - TwinSharp.CNC.ChannelMode.SOLLKON_SuppressOutput
+  - TwinSharp.CNC.ChannelMode.SUPPRESS_TECHNO_OUTPUT
+  - TwinSharp.CNC.ChannelMode.SYNCHK
+  langs:
+  - csharp
+  - vb
+  name: ChannelMode
+  nameWithType: ChannelMode
+  fullName: TwinSharp.CNC.ChannelMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ChannelMode
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 45
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Enum for selection of a special channel mode such as syntax check or machining time calculation
+  example: []
+  syntax:
+    content: public enum ChannelMode
+    content.vb: Public Enum ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.ISG_STANDARD
+  commentId: F:TwinSharp.CNC.ChannelMode.ISG_STANDARD
+  id: ISG_STANDARD
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: ISG_STANDARD
+  nameWithType: ChannelMode.ISG_STANDARD
+  fullName: TwinSharp.CNC.ChannelMode.ISG_STANDARD
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ISG_STANDARD
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 48
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Normal mode
+  example: []
+  syntax:
+    content: ISG_STANDARD = 0
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.SOLLKON_BlockSearch
+  commentId: F:TwinSharp.CNC.ChannelMode.SOLLKON_BlockSearch
+  id: SOLLKON_BlockSearch
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: SOLLKON_BlockSearch
+  nameWithType: ChannelMode.SOLLKON_BlockSearch
+  fullName: TwinSharp.CNC.ChannelMode.SOLLKON_BlockSearch
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SOLLKON_BlockSearch
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 51
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Block search
+  example: []
+  syntax:
+    content: SOLLKON_BlockSearch = 1
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.SOLLKON_NominalContourVisualisation
+  commentId: F:TwinSharp.CNC.ChannelMode.SOLLKON_NominalContourVisualisation
+  id: SOLLKON_NominalContourVisualisation
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: SOLLKON_NominalContourVisualisation
+  nameWithType: ChannelMode.SOLLKON_NominalContourVisualisation
+  fullName: TwinSharp.CNC.ChannelMode.SOLLKON_NominalContourVisualisation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SOLLKON_NominalContourVisualisation
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 54
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Nominal contour visualisation simulation with output of visualisation data
+  example: []
+  syntax:
+    content: SOLLKON_NominalContourVisualisation = 2
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.SOLLKON_SuppressOutput
+  commentId: F:TwinSharp.CNC.ChannelMode.SOLLKON_SuppressOutput
+  id: SOLLKON_SuppressOutput
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: SOLLKON_SuppressOutput
+  nameWithType: ChannelMode.SOLLKON_SuppressOutput
+  fullName: TwinSharp.CNC.ChannelMode.SOLLKON_SuppressOutput
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SOLLKON_SuppressOutput
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 57
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Nominal contour visualisation simulation without output of visualisation data
+  example: []
+  syntax:
+    content: SOLLKON_SuppressOutput = 2050
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.ON_LINE
+  commentId: F:TwinSharp.CNC.ChannelMode.ON_LINE
+  id: ON_LINE
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: ON_LINE
+  nameWithType: ChannelMode.ON_LINE
+  fullName: TwinSharp.CNC.ChannelMode.ON_LINE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ON_LINE
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 60
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Online visualisation simulation
+  example: []
+  syntax:
+    content: ON_LINE = 4
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.SYNCHK
+  commentId: F:TwinSharp.CNC.ChannelMode.SYNCHK
+  id: SYNCHK
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: SYNCHK
+  nameWithType: ChannelMode.SYNCHK
+  fullName: TwinSharp.CNC.ChannelMode.SYNCHK
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SYNCHK
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 63
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Syntax check simulation
+  example: []
+  syntax:
+    content: SYNCHK = 8
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.PROD_TIME
+  commentId: F:TwinSharp.CNC.ChannelMode.PROD_TIME
+  id: PROD_TIME
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: PROD_TIME
+  nameWithType: ChannelMode.PROD_TIME
+  fullName: TwinSharp.CNC.ChannelMode.PROD_TIME
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PROD_TIME
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 66
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Simulation machining time calculation (in TwinCAT without function)
+  example: []
+  syntax:
+    content: PROD_TIME = 16
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.ONLINE_PROD_TIME
+  commentId: F:TwinSharp.CNC.ChannelMode.ONLINE_PROD_TIME
+  id: ONLINE_PROD_TIME
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: ONLINE_PROD_TIME
+  nameWithType: ChannelMode.ONLINE_PROD_TIME
+  fullName: TwinSharp.CNC.ChannelMode.ONLINE_PROD_TIME
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ONLINE_PROD_TIME
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 69
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Simulation online machining time calculation
+  example: []
+  syntax:
+    content: ONLINE_PROD_TIME = 32
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.MACHINE_LOCK
+  commentId: F:TwinSharp.CNC.ChannelMode.MACHINE_LOCK
+  id: MACHINE_LOCK
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: MACHINE_LOCK
+  nameWithType: ChannelMode.MACHINE_LOCK
+  fullName: TwinSharp.CNC.ChannelMode.MACHINE_LOCK
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MACHINE_LOCK
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 72
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Dry run without axis motion
+  example: []
+  syntax:
+    content: MACHINE_LOCK = 64
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.ADD_MDI_BLOCK
+  commentId: F:TwinSharp.CNC.ChannelMode.ADD_MDI_BLOCK
+  id: ADD_MDI_BLOCK
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: ADD_MDI_BLOCK
+  nameWithType: ChannelMode.ADD_MDI_BLOCK
+  fullName: TwinSharp.CNC.ChannelMode.ADD_MDI_BLOCK
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ADD_MDI_BLOCK
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 75
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Extended manual block mode: the end of a manual block is not evaluated as a program end. It permits the commanding of further manual blocks.'
+  example: []
+  syntax:
+    content: ADD_MDI_BLOCK = 128
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.KIN_TRAFO_OFF
+  commentId: F:TwinSharp.CNC.ChannelMode.KIN_TRAFO_OFF
+  id: KIN_TRAFO_OFF
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: KIN_TRAFO_OFF
+  nameWithType: ChannelMode.KIN_TRAFO_OFF
+  fullName: TwinSharp.CNC.ChannelMode.KIN_TRAFO_OFF
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KIN_TRAFO_OFF
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 78
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Overwrites automatic enable for kinematic transformations by a characteristic parameter defined in the channel parameters (sda_mds*.lis).
+  example: []
+  syntax:
+    content: KIN_TRAFO_OFF = 256
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.BEARB_MODE_SCENE
+  commentId: F:TwinSharp.CNC.ChannelMode.BEARB_MODE_SCENE
+  id: BEARB_MODE_SCENE
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: BEARB_MODE_SCENE
+  nameWithType: ChannelMode.BEARB_MODE_SCENE
+  fullName: TwinSharp.CNC.ChannelMode.BEARB_MODE_SCENE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BEARB_MODE_SCENE
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 81
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'When SCENE mode is enabled, the output of #SCENE commands is activated on the interface (see also [FCT-C17// Scene contour visualisation]). An additional client is linked to this output via DataFactory / CORBA.'
+  example: []
+  syntax:
+    content: BEARB_MODE_SCENE = 4096
+    return:
+      type: TwinSharp.CNC.ChannelMode
+- uid: TwinSharp.CNC.ChannelMode.SUPPRESS_TECHNO_OUTPUT
+  commentId: F:TwinSharp.CNC.ChannelMode.SUPPRESS_TECHNO_OUTPUT
+  id: SUPPRESS_TECHNO_OUTPUT
+  parent: TwinSharp.CNC.ChannelMode
+  langs:
+  - csharp
+  - vb
+  name: SUPPRESS_TECHNO_OUTPUT
+  nameWithType: ChannelMode.SUPPRESS_TECHNO_OUTPUT
+  fullName: TwinSharp.CNC.ChannelMode.SUPPRESS_TECHNO_OUTPUT
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SUPPRESS_TECHNO_OUTPUT
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 84
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Without output of technology functions (M/H/T). Set implicitly in connection with syntax check.
+  example: []
+  syntax:
+    content: SUPPRESS_TECHNO_OUTPUT = 8192
+    return:
+      type: TwinSharp.CNC.ChannelMode
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.ChannelMode
+  commentId: T:TwinSharp.CNC.ChannelMode
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.ChannelMode.html
+  name: ChannelMode
+  nameWithType: ChannelMode
+  fullName: TwinSharp.CNC.ChannelMode

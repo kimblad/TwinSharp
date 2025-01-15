@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>OperationModeManager Public class | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="OperationModeManager Public class | TwinSharp ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/cnc/OperationModeManager.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="operationmodemanager-public-class">OperationModeManager <code>Public class</code></h1>
+
+<h2 id="diagram">Diagram</h2>
+<pre><code class="lang-mermaid">  flowchart LR
+  classDef interfaceStyle stroke-dasharray: 5 5;
+  classDef abstractStyle stroke-width:4px
+  subgraph TwinSharp.CNC
+  TwinSharp.CNC.OperationModeManager[[OperationModeManager]]
+  end
+  subgraph System
+System.IDisposable[[IDisposable]]
+  end
+System.IDisposable --&gt; TwinSharp.CNC.OperationModeManager
+</code></pre>
+<h2 id="members">Members</h2>
+<h3 id="properties">Properties</h3>
+<h4 id="public--properties">Public  properties</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td>
+<td><a href="#interfaceexists"><code>InterfaceExists</code></a></td>
+<td><code>set</code></td>
+</tr>
+<tr>
+<td><a href="OperationMode.html"><code>OperationMode</code></a></td>
+<td><a href="#operationmodeactual"><code>OperationModeActual</code></a></td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="HLI_IMCM_MODE_STATE.html"><code>HLI_IMCM_MODE_STATE</code></a></td>
+<td><a href="#operationmodeandstateactual"><code>OperationModeAndStateActual</code></a></td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="OperationState.html"><code>OperationState</code></a></td>
+<td><a href="#operationstateactual"><code>OperationStateActual</code></a></td>
+<td><code>get</code></td>
+</tr>
+<tr>
+<td><a href="HLI_PROC_TRANS_TO_MODE_STATE.html"><code>HLI_PROC_TRANS_TO_MODE_STATE</code></a></td>
+<td><a href="#requestedmodeandstate"><code>RequestedModeAndState</code></a></td>
+<td><code>get</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<h4 id="public--methods">Public  methods</h4>
+<table>
+<thead>
+<tr>
+<th>Returns</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void</code></td>
+<td><a href="#dispose"><code>Dispose</code></a>()</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#reset"><code>Reset</code></a>()</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td><a href="#setmodeandstate-12"><code>SetModeAndState</code></a>(<code>...</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="details">Details</h2>
+<h3 id="inheritance">Inheritance</h3>
+<ul>
+<li><code>IDisposable</code></li>
+</ul>
+<h3 id="constructors">Constructors</h3>
+<h4 id="operationmodemanager">OperationModeManager</h4>
+<p><a href="https://github.com///blob//TwinSharp/CNC/OperationModeManager.cs#L16"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">internal OperationModeManager(AdsClient plcClient, AdsClient geoClient, AdsClient comClient, int channelNumber)
+</code></pre>
+<h5 id="arguments">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AdsClient</code></td>
+<td>plcClient</td>
+<td></td>
+</tr>
+<tr>
+<td><code>AdsClient</code></td>
+<td>geoClient</td>
+<td></td>
+</tr>
+<tr>
+<td><code>AdsClient</code></td>
+<td>comClient</td>
+<td></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>channelNumber</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods-1">Methods</h3>
+<h4 id="setmodeandstate-12">SetModeAndState [1/2]</h4>
+<p><a href="https://github.com///blob//TwinSharp/CNC/OperationModeManager.cs#L40"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void SetModeAndState(OperationMode mode, OperationState state, string parameter)
+</code></pre>
+<h5 id="arguments-1">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="OperationMode.html"><code>OperationMode</code></a></td>
+<td>mode</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="OperationState.html"><code>OperationState</code></a></td>
+<td>state</td>
+<td></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td>parameter</td>
+<td>It may be necessary to specify parameters when commanding an operation mode change to ensure the successful change to a specific state of an operation mode.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="summary">Summary</h5>
+<h4 id="setmodeandstate-22">SetModeAndState [2/2]</h4>
+<p><a href="https://github.com///blob//TwinSharp/CNC/OperationModeManager.cs#L52"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void SetModeAndState(HLI_PROC_TRANS_TO_MODE_STATE unit)
+</code></pre>
+<h5 id="arguments-2">Arguments</h5>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="HLI_PROC_TRANS_TO_MODE_STATE.html"><code>HLI_PROC_TRANS_TO_MODE_STATE</code></a></td>
+<td>unit</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="reset">Reset</h4>
+<p><a href="https://github.com///blob//TwinSharp/CNC/OperationModeManager.cs#L114"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public void Reset()
+</code></pre>
+<h4 id="dispose">Dispose</h4>
+<p><a href="https://github.com///blob//TwinSharp/CNC/OperationModeManager.cs#L129"><em>Source code</em></a></p>
+<pre><code class="lang-csharp">public virtual void Dispose()
+</code></pre>
+<h3 id="properties-1">Properties</h3>
+<h4 id="requestedmodeandstate">RequestedModeAndState</h4>
+<pre><code class="lang-csharp">public HLI_PROC_TRANS_TO_MODE_STATE RequestedModeAndState { get; }
+</code></pre>
+<h4 id="operationmodeandstateactual">OperationModeAndStateActual</h4>
+<pre><code class="lang-csharp">public HLI_IMCM_MODE_STATE OperationModeAndStateActual { get; }
+</code></pre>
+<h4 id="operationstateactual">OperationStateActual</h4>
+<pre><code class="lang-csharp">public OperationState OperationStateActual { get; }
+</code></pre>
+<h4 id="operationmodeactual">OperationModeActual</h4>
+<pre><code class="lang-csharp">public OperationMode OperationModeActual { get; }
+</code></pre>
+<h4 id="interfaceexists">InterfaceExists</h4>
+<pre><code class="lang-csharp">public bool InterfaceExists { set; }
+</code></pre>
+<p><em>Generated with</em> <a href="https://github.com/hailstorm75/ModularDoc"><em>ModularDoc</em></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/doc/cnc/OperationModeManager.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

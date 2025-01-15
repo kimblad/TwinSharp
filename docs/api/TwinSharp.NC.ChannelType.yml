@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.ChannelType
+  commentId: T:TwinSharp.NC.ChannelType
+  id: ChannelType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.ChannelType.FIFO
+  - TwinSharp.NC.ChannelType.Interpreter
+  - TwinSharp.NC.ChannelType.KinematicTransformation
+  - TwinSharp.NC.ChannelType.Standard
+  langs:
+  - csharp
+  - vb
+  name: ChannelType
+  nameWithType: ChannelType
+  fullName: TwinSharp.NC.ChannelType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ChannelType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 121
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of channels that exists in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum ChannelType
+    content.vb: Public Enum ChannelType
+- uid: TwinSharp.NC.ChannelType.Standard
+  commentId: F:TwinSharp.NC.ChannelType.Standard
+  id: Standard
+  parent: TwinSharp.NC.ChannelType
+  langs:
+  - csharp
+  - vb
+  name: Standard
+  nameWithType: ChannelType.Standard
+  fullName: TwinSharp.NC.ChannelType.Standard
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Standard
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 124
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Standard channel.
+  example: []
+  syntax:
+    content: Standard = 1
+    return:
+      type: TwinSharp.NC.ChannelType
+- uid: TwinSharp.NC.ChannelType.Interpreter
+  commentId: F:TwinSharp.NC.ChannelType.Interpreter
+  id: Interpreter
+  parent: TwinSharp.NC.ChannelType
+  langs:
+  - csharp
+  - vb
+  name: Interpreter
+  nameWithType: ChannelType.Interpreter
+  fullName: TwinSharp.NC.ChannelType.Interpreter
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Interpreter
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 127
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Interpreter channel.
+  example: []
+  syntax:
+    content: Interpreter = 2
+    return:
+      type: TwinSharp.NC.ChannelType
+- uid: TwinSharp.NC.ChannelType.FIFO
+  commentId: F:TwinSharp.NC.ChannelType.FIFO
+  id: FIFO
+  parent: TwinSharp.NC.ChannelType
+  langs:
+  - csharp
+  - vb
+  name: FIFO
+  nameWithType: ChannelType.FIFO
+  fullName: TwinSharp.NC.ChannelType.FIFO
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FIFO
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 130
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: FIFO channel.
+  example: []
+  syntax:
+    content: FIFO = 3
+    return:
+      type: TwinSharp.NC.ChannelType
+- uid: TwinSharp.NC.ChannelType.KinematicTransformation
+  commentId: F:TwinSharp.NC.ChannelType.KinematicTransformation
+  id: KinematicTransformation
+  parent: TwinSharp.NC.ChannelType
+  langs:
+  - csharp
+  - vb
+  name: KinematicTransformation
+  nameWithType: ChannelType.KinematicTransformation
+  fullName: TwinSharp.NC.ChannelType.KinematicTransformation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: KinematicTransformation
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 133
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Kinematic transformation channel.
+  example: []
+  syntax:
+    content: KinematicTransformation = 4
+    return:
+      type: TwinSharp.NC.ChannelType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.ChannelType
+  commentId: T:TwinSharp.NC.ChannelType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.ChannelType.html
+  name: ChannelType
+  nameWithType: ChannelType
+  fullName: TwinSharp.NC.ChannelType

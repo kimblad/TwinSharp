@@ -1,0 +1,557 @@
+### YamlMime:TableOfContent
+items:
+- uid: TwinSharp
+  name: TwinSharp
+  type: Namespace
+  items:
+  - uid: TwinSharp.AmsRoute
+    name: AmsRoute
+    type: Class
+  - uid: TwinSharp.Constants
+    name: Constants
+    type: Class
+  - uid: TwinSharp.E_EnumCmdType
+    name: E_EnumCmdType
+    type: Enum
+  - uid: TwinSharp.E_LicenseHResult
+    name: E_LicenseHResult
+    type: Enum
+  - uid: TwinSharp.EtherCatDevice
+    name: EtherCatDevice
+    type: Class
+  - uid: TwinSharp.EtherCatMaster
+    name: EtherCatMaster
+    type: Class
+  - uid: TwinSharp.ExtendedAdsErrorCodes
+    name: ExtendedAdsErrorCodes
+    type: Enum
+  - uid: TwinSharp.Extensions
+    name: Extensions
+    type: Class
+  - uid: TwinSharp.FileFinder
+    name: FileFinder
+    type: Class
+  - uid: TwinSharp.FileOpenModeFlags
+    name: FileOpenModeFlags
+    type: Enum
+  - uid: TwinSharp.FileSystem
+    name: FileSystem
+    type: Class
+  - uid: TwinSharp.License
+    name: License
+    type: Class
+  - uid: TwinSharp.RTimeCpuLatency
+    name: RTimeCpuLatency
+    type: Struct
+  - uid: TwinSharp.RTimeCpuSettings
+    name: RTimeCpuSettings
+    type: Struct
+  - uid: TwinSharp.Realtime
+    name: Realtime
+    type: Class
+  - uid: TwinSharp.ST_CheckLicense
+    name: ST_CheckLicense
+    type: Struct
+  - uid: TwinSharp.ST_EcSlaveConfigData
+    name: ST_EcSlaveConfigData
+    type: Struct
+  - uid: TwinSharp.ST_EcSlaveIdentity
+    name: ST_EcSlaveIdentity
+    type: Struct
+  - uid: TwinSharp.ST_EcSlaveState
+    name: ST_EcSlaveState
+    type: Struct
+  - uid: TwinSharp.ST_FileAttributes
+    name: ST_FileAttributes
+    type: Struct
+  - uid: TwinSharp.ST_FindFileEntry
+    name: ST_FindFileEntry
+    type: Struct
+  - uid: TwinSharp.ST_PortAddr
+    name: ST_PortAddr
+    type: Struct
+  - uid: TwinSharp.ST_TopologyDataEx
+    name: ST_TopologyDataEx
+    type: Struct
+  - uid: TwinSharp.Scope
+    name: Scope
+    type: Class
+  - uid: TwinSharp.SumReader
+    name: SumReader
+    type: Class
+  - uid: TwinSharp.TcSystem
+    name: TcSystem
+    type: Class
+- uid: TwinSharp.CNC
+  name: TwinSharp.CNC
+  type: Namespace
+  items:
+  - uid: TwinSharp.CNC.AxisState
+    name: AxisState
+    type: Enum
+  - uid: TwinSharp.CNC.AxisStatus
+    name: AxisStatus
+    type: Class
+  - uid: TwinSharp.CNC.AxisStatusInChannel
+    name: AxisStatusInChannel
+    type: Class
+  - uid: TwinSharp.CNC.AxisStatusInChannelAdresses
+    name: AxisStatusInChannelAdresses
+    type: Class
+  - uid: TwinSharp.CNC.BackwardsOnPath
+    name: BackwardsOnPath
+    type: Class
+  - uid: TwinSharp.CNC.BlockSearch
+    name: BlockSearch
+    type: Class
+  - uid: TwinSharp.CNC.BlockSearchType
+    name: BlockSearchType
+    type: Enum
+  - uid: TwinSharp.CNC.CNC
+    name: CNC
+    type: Class
+  - uid: TwinSharp.CNC.ChannelMode
+    name: ChannelMode
+    type: Enum
+  - uid: TwinSharp.CNC.CncAxis
+    name: CncAxis
+    type: Class
+  - uid: TwinSharp.CNC.CncChannel
+    name: CncChannel
+    type: Class
+  - uid: TwinSharp.CNC.CncPlatform
+    name: CncPlatform
+    type: Class
+  - uid: TwinSharp.CNC.Constants
+    name: Constants
+    type: Class
+  - uid: TwinSharp.CNC.ContourVisualization
+    name: ContourVisualization
+    type: Class
+  - uid: TwinSharp.CNC.ControlCommands
+    name: ControlCommands
+    type: Class
+  - uid: TwinSharp.CNC.DataStreaming
+    name: DataStreaming
+    type: Class
+  - uid: TwinSharp.CNC.DeleteDistanceToGo
+    name: DeleteDistanceToGo
+    type: Class
+  - uid: TwinSharp.CNC.DynamicPositionLimitation
+    name: DynamicPositionLimitation
+    type: Class
+  - uid: TwinSharp.CNC.ErrorCodes
+    name: ErrorCodes
+    type: Class
+  - uid: TwinSharp.CNC.ErrorManagement
+    name: ErrorManagement
+    type: Class
+  - uid: TwinSharp.CNC.ErrorRecievedEventArgs
+    name: ErrorRecievedEventArgs
+    type: Class
+  - uid: TwinSharp.CNC.Extensions
+    name: Extensions
+    type: Class
+  - uid: TwinSharp.CNC.ExternalAxisCommanding
+    name: ExternalAxisCommanding
+    type: Class
+  - uid: TwinSharp.CNC.FeedOverride
+    name: FeedOverride
+    type: Class
+  - uid: TwinSharp.CNC.FeedOverrideAdresses
+    name: FeedOverrideAdresses
+    type: Class
+  - uid: TwinSharp.CNC.HLI_ADD_CMD_VALUE
+    name: HLI_ADD_CMD_VALUE
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_DYNPL_STATE
+    name: HLI_DYNPL_STATE
+    type: Enum
+  - uid: TwinSharp.CNC.HLI_ERROR_MASKE
+    name: HLI_ERROR_MASKE
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_ERROR_SATZ
+    name: HLI_ERROR_SATZ
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
+    name: HLI_ERROR_SATZ_KOPF
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_ERROR_SATZ_RUMPF
+    name: HLI_ERROR_SATZ_RUMPF
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_FB_ZEITANGABE
+    name: HLI_FB_ZEITANGABE
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_HB_ACTIVATION
+    name: HLI_HB_ACTIVATION
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_HB_HR_PARAMETER
+    name: HLI_HB_HR_PARAMETER
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_HB_JOG_PARAMETER
+    name: HLI_HB_JOG_PARAMETER
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_HB_KEY
+    name: HLI_HB_KEY
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_HB_RAPID_KEY
+    name: HLI_HB_RAPID_KEY
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_HB_TIP_PARAMETER
+    name: HLI_HB_TIP_PARAMETER
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_IMCM_MODE_STATE
+    name: HLI_IMCM_MODE_STATE
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_INTF_VERSION_NAME
+    name: HLI_INTF_VERSION_NAME
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_MODUL_NAME
+    name: HLI_MODUL_NAME
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_M_H_PROZESS
+    name: HLI_M_H_PROZESS
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_PROC_TRANS_TO_MODE_STATE
+    name: HLI_PROC_TRANS_TO_MODE_STATE
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG
+    name: HLI_RUMPF_NC_PROG
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_WERT
+    name: HLI_WERT
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_WERT_B
+    name: HLI_WERT_B
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_WERT_B_DATA
+    name: HLI_WERT_B_DATA
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_WERT_DATA
+    name: HLI_WERT_DATA
+    type: Struct
+  - uid: TwinSharp.CNC.HandWheelInc
+    name: HandWheelInc
+    type: Class
+  - uid: TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs
+    name: HcodeNeedsAcknowledgeEventArgs
+    type: Class
+  - uid: TwinSharp.CNC.HrParameters
+    name: HrParameters
+    type: Class
+  - uid: TwinSharp.CNC.Interpolator
+    name: Interpolator
+    type: Class
+  - uid: TwinSharp.CNC.InterpolatorAdresses
+    name: InterpolatorAdresses
+    type: Class
+  - uid: TwinSharp.CNC.JogParameters
+    name: JogParameters
+    type: Class
+  - uid: TwinSharp.CNC.Key
+    name: Key
+    type: Class
+  - uid: TwinSharp.CNC.ManualOperation
+    name: ManualOperation
+    type: Class
+  - uid: TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs
+    name: McodeNeedsAcknowledgeEventArgs
+    type: Class
+  - uid: TwinSharp.CNC.ObjectDescription
+    name: ObjectDescription
+    type: Class
+  - uid: TwinSharp.CNC.OperationMode
+    name: OperationMode
+    type: Enum
+  - uid: TwinSharp.CNC.OperationModeAdresses
+    name: OperationModeAdresses
+    type: Class
+  - uid: TwinSharp.CNC.OperationModeManager
+    name: OperationModeManager
+    type: Class
+  - uid: TwinSharp.CNC.OperationState
+    name: OperationState
+    type: Enum
+  - uid: TwinSharp.CNC.RapidKey
+    name: RapidKey
+    type: Class
+  - uid: TwinSharp.CNC.SOLLKONT_VISU_ACHS_DATA_STD
+    name: SOLLKONT_VISU_ACHS_DATA_STD
+    type: Struct
+  - uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+    name: SOLLKONT_VISU_CH_DATA_STD
+    type: Struct
+  - uid: TwinSharp.CNC.SOLLKONT_VISU_DATA_V0
+    name: SOLLKONT_VISU_DATA_V0
+    type: Struct
+  - uid: TwinSharp.CNC.SOLLKONT_VISU_PDU
+    name: SOLLKONT_VISU_PDU
+    type: Struct
+  - uid: TwinSharp.CNC.SingleBlock
+    name: SingleBlock
+    type: Class
+  - uid: TwinSharp.CNC.SkipModes
+    name: SkipModes
+    type: Enum
+  - uid: TwinSharp.CNC.TECHNO_UNIT_CH
+    name: TECHNO_UNIT_CH
+    type: Struct
+  - uid: TwinSharp.CNC.TechnologyFunction
+    name: TechnologyFunction
+    type: Enum
+  - uid: TwinSharp.CNC.TechnologyProcesses
+    name: TechnologyProcesses
+    type: Class
+  - uid: TwinSharp.CNC.TipParameters
+    name: TipParameters
+    type: Class
+  - uid: TwinSharp.CNC.ZeroOffsets
+    name: ZeroOffsets
+    type: Class
+- uid: TwinSharp.IPC
+  name: TwinSharp.IPC
+  type: Namespace
+  items:
+  - uid: TwinSharp.IPC.IPC
+    name: IPC
+    type: Class
+  - uid: TwinSharp.IPC.IpcCpu
+    name: IpcCpu
+    type: Class
+  - uid: TwinSharp.IPC.IpcDisplayDevice
+    name: IpcDisplayDevice
+    type: Class
+  - uid: TwinSharp.IPC.IpcFan
+    name: IpcFan
+    type: Class
+  - uid: TwinSharp.IPC.IpcMainBoard
+    name: IpcMainBoard
+    type: Class
+  - uid: TwinSharp.IPC.IpcMemory
+    name: IpcMemory
+    type: Class
+  - uid: TwinSharp.IPC.IpcMiscellaneous
+    name: IpcMiscellaneous
+    type: Class
+  - uid: TwinSharp.IPC.IpcNIC
+    name: IpcNIC
+    type: Class
+  - uid: TwinSharp.IPC.IpcOperatingSystem
+    name: IpcOperatingSystem
+    type: Class
+  - uid: TwinSharp.IPC.IpcTime
+    name: IpcTime
+    type: Class
+  - uid: TwinSharp.IPC.IpcTwinCAT
+    name: IpcTwinCAT
+    type: Class
+  - uid: TwinSharp.IPC.IpcUps
+    name: IpcUps
+    type: Class
+- uid: TwinSharp.NC
+  name: TwinSharp.NC
+  type: Namespace
+  items:
+  - uid: TwinSharp.NC.ActualPositionType
+    name: ActualPositionType
+    type: Enum
+  - uid: TwinSharp.NC.Axis
+    name: Axis
+    type: Class
+  - uid: TwinSharp.NC.AxisCyclicProcessData
+    name: AxisCyclicProcessData
+    type: Class
+  - uid: TwinSharp.NC.AxisFunctions
+    name: AxisFunctions
+    type: Class
+  - uid: TwinSharp.NC.AxisParameters
+    name: AxisParameters
+    type: Class
+  - uid: TwinSharp.NC.AxisState
+    name: AxisState
+    type: Class
+  - uid: TwinSharp.NC.AxisType
+    name: AxisType
+    type: Enum
+  - uid: TwinSharp.NC.CamScalingMode
+    name: CamScalingMode
+    type: Enum
+  - uid: TwinSharp.NC.Channel
+    name: Channel
+    type: Class
+  - uid: TwinSharp.NC.ChannelCyclicProcessData
+    name: ChannelCyclicProcessData
+    type: Class
+  - uid: TwinSharp.NC.ChannelFunctions
+    name: ChannelFunctions
+    type: Class
+  - uid: TwinSharp.NC.ChannelParameters
+    name: ChannelParameters
+    type: Class
+  - uid: TwinSharp.NC.ChannelState
+    name: ChannelState
+    type: Class
+  - uid: TwinSharp.NC.ChannelType
+    name: ChannelType
+    type: Enum
+  - uid: TwinSharp.NC.Controller
+    name: Controller
+    type: Class
+  - uid: TwinSharp.NC.ControllerParameters
+    name: ControllerParameters
+    type: Class
+  - uid: TwinSharp.NC.ControllerState
+    name: ControllerState
+    type: Class
+  - uid: TwinSharp.NC.ControllerType
+    name: ControllerType
+    type: Enum
+  - uid: TwinSharp.NC.CoupleState
+    name: CoupleState
+    type: Enum
+  - uid: TwinSharp.NC.Drive
+    name: Drive
+    type: Class
+  - uid: TwinSharp.NC.DriveFunctions
+    name: DriveFunctions
+    type: Class
+  - uid: TwinSharp.NC.DriveOutputStartType
+    name: DriveOutputStartType
+    type: Enum
+  - uid: TwinSharp.NC.DriveParameters
+    name: DriveParameters
+    type: Class
+  - uid: TwinSharp.NC.DriveState
+    name: DriveState
+    type: Class
+  - uid: TwinSharp.NC.Encoder
+    name: Encoder
+    type: Class
+  - uid: TwinSharp.NC.EncoderEvaluationDirection
+    name: EncoderEvaluationDirection
+    type: Enum
+  - uid: TwinSharp.NC.EncoderFunctions
+    name: EncoderFunctions
+    type: Class
+  - uid: TwinSharp.NC.EncoderMode
+    name: EncoderMode
+    type: Enum
+  - uid: TwinSharp.NC.EncoderParameters
+    name: EncoderParameters
+    type: Class
+  - uid: TwinSharp.NC.EncoderState
+    name: EncoderState
+    type: Class
+  - uid: TwinSharp.NC.EncoderType
+    name: EncoderType
+    type: Enum
+  - uid: TwinSharp.NC.EndPositionType
+    name: EndPositionType
+    type: Enum
+  - uid: TwinSharp.NC.ErrorReactionMode
+    name: ErrorReactionMode
+    type: Enum
+  - uid: TwinSharp.NC.FifoInterpolationType
+    name: FifoInterpolationType
+    type: Enum
+  - uid: TwinSharp.NC.FifoOverrideType
+    name: FifoOverrideType
+    type: Enum
+  - uid: TwinSharp.NC.Group
+    name: Group
+    type: Class
+  - uid: TwinSharp.NC.GroupAxisStartType
+    name: GroupAxisStartType
+    type: Enum
+  - uid: TwinSharp.NC.GroupFunctions
+    name: GroupFunctions
+    type: Class
+  - uid: TwinSharp.NC.GroupParameters
+    name: GroupParameters
+    type: Class
+  - uid: TwinSharp.NC.GroupState
+    name: GroupState
+    type: Class
+  - uid: TwinSharp.NC.GroupType
+    name: GroupType
+    type: Enum
+  - uid: TwinSharp.NC.InterpolationLoadLogMode
+    name: InterpolationLoadLogMode
+    type: Enum
+  - uid: TwinSharp.NC.InterpolationTraceMode
+    name: InterpolationTraceMode
+    type: Enum
+  - uid: TwinSharp.NC.InterpreterOperationMode
+    name: InterpreterOperationMode
+    type: Enum
+  - uid: TwinSharp.NC.InterpreterState
+    name: InterpreterState
+    type: Enum
+  - uid: TwinSharp.NC.InterpreterType
+    name: InterpreterType
+    type: Enum
+  - uid: TwinSharp.NC.NC
+    name: NC
+    type: Class
+  - uid: TwinSharp.NC.NCAXISSTATE_ONLINESTRUCT
+    name: NCAXISSTATE_ONLINESTRUCT
+    type: Struct
+  - uid: TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE
+    name: NCTOPLC_AXIS_REF_OPMODE
+    type: Enum
+  - uid: TwinSharp.NC.NcDriveType
+    name: NcDriveType
+    type: Enum
+  - uid: TwinSharp.NC.ProbeMode
+    name: ProbeMode
+    type: Enum
+  - uid: TwinSharp.NC.Ring0Manager
+    name: Ring0Manager
+    type: Class
+  - uid: TwinSharp.NC.Ring0Parameters
+    name: Ring0Parameters
+    type: Class
+  - uid: TwinSharp.NC.Ring0State
+    name: Ring0State
+    type: Class
+  - uid: TwinSharp.NC.SignalEdge
+    name: SignalEdge
+    type: Enum
+  - uid: TwinSharp.NC.StateDWordFlags
+    name: StateDWordFlags
+    type: Enum
+  - uid: TwinSharp.NC.Table
+    name: Table
+    type: Class
+  - uid: TwinSharp.NC.TableActivationMode
+    name: TableActivationMode
+    type: Enum
+  - uid: TwinSharp.NC.TableFunctions
+    name: TableFunctions
+    type: Class
+  - uid: TwinSharp.NC.TableInterpolationType
+    name: TableInterpolationType
+    type: Enum
+  - uid: TwinSharp.NC.TableMainType
+    name: TableMainType
+    type: Enum
+  - uid: TwinSharp.NC.TableParameters
+    name: TableParameters
+    type: Class
+  - uid: TwinSharp.NC.TableState
+    name: TableState
+    type: Class
+  - uid: TwinSharp.NC.TableSubType
+    name: TableSubType
+    type: Enum
+- uid: TwinSharp.PLC
+  name: TwinSharp.PLC
+  type: Namespace
+  items:
+  - uid: TwinSharp.PLC.PLC
+    name: PLC
+    type: Class
+  - uid: TwinSharp.PLC.PlcAppSystemInfo
+    name: PlcAppSystemInfo
+    type: Class
+memberLayout: SamePage

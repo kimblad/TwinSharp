@@ -1,0 +1,2994 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Interpolator | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Interpolator | TwinSharp ">
+      
+      <meta name="description" content="The Interpolator class provides an interface to interact with a CNC interpolator via an AdsClient. It allows reading and writing various properties related to the interpolator&#39;s state, such as axis count, moved path, velocity, tool life, and more. The class also provides addresses for device notifications and methods to retrieve interpolator addresses and properties.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_CNC_Interpolator.md&amp;value=---%0Auid%3A%20TwinSharp.CNC.Interpolator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.CNC.Interpolator">
+
+
+
+  <h1 id="TwinSharp_CNC_Interpolator" data-uid="TwinSharp.CNC.Interpolator" class="text-break">
+Class Interpolator  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.CNC.html">CNC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The Interpolator class provides an interface to interact with a CNC interpolator via an AdsClient.
+It allows reading and writing various properties related to the interpolator's state, such as axis count,
+moved path, velocity, tool life, and more. The class also provides addresses for device notifications
+and methods to retrieve interpolator addresses and properties.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Interpolator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Interpolator</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TwinSharp_CNC_Interpolator_ActualBlockCount_" data-uid="TwinSharp.CNC.Interpolator.ActualBlockCount*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ActualBlockCount" data-uid="TwinSharp.CNC.Interpolator.ActualBlockCount">
+  ActualBlockCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual block count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ActualBlockCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ActualDWord_" data-uid="TwinSharp.CNC.Interpolator.ActualDWord*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ActualDWord" data-uid="TwinSharp.CNC.Interpolator.ActualDWord">
+  ActualDWord
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual DWord.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ActualDWord { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ActualStateOfInterpolator_" data-uid="TwinSharp.CNC.Interpolator.ActualStateOfInterpolator*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ActualStateOfInterpolator" data-uid="TwinSharp.CNC.Interpolator.ActualStateOfInterpolator">
+  ActualStateOfInterpolator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual state of the interpolator.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte ActualStateOfInterpolator { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ActualToolRadius_" data-uid="TwinSharp.CNC.Interpolator.ActualToolRadius*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ActualToolRadius" data-uid="TwinSharp.CNC.Interpolator.ActualToolRadius">
+  ActualToolRadius
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual tool radius.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ActualToolRadius { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ActualVelocityOnPath_" data-uid="TwinSharp.CNC.Interpolator.ActualVelocityOnPath*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ActualVelocityOnPath" data-uid="TwinSharp.CNC.Interpolator.ActualVelocityOnPath">
+  ActualVelocityOnPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual velocity on path.
+Unit: [µm/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ActualVelocityOnPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ActualZeroOffsetGroup_" data-uid="TwinSharp.CNC.Interpolator.ActualZeroOffsetGroup*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ActualZeroOffsetGroup" data-uid="TwinSharp.CNC.Interpolator.ActualZeroOffsetGroup">
+  ActualZeroOffsetGroup
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual zero offset group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort ActualZeroOffsetGroup { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_AdditionalStatus_" data-uid="TwinSharp.CNC.Interpolator.AdditionalStatus*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_AdditionalStatus" data-uid="TwinSharp.CNC.Interpolator.AdditionalStatus">
+  AdditionalStatus
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L564"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Additional status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint AdditionalStatus { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_Adresses_" data-uid="TwinSharp.CNC.Interpolator.Adresses*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_Adresses" data-uid="TwinSharp.CNC.Interpolator.Adresses">
+  Adresses
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adresses for the interpolator class. Use this if you want to add device notifications for any of the properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InterpolatorAdresses Adresses { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.InterpolatorAdresses.html">InterpolatorAdresses</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_AxisCount_" data-uid="TwinSharp.CNC.Interpolator.AxisCount*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_AxisCount" data-uid="TwinSharp.CNC.Interpolator.AxisCount">
+  AxisCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of axes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort AxisCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_BendAngleAtBlockEnd_" data-uid="TwinSharp.CNC.Interpolator.BendAngleAtBlockEnd*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_BendAngleAtBlockEnd" data-uid="TwinSharp.CNC.Interpolator.BendAngleAtBlockEnd">
+  BendAngleAtBlockEnd
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bend angle at block end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BendAngleAtBlockEnd { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_BlockEndActive_" data-uid="TwinSharp.CNC.Interpolator.BlockEndActive*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_BlockEndActive" data-uid="TwinSharp.CNC.Interpolator.BlockEndActive">
+  BlockEndActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Block end active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BlockEndActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_BlockLengthOnPath_" data-uid="TwinSharp.CNC.Interpolator.BlockLengthOnPath*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_BlockLengthOnPath" data-uid="TwinSharp.CNC.Interpolator.BlockLengthOnPath">
+  BlockLengthOnPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Block length on path.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double BlockLengthOnPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_BlockNumberActual_" data-uid="TwinSharp.CNC.Interpolator.BlockNumberActual*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_BlockNumberActual" data-uid="TwinSharp.CNC.Interpolator.BlockNumberActual">
+  BlockNumberActual
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actual block number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BlockNumberActual { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_CartesianTransformationActive_" data-uid="TwinSharp.CNC.Interpolator.CartesianTransformationActive*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_CartesianTransformationActive" data-uid="TwinSharp.CNC.Interpolator.CartesianTransformationActive">
+  CartesianTransformationActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cartesian transformation active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CartesianTransformationActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_CaxFunctionAligningActive_" data-uid="TwinSharp.CNC.Interpolator.CaxFunctionAligningActive*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_CaxFunctionAligningActive" data-uid="TwinSharp.CNC.Interpolator.CaxFunctionAligningActive">
+  CaxFunctionAligningActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L779"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cax function aligning active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CaxFunctionAligningActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_CommandBFOverride_" data-uid="TwinSharp.CNC.Interpolator.CommandBFOverride*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_CommandBFOverride" data-uid="TwinSharp.CNC.Interpolator.CommandBFOverride">
+  CommandBFOverride
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Commanded BF override.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort CommandBFOverride { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_CommandFBOverride_" data-uid="TwinSharp.CNC.Interpolator.CommandFBOverride*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_CommandFBOverride" data-uid="TwinSharp.CNC.Interpolator.CommandFBOverride">
+  CommandFBOverride
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Commanded FB overide.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort CommandFBOverride { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_CoveredDistance_" data-uid="TwinSharp.CNC.Interpolator.CoveredDistance*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_CoveredDistance" data-uid="TwinSharp.CNC.Interpolator.CoveredDistance">
+  CoveredDistance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Covered distance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double CoveredDistance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DistanceFromProgramStart_" data-uid="TwinSharp.CNC.Interpolator.DistanceFromProgramStart*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DistanceFromProgramStart" data-uid="TwinSharp.CNC.Interpolator.DistanceFromProgramStart">
+  DistanceFromProgramStart
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L738"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Distance from program start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DistanceFromProgramStart { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_Druckwinkel_" data-uid="TwinSharp.CNC.Interpolator.Druckwinkel*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_Druckwinkel" data-uid="TwinSharp.CNC.Interpolator.Druckwinkel">
+  Druckwinkel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pressure angle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Druckwinkel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DwellTimeCommanded_" data-uid="TwinSharp.CNC.Interpolator.DwellTimeCommanded*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DwellTimeCommanded" data-uid="TwinSharp.CNC.Interpolator.DwellTimeCommanded">
+  DwellTimeCommanded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Commanded G04 dwell time.
+Unit: seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DwellTimeCommanded { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DwellTimeRemaning_" data-uid="TwinSharp.CNC.Interpolator.DwellTimeRemaning*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DwellTimeRemaning" data-uid="TwinSharp.CNC.Interpolator.DwellTimeRemaning">
+  DwellTimeRemaning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remaining G04 dwell time.
+Unit: seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DwellTimeRemaning { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DynamicLimit_" data-uid="TwinSharp.CNC.Interpolator.DynamicLimit*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DynamicLimit" data-uid="TwinSharp.CNC.Interpolator.DynamicLimit">
+  DynamicLimit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L730"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dynamic limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint DynamicLimit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DynamicWeightG129_" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG129*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DynamicWeightG129" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG129">
+  DynamicWeightG129
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L436"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dynamic weight G129.
+Unit: %</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DynamicWeightG129 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DynamicWeightG131_" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG131*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DynamicWeightG131" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG131">
+  DynamicWeightG131
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dynamic weight G131.
+Unit: %</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DynamicWeightG131 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DynamicWeightG133_" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG133*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DynamicWeightG133" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG133">
+  DynamicWeightG133
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dynamic weight G133.
+Unit: %</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DynamicWeightG133 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DynamicWeightG134_" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG134*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DynamicWeightG134" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG134">
+  DynamicWeightG134
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dynamic weight G134.
+Unit: %</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DynamicWeightG134 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DynamicWeightG231_" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG231*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DynamicWeightG231" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG231">
+  DynamicWeightG231
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dynamic weight G231.
+Unit: %</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DynamicWeightG231 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_DynamicWeightG233_" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG233*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_DynamicWeightG233" data-uid="TwinSharp.CNC.Interpolator.DynamicWeightG233">
+  DynamicWeightG233
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dynamic weight G233.
+Unit: %</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double DynamicWeightG233 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_FeedOfSyncAxis_" data-uid="TwinSharp.CNC.Interpolator.FeedOfSyncAxis*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_FeedOfSyncAxis" data-uid="TwinSharp.CNC.Interpolator.FeedOfSyncAxis">
+  FeedOfSyncAxis
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L590"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Feed of sync axis.
+Unit: [µm/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double FeedOfSyncAxis { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_GlobalEnabledAxesCount_" data-uid="TwinSharp.CNC.Interpolator.GlobalEnabledAxesCount*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_GlobalEnabledAxesCount" data-uid="TwinSharp.CNC.Interpolator.GlobalEnabledAxesCount">
+  GlobalEnabledAxesCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Global enabled axes count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort GlobalEnabledAxesCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscFilterDelayTimeIpo_" data-uid="TwinSharp.CNC.Interpolator.HscFilterDelayTimeIpo*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscFilterDelayTimeIpo" data-uid="TwinSharp.CNC.Interpolator.HscFilterDelayTimeIpo">
+  HscFilterDelayTimeIpo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L763"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC filter delay time Ipo.
+Unit: seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double HscFilterDelayTimeIpo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscFilterOn_" data-uid="TwinSharp.CNC.Interpolator.HscFilterOn*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscFilterOn" data-uid="TwinSharp.CNC.Interpolator.HscFilterOn">
+  HscFilterOn
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L746"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC filter on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HscFilterOn { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscFilterOrder_" data-uid="TwinSharp.CNC.Interpolator.HscFilterOrder*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscFilterOrder" data-uid="TwinSharp.CNC.Interpolator.HscFilterOrder">
+  HscFilterOrder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L754"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC filter order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint HscFilterOrder { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscSurfaceActive_" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceActive*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscSurfaceActive" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceActive">
+  HscSurfaceActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L489"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC surface active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HscSurfaceActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscSurfaceCheckJerk_" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceCheckJerk*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscSurfaceCheckJerk" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceCheckJerk">
+  HscSurfaceCheckJerk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L532"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC surface check jerk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint HscSurfaceCheckJerk { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscSurfaceFAutoOffG00_" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceFAutoOffG00*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscSurfaceFAutoOffG00" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceFAutoOffG00">
+  HscSurfaceFAutoOffG00
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L524"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC surface F auto off G00.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HscSurfaceFAutoOffG00 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscSurfaceMaxAngle_" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceMaxAngle*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscSurfaceMaxAngle" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceMaxAngle">
+  HscSurfaceMaxAngle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L516"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC surface max angle.
+Unit: [deg]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double HscSurfaceMaxAngle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscSurfacePathDev_" data-uid="TwinSharp.CNC.Interpolator.HscSurfacePathDev*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscSurfacePathDev" data-uid="TwinSharp.CNC.Interpolator.HscSurfacePathDev">
+  HscSurfacePathDev
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L498"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC surface path deviation.
+Unit: [mm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double HscSurfacePathDev { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_HscSurfaceTrackDev_" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceTrackDev*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_HscSurfaceTrackDev" data-uid="TwinSharp.CNC.Interpolator.HscSurfaceTrackDev">
+  HscSurfaceTrackDev
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L507"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HSC surface track deviation.
+Unit: [deg]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double HscSurfaceTrackDev { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_IpoBufLevel_" data-uid="TwinSharp.CNC.Interpolator.IpoBufLevel*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_IpoBufLevel" data-uid="TwinSharp.CNC.Interpolator.IpoBufLevel">
+  IpoBufLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Interpolator buffer level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint IpoBufLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_IpoSyncWaitState_" data-uid="TwinSharp.CNC.Interpolator.IpoSyncWaitState*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_IpoSyncWaitState" data-uid="TwinSharp.CNC.Interpolator.IpoSyncWaitState">
+  IpoSyncWaitState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L714"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Interpolator sync wait state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint IpoSyncWaitState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_KinematicalTransformationActive_" data-uid="TwinSharp.CNC.Interpolator.KinematicalTransformationActive*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_KinematicalTransformationActive" data-uid="TwinSharp.CNC.Interpolator.KinematicalTransformationActive">
+  KinematicalTransformationActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Kinematical transformation active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool KinematicalTransformationActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_LatestInputBlockCount_" data-uid="TwinSharp.CNC.Interpolator.LatestInputBlockCount*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_LatestInputBlockCount" data-uid="TwinSharp.CNC.Interpolator.LatestInputBlockCount">
+  LatestInputBlockCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Latest input block count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LatestInputBlockCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_LimitingAxis_" data-uid="TwinSharp.CNC.Interpolator.LimitingAxis*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_LimitingAxis" data-uid="TwinSharp.CNC.Interpolator.LimitingAxis">
+  LimitingAxis
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L722"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Limiting axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint LimitingAxis { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ManualAcsAxesMovementLimitation_" data-uid="TwinSharp.CNC.Interpolator.ManualAcsAxesMovementLimitation*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ManualAcsAxesMovementLimitation" data-uid="TwinSharp.CNC.Interpolator.ManualAcsAxesMovementLimitation">
+  ManualAcsAxesMovementLimitation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L803"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manual: ACS axes movement limitation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ManualAcsAxesMovementLimitation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ManualPcsAxesMovementLimitation_" data-uid="TwinSharp.CNC.Interpolator.ManualPcsAxesMovementLimitation*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ManualPcsAxesMovementLimitation" data-uid="TwinSharp.CNC.Interpolator.ManualPcsAxesMovementLimitation">
+  ManualPcsAxesMovementLimitation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L795"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manual: PCS axes movement limitation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ManualPcsAxesMovementLimitation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ManualWaitPositionInitializationDone_" data-uid="TwinSharp.CNC.Interpolator.ManualWaitPositionInitializationDone*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ManualWaitPositionInitializationDone" data-uid="TwinSharp.CNC.Interpolator.ManualWaitPositionInitializationDone">
+  ManualWaitPositionInitializationDone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L771"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Manual: wait position initialization done.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ManualWaitPositionInitializationDone { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_MaximumVelocityOnPath_" data-uid="TwinSharp.CNC.Interpolator.MaximumVelocityOnPath*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_MaximumVelocityOnPath" data-uid="TwinSharp.CNC.Interpolator.MaximumVelocityOnPath">
+  MaximumVelocityOnPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum velocity on path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MaximumVelocityOnPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_MaximumVelocityOnPathAtBlockEnd_" data-uid="TwinSharp.CNC.Interpolator.MaximumVelocityOnPathAtBlockEnd*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_MaximumVelocityOnPathAtBlockEnd" data-uid="TwinSharp.CNC.Interpolator.MaximumVelocityOnPathAtBlockEnd">
+  MaximumVelocityOnPathAtBlockEnd
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Maximum velocity on path at block end.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MaximumVelocityOnPathAtBlockEnd { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_MeasuringActive_" data-uid="TwinSharp.CNC.Interpolator.MeasuringActive*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_MeasuringActive" data-uid="TwinSharp.CNC.Interpolator.MeasuringActive">
+  MeasuringActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L706"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measuring active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MeasuringActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_MotionCtrl_" data-uid="TwinSharp.CNC.Interpolator.MotionCtrl*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_MotionCtrl" data-uid="TwinSharp.CNC.Interpolator.MotionCtrl">
+  MotionCtrl
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L540"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Motion control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MotionCtrl { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_MotionCtrl2_" data-uid="TwinSharp.CNC.Interpolator.MotionCtrl2*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_MotionCtrl2" data-uid="TwinSharp.CNC.Interpolator.MotionCtrl2">
+  MotionCtrl2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L548"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Motion control 2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MotionCtrl2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_MovedPath_" data-uid="TwinSharp.CNC.Interpolator.MovedPath*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_MovedPath" data-uid="TwinSharp.CNC.Interpolator.MovedPath">
+  MovedPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of moved path.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MovedPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_OverrideFeedFactor_" data-uid="TwinSharp.CNC.Interpolator.OverrideFeedFactor*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_OverrideFeedFactor" data-uid="TwinSharp.CNC.Interpolator.OverrideFeedFactor">
+  OverrideFeedFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override feed factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double OverrideFeedFactor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_PathfeedInSyncArea_" data-uid="TwinSharp.CNC.Interpolator.PathfeedInSyncArea*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_PathfeedInSyncArea" data-uid="TwinSharp.CNC.Interpolator.PathfeedInSyncArea">
+  PathfeedInSyncArea
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L599"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Path feed in sync area.
+Unit: [µm/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PathfeedInSyncArea { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_PosLahTimeToDist_" data-uid="TwinSharp.CNC.Interpolator.PosLahTimeToDist*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_PosLahTimeToDist" data-uid="TwinSharp.CNC.Interpolator.PosLahTimeToDist">
+  PosLahTimeToDist
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position lookahead time to distance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PosLahTimeToDist { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_PositionLookaheadDistance_" data-uid="TwinSharp.CNC.Interpolator.PositionLookaheadDistance*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_PositionLookaheadDistance" data-uid="TwinSharp.CNC.Interpolator.PositionLookaheadDistance">
+  PositionLookaheadDistance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Position lookahead distance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint PositionLookaheadDistance { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ProgrammedVelocityOnPath_" data-uid="TwinSharp.CNC.Interpolator.ProgrammedVelocityOnPath*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ProgrammedVelocityOnPath" data-uid="TwinSharp.CNC.Interpolator.ProgrammedVelocityOnPath">
+  ProgrammedVelocityOnPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Programmed velocity on path.
+Unit: [µm/s]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ProgrammedVelocityOnPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_Rahmenwinkel_" data-uid="TwinSharp.CNC.Interpolator.Rahmenwinkel*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_Rahmenwinkel" data-uid="TwinSharp.CNC.Interpolator.Rahmenwinkel">
+  Rahmenwinkel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Frame angle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Rahmenwinkel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_RakelTransformationActive_" data-uid="TwinSharp.CNC.Interpolator.RakelTransformationActive*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_RakelTransformationActive" data-uid="TwinSharp.CNC.Interpolator.RakelTransformationActive">
+  RakelTransformationActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rakel transformation active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RakelTransformationActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_RapidMovementBlock_" data-uid="TwinSharp.CNC.Interpolator.RapidMovementBlock*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_RapidMovementBlock" data-uid="TwinSharp.CNC.Interpolator.RapidMovementBlock">
+  RapidMovementBlock
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is current block a rapid G0 movement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RapidMovementBlock { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_RemainingPathOfBlock_" data-uid="TwinSharp.CNC.Interpolator.RemainingPathOfBlock*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_RemainingPathOfBlock" data-uid="TwinSharp.CNC.Interpolator.RemainingPathOfBlock">
+  RemainingPathOfBlock
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of the remaining path of the block.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double RemainingPathOfBlock { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_SingleStepMode_" data-uid="TwinSharp.CNC.Interpolator.SingleStepMode*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_SingleStepMode" data-uid="TwinSharp.CNC.Interpolator.SingleStepMode">
+  SingleStepMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Single step mode active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SingleStepMode { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_SlopeBufLevel_" data-uid="TwinSharp.CNC.Interpolator.SlopeBufLevel*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_SlopeBufLevel" data-uid="TwinSharp.CNC.Interpolator.SlopeBufLevel">
+  SlopeBufLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Slope buffer level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SlopeBufLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_SlopeBufPath_" data-uid="TwinSharp.CNC.Interpolator.SlopeBufPath*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_SlopeBufPath" data-uid="TwinSharp.CNC.Interpolator.SlopeBufPath">
+  SlopeBufPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Length of slope buffer path.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SlopeBufPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_Status_" data-uid="TwinSharp.CNC.Interpolator.Status*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_Status" data-uid="TwinSharp.CNC.Interpolator.Status">
+  Status
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L556"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Status { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_SuspendAxisOutputState_" data-uid="TwinSharp.CNC.Interpolator.SuspendAxisOutputState*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_SuspendAxisOutputState" data-uid="TwinSharp.CNC.Interpolator.SuspendAxisOutputState">
+  SuspendAxisOutputState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Suspend axis output state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint SuspendAxisOutputState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ToolLifeDistance_" data-uid="TwinSharp.CNC.Interpolator.ToolLifeDistance*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ToolLifeDistance" data-uid="TwinSharp.CNC.Interpolator.ToolLifeDistance">
+  ToolLifeDistance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tool life distance.
+Unit: mm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ToolLifeDistance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ToolLifeDistanceFactor_" data-uid="TwinSharp.CNC.Interpolator.ToolLifeDistanceFactor*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ToolLifeDistanceFactor" data-uid="TwinSharp.CNC.Interpolator.ToolLifeDistanceFactor">
+  ToolLifeDistanceFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tool life distance factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ToolLifeDistanceFactor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ToolLifeTime_" data-uid="TwinSharp.CNC.Interpolator.ToolLifeTime*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ToolLifeTime" data-uid="TwinSharp.CNC.Interpolator.ToolLifeTime">
+  ToolLifeTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tool life time.
+Unit: seconds</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ToolLifeTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ToolLifeTimeFactor_" data-uid="TwinSharp.CNC.Interpolator.ToolLifeTimeFactor*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ToolLifeTimeFactor" data-uid="TwinSharp.CNC.Interpolator.ToolLifeTimeFactor">
+  ToolLifeTimeFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tool life time factor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ToolLifeTimeFactor { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ToolLifeToolId_" data-uid="TwinSharp.CNC.Interpolator.ToolLifeToolId*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ToolLifeToolId" data-uid="TwinSharp.CNC.Interpolator.ToolLifeToolId">
+  ToolLifeToolId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tool life tool ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ToolLifeToolId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEx0_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEx0*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEx0" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEx0">
+  TotalCsMatrixEx0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L607"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ex0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEx0 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEx1_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEx1*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEx1" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEx1">
+  TotalCsMatrixEx1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L615"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ex1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEx1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEx2_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEx2*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEx2" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEx2">
+  TotalCsMatrixEx2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L623"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ex2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEx2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEy0_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEy0*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEy0" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEy0">
+  TotalCsMatrixEy0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L631"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ey0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEy0 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEy1_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEy1*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEy1" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEy1">
+  TotalCsMatrixEy1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L639"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ey1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEy1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEy2_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEy2*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEy2" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEy2">
+  TotalCsMatrixEy2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L647"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ey2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEy2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEz0_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEz0*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEz0" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEz0">
+  TotalCsMatrixEz0
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L655"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ez0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEz0 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEz1_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEz1*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEz1" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEz1">
+  TotalCsMatrixEz1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L663"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ez1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEz1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixEz2_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEz2*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixEz2" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixEz2">
+  TotalCsMatrixEz2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L671"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix ez2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixEz2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixVx_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixVx*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixVx" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixVx">
+  TotalCsMatrixVx
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L680"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix vx.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixVx { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixVy_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixVy*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixVy" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixVy">
+  TotalCsMatrixVy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L689"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix vy.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixVy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_TotalCsMatrixVz_" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixVz*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_TotalCsMatrixVz" data-uid="TwinSharp.CNC.Interpolator.TotalCsMatrixVz">
+  TotalCsMatrixVz
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L698"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total CS matrix vz.
+Unit: [0.1 µm]</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double TotalCsMatrixVz { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_WegBisSynPunkt_" data-uid="TwinSharp.CNC.Interpolator.WegBisSynPunkt*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_WegBisSynPunkt" data-uid="TwinSharp.CNC.Interpolator.WegBisSynPunkt">
+  WegBisSynPunkt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Weg bis Syn. Punkt.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double WegBisSynPunkt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_Interpolator_ZeitBisSynPunkt_" data-uid="TwinSharp.CNC.Interpolator.ZeitBisSynPunkt*"></a>
+
+  <h3 id="TwinSharp_CNC_Interpolator_ZeitBisSynPunkt" data-uid="TwinSharp.CNC.Interpolator.ZeitBisSynPunkt">
+  ZeitBisSynPunkt
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Zeit bis Syn. Punkt.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ZeitBisSynPunkt { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/Interpolator.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

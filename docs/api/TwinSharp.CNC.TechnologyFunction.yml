@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.TechnologyFunction
+  commentId: T:TwinSharp.CNC.TechnologyFunction
+  id: TechnologyFunction
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.TechnologyFunction.HLI_INTF_H_FKT
+  - TwinSharp.CNC.TechnologyFunction.HLI_INTF_M_FKT
+  - TwinSharp.CNC.TechnologyFunction.HLI_INTF_SPINDEL
+  - TwinSharp.CNC.TechnologyFunction.HLI_INTF_TOOL
+  langs:
+  - csharp
+  - vb
+  name: TechnologyFunction
+  nameWithType: TechnologyFunction
+  fullName: TwinSharp.CNC.TechnologyFunction
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TechnologyFunction
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 168
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Enum for the selection of a technology function (M/H/S/T)
+  example: []
+  syntax:
+    content: 'public enum TechnologyFunction : ushort'
+    content.vb: Public Enum TechnologyFunction As UShort
+- uid: TwinSharp.CNC.TechnologyFunction.HLI_INTF_M_FKT
+  commentId: F:TwinSharp.CNC.TechnologyFunction.HLI_INTF_M_FKT
+  id: HLI_INTF_M_FKT
+  parent: TwinSharp.CNC.TechnologyFunction
+  langs:
+  - csharp
+  - vb
+  name: HLI_INTF_M_FKT
+  nameWithType: TechnologyFunction.HLI_INTF_M_FKT
+  fullName: TwinSharp.CNC.TechnologyFunction.HLI_INTF_M_FKT
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_INTF_M_FKT
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 171
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: M-Function
+  example: []
+  syntax:
+    content: HLI_INTF_M_FKT = 1
+    return:
+      type: TwinSharp.CNC.TechnologyFunction
+- uid: TwinSharp.CNC.TechnologyFunction.HLI_INTF_H_FKT
+  commentId: F:TwinSharp.CNC.TechnologyFunction.HLI_INTF_H_FKT
+  id: HLI_INTF_H_FKT
+  parent: TwinSharp.CNC.TechnologyFunction
+  langs:
+  - csharp
+  - vb
+  name: HLI_INTF_H_FKT
+  nameWithType: TechnologyFunction.HLI_INTF_H_FKT
+  fullName: TwinSharp.CNC.TechnologyFunction.HLI_INTF_H_FKT
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_INTF_H_FKT
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 174
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: H-Function
+  example: []
+  syntax:
+    content: HLI_INTF_H_FKT = 2
+    return:
+      type: TwinSharp.CNC.TechnologyFunction
+- uid: TwinSharp.CNC.TechnologyFunction.HLI_INTF_SPINDEL
+  commentId: F:TwinSharp.CNC.TechnologyFunction.HLI_INTF_SPINDEL
+  id: HLI_INTF_SPINDEL
+  parent: TwinSharp.CNC.TechnologyFunction
+  langs:
+  - csharp
+  - vb
+  name: HLI_INTF_SPINDEL
+  nameWithType: TechnologyFunction.HLI_INTF_SPINDEL
+  fullName: TwinSharp.CNC.TechnologyFunction.HLI_INTF_SPINDEL
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_INTF_SPINDEL
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 177
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: S-Function (spindle)
+  example: []
+  syntax:
+    content: HLI_INTF_SPINDEL = 3
+    return:
+      type: TwinSharp.CNC.TechnologyFunction
+- uid: TwinSharp.CNC.TechnologyFunction.HLI_INTF_TOOL
+  commentId: F:TwinSharp.CNC.TechnologyFunction.HLI_INTF_TOOL
+  id: HLI_INTF_TOOL
+  parent: TwinSharp.CNC.TechnologyFunction
+  langs:
+  - csharp
+  - vb
+  name: HLI_INTF_TOOL
+  nameWithType: TechnologyFunction.HLI_INTF_TOOL
+  fullName: TwinSharp.CNC.TechnologyFunction.HLI_INTF_TOOL
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_INTF_TOOL
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 180
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: T-Function (tool)
+  example: []
+  syntax:
+    content: HLI_INTF_TOOL = 4
+    return:
+      type: TwinSharp.CNC.TechnologyFunction
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.TechnologyFunction
+  commentId: T:TwinSharp.CNC.TechnologyFunction
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.TechnologyFunction.html
+  name: TechnologyFunction
+  nameWithType: TechnologyFunction
+  fullName: TwinSharp.CNC.TechnologyFunction

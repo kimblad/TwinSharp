@@ -1,0 +1,890 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.IPC.IpcMainBoard
+  commentId: T:TwinSharp.IPC.IpcMainBoard
+  id: IpcMainBoard
+  parent: TwinSharp.IPC
+  children:
+  - TwinSharp.IPC.IpcMainBoard.BiosMajorVersion
+  - TwinSharp.IPC.IpcMainBoard.BiosMinorVersion
+  - TwinSharp.IPC.IpcMainBoard.BiosVersion
+  - TwinSharp.IPC.IpcMainBoard.BootCount
+  - TwinSharp.IPC.IpcMainBoard.MainBoardRevision
+  - TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius
+  - TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts
+  - TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius
+  - TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts
+  - TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes
+  - TwinSharp.IPC.IpcMainBoard.ProductionDate
+  - TwinSharp.IPC.IpcMainBoard.SerialNumber
+  - TwinSharp.IPC.IpcMainBoard.TemperatureCelsius
+  - TwinSharp.IPC.IpcMainBoard.Type
+  langs:
+  - csharp
+  - vb
+  name: IpcMainBoard
+  nameWithType: IpcMainBoard
+  fullName: TwinSharp.IPC.IpcMainBoard
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: IpcMainBoard
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 8
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: >-
+    This module provides mainboard information, such as type, serial number, production date, boot count, operating time, and temperature.
+
+    This module is not supported by all devices, since it requires a special BIOS.
+  example: []
+  syntax:
+    content: public class IpcMainBoard
+    content.vb: Public Class IpcMainBoard
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.IPC.IpcMainBoard.Type
+  commentId: P:TwinSharp.IPC.IpcMainBoard.Type
+  id: Type
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: IpcMainBoard.Type
+  fullName: TwinSharp.IPC.IpcMainBoard.Type
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Type
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 28
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Type of the mainboard.
+  example: []
+  syntax:
+    content: public string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Type As String
+  overload: TwinSharp.IPC.IpcMainBoard.Type*
+- uid: TwinSharp.IPC.IpcMainBoard.SerialNumber
+  commentId: P:TwinSharp.IPC.IpcMainBoard.SerialNumber
+  id: SerialNumber
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: SerialNumber
+  nameWithType: IpcMainBoard.SerialNumber
+  fullName: TwinSharp.IPC.IpcMainBoard.SerialNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SerialNumber
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 36
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Serial number of the mainboard.
+  example: []
+  syntax:
+    content: public string SerialNumber { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SerialNumber As String
+  overload: TwinSharp.IPC.IpcMainBoard.SerialNumber*
+- uid: TwinSharp.IPC.IpcMainBoard.ProductionDate
+  commentId: P:TwinSharp.IPC.IpcMainBoard.ProductionDate
+  id: ProductionDate
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: ProductionDate
+  nameWithType: IpcMainBoard.ProductionDate
+  fullName: TwinSharp.IPC.IpcMainBoard.ProductionDate
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProductionDate
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 44
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Production date of the mainboard.
+  example: []
+  syntax:
+    content: public string ProductionDate { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ProductionDate As String
+  overload: TwinSharp.IPC.IpcMainBoard.ProductionDate*
+- uid: TwinSharp.IPC.IpcMainBoard.BootCount
+  commentId: P:TwinSharp.IPC.IpcMainBoard.BootCount
+  id: BootCount
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: BootCount
+  nameWithType: IpcMainBoard.BootCount
+  fullName: TwinSharp.IPC.IpcMainBoard.BootCount
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BootCount
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 52
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Number of times the device has been booted.
+  example: []
+  syntax:
+    content: public uint BootCount { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property BootCount As UInteger
+  overload: TwinSharp.IPC.IpcMainBoard.BootCount*
+- uid: TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes
+  commentId: P:TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes
+  id: OperatingTimeMinutes
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: OperatingTimeMinutes
+  nameWithType: IpcMainBoard.OperatingTimeMinutes
+  fullName: TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OperatingTimeMinutes
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 60
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Operating time in minutes.
+  example: []
+  syntax:
+    content: public uint OperatingTimeMinutes { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property OperatingTimeMinutes As UInteger
+  overload: TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes*
+- uid: TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius
+  commentId: P:TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius
+  id: MinBoardTemperatureCelsius
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: MinBoardTemperatureCelsius
+  nameWithType: IpcMainBoard.MinBoardTemperatureCelsius
+  fullName: TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MinBoardTemperatureCelsius
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 68
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Lowest measured temperature.
+  example: []
+  syntax:
+    content: public int MinBoardTemperatureCelsius { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinBoardTemperatureCelsius As Integer
+  overload: TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius*
+- uid: TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius
+  commentId: P:TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius
+  id: MaxBoardTemperatureCelsius
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: MaxBoardTemperatureCelsius
+  nameWithType: IpcMainBoard.MaxBoardTemperatureCelsius
+  fullName: TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MaxBoardTemperatureCelsius
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 76
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Highest measured temperature.
+  example: []
+  syntax:
+    content: public int MaxBoardTemperatureCelsius { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxBoardTemperatureCelsius As Integer
+  overload: TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius*
+- uid: TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts
+  commentId: P:TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts
+  id: MinInputMilliVolts
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: MinInputMilliVolts
+  nameWithType: IpcMainBoard.MinInputMilliVolts
+  fullName: TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MinInputMilliVolts
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 84
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Lowest measured voltage.
+  example: []
+  syntax:
+    content: public int MinInputMilliVolts { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinInputMilliVolts As Integer
+  overload: TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts*
+- uid: TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts
+  commentId: P:TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts
+  id: MaxInputMilliVolts
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: MaxInputMilliVolts
+  nameWithType: IpcMainBoard.MaxInputMilliVolts
+  fullName: TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MaxInputMilliVolts
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 92
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Highest measured voltage.
+  example: []
+  syntax:
+    content: public int MaxInputMilliVolts { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxInputMilliVolts As Integer
+  overload: TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts*
+- uid: TwinSharp.IPC.IpcMainBoard.TemperatureCelsius
+  commentId: P:TwinSharp.IPC.IpcMainBoard.TemperatureCelsius
+  id: TemperatureCelsius
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: TemperatureCelsius
+  nameWithType: IpcMainBoard.TemperatureCelsius
+  fullName: TwinSharp.IPC.IpcMainBoard.TemperatureCelsius
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TemperatureCelsius
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 100
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Current mainboard temperature °C.
+  example: []
+  syntax:
+    content: public short TemperatureCelsius { get; }
+    parameters: []
+    return:
+      type: System.Int16
+    content.vb: Public ReadOnly Property TemperatureCelsius As Short
+  overload: TwinSharp.IPC.IpcMainBoard.TemperatureCelsius*
+- uid: TwinSharp.IPC.IpcMainBoard.MainBoardRevision
+  commentId: P:TwinSharp.IPC.IpcMainBoard.MainBoardRevision
+  id: MainBoardRevision
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: MainBoardRevision
+  nameWithType: IpcMainBoard.MainBoardRevision
+  fullName: TwinSharp.IPC.IpcMainBoard.MainBoardRevision
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MainBoardRevision
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 108
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: Mainboard revision
+  example: []
+  syntax:
+    content: public byte MainBoardRevision { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property MainBoardRevision As Byte
+  overload: TwinSharp.IPC.IpcMainBoard.MainBoardRevision*
+- uid: TwinSharp.IPC.IpcMainBoard.BiosMajorVersion
+  commentId: P:TwinSharp.IPC.IpcMainBoard.BiosMajorVersion
+  id: BiosMajorVersion
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: BiosMajorVersion
+  nameWithType: IpcMainBoard.BiosMajorVersion
+  fullName: TwinSharp.IPC.IpcMainBoard.BiosMajorVersion
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BiosMajorVersion
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 116
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: BIOS major version
+  example: []
+  syntax:
+    content: public byte BiosMajorVersion { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property BiosMajorVersion As Byte
+  overload: TwinSharp.IPC.IpcMainBoard.BiosMajorVersion*
+- uid: TwinSharp.IPC.IpcMainBoard.BiosMinorVersion
+  commentId: P:TwinSharp.IPC.IpcMainBoard.BiosMinorVersion
+  id: BiosMinorVersion
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: BiosMinorVersion
+  nameWithType: IpcMainBoard.BiosMinorVersion
+  fullName: TwinSharp.IPC.IpcMainBoard.BiosMinorVersion
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BiosMinorVersion
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 124
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: BIOS minor version
+  example: []
+  syntax:
+    content: public byte BiosMinorVersion { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property BiosMinorVersion As Byte
+  overload: TwinSharp.IPC.IpcMainBoard.BiosMinorVersion*
+- uid: TwinSharp.IPC.IpcMainBoard.BiosVersion
+  commentId: P:TwinSharp.IPC.IpcMainBoard.BiosVersion
+  id: BiosVersion
+  parent: TwinSharp.IPC.IpcMainBoard
+  langs:
+  - csharp
+  - vb
+  name: BiosVersion
+  nameWithType: IpcMainBoard.BiosVersion
+  fullName: TwinSharp.IPC.IpcMainBoard.BiosVersion
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/IPC/IpcMainBoard.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BiosVersion
+    path: ../TwinSharp/IPC/IpcMainBoard.cs
+    startLine: 132
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.IPC
+  summary: BIOS version
+  example: []
+  syntax:
+    content: public string BiosVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property BiosVersion As String
+  overload: TwinSharp.IPC.IpcMainBoard.BiosVersion*
+references:
+- uid: TwinSharp.IPC
+  commentId: N:TwinSharp.IPC
+  href: TwinSharp.html
+  name: TwinSharp.IPC
+  nameWithType: TwinSharp.IPC
+  fullName: TwinSharp.IPC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.IPC
+    name: IPC
+    href: TwinSharp.IPC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.IPC
+    name: IPC
+    href: TwinSharp.IPC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.IPC.IpcMainBoard.Type*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.Type
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_Type
+  name: Type
+  nameWithType: IpcMainBoard.Type
+  fullName: TwinSharp.IPC.IpcMainBoard.Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.IPC.IpcMainBoard.SerialNumber*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.SerialNumber
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_SerialNumber
+  name: SerialNumber
+  nameWithType: IpcMainBoard.SerialNumber
+  fullName: TwinSharp.IPC.IpcMainBoard.SerialNumber
+- uid: TwinSharp.IPC.IpcMainBoard.ProductionDate*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.ProductionDate
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_ProductionDate
+  name: ProductionDate
+  nameWithType: IpcMainBoard.ProductionDate
+  fullName: TwinSharp.IPC.IpcMainBoard.ProductionDate
+- uid: TwinSharp.IPC.IpcMainBoard.BootCount*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.BootCount
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_BootCount
+  name: BootCount
+  nameWithType: IpcMainBoard.BootCount
+  fullName: TwinSharp.IPC.IpcMainBoard.BootCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_OperatingTimeMinutes
+  name: OperatingTimeMinutes
+  nameWithType: IpcMainBoard.OperatingTimeMinutes
+  fullName: TwinSharp.IPC.IpcMainBoard.OperatingTimeMinutes
+- uid: TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_MinBoardTemperatureCelsius
+  name: MinBoardTemperatureCelsius
+  nameWithType: IpcMainBoard.MinBoardTemperatureCelsius
+  fullName: TwinSharp.IPC.IpcMainBoard.MinBoardTemperatureCelsius
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_MaxBoardTemperatureCelsius
+  name: MaxBoardTemperatureCelsius
+  nameWithType: IpcMainBoard.MaxBoardTemperatureCelsius
+  fullName: TwinSharp.IPC.IpcMainBoard.MaxBoardTemperatureCelsius
+- uid: TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_MinInputMilliVolts
+  name: MinInputMilliVolts
+  nameWithType: IpcMainBoard.MinInputMilliVolts
+  fullName: TwinSharp.IPC.IpcMainBoard.MinInputMilliVolts
+- uid: TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_MaxInputMilliVolts
+  name: MaxInputMilliVolts
+  nameWithType: IpcMainBoard.MaxInputMilliVolts
+  fullName: TwinSharp.IPC.IpcMainBoard.MaxInputMilliVolts
+- uid: TwinSharp.IPC.IpcMainBoard.TemperatureCelsius*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.TemperatureCelsius
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_TemperatureCelsius
+  name: TemperatureCelsius
+  nameWithType: IpcMainBoard.TemperatureCelsius
+  fullName: TwinSharp.IPC.IpcMainBoard.TemperatureCelsius
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: TwinSharp.IPC.IpcMainBoard.MainBoardRevision*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.MainBoardRevision
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_MainBoardRevision
+  name: MainBoardRevision
+  nameWithType: IpcMainBoard.MainBoardRevision
+  fullName: TwinSharp.IPC.IpcMainBoard.MainBoardRevision
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: TwinSharp.IPC.IpcMainBoard.BiosMajorVersion*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.BiosMajorVersion
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_BiosMajorVersion
+  name: BiosMajorVersion
+  nameWithType: IpcMainBoard.BiosMajorVersion
+  fullName: TwinSharp.IPC.IpcMainBoard.BiosMajorVersion
+- uid: TwinSharp.IPC.IpcMainBoard.BiosMinorVersion*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.BiosMinorVersion
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_BiosMinorVersion
+  name: BiosMinorVersion
+  nameWithType: IpcMainBoard.BiosMinorVersion
+  fullName: TwinSharp.IPC.IpcMainBoard.BiosMinorVersion
+- uid: TwinSharp.IPC.IpcMainBoard.BiosVersion*
+  commentId: Overload:TwinSharp.IPC.IpcMainBoard.BiosVersion
+  href: TwinSharp.IPC.IpcMainBoard.html#TwinSharp_IPC_IpcMainBoard_BiosVersion
+  name: BiosVersion
+  nameWithType: IpcMainBoard.BiosVersion
+  fullName: TwinSharp.IPC.IpcMainBoard.BiosVersion

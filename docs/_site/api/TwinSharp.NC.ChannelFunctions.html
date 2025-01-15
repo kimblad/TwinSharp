@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ChannelFunctions | TwinSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ChannelFunctions | TwinSharp ">
+      
+      <meta name="description" content="The ChannelFunctions class provides methods to interact with and control NC (Numerical Control) channels using an AdsClient. It allows loading NC programs by number or name, starting the interpreter, setting the interpreter operation mode, setting paths for subroutines, and controlling the channel with reset, stop, retry, and skip functionalities.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_NC_ChannelFunctions.md&amp;value=---%0Auid%3A%20TwinSharp.NC.ChannelFunctions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.NC.ChannelFunctions">
+
+
+
+  <h1 id="TwinSharp_NC_ChannelFunctions" data-uid="TwinSharp.NC.ChannelFunctions" class="text-break">
+Class ChannelFunctions  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.NC.html">NC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The ChannelFunctions class provides methods to interact with and control NC (Numerical Control) channels
+using an AdsClient. It allows loading NC programs by number or name, starting the interpreter, setting
+the interpreter operation mode, setting paths for subroutines, and controlling the channel with reset,
+stop, retry, and skip functionalities.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ChannelFunctions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ChannelFunctions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_LoadProgramByName_" data-uid="TwinSharp.NC.ChannelFunctions.LoadProgramByName*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_LoadProgramByName_System_String_" data-uid="TwinSharp.NC.ChannelFunctions.LoadProgramByName(System.String)">
+  LoadProgramByName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load NC program by name. The standard NC path does not have to be given although it may. Other paths are also permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadProgramByName(string programName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>programName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_LoadProgramByNumber_" data-uid="TwinSharp.NC.ChannelFunctions.LoadProgramByNumber*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_LoadProgramByNumber_System_UInt32_" data-uid="TwinSharp.NC.ChannelFunctions.LoadProgramByNumber(System.UInt32)">
+  LoadProgramByNumber(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Load NC program with program number</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadProgramByNumber(uint programNumber)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>programNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_ResetChannel_" data-uid="TwinSharp.NC.ChannelFunctions.ResetChannel*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_ResetChannel" data-uid="TwinSharp.NC.ChannelFunctions.ResetChannel">
+  ResetChannel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset channel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetChannel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_RetryChannel_" data-uid="TwinSharp.NC.ChannelFunctions.RetryChannel*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_RetryChannel" data-uid="TwinSharp.NC.ChannelFunctions.RetryChannel">
+  RetryChannel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>&quot;Retry&quot; Channel(restart Channel)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RetryChannel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_SetInterpreterOperationMode_" data-uid="TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_SetInterpreterOperationMode_TwinSharp_NC_InterpreterOperationMode_" data-uid="TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode(TwinSharp.NC.InterpreterOperationMode)">
+  SetInterpreterOperationMode(InterpreterOperationMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the interpreter/channel operation mode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetInterpreterOperationMode(InterpreterOperationMode mode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mode</code> <a class="xref" href="TwinSharp.NC.InterpreterOperationMode.html">InterpreterOperationMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_SetPathForSubRoutines_" data-uid="TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_SetPathForSubRoutines_System_String_" data-uid="TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines(System.String)">
+  SetPathForSubRoutines(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set the path for subroutines</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPathForSubRoutines(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_SkipChannel_" data-uid="TwinSharp.NC.ChannelFunctions.SkipChannel*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_SkipChannel" data-uid="TwinSharp.NC.ChannelFunctions.SkipChannel">
+  SkipChannel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>&quot;Skip&quot; Channel (skip task/block)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SkipChannel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_StartInterpreter_" data-uid="TwinSharp.NC.ChannelFunctions.StartInterpreter*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_StartInterpreter" data-uid="TwinSharp.NC.ChannelFunctions.StartInterpreter">
+  StartInterpreter()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start interpreter</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartInterpreter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_ChannelFunctions_StopChannel_" data-uid="TwinSharp.NC.ChannelFunctions.StopChannel*"></a>
+
+  <h3 id="TwinSharp_NC_ChannelFunctions_StopChannel" data-uid="TwinSharp.NC.ChannelFunctions.StopChannel">
+  StopChannel()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop channel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopChannel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/ChannelFunctions.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,632 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.SumReader
+  commentId: T:TwinSharp.SumReader
+  id: SumReader
+  parent: TwinSharp
+  children:
+  - TwinSharp.SumReader.#ctor(TwinCAT.Ads.AdsClient)
+  - TwinSharp.SumReader.AddVariable(System.String,System.Type)
+  - TwinSharp.SumReader.AddVariable(System.UInt32,System.UInt32,System.Type)
+  - TwinSharp.SumReader.AdsErrorCodes
+  - TwinSharp.SumReader.ReadVariables(System.Byte[]@)
+  langs:
+  - csharp
+  - vb
+  name: SumReader
+  nameWithType: SumReader
+  fullName: TwinSharp.SumReader
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/SumReader.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SumReader
+    path: ../TwinSharp/SumReader.cs
+    startLine: 8
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Using the ADS Sum Command it is possible to read or write several variables in one command.
+  example: []
+  syntax:
+    content: public class SumReader
+    content.vb: Public Class SumReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.SumReader.#ctor(TwinCAT.Ads.AdsClient)
+  commentId: M:TwinSharp.SumReader.#ctor(TwinCAT.Ads.AdsClient)
+  id: '#ctor(TwinCAT.Ads.AdsClient)'
+  parent: TwinSharp.SumReader
+  langs:
+  - csharp
+  - vb
+  name: SumReader(AdsClient)
+  nameWithType: SumReader.SumReader(AdsClient)
+  fullName: TwinSharp.SumReader.SumReader(TwinCAT.Ads.AdsClient)
+  type: Constructor
+  source:
+    remote:
+      path: TwinSharp/SumReader.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: .ctor
+    path: ../TwinSharp/SumReader.cs
+    startLine: 25
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Creates a new sum reader. Used for reading multiple variables in one ADS command.
+  example: []
+  syntax:
+    content: public SumReader(AdsClient client)
+    parameters:
+    - id: client
+      type: TwinCAT.Ads.AdsClient
+      description: ''
+    content.vb: Public Sub New(client As AdsClient)
+  overload: TwinSharp.SumReader.#ctor*
+  nameWithType.vb: SumReader.New(AdsClient)
+  fullName.vb: TwinSharp.SumReader.New(TwinCAT.Ads.AdsClient)
+  name.vb: New(AdsClient)
+- uid: TwinSharp.SumReader.AdsErrorCodes
+  commentId: P:TwinSharp.SumReader.AdsErrorCodes
+  id: AdsErrorCodes
+  parent: TwinSharp.SumReader
+  langs:
+  - csharp
+  - vb
+  name: AdsErrorCodes
+  nameWithType: SumReader.AdsErrorCodes
+  fullName: TwinSharp.SumReader.AdsErrorCodes
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/SumReader.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AdsErrorCodes
+    path: ../TwinSharp/SumReader.cs
+    startLine: 40
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: The ADS return codes for the variables that were read.
+  example: []
+  syntax:
+    content: public AdsErrorCode[] AdsErrorCodes { get; }
+    parameters: []
+    return:
+      type: TwinCAT.Ads.AdsErrorCode[]
+    content.vb: Public Property AdsErrorCodes As AdsErrorCode()
+  overload: TwinSharp.SumReader.AdsErrorCodes*
+- uid: TwinSharp.SumReader.AddVariable(System.String,System.Type)
+  commentId: M:TwinSharp.SumReader.AddVariable(System.String,System.Type)
+  id: AddVariable(System.String,System.Type)
+  parent: TwinSharp.SumReader
+  langs:
+  - csharp
+  - vb
+  name: AddVariable(string, Type)
+  nameWithType: SumReader.AddVariable(string, Type)
+  fullName: TwinSharp.SumReader.AddVariable(string, System.Type)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/SumReader.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AddVariable
+    path: ../TwinSharp/SumReader.cs
+    startLine: 49
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Add a variable based on symbol name to this sum reader.
+  example: []
+  syntax:
+    content: public void AddVariable(string symbolName, Type type)
+    parameters:
+    - id: symbolName
+      type: System.String
+      description: ''
+    - id: type
+      type: System.Type
+      description: ''
+    content.vb: Public Sub AddVariable(symbolName As String, type As Type)
+  overload: TwinSharp.SumReader.AddVariable*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: ''
+  nameWithType.vb: SumReader.AddVariable(String, Type)
+  fullName.vb: TwinSharp.SumReader.AddVariable(String, System.Type)
+  name.vb: AddVariable(String, Type)
+- uid: TwinSharp.SumReader.AddVariable(System.UInt32,System.UInt32,System.Type)
+  commentId: M:TwinSharp.SumReader.AddVariable(System.UInt32,System.UInt32,System.Type)
+  id: AddVariable(System.UInt32,System.UInt32,System.Type)
+  parent: TwinSharp.SumReader
+  langs:
+  - csharp
+  - vb
+  name: AddVariable(uint, uint, Type)
+  nameWithType: SumReader.AddVariable(uint, uint, Type)
+  fullName: TwinSharp.SumReader.AddVariable(uint, uint, System.Type)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/SumReader.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AddVariable
+    path: ../TwinSharp/SumReader.cs
+    startLine: 64
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Add a variable based on index group and index offset to this sum reader.
+  example: []
+  syntax:
+    content: public void AddVariable(uint indexGroup, uint indexOffset, Type type)
+    parameters:
+    - id: indexGroup
+      type: System.UInt32
+      description: ''
+    - id: indexOffset
+      type: System.UInt32
+      description: ''
+    - id: type
+      type: System.Type
+      description: ''
+    content.vb: Public Sub AddVariable(indexGroup As UInteger, indexOffset As UInteger, type As Type)
+  overload: TwinSharp.SumReader.AddVariable*
+  nameWithType.vb: SumReader.AddVariable(UInteger, UInteger, Type)
+  fullName.vb: TwinSharp.SumReader.AddVariable(UInteger, UInteger, System.Type)
+  name.vb: AddVariable(UInteger, UInteger, Type)
+- uid: TwinSharp.SumReader.ReadVariables(System.Byte[]@)
+  commentId: M:TwinSharp.SumReader.ReadVariables(System.Byte[]@)
+  id: ReadVariables(System.Byte[]@)
+  parent: TwinSharp.SumReader
+  langs:
+  - csharp
+  - vb
+  name: ReadVariables(out byte[])
+  nameWithType: SumReader.ReadVariables(out byte[])
+  fullName: TwinSharp.SumReader.ReadVariables(out byte[])
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/SumReader.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReadVariables
+    path: ../TwinSharp/SumReader.cs
+    startLine: 109
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: >-
+    Reads the added variables. The values are stored in the readValues array in the order they were added.
+
+    If the operation is not succesful, false is returned and the field "AdsErrorCodes" will contain the error codes for the respective variable.
+  example: []
+  syntax:
+    content: public bool ReadVariables(out byte[] returnedValues)
+    parameters:
+    - id: returnedValues
+      type: System.Byte[]
+      description: ''
+    return:
+      type: System.Boolean
+      description: If the operation was succesful without ADS errors. If not succesful, user should examine the <xref href="TwinSharp.SumReader.AdsErrorCodes" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function ReadVariables(returnedValues As Byte()) As Boolean
+  overload: TwinSharp.SumReader.ReadVariables*
+  nameWithType.vb: SumReader.ReadVariables(Byte())
+  fullName.vb: TwinSharp.SumReader.ReadVariables(Byte())
+  name.vb: ReadVariables(Byte())
+references:
+- uid: TwinSharp
+  commentId: N:TwinSharp
+  href: TwinSharp.html
+  name: TwinSharp
+  nameWithType: TwinSharp
+  fullName: TwinSharp
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.SumReader.#ctor*
+  commentId: Overload:TwinSharp.SumReader.#ctor
+  href: TwinSharp.SumReader.html#TwinSharp_SumReader__ctor_TwinCAT_Ads_AdsClient_
+  name: SumReader
+  nameWithType: SumReader.SumReader
+  fullName: TwinSharp.SumReader.SumReader
+  nameWithType.vb: SumReader.New
+  fullName.vb: TwinSharp.SumReader.New
+  name.vb: New
+- uid: TwinCAT.Ads.AdsClient
+  commentId: T:TwinCAT.Ads.AdsClient
+  parent: TwinCAT.Ads
+  isExternal: true
+  name: AdsClient
+  nameWithType: AdsClient
+  fullName: TwinCAT.Ads.AdsClient
+- uid: TwinCAT.Ads
+  commentId: N:TwinCAT.Ads
+  isExternal: true
+  name: TwinCAT.Ads
+  nameWithType: TwinCAT.Ads
+  fullName: TwinCAT.Ads
+  spec.csharp:
+  - uid: TwinCAT
+    name: TwinCAT
+    isExternal: true
+  - name: .
+  - uid: TwinCAT.Ads
+    name: Ads
+    isExternal: true
+  spec.vb:
+  - uid: TwinCAT
+    name: TwinCAT
+    isExternal: true
+  - name: .
+  - uid: TwinCAT.Ads
+    name: Ads
+    isExternal: true
+- uid: TwinSharp.SumReader.AdsErrorCodes*
+  commentId: Overload:TwinSharp.SumReader.AdsErrorCodes
+  href: TwinSharp.SumReader.html#TwinSharp_SumReader_AdsErrorCodes
+  name: AdsErrorCodes
+  nameWithType: SumReader.AdsErrorCodes
+  fullName: TwinSharp.SumReader.AdsErrorCodes
+- uid: TwinCAT.Ads.AdsErrorCode[]
+  isExternal: true
+  name: AdsErrorCode[]
+  nameWithType: AdsErrorCode[]
+  fullName: TwinCAT.Ads.AdsErrorCode[]
+  nameWithType.vb: AdsErrorCode()
+  fullName.vb: TwinCAT.Ads.AdsErrorCode()
+  name.vb: AdsErrorCode()
+  spec.csharp:
+  - uid: TwinCAT.Ads.AdsErrorCode
+    name: AdsErrorCode
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinCAT.Ads.AdsErrorCode
+    name: AdsErrorCode
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.NotImplementedException
+  commentId: T:System.NotImplementedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notimplementedexception
+  name: NotImplementedException
+  nameWithType: NotImplementedException
+  fullName: System.NotImplementedException
+- uid: TwinSharp.SumReader.AddVariable*
+  commentId: Overload:TwinSharp.SumReader.AddVariable
+  href: TwinSharp.SumReader.html#TwinSharp_SumReader_AddVariable_System_String_System_Type_
+  name: AddVariable
+  nameWithType: SumReader.AddVariable
+  fullName: TwinSharp.SumReader.AddVariable
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.SumReader.AdsErrorCodes
+  commentId: P:TwinSharp.SumReader.AdsErrorCodes
+  href: TwinSharp.SumReader.html#TwinSharp_SumReader_AdsErrorCodes
+  name: AdsErrorCodes
+  nameWithType: SumReader.AdsErrorCodes
+  fullName: TwinSharp.SumReader.AdsErrorCodes
+- uid: TwinSharp.SumReader.ReadVariables*
+  commentId: Overload:TwinSharp.SumReader.ReadVariables
+  href: TwinSharp.SumReader.html#TwinSharp_SumReader_ReadVariables_System_Byte____
+  name: ReadVariables
+  nameWithType: SumReader.ReadVariables
+  fullName: TwinSharp.SumReader.ReadVariables
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
