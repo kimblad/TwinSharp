@@ -1,0 +1,676 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.ChannelFunctions
+  commentId: T:TwinSharp.NC.ChannelFunctions
+  id: ChannelFunctions
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.ChannelFunctions.LoadProgramByName(System.String)
+  - TwinSharp.NC.ChannelFunctions.LoadProgramByNumber(System.UInt32)
+  - TwinSharp.NC.ChannelFunctions.ResetChannel
+  - TwinSharp.NC.ChannelFunctions.RetryChannel
+  - TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode(TwinSharp.NC.InterpreterOperationMode)
+  - TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines(System.String)
+  - TwinSharp.NC.ChannelFunctions.SkipChannel
+  - TwinSharp.NC.ChannelFunctions.StartInterpreter
+  - TwinSharp.NC.ChannelFunctions.StopChannel
+  langs:
+  - csharp
+  - vb
+  name: ChannelFunctions
+  nameWithType: ChannelFunctions
+  fullName: TwinSharp.NC.ChannelFunctions
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ChannelFunctions
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 10
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The ChannelFunctions class provides methods to interact with and control NC (Numerical Control) channels
+
+    using an AdsClient. It allows loading NC programs by number or name, starting the interpreter, setting
+
+    the interpreter operation mode, setting paths for subroutines, and controlling the channel with reset,
+
+    stop, retry, and skip functionalities.
+  example: []
+  syntax:
+    content: public class ChannelFunctions
+    content.vb: Public Class ChannelFunctions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.NC.ChannelFunctions.LoadProgramByNumber(System.UInt32)
+  commentId: M:TwinSharp.NC.ChannelFunctions.LoadProgramByNumber(System.UInt32)
+  id: LoadProgramByNumber(System.UInt32)
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: LoadProgramByNumber(uint)
+  nameWithType: ChannelFunctions.LoadProgramByNumber(uint)
+  fullName: TwinSharp.NC.ChannelFunctions.LoadProgramByNumber(uint)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LoadProgramByNumber
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 25
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Load NC program with program number
+  example: []
+  syntax:
+    content: public void LoadProgramByNumber(uint programNumber)
+    parameters:
+    - id: programNumber
+      type: System.UInt32
+      description: ''
+    content.vb: Public Sub LoadProgramByNumber(programNumber As UInteger)
+  overload: TwinSharp.NC.ChannelFunctions.LoadProgramByNumber*
+  nameWithType.vb: ChannelFunctions.LoadProgramByNumber(UInteger)
+  fullName.vb: TwinSharp.NC.ChannelFunctions.LoadProgramByNumber(UInteger)
+  name.vb: LoadProgramByNumber(UInteger)
+- uid: TwinSharp.NC.ChannelFunctions.StartInterpreter
+  commentId: M:TwinSharp.NC.ChannelFunctions.StartInterpreter
+  id: StartInterpreter
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: StartInterpreter()
+  nameWithType: ChannelFunctions.StartInterpreter()
+  fullName: TwinSharp.NC.ChannelFunctions.StartInterpreter()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StartInterpreter
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 33
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Start interpreter
+  example: []
+  syntax:
+    content: public void StartInterpreter()
+    content.vb: Public Sub StartInterpreter()
+  overload: TwinSharp.NC.ChannelFunctions.StartInterpreter*
+- uid: TwinSharp.NC.ChannelFunctions.LoadProgramByName(System.String)
+  commentId: M:TwinSharp.NC.ChannelFunctions.LoadProgramByName(System.String)
+  id: LoadProgramByName(System.String)
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: LoadProgramByName(string)
+  nameWithType: ChannelFunctions.LoadProgramByName(string)
+  fullName: TwinSharp.NC.ChannelFunctions.LoadProgramByName(string)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LoadProgramByName
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 42
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Load NC program by name. The standard NC path does not have to be given although it may. Other paths are also permitted.
+  example: []
+  syntax:
+    content: public void LoadProgramByName(string programName)
+    parameters:
+    - id: programName
+      type: System.String
+      description: ''
+    content.vb: Public Sub LoadProgramByName(programName As String)
+  overload: TwinSharp.NC.ChannelFunctions.LoadProgramByName*
+  nameWithType.vb: ChannelFunctions.LoadProgramByName(String)
+  fullName.vb: TwinSharp.NC.ChannelFunctions.LoadProgramByName(String)
+  name.vb: LoadProgramByName(String)
+- uid: TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode(TwinSharp.NC.InterpreterOperationMode)
+  commentId: M:TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode(TwinSharp.NC.InterpreterOperationMode)
+  id: SetInterpreterOperationMode(TwinSharp.NC.InterpreterOperationMode)
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: SetInterpreterOperationMode(InterpreterOperationMode)
+  nameWithType: ChannelFunctions.SetInterpreterOperationMode(InterpreterOperationMode)
+  fullName: TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode(TwinSharp.NC.InterpreterOperationMode)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SetInterpreterOperationMode
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 51
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Set the interpreter/channel operation mode
+  example: []
+  syntax:
+    content: public void SetInterpreterOperationMode(InterpreterOperationMode mode)
+    parameters:
+    - id: mode
+      type: TwinSharp.NC.InterpreterOperationMode
+      description: ''
+    content.vb: Public Sub SetInterpreterOperationMode(mode As InterpreterOperationMode)
+  overload: TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode*
+- uid: TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines(System.String)
+  commentId: M:TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines(System.String)
+  id: SetPathForSubRoutines(System.String)
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: SetPathForSubRoutines(string)
+  nameWithType: ChannelFunctions.SetPathForSubRoutines(string)
+  fullName: TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines(string)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SetPathForSubRoutines
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 60
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Set the path for subroutines
+  example: []
+  syntax:
+    content: public void SetPathForSubRoutines(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: ''
+    content.vb: Public Sub SetPathForSubRoutines(path As String)
+  overload: TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines*
+  nameWithType.vb: ChannelFunctions.SetPathForSubRoutines(String)
+  fullName.vb: TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines(String)
+  name.vb: SetPathForSubRoutines(String)
+- uid: TwinSharp.NC.ChannelFunctions.ResetChannel
+  commentId: M:TwinSharp.NC.ChannelFunctions.ResetChannel
+  id: ResetChannel
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: ResetChannel()
+  nameWithType: ChannelFunctions.ResetChannel()
+  fullName: TwinSharp.NC.ChannelFunctions.ResetChannel()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ResetChannel
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 68
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Reset channel
+  example: []
+  syntax:
+    content: public void ResetChannel()
+    content.vb: Public Sub ResetChannel()
+  overload: TwinSharp.NC.ChannelFunctions.ResetChannel*
+- uid: TwinSharp.NC.ChannelFunctions.StopChannel
+  commentId: M:TwinSharp.NC.ChannelFunctions.StopChannel
+  id: StopChannel
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: StopChannel()
+  nameWithType: ChannelFunctions.StopChannel()
+  fullName: TwinSharp.NC.ChannelFunctions.StopChannel()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StopChannel
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 76
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Stop channel
+  example: []
+  syntax:
+    content: public void StopChannel()
+    content.vb: Public Sub StopChannel()
+  overload: TwinSharp.NC.ChannelFunctions.StopChannel*
+- uid: TwinSharp.NC.ChannelFunctions.RetryChannel
+  commentId: M:TwinSharp.NC.ChannelFunctions.RetryChannel
+  id: RetryChannel
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: RetryChannel()
+  nameWithType: ChannelFunctions.RetryChannel()
+  fullName: TwinSharp.NC.ChannelFunctions.RetryChannel()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RetryChannel
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 84
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: "\"Retry\" Channel(restart Channel)"
+  example: []
+  syntax:
+    content: public void RetryChannel()
+    content.vb: Public Sub RetryChannel()
+  overload: TwinSharp.NC.ChannelFunctions.RetryChannel*
+- uid: TwinSharp.NC.ChannelFunctions.SkipChannel
+  commentId: M:TwinSharp.NC.ChannelFunctions.SkipChannel
+  id: SkipChannel
+  parent: TwinSharp.NC.ChannelFunctions
+  langs:
+  - csharp
+  - vb
+  name: SkipChannel()
+  nameWithType: ChannelFunctions.SkipChannel()
+  fullName: TwinSharp.NC.ChannelFunctions.SkipChannel()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelFunctions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SkipChannel
+    path: ../TwinSharp/NC/ChannelFunctions.cs
+    startLine: 92
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: "\"Skip\" Channel (skip task/block)"
+  example: []
+  syntax:
+    content: public void SkipChannel()
+    content.vb: Public Sub SkipChannel()
+  overload: TwinSharp.NC.ChannelFunctions.SkipChannel*
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.NC.ChannelFunctions.LoadProgramByNumber*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.LoadProgramByNumber
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_LoadProgramByNumber_System_UInt32_
+  name: LoadProgramByNumber
+  nameWithType: ChannelFunctions.LoadProgramByNumber
+  fullName: TwinSharp.NC.ChannelFunctions.LoadProgramByNumber
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.NC.ChannelFunctions.StartInterpreter*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.StartInterpreter
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_StartInterpreter
+  name: StartInterpreter
+  nameWithType: ChannelFunctions.StartInterpreter
+  fullName: TwinSharp.NC.ChannelFunctions.StartInterpreter
+- uid: TwinSharp.NC.ChannelFunctions.LoadProgramByName*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.LoadProgramByName
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_LoadProgramByName_System_String_
+  name: LoadProgramByName
+  nameWithType: ChannelFunctions.LoadProgramByName
+  fullName: TwinSharp.NC.ChannelFunctions.LoadProgramByName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_SetInterpreterOperationMode_TwinSharp_NC_InterpreterOperationMode_
+  name: SetInterpreterOperationMode
+  nameWithType: ChannelFunctions.SetInterpreterOperationMode
+  fullName: TwinSharp.NC.ChannelFunctions.SetInterpreterOperationMode
+- uid: TwinSharp.NC.InterpreterOperationMode
+  commentId: T:TwinSharp.NC.InterpreterOperationMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.InterpreterOperationMode.html
+  name: InterpreterOperationMode
+  nameWithType: InterpreterOperationMode
+  fullName: TwinSharp.NC.InterpreterOperationMode
+- uid: TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_SetPathForSubRoutines_System_String_
+  name: SetPathForSubRoutines
+  nameWithType: ChannelFunctions.SetPathForSubRoutines
+  fullName: TwinSharp.NC.ChannelFunctions.SetPathForSubRoutines
+- uid: TwinSharp.NC.ChannelFunctions.ResetChannel*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.ResetChannel
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_ResetChannel
+  name: ResetChannel
+  nameWithType: ChannelFunctions.ResetChannel
+  fullName: TwinSharp.NC.ChannelFunctions.ResetChannel
+- uid: TwinSharp.NC.ChannelFunctions.StopChannel*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.StopChannel
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_StopChannel
+  name: StopChannel
+  nameWithType: ChannelFunctions.StopChannel
+  fullName: TwinSharp.NC.ChannelFunctions.StopChannel
+- uid: TwinSharp.NC.ChannelFunctions.RetryChannel*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.RetryChannel
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_RetryChannel
+  name: RetryChannel
+  nameWithType: ChannelFunctions.RetryChannel
+  fullName: TwinSharp.NC.ChannelFunctions.RetryChannel
+- uid: TwinSharp.NC.ChannelFunctions.SkipChannel*
+  commentId: Overload:TwinSharp.NC.ChannelFunctions.SkipChannel
+  href: TwinSharp.NC.ChannelFunctions.html#TwinSharp_NC_ChannelFunctions_SkipChannel
+  name: SkipChannel
+  nameWithType: ChannelFunctions.SkipChannel
+  fullName: TwinSharp.NC.ChannelFunctions.SkipChannel

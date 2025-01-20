@@ -1,0 +1,948 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.GroupState
+  commentId: T:TwinSharp.NC.GroupState
+  id: GroupState
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.GroupState.CouplingState
+  - TwinSharp.NC.GroupState.CouplingTableIndex
+  - TwinSharp.NC.GroupState.CurrentBlockNumber
+  - TwinSharp.NC.GroupState.CurrentFreeSafEntries
+  - TwinSharp.NC.GroupState.CurrentFreeSvbEntries
+  - TwinSharp.NC.GroupState.CurrentSafEntries
+  - TwinSharp.NC.GroupState.CurrentSvbEntries
+  - TwinSharp.NC.GroupState.EmergencyStopActive
+  - TwinSharp.NC.GroupState.ErrorCode
+  - TwinSharp.NC.GroupState.MasterAxisCount
+  - TwinSharp.NC.GroupState.MovingState
+  - TwinSharp.NC.GroupState.ReferencingState
+  - TwinSharp.NC.GroupState.SafGroupState
+  - TwinSharp.NC.GroupState.SafSubGroupState
+  - TwinSharp.NC.GroupState.SlaveAxisCount
+  - TwinSharp.NC.GroupState.SvbGroupState
+  langs:
+  - csharp
+  - vb
+  name: GroupState
+  nameWithType: GroupState
+  fullName: TwinSharp.NC.GroupState
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GroupState
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 10
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The GroupState class provides properties to interact with and retrieve various states and information
+
+    from a TwinCAT NC group via an AdsClient. It includes properties for error codes, axis counts, group states,
+
+    and emergency stop status, among others. Each property reads or writes data from the TwinCAT system using
+
+    specific index groups and offsets.
+  example: []
+  syntax:
+    content: public class GroupState
+    content.vb: Public Class GroupState
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.NC.GroupState.ErrorCode
+  commentId: P:TwinSharp.NC.GroupState.ErrorCode
+  id: ErrorCode
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: ErrorCode
+  nameWithType: GroupState.ErrorCode
+  fullName: TwinSharp.NC.GroupState.ErrorCode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ErrorCode
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 24
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Error code group
+  example: []
+  syntax:
+    content: public int ErrorCode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ErrorCode As Integer
+  overload: TwinSharp.NC.GroupState.ErrorCode*
+- uid: TwinSharp.NC.GroupState.MasterAxisCount
+  commentId: P:TwinSharp.NC.GroupState.MasterAxisCount
+  id: MasterAxisCount
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: MasterAxisCount
+  nameWithType: GroupState.MasterAxisCount
+  fullName: TwinSharp.NC.GroupState.MasterAxisCount
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MasterAxisCount
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 32
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Number of master axes
+  example: []
+  syntax:
+    content: public uint MasterAxisCount { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property MasterAxisCount As UInteger
+  overload: TwinSharp.NC.GroupState.MasterAxisCount*
+- uid: TwinSharp.NC.GroupState.SlaveAxisCount
+  commentId: P:TwinSharp.NC.GroupState.SlaveAxisCount
+  id: SlaveAxisCount
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: SlaveAxisCount
+  nameWithType: GroupState.SlaveAxisCount
+  fullName: TwinSharp.NC.GroupState.SlaveAxisCount
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SlaveAxisCount
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 40
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Number of slave axes
+  example: []
+  syntax:
+    content: public uint SlaveAxisCount { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SlaveAxisCount As UInteger
+  overload: TwinSharp.NC.GroupState.SlaveAxisCount*
+- uid: TwinSharp.NC.GroupState.SvbGroupState
+  commentId: P:TwinSharp.NC.GroupState.SvbGroupState
+  id: SvbGroupState
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: SvbGroupState
+  nameWithType: GroupState.SvbGroupState
+  fullName: TwinSharp.NC.GroupState.SvbGroupState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SvbGroupState
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 48
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: SVB group state (state)
+  example: []
+  syntax:
+    content: public uint SvbGroupState { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SvbGroupState As UInteger
+  overload: TwinSharp.NC.GroupState.SvbGroupState*
+- uid: TwinSharp.NC.GroupState.SafGroupState
+  commentId: P:TwinSharp.NC.GroupState.SafGroupState
+  id: SafGroupState
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: SafGroupState
+  nameWithType: GroupState.SafGroupState
+  fullName: TwinSharp.NC.GroupState.SafGroupState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SafGroupState
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 56
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: SAF group state (main state)
+  example: []
+  syntax:
+    content: public uint SafGroupState { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SafGroupState As UInteger
+  overload: TwinSharp.NC.GroupState.SafGroupState*
+- uid: TwinSharp.NC.GroupState.MovingState
+  commentId: P:TwinSharp.NC.GroupState.MovingState
+  id: MovingState
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: MovingState
+  nameWithType: GroupState.MovingState
+  fullName: TwinSharp.NC.GroupState.MovingState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MovingState
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 64
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Moving state (state)
+  example: []
+  syntax:
+    content: public uint MovingState { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property MovingState As UInteger
+  overload: TwinSharp.NC.GroupState.MovingState*
+- uid: TwinSharp.NC.GroupState.SafSubGroupState
+  commentId: P:TwinSharp.NC.GroupState.SafSubGroupState
+  id: SafSubGroupState
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: SafSubGroupState
+  nameWithType: GroupState.SafSubGroupState
+  fullName: TwinSharp.NC.GroupState.SafSubGroupState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SafSubGroupState
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 72
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: SAF sub-group state (sub state)
+  example: []
+  syntax:
+    content: public uint SafSubGroupState { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SafSubGroupState As UInteger
+  overload: TwinSharp.NC.GroupState.SafSubGroupState*
+- uid: TwinSharp.NC.GroupState.ReferencingState
+  commentId: P:TwinSharp.NC.GroupState.ReferencingState
+  id: ReferencingState
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: ReferencingState
+  nameWithType: GroupState.ReferencingState
+  fullName: TwinSharp.NC.GroupState.ReferencingState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferencingState
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 80
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Referencing state (state)
+  example: []
+  syntax:
+    content: public uint ReferencingState { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property ReferencingState As UInteger
+  overload: TwinSharp.NC.GroupState.ReferencingState*
+- uid: TwinSharp.NC.GroupState.CouplingState
+  commentId: P:TwinSharp.NC.GroupState.CouplingState
+  id: CouplingState
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: CouplingState
+  nameWithType: GroupState.CouplingState
+  fullName: TwinSharp.NC.GroupState.CouplingState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CouplingState
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 88
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Coupling state (state)
+  example: []
+  syntax:
+    content: public uint CouplingState { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CouplingState As UInteger
+  overload: TwinSharp.NC.GroupState.CouplingState*
+- uid: TwinSharp.NC.GroupState.CouplingTableIndex
+  commentId: P:TwinSharp.NC.GroupState.CouplingTableIndex
+  id: CouplingTableIndex
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: CouplingTableIndex
+  nameWithType: GroupState.CouplingTableIndex
+  fullName: TwinSharp.NC.GroupState.CouplingTableIndex
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CouplingTableIndex
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 96
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Coupling table index
+  example: []
+  syntax:
+    content: public uint CouplingTableIndex { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CouplingTableIndex As UInteger
+  overload: TwinSharp.NC.GroupState.CouplingTableIndex*
+- uid: TwinSharp.NC.GroupState.CurrentSvbEntries
+  commentId: P:TwinSharp.NC.GroupState.CurrentSvbEntries
+  id: CurrentSvbEntries
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: CurrentSvbEntries
+  nameWithType: GroupState.CurrentSvbEntries
+  fullName: TwinSharp.NC.GroupState.CurrentSvbEntries
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CurrentSvbEntries
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 104
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Current number of SVB entries/tasks
+  example: []
+  syntax:
+    content: public uint CurrentSvbEntries { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CurrentSvbEntries As UInteger
+  overload: TwinSharp.NC.GroupState.CurrentSvbEntries*
+- uid: TwinSharp.NC.GroupState.CurrentSafEntries
+  commentId: P:TwinSharp.NC.GroupState.CurrentSafEntries
+  id: CurrentSafEntries
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: CurrentSafEntries
+  nameWithType: GroupState.CurrentSafEntries
+  fullName: TwinSharp.NC.GroupState.CurrentSafEntries
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CurrentSafEntries
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 112
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Current number of SAF entries/tasks
+  example: []
+  syntax:
+    content: public uint CurrentSafEntries { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CurrentSafEntries As UInteger
+  overload: TwinSharp.NC.GroupState.CurrentSafEntries*
+- uid: TwinSharp.NC.GroupState.CurrentBlockNumber
+  commentId: P:TwinSharp.NC.GroupState.CurrentBlockNumber
+  id: CurrentBlockNumber
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: CurrentBlockNumber
+  nameWithType: GroupState.CurrentBlockNumber
+  fullName: TwinSharp.NC.GroupState.CurrentBlockNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CurrentBlockNumber
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 120
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Current block number (only active for interpolation group)
+  example: []
+  syntax:
+    content: public uint CurrentBlockNumber { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CurrentBlockNumber As UInteger
+  overload: TwinSharp.NC.GroupState.CurrentBlockNumber*
+- uid: TwinSharp.NC.GroupState.CurrentFreeSvbEntries
+  commentId: P:TwinSharp.NC.GroupState.CurrentFreeSvbEntries
+  id: CurrentFreeSvbEntries
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: CurrentFreeSvbEntries
+  nameWithType: GroupState.CurrentFreeSvbEntries
+  fullName: TwinSharp.NC.GroupState.CurrentFreeSvbEntries
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CurrentFreeSvbEntries
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 128
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Current number of free SVB entries/tasks
+  example: []
+  syntax:
+    content: public uint CurrentFreeSvbEntries { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CurrentFreeSvbEntries As UInteger
+  overload: TwinSharp.NC.GroupState.CurrentFreeSvbEntries*
+- uid: TwinSharp.NC.GroupState.CurrentFreeSafEntries
+  commentId: P:TwinSharp.NC.GroupState.CurrentFreeSafEntries
+  id: CurrentFreeSafEntries
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: CurrentFreeSafEntries
+  nameWithType: GroupState.CurrentFreeSafEntries
+  fullName: TwinSharp.NC.GroupState.CurrentFreeSafEntries
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CurrentFreeSafEntries
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 136
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Current number of free SAF entries/tasks
+  example: []
+  syntax:
+    content: public uint CurrentFreeSafEntries { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CurrentFreeSafEntries As UInteger
+  overload: TwinSharp.NC.GroupState.CurrentFreeSafEntries*
+- uid: TwinSharp.NC.GroupState.EmergencyStopActive
+  commentId: P:TwinSharp.NC.GroupState.EmergencyStopActive
+  id: EmergencyStopActive
+  parent: TwinSharp.NC.GroupState
+  langs:
+  - csharp
+  - vb
+  name: EmergencyStopActive
+  nameWithType: GroupState.EmergencyStopActive
+  fullName: TwinSharp.NC.GroupState.EmergencyStopActive
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/GroupState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EmergencyStopActive
+    path: ../TwinSharp/NC/GroupState.cs
+    startLine: 144
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Emergency Stop (E-Stop) active?
+  example: []
+  syntax:
+    content: public bool EmergencyStopActive { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EmergencyStopActive As Boolean
+  overload: TwinSharp.NC.GroupState.EmergencyStopActive*
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.NC.GroupState.ErrorCode*
+  commentId: Overload:TwinSharp.NC.GroupState.ErrorCode
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_ErrorCode
+  name: ErrorCode
+  nameWithType: GroupState.ErrorCode
+  fullName: TwinSharp.NC.GroupState.ErrorCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.NC.GroupState.MasterAxisCount*
+  commentId: Overload:TwinSharp.NC.GroupState.MasterAxisCount
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_MasterAxisCount
+  name: MasterAxisCount
+  nameWithType: GroupState.MasterAxisCount
+  fullName: TwinSharp.NC.GroupState.MasterAxisCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.NC.GroupState.SlaveAxisCount*
+  commentId: Overload:TwinSharp.NC.GroupState.SlaveAxisCount
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_SlaveAxisCount
+  name: SlaveAxisCount
+  nameWithType: GroupState.SlaveAxisCount
+  fullName: TwinSharp.NC.GroupState.SlaveAxisCount
+- uid: TwinSharp.NC.GroupState.SvbGroupState*
+  commentId: Overload:TwinSharp.NC.GroupState.SvbGroupState
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_SvbGroupState
+  name: SvbGroupState
+  nameWithType: GroupState.SvbGroupState
+  fullName: TwinSharp.NC.GroupState.SvbGroupState
+- uid: TwinSharp.NC.GroupState.SafGroupState*
+  commentId: Overload:TwinSharp.NC.GroupState.SafGroupState
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_SafGroupState
+  name: SafGroupState
+  nameWithType: GroupState.SafGroupState
+  fullName: TwinSharp.NC.GroupState.SafGroupState
+- uid: TwinSharp.NC.GroupState.MovingState*
+  commentId: Overload:TwinSharp.NC.GroupState.MovingState
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_MovingState
+  name: MovingState
+  nameWithType: GroupState.MovingState
+  fullName: TwinSharp.NC.GroupState.MovingState
+- uid: TwinSharp.NC.GroupState.SafSubGroupState*
+  commentId: Overload:TwinSharp.NC.GroupState.SafSubGroupState
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_SafSubGroupState
+  name: SafSubGroupState
+  nameWithType: GroupState.SafSubGroupState
+  fullName: TwinSharp.NC.GroupState.SafSubGroupState
+- uid: TwinSharp.NC.GroupState.ReferencingState*
+  commentId: Overload:TwinSharp.NC.GroupState.ReferencingState
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_ReferencingState
+  name: ReferencingState
+  nameWithType: GroupState.ReferencingState
+  fullName: TwinSharp.NC.GroupState.ReferencingState
+- uid: TwinSharp.NC.GroupState.CouplingState*
+  commentId: Overload:TwinSharp.NC.GroupState.CouplingState
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_CouplingState
+  name: CouplingState
+  nameWithType: GroupState.CouplingState
+  fullName: TwinSharp.NC.GroupState.CouplingState
+- uid: TwinSharp.NC.GroupState.CouplingTableIndex*
+  commentId: Overload:TwinSharp.NC.GroupState.CouplingTableIndex
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_CouplingTableIndex
+  name: CouplingTableIndex
+  nameWithType: GroupState.CouplingTableIndex
+  fullName: TwinSharp.NC.GroupState.CouplingTableIndex
+- uid: TwinSharp.NC.GroupState.CurrentSvbEntries*
+  commentId: Overload:TwinSharp.NC.GroupState.CurrentSvbEntries
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_CurrentSvbEntries
+  name: CurrentSvbEntries
+  nameWithType: GroupState.CurrentSvbEntries
+  fullName: TwinSharp.NC.GroupState.CurrentSvbEntries
+- uid: TwinSharp.NC.GroupState.CurrentSafEntries*
+  commentId: Overload:TwinSharp.NC.GroupState.CurrentSafEntries
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_CurrentSafEntries
+  name: CurrentSafEntries
+  nameWithType: GroupState.CurrentSafEntries
+  fullName: TwinSharp.NC.GroupState.CurrentSafEntries
+- uid: TwinSharp.NC.GroupState.CurrentBlockNumber*
+  commentId: Overload:TwinSharp.NC.GroupState.CurrentBlockNumber
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_CurrentBlockNumber
+  name: CurrentBlockNumber
+  nameWithType: GroupState.CurrentBlockNumber
+  fullName: TwinSharp.NC.GroupState.CurrentBlockNumber
+- uid: TwinSharp.NC.GroupState.CurrentFreeSvbEntries*
+  commentId: Overload:TwinSharp.NC.GroupState.CurrentFreeSvbEntries
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_CurrentFreeSvbEntries
+  name: CurrentFreeSvbEntries
+  nameWithType: GroupState.CurrentFreeSvbEntries
+  fullName: TwinSharp.NC.GroupState.CurrentFreeSvbEntries
+- uid: TwinSharp.NC.GroupState.CurrentFreeSafEntries*
+  commentId: Overload:TwinSharp.NC.GroupState.CurrentFreeSafEntries
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_CurrentFreeSafEntries
+  name: CurrentFreeSafEntries
+  nameWithType: GroupState.CurrentFreeSafEntries
+  fullName: TwinSharp.NC.GroupState.CurrentFreeSafEntries
+- uid: TwinSharp.NC.GroupState.EmergencyStopActive*
+  commentId: Overload:TwinSharp.NC.GroupState.EmergencyStopActive
+  href: TwinSharp.NC.GroupState.html#TwinSharp_NC_GroupState_EmergencyStopActive
+  name: EmergencyStopActive
+  nameWithType: GroupState.EmergencyStopActive
+  fullName: TwinSharp.NC.GroupState.EmergencyStopActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

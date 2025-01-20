@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.InterpolationLoadLogMode
+  commentId: T:TwinSharp.NC.InterpolationLoadLogMode
+  id: InterpolationLoadLogMode
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.InterpolationLoadLogMode.LoaderLogOff
+  - TwinSharp.NC.InterpolationLoadLogMode.SourceAndCompiled
+  - TwinSharp.NC.InterpolationLoadLogMode.SourceOnly
+  langs:
+  - csharp
+  - vb
+  name: InterpolationLoadLogMode
+  nameWithType: InterpolationLoadLogMode
+  fullName: TwinSharp.NC.InterpolationLoadLogMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpolationLoadLogMode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 155
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of interpolation load log modes that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum InterpolationLoadLogMode
+    content.vb: Public Enum InterpolationLoadLogMode
+- uid: TwinSharp.NC.InterpolationLoadLogMode.LoaderLogOff
+  commentId: F:TwinSharp.NC.InterpolationLoadLogMode.LoaderLogOff
+  id: LoaderLogOff
+  parent: TwinSharp.NC.InterpolationLoadLogMode
+  langs:
+  - csharp
+  - vb
+  name: LoaderLogOff
+  nameWithType: InterpolationLoadLogMode.LoaderLogOff
+  fullName: TwinSharp.NC.InterpolationLoadLogMode.LoaderLogOff
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LoaderLogOff
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 158
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Loader log off.
+  example: []
+  syntax:
+    content: LoaderLogOff = 0
+    return:
+      type: TwinSharp.NC.InterpolationLoadLogMode
+- uid: TwinSharp.NC.InterpolationLoadLogMode.SourceOnly
+  commentId: F:TwinSharp.NC.InterpolationLoadLogMode.SourceOnly
+  id: SourceOnly
+  parent: TwinSharp.NC.InterpolationLoadLogMode
+  langs:
+  - csharp
+  - vb
+  name: SourceOnly
+  nameWithType: InterpolationLoadLogMode.SourceOnly
+  fullName: TwinSharp.NC.InterpolationLoadLogMode.SourceOnly
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SourceOnly
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 161
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Source only.
+  example: []
+  syntax:
+    content: SourceOnly = 1
+    return:
+      type: TwinSharp.NC.InterpolationLoadLogMode
+- uid: TwinSharp.NC.InterpolationLoadLogMode.SourceAndCompiled
+  commentId: F:TwinSharp.NC.InterpolationLoadLogMode.SourceAndCompiled
+  id: SourceAndCompiled
+  parent: TwinSharp.NC.InterpolationLoadLogMode
+  langs:
+  - csharp
+  - vb
+  name: SourceAndCompiled
+  nameWithType: InterpolationLoadLogMode.SourceAndCompiled
+  fullName: TwinSharp.NC.InterpolationLoadLogMode.SourceAndCompiled
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SourceAndCompiled
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 164
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Source and Compiled.
+  example: []
+  syntax:
+    content: SourceAndCompiled = 2
+    return:
+      type: TwinSharp.NC.InterpolationLoadLogMode
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.InterpolationLoadLogMode
+  commentId: T:TwinSharp.NC.InterpolationLoadLogMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.InterpolationLoadLogMode.html
+  name: InterpolationLoadLogMode
+  nameWithType: InterpolationLoadLogMode
+  fullName: TwinSharp.NC.InterpolationLoadLogMode

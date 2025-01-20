@@ -1,0 +1,179 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.TableInterpolationType
+  commentId: T:TwinSharp.NC.TableInterpolationType
+  id: TableInterpolationType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.TableInterpolationType.CubicSpline
+  - TwinSharp.NC.TableInterpolationType.FourPoint
+  - TwinSharp.NC.TableInterpolationType.Linear
+  - TwinSharp.NC.TableInterpolationType.SlidingCubicSpline
+  langs:
+  - csharp
+  - vb
+  name: TableInterpolationType
+  nameWithType: TableInterpolationType
+  fullName: TwinSharp.NC.TableInterpolationType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TableInterpolationType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 698
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    Interpolation mode for position tables (cam plates). Position tables consist of a list of master and slave positions between which interpolation can take place in different ways.
+
+    The interpolation type is not used for extended cam plates(motion functions).
+  example: []
+  syntax:
+    content: public enum TableInterpolationType
+    content.vb: Public Enum TableInterpolationType
+- uid: TwinSharp.NC.TableInterpolationType.Linear
+  commentId: F:TwinSharp.NC.TableInterpolationType.Linear
+  id: Linear
+  parent: TwinSharp.NC.TableInterpolationType
+  langs:
+  - csharp
+  - vb
+  name: Linear
+  nameWithType: TableInterpolationType.Linear
+  fullName: TwinSharp.NC.TableInterpolationType.Linear
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Linear
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 701
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Linear interpolation (NC_INTERPOLATIONTYPE_LINEAR) (Standard)
+  example: []
+  syntax:
+    content: Linear = 0
+    return:
+      type: TwinSharp.NC.TableInterpolationType
+- uid: TwinSharp.NC.TableInterpolationType.FourPoint
+  commentId: F:TwinSharp.NC.TableInterpolationType.FourPoint
+  id: FourPoint
+  parent: TwinSharp.NC.TableInterpolationType
+  langs:
+  - csharp
+  - vb
+  name: FourPoint
+  nameWithType: TableInterpolationType.FourPoint
+  fullName: TwinSharp.NC.TableInterpolationType.FourPoint
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FourPoint
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 704
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 4-point interpolation (NC_INTERPOLATIONTYPE_4POINT) (for equidistant table types only)
+  example: []
+  syntax:
+    content: FourPoint = 1
+    return:
+      type: TwinSharp.NC.TableInterpolationType
+- uid: TwinSharp.NC.TableInterpolationType.CubicSpline
+  commentId: F:TwinSharp.NC.TableInterpolationType.CubicSpline
+  id: CubicSpline
+  parent: TwinSharp.NC.TableInterpolationType
+  langs:
+  - csharp
+  - vb
+  name: CubicSpline
+  nameWithType: TableInterpolationType.CubicSpline
+  fullName: TwinSharp.NC.TableInterpolationType.CubicSpline
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CubicSpline
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 707
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Cubic spline interpolation of all reference points ("global spline") (NC_INTERPOLATIONTYPE_SPLINE)
+  example: []
+  syntax:
+    content: CubicSpline = 2
+    return:
+      type: TwinSharp.NC.TableInterpolationType
+- uid: TwinSharp.NC.TableInterpolationType.SlidingCubicSpline
+  commentId: F:TwinSharp.NC.TableInterpolationType.SlidingCubicSpline
+  id: SlidingCubicSpline
+  parent: TwinSharp.NC.TableInterpolationType
+  langs:
+  - csharp
+  - vb
+  name: SlidingCubicSpline
+  nameWithType: TableInterpolationType.SlidingCubicSpline
+  fullName: TwinSharp.NC.TableInterpolationType.SlidingCubicSpline
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SlidingCubicSpline
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 710
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Moving cubic spline interpolation with n sampling points ('local spline')
+  example: []
+  syntax:
+    content: SlidingCubicSpline = 3
+    return:
+      type: TwinSharp.NC.TableInterpolationType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.TableInterpolationType
+  commentId: T:TwinSharp.NC.TableInterpolationType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.TableInterpolationType.html
+  name: TableInterpolationType
+  nameWithType: TableInterpolationType
+  fullName: TwinSharp.NC.TableInterpolationType

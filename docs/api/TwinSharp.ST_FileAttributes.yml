@@ -1,0 +1,692 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.ST_FileAttributes
+  commentId: T:TwinSharp.ST_FileAttributes
+  id: ST_FileAttributes
+  parent: TwinSharp
+  children:
+  - TwinSharp.ST_FileAttributes.Archive
+  - TwinSharp.ST_FileAttributes.Compressed
+  - TwinSharp.ST_FileAttributes.Device
+  - TwinSharp.ST_FileAttributes.Directory
+  - TwinSharp.ST_FileAttributes.Encrypted
+  - TwinSharp.ST_FileAttributes.Hidden
+  - TwinSharp.ST_FileAttributes.Normal
+  - TwinSharp.ST_FileAttributes.NotContentIndexed
+  - TwinSharp.ST_FileAttributes.Offline
+  - TwinSharp.ST_FileAttributes.ReadOnly
+  - TwinSharp.ST_FileAttributes.ReparsePoint
+  - TwinSharp.ST_FileAttributes.SparseFile
+  - TwinSharp.ST_FileAttributes.System
+  - TwinSharp.ST_FileAttributes.Temporary
+  langs:
+  - csharp
+  - vb
+  name: ST_FileAttributes
+  nameWithType: ST_FileAttributes
+  fullName: TwinSharp.ST_FileAttributes
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ST_FileAttributes
+    path: ../TwinSharp/Structs.cs
+    startLine: 473
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Describes the different attributes that a file can have. Such as readonly, hidden, system etc.
+  example: []
+  syntax:
+    content: public struct ST_FileAttributes
+    content.vb: Public Structure ST_FileAttributes
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.ST_FileAttributes.ReadOnly
+  commentId: F:TwinSharp.ST_FileAttributes.ReadOnly
+  id: ReadOnly
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: ReadOnly
+  nameWithType: ST_FileAttributes.ReadOnly
+  fullName: TwinSharp.ST_FileAttributes.ReadOnly
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReadOnly
+    path: ../TwinSharp/Structs.cs
+    startLine: 476
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_READONLY
+  example: []
+  syntax:
+    content: public bool ReadOnly
+    return:
+      type: System.Boolean
+    content.vb: Public [ReadOnly] As Boolean
+- uid: TwinSharp.ST_FileAttributes.Hidden
+  commentId: F:TwinSharp.ST_FileAttributes.Hidden
+  id: Hidden
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Hidden
+  nameWithType: ST_FileAttributes.Hidden
+  fullName: TwinSharp.ST_FileAttributes.Hidden
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Hidden
+    path: ../TwinSharp/Structs.cs
+    startLine: 479
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_HIDDEN
+  example: []
+  syntax:
+    content: public bool Hidden
+    return:
+      type: System.Boolean
+    content.vb: Public Hidden As Boolean
+- uid: TwinSharp.ST_FileAttributes.System
+  commentId: F:TwinSharp.ST_FileAttributes.System
+  id: System
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: System
+  nameWithType: ST_FileAttributes.System
+  fullName: TwinSharp.ST_FileAttributes.System
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: System
+    path: ../TwinSharp/Structs.cs
+    startLine: 482
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_SYSTEM
+  example: []
+  syntax:
+    content: public bool System
+    return:
+      type: System.Boolean
+    content.vb: Public System As Boolean
+- uid: TwinSharp.ST_FileAttributes.Directory
+  commentId: F:TwinSharp.ST_FileAttributes.Directory
+  id: Directory
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Directory
+  nameWithType: ST_FileAttributes.Directory
+  fullName: TwinSharp.ST_FileAttributes.Directory
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Directory
+    path: ../TwinSharp/Structs.cs
+    startLine: 485
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_DIRECTORY
+  example: []
+  syntax:
+    content: public bool Directory
+    return:
+      type: System.Boolean
+    content.vb: Public Directory As Boolean
+- uid: TwinSharp.ST_FileAttributes.Archive
+  commentId: F:TwinSharp.ST_FileAttributes.Archive
+  id: Archive
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Archive
+  nameWithType: ST_FileAttributes.Archive
+  fullName: TwinSharp.ST_FileAttributes.Archive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Archive
+    path: ../TwinSharp/Structs.cs
+    startLine: 488
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_ARCHIVE
+  example: []
+  syntax:
+    content: public bool Archive
+    return:
+      type: System.Boolean
+    content.vb: Public Archive As Boolean
+- uid: TwinSharp.ST_FileAttributes.Device
+  commentId: F:TwinSharp.ST_FileAttributes.Device
+  id: Device
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Device
+  nameWithType: ST_FileAttributes.Device
+  fullName: TwinSharp.ST_FileAttributes.Device
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Device
+    path: ../TwinSharp/Structs.cs
+    startLine: 491
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: 'FILE_ATTRIBUTE_DEVICE. Under CE: FILE_ATTRIBUTE_INROM or FILE_ATTRIBUTE_ENCRYPTED'
+  example: []
+  syntax:
+    content: public bool Device
+    return:
+      type: System.Boolean
+    content.vb: Public Device As Boolean
+- uid: TwinSharp.ST_FileAttributes.Normal
+  commentId: F:TwinSharp.ST_FileAttributes.Normal
+  id: Normal
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: ST_FileAttributes.Normal
+  fullName: TwinSharp.ST_FileAttributes.Normal
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Normal
+    path: ../TwinSharp/Structs.cs
+    startLine: 494
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_NORMAL
+  example: []
+  syntax:
+    content: public bool Normal
+    return:
+      type: System.Boolean
+    content.vb: Public Normal As Boolean
+- uid: TwinSharp.ST_FileAttributes.Temporary
+  commentId: F:TwinSharp.ST_FileAttributes.Temporary
+  id: Temporary
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Temporary
+  nameWithType: ST_FileAttributes.Temporary
+  fullName: TwinSharp.ST_FileAttributes.Temporary
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Temporary
+    path: ../TwinSharp/Structs.cs
+    startLine: 497
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_TEMPORARY
+  example: []
+  syntax:
+    content: public bool Temporary
+    return:
+      type: System.Boolean
+    content.vb: Public Temporary As Boolean
+- uid: TwinSharp.ST_FileAttributes.SparseFile
+  commentId: F:TwinSharp.ST_FileAttributes.SparseFile
+  id: SparseFile
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: SparseFile
+  nameWithType: ST_FileAttributes.SparseFile
+  fullName: TwinSharp.ST_FileAttributes.SparseFile
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SparseFile
+    path: ../TwinSharp/Structs.cs
+    startLine: 500
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_SPARSE_FILE
+  example: []
+  syntax:
+    content: public bool SparseFile
+    return:
+      type: System.Boolean
+    content.vb: Public SparseFile As Boolean
+- uid: TwinSharp.ST_FileAttributes.ReparsePoint
+  commentId: F:TwinSharp.ST_FileAttributes.ReparsePoint
+  id: ReparsePoint
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: ReparsePoint
+  nameWithType: ST_FileAttributes.ReparsePoint
+  fullName: TwinSharp.ST_FileAttributes.ReparsePoint
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReparsePoint
+    path: ../TwinSharp/Structs.cs
+    startLine: 503
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_REPARSE_POINT
+  example: []
+  syntax:
+    content: public bool ReparsePoint
+    return:
+      type: System.Boolean
+    content.vb: Public ReparsePoint As Boolean
+- uid: TwinSharp.ST_FileAttributes.Compressed
+  commentId: F:TwinSharp.ST_FileAttributes.Compressed
+  id: Compressed
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Compressed
+  nameWithType: ST_FileAttributes.Compressed
+  fullName: TwinSharp.ST_FileAttributes.Compressed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Compressed
+    path: ../TwinSharp/Structs.cs
+    startLine: 506
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_COMPRESSED
+  example: []
+  syntax:
+    content: public bool Compressed
+    return:
+      type: System.Boolean
+    content.vb: Public Compressed As Boolean
+- uid: TwinSharp.ST_FileAttributes.Offline
+  commentId: F:TwinSharp.ST_FileAttributes.Offline
+  id: Offline
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Offline
+  nameWithType: ST_FileAttributes.Offline
+  fullName: TwinSharp.ST_FileAttributes.Offline
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Offline
+    path: ../TwinSharp/Structs.cs
+    startLine: 509
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: 'FILE_ATTRIBUTE_OFFLINE. Under CE: FILE_ATTRIBUTE_ROMSTATICREF'
+  example: []
+  syntax:
+    content: public bool Offline
+    return:
+      type: System.Boolean
+    content.vb: Public Offline As Boolean
+- uid: TwinSharp.ST_FileAttributes.NotContentIndexed
+  commentId: F:TwinSharp.ST_FileAttributes.NotContentIndexed
+  id: NotContentIndexed
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: NotContentIndexed
+  nameWithType: ST_FileAttributes.NotContentIndexed
+  fullName: TwinSharp.ST_FileAttributes.NotContentIndexed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NotContentIndexed
+    path: ../TwinSharp/Structs.cs
+    startLine: 512
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: 'FILE_ATTRIBUTE_NOT_CONTENT_INDEXED. Under CE: FILE_ATTRIBUTE_ROMMODULE'
+  example: []
+  syntax:
+    content: public bool NotContentIndexed
+    return:
+      type: System.Boolean
+    content.vb: Public NotContentIndexed As Boolean
+- uid: TwinSharp.ST_FileAttributes.Encrypted
+  commentId: F:TwinSharp.ST_FileAttributes.Encrypted
+  id: Encrypted
+  parent: TwinSharp.ST_FileAttributes
+  langs:
+  - csharp
+  - vb
+  name: Encrypted
+  nameWithType: ST_FileAttributes.Encrypted
+  fullName: TwinSharp.ST_FileAttributes.Encrypted
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Encrypted
+    path: ../TwinSharp/Structs.cs
+    startLine: 515
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: FILE_ATTRIBUTE_ENCRYPTED
+  example: []
+  syntax:
+    content: public bool Encrypted
+    return:
+      type: System.Boolean
+    content.vb: Public Encrypted As Boolean
+references:
+- uid: TwinSharp
+  commentId: N:TwinSharp
+  href: TwinSharp.html
+  name: TwinSharp
+  nameWithType: TwinSharp
+  fullName: TwinSharp
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

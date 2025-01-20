@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_HB_ACTIVATION
+  commentId: T:TwinSharp.CNC.HLI_HB_ACTIVATION
+  id: HLI_HB_ACTIVATION
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_HB_ACTIVATION.ControlElement
+  - TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp1
+  - TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp2
+  - TwinSharp.CNC.HLI_HB_ACTIVATION.LogicalAxisNumber
+  - TwinSharp.CNC.HLI_HB_ACTIVATION.OperationMode
+  - TwinSharp.CNC.HLI_HB_ACTIVATION.ParameterIndex
+  langs:
+  - csharp
+  - vb
+  name: HLI_HB_ACTIVATION
+  nameWithType: HLI_HB_ACTIVATION
+  fullName: TwinSharp.CNC.HLI_HB_ACTIVATION
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_HB_ACTIVATION
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 556
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Control unit to manage data to activate a control element and assign it to an axis in manual mode.
+  example: []
+  syntax:
+    content: public struct HLI_HB_ACTIVATION
+    content.vb: Public Structure HLI_HB_ACTIVATION
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_HB_ACTIVATION.LogicalAxisNumber
+  commentId: F:TwinSharp.CNC.HLI_HB_ACTIVATION.LogicalAxisNumber
+  id: LogicalAxisNumber
+  parent: TwinSharp.CNC.HLI_HB_ACTIVATION
+  langs:
+  - csharp
+  - vb
+  name: LogicalAxisNumber
+  nameWithType: HLI_HB_ACTIVATION.LogicalAxisNumber
+  fullName: TwinSharp.CNC.HLI_HB_ACTIVATION.LogicalAxisNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LogicalAxisNumber
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 563
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Unique system-wide number of a logical axis.
+
+    A control element is assigned to the specified logical axis with which the axis is to be moved in manual mode.
+  example: []
+  syntax:
+    content: public ushort LogicalAxisNumber
+    return:
+      type: System.UInt16
+    content.vb: Public LogicalAxisNumber As UShort
+- uid: TwinSharp.CNC.HLI_HB_ACTIVATION.ControlElement
+  commentId: F:TwinSharp.CNC.HLI_HB_ACTIVATION.ControlElement
+  id: ControlElement
+  parent: TwinSharp.CNC.HLI_HB_ACTIVATION
+  langs:
+  - csharp
+  - vb
+  name: ControlElement
+  nameWithType: HLI_HB_ACTIVATION.ControlElement
+  fullName: TwinSharp.CNC.HLI_HB_ACTIVATION.ControlElement
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControlElement
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 577
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Number of the logical control element to be assigned to the logical axis.
+  remarks: >-
+    When continuous and incremental jog mode is activated:
+
+    one of the values which are defined as logical button pair numbers in the
+
+    configuration list hand_mds.lis for the characteristics tasten_data[X].log_tasten_nr.
+
+    When handwheel mode is activated:
+
+    one of the values which are defined as logical handwheel numbers in the
+
+    configuration list hand_mds.lis for the characteristics hr_data[0].log_hr_nr.
+
+    If 0 is specified as the control element, the current operation mode of an axis is deselected
+  example: []
+  syntax:
+    content: public ushort ControlElement
+    return:
+      type: System.UInt16
+    content.vb: Public ControlElement As UShort
+- uid: TwinSharp.CNC.HLI_HB_ACTIVATION.OperationMode
+  commentId: F:TwinSharp.CNC.HLI_HB_ACTIVATION.OperationMode
+  id: OperationMode
+  parent: TwinSharp.CNC.HLI_HB_ACTIVATION
+  langs:
+  - csharp
+  - vb
+  name: OperationMode
+  nameWithType: HLI_HB_ACTIVATION.OperationMode
+  fullName: TwinSharp.CNC.HLI_HB_ACTIVATION.OperationMode
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OperationMode
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 588
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Manual operation mode to be assigned to the logical axis.
+  remarks: >-
+    0: no operation mode, current operation mode selected
+
+    1: Handwheel mode
+
+    2: Continuous jog mode
+
+    3: jog mode
+  example: []
+  syntax:
+    content: public ushort OperationMode
+    return:
+      type: System.UInt16
+    content.vb: Public OperationMode As UShort
+- uid: TwinSharp.CNC.HLI_HB_ACTIVATION.ParameterIndex
+  commentId: F:TwinSharp.CNC.HLI_HB_ACTIVATION.ParameterIndex
+  id: ParameterIndex
+  parent: TwinSharp.CNC.HLI_HB_ACTIVATION
+  langs:
+  - csharp
+  - vb
+  name: ParameterIndex
+  nameWithType: HLI_HB_ACTIVATION.ParameterIndex
+  fullName: TwinSharp.CNC.HLI_HB_ACTIVATION.ParameterIndex
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ParameterIndex
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 600
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Specifies the index of the parameter set to be used for the manual mode.
+
+    Value range [0; 2]
+  remarks: >-
+    The first value set in the parameter table (index = 0) is overwritten by the PLC
+
+    interface when individual parameters are specified.The remaining parameter sets
+
+    are not changed. This means, they correspond to the values specified in the axis-
+
+    specific parameter lists.
+  example: []
+  syntax:
+    content: public ushort ParameterIndex
+    return:
+      type: System.UInt16
+    content.vb: Public ParameterIndex As UShort
+- uid: TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp1
+  commentId: F:TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp1
+  id: FillUp1
+  parent: TwinSharp.CNC.HLI_HB_ACTIVATION
+  langs:
+  - csharp
+  - vb
+  name: FillUp1
+  nameWithType: HLI_HB_ACTIVATION.FillUp1
+  fullName: TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 603
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public ushort FillUp1
+    return:
+      type: System.UInt16
+    content.vb: Public FillUp1 As UShort
+- uid: TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp2
+  commentId: F:TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp2
+  id: FillUp2
+  parent: TwinSharp.CNC.HLI_HB_ACTIVATION
+  langs:
+  - csharp
+  - vb
+  name: FillUp2
+  nameWithType: HLI_HB_ACTIVATION.FillUp2
+  fullName: TwinSharp.CNC.HLI_HB_ACTIVATION.FillUp2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp2
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 606
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public ushort FillUp2
+    return:
+      type: System.UInt16
+    content.vb: Public FillUp2 As UShort
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort

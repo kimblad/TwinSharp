@@ -1,0 +1,654 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.ChannelState
+  commentId: T:TwinSharp.NC.ChannelState
+  id: ChannelState
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.ChannelState.CurrentLoadedProgramName
+  - TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber
+  - TwinSharp.NC.ChannelState.ErrorCode
+  - TwinSharp.NC.ChannelState.GroupCount
+  - TwinSharp.NC.ChannelState.InterpreterOperationMode
+  - TwinSharp.NC.ChannelState.InterpreterSimulationMode
+  - TwinSharp.NC.ChannelState.InterpreterState
+  - TwinSharp.NC.ChannelState.TextIndex
+  langs:
+  - csharp
+  - vb
+  name: ChannelState
+  nameWithType: ChannelState
+  fullName: TwinSharp.NC.ChannelState
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ChannelState
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 7
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Represents the state of an NC (Numerical Control) channel, providing access to various channel properties such as error codes, group count, interpreter state, operation mode, and program information using an AdsClient.
+  example: []
+  syntax:
+    content: public class ChannelState
+    content.vb: Public Class ChannelState
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.NC.ChannelState.ErrorCode
+  commentId: P:TwinSharp.NC.ChannelState.ErrorCode
+  id: ErrorCode
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: ErrorCode
+  nameWithType: ChannelState.ErrorCode
+  fullName: TwinSharp.NC.ChannelState.ErrorCode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ErrorCode
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 21
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Error code Channel
+  example: []
+  syntax:
+    content: public int ErrorCode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ErrorCode As Integer
+  overload: TwinSharp.NC.ChannelState.ErrorCode*
+- uid: TwinSharp.NC.ChannelState.GroupCount
+  commentId: P:TwinSharp.NC.ChannelState.GroupCount
+  id: GroupCount
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: GroupCount
+  nameWithType: ChannelState.GroupCount
+  fullName: TwinSharp.NC.ChannelState.GroupCount
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GroupCount
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 29
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Number of groups in the Channel
+  example: []
+  syntax:
+    content: public uint GroupCount { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property GroupCount As UInteger
+  overload: TwinSharp.NC.ChannelState.GroupCount*
+- uid: TwinSharp.NC.ChannelState.InterpreterState
+  commentId: P:TwinSharp.NC.ChannelState.InterpreterState
+  id: InterpreterState
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: InterpreterState
+  nameWithType: ChannelState.InterpreterState
+  fullName: TwinSharp.NC.ChannelState.InterpreterState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpreterState
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 37
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Interpreter status
+  example: []
+  syntax:
+    content: public InterpreterState InterpreterState { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.InterpreterState
+    content.vb: Public ReadOnly Property InterpreterState As InterpreterState
+  overload: TwinSharp.NC.ChannelState.InterpreterState*
+- uid: TwinSharp.NC.ChannelState.InterpreterOperationMode
+  commentId: P:TwinSharp.NC.ChannelState.InterpreterOperationMode
+  id: InterpreterOperationMode
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: InterpreterOperationMode
+  nameWithType: ChannelState.InterpreterOperationMode
+  fullName: TwinSharp.NC.ChannelState.InterpreterOperationMode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpreterOperationMode
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 45
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Interpreter/channel operation mode
+  example: []
+  syntax:
+    content: public InterpreterOperationMode InterpreterOperationMode { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.InterpreterOperationMode
+    content.vb: Public ReadOnly Property InterpreterOperationMode As InterpreterOperationMode
+  overload: TwinSharp.NC.ChannelState.InterpreterOperationMode*
+- uid: TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber
+  commentId: P:TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber
+  id: CurrentLoadedProgramNumber
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: CurrentLoadedProgramNumber
+  nameWithType: ChannelState.CurrentLoadedProgramNumber
+  fullName: TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CurrentLoadedProgramNumber
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 53
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Current loaded program number
+  example: []
+  syntax:
+    content: public uint CurrentLoadedProgramNumber { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property CurrentLoadedProgramNumber As UInteger
+  overload: TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber*
+- uid: TwinSharp.NC.ChannelState.CurrentLoadedProgramName
+  commentId: P:TwinSharp.NC.ChannelState.CurrentLoadedProgramName
+  id: CurrentLoadedProgramName
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: CurrentLoadedProgramName
+  nameWithType: ChannelState.CurrentLoadedProgramName
+  fullName: TwinSharp.NC.ChannelState.CurrentLoadedProgramName
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CurrentLoadedProgramName
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 62
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    Program name of currently loaded program
+
+    (100 characters, null-terminated)
+  example: []
+  syntax:
+    content: public string CurrentLoadedProgramName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property CurrentLoadedProgramName As String
+  overload: TwinSharp.NC.ChannelState.CurrentLoadedProgramName*
+- uid: TwinSharp.NC.ChannelState.InterpreterSimulationMode
+  commentId: P:TwinSharp.NC.ChannelState.InterpreterSimulationMode
+  id: InterpreterSimulationMode
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: InterpreterSimulationMode
+  nameWithType: ChannelState.InterpreterSimulationMode
+  fullName: TwinSharp.NC.ChannelState.InterpreterSimulationMode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpreterSimulationMode
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 70
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 'Interpreter simulation mode 0: off (default) 1: on'
+  example: []
+  syntax:
+    content: public uint InterpreterSimulationMode { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property InterpreterSimulationMode As UInteger
+  overload: TwinSharp.NC.ChannelState.InterpreterSimulationMode*
+- uid: TwinSharp.NC.ChannelState.TextIndex
+  commentId: P:TwinSharp.NC.ChannelState.TextIndex
+  id: TextIndex
+  parent: TwinSharp.NC.ChannelState
+  langs:
+  - csharp
+  - vb
+  name: TextIndex
+  nameWithType: ChannelState.TextIndex
+  fullName: TwinSharp.NC.ChannelState.TextIndex
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/ChannelState.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TextIndex
+    path: ../TwinSharp/NC/ChannelState.cs
+    startLine: 78
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: If the interpreter is in the aborted state, the current text index can be read out here
+  example: []
+  syntax:
+    content: public uint TextIndex { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property TextIndex As UInteger
+  overload: TwinSharp.NC.ChannelState.TextIndex*
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.NC.ChannelState.ErrorCode*
+  commentId: Overload:TwinSharp.NC.ChannelState.ErrorCode
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_ErrorCode
+  name: ErrorCode
+  nameWithType: ChannelState.ErrorCode
+  fullName: TwinSharp.NC.ChannelState.ErrorCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.NC.ChannelState.GroupCount*
+  commentId: Overload:TwinSharp.NC.ChannelState.GroupCount
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_GroupCount
+  name: GroupCount
+  nameWithType: ChannelState.GroupCount
+  fullName: TwinSharp.NC.ChannelState.GroupCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.NC.ChannelState.InterpreterState*
+  commentId: Overload:TwinSharp.NC.ChannelState.InterpreterState
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_InterpreterState
+  name: InterpreterState
+  nameWithType: ChannelState.InterpreterState
+  fullName: TwinSharp.NC.ChannelState.InterpreterState
+- uid: TwinSharp.NC.InterpreterState
+  commentId: T:TwinSharp.NC.InterpreterState
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.InterpreterState.html
+  name: InterpreterState
+  nameWithType: InterpreterState
+  fullName: TwinSharp.NC.InterpreterState
+- uid: TwinSharp.NC.ChannelState.InterpreterOperationMode*
+  commentId: Overload:TwinSharp.NC.ChannelState.InterpreterOperationMode
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_InterpreterOperationMode
+  name: InterpreterOperationMode
+  nameWithType: ChannelState.InterpreterOperationMode
+  fullName: TwinSharp.NC.ChannelState.InterpreterOperationMode
+- uid: TwinSharp.NC.InterpreterOperationMode
+  commentId: T:TwinSharp.NC.InterpreterOperationMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.InterpreterOperationMode.html
+  name: InterpreterOperationMode
+  nameWithType: InterpreterOperationMode
+  fullName: TwinSharp.NC.InterpreterOperationMode
+- uid: TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber*
+  commentId: Overload:TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_CurrentLoadedProgramNumber
+  name: CurrentLoadedProgramNumber
+  nameWithType: ChannelState.CurrentLoadedProgramNumber
+  fullName: TwinSharp.NC.ChannelState.CurrentLoadedProgramNumber
+- uid: TwinSharp.NC.ChannelState.CurrentLoadedProgramName*
+  commentId: Overload:TwinSharp.NC.ChannelState.CurrentLoadedProgramName
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_CurrentLoadedProgramName
+  name: CurrentLoadedProgramName
+  nameWithType: ChannelState.CurrentLoadedProgramName
+  fullName: TwinSharp.NC.ChannelState.CurrentLoadedProgramName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.NC.ChannelState.InterpreterSimulationMode*
+  commentId: Overload:TwinSharp.NC.ChannelState.InterpreterSimulationMode
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_InterpreterSimulationMode
+  name: InterpreterSimulationMode
+  nameWithType: ChannelState.InterpreterSimulationMode
+  fullName: TwinSharp.NC.ChannelState.InterpreterSimulationMode
+- uid: TwinSharp.NC.ChannelState.TextIndex*
+  commentId: Overload:TwinSharp.NC.ChannelState.TextIndex
+  href: TwinSharp.NC.ChannelState.html#TwinSharp_NC_ChannelState_TextIndex
+  name: TextIndex
+  nameWithType: ChannelState.TextIndex
+  fullName: TwinSharp.NC.ChannelState.TextIndex

@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.DriveOutputStartType
+  commentId: T:TwinSharp.NC.DriveOutputStartType
+  id: DriveOutputStartType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.DriveOutputStartType.NOT_DEFINED
+  - TwinSharp.NC.DriveOutputStartType.Percent
+  - TwinSharp.NC.DriveOutputStartType.Velocity
+  langs:
+  - csharp
+  - vb
+  name: DriveOutputStartType
+  nameWithType: DriveOutputStartType
+  fullName: TwinSharp.NC.DriveOutputStartType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DriveOutputStartType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 48
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of drive output start that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum DriveOutputStartType
+    content.vb: Public Enum DriveOutputStartType
+- uid: TwinSharp.NC.DriveOutputStartType.NOT_DEFINED
+  commentId: F:TwinSharp.NC.DriveOutputStartType.NOT_DEFINED
+  id: NOT_DEFINED
+  parent: TwinSharp.NC.DriveOutputStartType
+  langs:
+  - csharp
+  - vb
+  name: NOT_DEFINED
+  nameWithType: DriveOutputStartType.NOT_DEFINED
+  fullName: TwinSharp.NC.DriveOutputStartType.NOT_DEFINED
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NOT_DEFINED
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 51
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Drive start type not defined.
+  example: []
+  syntax:
+    content: NOT_DEFINED = 0
+    return:
+      type: TwinSharp.NC.DriveOutputStartType
+- uid: TwinSharp.NC.DriveOutputStartType.Percent
+  commentId: F:TwinSharp.NC.DriveOutputStartType.Percent
+  id: Percent
+  parent: TwinSharp.NC.DriveOutputStartType
+  langs:
+  - csharp
+  - vb
+  name: Percent
+  nameWithType: DriveOutputStartType.Percent
+  fullName: TwinSharp.NC.DriveOutputStartType.Percent
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Percent
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 54
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Output in percent.
+  example: []
+  syntax:
+    content: Percent = 1
+    return:
+      type: TwinSharp.NC.DriveOutputStartType
+- uid: TwinSharp.NC.DriveOutputStartType.Velocity
+  commentId: F:TwinSharp.NC.DriveOutputStartType.Velocity
+  id: Velocity
+  parent: TwinSharp.NC.DriveOutputStartType
+  langs:
+  - csharp
+  - vb
+  name: Velocity
+  nameWithType: DriveOutputStartType.Velocity
+  fullName: TwinSharp.NC.DriveOutputStartType.Velocity
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Velocity
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 57
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Output in velocity.
+  example: []
+  syntax:
+    content: Velocity = 2
+    return:
+      type: TwinSharp.NC.DriveOutputStartType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.DriveOutputStartType
+  commentId: T:TwinSharp.NC.DriveOutputStartType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.DriveOutputStartType.html
+  name: DriveOutputStartType
+  nameWithType: DriveOutputStartType
+  fullName: TwinSharp.NC.DriveOutputStartType

@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.CamScalingMode
+  commentId: T:TwinSharp.NC.CamScalingMode
+  id: CamScalingMode
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.CamScalingMode.Off
+  - TwinSharp.NC.CamScalingMode.UserDefined
+  - TwinSharp.NC.CamScalingMode.WithAutoOffset
+  langs:
+  - csharp
+  - vb
+  name: CamScalingMode
+  nameWithType: CamScalingMode
+  fullName: TwinSharp.NC.CamScalingMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CamScalingMode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 782
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of type and scope of the scaling of a cam plate coupling.
+  example: []
+  syntax:
+    content: public enum CamScalingMode
+    content.vb: Public Enum CamScalingMode
+- uid: TwinSharp.NC.CamScalingMode.UserDefined
+  commentId: F:TwinSharp.NC.CamScalingMode.UserDefined
+  id: UserDefined
+  parent: TwinSharp.NC.CamScalingMode
+  langs:
+  - csharp
+  - vb
+  name: UserDefined
+  nameWithType: CamScalingMode.UserDefined
+  fullName: TwinSharp.NC.CamScalingMode.UserDefined
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: UserDefined
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 785
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: User defines scaling parameters -scaling and -offset
+  example: []
+  syntax:
+    content: UserDefined = 0
+    return:
+      type: TwinSharp.NC.CamScalingMode
+- uid: TwinSharp.NC.CamScalingMode.WithAutoOffset
+  commentId: F:TwinSharp.NC.CamScalingMode.WithAutoOffset
+  id: WithAutoOffset
+  parent: TwinSharp.NC.CamScalingMode
+  langs:
+  - csharp
+  - vb
+  name: WithAutoOffset
+  nameWithType: CamScalingMode.WithAutoOffset
+  fullName: TwinSharp.NC.CamScalingMode.WithAutoOffset
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WithAutoOffset
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 788
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Offset is calculated automatically for best result
+  example: []
+  syntax:
+    content: WithAutoOffset = 1
+    return:
+      type: TwinSharp.NC.CamScalingMode
+- uid: TwinSharp.NC.CamScalingMode.Off
+  commentId: F:TwinSharp.NC.CamScalingMode.Off
+  id: Off
+  parent: TwinSharp.NC.CamScalingMode
+  langs:
+  - csharp
+  - vb
+  name: Off
+  nameWithType: CamScalingMode.Off
+  fullName: TwinSharp.NC.CamScalingMode.Off
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Off
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 791
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: No modificaiton accepted.
+  example: []
+  syntax:
+    content: Off = 2
+    return:
+      type: TwinSharp.NC.CamScalingMode
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.CamScalingMode
+  commentId: T:TwinSharp.NC.CamScalingMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.CamScalingMode.html
+  name: CamScalingMode
+  nameWithType: CamScalingMode
+  fullName: TwinSharp.NC.CamScalingMode

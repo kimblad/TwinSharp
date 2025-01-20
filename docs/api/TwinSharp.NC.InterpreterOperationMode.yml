@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.InterpreterOperationMode
+  commentId: T:TwinSharp.NC.InterpreterOperationMode
+  id: InterpreterOperationMode
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.InterpreterOperationMode.Default
+  - TwinSharp.NC.InterpreterOperationMode.SingleBlockInterpreter
+  - TwinSharp.NC.InterpreterOperationMode.SingleBlockNC
+  langs:
+  - csharp
+  - vb
+  name: InterpreterOperationMode
+  nameWithType: InterpreterOperationMode
+  fullName: TwinSharp.NC.InterpreterOperationMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpreterOperationMode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 255
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different modes that the TwinCAT NC interpreter can operate in.
+  example: []
+  syntax:
+    content: public enum InterpreterOperationMode
+    content.vb: Public Enum InterpreterOperationMode
+- uid: TwinSharp.NC.InterpreterOperationMode.Default
+  commentId: F:TwinSharp.NC.InterpreterOperationMode.Default
+  id: Default
+  parent: TwinSharp.NC.InterpreterOperationMode
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: InterpreterOperationMode.Default
+  fullName: TwinSharp.NC.InterpreterOperationMode.Default
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Default
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 258
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Default (deactivates the other modes)
+  example: []
+  syntax:
+    content: Default = 0
+    return:
+      type: TwinSharp.NC.InterpreterOperationMode
+- uid: TwinSharp.NC.InterpreterOperationMode.SingleBlockNC
+  commentId: F:TwinSharp.NC.InterpreterOperationMode.SingleBlockNC
+  id: SingleBlockNC
+  parent: TwinSharp.NC.InterpreterOperationMode
+  langs:
+  - csharp
+  - vb
+  name: SingleBlockNC
+  nameWithType: InterpreterOperationMode.SingleBlockNC
+  fullName: TwinSharp.NC.InterpreterOperationMode.SingleBlockNC
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SingleBlockNC
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 261
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Single block mode in the NC core (Block execution task/SAF
+  example: []
+  syntax:
+    content: SingleBlockNC = 1
+    return:
+      type: TwinSharp.NC.InterpreterOperationMode
+- uid: TwinSharp.NC.InterpreterOperationMode.SingleBlockInterpreter
+  commentId: F:TwinSharp.NC.InterpreterOperationMode.SingleBlockInterpreter
+  id: SingleBlockInterpreter
+  parent: TwinSharp.NC.InterpreterOperationMode
+  langs:
+  - csharp
+  - vb
+  name: SingleBlockInterpreter
+  nameWithType: InterpreterOperationMode.SingleBlockInterpreter
+  fullName: TwinSharp.NC.InterpreterOperationMode.SingleBlockInterpreter
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SingleBlockInterpreter
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 264
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Single block mode in the interpreter
+  example: []
+  syntax:
+    content: SingleBlockInterpreter = 16384
+    return:
+      type: TwinSharp.NC.InterpreterOperationMode
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.InterpreterOperationMode
+  commentId: T:TwinSharp.NC.InterpreterOperationMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.InterpreterOperationMode.html
+  name: InterpreterOperationMode
+  nameWithType: InterpreterOperationMode
+  fullName: TwinSharp.NC.InterpreterOperationMode

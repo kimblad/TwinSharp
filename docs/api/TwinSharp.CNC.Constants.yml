@@ -1,0 +1,922 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.Constants
+  commentId: T:TwinSharp.CNC.Constants
+  id: Constants
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.Constants.ANZ_SIMU_KOORD
+  - TwinSharp.CNC.Constants.HLI_ERR_MASK_MAXIDX
+  - TwinSharp.CNC.Constants.HLI_HW_MAXIDX
+  - TwinSharp.CNC.Constants.HLI_KEY_MAXIDX
+  - TwinSharp.CNC.Constants.HLI_LAENGE_NAME
+  - TwinSharp.CNC.Constants.HLI_MODUL_NAME_LAENGE
+  - TwinSharp.CNC.Constants.HLI_WERT_B_DATA_MAXIDX
+  - TwinSharp.CNC.Constants.HLI_WERT_DATA_MAXIDX
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V0
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V1
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V10
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V11
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V2
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V3
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V4
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V5
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V6
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V7
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V8
+  - TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V9
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: TwinSharp.CNC.Constants
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Constants
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 5
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Constants used in the TwinCAT CNC system.
+  example: []
+  syntax:
+    content: public static class Constants
+    content.vb: Public Module Constants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V0
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V0
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V0
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V0
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V0
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V0
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V0
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 8
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V0 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V0 = 15
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V0 As Integer = 15
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V1
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V1
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V1
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V1
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V1
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V1
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 11
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V1 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V1 = 10
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V1 As Integer = 10
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V2
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V2
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V2
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V2
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V2
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V2
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 14
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V2 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V2 = 5
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V2 As Integer = 5
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V3
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V3
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V3
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V3
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V3
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V3
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V3
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 17
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V3 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V3 = 10
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V3 As Integer = 10
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V4
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V4
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V4
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V4
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V4
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V4
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V4
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 20
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V4 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V4 = 7
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V4 As Integer = 7
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V5
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V5
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V5
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V5
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V5
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V5
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V5
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 23
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V5 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V5 = 4
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V5 As Integer = 4
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V6
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V6
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V6
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V6
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V6
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V6
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V6
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 26
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V6 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V6 = 7
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V6 As Integer = 7
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V7
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V7
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V7
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V7
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V7
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V7
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V7
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 29
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V7 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V7 = 6
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V7 As Integer = 6
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V8
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V8
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V8
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V8
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V8
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V8
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V8
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 32
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V8 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V8 = 4
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V8 As Integer = 4
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V9
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V9
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V9
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V9
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V9
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V9
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V9
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 35
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V9 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V9 = 5
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V9 As Integer = 5
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V10
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V10
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V10
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V10
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V10
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V10
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V10
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 38
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V10 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V10 = 4
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V10 As Integer = 4
+- uid: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V11
+  commentId: F:TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V11
+  id: MAX_SOLLKONT_VISU_DATA_COUNT_V11
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: MAX_SOLLKONT_VISU_DATA_COUNT_V11
+  nameWithType: Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V11
+  fullName: TwinSharp.CNC.Constants.MAX_SOLLKONT_VISU_DATA_COUNT_V11
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MAX_SOLLKONT_VISU_DATA_COUNT_V11
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 41
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of structure when V11 of visualization data is used.
+  example: []
+  syntax:
+    content: public const int MAX_SOLLKONT_VISU_DATA_COUNT_V11 = 3
+    return:
+      type: System.Int32
+    content.vb: Public Const MAX_SOLLKONT_VISU_DATA_COUNT_V11 As Integer = 3
+- uid: TwinSharp.CNC.Constants.ANZ_SIMU_KOORD
+  commentId: F:TwinSharp.CNC.Constants.ANZ_SIMU_KOORD
+  id: ANZ_SIMU_KOORD
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: ANZ_SIMU_KOORD
+  nameWithType: Constants.ANZ_SIMU_KOORD
+  fullName: TwinSharp.CNC.Constants.ANZ_SIMU_KOORD
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ANZ_SIMU_KOORD
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 44
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Number of axis to get coordinates for in graphic generation.
+  example: []
+  syntax:
+    content: public const int ANZ_SIMU_KOORD = 32
+    return:
+      type: System.Int32
+    content.vb: Public Const ANZ_SIMU_KOORD As Integer = 32
+- uid: TwinSharp.CNC.Constants.HLI_MODUL_NAME_LAENGE
+  commentId: F:TwinSharp.CNC.Constants.HLI_MODUL_NAME_LAENGE
+  id: HLI_MODUL_NAME_LAENGE
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: HLI_MODUL_NAME_LAENGE
+  nameWithType: Constants.HLI_MODUL_NAME_LAENGE
+  fullName: TwinSharp.CNC.Constants.HLI_MODUL_NAME_LAENGE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_MODUL_NAME_LAENGE
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 48
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum length of string of type module name.
+  example: []
+  syntax:
+    content: public const int HLI_MODUL_NAME_LAENGE = 15
+    return:
+      type: System.Int32
+    content.vb: Public Const HLI_MODUL_NAME_LAENGE As Integer = 15
+- uid: TwinSharp.CNC.Constants.HLI_ERR_MASK_MAXIDX
+  commentId: F:TwinSharp.CNC.Constants.HLI_ERR_MASK_MAXIDX
+  id: HLI_ERR_MASK_MAXIDX
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: HLI_ERR_MASK_MAXIDX
+  nameWithType: Constants.HLI_ERR_MASK_MAXIDX
+  fullName: TwinSharp.CNC.Constants.HLI_ERR_MASK_MAXIDX
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_ERR_MASK_MAXIDX
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 51
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum index of HLI error mask.
+  example: []
+  syntax:
+    content: public const int HLI_ERR_MASK_MAXIDX = 583
+    return:
+      type: System.Int32
+    content.vb: Public Const HLI_ERR_MASK_MAXIDX As Integer = 583
+- uid: TwinSharp.CNC.Constants.HLI_WERT_B_DATA_MAXIDX
+  commentId: F:TwinSharp.CNC.Constants.HLI_WERT_B_DATA_MAXIDX
+  id: HLI_WERT_B_DATA_MAXIDX
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: HLI_WERT_B_DATA_MAXIDX
+  nameWithType: Constants.HLI_WERT_B_DATA_MAXIDX
+  fullName: TwinSharp.CNC.Constants.HLI_WERT_B_DATA_MAXIDX
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_WERT_B_DATA_MAXIDX
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 54
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum index of HLI error value B data.
+  example: []
+  syntax:
+    content: public const int HLI_WERT_B_DATA_MAXIDX = 23
+    return:
+      type: System.Int32
+    content.vb: Public Const HLI_WERT_B_DATA_MAXIDX As Integer = 23
+- uid: TwinSharp.CNC.Constants.HLI_WERT_DATA_MAXIDX
+  commentId: F:TwinSharp.CNC.Constants.HLI_WERT_DATA_MAXIDX
+  id: HLI_WERT_DATA_MAXIDX
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: HLI_WERT_DATA_MAXIDX
+  nameWithType: Constants.HLI_WERT_DATA_MAXIDX
+  fullName: TwinSharp.CNC.Constants.HLI_WERT_DATA_MAXIDX
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_WERT_DATA_MAXIDX
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 57
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum index of HLI error value  data.
+  example: []
+  syntax:
+    content: public const int HLI_WERT_DATA_MAXIDX = 7
+    return:
+      type: System.Int32
+    content.vb: Public Const HLI_WERT_DATA_MAXIDX As Integer = 7
+- uid: TwinSharp.CNC.Constants.HLI_LAENGE_NAME
+  commentId: F:TwinSharp.CNC.Constants.HLI_LAENGE_NAME
+  id: HLI_LAENGE_NAME
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: HLI_LAENGE_NAME
+  nameWithType: Constants.HLI_LAENGE_NAME
+  fullName: TwinSharp.CNC.Constants.HLI_LAENGE_NAME
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_LAENGE_NAME
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 60
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum string length of HLI objects.
+  example: []
+  syntax:
+    content: public const int HLI_LAENGE_NAME = 259
+    return:
+      type: System.Int32
+    content.vb: Public Const HLI_LAENGE_NAME As Integer = 259
+- uid: TwinSharp.CNC.Constants.HLI_KEY_MAXIDX
+  commentId: F:TwinSharp.CNC.Constants.HLI_KEY_MAXIDX
+  id: HLI_KEY_MAXIDX
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: HLI_KEY_MAXIDX
+  nameWithType: Constants.HLI_KEY_MAXIDX
+  fullName: TwinSharp.CNC.Constants.HLI_KEY_MAXIDX
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_KEY_MAXIDX
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 63
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of number of keys for manual jogging.
+  example: []
+  syntax:
+    content: public const short HLI_KEY_MAXIDX = 11
+    return:
+      type: System.Int16
+    content.vb: Public Const HLI_KEY_MAXIDX As Short = 11
+- uid: TwinSharp.CNC.Constants.HLI_HW_MAXIDX
+  commentId: F:TwinSharp.CNC.Constants.HLI_HW_MAXIDX
+  id: HLI_HW_MAXIDX
+  parent: TwinSharp.CNC.Constants
+  langs:
+  - csharp
+  - vb
+  name: HLI_HW_MAXIDX
+  nameWithType: Constants.HLI_HW_MAXIDX
+  fullName: TwinSharp.CNC.Constants.HLI_HW_MAXIDX
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Constants.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_HW_MAXIDX
+    path: ../TwinSharp/CNC/Constants.cs
+    startLine: 66
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Maximum count of number of hand wheels for manual jogging.
+  example: []
+  syntax:
+    content: public const short HLI_HW_MAXIDX = 5
+    return:
+      type: System.Int16
+    content.vb: Public Const HLI_HW_MAXIDX As Short = 5
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short

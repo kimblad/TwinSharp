@@ -1,0 +1,534 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  commentId: T:TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  id: SOLLKONT_VISU_CH_DATA_STD
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.BlockNumber
+  - TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.ChannelNumber
+  - TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleCenterPoint
+  - TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleRadius
+  - TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.FileOffset
+  - TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.GFunction
+  langs:
+  - csharp
+  - vb
+  name: SOLLKONT_VISU_CH_DATA_STD
+  nameWithType: SOLLKONT_VISU_CH_DATA_STD
+  fullName: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SOLLKONT_VISU_CH_DATA_STD
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 35
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Struct that contains standard visualisation data.
+  example: []
+  syntax:
+    content: public struct SOLLKONT_VISU_CH_DATA_STD
+    content.vb: Public Structure SOLLKONT_VISU_CH_DATA_STD
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.BlockNumber
+  commentId: F:TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.BlockNumber
+  id: BlockNumber
+  parent: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  langs:
+  - csharp
+  - vb
+  name: BlockNumber
+  nameWithType: SOLLKONT_VISU_CH_DATA_STD.BlockNumber
+  fullName: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.BlockNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockNumber
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 38
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Block number in the NC program
+  example: []
+  syntax:
+    content: public int BlockNumber
+    return:
+      type: System.Int32
+    content.vb: Public BlockNumber As Integer
+- uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.FileOffset
+  commentId: F:TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.FileOffset
+  id: FileOffset
+  parent: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  langs:
+  - csharp
+  - vb
+  name: FileOffset
+  nameWithType: SOLLKONT_VISU_CH_DATA_STD.FileOffset
+  fullName: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.FileOffset
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileOffset
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 45
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    File offset from file start in bytes.
+
+    >= 0 : valid data offset when program is active.
+
+    == -1 : Offset not valid since no program is active
+  example: []
+  syntax:
+    content: public int FileOffset
+    return:
+      type: System.Int32
+    content.vb: Public FileOffset As Integer
+- uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.ChannelNumber
+  commentId: F:TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.ChannelNumber
+  id: ChannelNumber
+  parent: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  langs:
+  - csharp
+  - vb
+  name: ChannelNumber
+  nameWithType: SOLLKONT_VISU_CH_DATA_STD.ChannelNumber
+  fullName: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.ChannelNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ChannelNumber
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 48
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: ChannelNumber
+  example: []
+  syntax:
+    content: public ushort ChannelNumber
+    return:
+      type: System.UInt16
+    content.vb: Public ChannelNumber As UShort
+- uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.GFunction
+  commentId: F:TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.GFunction
+  id: GFunction
+  parent: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  langs:
+  - csharp
+  - vb
+  name: GFunction
+  nameWithType: SOLLKONT_VISU_CH_DATA_STD.GFunction
+  fullName: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.GFunction
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GFunction
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 55
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    G Function.
+
+    >= 0 : G function : G0, G1, G2, G3, G61 for polynomial blocks.
+
+    == -1 : no G function active
+  example: []
+  syntax:
+    content: public short GFunction
+    return:
+      type: System.Int16
+    content.vb: Public GFunction As Short
+- uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleRadius
+  commentId: F:TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleRadius
+  id: CircleRadius
+  parent: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  langs:
+  - csharp
+  - vb
+  name: CircleRadius
+  nameWithType: SOLLKONT_VISU_CH_DATA_STD.CircleRadius
+  fullName: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleRadius
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CircleRadius
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 60
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Radius in [0.1 µm] for G2 / G3 blocks.
+  example: []
+  syntax:
+    content: public uint CircleRadius
+    return:
+      type: System.UInt32
+    content.vb: Public CircleRadius As UInteger
+- uid: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleCenterPoint
+  commentId: F:TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleCenterPoint
+  id: CircleCenterPoint
+  parent: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
+  langs:
+  - csharp
+  - vb
+  name: CircleCenterPoint
+  nameWithType: SOLLKONT_VISU_CH_DATA_STD.CircleCenterPoint
+  fullName: TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.CircleCenterPoint
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CircleCenterPoint
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 65
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Absolute position of circle centre point in the active machining plane (G17,G18,G19) in [0.1 µm] for G2 / G3 blocks (as of CNC Build V2.10.1032.03 and V2.10.1505.05)
+  example: []
+  syntax:
+    content: public double[] CircleCenterPoint
+    return:
+      type: System.Double[]
+    content.vb: Public CircleCenterPoint As Double()
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Double[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )

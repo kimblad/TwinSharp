@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_DYNPL_STATE
+  commentId: T:TwinSharp.CNC.HLI_DYNPL_STATE
+  id: HLI_DYNPL_STATE
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVATION
+  - TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE
+  - TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKE
+  - TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKING
+  - TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_INACTIVE
+  langs:
+  - csharp
+  - vb
+  name: HLI_DYNPL_STATE
+  nameWithType: HLI_DYNPL_STATE
+  fullName: TwinSharp.CNC.HLI_DYNPL_STATE
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/DynamicPositionLimitation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_DYNPL_STATE
+    path: ../TwinSharp/CNC/DynamicPositionLimitation.cs
+    startLine: 75
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Enumeration of the states of the dynamic position limitation.
+  example: []
+  syntax:
+    content: public enum HLI_DYNPL_STATE
+    content.vb: Public Enum HLI_DYNPL_STATE
+- uid: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_INACTIVE
+  commentId: F:TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_INACTIVE
+  id: HLI_DYNPL_STATE_INACTIVE
+  parent: TwinSharp.CNC.HLI_DYNPL_STATE
+  langs:
+  - csharp
+  - vb
+  name: HLI_DYNPL_STATE_INACTIVE
+  nameWithType: HLI_DYNPL_STATE.HLI_DYNPL_STATE_INACTIVE
+  fullName: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_INACTIVE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DynamicPositionLimitation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_DYNPL_STATE_INACTIVE
+    path: ../TwinSharp/CNC/DynamicPositionLimitation.cs
+    startLine: 78
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: The position limit is not active.
+  example: []
+  syntax:
+    content: HLI_DYNPL_STATE_INACTIVE = 0
+    return:
+      type: TwinSharp.CNC.HLI_DYNPL_STATE
+- uid: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVATION
+  commentId: F:TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVATION
+  id: HLI_DYNPL_STATE_ACTIVATION
+  parent: TwinSharp.CNC.HLI_DYNPL_STATE
+  langs:
+  - csharp
+  - vb
+  name: HLI_DYNPL_STATE_ACTIVATION
+  nameWithType: HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVATION
+  fullName: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVATION
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DynamicPositionLimitation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_DYNPL_STATE_ACTIVATION
+    path: ../TwinSharp/CNC/DynamicPositionLimitation.cs
+    startLine: 81
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: This is the transition state after commanding the control unit until monitoring of axis position to the limit is activated.
+  example: []
+  syntax:
+    content: HLI_DYNPL_STATE_ACTIVATION = 1
+    return:
+      type: TwinSharp.CNC.HLI_DYNPL_STATE
+- uid: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE
+  commentId: F:TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE
+  id: HLI_DYNPL_STATE_ACTIVE
+  parent: TwinSharp.CNC.HLI_DYNPL_STATE
+  langs:
+  - csharp
+  - vb
+  name: HLI_DYNPL_STATE_ACTIVE
+  nameWithType: HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE
+  fullName: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DynamicPositionLimitation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_DYNPL_STATE_ACTIVE
+    path: ../TwinSharp/CNC/DynamicPositionLimitation.cs
+    startLine: 84
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: The position limit is active and the axis position limit is monitored.
+  example: []
+  syntax:
+    content: HLI_DYNPL_STATE_ACTIVE = 2
+    return:
+      type: TwinSharp.CNC.HLI_DYNPL_STATE
+- uid: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKING
+  commentId: F:TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKING
+  id: HLI_DYNPL_STATE_ACTIVE_BRAKING
+  parent: TwinSharp.CNC.HLI_DYNPL_STATE
+  langs:
+  - csharp
+  - vb
+  name: HLI_DYNPL_STATE_ACTIVE_BRAKING
+  nameWithType: HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKING
+  fullName: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKING
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DynamicPositionLimitation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_DYNPL_STATE_ACTIVE_BRAKING
+    path: ../TwinSharp/CNC/DynamicPositionLimitation.cs
+    startLine: 87
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: A braking operation was initiated down to standstill to prevent the axis from exceeding the position limit.
+  example: []
+  syntax:
+    content: HLI_DYNPL_STATE_ACTIVE_BRAKING = 3
+    return:
+      type: TwinSharp.CNC.HLI_DYNPL_STATE
+- uid: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKE
+  commentId: F:TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKE
+  id: HLI_DYNPL_STATE_ACTIVE_BRAKE
+  parent: TwinSharp.CNC.HLI_DYNPL_STATE
+  langs:
+  - csharp
+  - vb
+  name: HLI_DYNPL_STATE_ACTIVE_BRAKE
+  nameWithType: HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKE
+  fullName: TwinSharp.CNC.HLI_DYNPL_STATE.HLI_DYNPL_STATE_ACTIVE_BRAKE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DynamicPositionLimitation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_DYNPL_STATE_ACTIVE_BRAKE
+    path: ../TwinSharp/CNC/DynamicPositionLimitation.cs
+    startLine: 90
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Deceleration process to maintain the position limit completed, axis is at standstill.
+  example: []
+  syntax:
+    content: HLI_DYNPL_STATE_ACTIVE_BRAKE = 4
+    return:
+      type: TwinSharp.CNC.HLI_DYNPL_STATE
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.HLI_DYNPL_STATE
+  commentId: T:TwinSharp.CNC.HLI_DYNPL_STATE
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_DYNPL_STATE.html
+  name: HLI_DYNPL_STATE
+  nameWithType: HLI_DYNPL_STATE
+  fullName: TwinSharp.CNC.HLI_DYNPL_STATE

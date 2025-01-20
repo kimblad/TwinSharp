@@ -1,0 +1,465 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.Encoder
+  commentId: T:TwinSharp.NC.Encoder
+  id: Encoder
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.Encoder.Functions
+  - TwinSharp.NC.Encoder.Parameters
+  - TwinSharp.NC.Encoder.State
+  langs:
+  - csharp
+  - vb
+  name: Encoder
+  nameWithType: Encoder
+  fullName: TwinSharp.NC.Encoder
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/NC/Encoder.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Encoder
+    path: ../TwinSharp/NC/Encoder.cs
+    startLine: 13
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The Encoder class represents an encoder device and provides access to its functions, parameters, and state.
+
+    It uses an AdsClient to communicate with the encoder via the TwinCAT ADS protocol.
+
+    The class contains three main properties:
+
+    - Functions: Provides methods to interact with and control the encoder.
+
+    - Parameters: Allows reading and writing various encoder settings.
+
+    - State: Provides access to various encoder states and properties.
+  example: []
+  syntax:
+    content: public class Encoder
+    content.vb: Public Class Encoder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.NC.Encoder.Functions
+  commentId: P:TwinSharp.NC.Encoder.Functions
+  id: Functions
+  parent: TwinSharp.NC.Encoder
+  langs:
+  - csharp
+  - vb
+  name: Functions
+  nameWithType: Encoder.Functions
+  fullName: TwinSharp.NC.Encoder.Functions
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/Encoder.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Functions
+    path: ../TwinSharp/NC/Encoder.cs
+    startLine: 27
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The EncoderFunctions class provides methods to interact with and control encoder devices via the TwinCAT ADS protocol.
+
+    It includes functionalities to set and reinitialize the actual position of the encoder, activate and deactivate touch probes and external latches,
+
+    and set external latch events. The class uses an AdsClient to communicate with the encoder and sends commands using specific index groups and offsets.
+  example: []
+  syntax:
+    content: public EncoderFunctions Functions { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.EncoderFunctions
+    content.vb: Public Property Functions As EncoderFunctions
+  overload: TwinSharp.NC.Encoder.Functions*
+- uid: TwinSharp.NC.Encoder.Parameters
+  commentId: P:TwinSharp.NC.Encoder.Parameters
+  id: Parameters
+  parent: TwinSharp.NC.Encoder
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: Encoder.Parameters
+  fullName: TwinSharp.NC.Encoder.Parameters
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/Encoder.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Parameters
+    path: ../TwinSharp/NC/Encoder.cs
+    startLine: 35
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The EncoderParameters class provides an interface to interact with encoder parameters via an AdsClient.
+
+    It allows reading and writing various encoder settings such as ID, name, type, scaling factor, position offset,
+
+    count direction, modulo factor, mode, soft end monitoring, soft end positions, evaluation direction, and filter times.
+
+    The class uses an AdsClient to communicate with the encoder and retrieve or update these parameters.
+  example: []
+  syntax:
+    content: public EncoderParameters Parameters { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.EncoderParameters
+    content.vb: Public Property Parameters As EncoderParameters
+  overload: TwinSharp.NC.Encoder.Parameters*
+- uid: TwinSharp.NC.Encoder.State
+  commentId: P:TwinSharp.NC.Encoder.State
+  id: State
+  parent: TwinSharp.NC.Encoder
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: Encoder.State
+  fullName: TwinSharp.NC.Encoder.State
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/Encoder.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: State
+    path: ../TwinSharp/NC/Encoder.cs
+    startLine: 43
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The EncoderState class provides access to various encoder states and properties 
+
+    through an AdsClient instance. It allows reading and writing of encoder-related 
+
+    data such as error codes, actual positions, velocities, accelerations, and other 
+
+    relevant metrics.
+  example: []
+  syntax:
+    content: public EncoderState State { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.EncoderState
+    content.vb: Public Property State As EncoderState
+  overload: TwinSharp.NC.Encoder.State*
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.NC.Encoder.Functions*
+  commentId: Overload:TwinSharp.NC.Encoder.Functions
+  href: TwinSharp.NC.Encoder.html#TwinSharp_NC_Encoder_Functions
+  name: Functions
+  nameWithType: Encoder.Functions
+  fullName: TwinSharp.NC.Encoder.Functions
+- uid: TwinSharp.NC.EncoderFunctions
+  commentId: T:TwinSharp.NC.EncoderFunctions
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.EncoderFunctions.html
+  name: EncoderFunctions
+  nameWithType: EncoderFunctions
+  fullName: TwinSharp.NC.EncoderFunctions
+- uid: TwinSharp.NC.Encoder.Parameters*
+  commentId: Overload:TwinSharp.NC.Encoder.Parameters
+  href: TwinSharp.NC.Encoder.html#TwinSharp_NC_Encoder_Parameters
+  name: Parameters
+  nameWithType: Encoder.Parameters
+  fullName: TwinSharp.NC.Encoder.Parameters
+- uid: TwinSharp.NC.EncoderParameters
+  commentId: T:TwinSharp.NC.EncoderParameters
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.EncoderParameters.html
+  name: EncoderParameters
+  nameWithType: EncoderParameters
+  fullName: TwinSharp.NC.EncoderParameters
+- uid: TwinSharp.NC.Encoder.State*
+  commentId: Overload:TwinSharp.NC.Encoder.State
+  href: TwinSharp.NC.Encoder.html#TwinSharp_NC_Encoder_State
+  name: State
+  nameWithType: Encoder.State
+  fullName: TwinSharp.NC.Encoder.State
+- uid: TwinSharp.NC.EncoderState
+  commentId: T:TwinSharp.NC.EncoderState
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.EncoderState.html
+  name: EncoderState
+  nameWithType: EncoderState
+  fullName: TwinSharp.NC.EncoderState

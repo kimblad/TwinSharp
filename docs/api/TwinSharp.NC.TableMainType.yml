@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.TableMainType
+  commentId: T:TwinSharp.NC.TableMainType
+  id: TableMainType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.TableMainType.CamPlate
+  - TwinSharp.NC.TableMainType.CharacteristicCurve
+  - TwinSharp.NC.TableMainType.MotionFunction
+  langs:
+  - csharp
+  - vb
+  name: TableMainType
+  nameWithType: TableMainType
+  fullName: TwinSharp.NC.TableMainType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TableMainType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 736
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of main tables that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum TableMainType
+    content.vb: Public Enum TableMainType
+- uid: TwinSharp.NC.TableMainType.CamPlate
+  commentId: F:TwinSharp.NC.TableMainType.CamPlate
+  id: CamPlate
+  parent: TwinSharp.NC.TableMainType
+  langs:
+  - csharp
+  - vb
+  name: CamPlate
+  nameWithType: TableMainType.CamPlate
+  fullName: TwinSharp.NC.TableMainType.CamPlate
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CamPlate
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 739
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: (n*m) Cam plate tables (Camming)
+  example: []
+  syntax:
+    content: CamPlate = 1
+    return:
+      type: TwinSharp.NC.TableMainType
+- uid: TwinSharp.NC.TableMainType.CharacteristicCurve
+  commentId: F:TwinSharp.NC.TableMainType.CharacteristicCurve
+  id: CharacteristicCurve
+  parent: TwinSharp.NC.TableMainType
+  langs:
+  - csharp
+  - vb
+  name: CharacteristicCurve
+  nameWithType: TableMainType.CharacteristicCurve
+  fullName: TwinSharp.NC.TableMainType.CharacteristicCurve
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CharacteristicCurve
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 742
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: (n*m) Characteristic curves tables (Characteristics) (e.g. hydraulic valve characteristic curves). Only non-cyclic table sub-types (1, 3) are supported!
+  example: []
+  syntax:
+    content: CharacteristicCurve = 10
+    return:
+      type: TwinSharp.NC.TableMainType
+- uid: TwinSharp.NC.TableMainType.MotionFunction
+  commentId: F:TwinSharp.NC.TableMainType.MotionFunction
+  id: MotionFunction
+  parent: TwinSharp.NC.TableMainType
+  langs:
+  - csharp
+  - vb
+  name: MotionFunction
+  nameWithType: TableMainType.MotionFunction
+  fullName: TwinSharp.NC.TableMainType.MotionFunction
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MotionFunction
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 745
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: (n*m) "Motion Function" tables (MF). Only non-equidistant table sub-types (3, 4) are supported!
+  example: []
+  syntax:
+    content: MotionFunction = 16
+    return:
+      type: TwinSharp.NC.TableMainType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.TableMainType
+  commentId: T:TwinSharp.NC.TableMainType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.TableMainType.html
+  name: TableMainType
+  nameWithType: TableMainType
+  fullName: TwinSharp.NC.TableMainType

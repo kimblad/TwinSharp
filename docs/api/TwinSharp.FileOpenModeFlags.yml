@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.FileOpenModeFlags
+  commentId: T:TwinSharp.FileOpenModeFlags
+  id: FileOpenModeFlags
+  parent: TwinSharp
+  children:
+  - TwinSharp.FileOpenModeFlags.FOPEN_MODEAPPEND
+  - TwinSharp.FileOpenModeFlags.FOPEN_MODEBINARY
+  - TwinSharp.FileOpenModeFlags.FOPEN_MODEPLUS
+  - TwinSharp.FileOpenModeFlags.FOPEN_MODEREAD
+  - TwinSharp.FileOpenModeFlags.FOPEN_MODETEXT
+  - TwinSharp.FileOpenModeFlags.FOPEN_MODEWRITE
+  langs:
+  - csharp
+  - vb
+  name: FileOpenModeFlags
+  nameWithType: FileOpenModeFlags
+  fullName: TwinSharp.FileOpenModeFlags
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileOpenModeFlags
+    path: ../TwinSharp/Enums.cs
+    startLine: 116
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: The FileOpenModeFlags enum defines various modes for opening files, each represented by a unique flag. These flags can be combined using bitwise operations to specify multiple modes simultaneously.
+  example: []
+  syntax:
+    content: public enum FileOpenModeFlags
+    content.vb: Public Enum FileOpenModeFlags
+- uid: TwinSharp.FileOpenModeFlags.FOPEN_MODEREAD
+  commentId: F:TwinSharp.FileOpenModeFlags.FOPEN_MODEREAD
+  id: FOPEN_MODEREAD
+  parent: TwinSharp.FileOpenModeFlags
+  langs:
+  - csharp
+  - vb
+  name: FOPEN_MODEREAD
+  nameWithType: FileOpenModeFlags.FOPEN_MODEREAD
+  fullName: TwinSharp.FileOpenModeFlags.FOPEN_MODEREAD
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FOPEN_MODEREAD
+    path: ../TwinSharp/Enums.cs
+    startLine: 121
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: "\"r\": Opens for reading. If the file does not exist or cannot be found, the call fails."
+  example: []
+  syntax:
+    content: FOPEN_MODEREAD = 1
+    return:
+      type: TwinSharp.FileOpenModeFlags
+- uid: TwinSharp.FileOpenModeFlags.FOPEN_MODEWRITE
+  commentId: F:TwinSharp.FileOpenModeFlags.FOPEN_MODEWRITE
+  id: FOPEN_MODEWRITE
+  parent: TwinSharp.FileOpenModeFlags
+  langs:
+  - csharp
+  - vb
+  name: FOPEN_MODEWRITE
+  nameWithType: FileOpenModeFlags.FOPEN_MODEWRITE
+  fullName: TwinSharp.FileOpenModeFlags.FOPEN_MODEWRITE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FOPEN_MODEWRITE
+    path: ../TwinSharp/Enums.cs
+    startLine: 126
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: "\"w\": Opens an empty file for writing. If the given file exists, its contents are destroyed."
+  example: []
+  syntax:
+    content: FOPEN_MODEWRITE = 2
+    return:
+      type: TwinSharp.FileOpenModeFlags
+- uid: TwinSharp.FileOpenModeFlags.FOPEN_MODEAPPEND
+  commentId: F:TwinSharp.FileOpenModeFlags.FOPEN_MODEAPPEND
+  id: FOPEN_MODEAPPEND
+  parent: TwinSharp.FileOpenModeFlags
+  langs:
+  - csharp
+  - vb
+  name: FOPEN_MODEAPPEND
+  nameWithType: FileOpenModeFlags.FOPEN_MODEAPPEND
+  fullName: TwinSharp.FileOpenModeFlags.FOPEN_MODEAPPEND
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FOPEN_MODEAPPEND
+    path: ../TwinSharp/Enums.cs
+    startLine: 131
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: "\"a\": Opens for writing at the end of the file (appending) without removing the EOF marker before writing new data to the file; creates the file first if it doesnot exist."
+  example: []
+  syntax:
+    content: FOPEN_MODEAPPEND = 4
+    return:
+      type: TwinSharp.FileOpenModeFlags
+- uid: TwinSharp.FileOpenModeFlags.FOPEN_MODEPLUS
+  commentId: F:TwinSharp.FileOpenModeFlags.FOPEN_MODEPLUS
+  id: FOPEN_MODEPLUS
+  parent: TwinSharp.FileOpenModeFlags
+  langs:
+  - csharp
+  - vb
+  name: FOPEN_MODEPLUS
+  nameWithType: FileOpenModeFlags.FOPEN_MODEPLUS
+  fullName: TwinSharp.FileOpenModeFlags.FOPEN_MODEPLUS
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FOPEN_MODEPLUS
+    path: ../TwinSharp/Enums.cs
+    startLine: 136
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: "\"+\": Opens for both reading and writing. (The file must exist.)"
+  example: []
+  syntax:
+    content: FOPEN_MODEPLUS = 8
+    return:
+      type: TwinSharp.FileOpenModeFlags
+- uid: TwinSharp.FileOpenModeFlags.FOPEN_MODEBINARY
+  commentId: F:TwinSharp.FileOpenModeFlags.FOPEN_MODEBINARY
+  id: FOPEN_MODEBINARY
+  parent: TwinSharp.FileOpenModeFlags
+  langs:
+  - csharp
+  - vb
+  name: FOPEN_MODEBINARY
+  nameWithType: FileOpenModeFlags.FOPEN_MODEBINARY
+  fullName: TwinSharp.FileOpenModeFlags.FOPEN_MODEBINARY
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FOPEN_MODEBINARY
+    path: ../TwinSharp/Enums.cs
+    startLine: 141
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: "\"b\": Open in binary (untranslated) mode."
+  example: []
+  syntax:
+    content: FOPEN_MODEBINARY = 16
+    return:
+      type: TwinSharp.FileOpenModeFlags
+- uid: TwinSharp.FileOpenModeFlags.FOPEN_MODETEXT
+  commentId: F:TwinSharp.FileOpenModeFlags.FOPEN_MODETEXT
+  id: FOPEN_MODETEXT
+  parent: TwinSharp.FileOpenModeFlags
+  langs:
+  - csharp
+  - vb
+  name: FOPEN_MODETEXT
+  nameWithType: FileOpenModeFlags.FOPEN_MODETEXT
+  fullName: TwinSharp.FileOpenModeFlags.FOPEN_MODETEXT
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FOPEN_MODETEXT
+    path: ../TwinSharp/Enums.cs
+    startLine: 146
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: "\"t\": Open in text (translated) mode."
+  example: []
+  syntax:
+    content: FOPEN_MODETEXT = 32
+    return:
+      type: TwinSharp.FileOpenModeFlags
+references:
+- uid: TwinSharp
+  commentId: N:TwinSharp
+  href: TwinSharp.html
+  name: TwinSharp
+  nameWithType: TwinSharp
+  fullName: TwinSharp
+- uid: TwinSharp.FileOpenModeFlags
+  commentId: T:TwinSharp.FileOpenModeFlags
+  parent: TwinSharp
+  href: TwinSharp.FileOpenModeFlags.html
+  name: FileOpenModeFlags
+  nameWithType: FileOpenModeFlags
+  fullName: TwinSharp.FileOpenModeFlags

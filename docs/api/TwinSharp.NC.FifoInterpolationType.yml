@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.FifoInterpolationType
+  commentId: T:TwinSharp.NC.FifoInterpolationType
+  id: FifoInterpolationType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_4POINT
+  - TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_CUBICSPLINE
+  - TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_LINEAR
+  langs:
+  - csharp
+  - vb
+  name: FifoInterpolationType
+  nameWithType: FifoInterpolationType
+  fullName: TwinSharp.NC.FifoInterpolationType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FifoInterpolationType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 310
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different ways that the TwinCAT NC FIFO can interpolate between supplied points.
+  example: []
+  syntax:
+    content: public enum FifoInterpolationType
+    content.vb: Public Enum FifoInterpolationType
+- uid: TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_LINEAR
+  commentId: F:TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_LINEAR
+  id: INTERPOLATIONTYPE_LINEAR
+  parent: TwinSharp.NC.FifoInterpolationType
+  langs:
+  - csharp
+  - vb
+  name: INTERPOLATIONTYPE_LINEAR
+  nameWithType: FifoInterpolationType.INTERPOLATIONTYPE_LINEAR
+  fullName: TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_LINEAR
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: INTERPOLATIONTYPE_LINEAR
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 313
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Linear interpolation between points.
+  example: []
+  syntax:
+    content: INTERPOLATIONTYPE_LINEAR = 0
+    return:
+      type: TwinSharp.NC.FifoInterpolationType
+- uid: TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_4POINT
+  commentId: F:TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_4POINT
+  id: INTERPOLATIONTYPE_4POINT
+  parent: TwinSharp.NC.FifoInterpolationType
+  langs:
+  - csharp
+  - vb
+  name: INTERPOLATIONTYPE_4POINT
+  nameWithType: FifoInterpolationType.INTERPOLATIONTYPE_4POINT
+  fullName: TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_4POINT
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: INTERPOLATIONTYPE_4POINT
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 316
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: 4 point interpolation.
+  example: []
+  syntax:
+    content: INTERPOLATIONTYPE_4POINT = 1
+    return:
+      type: TwinSharp.NC.FifoInterpolationType
+- uid: TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_CUBICSPLINE
+  commentId: F:TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_CUBICSPLINE
+  id: INTERPOLATIONTYPE_CUBICSPLINE
+  parent: TwinSharp.NC.FifoInterpolationType
+  langs:
+  - csharp
+  - vb
+  name: INTERPOLATIONTYPE_CUBICSPLINE
+  nameWithType: FifoInterpolationType.INTERPOLATIONTYPE_CUBICSPLINE
+  fullName: TwinSharp.NC.FifoInterpolationType.INTERPOLATIONTYPE_CUBICSPLINE
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: INTERPOLATIONTYPE_CUBICSPLINE
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 319
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Cubic spline interpolation.
+  example: []
+  syntax:
+    content: INTERPOLATIONTYPE_CUBICSPLINE = 4
+    return:
+      type: TwinSharp.NC.FifoInterpolationType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.FifoInterpolationType
+  commentId: T:TwinSharp.NC.FifoInterpolationType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.FifoInterpolationType.html
+  name: FifoInterpolationType
+  nameWithType: FifoInterpolationType
+  fullName: TwinSharp.NC.FifoInterpolationType

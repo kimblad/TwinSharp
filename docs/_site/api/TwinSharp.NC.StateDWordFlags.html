@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum StateDWordFlags | TwinSharp Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum StateDWordFlags | TwinSharp Documentation ">
+      
+      <meta name="description" content="The StateDWord is a 32 bit data word in the axis interface NC-&amp;gt;PLC.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_NC_StateDWordFlags.md&amp;value=---%0Auid%3A%20TwinSharp.NC.StateDWordFlags%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.NC.StateDWordFlags">
+
+
+
+
+  <h1 id="TwinSharp_NC_StateDWordFlags" data-uid="TwinSharp.NC.StateDWordFlags" class="text-break">
+Enum StateDWordFlags  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Enums.cs/#L850"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.NC.html">NC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The StateDWord is a 32 bit data word in the axis interface NC-&gt;PLC.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum StateDWordFlags : uint</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="TwinSharp_NC_StateDWordFlags_CamDataQueued"><code>CamDataQueued = 4194304</code></dt>
+    <dd><p>CAM data (only MF) are queued for  &quot;Online Change&quot; and waiting for activation</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_CamScalingPending"><code>CamScalingPending = 8388608</code></dt>
+    <dd><p>CAM scaling are queued for  &quot;Online Change&quot; and waiting for activation</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_CamTableQueued"><code>CamTableQueued = 2097152</code></dt>
+    <dd><p>CAM table is queued for  &quot;Online Change&quot; and waiting for activation</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_CmdBuffered"><code>CmdBuffered = 16777216</code></dt>
+    <dd><p>Following command is queued in then command buffer (s. Buffer Mode)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_Compensating"><code>Compensating = 8192</code></dt>
+    <dd><p>Section compensation passive[0]/active[1] (s. &quot;MC_MoveSuperImposed&quot;)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_ConstantVelocity"><code>ConstantVelocity = 4096</code></dt>
+    <dd><p>Axis has reached its constant velocity or rotary speed</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_ContinuousMotion"><code>ContinuousMotion = 524288</code></dt>
+    <dd><p>Axis has target position (±) endless</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_ControlLoopClosed"><code>ControlLoopClosed = 1048576</code></dt>
+    <dd><p>Axis is ready for operation and axis control loop is closed (e.g. position control)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_DriveDeviceError"><code>DriveDeviceError = 268435456</code></dt>
+    <dd><p>Hardware drive device error (no warning), interpretation only possible when drive is data exchanging, e.g. EtherCAT &quot;OP&quot;-state</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_Error"><code>Error = 2147483648</code></dt>
+    <dd><p>Axis is in a fault state</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_ErrorPropagationDelayed"><code>ErrorPropagationDelayed = 64</code></dt>
+    <dd><p>Axis signals an error pre warning (from TC 2.11)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_ExtSetPointGenEnabled"><code>ExtSetPointGenEnabled = 16384</code></dt>
+    <dd><p>External setpoint generator enabled</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_ExternalLatchValid"><code>ExternalLatchValid = 65536</code></dt>
+    <dd><p>External latch value or sensing switch has become valid</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_HasBeenStopped"><code>HasBeenStopped = 128</code></dt>
+    <dd><p>Axis has been stopped or is presently executing a stop</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_HasJob"><code>HasJob = 256</code></dt>
+    <dd><p>Axis has instructions, is carrying instructions out</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_Homed"><code>Homed = 2</code></dt>
+    <dd><p>Axis has been referenced/ homed (&quot;Axis calibrated&quot;)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_HomingBusy"><code>HomingBusy = 2048</code></dt>
+    <dd><p>Axis referenced (&quot;Axis being calibrated&quot;)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_InPositionArea"><code>InPositionArea = 8</code></dt>
+    <dd><p>Axis is in position window (physical feedback)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_InTargetPosition"><code>InTargetPosition = 16</code></dt>
+    <dd><p>Axis is at target position (PEH) (physical feedback)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_IoDataInvalid"><code>IoDataInvalid = 1073741824</code></dt>
+    <dd><p>IO data invalid (e.g. 'WcState' or 'CdlState')</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_MotionCommandsLocked"><code>MotionCommandsLocked = 536870912</code></dt>
+    <dd><p>Axis is locked for motion commands (TcMc2)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_NegativeDirection"><code>NegativeDirection = 1024</code></dt>
+    <dd><p>Axis moving to logically smaller values</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_NewTargetPosition"><code>NewTargetPosition = 131072</code></dt>
+    <dd><p>Axis has a new target position or a new velocity</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_None"><code>None = 0</code></dt>
+    <dd><p>None.</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_NotImplementedYet"><code>NotImplementedYet = 32768</code></dt>
+    <dd><p>Operating mode not yet executed (Busy). Not implemented yet!</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_NotImplementedYet2"><code>NotImplementedYet2 = 262144</code></dt>
+    <dd><p>Axis is not at target position or cannot reach the target position (e.g. stop).Not implemented yet!</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_NotMoving"><code>NotMoving = 4</code></dt>
+    <dd><p>Axis is logically stationary (&quot;Axis not moving&quot;)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_PTPmode"><code>PTPmode = 33554432</code></dt>
+    <dd><p>Axis in PTP mode (no slave, no NCI axis, no FIFO axis) (from TC 2.10 Build 1326)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_PositiveDirection"><code>PositiveDirection = 512</code></dt>
+    <dd><p>Axis moving to logically larger values</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_Protected"><code>Protected = 32</code></dt>
+    <dd><p>Axis is in a protected operating mode (e.g. as a slave axis)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_ReadyForOperation"><code>ReadyForOperation = 1</code></dt>
+    <dd><p>Axis is ready for operation</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_SoftLimitMaxExceeded"><code>SoftLimitMaxExceeded = 134217728</code></dt>
+    <dd><p>Position software limit switch maximum is exceeded (from TC 2.10 Build 1327)</p>
+</dd>
+    <dt id="TwinSharp_NC_StateDWordFlags_SoftLimitMinExceeded"><code>SoftLimitMinExceeded = 67108864</code></dt>
+    <dd><p>Position software limit switch minimum is exceeded (from TC 2.10 Build 1327)</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/Enums.cs/#L850" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

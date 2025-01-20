@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace TwinSharp.CNC | TwinSharp Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace TwinSharp.CNC | TwinSharp Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.CNC">
+
+  <h1 id="TwinSharp_CNC" data-uid="TwinSharp.CNC" class="text-break">Namespace TwinSharp.CNC</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisStatus.html">AxisStatus</a></dt>
+      <dd><p>Axis status as taken from HLI. <a href="https://infosys.beckhoff.com/content/1033/tf5200_hli_interface/174749195.html?id=8719845080216701702">https://infosys.beckhoff.com/content/1033/tf5200_hli_interface/174749195.html?id=8719845080216701702</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisStatusInChannel.html">AxisStatusInChannel</a></dt>
+      <dd><p>If an axis belongs to a channel, this class describes the status of that axis in that channel.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisStatusInChannelAdresses.html">AxisStatusInChannelAdresses</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.BackwardsOnPath.html">BackwardsOnPath</a></dt>
+      <dd><p>The function for forward/backward motion on the path permits backward motion along the originally programmed path by means of a real-time signal when the NC program is active. Backward motion is terminated by resetting the real-time signal. Forward motion is then resumed.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.BlockSearch.html">BlockSearch</a></dt>
+      <dd><p>The operator can start machining at what is called the continuation position at any point in the program. After a program is interrupted (e.g. tool breakage), this is a quick method to reactivate machining at the point of interruption.
+The continuation position can be defined using a number of different block search types(file offset, block counter, block number, etc.).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.CNC.html">CNC</a></dt>
+      <dd><p>Represents the TwinCAT CNC system. This class provides access to the CNC's platform, axes, and channels,</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.CncAxis.html">CncAxis</a></dt>
+      <dd><p>Represents a CNC axis and provides access to its status, external commanding, and dynamic position limitation.
+This class allows interaction with the axis to read its state, command movements, and set position limits.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.CncChannel.html">CncChannel</a></dt>
+      <dd><p>The CncChannel class represents a CNC channel and provides various functionalities to manage and control the CNC operations.
+It includes properties and methods to interact with different aspects of the CNC, such as operation modes, the interpolator, control commands, contour visualization, feed override, path motion, single block mode, block search, distance to go, data streaming, technology processes, error management, zero offsets, and manual operation.
+The class also provides properties to read the covered block motion percentage, covered path distance, line count of the NC program, and path feed rates.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.CncPlatform.html">CncPlatform</a></dt>
+      <dd><p>Platform data is data which cannot be assigned to a specific axis or a channel but has an effect on the entire NC control.
+It allows reading various properties of the CNC platform such as the tick counter, cycle time, version,
+number of axes, number of channels, and their respective maximum allowable counts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.Constants.html">Constants</a></dt>
+      <dd><p>Constants used in the TwinCAT CNC system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ContourVisualization.html">ContourVisualization</a></dt>
+      <dd><p>The controller can supply the axis positions for the graphic display of machine movements and visualise them by means of a user program or in the graphic user interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ControlCommands.html">ControlCommands</a></dt>
+      <dd><p>The ControlCommands class provides methods to interact with and control various aspects of the CNC.
+It allows for the activation and deactivation of skip modes, reading and setting the current and commanded channel modes,
+and enabling or disabling optional stops during NC program execution.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.DataStreaming.html">DataStreaming</a></dt>
+      <dd><p>With the incremental specification of motion commands (streaming), the CAD/CAM system or the PLC stipulates the next path segment to be travelled (or even several segments).
+In this way, motion information not previously specified can still be modified until shortly before entering the command.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.DeleteDistanceToGo.html">DeleteDistanceToGo</a></dt>
+      <dd><p>The &quot;Delete distance to go&quot; function interrupts the actual path motion and starts a short cut by straight line to the target position of next block. The distance to go of the current (interrupted) block is then deleted.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.DynamicPositionLimitation.html">DynamicPositionLimitation</a></dt>
+      <dd><p>Additionally needs to be activated in the startup parameters by using the keyword FCT_DYN_POS_LIMIT of the parameter P-STUP-00070</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ErrorCodes.html">ErrorCodes</a></dt>
+      <dd><p>Lists all the known error codes and descriptions that can be returned by the CNC system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ErrorManagement.html">ErrorManagement</a></dt>
+      <dd><p>The ErrorManagement class is responsible for handling error messages from the CNC.
+It subscribes to error notifications, reads error messages, and provides functions to acknowledge them. When an error is received, it triggers the ErrorRecieved event with detailed error information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ErrorRecievedEventArgs.html">ErrorRecievedEventArgs</a></dt>
+      <dd><p>Event arguments for when an error is received. Contains the error information and a description of the error.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.Extensions.html">Extensions</a></dt>
+      <dd><p>Contains extension methods for various classes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ExternalAxisCommanding.html">ExternalAxisCommanding</a></dt>
+      <dd><p>Specifying velocity or position command values by the PLC effective in addition to the interpolator. No monitoring takes place of transferred values for compliance with the dynamic axis limits. To activate this interface, set the parameter P-AXIS-00732 to 1.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.FeedOverride.html">FeedOverride</a></dt>
+      <dd><p>Provides properties to read and control the feed override of a channel.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.FeedOverrideAdresses.html">FeedOverrideAdresses</a></dt>
+      <dd><p>Contains the adresses of the feed override variables. Can be used to add device notifications, sum read commands etc.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HandWheelInc.html">HandWheelInc</a></dt>
+      <dd><p>Control unit to manage the count of handwheel increments for a handwheel index, including flow control of user data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs.html">HcodeNeedsAcknowledgeEventArgs</a></dt>
+      <dd><p>Event args supplied when a H code needs to be acknowledged.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HrParameters.html">HrParameters</a></dt>
+      <dd><p>Control unit to manage data for parameterising handwheel mode in manual mode,
+including flow control of user data</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.Interpolator.html">Interpolator</a></dt>
+      <dd><p>The Interpolator class provides an interface to interact with a CNC interpolator via an AdsClient.
+It allows reading and writing various properties related to the interpolator's state, such as axis count,
+moved path, velocity, tool life, and more. The class also provides addresses for device notifications
+and methods to retrieve interpolator addresses and properties.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.InterpolatorAdresses.html">InterpolatorAdresses</a></dt>
+      <dd><p>Adresses for the interpolator class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.JogParameters.html">JogParameters</a></dt>
+      <dd><p>Control unit to manage data for parameterising incremental jog mode in manual
+manual, including flow control of user data</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.Key.html">Key</a></dt>
+      <dd><p>Control unit to manage data to enforce a button press in manual mode, including
+flow control of user data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ManualOperation.html">ManualOperation</a></dt>
+      <dd><p>Class that contains settings and functions for the manual operation of a CNC machine.
+Such as keys, rapid keys and hand wheels.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs.html">McodeNeedsAcknowledgeEventArgs</a></dt>
+      <dd><p>Event args supplied when a M code needs to be acknowledged.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ObjectDescription.html">ObjectDescription</a></dt>
+      <dd><p>Represents the description of a TASK COM object.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.OperationModeAdresses.html">OperationModeAdresses</a></dt>
+      <dd><p>This class contains the adresses of objects used by the operation mode manager.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.OperationModeManager.html">OperationModeManager</a></dt>
+      <dd><p>The OperationModeManager class provides an interface to manage and control the operation modes and states of the CNC via an AdsClient.
+It allows setting and retrieving the current operation mode and state, resetting the operation mode, and managing the interface existence.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.RapidKey.html">RapidKey</a></dt>
+      <dd><p>During continuous jog mode it is possible to switch between the normal velocity and rapid traverse velocity.
+Here the rapid traverse is a button-specific feature and only becomes effective when the corresponding
+button is pushed and linked to an axis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.SingleBlock.html">SingleBlock</a></dt>
+      <dd><p>When single-step mode is active, the machine operator has the option to execute an NC program step by step.
+The operator releases every NC line one by one. Comment lines or comment blocks and skipped blocks are skipped.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.TechnologyProcesses.html">TechnologyProcesses</a></dt>
+      <dd><p>The TechnologyProcesses class manages the interaction with CNC technology units via an ADS client.
+It handles the acknowledgment of M and H codes, processes notifications from the CNC, and provides methods to read and acknowledge technology units.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.TipParameters.html">TipParameters</a></dt>
+      <dd><p>Control unit to manage data for parameterising continuous jog mode in manual
+mode, including flow control of user data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ZeroOffsets.html">ZeroOffsets</a></dt>
+      <dd><p>The ZeroOffsets class is responsible for handling zero offsets (G54 etc) in the CNC system.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_ADD_CMD_VALUE.html">HLI_ADD_CMD_VALUE</a></dt>
+      <dd><p>Specifying velocity or position command values by the SPS effective in addition to
+the interpolator.No monitoring takes place of transferred values for compliance
+with the dynamic axis limits. To activate this interface, set the parameter P- AXIS-00732 to 1.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_ERROR_MASKE.html">HLI_ERROR_MASKE</a></dt>
+      <dd><p>Error mask.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_ERROR_SATZ.html">HLI_ERROR_SATZ</a></dt>
+      <dd><p>This structure contains user data of an error message.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.html">HLI_ERROR_SATZ_KOPF</a></dt>
+      <dd><p>This structure contains user data of an error message.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_ERROR_SATZ_RUMPF.html">HLI_ERROR_SATZ_RUMPF</a></dt>
+      <dd><p>Body portion of that an error message.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_FB_ZEITANGABE.html">HLI_FB_ZEITANGABE</a></dt>
+      <dd><p>Time specification on output of an error message.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_ACTIVATION.html">HLI_HB_ACTIVATION</a></dt>
+      <dd><p>Control unit to manage data to activate a control element and assign it to an axis in manual mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_HR_PARAMETER.html">HLI_HB_HR_PARAMETER</a></dt>
+      <dd><p>Control unit to manage data for parameterising handwheel mode in manual mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_JOG_PARAMETER.html">HLI_HB_JOG_PARAMETER</a></dt>
+      <dd><p>Control unit to manage data for parameterising incremental jog mode in manual mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_KEY.html">HLI_HB_KEY</a></dt>
+      <dd><p>Control unit to manage data to enforce a button press in manual mode,</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_RAPID_KEY.html">HLI_HB_RAPID_KEY</a></dt>
+      <dd><p>Control unit to activate/deactivate rapid traverse mode by a normal button press in manual mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_TIP_PARAMETER.html">HLI_HB_TIP_PARAMETER</a></dt>
+      <dd><p>Control unit to manage data for parameterising continuous jog mode in manual mode</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_IMCM_MODE_STATE.html">HLI_IMCM_MODE_STATE</a></dt>
+      <dd><p>Struct for operation mode management that combines mode and state into one struct.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_INTF_VERSION_NAME.html">HLI_INTF_VERSION_NAME</a></dt>
+      <dd><p>Structure that contains the CNC version name.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_MODUL_NAME.html">HLI_MODUL_NAME</a></dt>
+      <dd><p>Structure that contains the name of one module.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_M_H_PROZESS.html">HLI_M_H_PROZESS</a></dt>
+      <dd><p>Further describes the TECHNO_UNIT_CH struct when it is a M or H function.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_PROC_TRANS_TO_MODE_STATE.html">HLI_PROC_TRANS_TO_MODE_STATE</a></dt>
+      <dd><p>Control unit to switch over the operation mode and poll the current state of operation mode management, including flow control of user data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_RUMPF_NC_PROG.html">HLI_RUMPF_NC_PROG</a></dt>
+      <dd><p>Error information in relation to NC program.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_WERT.html">HLI_WERT</a></dt>
+      <dd><p>Error value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_WERT_B.html">HLI_WERT_B</a></dt>
+      <dd><p>Additional error information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_WERT_B_DATA.html">HLI_WERT_B_DATA</a></dt>
+      <dd><p>Contains the actual data of an error message.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_WERT_DATA.html">HLI_WERT_DATA</a></dt>
+      <dd><p>Error value data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.SOLLKONT_VISU_ACHS_DATA_STD.html">SOLLKONT_VISU_ACHS_DATA_STD</a></dt>
+      <dd><p>Struct that contains axis-specific visualisation data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.html">SOLLKONT_VISU_CH_DATA_STD</a></dt>
+      <dd><p>Struct that contains standard visualisation data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.SOLLKONT_VISU_DATA_V0.html">SOLLKONT_VISU_DATA_V0</a></dt>
+      <dd><p>Version 0 format of visualisation data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.SOLLKONT_VISU_PDU.html">SOLLKONT_VISU_PDU</a></dt>
+      <dd><p>Container that hold visualization data in any of the 11 existing versions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.TECHNO_UNIT_CH.html">TECHNO_UNIT_CH</a></dt>
+      <dd><p>A technology control unit contains elements for commanding, acknowledging and transferring any required parameters</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisState.html">AxisState</a></dt>
+      <dd><p>Enumeration that lists the possible states of an axis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.BlockSearchType.html">BlockSearchType</a></dt>
+      <dd><p>The block search type defines the method used to define the continuation position in the NC program.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ChannelMode.html">ChannelMode</a></dt>
+      <dd><p>Enum for selection of a special channel mode such as syntax check or machining time calculation</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_DYNPL_STATE.html">HLI_DYNPL_STATE</a></dt>
+      <dd><p>Enumeration of the states of the dynamic position limitation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.OperationMode.html">OperationMode</a></dt>
+      <dd><p>The CNC distinguishes between five operating modes. It is possible to switch over between these operating modes via the operator-control and/or PLC interface, whereby only one operating mode may be active at any one time.
+This enumeration lists the operating modes that are defined.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.OperationState.html">OperationState</a></dt>
+      <dd><p>Enumeration of the possible states of an operation mode. Depending on the actually selected operation mode, these states may contain a further meaning.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.SkipModes.html">SkipModes</a></dt>
+      <dd><p>Enumeration that describes the skip mode at interpreter level. Skip levels active simultaneously are enabled by bitwise ORing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.TechnologyFunction.html">TechnologyFunction</a></dt>
+      <dd><p>Enum for the selection of a technology function (M/H/S/T)</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

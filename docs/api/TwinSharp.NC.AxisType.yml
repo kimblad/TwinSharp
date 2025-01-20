@@ -1,0 +1,292 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.AxisType
+  commentId: T:TwinSharp.NC.AxisType
+  id: AxisType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.AxisType.ContinousAxisServo
+  - TwinSharp.NC.AxisType.ContinousAxisStepper
+  - TwinSharp.NC.AxisType.DiscreteAxisHighLow
+  - TwinSharp.NC.AxisType.EncoderAxis
+  - TwinSharp.NC.AxisType.Hydraulic
+  - TwinSharp.NC.AxisType.NOT_DEFINED
+  - TwinSharp.NC.AxisType.Specific
+  - TwinSharp.NC.AxisType.TimeBaseGenerator
+  langs:
+  - csharp
+  - vb
+  name: AxisType
+  nameWithType: AxisType
+  fullName: TwinSharp.NC.AxisType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 63
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: TwinCAT supports different axis types, which are defined in the enum AxisType.
+  example: []
+  syntax:
+    content: public enum AxisType
+    content.vb: Public Enum AxisType
+- uid: TwinSharp.NC.AxisType.NOT_DEFINED
+  commentId: F:TwinSharp.NC.AxisType.NOT_DEFINED
+  id: NOT_DEFINED
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: NOT_DEFINED
+  nameWithType: AxisType.NOT_DEFINED
+  fullName: TwinSharp.NC.AxisType.NOT_DEFINED
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NOT_DEFINED
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 68
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Not defined
+  example: []
+  syntax:
+    content: NOT_DEFINED = 0
+    return:
+      type: TwinSharp.NC.AxisType
+- uid: TwinSharp.NC.AxisType.ContinousAxisServo
+  commentId: F:TwinSharp.NC.AxisType.ContinousAxisServo
+  id: ContinousAxisServo
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: ContinousAxisServo
+  nameWithType: AxisType.ContinousAxisServo
+  fullName: TwinSharp.NC.AxisType.ContinousAxisServo
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ContinousAxisServo
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 73
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Continuous axis (also SERCOS)
+  example: []
+  syntax:
+    content: ContinousAxisServo = 1
+    return:
+      type: TwinSharp.NC.AxisType
+- uid: TwinSharp.NC.AxisType.DiscreteAxisHighLow
+  commentId: F:TwinSharp.NC.AxisType.DiscreteAxisHighLow
+  id: DiscreteAxisHighLow
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: DiscreteAxisHighLow
+  nameWithType: AxisType.DiscreteAxisHighLow
+  fullName: TwinSharp.NC.AxisType.DiscreteAxisHighLow
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DiscreteAxisHighLow
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 78
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Discrete axis (high/low speed)
+  example: []
+  syntax:
+    content: DiscreteAxisHighLow = 2
+    return:
+      type: TwinSharp.NC.AxisType
+- uid: TwinSharp.NC.AxisType.ContinousAxisStepper
+  commentId: F:TwinSharp.NC.AxisType.ContinousAxisStepper
+  id: ContinousAxisStepper
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: ContinousAxisStepper
+  nameWithType: AxisType.ContinousAxisStepper
+  fullName: TwinSharp.NC.AxisType.ContinousAxisStepper
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ContinousAxisStepper
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 83
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Stepper motor axis (without PWM terminal KL2502/30 and without pulse train KL2521)
+  example: []
+  syntax:
+    content: ContinousAxisStepper = 3
+    return:
+      type: TwinSharp.NC.AxisType
+- uid: TwinSharp.NC.AxisType.EncoderAxis
+  commentId: F:TwinSharp.NC.AxisType.EncoderAxis
+  id: EncoderAxis
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: EncoderAxis
+  nameWithType: AxisType.EncoderAxis
+  fullName: TwinSharp.NC.AxisType.EncoderAxis
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EncoderAxis
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 88
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Encoder axis
+  example: []
+  syntax:
+    content: EncoderAxis = 5
+    return:
+      type: TwinSharp.NC.AxisType
+- uid: TwinSharp.NC.AxisType.Hydraulic
+  commentId: F:TwinSharp.NC.AxisType.Hydraulic
+  id: Hydraulic
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: Hydraulic
+  nameWithType: AxisType.Hydraulic
+  fullName: TwinSharp.NC.AxisType.Hydraulic
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Hydraulic
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 93
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Continuous axis with operation mode switching for position/pressure control
+  example: []
+  syntax:
+    content: Hydraulic = 6
+    return:
+      type: TwinSharp.NC.AxisType
+- uid: TwinSharp.NC.AxisType.TimeBaseGenerator
+  commentId: F:TwinSharp.NC.AxisType.TimeBaseGenerator
+  id: TimeBaseGenerator
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: TimeBaseGenerator
+  nameWithType: AxisType.TimeBaseGenerator
+  fullName: TwinSharp.NC.AxisType.TimeBaseGenerator
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimeBaseGenerator
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 98
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Time Base Generator
+  example: []
+  syntax:
+    content: TimeBaseGenerator = 7
+    return:
+      type: TwinSharp.NC.AxisType
+- uid: TwinSharp.NC.AxisType.Specific
+  commentId: F:TwinSharp.NC.AxisType.Specific
+  id: Specific
+  parent: TwinSharp.NC.AxisType
+  langs:
+  - csharp
+  - vb
+  name: Specific
+  nameWithType: AxisType.Specific
+  fullName: TwinSharp.NC.AxisType.Specific
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Specific
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 103
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Specific.
+  example: []
+  syntax:
+    content: Specific = 100
+    return:
+      type: TwinSharp.NC.AxisType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.AxisType
+  commentId: T:TwinSharp.NC.AxisType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.AxisType.html
+  name: AxisType
+  nameWithType: AxisType
+  fullName: TwinSharp.NC.AxisType

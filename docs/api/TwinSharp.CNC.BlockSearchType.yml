@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.BlockSearchType
+  commentId: T:TwinSharp.CNC.BlockSearchType
+  id: BlockSearchType
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.BlockSearchType.BlockCounter
+  - TwinSharp.CNC.BlockSearchType.BlockNumber
+  - TwinSharp.CNC.BlockSearchType.FileOffset
+  - TwinSharp.CNC.BlockSearchType.NoBlockSearch
+  - TwinSharp.CNC.BlockSearchType.ProgramEnd
+  langs:
+  - csharp
+  - vb
+  name: BlockSearchType
+  nameWithType: BlockSearchType
+  fullName: TwinSharp.CNC.BlockSearchType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockSearchType
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 109
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: The block search type defines the method used to define the continuation position in the NC program.
+  example: []
+  syntax:
+    content: public enum BlockSearchType
+    content.vb: Public Enum BlockSearchType
+- uid: TwinSharp.CNC.BlockSearchType.NoBlockSearch
+  commentId: F:TwinSharp.CNC.BlockSearchType.NoBlockSearch
+  id: NoBlockSearch
+  parent: TwinSharp.CNC.BlockSearchType
+  langs:
+  - csharp
+  - vb
+  name: NoBlockSearch
+  nameWithType: BlockSearchType.NoBlockSearch
+  fullName: TwinSharp.CNC.BlockSearchType.NoBlockSearch
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NoBlockSearch
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 112
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: No block search. Normal operation.
+  example: []
+  syntax:
+    content: NoBlockSearch = 0
+    return:
+      type: TwinSharp.CNC.BlockSearchType
+- uid: TwinSharp.CNC.BlockSearchType.FileOffset
+  commentId: F:TwinSharp.CNC.BlockSearchType.FileOffset
+  id: FileOffset
+  parent: TwinSharp.CNC.BlockSearchType
+  langs:
+  - csharp
+  - vb
+  name: FileOffset
+  nameWithType: BlockSearchType.FileOffset
+  fullName: TwinSharp.CNC.BlockSearchType.FileOffset
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileOffset
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 115
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Continuation position and end position by file offset.
+  example: []
+  syntax:
+    content: FileOffset = 1
+    return:
+      type: TwinSharp.CNC.BlockSearchType
+- uid: TwinSharp.CNC.BlockSearchType.BlockCounter
+  commentId: F:TwinSharp.CNC.BlockSearchType.BlockCounter
+  id: BlockCounter
+  parent: TwinSharp.CNC.BlockSearchType
+  langs:
+  - csharp
+  - vb
+  name: BlockCounter
+  nameWithType: BlockSearchType.BlockCounter
+  fullName: TwinSharp.CNC.BlockSearchType.BlockCounter
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockCounter
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 118
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Continuation position by block counter.
+  example: []
+  syntax:
+    content: BlockCounter = 3
+    return:
+      type: TwinSharp.CNC.BlockSearchType
+- uid: TwinSharp.CNC.BlockSearchType.BlockNumber
+  commentId: F:TwinSharp.CNC.BlockSearchType.BlockNumber
+  id: BlockNumber
+  parent: TwinSharp.CNC.BlockSearchType
+  langs:
+  - csharp
+  - vb
+  name: BlockNumber
+  nameWithType: BlockSearchType.BlockNumber
+  fullName: TwinSharp.CNC.BlockSearchType.BlockNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockNumber
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 121
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Continuation position by block number and program name.
+  example: []
+  syntax:
+    content: BlockNumber = 4
+    return:
+      type: TwinSharp.CNC.BlockSearchType
+- uid: TwinSharp.CNC.BlockSearchType.ProgramEnd
+  commentId: F:TwinSharp.CNC.BlockSearchType.ProgramEnd
+  id: ProgramEnd
+  parent: TwinSharp.CNC.BlockSearchType
+  langs:
+  - csharp
+  - vb
+  name: ProgramEnd
+  nameWithType: BlockSearchType.ProgramEnd
+  fullName: TwinSharp.CNC.BlockSearchType.ProgramEnd
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProgramEnd
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 127
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Continuation position at program end 
+
+    This special block search type is used in particular in job planning on a simulation system for a rapid test of NC programs.
+  example: []
+  syntax:
+    content: ProgramEnd = 5
+    return:
+      type: TwinSharp.CNC.BlockSearchType
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.BlockSearchType
+  commentId: T:TwinSharp.CNC.BlockSearchType
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.BlockSearchType.html
+  name: BlockSearchType
+  nameWithType: BlockSearchType
+  fullName: TwinSharp.CNC.BlockSearchType

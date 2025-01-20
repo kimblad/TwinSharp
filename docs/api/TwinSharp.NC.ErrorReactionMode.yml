@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.ErrorReactionMode
+  commentId: T:TwinSharp.NC.ErrorReactionMode
+  id: ErrorReactionMode
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.ErrorReactionMode.Delayed
+  - TwinSharp.NC.ErrorReactionMode.Instantaneous
+  langs:
+  - csharp
+  - vb
+  name: ErrorReactionMode
+  nameWithType: ErrorReactionMode
+  fullName: TwinSharp.NC.ErrorReactionMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ErrorReactionMode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 109
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the possible error reaction modes that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum ErrorReactionMode
+    content.vb: Public Enum ErrorReactionMode
+- uid: TwinSharp.NC.ErrorReactionMode.Instantaneous
+  commentId: F:TwinSharp.NC.ErrorReactionMode.Instantaneous
+  id: Instantaneous
+  parent: TwinSharp.NC.ErrorReactionMode
+  langs:
+  - csharp
+  - vb
+  name: Instantaneous
+  nameWithType: ErrorReactionMode.Instantaneous
+  fullName: TwinSharp.NC.ErrorReactionMode.Instantaneous
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Instantaneous
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 112
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Immediate, default.
+  example: []
+  syntax:
+    content: Instantaneous = 0
+    return:
+      type: TwinSharp.NC.ErrorReactionMode
+- uid: TwinSharp.NC.ErrorReactionMode.Delayed
+  commentId: F:TwinSharp.NC.ErrorReactionMode.Delayed
+  id: Delayed
+  parent: TwinSharp.NC.ErrorReactionMode
+  langs:
+  - csharp
+  - vb
+  name: Delayed
+  nameWithType: ErrorReactionMode.Delayed
+  fullName: TwinSharp.NC.ErrorReactionMode.Delayed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Delayed
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 115
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Delayed. E.g. for master/slave coupling.
+  example: []
+  syntax:
+    content: Delayed = 1
+    return:
+      type: TwinSharp.NC.ErrorReactionMode
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.ErrorReactionMode
+  commentId: T:TwinSharp.NC.ErrorReactionMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.ErrorReactionMode.html
+  name: ErrorReactionMode
+  nameWithType: ErrorReactionMode
+  fullName: TwinSharp.NC.ErrorReactionMode

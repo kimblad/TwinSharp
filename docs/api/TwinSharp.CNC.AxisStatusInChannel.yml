@@ -1,0 +1,1033 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.AxisStatusInChannel
+  commentId: T:TwinSharp.CNC.AxisStatusInChannel
+  id: AxisStatusInChannel
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS
+  - TwinSharp.CNC.AxisStatusInChannel.Adresses
+  - TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS
+  - TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS
+  - TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed
+  - TwinSharp.CNC.AxisStatusInChannel.ControlElement
+  - TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS
+  - TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS
+  - TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution
+  - TwinSharp.CNC.AxisStatusInChannel.HomingDone
+  - TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance
+  - TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed
+  - TwinSharp.CNC.AxisStatusInChannel.LogicalNumber
+  - TwinSharp.CNC.AxisStatusInChannel.ManualState
+  - TwinSharp.CNC.AxisStatusInChannel.Name
+  - TwinSharp.CNC.AxisStatusInChannel.OperationMode
+  - TwinSharp.CNC.AxisStatusInChannel.Type
+  langs:
+  - csharp
+  - vb
+  name: AxisStatusInChannel
+  nameWithType: AxisStatusInChannel
+  fullName: TwinSharp.CNC.AxisStatusInChannel
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisStatusInChannel
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 7
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: If an axis belongs to a channel, this class describes the status of that axis in that channel.
+  example: []
+  syntax:
+    content: public class AxisStatusInChannel
+    content.vb: Public Class AxisStatusInChannel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.CNC.AxisStatusInChannel.Adresses
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.Adresses
+  id: Adresses
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: Adresses
+  nameWithType: AxisStatusInChannel.Adresses
+  fullName: TwinSharp.CNC.AxisStatusInChannel.Adresses
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Adresses
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 25
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Contains the index group and index offsets of Axis Channel Status objects. Can be used if you want to add ADS Device notifications, or SumRead commands.
+  example: []
+  syntax:
+    content: public AxisStatusInChannelAdresses Adresses { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.AxisStatusInChannelAdresses
+    content.vb: Public Property Adresses As AxisStatusInChannelAdresses
+  overload: TwinSharp.CNC.AxisStatusInChannel.Adresses*
+- uid: TwinSharp.CNC.AxisStatusInChannel.LogicalNumber
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.LogicalNumber
+  id: LogicalNumber
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: LogicalNumber
+  nameWithType: AxisStatusInChannel.LogicalNumber
+  fullName: TwinSharp.CNC.AxisStatusInChannel.LogicalNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: LogicalNumber
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 31
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Logical number of the axis.
+  example: []
+  syntax:
+    content: public ushort LogicalNumber { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property LogicalNumber As UShort
+  overload: TwinSharp.CNC.AxisStatusInChannel.LogicalNumber*
+- uid: TwinSharp.CNC.AxisStatusInChannel.Name
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.Name
+  id: Name
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: AxisStatusInChannel.Name
+  fullName: TwinSharp.CNC.AxisStatusInChannel.Name
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Name
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 39
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Name of the axis.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: TwinSharp.CNC.AxisStatusInChannel.Name*
+- uid: TwinSharp.CNC.AxisStatusInChannel.Type
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.Type
+  id: Type
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: AxisStatusInChannel.Type
+  fullName: TwinSharp.CNC.AxisStatusInChannel.Type
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Type
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 51
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Type of axis.
+
+    1 = Translator.
+
+    2 = Rotator.
+
+    4 = Spindle.
+  example: []
+  syntax:
+    content: public ushort Type { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property Type As UShort
+  overload: TwinSharp.CNC.AxisStatusInChannel.Type*
+- uid: TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS
+  id: DistanceToGoPCS
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: DistanceToGoPCS
+  nameWithType: AxisStatusInChannel.DistanceToGoPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DistanceToGoPCS
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 59
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Distance to go in the current NC block, difference between target position and command position.
+  example: []
+  syntax:
+    content: public int DistanceToGoPCS { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property DistanceToGoPCS As Integer
+  overload: TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS*
+- uid: TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS
+  id: EndPositionPCS
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: EndPositionPCS
+  nameWithType: AxisStatusInChannel.EndPositionPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EndPositionPCS
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 67
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Target position of the current NC block.
+  example: []
+  syntax:
+    content: public int EndPositionPCS { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property EndPositionPCS As Integer
+  overload: TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS*
+- uid: TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS
+  id: CommandedPositionPCS
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: CommandedPositionPCS
+  nameWithType: AxisStatusInChannel.CommandedPositionPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CommandedPositionPCS
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 75
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Position preset in the current cycle as setpoint.
+  example: []
+  syntax:
+    content: public int CommandedPositionPCS { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CommandedPositionPCS As Integer
+  overload: TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS*
+- uid: TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS
+  id: ActualPositionPCS
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: ActualPositionPCS
+  nameWithType: AxisStatusInChannel.ActualPositionPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActualPositionPCS
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 83
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Actual ACS position converted in the PCS.
+  example: []
+  syntax:
+    content: public int ActualPositionPCS { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ActualPositionPCS As Integer
+  overload: TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS*
+- uid: TwinSharp.CNC.AxisStatusInChannel.HomingDone
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.HomingDone
+  id: HomingDone
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: HomingDone
+  nameWithType: AxisStatusInChannel.HomingDone
+  fullName: TwinSharp.CNC.AxisStatusInChannel.HomingDone
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HomingDone
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 91
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: The axis completed homing successfully and is now referenced.
+  example: []
+  syntax:
+    content: public bool HomingDone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HomingDone As Boolean
+  overload: TwinSharp.CNC.AxisStatusInChannel.HomingDone*
+- uid: TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS
+  id: AxisStatePCS
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: AxisStatePCS
+  nameWithType: AxisStatusInChannel.AxisStatePCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisStatePCS
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 99
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Axis state in the PCS.
+  example: []
+  syntax:
+    content: public AxisState AxisStatePCS { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.AxisState
+    content.vb: Public ReadOnly Property AxisStatePCS As AxisState
+  overload: TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS*
+- uid: TwinSharp.CNC.AxisStatusInChannel.ManualState
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.ManualState
+  id: ManualState
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: ManualState
+  nameWithType: AxisStatusInChannel.ManualState
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ManualState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ManualState
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 107
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Manual state.
+  example: []
+  syntax:
+    content: public ushort ManualState { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property ManualState As UShort
+  overload: TwinSharp.CNC.AxisStatusInChannel.ManualState*
+- uid: TwinSharp.CNC.AxisStatusInChannel.OperationMode
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.OperationMode
+  id: OperationMode
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: OperationMode
+  nameWithType: AxisStatusInChannel.OperationMode
+  fullName: TwinSharp.CNC.AxisStatusInChannel.OperationMode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OperationMode
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 115
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Operation mode.
+  example: []
+  syntax:
+    content: public ushort OperationMode { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property OperationMode As UShort
+  overload: TwinSharp.CNC.AxisStatusInChannel.OperationMode*
+- uid: TwinSharp.CNC.AxisStatusInChannel.ControlElement
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.ControlElement
+  id: ControlElement
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: ControlElement
+  nameWithType: AxisStatusInChannel.ControlElement
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ControlElement
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControlElement
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 123
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Control element.
+  example: []
+  syntax:
+    content: public ushort ControlElement { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property ControlElement As UShort
+  overload: TwinSharp.CNC.AxisStatusInChannel.ControlElement*
+- uid: TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed
+  id: ContinuousSpeed
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: ContinuousSpeed
+  nameWithType: AxisStatusInChannel.ContinuousSpeed
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ContinuousSpeed
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 131
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Continuous speed.
+  example: []
+  syntax:
+    content: public uint ContinuousSpeed { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property ContinuousSpeed As UInteger
+  overload: TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed*
+- uid: TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed
+  id: IncrementalSpeed
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: IncrementalSpeed
+  nameWithType: AxisStatusInChannel.IncrementalSpeed
+  fullName: TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: IncrementalSpeed
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 139
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Incremental speed.
+  example: []
+  syntax:
+    content: public uint IncrementalSpeed { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property IncrementalSpeed As UInteger
+  overload: TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed*
+- uid: TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance
+  id: IncrementalDistance
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: IncrementalDistance
+  nameWithType: AxisStatusInChannel.IncrementalDistance
+  fullName: TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: IncrementalDistance
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 147
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Incremental distance.
+  example: []
+  syntax:
+    content: public uint IncrementalDistance { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property IncrementalDistance As UInteger
+  overload: TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance*
+- uid: TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution
+  commentId: P:TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution
+  id: HandwheelResolution
+  parent: TwinSharp.CNC.AxisStatusInChannel
+  langs:
+  - csharp
+  - vb
+  name: HandwheelResolution
+  nameWithType: AxisStatusInChannel.HandwheelResolution
+  fullName: TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisStatusInChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HandwheelResolution
+    path: ../TwinSharp/CNC/AxisStatusInChannel.cs
+    startLine: 155
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Handwheel resolution.
+  example: []
+  syntax:
+    content: public double HandwheelResolution { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property HandwheelResolution As Double
+  overload: TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution*
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.AxisStatusInChannel.Adresses*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.Adresses
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_Adresses
+  name: Adresses
+  nameWithType: AxisStatusInChannel.Adresses
+  fullName: TwinSharp.CNC.AxisStatusInChannel.Adresses
+- uid: TwinSharp.CNC.AxisStatusInChannelAdresses
+  commentId: T:TwinSharp.CNC.AxisStatusInChannelAdresses
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisStatusInChannelAdresses.html
+  name: AxisStatusInChannelAdresses
+  nameWithType: AxisStatusInChannelAdresses
+  fullName: TwinSharp.CNC.AxisStatusInChannelAdresses
+- uid: TwinSharp.CNC.AxisStatusInChannel.LogicalNumber*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.LogicalNumber
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_LogicalNumber
+  name: LogicalNumber
+  nameWithType: AxisStatusInChannel.LogicalNumber
+  fullName: TwinSharp.CNC.AxisStatusInChannel.LogicalNumber
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: TwinSharp.CNC.AxisStatusInChannel.Name*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.Name
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_Name
+  name: Name
+  nameWithType: AxisStatusInChannel.Name
+  fullName: TwinSharp.CNC.AxisStatusInChannel.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.CNC.AxisStatusInChannel.Type*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.Type
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_Type
+  name: Type
+  nameWithType: AxisStatusInChannel.Type
+  fullName: TwinSharp.CNC.AxisStatusInChannel.Type
+- uid: TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_DistanceToGoPCS
+  name: DistanceToGoPCS
+  nameWithType: AxisStatusInChannel.DistanceToGoPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.DistanceToGoPCS
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_EndPositionPCS
+  name: EndPositionPCS
+  nameWithType: AxisStatusInChannel.EndPositionPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.EndPositionPCS
+- uid: TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_CommandedPositionPCS
+  name: CommandedPositionPCS
+  nameWithType: AxisStatusInChannel.CommandedPositionPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.CommandedPositionPCS
+- uid: TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_ActualPositionPCS
+  name: ActualPositionPCS
+  nameWithType: AxisStatusInChannel.ActualPositionPCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ActualPositionPCS
+- uid: TwinSharp.CNC.AxisStatusInChannel.HomingDone*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.HomingDone
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_HomingDone
+  name: HomingDone
+  nameWithType: AxisStatusInChannel.HomingDone
+  fullName: TwinSharp.CNC.AxisStatusInChannel.HomingDone
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_AxisStatePCS
+  name: AxisStatePCS
+  nameWithType: AxisStatusInChannel.AxisStatePCS
+  fullName: TwinSharp.CNC.AxisStatusInChannel.AxisStatePCS
+- uid: TwinSharp.CNC.AxisState
+  commentId: T:TwinSharp.CNC.AxisState
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisState.html
+  name: AxisState
+  nameWithType: AxisState
+  fullName: TwinSharp.CNC.AxisState
+- uid: TwinSharp.CNC.AxisStatusInChannel.ManualState*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.ManualState
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_ManualState
+  name: ManualState
+  nameWithType: AxisStatusInChannel.ManualState
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ManualState
+- uid: TwinSharp.CNC.AxisStatusInChannel.OperationMode*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.OperationMode
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_OperationMode
+  name: OperationMode
+  nameWithType: AxisStatusInChannel.OperationMode
+  fullName: TwinSharp.CNC.AxisStatusInChannel.OperationMode
+- uid: TwinSharp.CNC.AxisStatusInChannel.ControlElement*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.ControlElement
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_ControlElement
+  name: ControlElement
+  nameWithType: AxisStatusInChannel.ControlElement
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ControlElement
+- uid: TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_ContinuousSpeed
+  name: ContinuousSpeed
+  nameWithType: AxisStatusInChannel.ContinuousSpeed
+  fullName: TwinSharp.CNC.AxisStatusInChannel.ContinuousSpeed
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_IncrementalSpeed
+  name: IncrementalSpeed
+  nameWithType: AxisStatusInChannel.IncrementalSpeed
+  fullName: TwinSharp.CNC.AxisStatusInChannel.IncrementalSpeed
+- uid: TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_IncrementalDistance
+  name: IncrementalDistance
+  nameWithType: AxisStatusInChannel.IncrementalDistance
+  fullName: TwinSharp.CNC.AxisStatusInChannel.IncrementalDistance
+- uid: TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution*
+  commentId: Overload:TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution
+  href: TwinSharp.CNC.AxisStatusInChannel.html#TwinSharp_CNC_AxisStatusInChannel_HandwheelResolution
+  name: HandwheelResolution
+  nameWithType: AxisStatusInChannel.HandwheelResolution
+  fullName: TwinSharp.CNC.AxisStatusInChannel.HandwheelResolution
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double

@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.ActualPositionType
+  commentId: T:TwinSharp.NC.ActualPositionType
+  id: ActualPositionType
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.ActualPositionType.AbsolutePosition
+  - TwinSharp.NC.ActualPositionType.ModuloPosition
+  - TwinSharp.NC.ActualPositionType.NOT_DEFINED
+  - TwinSharp.NC.ActualPositionType.RelativePosition
+  langs:
+  - csharp
+  - vb
+  name: ActualPositionType
+  nameWithType: ActualPositionType
+  fullName: TwinSharp.NC.ActualPositionType
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActualPositionType
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 30
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of actual position that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum ActualPositionType
+    content.vb: Public Enum ActualPositionType
+- uid: TwinSharp.NC.ActualPositionType.NOT_DEFINED
+  commentId: F:TwinSharp.NC.ActualPositionType.NOT_DEFINED
+  id: NOT_DEFINED
+  parent: TwinSharp.NC.ActualPositionType
+  langs:
+  - csharp
+  - vb
+  name: NOT_DEFINED
+  nameWithType: ActualPositionType.NOT_DEFINED
+  fullName: TwinSharp.NC.ActualPositionType.NOT_DEFINED
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NOT_DEFINED
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 33
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Actual position type not defined.
+  example: []
+  syntax:
+    content: NOT_DEFINED = 0
+    return:
+      type: TwinSharp.NC.ActualPositionType
+- uid: TwinSharp.NC.ActualPositionType.AbsolutePosition
+  commentId: F:TwinSharp.NC.ActualPositionType.AbsolutePosition
+  id: AbsolutePosition
+  parent: TwinSharp.NC.ActualPositionType
+  langs:
+  - csharp
+  - vb
+  name: AbsolutePosition
+  nameWithType: ActualPositionType.AbsolutePosition
+  fullName: TwinSharp.NC.ActualPositionType.AbsolutePosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AbsolutePosition
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 36
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Absolute position
+  example: []
+  syntax:
+    content: AbsolutePosition = 1
+    return:
+      type: TwinSharp.NC.ActualPositionType
+- uid: TwinSharp.NC.ActualPositionType.RelativePosition
+  commentId: F:TwinSharp.NC.ActualPositionType.RelativePosition
+  id: RelativePosition
+  parent: TwinSharp.NC.ActualPositionType
+  langs:
+  - csharp
+  - vb
+  name: RelativePosition
+  nameWithType: ActualPositionType.RelativePosition
+  fullName: TwinSharp.NC.ActualPositionType.RelativePosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RelativePosition
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 39
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Relative position
+  example: []
+  syntax:
+    content: RelativePosition = 2
+    return:
+      type: TwinSharp.NC.ActualPositionType
+- uid: TwinSharp.NC.ActualPositionType.ModuloPosition
+  commentId: F:TwinSharp.NC.ActualPositionType.ModuloPosition
+  id: ModuloPosition
+  parent: TwinSharp.NC.ActualPositionType
+  langs:
+  - csharp
+  - vb
+  name: ModuloPosition
+  nameWithType: ActualPositionType.ModuloPosition
+  fullName: TwinSharp.NC.ActualPositionType.ModuloPosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ModuloPosition
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 42
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Modulo position
+  example: []
+  syntax:
+    content: ModuloPosition = 5
+    return:
+      type: TwinSharp.NC.ActualPositionType
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.ActualPositionType
+  commentId: T:TwinSharp.NC.ActualPositionType
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.ActualPositionType.html
+  name: ActualPositionType
+  nameWithType: ActualPositionType
+  fullName: TwinSharp.NC.ActualPositionType

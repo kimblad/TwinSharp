@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.SignalEdge
+  commentId: T:TwinSharp.NC.SignalEdge
+  id: SignalEdge
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.SignalEdge.FallingEdge
+  - TwinSharp.NC.SignalEdge.RisingEdge
+  langs:
+  - csharp
+  - vb
+  name: SignalEdge
+  nameWithType: SignalEdge
+  fullName: TwinSharp.NC.SignalEdge
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SignalEdge
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 673
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the two types of signal edges that exist. Rising edge and falling edge.
+  example: []
+  syntax:
+    content: public enum SignalEdge
+    content.vb: Public Enum SignalEdge
+- uid: TwinSharp.NC.SignalEdge.RisingEdge
+  commentId: F:TwinSharp.NC.SignalEdge.RisingEdge
+  id: RisingEdge
+  parent: TwinSharp.NC.SignalEdge
+  langs:
+  - csharp
+  - vb
+  name: RisingEdge
+  nameWithType: SignalEdge.RisingEdge
+  fullName: TwinSharp.NC.SignalEdge.RisingEdge
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RisingEdge
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 676
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Rising edge. Signal goes from low to high.
+  example: []
+  syntax:
+    content: RisingEdge = 0
+    return:
+      type: TwinSharp.NC.SignalEdge
+- uid: TwinSharp.NC.SignalEdge.FallingEdge
+  commentId: F:TwinSharp.NC.SignalEdge.FallingEdge
+  id: FallingEdge
+  parent: TwinSharp.NC.SignalEdge
+  langs:
+  - csharp
+  - vb
+  name: FallingEdge
+  nameWithType: SignalEdge.FallingEdge
+  fullName: TwinSharp.NC.SignalEdge.FallingEdge
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FallingEdge
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 679
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Falling edge. Signal goes from high to low.
+  example: []
+  syntax:
+    content: FallingEdge = 1
+    return:
+      type: TwinSharp.NC.SignalEdge
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.SignalEdge
+  commentId: T:TwinSharp.NC.SignalEdge
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.SignalEdge.html
+  name: SignalEdge
+  nameWithType: SignalEdge
+  fullName: TwinSharp.NC.SignalEdge

@@ -1,0 +1,438 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.Table
+  commentId: T:TwinSharp.NC.Table
+  id: Table
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.Table.Functions
+  - TwinSharp.NC.Table.Parameters
+  - TwinSharp.NC.Table.State
+  langs:
+  - csharp
+  - vb
+  name: Table
+  nameWithType: Table
+  fullName: TwinSharp.NC.Table
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/NC/Table.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Table
+    path: ../TwinSharp/NC/Table.cs
+    startLine: 8
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: >-
+    The <code>Table</code> class encapsulates various functionalities, parameters, and states related to a table in the context of TwinCAT ADS.
+
+    It provides a structured way to interact with tables, which are likely used for motion control or other automation tasks.
+  example: []
+  syntax:
+    content: public class Table
+    content.vb: Public Class Table
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.NC.Table.Functions
+  commentId: P:TwinSharp.NC.Table.Functions
+  id: Functions
+  parent: TwinSharp.NC.Table
+  langs:
+  - csharp
+  - vb
+  name: Functions
+  nameWithType: Table.Functions
+  fullName: TwinSharp.NC.Table.Functions
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/Table.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Functions
+    path: ../TwinSharp/NC/Table.cs
+    startLine: 21
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Gets the functions related to table operations such as generating and deleting tables.
+  example: []
+  syntax:
+    content: public TableFunctions Functions { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.TableFunctions
+    content.vb: Public Property Functions As TableFunctions
+  overload: TwinSharp.NC.Table.Functions*
+- uid: TwinSharp.NC.Table.Parameters
+  commentId: P:TwinSharp.NC.Table.Parameters
+  id: Parameters
+  parent: TwinSharp.NC.Table
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: Table.Parameters
+  fullName: TwinSharp.NC.Table.Parameters
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/Table.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Parameters
+    path: ../TwinSharp/NC/Table.cs
+    startLine: 26
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Gets the parameters of the table including ID, name, types, dimensions, and other properties.
+  example: []
+  syntax:
+    content: public TableParameters Parameters { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.TableParameters
+    content.vb: Public Property Parameters As TableParameters
+  overload: TwinSharp.NC.Table.Parameters*
+- uid: TwinSharp.NC.Table.State
+  commentId: P:TwinSharp.NC.Table.State
+  id: State
+  parent: TwinSharp.NC.Table
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: Table.State
+  fullName: TwinSharp.NC.Table.State
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/NC/Table.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: State
+    path: ../TwinSharp/NC/Table.cs
+    startLine: 31
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Gets the state of the table including the user counter.
+  example: []
+  syntax:
+    content: public TableState State { get; }
+    parameters: []
+    return:
+      type: TwinSharp.NC.TableState
+    content.vb: Public Property State As TableState
+  overload: TwinSharp.NC.Table.State*
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.NC.Table.Functions*
+  commentId: Overload:TwinSharp.NC.Table.Functions
+  href: TwinSharp.NC.Table.html#TwinSharp_NC_Table_Functions
+  name: Functions
+  nameWithType: Table.Functions
+  fullName: TwinSharp.NC.Table.Functions
+- uid: TwinSharp.NC.TableFunctions
+  commentId: T:TwinSharp.NC.TableFunctions
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.TableFunctions.html
+  name: TableFunctions
+  nameWithType: TableFunctions
+  fullName: TwinSharp.NC.TableFunctions
+- uid: TwinSharp.NC.Table.Parameters*
+  commentId: Overload:TwinSharp.NC.Table.Parameters
+  href: TwinSharp.NC.Table.html#TwinSharp_NC_Table_Parameters
+  name: Parameters
+  nameWithType: Table.Parameters
+  fullName: TwinSharp.NC.Table.Parameters
+- uid: TwinSharp.NC.TableParameters
+  commentId: T:TwinSharp.NC.TableParameters
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.TableParameters.html
+  name: TableParameters
+  nameWithType: TableParameters
+  fullName: TwinSharp.NC.TableParameters
+- uid: TwinSharp.NC.Table.State*
+  commentId: Overload:TwinSharp.NC.Table.State
+  href: TwinSharp.NC.Table.html#TwinSharp_NC_Table_State
+  name: State
+  nameWithType: Table.State
+  fullName: TwinSharp.NC.Table.State
+- uid: TwinSharp.NC.TableState
+  commentId: T:TwinSharp.NC.TableState
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.TableState.html
+  name: TableState
+  nameWithType: TableState
+  fullName: TwinSharp.NC.TableState

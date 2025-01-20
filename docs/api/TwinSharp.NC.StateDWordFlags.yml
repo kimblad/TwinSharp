@@ -1,0 +1,1027 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.StateDWordFlags
+  commentId: T:TwinSharp.NC.StateDWordFlags
+  id: StateDWordFlags
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.StateDWordFlags.CamDataQueued
+  - TwinSharp.NC.StateDWordFlags.CamScalingPending
+  - TwinSharp.NC.StateDWordFlags.CamTableQueued
+  - TwinSharp.NC.StateDWordFlags.CmdBuffered
+  - TwinSharp.NC.StateDWordFlags.Compensating
+  - TwinSharp.NC.StateDWordFlags.ConstantVelocity
+  - TwinSharp.NC.StateDWordFlags.ContinuousMotion
+  - TwinSharp.NC.StateDWordFlags.ControlLoopClosed
+  - TwinSharp.NC.StateDWordFlags.DriveDeviceError
+  - TwinSharp.NC.StateDWordFlags.Error
+  - TwinSharp.NC.StateDWordFlags.ErrorPropagationDelayed
+  - TwinSharp.NC.StateDWordFlags.ExtSetPointGenEnabled
+  - TwinSharp.NC.StateDWordFlags.ExternalLatchValid
+  - TwinSharp.NC.StateDWordFlags.HasBeenStopped
+  - TwinSharp.NC.StateDWordFlags.HasJob
+  - TwinSharp.NC.StateDWordFlags.Homed
+  - TwinSharp.NC.StateDWordFlags.HomingBusy
+  - TwinSharp.NC.StateDWordFlags.InPositionArea
+  - TwinSharp.NC.StateDWordFlags.InTargetPosition
+  - TwinSharp.NC.StateDWordFlags.IoDataInvalid
+  - TwinSharp.NC.StateDWordFlags.MotionCommandsLocked
+  - TwinSharp.NC.StateDWordFlags.NegativeDirection
+  - TwinSharp.NC.StateDWordFlags.NewTargetPosition
+  - TwinSharp.NC.StateDWordFlags.None
+  - TwinSharp.NC.StateDWordFlags.NotImplementedYet
+  - TwinSharp.NC.StateDWordFlags.NotImplementedYet2
+  - TwinSharp.NC.StateDWordFlags.NotMoving
+  - TwinSharp.NC.StateDWordFlags.PTPmode
+  - TwinSharp.NC.StateDWordFlags.PositiveDirection
+  - TwinSharp.NC.StateDWordFlags.Protected
+  - TwinSharp.NC.StateDWordFlags.ReadyForOperation
+  - TwinSharp.NC.StateDWordFlags.SoftLimitMaxExceeded
+  - TwinSharp.NC.StateDWordFlags.SoftLimitMinExceeded
+  langs:
+  - csharp
+  - vb
+  name: StateDWordFlags
+  nameWithType: StateDWordFlags
+  fullName: TwinSharp.NC.StateDWordFlags
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StateDWordFlags
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 849
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: The StateDWord is a 32 bit data word in the axis interface NC-&gt;PLC.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum StateDWordFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum StateDWordFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: TwinSharp.NC.StateDWordFlags.None
+  commentId: F:TwinSharp.NC.StateDWordFlags.None
+  id: None
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: StateDWordFlags.None
+  fullName: TwinSharp.NC.StateDWordFlags.None
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: None
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 853
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: None.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.ReadyForOperation
+  commentId: F:TwinSharp.NC.StateDWordFlags.ReadyForOperation
+  id: ReadyForOperation
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: ReadyForOperation
+  nameWithType: StateDWordFlags.ReadyForOperation
+  fullName: TwinSharp.NC.StateDWordFlags.ReadyForOperation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReadyForOperation
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 856
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is ready for operation
+  example: []
+  syntax:
+    content: ReadyForOperation = 1
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.Homed
+  commentId: F:TwinSharp.NC.StateDWordFlags.Homed
+  id: Homed
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: Homed
+  nameWithType: StateDWordFlags.Homed
+  fullName: TwinSharp.NC.StateDWordFlags.Homed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Homed
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 859
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis has been referenced/ homed ("Axis calibrated")
+  example: []
+  syntax:
+    content: Homed = 2
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.NotMoving
+  commentId: F:TwinSharp.NC.StateDWordFlags.NotMoving
+  id: NotMoving
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: NotMoving
+  nameWithType: StateDWordFlags.NotMoving
+  fullName: TwinSharp.NC.StateDWordFlags.NotMoving
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NotMoving
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 862
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is logically stationary ("Axis not moving")
+  example: []
+  syntax:
+    content: NotMoving = 4
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.InPositionArea
+  commentId: F:TwinSharp.NC.StateDWordFlags.InPositionArea
+  id: InPositionArea
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: InPositionArea
+  nameWithType: StateDWordFlags.InPositionArea
+  fullName: TwinSharp.NC.StateDWordFlags.InPositionArea
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InPositionArea
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 865
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is in position window (physical feedback)
+  example: []
+  syntax:
+    content: InPositionArea = 8
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.InTargetPosition
+  commentId: F:TwinSharp.NC.StateDWordFlags.InTargetPosition
+  id: InTargetPosition
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: InTargetPosition
+  nameWithType: StateDWordFlags.InTargetPosition
+  fullName: TwinSharp.NC.StateDWordFlags.InTargetPosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InTargetPosition
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 868
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is at target position (PEH) (physical feedback)
+  example: []
+  syntax:
+    content: InTargetPosition = 16
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.Protected
+  commentId: F:TwinSharp.NC.StateDWordFlags.Protected
+  id: Protected
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: Protected
+  nameWithType: StateDWordFlags.Protected
+  fullName: TwinSharp.NC.StateDWordFlags.Protected
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Protected
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 871
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is in a protected operating mode (e.g. as a slave axis)
+  example: []
+  syntax:
+    content: Protected = 32
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.ErrorPropagationDelayed
+  commentId: F:TwinSharp.NC.StateDWordFlags.ErrorPropagationDelayed
+  id: ErrorPropagationDelayed
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: ErrorPropagationDelayed
+  nameWithType: StateDWordFlags.ErrorPropagationDelayed
+  fullName: TwinSharp.NC.StateDWordFlags.ErrorPropagationDelayed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ErrorPropagationDelayed
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 874
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis signals an error pre warning (from TC 2.11)
+  example: []
+  syntax:
+    content: ErrorPropagationDelayed = 64
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.HasBeenStopped
+  commentId: F:TwinSharp.NC.StateDWordFlags.HasBeenStopped
+  id: HasBeenStopped
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: HasBeenStopped
+  nameWithType: StateDWordFlags.HasBeenStopped
+  fullName: TwinSharp.NC.StateDWordFlags.HasBeenStopped
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HasBeenStopped
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 877
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis has been stopped or is presently executing a stop
+  example: []
+  syntax:
+    content: HasBeenStopped = 128
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.HasJob
+  commentId: F:TwinSharp.NC.StateDWordFlags.HasJob
+  id: HasJob
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: HasJob
+  nameWithType: StateDWordFlags.HasJob
+  fullName: TwinSharp.NC.StateDWordFlags.HasJob
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HasJob
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 880
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis has instructions, is carrying instructions out
+  example: []
+  syntax:
+    content: HasJob = 256
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.PositiveDirection
+  commentId: F:TwinSharp.NC.StateDWordFlags.PositiveDirection
+  id: PositiveDirection
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: PositiveDirection
+  nameWithType: StateDWordFlags.PositiveDirection
+  fullName: TwinSharp.NC.StateDWordFlags.PositiveDirection
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PositiveDirection
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 883
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis moving to logically larger values
+  example: []
+  syntax:
+    content: PositiveDirection = 512
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.NegativeDirection
+  commentId: F:TwinSharp.NC.StateDWordFlags.NegativeDirection
+  id: NegativeDirection
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: NegativeDirection
+  nameWithType: StateDWordFlags.NegativeDirection
+  fullName: TwinSharp.NC.StateDWordFlags.NegativeDirection
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NegativeDirection
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 886
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis moving to logically smaller values
+  example: []
+  syntax:
+    content: NegativeDirection = 1024
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.HomingBusy
+  commentId: F:TwinSharp.NC.StateDWordFlags.HomingBusy
+  id: HomingBusy
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: HomingBusy
+  nameWithType: StateDWordFlags.HomingBusy
+  fullName: TwinSharp.NC.StateDWordFlags.HomingBusy
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HomingBusy
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 889
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis referenced ("Axis being calibrated")
+  example: []
+  syntax:
+    content: HomingBusy = 2048
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.ConstantVelocity
+  commentId: F:TwinSharp.NC.StateDWordFlags.ConstantVelocity
+  id: ConstantVelocity
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: ConstantVelocity
+  nameWithType: StateDWordFlags.ConstantVelocity
+  fullName: TwinSharp.NC.StateDWordFlags.ConstantVelocity
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ConstantVelocity
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 892
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis has reached its constant velocity or rotary speed
+  example: []
+  syntax:
+    content: ConstantVelocity = 4096
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.Compensating
+  commentId: F:TwinSharp.NC.StateDWordFlags.Compensating
+  id: Compensating
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: Compensating
+  nameWithType: StateDWordFlags.Compensating
+  fullName: TwinSharp.NC.StateDWordFlags.Compensating
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Compensating
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 895
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Section compensation passive[0]/active[1] (s. "MC_MoveSuperImposed")
+  example: []
+  syntax:
+    content: Compensating = 8192
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.ExtSetPointGenEnabled
+  commentId: F:TwinSharp.NC.StateDWordFlags.ExtSetPointGenEnabled
+  id: ExtSetPointGenEnabled
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: ExtSetPointGenEnabled
+  nameWithType: StateDWordFlags.ExtSetPointGenEnabled
+  fullName: TwinSharp.NC.StateDWordFlags.ExtSetPointGenEnabled
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ExtSetPointGenEnabled
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 898
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: External setpoint generator enabled
+  example: []
+  syntax:
+    content: ExtSetPointGenEnabled = 16384
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.NotImplementedYet
+  commentId: F:TwinSharp.NC.StateDWordFlags.NotImplementedYet
+  id: NotImplementedYet
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: NotImplementedYet
+  nameWithType: StateDWordFlags.NotImplementedYet
+  fullName: TwinSharp.NC.StateDWordFlags.NotImplementedYet
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NotImplementedYet
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 901
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Operating mode not yet executed (Busy). Not implemented yet!
+  example: []
+  syntax:
+    content: NotImplementedYet = 32768
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.ExternalLatchValid
+  commentId: F:TwinSharp.NC.StateDWordFlags.ExternalLatchValid
+  id: ExternalLatchValid
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: ExternalLatchValid
+  nameWithType: StateDWordFlags.ExternalLatchValid
+  fullName: TwinSharp.NC.StateDWordFlags.ExternalLatchValid
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ExternalLatchValid
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 904
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: External latch value or sensing switch has become valid
+  example: []
+  syntax:
+    content: ExternalLatchValid = 65536
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.NewTargetPosition
+  commentId: F:TwinSharp.NC.StateDWordFlags.NewTargetPosition
+  id: NewTargetPosition
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: NewTargetPosition
+  nameWithType: StateDWordFlags.NewTargetPosition
+  fullName: TwinSharp.NC.StateDWordFlags.NewTargetPosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NewTargetPosition
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 907
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis has a new target position or a new velocity
+  example: []
+  syntax:
+    content: NewTargetPosition = 131072
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.NotImplementedYet2
+  commentId: F:TwinSharp.NC.StateDWordFlags.NotImplementedYet2
+  id: NotImplementedYet2
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: NotImplementedYet2
+  nameWithType: StateDWordFlags.NotImplementedYet2
+  fullName: TwinSharp.NC.StateDWordFlags.NotImplementedYet2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NotImplementedYet2
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 910
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is not at target position or cannot reach the target position (e.g. stop).Not implemented yet!
+  example: []
+  syntax:
+    content: NotImplementedYet2 = 262144
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.ContinuousMotion
+  commentId: F:TwinSharp.NC.StateDWordFlags.ContinuousMotion
+  id: ContinuousMotion
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: ContinuousMotion
+  nameWithType: StateDWordFlags.ContinuousMotion
+  fullName: TwinSharp.NC.StateDWordFlags.ContinuousMotion
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ContinuousMotion
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 913
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis has target position (±) endless
+  example: []
+  syntax:
+    content: ContinuousMotion = 524288
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.ControlLoopClosed
+  commentId: F:TwinSharp.NC.StateDWordFlags.ControlLoopClosed
+  id: ControlLoopClosed
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: ControlLoopClosed
+  nameWithType: StateDWordFlags.ControlLoopClosed
+  fullName: TwinSharp.NC.StateDWordFlags.ControlLoopClosed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControlLoopClosed
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 916
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is ready for operation and axis control loop is closed (e.g. position control)
+  example: []
+  syntax:
+    content: ControlLoopClosed = 1048576
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.CamTableQueued
+  commentId: F:TwinSharp.NC.StateDWordFlags.CamTableQueued
+  id: CamTableQueued
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: CamTableQueued
+  nameWithType: StateDWordFlags.CamTableQueued
+  fullName: TwinSharp.NC.StateDWordFlags.CamTableQueued
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CamTableQueued
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 919
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: CAM table is queued for  "Online Change" and waiting for activation
+  example: []
+  syntax:
+    content: CamTableQueued = 2097152
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.CamDataQueued
+  commentId: F:TwinSharp.NC.StateDWordFlags.CamDataQueued
+  id: CamDataQueued
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: CamDataQueued
+  nameWithType: StateDWordFlags.CamDataQueued
+  fullName: TwinSharp.NC.StateDWordFlags.CamDataQueued
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CamDataQueued
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 922
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: CAM data (only MF) are queued for  "Online Change" and waiting for activation
+  example: []
+  syntax:
+    content: CamDataQueued = 4194304
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.CamScalingPending
+  commentId: F:TwinSharp.NC.StateDWordFlags.CamScalingPending
+  id: CamScalingPending
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: CamScalingPending
+  nameWithType: StateDWordFlags.CamScalingPending
+  fullName: TwinSharp.NC.StateDWordFlags.CamScalingPending
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CamScalingPending
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 925
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: CAM scaling are queued for  "Online Change" and waiting for activation
+  example: []
+  syntax:
+    content: CamScalingPending = 8388608
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.CmdBuffered
+  commentId: F:TwinSharp.NC.StateDWordFlags.CmdBuffered
+  id: CmdBuffered
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: CmdBuffered
+  nameWithType: StateDWordFlags.CmdBuffered
+  fullName: TwinSharp.NC.StateDWordFlags.CmdBuffered
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CmdBuffered
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 928
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Following command is queued in then command buffer (s. Buffer Mode)
+  example: []
+  syntax:
+    content: CmdBuffered = 16777216
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.PTPmode
+  commentId: F:TwinSharp.NC.StateDWordFlags.PTPmode
+  id: PTPmode
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: PTPmode
+  nameWithType: StateDWordFlags.PTPmode
+  fullName: TwinSharp.NC.StateDWordFlags.PTPmode
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PTPmode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 931
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis in PTP mode (no slave, no NCI axis, no FIFO axis) (from TC 2.10 Build 1326)
+  example: []
+  syntax:
+    content: PTPmode = 33554432
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.SoftLimitMinExceeded
+  commentId: F:TwinSharp.NC.StateDWordFlags.SoftLimitMinExceeded
+  id: SoftLimitMinExceeded
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: SoftLimitMinExceeded
+  nameWithType: StateDWordFlags.SoftLimitMinExceeded
+  fullName: TwinSharp.NC.StateDWordFlags.SoftLimitMinExceeded
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SoftLimitMinExceeded
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 934
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Position software limit switch minimum is exceeded (from TC 2.10 Build 1327)
+  example: []
+  syntax:
+    content: SoftLimitMinExceeded = 67108864
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.SoftLimitMaxExceeded
+  commentId: F:TwinSharp.NC.StateDWordFlags.SoftLimitMaxExceeded
+  id: SoftLimitMaxExceeded
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: SoftLimitMaxExceeded
+  nameWithType: StateDWordFlags.SoftLimitMaxExceeded
+  fullName: TwinSharp.NC.StateDWordFlags.SoftLimitMaxExceeded
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SoftLimitMaxExceeded
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 937
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Position software limit switch maximum is exceeded (from TC 2.10 Build 1327)
+  example: []
+  syntax:
+    content: SoftLimitMaxExceeded = 134217728
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.DriveDeviceError
+  commentId: F:TwinSharp.NC.StateDWordFlags.DriveDeviceError
+  id: DriveDeviceError
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: DriveDeviceError
+  nameWithType: StateDWordFlags.DriveDeviceError
+  fullName: TwinSharp.NC.StateDWordFlags.DriveDeviceError
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DriveDeviceError
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 940
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Hardware drive device error (no warning), interpretation only possible when drive is data exchanging, e.g. EtherCAT "OP"-state
+  example: []
+  syntax:
+    content: DriveDeviceError = 268435456
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.MotionCommandsLocked
+  commentId: F:TwinSharp.NC.StateDWordFlags.MotionCommandsLocked
+  id: MotionCommandsLocked
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: MotionCommandsLocked
+  nameWithType: StateDWordFlags.MotionCommandsLocked
+  fullName: TwinSharp.NC.StateDWordFlags.MotionCommandsLocked
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MotionCommandsLocked
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 943
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is locked for motion commands (TcMc2)
+  example: []
+  syntax:
+    content: MotionCommandsLocked = 536870912
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.IoDataInvalid
+  commentId: F:TwinSharp.NC.StateDWordFlags.IoDataInvalid
+  id: IoDataInvalid
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: IoDataInvalid
+  nameWithType: StateDWordFlags.IoDataInvalid
+  fullName: TwinSharp.NC.StateDWordFlags.IoDataInvalid
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: IoDataInvalid
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 946
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: IO data invalid (e.g. 'WcState' or 'CdlState')
+  example: []
+  syntax:
+    content: IoDataInvalid = 1073741824
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+- uid: TwinSharp.NC.StateDWordFlags.Error
+  commentId: F:TwinSharp.NC.StateDWordFlags.Error
+  id: Error
+  parent: TwinSharp.NC.StateDWordFlags
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: StateDWordFlags.Error
+  fullName: TwinSharp.NC.StateDWordFlags.Error
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Error
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 949
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Axis is in a fault state
+  example: []
+  syntax:
+    content: Error = 2147483648
+    return:
+      type: TwinSharp.NC.StateDWordFlags
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.StateDWordFlags
+  commentId: T:TwinSharp.NC.StateDWordFlags
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.StateDWordFlags.html
+  name: StateDWordFlags
+  nameWithType: StateDWordFlags
+  fullName: TwinSharp.NC.StateDWordFlags

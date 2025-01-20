@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.NC.InterpolationTraceMode
+  commentId: T:TwinSharp.NC.InterpolationTraceMode
+  id: InterpolationTraceMode
+  parent: TwinSharp.NC
+  children:
+  - TwinSharp.NC.InterpolationTraceMode.TraceLineNumbers
+  - TwinSharp.NC.InterpolationTraceMode.TraceOff
+  - TwinSharp.NC.InterpolationTraceMode.TraceSource
+  langs:
+  - csharp
+  - vb
+  name: InterpolationTraceMode
+  nameWithType: InterpolationTraceMode
+  fullName: TwinSharp.NC.InterpolationTraceMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpolationTraceMode
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 170
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Enumeration of the different types of interpolation trace modes that exist in TwinCAT NC.
+  example: []
+  syntax:
+    content: public enum InterpolationTraceMode
+    content.vb: Public Enum InterpolationTraceMode
+- uid: TwinSharp.NC.InterpolationTraceMode.TraceOff
+  commentId: F:TwinSharp.NC.InterpolationTraceMode.TraceOff
+  id: TraceOff
+  parent: TwinSharp.NC.InterpolationTraceMode
+  langs:
+  - csharp
+  - vb
+  name: TraceOff
+  nameWithType: InterpolationTraceMode.TraceOff
+  fullName: TwinSharp.NC.InterpolationTraceMode.TraceOff
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TraceOff
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 173
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Trace off
+  example: []
+  syntax:
+    content: TraceOff = 0
+    return:
+      type: TwinSharp.NC.InterpolationTraceMode
+- uid: TwinSharp.NC.InterpolationTraceMode.TraceLineNumbers
+  commentId: F:TwinSharp.NC.InterpolationTraceMode.TraceLineNumbers
+  id: TraceLineNumbers
+  parent: TwinSharp.NC.InterpolationTraceMode
+  langs:
+  - csharp
+  - vb
+  name: TraceLineNumbers
+  nameWithType: InterpolationTraceMode.TraceLineNumbers
+  fullName: TwinSharp.NC.InterpolationTraceMode.TraceLineNumbers
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TraceLineNumbers
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 176
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Trace line numbers
+  example: []
+  syntax:
+    content: TraceLineNumbers = 1
+    return:
+      type: TwinSharp.NC.InterpolationTraceMode
+- uid: TwinSharp.NC.InterpolationTraceMode.TraceSource
+  commentId: F:TwinSharp.NC.InterpolationTraceMode.TraceSource
+  id: TraceSource
+  parent: TwinSharp.NC.InterpolationTraceMode
+  langs:
+  - csharp
+  - vb
+  name: TraceSource
+  nameWithType: InterpolationTraceMode.TraceSource
+  fullName: TwinSharp.NC.InterpolationTraceMode.TraceSource
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/NC/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TraceSource
+    path: ../TwinSharp/NC/Enums.cs
+    startLine: 179
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.NC
+  summary: Trace Source
+  example: []
+  syntax:
+    content: TraceSource = 2
+    return:
+      type: TwinSharp.NC.InterpolationTraceMode
+references:
+- uid: TwinSharp.NC
+  commentId: N:TwinSharp.NC
+  href: TwinSharp.html
+  name: TwinSharp.NC
+  nameWithType: TwinSharp.NC
+  fullName: TwinSharp.NC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.NC
+    name: NC
+    href: TwinSharp.NC.html
+- uid: TwinSharp.NC.InterpolationTraceMode
+  commentId: T:TwinSharp.NC.InterpolationTraceMode
+  parent: TwinSharp.NC
+  href: TwinSharp.NC.InterpolationTraceMode.html
+  name: InterpolationTraceMode
+  nameWithType: InterpolationTraceMode
+  fullName: TwinSharp.NC.InterpolationTraceMode
