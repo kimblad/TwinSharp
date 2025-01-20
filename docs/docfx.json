@@ -38,9 +38,9 @@
     ],
     "globalMetadata": {
       "_appName": "TwinSharp",
-      "_appTitle": "TwinSharp",
+      "_appTitle": "TwinSharp Documentation",
       "_enableSearch": true,
-      "pdf": true
+      "pdf": false
     }
   }
 }
