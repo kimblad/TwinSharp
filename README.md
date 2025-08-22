@@ -9,10 +9,10 @@ Here's a custom user control built using TwinSharp. It mimics the "Axis online" 
 ![online-view](https://github.com/user-attachments/assets/88c7e236-9325-401d-b033-34c99c4f91be)
 
 
-Here's a list of some major components that can be viewed, altered and controlled with TwinSharp. For a full list, please refer to the documentation or ask :)
+Here's a list of some major components that can be viewed, altered and controlled with TwinSharp. For a full list, please refer to the [documentation](https://kimblad.github.io/TwinSharp/api/TwinSharp.html) or ask :)
 
 
-## EtherCAT
+## [EtherCAT](https://kimblad.github.io/TwinSharp/api/TwinSharp.EtherCatMaster.html)
  - List all EtherCAT masters that exists in a local or remote system.
  - Get information about all configured EtherCAT slaves.
  - Get information about all connected EtherCAT slaves.
@@ -27,7 +27,7 @@ var tcSystem = new TcSystem(target);
 var masters = tcSystem.ListEtherCatMasters();
 ```
 
-## Realtime system
+## [Realtime system](https://kimblad.github.io/TwinSharp/api/TwinSharp.Realtime.html)
  - Read and set the number of shared/isolated cores.
  - Read the CPU usage.
  - Read the TwinCAT system CPU latency.
@@ -39,7 +39,7 @@ var tcSystem = new TcSystem(target);
 var realtime = tcSystem.Realtime;
 ```
 
-## PLC
+## [PLC](https://kimblad.github.io/TwinSharp/api/TwinSharp.PLC.html)
  - Start, stop and reset a PLC on the local or remote TwinCAT system.
  - Read the number of "online changes" in the PLC.
  - Read if Windows is in a BSOD.
@@ -54,7 +54,7 @@ plcClient.Connect(AmsPort.PlcRuntime_851);
 var plc = new PLC(plcClient);
 ```
    
-## NC Motion
+## [NC Motion](https://kimblad.github.io/TwinSharp/api/TwinSharp.NC.html)
  - View all available axes on a TwinCAT system.
  - Command motion to axes.
  - Couple axes.
@@ -71,7 +71,7 @@ var target = AmsNetId.Local;
 var nc = new NC(target);
 ```
 
-## IPC
+## [IPC](https://kimblad.github.io/TwinSharp/api/TwinSharp.IPC.html)
 The IPC class describes a Beckhoff Industrial PC.
  - Read temperatures of CPU and main board.
  - Read the boot count and current uptime.
@@ -91,7 +91,7 @@ var target = AmsNetId.Local;
 var ipc = new IPC(target);
 ```
 
-## File system
+## [File system](https://kimblad.github.io/TwinSharp/api/TwinSharp.FileSystem.html)
  - Create, delete, rename, view or write files and folders on a TwinCAT system.
  - Search for files.
  - View file properties and attributes.
@@ -104,7 +104,7 @@ var tcSystem = new TcSystem(target);
 var fileSystem = tcSystem.FileSystem;
 ```
 
-## License system
+## [License system](https://kimblad.github.io/TwinSharp/api/TwinSharp.License.html)
  - Get a list of valid licenses that exists on a remote or local target.
  - Get a list of invalid licenses.
 
@@ -130,6 +130,11 @@ Clone/download this project and build with Visual Studio. Or get the NuGet packa
 # Additional info
 Development has been focused on TwinCAT 3 systems.
 
+Useful resources have been:
+ - InfoSys [Spec of the NC](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_ads_intro/713061899.html&id=4266053388574064834).
+ - InfoSys [IPC Information Model](https://infosys.beckhoff.com/content/1033/devicemanager/262978315.html?id=2272923899604552966)
+ - [ADS Monitor](https://www.beckhoff.com/en-en/products/automation/twincat/tfxxxx-twincat-3-functions/tf6xxx-connectivity/tf6010.html) for anything not found in official documentation.
+ 
 This project is not affiliated or endorsed with Beckhoff in any way. I'm simply a guy who love all stuff Beckhoff/EtherCAT and try to make it available to as many as possible.
 
 Beckhoff®, TwinCAT®, TwinCAT/BSD®, TC/BSD®, EtherCAT®, EtherCAT G®, EtherCAT G10®, EtherCAT P®, Safety over EtherCAT®, TwinSAFE®, XFC®, XTS® and XPlanar® are registered trademarks of and licensed by Beckhoff Automation GmbH. 
