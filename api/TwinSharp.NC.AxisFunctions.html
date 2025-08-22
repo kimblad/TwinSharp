@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AxisFunctions | TwinSharp Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AxisFunctions | TwinSharp Documentation ">
+      
+      <meta name="description" content="The AxisFunctions class provides a set of methods to control and manage the behavior of an axis in a TwinCAT NC system. It allows for operations such as resetting, stopping, referencing, and setting positions of the axis. Additionally, it supports advanced operations like controlled ramps, emergency stops, reversing operations, and sinus oscillation sequences. The class interacts with the TwinCAT system using an AdsClient to send commands and data to the specified axis.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_NC_AxisFunctions.md&amp;value=---%0Auid%3A%20TwinSharp.NC.AxisFunctions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.NC.AxisFunctions">
+
+
+
+  <h1 id="TwinSharp_NC_AxisFunctions" data-uid="TwinSharp.NC.AxisFunctions" class="text-break">
+Class AxisFunctions  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.NC.html">NC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The AxisFunctions class provides a set of methods to control and manage the behavior of an axis in a TwinCAT NC system.
+It allows for operations such as resetting, stopping, referencing, and setting positions of the axis.
+Additionally, it supports advanced operations like controlled ramps, emergency stops, reversing operations, and sinus oscillation sequences.
+The class interacts with the TwinCAT system using an AdsClient to send commands and data to the specified axis.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AxisFunctions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AxisFunctions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TwinSharp_NC_AxisFunctions_ActivateCompleteAxis_" data-uid="TwinSharp.NC.AxisFunctions.ActivateCompleteAxis*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_ActivateCompleteAxis" data-uid="TwinSharp.NC.AxisFunctions.ActivateCompleteAxis">
+  ActivateCompleteAxis()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activate complete axis (enable)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActivateCompleteAxis()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_ActivateDriveOutput_" data-uid="TwinSharp.NC.AxisFunctions.ActivateDriveOutput*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_ActivateDriveOutput" data-uid="TwinSharp.NC.AxisFunctions.ActivateDriveOutput">
+  ActivateDriveOutput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activate drive output (enable).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActivateDriveOutput()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_ChangeDriveOutput_" data-uid="TwinSharp.NC.AxisFunctions.ChangeDriveOutput*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_ChangeDriveOutput_TwinSharp_NC_DriveOutputStartType_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.ChangeDriveOutput(TwinSharp.NC.DriveOutputStartType,System.Double)">
+  ChangeDriveOutput(DriveOutputStartType, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change the drive output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeDriveOutput(DriveOutputStartType startType, double newValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startType</code> <a class="xref" href="TwinSharp.NC.DriveOutputStartType.html">DriveOutputStartType</a></dt>
+    <dd></dd>
+    <dt><code>newValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Required output value (e.g. %)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_ClearAxisTask_" data-uid="TwinSharp.NC.AxisFunctions.ClearAxisTask*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_ClearAxisTask" data-uid="TwinSharp.NC.AxisFunctions.ClearAxisTask">
+  ClearAxisTask()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear axis (task)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearAxisTask()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_DeactivateCompleteAxis_" data-uid="TwinSharp.NC.AxisFunctions.DeactivateCompleteAxis*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_DeactivateCompleteAxis" data-uid="TwinSharp.NC.AxisFunctions.DeactivateCompleteAxis">
+  DeactivateCompleteAxis()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deactivate complete axis (disable)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeactivateCompleteAxis()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_DeactivateDriveOutput_" data-uid="TwinSharp.NC.AxisFunctions.DeactivateDriveOutput*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_DeactivateDriveOutput" data-uid="TwinSharp.NC.AxisFunctions.DeactivateDriveOutput">
+  DeactivateDriveOutput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deactivate drive output (disable).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeactivateDriveOutput()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_EmergencyStopWithControlledRamp_" data-uid="TwinSharp.NC.AxisFunctions.EmergencyStopWithControlledRamp*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_EmergencyStopWithControlledRamp_System_Double_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.EmergencyStopWithControlledRamp(System.Double,System.Double)">
+  EmergencyStopWithControlledRamp(double, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Emergency stop with controlled ramp</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EmergencyStopWithControlledRamp(double deceleration, double jerk)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>deceleration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Deceleration (must be greater than or equal to the original deceleration)</p>
+</dd>
+    <dt><code>jerk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Jerk (must greater than or equal to the original jerk)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_ExtendedAxisStart_" data-uid="TwinSharp.NC.AxisFunctions.ExtendedAxisStart*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_ExtendedAxisStart_TwinSharp_NC_GroupAxisStartType_System_Double_System_Double_System_Double_System_Double_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.ExtendedAxisStart(TwinSharp.NC.GroupAxisStartType,System.Double,System.Double,System.Double,System.Double,System.Double)">
+  ExtendedAxisStart(GroupAxisStartType, double, double, double, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Extended axis start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExtendedAxisStart(GroupAxisStartType startType, double targetPosition, double requireVelocity, double acceleration = 0, double deceleration = 0, double jerk = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startType</code> <a class="xref" href="TwinSharp.NC.GroupAxisStartType.html">GroupAxisStartType</a></dt>
+    <dd></dd>
+    <dt><code>targetPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>requireVelocity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>acceleration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>0 if internal TwinCAT acceleration should be used.</p>
+</dd>
+    <dt><code>deceleration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>0 if internal TwiNCAT deceleration should be used.</p>
+</dd>
+    <dt><code>jerk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>0 if internal TwinCAT jerk should be used.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_NewEndPositionAxis_" data-uid="TwinSharp.NC.AxisFunctions.NewEndPositionAxis*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_NewEndPositionAxis_TwinSharp_NC_EndPositionType_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.NewEndPositionAxis(TwinSharp.NC.EndPositionType,System.Double)">
+  NewEndPositionAxis(EndPositionType, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set new end position (axis).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NewEndPositionAxis(EndPositionType endPositionType, double newEndPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>endPositionType</code> <a class="xref" href="TwinSharp.NC.EndPositionType.html">EndPositionType</a></dt>
+    <dd></dd>
+    <dt><code>newEndPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>New end position (target position)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_OrientedStop_" data-uid="TwinSharp.NC.AxisFunctions.OrientedStop*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_OrientedStop_System_Double_System_Double_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.OrientedStop(System.Double,System.Double,System.Double)">
+  OrientedStop(double, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Oriented stop (oriented end position). Only for PTP axes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OrientedStop(double moduloEndPosition, double deceleration, double jerk)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>moduloEndPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>deceleration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>jerk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_ReferenceAxis_" data-uid="TwinSharp.NC.AxisFunctions.ReferenceAxis*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_ReferenceAxis" data-uid="TwinSharp.NC.AxisFunctions.ReferenceAxis">
+  ReferenceAxis()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference axis (calibration).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReferenceAxis()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_ReleaseParkingBrake_" data-uid="TwinSharp.NC.AxisFunctions.ReleaseParkingBrake*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_ReleaseParkingBrake_System_UInt16_" data-uid="TwinSharp.NC.AxisFunctions.ReleaseParkingBrake(System.UInt16)">
+  ReleaseParkingBrake(ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L391"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Release parking brake?
+0: automatic activation(default)
+1: mandatorily always released
+Note: Reset to '0' when resetting the axis!</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReleaseParkingBrake(ushort release)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>release</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_Reset_" data-uid="TwinSharp.NC.AxisFunctions.Reset*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_Reset" data-uid="TwinSharp.NC.AxisFunctions.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_SetActualAxisPosition_" data-uid="TwinSharp.NC.AxisFunctions.SetActualAxisPosition*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_SetActualAxisPosition_TwinSharp_NC_ActualPositionType_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.SetActualAxisPosition(TwinSharp.NC.ActualPositionType,System.Double)">
+  SetActualAxisPosition(ActualPositionType, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set actual axis position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActualAxisPosition(ActualPositionType actualPositionType, double actualPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>actualPositionType</code> <a class="xref" href="TwinSharp.NC.ActualPositionType.html">ActualPositionType</a></dt>
+    <dd></dd>
+    <dt><code>actualPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_SetActualPositionOnTheFly_" data-uid="TwinSharp.NC.AxisFunctions.SetActualPositionOnTheFly*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_SetActualPositionOnTheFly_TwinSharp_NC_ActualPositionType_System_Int32_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.SetActualPositionOnTheFly(TwinSharp.NC.ActualPositionType,System.Int32,System.Double)">
+  SetActualPositionOnTheFly(ActualPositionType, int, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set actual axis position on the fly (in motion of the axis)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActualPositionOnTheFly(ActualPositionType positionType, int controlword, double newActualPosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>positionType</code> <a class="xref" href="TwinSharp.NC.ActualPositionType.html">ActualPositionType</a></dt>
+    <dd></dd>
+    <dt><code>controlword</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Control double word, e.g. for &quot;clearing the lag error</p>
+</dd>
+    <dt><code>newActualPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_SetExternalAxisError_" data-uid="TwinSharp.NC.AxisFunctions.SetExternalAxisError*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_SetExternalAxisError_System_UInt32_" data-uid="TwinSharp.NC.AxisFunctions.SetExternalAxisError(System.UInt32)">
+  SetExternalAxisError(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set external axis error (runtime error)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetExternalAxisError(uint errorCode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>errorCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_StandardAxisStart_" data-uid="TwinSharp.NC.AxisFunctions.StandardAxisStart*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_StandardAxisStart_TwinSharp_NC_GroupAxisStartType_System_Double_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.StandardAxisStart(TwinSharp.NC.GroupAxisStartType,System.Double,System.Double)">
+  StandardAxisStart(GroupAxisStartType, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Standard axis start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StandardAxisStart(GroupAxisStartType startType, double endPosition, double velocity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startType</code> <a class="xref" href="TwinSharp.NC.GroupAxisStartType.html">GroupAxisStartType</a></dt>
+    <dd></dd>
+    <dt><code>endPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>velocity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_StartDriveOutput_" data-uid="TwinSharp.NC.AxisFunctions.StartDriveOutput*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_StartDriveOutput_TwinSharp_NC_DriveOutputStartType_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.StartDriveOutput(TwinSharp.NC.DriveOutputStartType,System.Double)">
+  StartDriveOutput(DriveOutputStartType, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start drive output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartDriveOutput(DriveOutputStartType startType, double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startType</code> <a class="xref" href="TwinSharp.NC.DriveOutputStartType.html">DriveOutputStartType</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_StartReversingOperation_" data-uid="TwinSharp.NC.AxisFunctions.StartReversingOperation*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_StartReversingOperation_TwinSharp_NC_GroupAxisStartType_System_Double_System_Double_System_Double_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.StartReversingOperation(TwinSharp.NC.GroupAxisStartType,System.Double,System.Double,System.Double,System.Double)">
+  StartReversingOperation(GroupAxisStartType, double, double, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start reversing operation for positioning (SERVO).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartReversingOperation(GroupAxisStartType startType, double targePosition1, double targetPosition2, double velocity, double idleSeconds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startType</code> <a class="xref" href="TwinSharp.NC.GroupAxisStartType.html">GroupAxisStartType</a></dt>
+    <dd></dd>
+    <dt><code>targePosition1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>targetPosition2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>velocity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>idleSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_StartReversingOperationVelocityJumps_" data-uid="TwinSharp.NC.AxisFunctions.StartReversingOperationVelocityJumps*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_StartReversingOperationVelocityJumps_TwinSharp_NC_GroupAxisStartType_System_Double_System_Double_System_Double_System_Double_System_UInt32_" data-uid="TwinSharp.NC.AxisFunctions.StartReversingOperationVelocityJumps(TwinSharp.NC.GroupAxisStartType,System.Double,System.Double,System.Double,System.Double,System.UInt32)">
+  StartReversingOperationVelocityJumps(GroupAxisStartType, double, double, double, double, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start reversing operation with velocity jumps (SERVO):
+(can be used to determine the velocity step response)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartReversingOperationVelocityJumps(GroupAxisStartType startType, double velocity1, double velocity2, double travelSeconds, double idleSeconds, uint repetitionCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startType</code> <a class="xref" href="TwinSharp.NC.GroupAxisStartType.html">GroupAxisStartType</a></dt>
+    <dd></dd>
+    <dt><code>velocity1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>velocity2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>travelSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>idleSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>repetitionCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_StartSinusOscillationSequence_" data-uid="TwinSharp.NC.AxisFunctions.StartSinusOscillationSequence*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_StartSinusOscillationSequence_System_Double_System_Double_System_Double_System_Double_System_Double_System_Double_System_Double_System_UInt32_" data-uid="TwinSharp.NC.AxisFunctions.StartSinusOscillationSequence(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.UInt32)">
+  StartSinusOscillationSequence(double, double, double, double, double, double, double, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sine oscillation sequence</p>
+<ul>
+<li>used as single sinus oscillation(sinus generator)</li>
+<li>used as sinus oscillation sequence(e.g. for bode plot)</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartSinusOscillationSequence(double baseAmplitude, double baseFrequency, double startAmplitude, double feedConstantMotor, double startFrequency, double stopFrequency, double stepDurationSeconds, uint stepCycles)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>baseAmplitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>baseFrequency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>startAmplitude</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>feedConstantMotor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>startFrequency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>stopFrequency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>stepDurationSeconds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>stepCycles</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_Stop_" data-uid="TwinSharp.NC.AxisFunctions.Stop*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_Stop" data-uid="TwinSharp.NC.AxisFunctions.Stop">
+  Stop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop axis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_StopDriveOutput_" data-uid="TwinSharp.NC.AxisFunctions.StopDriveOutput*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_StopDriveOutput" data-uid="TwinSharp.NC.AxisFunctions.StopDriveOutput">
+  StopDriveOutput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop drive output.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopDriveOutput()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_NC_AxisFunctions_StopWithControlledRamp_" data-uid="TwinSharp.NC.AxisFunctions.StopWithControlledRamp*"></a>
+
+  <h3 id="TwinSharp_NC_AxisFunctions_StopWithControlledRamp_System_Double_System_Double_" data-uid="TwinSharp.NC.AxisFunctions.StopWithControlledRamp(System.Double,System.Double)">
+  StopWithControlledRamp(double, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parameterizable stop (with controlled ramp). Only for PTP axes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopWithControlledRamp(double deceleration, double jerk)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>deceleration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>jerk</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/NC/AxisFunctions.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

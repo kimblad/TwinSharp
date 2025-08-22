@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CncChannel | TwinSharp Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CncChannel | TwinSharp Documentation ">
+      
+      <meta name="description" content="The CncChannel class represents a CNC channel and provides various functionalities to manage and control the CNC operations. It includes properties and methods to interact with different aspects of the CNC, such as operation modes, the interpolator, control commands, contour visualization, feed override, path motion, single block mode, block search, distance to go, data streaming, technology processes, error management, zero offsets, and manual operation. The class also provides properties to read the covered block motion percentage, covered path distance, line count of the NC program, and path feed rates.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_CNC_CncChannel.md&amp;value=---%0Auid%3A%20TwinSharp.CNC.CncChannel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.CNC.CncChannel">
+
+
+
+  <h1 id="TwinSharp_CNC_CncChannel" data-uid="TwinSharp.CNC.CncChannel" class="text-break">
+Class CncChannel  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.CNC.html">CNC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The CncChannel class represents a CNC channel and provides various functionalities to manage and control the CNC operations.
+It includes properties and methods to interact with different aspects of the CNC, such as operation modes, the interpolator, control commands, contour visualization, feed override, path motion, single block mode, block search, distance to go, data streaming, technology processes, error management, zero offsets, and manual operation.
+The class also provides properties to read the covered block motion percentage, covered path distance, line count of the NC program, and path feed rates.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CncChannel : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CncChannel</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="TwinSharp_CNC_CncChannel_Descriptions" data-uid="TwinSharp.CNC.CncChannel.Descriptions">
+  Descriptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a dictionary with object descriptions from the COM task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Dictionary&lt;string, ObjectDescription&gt; Descriptions</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="TwinSharp.CNC.ObjectDescription.html">ObjectDescription</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TwinSharp_CNC_CncChannel_BackwardsOnPath_" data-uid="TwinSharp.CNC.CncChannel.BackwardsOnPath*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_BackwardsOnPath" data-uid="TwinSharp.CNC.CncChannel.BackwardsOnPath">
+  BackwardsOnPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides functions for forward/backward motion on the path. Permits backward motion along the originally programmed path by means of a real-time signal when the NC program is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BackwardsOnPath BackwardsOnPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.BackwardsOnPath.html">BackwardsOnPath</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_BlockSearch_" data-uid="TwinSharp.CNC.CncChannel.BlockSearch*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_BlockSearch" data-uid="TwinSharp.CNC.CncChannel.BlockSearch">
+  BlockSearch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a tool so the operator can start machining at what is called the continuation position at any point in the program. After a program is interrupted (e.g. tool breakage), this is a quick method to reactivate machining at the point of interruption.
+The continuation position can be defined using a number of different block search types(file offset, block counter, block number, etc.).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockSearch BlockSearch { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.BlockSearch.html">BlockSearch</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_ChannelNumber_" data-uid="TwinSharp.CNC.CncChannel.ChannelNumber*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_ChannelNumber" data-uid="TwinSharp.CNC.CncChannel.ChannelNumber">
+  ChannelNumber
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The unique channel number of this CNC channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ChannelNumber { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_ContourVisualization_" data-uid="TwinSharp.CNC.CncChannel.ContourVisualization*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_ContourVisualization" data-uid="TwinSharp.CNC.CncChannel.ContourVisualization">
+  ContourVisualization
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides tools to visualize the contour of NC programs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContourVisualization ContourVisualization { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.ContourVisualization.html">ContourVisualization</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_ControlCommands_" data-uid="TwinSharp.CNC.CncChannel.ControlCommands*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_ControlCommands" data-uid="TwinSharp.CNC.CncChannel.ControlCommands">
+  ControlCommands
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides functions to control the CNC channel. Such as enablind and disabling skip modes. Control of optional stop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ControlCommands ControlCommands { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.ControlCommands.html">ControlCommands</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_CoveredBlockMotionPercent_" data-uid="TwinSharp.CNC.CncChannel.CoveredBlockMotionPercent*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_CoveredBlockMotionPercent" data-uid="TwinSharp.CNC.CncChannel.CoveredBlockMotionPercent">
+  CoveredBlockMotionPercent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Part of the path motion traversed in the current block in relation to the total path.
+If a main axis participates in the motion, the covered path motion is in relation to the block path of the first three axes. If no main axis participates in the motion, the covered path motion is the position lag with the longest motion time in relation to the block path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double CoveredBlockMotionPercent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_CoveredPathDistance_" data-uid="TwinSharp.CNC.CncChannel.CoveredPathDistance*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_CoveredPathDistance" data-uid="TwinSharp.CNC.CncChannel.CoveredPathDistance">
+  CoveredPathDistance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the current distance covered in the NC program since program start or since the last # DISTANCE PROG START CLEAR NC command. The calculation is based on the current position in the current NC block.
+Unit: 0.1 µm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double CoveredPathDistance { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_DataStreaming_" data-uid="TwinSharp.CNC.CncChannel.DataStreaming*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_DataStreaming" data-uid="TwinSharp.CNC.CncChannel.DataStreaming">
+  DataStreaming
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a tool to use Data Streaming. With the incremental specification of motion commands (streaming), the CAD/CAM system or the PLC stipulates the next path segment to be travelled (or even several segments).
+In this way, motion information not previously specified can still be modified until shortly before entering the command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataStreaming DataStreaming { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.DataStreaming.html">DataStreaming</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_DeleteDistanceToGo_" data-uid="TwinSharp.CNC.CncChannel.DeleteDistanceToGo*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_DeleteDistanceToGo" data-uid="TwinSharp.CNC.CncChannel.DeleteDistanceToGo">
+  DeleteDistanceToGo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides function to control the “Delete distance to go” function. It interrupts the actual path motion and starts a short cut by straight line to the target position of next block. The distance to go of the current (interrupted) block is then deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteDistanceToGo DeleteDistanceToGo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.DeleteDistanceToGo.html">DeleteDistanceToGo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_ErrorManager_" data-uid="TwinSharp.CNC.CncChannel.ErrorManager*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_ErrorManager" data-uid="TwinSharp.CNC.CncChannel.ErrorManager">
+  ErrorManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an object useful for error management. You can subscribe to recieve error notifications, reads error messages, and provides functions to acknowledge error.
+When an error is received, it triggers the ErrorRecieved event with detailed error information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorManagement ErrorManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.ErrorManagement.html">ErrorManagement</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_FeedOverride_" data-uid="TwinSharp.CNC.CncChannel.FeedOverride*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_FeedOverride" data-uid="TwinSharp.CNC.CncChannel.FeedOverride">
+  FeedOverride
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides tools to read and control the feed override of this channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FeedOverride FeedOverride { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.FeedOverride.html">FeedOverride</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_Interpolator_" data-uid="TwinSharp.CNC.CncChannel.Interpolator*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_Interpolator" data-uid="TwinSharp.CNC.CncChannel.Interpolator">
+  Interpolator
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides functions to control the interpolator of this channel. Such as the interpolator's state, axis count,
+moved path, velocity, tool life, and more.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Interpolator Interpolator { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.Interpolator.html">Interpolator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_LineCountNcProgram_" data-uid="TwinSharp.CNC.CncChannel.LineCountNcProgram*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_LineCountNcProgram" data-uid="TwinSharp.CNC.CncChannel.LineCountNcProgram">
+  LineCountNcProgram
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The datum indicates the NC program line which is the source of the command just processed by the interpolator.
+The value is derived from the number of NC program lines which the decoder has read since the NC program started. All the lines read the decoder are counted, i.e.repeatedly read lines, empty and comment lines. All commands to the interpolator resulting from decoding a NC program line are assigned to the associated line counter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint LineCountNcProgram { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_ManualOperation_" data-uid="TwinSharp.CNC.CncChannel.ManualOperation*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_ManualOperation" data-uid="TwinSharp.CNC.CncChannel.ManualOperation">
+  ManualOperation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a class that contains settings and functions for the manual operation of the CNC.
+Such as keys, rapid keys and hand wheels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManualOperation ManualOperation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.ManualOperation.html">ManualOperation</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_OperationModeManager_" data-uid="TwinSharp.CNC.CncChannel.OperationModeManager*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_OperationModeManager" data-uid="TwinSharp.CNC.CncChannel.OperationModeManager">
+  OperationModeManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an object that  provides an methods and properties to manage and control the operation modes and states</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OperationModeManager OperationModeManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.OperationModeManager.html">OperationModeManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_PathFeedProgrammed_" data-uid="TwinSharp.CNC.CncChannel.PathFeedProgrammed*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_PathFeedProgrammed" data-uid="TwinSharp.CNC.CncChannel.PathFeedProgrammed">
+  PathFeedProgrammed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Path feed that was was programmed by the F word in the NC program..
+Unit: 1 µm/s</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PathFeedProgrammed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_PathFeedProgrammedWeighted_" data-uid="TwinSharp.CNC.CncChannel.PathFeedProgrammedWeighted*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_PathFeedProgrammedWeighted" data-uid="TwinSharp.CNC.CncChannel.PathFeedProgrammedWeighted">
+  PathFeedProgrammedWeighted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Path feed was programmed in the NC program Weighted by the current real-time influences such as override.
+Unit: 1 µm/s</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double PathFeedProgrammedWeighted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_SingleBlock_" data-uid="TwinSharp.CNC.CncChannel.SingleBlock*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_SingleBlock" data-uid="TwinSharp.CNC.CncChannel.SingleBlock">
+  SingleBlock
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Object that controls single-step mode. When it is active, the machine operator has the option to execute an NC program step by step. The operator releases every NC line one by one. Comment lines or comment blocks and skipped blocks are skipped</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SingleBlock SingleBlock { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.SingleBlock.html">SingleBlock</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_TechnologyProcesses_" data-uid="TwinSharp.CNC.CncChannel.TechnologyProcesses*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_TechnologyProcesses" data-uid="TwinSharp.CNC.CncChannel.TechnologyProcesses">
+  TechnologyProcesses
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an object that provides functions to subscribe to and acknowledge technology processes of this channel. Such as M, H, T and S functions/codes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TechnologyProcesses TechnologyProcesses { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.TechnologyProcesses.html">TechnologyProcesses</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_CncChannel_ZeroOffsets_" data-uid="TwinSharp.CNC.CncChannel.ZeroOffsets*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_ZeroOffsets" data-uid="TwinSharp.CNC.CncChannel.ZeroOffsets">
+  ZeroOffsets
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides functions to control the zero offsets of this channel. Such as setting, reading, and resetting zero offsets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ZeroOffsets ZeroOffsets { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.ZeroOffsets.html">ZeroOffsets</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TwinSharp_CNC_CncChannel_Dispose_" data-uid="TwinSharp.CNC.CncChannel.Dispose*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_Dispose" data-uid="TwinSharp.CNC.CncChannel.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Dispose the CNC channel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

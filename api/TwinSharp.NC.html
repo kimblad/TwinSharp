@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace TwinSharp.NC | TwinSharp Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace TwinSharp.NC | TwinSharp Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.NC">
+
+  <h1 id="TwinSharp_NC" data-uid="TwinSharp.NC" class="text-break">Namespace TwinSharp.NC</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Axis.html">Axis</a></dt>
+      <dd><p>Represents an axis in a TwinCAT NC system, encapsulating its functions, parameters, state, cyclic process data, and associated sub-elements such as encoders, controllers, and drives.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.AxisCyclicProcessData.html">AxisCyclicProcessData</a></dt>
+      <dd><p>The AxisCyclicProcessData class provides properties to interact with the cyclic process data of an axis in a TwinCAT NC system.
+It uses an AdsClient to read and write various control and status parameters of the axis, such as control word, controller enable,
+feed enable, referencing cam, velocity override, operation mode, actual position correction value, and external controller component.
+If the axis is linked to a PLC object, most of these values will be refused.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.AxisFunctions.html">AxisFunctions</a></dt>
+      <dd><p>The AxisFunctions class provides a set of methods to control and manage the behavior of an axis in a TwinCAT NC system.
+It allows for operations such as resetting, stopping, referencing, and setting positions of the axis.
+Additionally, it supports advanced operations like controlled ramps, emergency stops, reversing operations, and sinus oscillation sequences.
+The class interacts with the TwinCAT system using an AdsClient to send commands and data to the specified axis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.AxisParameters.html">AxisParameters</a></dt>
+      <dd><p>Represents the parameters of an axis in a TwinCAT NC system.
+This class provides properties to get and set various parameters of an axis,
+such as ID, name, type, cycle time, physical unit, velocities, monitoring settings,
+error reaction mode, and more. It uses an AdsClient to read and write these parameters
+from a TwinCAT system. The class also includes methods to read all sub-elements like
+encoder IDs, controller IDs, and drive IDs.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.AxisState.html">AxisState</a></dt>
+      <dd><p>Represents the state of an NC axis.
+Provides access to various properties and methods to read and manipulate
+the state of the axis, including position, velocity, acceleration, torque,
+and error codes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Channel.html">Channel</a></dt>
+      <dd><p>Represents a channel in the TwinCAT NC system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ChannelCyclicProcessData.html">ChannelCyclicProcessData</a></dt>
+      <dd><p>The ChannelCyclicProcessData class provides methods to interact with the cyclic process data of a channel in a TwinCAT system.
+It allows reading and writing of speed override values for both the channel axis and the spindle.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ChannelFunctions.html">ChannelFunctions</a></dt>
+      <dd><p>The ChannelFunctions class provides methods to interact with and control NC (Numerical Control) channels
+using an AdsClient. It allows loading NC programs by number or name, starting the interpreter, setting
+the interpreter operation mode, setting paths for subroutines, and controlling the channel with reset,
+stop, retry, and skip functionalities.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ChannelParameters.html">ChannelParameters</a></dt>
+      <dd><p>Represents the parameters of a channel in the TwinCAT NC system.
+This class provides properties to access various channel parameters such as ID, Name, Type, InterpreterType,
+ProgramLoadBufferSize, ProgramNumberJobList, InterpolationLoadLogMode, InterpolationTraceMode,
+RecordAllFeederEntries, NcLoggerLevel, G70Factor, G71Factor, ActivationOfDefaultGcode, and GroupId.
+These properties interact with the TwinCAT ADS client to read and write the respective values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ChannelState.html">ChannelState</a></dt>
+      <dd><p>Represents the state of an NC (Numerical Control) channel, providing access to various channel properties such as error codes, group count, interpreter state, operation mode, and program information using an AdsClient.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Controller.html">Controller</a></dt>
+      <dd><p>Represents a controller in the TwinCAT NC system. This class provides access to the controller's parameters
+and state, allowing for the retrieval and manipulation of various control parameters and state information.
+It interacts with an AdsClient to communicate with the underlying system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ControllerParameters.html">ControllerParameters</a></dt>
+      <dd><p>Represents the parameters of a controller, providing properties to get and set various control parameters
+such as ID, name, type, and control weights. This class interacts with an AdsClient to read and write
+parameter values from a specified index group.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ControllerState.html">ControllerState</a></dt>
+      <dd><p>The ControllerState class provides an interface to interact with a controller's state
+using an AdsClient. It allows reading various parameters of the controller such as
+error state, output in absolute units, output in percent, and output in volts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Drive.html">Drive</a></dt>
+      <dd><p>The Drive class represents a drive in a TwinCAT system. It provides access to the drive's parameters
+and state through the DriveParameters and DriveState classes, respectively. The class is initialized
+with an AdsClient and a drive ID, which are used to interact with the drive's properties and state.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.DriveFunctions.html">DriveFunctions</a></dt>
+      <dd><p>The DriveFunctions class provides methods to interact with and manipulate drive tables.
+It allows for the removal and deletion of characteristic drive tables.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.DriveParameters.html">DriveParameters</a></dt>
+      <dd><p>The DriveParameters class provides an interface to interact with drive parameters
+in a TwinCAT system using the AdsClient. It allows reading and writing various
+properties of a drive such as its ID, name, type, and motor polarity inversion status.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.DriveState.html">DriveState</a></dt>
+      <dd><p>Represents the state of a drive in a TwinCAT system.
+Provides properties to access various drive parameters such as error state, total output in absolute units, percent, and volts.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Encoder.html">Encoder</a></dt>
+      <dd><p>The Encoder class represents an encoder device and provides access to its functions, parameters, and state.
+It uses an AdsClient to communicate with the encoder via the TwinCAT ADS protocol.
+The class contains three main properties:</p>
+<ul>
+<li>Functions: Provides methods to interact with and control the encoder.</li>
+<li>Parameters: Allows reading and writing various encoder settings.</li>
+<li>State: Provides access to various encoder states and properties.</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.EncoderFunctions.html">EncoderFunctions</a></dt>
+      <dd><p>The EncoderFunctions class provides methods to interact with and control encoder devices via the TwinCAT ADS protocol.
+It includes functionalities to set and reinitialize the actual position of the encoder, activate and deactivate touch probes and external latches,
+and set external latch events. The class uses an AdsClient to communicate with the encoder and sends commands using specific index groups and offsets.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.EncoderParameters.html">EncoderParameters</a></dt>
+      <dd><p>The EncoderParameters class provides an interface to interact with encoder parameters via an AdsClient.
+It allows reading and writing various encoder settings such as ID, name, type, scaling factor, position offset,
+count direction, modulo factor, mode, soft end monitoring, soft end positions, evaluation direction, and filter times.
+The class uses an AdsClient to communicate with the encoder and retrieve or update these parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.EncoderState.html">EncoderState</a></dt>
+      <dd><p>The EncoderState class provides access to various encoder states and properties
+through an AdsClient instance. It allows reading and writing of encoder-related
+data such as error codes, actual positions, velocities, accelerations, and other
+relevant metrics.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Group.html">Group</a></dt>
+      <dd><p>Represents a group in the TwinCAT NC system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.GroupFunctions.html">GroupFunctions</a></dt>
+      <dd><p>The GroupFunctions class provides methods to control and manage an axis group in a TwinCAT NC (Numerical Control) system.
+It allows for resetting, stopping, clearing, and performing an emergency stop on the group.
+Additionally, it supports starting and managing FIFO (First In, First Out) operations for the group.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.GroupParameters.html">GroupParameters</a></dt>
+      <dd><p>The GroupParameters class provides access to various parameters of a group in the TwinCAT NC system.
+It allows reading and writing of group-specific settings such as ID, name, type, cycle times, and FIFO configurations.
+This class interacts with the TwinCAT ADS client to perform read and write operations on the group parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.GroupState.html">GroupState</a></dt>
+      <dd><p>The GroupState class provides properties to interact with and retrieve various states and information
+from a TwinCAT NC group via an AdsClient. It includes properties for error codes, axis counts, group states,
+and emergency stop status, among others. Each property reads or writes data from the TwinCAT system using
+specific index groups and offsets.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.NC.html">NC</a></dt>
+      <dd><p>The NC class provides access to the NC (Numerical Control) system using TwinCAT ADS protocol.
+It initializes and manages the Ring0Manager, Axes, Channels, Groups and Tables components.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Ring0Manager.html">Ring0Manager</a></dt>
+      <dd><p>Manages the low level Ring 0 operations for the NC system.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Ring0Parameters.html">Ring0Parameters</a></dt>
+      <dd><p>Represents the parameters for Ring 0, providing access to various settings and configurations
+related to the SAF and SVB tasks, global time compensation, and cyclic data consistency.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Ring0State.html">Ring0State</a></dt>
+      <dd><p>Represents the state of the Ring 0 system, providing access to various counts and IDs
+for channels, groups, axes, encoders, controllers, drives, and tables.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.Table.html">Table</a></dt>
+      <dd><p>The <code>Table</code> class encapsulates various functionalities, parameters, and states related to a table in the context of TwinCAT ADS.
+It provides a structured way to interact with tables, which are likely used for motion control or other automation tasks.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.TableFunctions.html">TableFunctions</a></dt>
+      <dd><p>The TableFunctions class provides methods to generate and delete various types of tables
+with specified dimensions and interpolation types. It interacts with a TwinCAT AdsClient
+to perform these operations. The class supports generating general tables, valve diagram
+tables, and motion function tables, each with specific table types and dimensions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.TableParameters.html">TableParameters</a></dt>
+      <dd><p>The TableParameters class provides methods to interact with table parameters in a TwinCAT ADS system.
+It allows reading and writing various table properties such as ID, Name, SubType, MainType, LineCount, ColumnCount, TotalCount, StepWidth, MasterPeriod, and SlaveDifferencePerMasterPeriod.
+It also provides methods to get and set the activation mode for online changes, read and write single values in the table, and convert slave positions to master positions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.TableState.html">TableState</a></dt>
+      <dd><p>Represents the state of a table in a TwinCAT NC (Numerical Control) system.
+This class provides access to the 'User Counter'.
+It uses an AdsClient to communicate with the TwinCAT system and read the necessary data.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.NCAXISSTATE_ONLINESTRUCT.html">NCAXISSTATE_ONLINESTRUCT</a></dt>
+      <dd><p>AXIS ONLINE STRUCTURE (NC/CNC)</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ActualPositionType.html">ActualPositionType</a></dt>
+      <dd><p>Enumeration of the different types of actual position that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.AxisType.html">AxisType</a></dt>
+      <dd><p>TwinCAT supports different axis types, which are defined in the enum AxisType.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.CamScalingMode.html">CamScalingMode</a></dt>
+      <dd><p>Enumeration of type and scope of the scaling of a cam plate coupling.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ChannelType.html">ChannelType</a></dt>
+      <dd><p>Enumeration of the different types of channels that exists in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ControllerType.html">ControllerType</a></dt>
+      <dd><p>Enumeration of the different types of controllers that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.CoupleState.html">CoupleState</a></dt>
+      <dd><p>Coupling state of the axis</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.DriveOutputStartType.html">DriveOutputStartType</a></dt>
+      <dd><p>Enumeration of the different types of drive output start that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.EncoderEvaluationDirection.html">EncoderEvaluationDirection</a></dt>
+      <dd><p>Specifies the mode of evaluation for encoder signals.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.EncoderMode.html">EncoderMode</a></dt>
+      <dd><p>Enumeration of the different types of encoder modes that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.EncoderType.html">EncoderType</a></dt>
+      <dd><p>Enumeration of all possible encoder types in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.EndPositionType.html">EndPositionType</a></dt>
+      <dd><p>Enumeration of the different types of end position types (new end position) that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ErrorReactionMode.html">ErrorReactionMode</a></dt>
+      <dd><p>Enumeration of the possible error reaction modes that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.FifoInterpolationType.html">FifoInterpolationType</a></dt>
+      <dd><p>Enumeration of the different ways that the TwinCAT NC FIFO can interpolate between supplied points.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.FifoOverrideType.html">FifoOverrideType</a></dt>
+      <dd><p>Determines the behaviour how quickly the FIFO should adapt to a new override.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.GroupAxisStartType.html">GroupAxisStartType</a></dt>
+      <dd><p>Used by NC axis functions such as StandardAxisStart to define the start type of the axis.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.GroupType.html">GroupType</a></dt>
+      <dd><p>Enumeration of all possible group types in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.InterpolationLoadLogMode.html">InterpolationLoadLogMode</a></dt>
+      <dd><p>Enumeration of the different types of interpolation load log modes that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.InterpolationTraceMode.html">InterpolationTraceMode</a></dt>
+      <dd><p>Enumeration of the different types of interpolation trace modes that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.InterpreterOperationMode.html">InterpreterOperationMode</a></dt>
+      <dd><p>Enumeration of the different modes that the TwinCAT NC interpreter can operate in.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.InterpreterState.html">InterpreterState</a></dt>
+      <dd><p>Enumeration of all possible states of the interpreter in TwinCAT NC. The interpreter state reflects the current state of the Interpreter State Machine. The complete list is given below.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.InterpreterType.html">InterpreterType</a></dt>
+      <dd><p>Enumeration of the different types of interpreters that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.html">NCTOPLC_AXIS_REF_OPMODE</a></dt>
+      <dd><p>The AxisControlDWord is a 32 bit data word in the axis interface PLC-&gt;NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.NcDriveType.html">NcDriveType</a></dt>
+      <dd><p>TwinCAT supports different drives, these are defined in the enum DriveType.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.ProbeMode.html">ProbeMode</a></dt>
+      <dd><p>Enumeration of the different types of probe modes that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.SignalEdge.html">SignalEdge</a></dt>
+      <dd><p>Enumeration of the two types of signal edges that exist. Rising edge and falling edge.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.StateDWordFlags.html">StateDWordFlags</a></dt>
+      <dd><p>The StateDWord is a 32 bit data word in the axis interface NC-&gt;PLC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.TableActivationMode.html">TableActivationMode</a></dt>
+      <dd><p>Enumeration of the different types of table activation modes that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.TableInterpolationType.html">TableInterpolationType</a></dt>
+      <dd><p>Interpolation mode for position tables (cam plates). Position tables consist of a list of master and slave positions between which interpolation can take place in different ways.
+The interpolation type is not used for extended cam plates(motion functions).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.TableMainType.html">TableMainType</a></dt>
+      <dd><p>Enumeration of the different types of main tables that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.NC.TableSubType.html">TableSubType</a></dt>
+      <dd><p>Enumeration of the different types of table subtypes that exist in TwinCAT NC.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

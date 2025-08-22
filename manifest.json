@@ -1,0 +1,2038 @@
+{
+  "source_base_path": "C:/prj/TwinSharp/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.AmsRoute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.AmsRoute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisStatusInChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisStatusInChannel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisStatusInChannelAdresses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisStatusInChannelAdresses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.BackwardsOnPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.BackwardsOnPath.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.BlockSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.BlockSearch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.BlockSearchType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.BlockSearchType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.CNC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.CNC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ChannelMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ChannelMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.CncAxis.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.CncAxis.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.CncChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.CncChannel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.CncPlatform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.CncPlatform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ContourVisualization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ContourVisualization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ControlCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ControlCommands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.DataStreaming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.DataStreaming.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.DeleteDistanceToGo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.DeleteDistanceToGo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.DynamicPositionLimitation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.DynamicPositionLimitation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ErrorCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ErrorCodes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ErrorManagement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ErrorManagement.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ErrorRecievedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ErrorRecievedEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ExternalAxisCommanding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ExternalAxisCommanding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.FeedOverride.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.FeedOverride.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.FeedOverrideAdresses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.FeedOverrideAdresses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_ADD_CMD_VALUE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_ADD_CMD_VALUE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_DYNPL_STATE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_DYNPL_STATE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_ERROR_MASKE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_ERROR_MASKE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_ERROR_SATZ.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_ERROR_SATZ.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_ERROR_SATZ_KOPF.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_ERROR_SATZ_RUMPF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_ERROR_SATZ_RUMPF.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_FB_ZEITANGABE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_FB_ZEITANGABE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_HB_ACTIVATION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_HB_ACTIVATION.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_HB_HR_PARAMETER.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_HB_HR_PARAMETER.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_HB_JOG_PARAMETER.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_HB_JOG_PARAMETER.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_HB_KEY.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_HB_KEY.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_HB_RAPID_KEY.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_HB_RAPID_KEY.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_HB_TIP_PARAMETER.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_HB_TIP_PARAMETER.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_IMCM_MODE_STATE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_IMCM_MODE_STATE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_INTF_VERSION_NAME.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_INTF_VERSION_NAME.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_MODUL_NAME.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_MODUL_NAME.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_M_H_PROZESS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_M_H_PROZESS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_PROC_TRANS_TO_MODE_STATE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_PROC_TRANS_TO_MODE_STATE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_RUMPF_NC_PROG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_RUMPF_NC_PROG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_WERT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_WERT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_WERT_B.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_WERT_B.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_WERT_B_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_WERT_B_DATA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_WERT_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_WERT_DATA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HandWheelInc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HandWheelInc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HrParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HrParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.Interpolator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.Interpolator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.InterpolatorAdresses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.InterpolatorAdresses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.JogParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.JogParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.Key.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.Key.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ManualOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ManualOperation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ObjectDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ObjectDescription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.OperationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.OperationMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.OperationModeAdresses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.OperationModeAdresses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.OperationModeManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.OperationModeManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.OperationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.OperationState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.RapidKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.RapidKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_ACHS_DATA_STD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_ACHS_DATA_STD.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_DATA_V0.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_DATA_V0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_PDU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.SOLLKONT_VISU_PDU.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.SingleBlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.SingleBlock.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.SkipModes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.SkipModes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.TECHNO_UNIT_CH.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.TECHNO_UNIT_CH.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.TechnologyFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.TechnologyFunction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.TechnologyProcesses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.TechnologyProcesses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.TipParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.TipParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ZeroOffsets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ZeroOffsets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.Constants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.E_EnumCmdType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.E_EnumCmdType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.E_LicenseHResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.E_LicenseHResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EcDeviceState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EcDeviceState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EcLinkState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EcLinkState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EtherCatDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EtherCatDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EtherCatMaster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EtherCatMaster.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EtherCatSlave.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EtherCatSlave.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcCrcErrorEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcCrcErrorEx.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveConfigData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveConfigData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveIdentity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_PortAddr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_PortAddr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_TopologyDataEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_TopologyDataEx.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCatDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCatDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCatMaster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCatMaster.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ExtendedAdsErrorCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ExtendedAdsErrorCodes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.FileFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.FileFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.FileOpenModeFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.FileOpenModeFlags.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.FileSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.FileSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IPC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IPC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcCpu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcCpu.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcDisplayDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcDisplayDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcFan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcFan.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcMainBoard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcMainBoard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcMemory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcMemory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcMiscellaneous.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcMiscellaneous.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcNIC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcNIC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcOperatingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcOperatingSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcTime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcTwinCAT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcTwinCAT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.IpcUps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.IpcUps.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.IPC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.IPC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.License.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.License.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ActualPositionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ActualPositionType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Axis.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Axis.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.AxisCyclicProcessData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.AxisCyclicProcessData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.AxisFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.AxisFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.AxisParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.AxisParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.AxisState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.AxisState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.AxisType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.AxisType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.CamScalingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.CamScalingMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Channel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Channel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ChannelCyclicProcessData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ChannelCyclicProcessData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ChannelFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ChannelFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ChannelParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ChannelParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ChannelState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ChannelState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ChannelType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ChannelType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Controller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Controller.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ControllerParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ControllerParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ControllerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ControllerState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ControllerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ControllerType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.CoupleState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.CoupleState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Drive.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Drive.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.DriveFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.DriveFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.DriveOutputStartType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.DriveOutputStartType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.DriveParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.DriveParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.DriveState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.DriveState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Encoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Encoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.EncoderEvaluationDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.EncoderEvaluationDirection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.EncoderFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.EncoderFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.EncoderMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.EncoderMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.EncoderParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.EncoderParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.EncoderState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.EncoderState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.EncoderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.EncoderType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.EndPositionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.EndPositionType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ErrorReactionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ErrorReactionMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.FifoInterpolationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.FifoInterpolationType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.FifoOverrideType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.FifoOverrideType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Group.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Group.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.GroupAxisStartType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.GroupAxisStartType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.GroupFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.GroupFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.GroupParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.GroupParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.GroupState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.GroupState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.GroupType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.GroupType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.InterpolationLoadLogMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.InterpolationLoadLogMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.InterpolationTraceMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.InterpolationTraceMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.InterpreterOperationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.InterpreterOperationMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.InterpreterState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.InterpreterState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.InterpreterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.InterpreterType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.NC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.NC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.NCAXISSTATE_ONLINESTRUCT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.NCAXISSTATE_ONLINESTRUCT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.NCTOPLC_AXIS_REF_OPMODE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.NcDriveType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.NcDriveType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.ProbeMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.ProbeMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Ring0Manager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Ring0Manager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Ring0Parameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Ring0Parameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Ring0State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Ring0State.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.SignalEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.SignalEdge.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.StateDWordFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.StateDWordFlags.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.Table.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.Table.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.TableActivationMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.TableActivationMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.TableFunctions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.TableFunctions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.TableInterpolationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.TableInterpolationType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.TableMainType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.TableMainType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.TableParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.TableParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.TableState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.TableState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.TableSubType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.TableSubType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.NC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.NC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.PLC.PLC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.PLC.PLC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.PLC.PlcAppSystemInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.PLC.PlcAppSystemInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.PLC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.PLC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.RTimeCpuLatency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.RTimeCpuLatency.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.RTimeCpuSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.RTimeCpuSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.Realtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.Realtime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_CheckLicense.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_CheckLicense.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_EcSlaveConfigData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_EcSlaveConfigData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_EcSlaveIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_EcSlaveIdentity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_EcSlaveState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_EcSlaveState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_FileAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_FileAttributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_FindFileEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_FindFileEntry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_PortAddr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_PortAddr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.ST_TopologyDataEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.ST_TopologyDataEx.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.Scope.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.Scope.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.SumReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.SumReader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.TcSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.TcSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
