@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Beckhoff.TwinCAT.Ads" Version="6.1.290" />
-	  <None Include="..\README.md" Pack="true" PackagePath="\"/>  
+	  <None Include="..\README.md" Pack="true" PackagePath="\" />  
   </ItemGroup>
 
   <ItemGroup>

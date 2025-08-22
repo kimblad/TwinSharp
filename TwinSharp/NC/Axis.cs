@@ -84,7 +84,7 @@ namespace TwinSharp.NC
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Axis {Parameters.Name}";
+            return Parameters.Name;
         }
 
     }

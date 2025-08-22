@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using TwinCAT.Ads;
 
-namespace TwinSharp
+namespace TwinSharp.EtherCAT
 {
 
     /// <summary>
@@ -60,7 +60,7 @@ namespace TwinSharp
         /// <summary>
         /// Can be used to read the current state of the EtherCAT master. Corresponds to the PLC FB: FB_EcGetMasterDevState 
         /// </summary>
-        public ushort MasterDevState
+        public ushort DevState
         {
             get => client.ReadAny<ushort>(0x45, 0x0);
         }
@@ -71,7 +71,7 @@ namespace TwinSharp
         /// </summary>
         /// <param name="masterDevState"></param>
         /// <returns></returns>
-        public string MasterDevStateToString(ushort masterDevState)
+        public string DevStateToString(ushort masterDevState)
         {
             if (masterDevState == 0)
             {
@@ -204,7 +204,7 @@ namespace TwinSharp
 
             for (ushort i = 0; i < numberOfConfiguredSlaves; i++)
             {
-                index = baseIndex + (i * indexIncrement);
+                index = baseIndex + i * indexIncrement;
                 
                 byte[] descriptionBytes = new byte[80];
                 var readBuffer = new Memory<byte>(descriptionBytes);
@@ -253,7 +253,6 @@ namespace TwinSharp
         public ST_EcSlaveState[] GetAllSlaveStates()
         {
             const int slaveStateSize = 2; //ST_EcSlaveState is 2 bytes long
-
             uint slaveCount = SlaveCount;
 
             byte[] buffer = new byte[slaveCount * slaveStateSize];
@@ -303,6 +302,71 @@ namespace TwinSharp
 
             return topologyInfos;
         }
+
+        /// <summary>
+        /// Can be used to read the EtherCAT state of the master. Equivavalent to the function block FB_EcGetMasterState.
+        /// </summary>
+        public EcDeviceState State
+        {
+            get => (EcDeviceState)client.ReadAny<ushort>(0x3, 0x100);
+        }
+
+        /// <summary>
+        /// With this function the EtherCAT state of a master device can be requested. Equivavalent to the function block FB_EcReqMasterState.
+        /// </summary>
+        /// <param name="state"></param>
+        public void RequestState(EcDeviceState state)
+        {
+            //Length is 0 bytes. State corresponds to the index offset that gets the write.
+            client.WriteAny(0x3, (uint)state);
+        }
+
+        /// <summary>
+        /// Allows the addresses of all the slaves connected to the master to be read. Equivavalent to the FB_EcGetAllSlaveAddr function block.
+        /// </summary>
+        /// <returns></returns>
+        public ushort[] GetAllSlaveAddr()
+        {
+            return client.ReadAny<ushort[]>(0x7, 0x0, [(int)SlaveCount]);
+        }
+
+        /// <summary>
+        /// Can be used to determine the number of EtherCAT frames configured in the master. Equivavalent to the function block FB_EcMasterFrameCount.
+        /// </summary>
+        public uint FrameCount
+        {
+            get => client.ReadAny<uint>(0x48, 0x0);
+        }
+
+
+        /// <summary>
+        /// Can be used to delete the CRC error counters of all EtherCAT slaves. Equivavalent to the function block FB_EcMasterFrameStatisticClearCRC.
+        /// </summary>
+        public void FrameStatisticClearCRC()
+        {
+            client.Write(0x12, 0x0);
+        }
+
+        /// <summary>
+        /// Can be used to delete the lost frame counters. Equivavalent to the function block FB_EcMasterFrameStatisticClearFrames.
+        /// </summary>
+        public void FrameStatisticClearFrames()
+        {
+            client.Write(0xC, 0x0);
+        }
+
+
+        /// <summary>
+        /// Gets an EtherCAT slave to this master by its address.
+        /// </summary>
+        /// <param name="slaveAdress">Typically starts at 1001.</param>
+        /// <returns></returns>
+        public EtherCatSlave GetSlave(ushort slaveAdress)
+        {
+            return new EtherCatSlave(client, slaveAdress);
+        }
+
+
 
         /// <summary>
         /// Returns a string representation of the EtherCAT master. 

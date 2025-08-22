@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwinSharp", "TwinSharp\TwinSharp.csproj", "{7B4588F3-F546-4105-908D-CFDDD90AE850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwinSharpControls", "TwinSharpControls\TwinSharpControls.csproj", "{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{7B4588F3-F546-4105-908D-CFDDD90AE850}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B4588F3-F546-4105-908D-CFDDD90AE850}.Release|x86.ActiveCfg = Release|x86
 		{7B4588F3-F546-4105-908D-CFDDD90AE850}.Release|x86.Build.0 = Release|x86
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Debug|x86.Build.0 = Debug|Any CPU
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Release|x86.ActiveCfg = Release|Any CPU
+		{2B941BDC-78B4-4D0E-BFB6-CDFC7D534BEE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,7 @@
 using System.Xml;
 using TwinCAT.Ads;
 using System.Globalization;
+using TwinSharp.EtherCAT;
 
 namespace TwinSharp
 {

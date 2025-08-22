@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using TwinCAT.Ads;
 
-namespace TwinSharp
+namespace TwinSharp.EtherCAT
 {
     /// <summary>
     /// Describes an EtherCAT device, using all standard objects as defined from the EtherCAT standard.
@@ -93,29 +93,6 @@ namespace TwinSharp
         public uint SerialNumber
         {
             get => client.ReadAny<uint>(indexGroup, CombineIndexAndSubIndex(0x1018, 0x4));
-        }
-
-        /// <summary>
-        /// Write any object to the CoE object dictionary.
-        /// </summary>
-        /// <param name="index"></param>
-        /// <param name="subIndex"></param>
-        /// <param name="value"></param>
-        public void CoeWriteAny(uint index, uint subIndex, object value)
-        {
-            client.WriteAny(indexGroup, CombineIndexAndSubIndex(index, subIndex), value);
-        }
-
-        /// <summary>
-        /// Read any object from the CoE object dictionary.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="index"></param>
-        /// <param name="subIndex"></param>
-        /// <returns></returns>
-        public T CoeReadAny<T>(uint index, uint subIndex)
-        {
-            return client.ReadAny<T>(indexGroup, CombineIndexAndSubIndex(index, subIndex));
         }
 
 
