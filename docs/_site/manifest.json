@@ -802,6 +802,126 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EcDeviceState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EcDeviceState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EcLinkState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EcLinkState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EtherCatDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EtherCatDevice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EtherCatMaster.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EtherCatMaster.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.EtherCatSlave.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.EtherCatSlave.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcCrcErrorEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcCrcErrorEx.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveConfigData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveConfigData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveIdentity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_EcSlaveState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_PortAddr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_PortAddr.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.ST_TopologyDataEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.ST_TopologyDataEx.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.EtherCAT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.EtherCAT.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.EtherCatDevice.yml",
       "output": {
         ".html": {

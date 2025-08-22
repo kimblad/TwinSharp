@@ -16,12 +16,6 @@ items:
   - uid: TwinSharp.E_LicenseHResult
     name: E_LicenseHResult
     type: Enum
-  - uid: TwinSharp.EtherCatDevice
-    name: EtherCatDevice
-    type: Class
-  - uid: TwinSharp.EtherCatMaster
-    name: EtherCatMaster
-    type: Class
   - uid: TwinSharp.ExtendedAdsErrorCodes
     name: ExtendedAdsErrorCodes
     type: Enum
@@ -52,26 +46,11 @@ items:
   - uid: TwinSharp.ST_CheckLicense
     name: ST_CheckLicense
     type: Struct
-  - uid: TwinSharp.ST_EcSlaveConfigData
-    name: ST_EcSlaveConfigData
-    type: Struct
-  - uid: TwinSharp.ST_EcSlaveIdentity
-    name: ST_EcSlaveIdentity
-    type: Struct
-  - uid: TwinSharp.ST_EcSlaveState
-    name: ST_EcSlaveState
-    type: Struct
   - uid: TwinSharp.ST_FileAttributes
     name: ST_FileAttributes
     type: Struct
   - uid: TwinSharp.ST_FindFileEntry
     name: ST_FindFileEntry
-    type: Struct
-  - uid: TwinSharp.ST_PortAddr
-    name: ST_PortAddr
-    type: Struct
-  - uid: TwinSharp.ST_TopologyDataEx
-    name: ST_TopologyDataEx
     type: Struct
   - uid: TwinSharp.Scope
     name: Scope
@@ -308,6 +287,43 @@ items:
   - uid: TwinSharp.CNC.ZeroOffsets
     name: ZeroOffsets
     type: Class
+- uid: TwinSharp.EtherCAT
+  name: TwinSharp.EtherCAT
+  type: Namespace
+  items:
+  - uid: TwinSharp.EtherCAT.EcDeviceState
+    name: EcDeviceState
+    type: Enum
+  - uid: TwinSharp.EtherCAT.EcLinkState
+    name: EcLinkState
+    type: Enum
+  - uid: TwinSharp.EtherCAT.EtherCatDevice
+    name: EtherCatDevice
+    type: Class
+  - uid: TwinSharp.EtherCAT.EtherCatMaster
+    name: EtherCatMaster
+    type: Class
+  - uid: TwinSharp.EtherCAT.EtherCatSlave
+    name: EtherCatSlave
+    type: Class
+  - uid: TwinSharp.EtherCAT.ST_EcCrcErrorEx
+    name: ST_EcCrcErrorEx
+    type: Struct
+  - uid: TwinSharp.EtherCAT.ST_EcSlaveConfigData
+    name: ST_EcSlaveConfigData
+    type: Struct
+  - uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+    name: ST_EcSlaveIdentity
+    type: Struct
+  - uid: TwinSharp.EtherCAT.ST_EcSlaveState
+    name: ST_EcSlaveState
+    type: Struct
+  - uid: TwinSharp.EtherCAT.ST_PortAddr
+    name: ST_PortAddr
+    type: Struct
+  - uid: TwinSharp.EtherCAT.ST_TopologyDataEx
+    name: ST_TopologyDataEx
+    type: Struct
 - uid: TwinSharp.IPC
   name: TwinSharp.IPC
   type: Namespace

@@ -1,0 +1,321 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.EtherCAT.EcDeviceState
+  commentId: T:TwinSharp.EtherCAT.EcDeviceState
+  id: EcDeviceState
+  parent: TwinSharp.EtherCAT
+  children:
+  - TwinSharp.EtherCAT.EcDeviceState.BootStrap
+  - TwinSharp.EtherCAT.EcDeviceState.Disabled
+  - TwinSharp.EtherCAT.EcDeviceState.Error
+  - TwinSharp.EtherCAT.EcDeviceState.Init
+  - TwinSharp.EtherCAT.EcDeviceState.InitCmdError
+  - TwinSharp.EtherCAT.EcDeviceState.InvalidVprs
+  - TwinSharp.EtherCAT.EcDeviceState.Op
+  - TwinSharp.EtherCAT.EcDeviceState.PreOp
+  - TwinSharp.EtherCAT.EcDeviceState.SafeOp
+  langs:
+  - csharp
+  - vb
+  name: EcDeviceState
+  nameWithType: EcDeviceState
+  fullName: TwinSharp.EtherCAT.EcDeviceState
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EcDeviceState
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 11
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: 'EtherCAT state of a slave. The status can adopt one of the following values:'
+  example: []
+  syntax:
+    content: 'public enum EcDeviceState : ushort'
+    content.vb: Public Enum EcDeviceState As UShort
+- uid: TwinSharp.EtherCAT.EcDeviceState.Init
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.Init
+  id: Init
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: Init
+  nameWithType: EcDeviceState.Init
+  fullName: TwinSharp.EtherCAT.EcDeviceState.Init
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Init
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 14
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Init state
+  example: []
+  syntax:
+    content: Init = 1
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.PreOp
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.PreOp
+  id: PreOp
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: PreOp
+  nameWithType: EcDeviceState.PreOp
+  fullName: TwinSharp.EtherCAT.EcDeviceState.PreOp
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PreOp
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 17
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Pre-operational state
+  example: []
+  syntax:
+    content: PreOp = 2
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.BootStrap
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.BootStrap
+  id: BootStrap
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: BootStrap
+  nameWithType: EcDeviceState.BootStrap
+  fullName: TwinSharp.EtherCAT.EcDeviceState.BootStrap
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BootStrap
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 20
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Bootstrap state
+  example: []
+  syntax:
+    content: BootStrap = 3
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.SafeOp
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.SafeOp
+  id: SafeOp
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: SafeOp
+  nameWithType: EcDeviceState.SafeOp
+  fullName: TwinSharp.EtherCAT.EcDeviceState.SafeOp
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SafeOp
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 23
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Safe-operational state
+  example: []
+  syntax:
+    content: SafeOp = 4
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.Op
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.Op
+  id: Op
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: Op
+  nameWithType: EcDeviceState.Op
+  fullName: TwinSharp.EtherCAT.EcDeviceState.Op
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Op
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 26
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Operational state
+  example: []
+  syntax:
+    content: Op = 8
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.Error
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.Error
+  id: Error
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: EcDeviceState.Error
+  fullName: TwinSharp.EtherCAT.EcDeviceState.Error
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Error
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 30
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: State machine error in the EtherCAT slave.
+  example: []
+  syntax:
+    content: Error = 16
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.InvalidVprs
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.InvalidVprs
+  id: InvalidVprs
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: InvalidVprs
+  nameWithType: EcDeviceState.InvalidVprs
+  fullName: TwinSharp.EtherCAT.EcDeviceState.InvalidVprs
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InvalidVprs
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 33
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Invalid vendor ID, product code, revision number or serial number.
+  example: []
+  syntax:
+    content: InvalidVprs = 32
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.InitCmdError
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.InitCmdError
+  id: InitCmdError
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: InitCmdError
+  nameWithType: EcDeviceState.InitCmdError
+  fullName: TwinSharp.EtherCAT.EcDeviceState.InitCmdError
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InitCmdError
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 36
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Error during sending of initialization commands.
+  example: []
+  syntax:
+    content: InitCmdError = 64
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcDeviceState.Disabled
+  commentId: F:TwinSharp.EtherCAT.EcDeviceState.Disabled
+  id: Disabled
+  parent: TwinSharp.EtherCAT.EcDeviceState
+  langs:
+  - csharp
+  - vb
+  name: Disabled
+  nameWithType: EcDeviceState.Disabled
+  fullName: TwinSharp.EtherCAT.EcDeviceState.Disabled
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Disabled
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 39
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Slave is disabled.
+  example: []
+  syntax:
+    content: Disabled = 128
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+references:
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  href: TwinSharp.html
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+- uid: TwinSharp.EtherCAT.EcDeviceState
+  commentId: T:TwinSharp.EtherCAT.EcDeviceState
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.EcDeviceState.html
+  name: EcDeviceState
+  nameWithType: EcDeviceState
+  fullName: TwinSharp.EtherCAT.EcDeviceState

@@ -1,0 +1,678 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx
+  commentId: T:TwinSharp.EtherCAT.ST_TopologyDataEx
+  id: ST_TopologyDataEx
+  parent: TwinSharp.EtherCAT
+  children:
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.#ctor(System.Byte[])
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved1
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved2
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountAct
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountCfg
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnAutoIncAddr
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnPhysicalAddr
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.nStatusBits
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.stAutoIncAddr
+  - TwinSharp.EtherCAT.ST_TopologyDataEx.stPhysicalAddr
+  langs:
+  - csharp
+  - vb
+  name: ST_TopologyDataEx
+  nameWithType: ST_TopologyDataEx
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ST_TopologyDataEx
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 174
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The structure ST_TopologyDataEx contains information on EtherCAT topology and hot-connect groups.
+  example: []
+  syntax:
+    content: public struct ST_TopologyDataEx
+    content.vb: Public Structure ST_TopologyDataEx
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnPhysicalAddr
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnPhysicalAddr
+  id: nOwnPhysicalAddr
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: nOwnPhysicalAddr
+  nameWithType: ST_TopologyDataEx.nOwnPhysicalAddr
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnPhysicalAddr
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: nOwnPhysicalAddr
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 179
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Dedicated physical EtherCAT address of the EtherCAT slave device
+  example: []
+  syntax:
+    content: public ushort nOwnPhysicalAddr
+    return:
+      type: System.UInt16
+    content.vb: Public nOwnPhysicalAddr As UShort
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnAutoIncAddr
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnAutoIncAddr
+  id: nOwnAutoIncAddr
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: nOwnAutoIncAddr
+  nameWithType: ST_TopologyDataEx.nOwnAutoIncAddr
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.nOwnAutoIncAddr
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: nOwnAutoIncAddr
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 184
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Dedicated auto-increment EtherCAT address of the EtherCAT slave device
+  example: []
+  syntax:
+    content: public ushort nOwnAutoIncAddr
+    return:
+      type: System.UInt16
+    content.vb: Public nOwnAutoIncAddr As UShort
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.stPhysicalAddr
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.stPhysicalAddr
+  id: stPhysicalAddr
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: stPhysicalAddr
+  nameWithType: ST_TopologyDataEx.stPhysicalAddr
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.stPhysicalAddr
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: stPhysicalAddr
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 189
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Physical and auto-increment address information of the EtherCAT slave devices at port A…D
+  example: []
+  syntax:
+    content: public ST_PortAddr stPhysicalAddr
+    return:
+      type: TwinSharp.EtherCAT.ST_PortAddr
+    content.vb: Public stPhysicalAddr As ST_PortAddr
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.stAutoIncAddr
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.stAutoIncAddr
+  id: stAutoIncAddr
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: stAutoIncAddr
+  nameWithType: ST_TopologyDataEx.stAutoIncAddr
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.stAutoIncAddr
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: stAutoIncAddr
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 194
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Auto-increment address information of the EtherCAT slave devices at port A…D
+  example: []
+  syntax:
+    content: public ST_PortAddr stAutoIncAddr
+    return:
+      type: TwinSharp.EtherCAT.ST_PortAddr
+    content.vb: Public stAutoIncAddr As ST_PortAddr
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved1
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved1
+  id: aReserved1
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: aReserved1
+  nameWithType: ST_TopologyDataEx.aReserved1
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: aReserved1
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 199
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Reserved for future use
+  example: []
+  syntax:
+    content: public uint[] aReserved1
+    return:
+      type: System.UInt32[]
+    content.vb: Public aReserved1 As UInteger()
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.nStatusBits
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.nStatusBits
+  id: nStatusBits
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: nStatusBits
+  nameWithType: ST_TopologyDataEx.nStatusBits
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.nStatusBits
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: nStatusBits
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 204
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Status bits of the EtherCAT slave device
+  example: []
+  syntax:
+    content: public uint nStatusBits
+    return:
+      type: System.UInt32
+    content.vb: Public nStatusBits As UInteger
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountCfg
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountCfg
+  id: nHCSlaveCountCfg
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: nHCSlaveCountCfg
+  nameWithType: ST_TopologyDataEx.nHCSlaveCountCfg
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountCfg
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: nHCSlaveCountCfg
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 209
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Configured number of Hot Connect group devices
+  example: []
+  syntax:
+    content: public ushort nHCSlaveCountCfg
+    return:
+      type: System.UInt16
+    content.vb: Public nHCSlaveCountCfg As UShort
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountAct
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountAct
+  id: nHCSlaveCountAct
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: nHCSlaveCountAct
+  nameWithType: ST_TopologyDataEx.nHCSlaveCountAct
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.nHCSlaveCountAct
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: nHCSlaveCountAct
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 214
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Found number of Hot Connect group devices
+  example: []
+  syntax:
+    content: public ushort nHCSlaveCountAct
+    return:
+      type: System.UInt16
+    content.vb: Public nHCSlaveCountAct As UShort
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved2
+  commentId: F:TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved2
+  id: aReserved2
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: aReserved2
+  nameWithType: ST_TopologyDataEx.aReserved2
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.aReserved2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: aReserved2
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 219
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Reserved for future use
+  example: []
+  syntax:
+    content: public uint[] aReserved2
+    return:
+      type: System.UInt32[]
+    content.vb: Public aReserved2 As UInteger()
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.#ctor(System.Byte[])
+  commentId: M:TwinSharp.EtherCAT.ST_TopologyDataEx.#ctor(System.Byte[])
+  id: '#ctor(System.Byte[])'
+  parent: TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: ST_TopologyDataEx(byte[])
+  nameWithType: ST_TopologyDataEx.ST_TopologyDataEx(byte[])
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.ST_TopologyDataEx(byte[])
+  type: Constructor
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: .ctor
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 226
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Constructor for ST_TopologyDataEx from a byte array of length 64.
+  example: []
+  syntax:
+    content: public ST_TopologyDataEx(byte[] bytes)
+    parameters:
+    - id: bytes
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Sub New(bytes As Byte())
+  overload: TwinSharp.EtherCAT.ST_TopologyDataEx.#ctor*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: ''
+  nameWithType.vb: ST_TopologyDataEx.New(Byte())
+  fullName.vb: TwinSharp.EtherCAT.ST_TopologyDataEx.New(Byte())
+  name.vb: New(Byte())
+references:
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  href: TwinSharp.html
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: TwinSharp.EtherCAT.ST_PortAddr
+  commentId: T:TwinSharp.EtherCAT.ST_PortAddr
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.ST_PortAddr.html
+  name: ST_PortAddr
+  nameWithType: ST_PortAddr
+  fullName: TwinSharp.EtherCAT.ST_PortAddr
+- uid: System.UInt32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint[]
+  nameWithType: uint[]
+  fullName: uint[]
+  nameWithType.vb: UInteger()
+  fullName.vb: UInteger()
+  name.vb: UInteger()
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: (
+  - name: )
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx.#ctor*
+  commentId: Overload:TwinSharp.EtherCAT.ST_TopologyDataEx.#ctor
+  href: TwinSharp.EtherCAT.ST_TopologyDataEx.html#TwinSharp_EtherCAT_ST_TopologyDataEx__ctor_System_Byte___
+  name: ST_TopologyDataEx
+  nameWithType: ST_TopologyDataEx.ST_TopologyDataEx
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx.ST_TopologyDataEx
+  nameWithType.vb: ST_TopologyDataEx.New
+  fullName.vb: TwinSharp.EtherCAT.ST_TopologyDataEx.New
+  name.vb: New
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

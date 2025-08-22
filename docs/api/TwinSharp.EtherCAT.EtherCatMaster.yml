@@ -1,0 +1,1235 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.EtherCAT.EtherCatMaster
+  commentId: T:TwinSharp.EtherCAT.EtherCatMaster
+  id: EtherCatMaster
+  parent: TwinSharp.EtherCAT
+  children:
+  - TwinSharp.EtherCAT.EtherCatMaster.AmsNetId
+  - TwinSharp.EtherCAT.EtherCatMaster.DevState
+  - TwinSharp.EtherCAT.EtherCatMaster.DevStateToString(System.UInt16)
+  - TwinSharp.EtherCAT.EtherCatMaster.DeviceType
+  - TwinSharp.EtherCAT.EtherCatMaster.FrameCount
+  - TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC
+  - TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames
+  - TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges
+  - TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr
+  - TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates
+  - TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves
+  - TwinSharp.EtherCAT.EtherCatMaster.GetSlave(System.UInt16)
+  - TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo
+  - TwinSharp.EtherCAT.EtherCatMaster.Name
+  - TwinSharp.EtherCAT.EtherCatMaster.RequestState(TwinSharp.EtherCAT.EcDeviceState)
+  - TwinSharp.EtherCAT.EtherCatMaster.SlaveCount
+  - TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured
+  - TwinSharp.EtherCAT.EtherCatMaster.State
+  - TwinSharp.EtherCAT.EtherCatMaster.ToString
+  langs:
+  - csharp
+  - vb
+  name: EtherCatMaster
+  nameWithType: EtherCatMaster
+  fullName: TwinSharp.EtherCAT.EtherCatMaster
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EtherCatMaster
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 12
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: >-
+    The EtherCatMaster class provides methods to interact with an EtherCAT master device.
+
+    It allows for reading the current state, device type, and name of the master, as well as
+
+    retrieving information about connected slaves, such as their configuration, state, and topology.
+
+    Additionally, it can read unexpected state changes and convert device status to a string representation.
+  example: []
+  syntax:
+    content: public class EtherCatMaster
+    content.vb: Public Class EtherCatMaster
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.EtherCAT.EtherCatMaster.AmsNetId
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.AmsNetId
+  id: AmsNetId
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: AmsNetId
+  nameWithType: EtherCatMaster.AmsNetId
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.AmsNetId
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AmsNetId
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 31
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The AmsNetId of the EtherCAT master.
+  example: []
+  syntax:
+    content: public AmsNetId AmsNetId { get; }
+    parameters: []
+    return:
+      type: TwinCAT.Ads.AmsNetId
+    content.vb: Public Property AmsNetId As AmsNetId
+  overload: TwinSharp.EtherCAT.EtherCatMaster.AmsNetId*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.DeviceType
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.DeviceType
+  id: DeviceType
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: DeviceType
+  nameWithType: EtherCatMaster.DeviceType
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.DeviceType
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DeviceType
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 41
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The device type of the EtherCAT master.
+  example: []
+  syntax:
+    content: public ushort DeviceType { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property DeviceType As UShort
+  overload: TwinSharp.EtherCAT.EtherCatMaster.DeviceType*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.Name
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.Name
+  id: Name
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: EtherCatMaster.Name
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.Name
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Name
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 51
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The name of the EtherCAT master.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: TwinSharp.EtherCAT.EtherCatMaster.Name*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.DevState
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.DevState
+  id: DevState
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: DevState
+  nameWithType: EtherCatMaster.DevState
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.DevState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DevState
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 62
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: 'Can be used to read the current state of the EtherCAT master. Corresponds to the PLC FB: FB_EcGetMasterDevState'
+  example: []
+  syntax:
+    content: public ushort DevState { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property DevState As UShort
+  overload: TwinSharp.EtherCAT.EtherCatMaster.DevState*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.DevStateToString(System.UInt16)
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.DevStateToString(System.UInt16)
+  id: DevStateToString(System.UInt16)
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: DevStateToString(ushort)
+  nameWithType: EtherCatMaster.DevStateToString(ushort)
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.DevStateToString(ushort)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DevStateToString
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 73
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: >-
+    Converts the device status of the EtherCAT master to a string.
+
+    For masterDevState == 0 'OK' is returned, otherwise, 'Not OK – Link error', e.g. for masterDevState == 1. If several errors are pending, they are separated by hyphens.
+  example: []
+  syntax:
+    content: public string DevStateToString(ushort masterDevState)
+    parameters:
+    - id: masterDevState
+      type: System.UInt16
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function DevStateToString(masterDevState As UShort) As String
+  overload: TwinSharp.EtherCAT.EtherCatMaster.DevStateToString*
+  nameWithType.vb: EtherCatMaster.DevStateToString(UShort)
+  fullName.vb: TwinSharp.EtherCAT.EtherCatMaster.DevStateToString(UShort)
+  name.vb: DevStateToString(UShort)
+- uid: TwinSharp.EtherCAT.EtherCatMaster.SlaveCount
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.SlaveCount
+  id: SlaveCount
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: SlaveCount
+  nameWithType: EtherCatMaster.SlaveCount
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.SlaveCount
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SlaveCount
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 173
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: 'Can be used to determine the number of slaves that are connected to the master. Corresponds to the PLC FB: FB_EcGetSlaveCount.'
+  example: []
+  syntax:
+    content: public uint SlaveCount { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SlaveCount As UInteger
+  overload: TwinSharp.EtherCAT.EtherCatMaster.SlaveCount*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured
+  id: SlaveCountConfigured
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: SlaveCountConfigured
+  nameWithType: EtherCatMaster.SlaveCountConfigured
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SlaveCountConfigured
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 182
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Count of number of slaves configured in TwinCAT.
+  example: []
+  syntax:
+    content: public ushort SlaveCountConfigured { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property SlaveCountConfigured As UShort
+  overload: TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves
+  id: GetConfiguredSlaves
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: GetConfiguredSlaves()
+  nameWithType: EtherCatMaster.GetConfiguredSlaves()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetConfiguredSlaves
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 193
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: >-
+    Generates an array of all configured Slaves from the Master object directory.
+
+    Corresponds to the function block FB_EcGetConfSlaves
+  example: []
+  syntax:
+    content: public ST_EcSlaveConfigData[] GetConfiguredSlaves()
+    return:
+      type: TwinSharp.EtherCAT.ST_EcSlaveConfigData[]
+      description: ''
+    content.vb: Public Function GetConfiguredSlaves() As ST_EcSlaveConfigData()
+  overload: TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges
+  id: GetAllSlaveAbnormalStateChanges
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: GetAllSlaveAbnormalStateChanges()
+  nameWithType: EtherCatMaster.GetAllSlaveAbnormalStateChanges()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetAllSlaveAbnormalStateChanges
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 226
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: >-
+    Can be used to read the unexpected EtherCAT state changes of all the slaves connected to the master. It returns the number of unexpected state changes of all slaves as an array of UDINTs. 
+
+    EtherCAT state changes are unexpected if they were not requested by the EtherCAT master, e.g. if an EtherCAT slave spontaneously switches from OP state to SAFEOP state.
+
+    Corresponds to the function block FB_EcGetAllSlaveAbnormalStateChanges.
+  example: []
+  syntax:
+    content: public uint[] GetAllSlaveAbnormalStateChanges()
+    return:
+      type: System.UInt32[]
+    content.vb: Public Function GetAllSlaveAbnormalStateChanges() As UInteger()
+  overload: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates
+  id: GetAllSlaveStates
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: GetAllSlaveStates()
+  nameWithType: EtherCatMaster.GetAllSlaveStates()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetAllSlaveStates
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 252
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: >-
+    Reads the EtherCAT status and the Link status of all the slaves connected to the master.
+
+    Corresponds to the function block FB_EcGetAllSlaveStates.
+  example: []
+  syntax:
+    content: public ST_EcSlaveState[] GetAllSlaveStates()
+    return:
+      type: TwinSharp.EtherCAT.ST_EcSlaveState[]
+    content.vb: Public Function GetAllSlaveStates() As ST_EcSlaveState()
+  overload: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo
+  id: GetSlaveTopologyInfo
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: GetSlaveTopologyInfo()
+  nameWithType: EtherCatMaster.GetSlaveTopologyInfo()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetSlaveTopologyInfo
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 280
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Can be used to determine topology information. Equivavalent to the function block FB_EcGetSlaveTopolgyInfo.
+  example: []
+  syntax:
+    content: public ST_TopologyDataEx[] GetSlaveTopologyInfo()
+    return:
+      type: TwinSharp.EtherCAT.ST_TopologyDataEx[]
+      description: An array of structures of type ST_TopologyDataEx, which contains the topology data.
+    content.vb: Public Function GetSlaveTopologyInfo() As ST_TopologyDataEx()
+  overload: TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.State
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.State
+  id: State
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: EtherCatMaster.State
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.State
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: State
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 308
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Can be used to read the EtherCAT state of the master. Equivavalent to the function block FB_EcGetMasterState.
+  example: []
+  syntax:
+    content: public EcDeviceState State { get; }
+    parameters: []
+    return:
+      type: TwinSharp.EtherCAT.EcDeviceState
+    content.vb: Public ReadOnly Property State As EcDeviceState
+  overload: TwinSharp.EtherCAT.EtherCatMaster.State*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.RequestState(TwinSharp.EtherCAT.EcDeviceState)
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.RequestState(TwinSharp.EtherCAT.EcDeviceState)
+  id: RequestState(TwinSharp.EtherCAT.EcDeviceState)
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: RequestState(EcDeviceState)
+  nameWithType: EtherCatMaster.RequestState(EcDeviceState)
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.RequestState(TwinSharp.EtherCAT.EcDeviceState)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RequestState
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 317
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: With this function the EtherCAT state of a master device can be requested. Equivavalent to the function block FB_EcReqMasterState.
+  example: []
+  syntax:
+    content: public void RequestState(EcDeviceState state)
+    parameters:
+    - id: state
+      type: TwinSharp.EtherCAT.EcDeviceState
+      description: ''
+    content.vb: Public Sub RequestState(state As EcDeviceState)
+  overload: TwinSharp.EtherCAT.EtherCatMaster.RequestState*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr
+  id: GetAllSlaveAddr
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: GetAllSlaveAddr()
+  nameWithType: EtherCatMaster.GetAllSlaveAddr()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetAllSlaveAddr
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 327
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Allows the addresses of all the slaves connected to the master to be read. Equivavalent to the FB_EcGetAllSlaveAddr function block.
+  example: []
+  syntax:
+    content: public ushort[] GetAllSlaveAddr()
+    return:
+      type: System.UInt16[]
+      description: ''
+    content.vb: Public Function GetAllSlaveAddr() As UShort()
+  overload: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.FrameCount
+  commentId: P:TwinSharp.EtherCAT.EtherCatMaster.FrameCount
+  id: FrameCount
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: FrameCount
+  nameWithType: EtherCatMaster.FrameCount
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.FrameCount
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FrameCount
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 335
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Can be used to determine the number of EtherCAT frames configured in the master. Equivavalent to the function block FB_EcMasterFrameCount.
+  example: []
+  syntax:
+    content: public uint FrameCount { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property FrameCount As UInteger
+  overload: TwinSharp.EtherCAT.EtherCatMaster.FrameCount*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC
+  id: FrameStatisticClearCRC
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: FrameStatisticClearCRC()
+  nameWithType: EtherCatMaster.FrameStatisticClearCRC()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FrameStatisticClearCRC
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 344
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Can be used to delete the CRC error counters of all EtherCAT slaves. Equivavalent to the function block FB_EcMasterFrameStatisticClearCRC.
+  example: []
+  syntax:
+    content: public void FrameStatisticClearCRC()
+    content.vb: Public Sub FrameStatisticClearCRC()
+  overload: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames
+  id: FrameStatisticClearFrames
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: FrameStatisticClearFrames()
+  nameWithType: EtherCatMaster.FrameStatisticClearFrames()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FrameStatisticClearFrames
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 352
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Can be used to delete the lost frame counters. Equivavalent to the function block FB_EcMasterFrameStatisticClearFrames.
+  example: []
+  syntax:
+    content: public void FrameStatisticClearFrames()
+    content.vb: Public Sub FrameStatisticClearFrames()
+  overload: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames*
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetSlave(System.UInt16)
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetSlave(System.UInt16)
+  id: GetSlave(System.UInt16)
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: GetSlave(ushort)
+  nameWithType: EtherCatMaster.GetSlave(ushort)
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetSlave(ushort)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetSlave
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 363
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Gets an EtherCAT slave to this master by its address.
+  example: []
+  syntax:
+    content: public EtherCatSlave GetSlave(ushort slaveAdress)
+    parameters:
+    - id: slaveAdress
+      type: System.UInt16
+      description: Typically starts at 1001.
+    return:
+      type: TwinSharp.EtherCAT.EtherCatSlave
+      description: ''
+    content.vb: Public Function GetSlave(slaveAdress As UShort) As EtherCatSlave
+  overload: TwinSharp.EtherCAT.EtherCatMaster.GetSlave*
+  nameWithType.vb: EtherCatMaster.GetSlave(UShort)
+  fullName.vb: TwinSharp.EtherCAT.EtherCatMaster.GetSlave(UShort)
+  name.vb: GetSlave(UShort)
+- uid: TwinSharp.EtherCAT.EtherCatMaster.ToString
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.ToString
+  id: ToString
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: EtherCatMaster.ToString()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.ToString()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ToString
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 373
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Returns a string representation of the EtherCAT master.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: TwinSharp.EtherCAT.EtherCatMaster.ToString*
+references:
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  href: TwinSharp.html
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.EtherCAT.EtherCatMaster.AmsNetId*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.AmsNetId
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_AmsNetId
+  name: AmsNetId
+  nameWithType: EtherCatMaster.AmsNetId
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.AmsNetId
+- uid: TwinCAT.Ads.AmsNetId
+  commentId: T:TwinCAT.Ads.AmsNetId
+  parent: TwinCAT.Ads
+  isExternal: true
+  name: AmsNetId
+  nameWithType: AmsNetId
+  fullName: TwinCAT.Ads.AmsNetId
+- uid: TwinCAT.Ads
+  commentId: N:TwinCAT.Ads
+  isExternal: true
+  name: TwinCAT.Ads
+  nameWithType: TwinCAT.Ads
+  fullName: TwinCAT.Ads
+  spec.csharp:
+  - uid: TwinCAT
+    name: TwinCAT
+    isExternal: true
+  - name: .
+  - uid: TwinCAT.Ads
+    name: Ads
+    isExternal: true
+  spec.vb:
+  - uid: TwinCAT
+    name: TwinCAT
+    isExternal: true
+  - name: .
+  - uid: TwinCAT.Ads
+    name: Ads
+    isExternal: true
+- uid: TwinSharp.EtherCAT.EtherCatMaster.DeviceType*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.DeviceType
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_DeviceType
+  name: DeviceType
+  nameWithType: EtherCatMaster.DeviceType
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.DeviceType
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: TwinSharp.EtherCAT.EtherCatMaster.Name*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.Name
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_Name
+  name: Name
+  nameWithType: EtherCatMaster.Name
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.EtherCAT.EtherCatMaster.DevState*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.DevState
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_DevState
+  name: DevState
+  nameWithType: EtherCatMaster.DevState
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.DevState
+- uid: TwinSharp.EtherCAT.EtherCatMaster.DevStateToString*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.DevStateToString
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_DevStateToString_System_UInt16_
+  name: DevStateToString
+  nameWithType: EtherCatMaster.DevStateToString
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.DevStateToString
+- uid: TwinSharp.EtherCAT.EtherCatMaster.SlaveCount*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.SlaveCount
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_SlaveCount
+  name: SlaveCount
+  nameWithType: EtherCatMaster.SlaveCount
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.SlaveCount
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_SlaveCountConfigured
+  name: SlaveCountConfigured
+  nameWithType: EtherCatMaster.SlaveCountConfigured
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.SlaveCountConfigured
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetConfiguredSlaves
+  name: GetConfiguredSlaves
+  nameWithType: EtherCatMaster.GetConfiguredSlaves
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves
+- uid: TwinSharp.EtherCAT.ST_EcSlaveConfigData[]
+  isExternal: true
+  href: TwinSharp.EtherCAT.ST_EcSlaveConfigData.html
+  name: ST_EcSlaveConfigData[]
+  nameWithType: ST_EcSlaveConfigData[]
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveConfigData[]
+  nameWithType.vb: ST_EcSlaveConfigData()
+  fullName.vb: TwinSharp.EtherCAT.ST_EcSlaveConfigData()
+  name.vb: ST_EcSlaveConfigData()
+  spec.csharp:
+  - uid: TwinSharp.EtherCAT.ST_EcSlaveConfigData
+    name: ST_EcSlaveConfigData
+    href: TwinSharp.EtherCAT.ST_EcSlaveConfigData.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.EtherCAT.ST_EcSlaveConfigData
+    name: ST_EcSlaveConfigData
+    href: TwinSharp.EtherCAT.ST_EcSlaveConfigData.html
+  - name: (
+  - name: )
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetAllSlaveAbnormalStateChanges
+  name: GetAllSlaveAbnormalStateChanges
+  nameWithType: EtherCatMaster.GetAllSlaveAbnormalStateChanges
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges
+- uid: System.UInt32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint[]
+  nameWithType: uint[]
+  fullName: uint[]
+  nameWithType.vb: UInteger()
+  fullName.vb: UInteger()
+  name.vb: UInteger()
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: (
+  - name: )
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetAllSlaveStates
+  name: GetAllSlaveStates
+  nameWithType: EtherCatMaster.GetAllSlaveStates
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates
+- uid: TwinSharp.EtherCAT.ST_EcSlaveState[]
+  isExternal: true
+  href: TwinSharp.EtherCAT.ST_EcSlaveState.html
+  name: ST_EcSlaveState[]
+  nameWithType: ST_EcSlaveState[]
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveState[]
+  nameWithType.vb: ST_EcSlaveState()
+  fullName.vb: TwinSharp.EtherCAT.ST_EcSlaveState()
+  name.vb: ST_EcSlaveState()
+  spec.csharp:
+  - uid: TwinSharp.EtherCAT.ST_EcSlaveState
+    name: ST_EcSlaveState
+    href: TwinSharp.EtherCAT.ST_EcSlaveState.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.EtherCAT.ST_EcSlaveState
+    name: ST_EcSlaveState
+    href: TwinSharp.EtherCAT.ST_EcSlaveState.html
+  - name: (
+  - name: )
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetSlaveTopologyInfo
+  name: GetSlaveTopologyInfo
+  nameWithType: EtherCatMaster.GetSlaveTopologyInfo
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx[]
+  isExternal: true
+  href: TwinSharp.EtherCAT.ST_TopologyDataEx.html
+  name: ST_TopologyDataEx[]
+  nameWithType: ST_TopologyDataEx[]
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx[]
+  nameWithType.vb: ST_TopologyDataEx()
+  fullName.vb: TwinSharp.EtherCAT.ST_TopologyDataEx()
+  name.vb: ST_TopologyDataEx()
+  spec.csharp:
+  - uid: TwinSharp.EtherCAT.ST_TopologyDataEx
+    name: ST_TopologyDataEx
+    href: TwinSharp.EtherCAT.ST_TopologyDataEx.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.EtherCAT.ST_TopologyDataEx
+    name: ST_TopologyDataEx
+    href: TwinSharp.EtherCAT.ST_TopologyDataEx.html
+  - name: (
+  - name: )
+- uid: TwinSharp.EtherCAT.EtherCatMaster.State*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.State
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_State
+  name: State
+  nameWithType: EtherCatMaster.State
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.State
+- uid: TwinSharp.EtherCAT.EcDeviceState
+  commentId: T:TwinSharp.EtherCAT.EcDeviceState
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.EcDeviceState.html
+  name: EcDeviceState
+  nameWithType: EcDeviceState
+  fullName: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EtherCatMaster.RequestState*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.RequestState
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_RequestState_TwinSharp_EtherCAT_EcDeviceState_
+  name: RequestState
+  nameWithType: EtherCatMaster.RequestState
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.RequestState
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetAllSlaveAddr
+  name: GetAllSlaveAddr
+  nameWithType: EtherCatMaster.GetAllSlaveAddr
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr
+- uid: System.UInt16[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort[]
+  nameWithType: ushort[]
+  fullName: ushort[]
+  nameWithType.vb: UShort()
+  fullName.vb: UShort()
+  name.vb: UShort()
+  spec.csharp:
+  - uid: System.UInt16
+    name: ushort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.UInt16
+    name: UShort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: (
+  - name: )
+- uid: TwinSharp.EtherCAT.EtherCatMaster.FrameCount*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.FrameCount
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_FrameCount
+  name: FrameCount
+  nameWithType: EtherCatMaster.FrameCount
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.FrameCount
+- uid: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_FrameStatisticClearCRC
+  name: FrameStatisticClearCRC
+  nameWithType: EtherCatMaster.FrameStatisticClearCRC
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearCRC
+- uid: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_FrameStatisticClearFrames
+  name: FrameStatisticClearFrames
+  nameWithType: EtherCatMaster.FrameStatisticClearFrames
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.FrameStatisticClearFrames
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetSlave*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetSlave
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetSlave_System_UInt16_
+  name: GetSlave
+  nameWithType: EtherCatMaster.GetSlave
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetSlave
+- uid: TwinSharp.EtherCAT.EtherCatSlave
+  commentId: T:TwinSharp.EtherCAT.EtherCatSlave
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.EtherCatSlave.html
+  name: EtherCatSlave
+  nameWithType: EtherCatSlave
+  fullName: TwinSharp.EtherCAT.EtherCatSlave
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: TwinSharp.EtherCAT.EtherCatMaster.ToString*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.ToString
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_ToString
+  name: ToString
+  nameWithType: EtherCatMaster.ToString
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.ToString

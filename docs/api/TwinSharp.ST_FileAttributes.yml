@@ -33,7 +33,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ST_FileAttributes
     path: ../TwinSharp/Structs.cs
-    startLine: 473
+    startLine: 167
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ReadOnly
     path: ../TwinSharp/Structs.cs
-    startLine: 476
+    startLine: 170
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -96,7 +96,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Hidden
     path: ../TwinSharp/Structs.cs
-    startLine: 479
+    startLine: 173
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -125,7 +125,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: System
     path: ../TwinSharp/Structs.cs
-    startLine: 482
+    startLine: 176
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -154,7 +154,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Directory
     path: ../TwinSharp/Structs.cs
-    startLine: 485
+    startLine: 179
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -183,7 +183,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Archive
     path: ../TwinSharp/Structs.cs
-    startLine: 488
+    startLine: 182
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -212,7 +212,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Device
     path: ../TwinSharp/Structs.cs
-    startLine: 491
+    startLine: 185
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -241,7 +241,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Normal
     path: ../TwinSharp/Structs.cs
-    startLine: 494
+    startLine: 188
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -270,7 +270,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Temporary
     path: ../TwinSharp/Structs.cs
-    startLine: 497
+    startLine: 191
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -299,7 +299,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SparseFile
     path: ../TwinSharp/Structs.cs
-    startLine: 500
+    startLine: 194
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -328,7 +328,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ReparsePoint
     path: ../TwinSharp/Structs.cs
-    startLine: 503
+    startLine: 197
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -357,7 +357,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Compressed
     path: ../TwinSharp/Structs.cs
-    startLine: 506
+    startLine: 200
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -386,7 +386,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Offline
     path: ../TwinSharp/Structs.cs
-    startLine: 509
+    startLine: 203
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -415,7 +415,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: NotContentIndexed
     path: ../TwinSharp/Structs.cs
-    startLine: 512
+    startLine: 206
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -444,7 +444,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Encrypted
     path: ../TwinSharp/Structs.cs
-    startLine: 515
+    startLine: 209
   assemblies:
   - TwinSharp
   namespace: TwinSharp

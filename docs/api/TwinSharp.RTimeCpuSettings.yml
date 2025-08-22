@@ -26,7 +26,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: RTimeCpuSettings
     path: ../TwinSharp/Structs.cs
-    startLine: 7
+    startLine: 5
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: WinCPUs
     path: ../TwinSharp/Structs.cs
-    startLine: 10
+    startLine: 8
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -89,7 +89,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: NonWinCPUs
     path: ../TwinSharp/Structs.cs
-    startLine: 13
+    startLine: 11
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: AffinityMask
     path: ../TwinSharp/Structs.cs
-    startLine: 16
+    startLine: 14
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -147,7 +147,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: RtCpus
     path: ../TwinSharp/Structs.cs
-    startLine: 19
+    startLine: 17
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CpuType
     path: ../TwinSharp/Structs.cs
-    startLine: 22
+    startLine: 20
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -205,7 +205,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CpuFamily
     path: ../TwinSharp/Structs.cs
-    startLine: 25
+    startLine: 23
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -234,7 +234,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CpuFreq
     path: ../TwinSharp/Structs.cs
-    startLine: 28
+    startLine: 26
   assemblies:
   - TwinSharp
   namespace: TwinSharp

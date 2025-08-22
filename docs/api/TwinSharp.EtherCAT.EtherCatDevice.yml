@@ -1,0 +1,755 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.EtherCAT.EtherCatDevice
+  commentId: T:TwinSharp.EtherCAT.EtherCatDevice
+  id: EtherCatDevice
+  parent: TwinSharp.EtherCAT
+  children:
+  - TwinSharp.EtherCAT.EtherCatDevice.#ctor(TwinCAT.Ads.AdsClient)
+  - TwinSharp.EtherCAT.EtherCatDevice.DeviceType
+  - TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister
+  - TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName
+  - TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion
+  - TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion
+  - TwinSharp.EtherCAT.EtherCatDevice.ProductCode
+  - TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber
+  - TwinSharp.EtherCAT.EtherCatDevice.SerialNumber
+  - TwinSharp.EtherCAT.EtherCatDevice.VendorID
+  langs:
+  - csharp
+  - vb
+  name: EtherCatDevice
+  nameWithType: EtherCatDevice
+  fullName: TwinSharp.EtherCAT.EtherCatDevice
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EtherCatDevice
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 9
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: >-
+    Describes an EtherCAT device, using all standard objects as defined from the EtherCAT standard.
+
+    This class can be derived and extended to create a specific EtherCAT device.
+  example: []
+  syntax:
+    content: public class EtherCatDevice
+    content.vb: Public Class EtherCatDevice
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.EtherCAT.EtherCatDevice.#ctor(TwinCAT.Ads.AdsClient)
+  commentId: M:TwinSharp.EtherCAT.EtherCatDevice.#ctor(TwinCAT.Ads.AdsClient)
+  id: '#ctor(TwinCAT.Ads.AdsClient)'
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: EtherCatDevice(AdsClient)
+  nameWithType: EtherCatDevice.EtherCatDevice(AdsClient)
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.EtherCatDevice(TwinCAT.Ads.AdsClient)
+  type: Constructor
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: .ctor
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 20
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: >-
+    Creates a representation of an EtherCAT device. 
+
+    The client should typically be connected to the AmsNetId of the EtherCAT master and the port number is the slaves adress (example 1025).
+  example: []
+  syntax:
+    content: public EtherCatDevice(AdsClient client)
+    parameters:
+    - id: client
+      type: TwinCAT.Ads.AdsClient
+      description: ''
+    content.vb: Public Sub New(client As AdsClient)
+  overload: TwinSharp.EtherCAT.EtherCatDevice.#ctor*
+  nameWithType.vb: EtherCatDevice.New(AdsClient)
+  fullName.vb: TwinSharp.EtherCAT.EtherCatDevice.New(TwinCAT.Ads.AdsClient)
+  name.vb: New(AdsClient)
+- uid: TwinSharp.EtherCAT.EtherCatDevice.DeviceType
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.DeviceType
+  id: DeviceType
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: DeviceType
+  nameWithType: EtherCatDevice.DeviceType
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.DeviceType
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DeviceType
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 28
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The device type of the EtherCAT device.
+  example: []
+  syntax:
+    content: public uint DeviceType { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property DeviceType As UInteger
+  overload: TwinSharp.EtherCAT.EtherCatDevice.DeviceType*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister
+  id: ErrorRegister
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: ErrorRegister
+  nameWithType: EtherCatDevice.ErrorRegister
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ErrorRegister
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 36
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Returns the error register of the EtherCAT device.
+  example: []
+  syntax:
+    content: public byte ErrorRegister { get; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public ReadOnly Property ErrorRegister As Byte
+  overload: TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName
+  id: ManufacturerDeviceName
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: ManufacturerDeviceName
+  nameWithType: EtherCatDevice.ManufacturerDeviceName
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ManufacturerDeviceName
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 44
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: This parameter specifies the manufacturers device name of the device.
+  example: []
+  syntax:
+    content: public string ManufacturerDeviceName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ManufacturerDeviceName As String
+  overload: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion
+  id: ManufacturerHardwareVersion
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: ManufacturerHardwareVersion
+  nameWithType: EtherCatDevice.ManufacturerHardwareVersion
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ManufacturerHardwareVersion
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 52
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: This parameter specifies the hardware version of the device.
+  example: []
+  syntax:
+    content: public string ManufacturerHardwareVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ManufacturerHardwareVersion As String
+  overload: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion
+  id: ManufacturerSoftwareVersion
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: ManufacturerSoftwareVersion
+  nameWithType: EtherCatDevice.ManufacturerSoftwareVersion
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ManufacturerSoftwareVersion
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 60
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: 'The Software Version object has the following parameter:'
+  example: []
+  syntax:
+    content: public string ManufacturerSoftwareVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ManufacturerSoftwareVersion As String
+  overload: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.VendorID
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.VendorID
+  id: VendorID
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: VendorID
+  nameWithType: EtherCatDevice.VendorID
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.VendorID
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: VendorID
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 68
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: This parameter specifies the vendor ID of the device.
+  example: []
+  syntax:
+    content: public uint VendorID { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property VendorID As UInteger
+  overload: TwinSharp.EtherCAT.EtherCatDevice.VendorID*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ProductCode
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.ProductCode
+  id: ProductCode
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: ProductCode
+  nameWithType: EtherCatDevice.ProductCode
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ProductCode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProductCode
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 76
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: This parameter specifies the product code of the device.
+  example: []
+  syntax:
+    content: public uint ProductCode { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property ProductCode As UInteger
+  overload: TwinSharp.EtherCAT.EtherCatDevice.ProductCode*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber
+  id: RevisionNumber
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: RevisionNumber
+  nameWithType: EtherCatDevice.RevisionNumber
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RevisionNumber
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 84
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The revision number of the EtherCAT device.
+  example: []
+  syntax:
+    content: public uint RevisionNumber { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property RevisionNumber As UInteger
+  overload: TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber*
+- uid: TwinSharp.EtherCAT.EtherCatDevice.SerialNumber
+  commentId: P:TwinSharp.EtherCAT.EtherCatDevice.SerialNumber
+  id: SerialNumber
+  parent: TwinSharp.EtherCAT.EtherCatDevice
+  langs:
+  - csharp
+  - vb
+  name: SerialNumber
+  nameWithType: EtherCatDevice.SerialNumber
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.SerialNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatDevice.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SerialNumber
+    path: ../TwinSharp/EtherCAT/EtherCatDevice.cs
+    startLine: 92
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The serial number of the EtherCAT device.
+  example: []
+  syntax:
+    content: public uint SerialNumber { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property SerialNumber As UInteger
+  overload: TwinSharp.EtherCAT.EtherCatDevice.SerialNumber*
+references:
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  href: TwinSharp.html
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.EtherCAT.EtherCatDevice.#ctor*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.#ctor
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice__ctor_TwinCAT_Ads_AdsClient_
+  name: EtherCatDevice
+  nameWithType: EtherCatDevice.EtherCatDevice
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.EtherCatDevice
+  nameWithType.vb: EtherCatDevice.New
+  fullName.vb: TwinSharp.EtherCAT.EtherCatDevice.New
+  name.vb: New
+- uid: TwinCAT.Ads.AdsClient
+  commentId: T:TwinCAT.Ads.AdsClient
+  parent: TwinCAT.Ads
+  isExternal: true
+  name: AdsClient
+  nameWithType: AdsClient
+  fullName: TwinCAT.Ads.AdsClient
+- uid: TwinCAT.Ads
+  commentId: N:TwinCAT.Ads
+  isExternal: true
+  name: TwinCAT.Ads
+  nameWithType: TwinCAT.Ads
+  fullName: TwinCAT.Ads
+  spec.csharp:
+  - uid: TwinCAT
+    name: TwinCAT
+    isExternal: true
+  - name: .
+  - uid: TwinCAT.Ads
+    name: Ads
+    isExternal: true
+  spec.vb:
+  - uid: TwinCAT
+    name: TwinCAT
+    isExternal: true
+  - name: .
+  - uid: TwinCAT.Ads
+    name: Ads
+    isExternal: true
+- uid: TwinSharp.EtherCAT.EtherCatDevice.DeviceType*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.DeviceType
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_DeviceType
+  name: DeviceType
+  nameWithType: EtherCatDevice.DeviceType
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.DeviceType
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_ErrorRegister
+  name: ErrorRegister
+  nameWithType: EtherCatDevice.ErrorRegister
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ErrorRegister
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_ManufacturerDeviceName
+  name: ManufacturerDeviceName
+  nameWithType: EtherCatDevice.ManufacturerDeviceName
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerDeviceName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_ManufacturerHardwareVersion
+  name: ManufacturerHardwareVersion
+  nameWithType: EtherCatDevice.ManufacturerHardwareVersion
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerHardwareVersion
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_ManufacturerSoftwareVersion
+  name: ManufacturerSoftwareVersion
+  nameWithType: EtherCatDevice.ManufacturerSoftwareVersion
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ManufacturerSoftwareVersion
+- uid: TwinSharp.EtherCAT.EtherCatDevice.VendorID*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.VendorID
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_VendorID
+  name: VendorID
+  nameWithType: EtherCatDevice.VendorID
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.VendorID
+- uid: TwinSharp.EtherCAT.EtherCatDevice.ProductCode*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.ProductCode
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_ProductCode
+  name: ProductCode
+  nameWithType: EtherCatDevice.ProductCode
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.ProductCode
+- uid: TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_RevisionNumber
+  name: RevisionNumber
+  nameWithType: EtherCatDevice.RevisionNumber
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.RevisionNumber
+- uid: TwinSharp.EtherCAT.EtherCatDevice.SerialNumber*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatDevice.SerialNumber
+  href: TwinSharp.EtherCAT.EtherCatDevice.html#TwinSharp_EtherCAT_EtherCatDevice_SerialNumber
+  name: SerialNumber
+  nameWithType: EtherCatDevice.SerialNumber
+  fullName: TwinSharp.EtherCAT.EtherCatDevice.SerialNumber

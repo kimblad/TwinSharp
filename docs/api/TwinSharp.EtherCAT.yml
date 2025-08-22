@@ -1,0 +1,122 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  id: TwinSharp.EtherCAT
+  children:
+  - TwinSharp.EtherCAT.EcDeviceState
+  - TwinSharp.EtherCAT.EcLinkState
+  - TwinSharp.EtherCAT.EtherCatDevice
+  - TwinSharp.EtherCAT.EtherCatMaster
+  - TwinSharp.EtherCAT.EtherCatSlave
+  - TwinSharp.EtherCAT.ST_EcCrcErrorEx
+  - TwinSharp.EtherCAT.ST_EcSlaveConfigData
+  - TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  - TwinSharp.EtherCAT.ST_EcSlaveState
+  - TwinSharp.EtherCAT.ST_PortAddr
+  - TwinSharp.EtherCAT.ST_TopologyDataEx
+  langs:
+  - csharp
+  - vb
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  type: Namespace
+  assemblies:
+  - TwinSharp
+references:
+- uid: TwinSharp.EtherCAT.EcDeviceState
+  commentId: T:TwinSharp.EtherCAT.EcDeviceState
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.EcDeviceState.html
+  name: EcDeviceState
+  nameWithType: EcDeviceState
+  fullName: TwinSharp.EtherCAT.EcDeviceState
+- uid: TwinSharp.EtherCAT.EcLinkState
+  commentId: T:TwinSharp.EtherCAT.EcLinkState
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.EcLinkState.html
+  name: EcLinkState
+  nameWithType: EcLinkState
+  fullName: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EtherCatDevice
+  commentId: T:TwinSharp.EtherCAT.EtherCatDevice
+  href: TwinSharp.EtherCAT.EtherCatDevice.html
+  name: EtherCatDevice
+  nameWithType: EtherCatDevice
+  fullName: TwinSharp.EtherCAT.EtherCatDevice
+- uid: TwinSharp.EtherCAT.EtherCatMaster
+  commentId: T:TwinSharp.EtherCAT.EtherCatMaster
+  href: TwinSharp.EtherCAT.EtherCatMaster.html
+  name: EtherCatMaster
+  nameWithType: EtherCatMaster
+  fullName: TwinSharp.EtherCAT.EtherCatMaster
+- uid: TwinSharp.EtherCAT.EtherCatSlave
+  commentId: T:TwinSharp.EtherCAT.EtherCatSlave
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.EtherCatSlave.html
+  name: EtherCatSlave
+  nameWithType: EtherCatSlave
+  fullName: TwinSharp.EtherCAT.EtherCatSlave
+- uid: TwinSharp.EtherCAT.ST_EcSlaveState
+  commentId: T:TwinSharp.EtherCAT.ST_EcSlaveState
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.ST_EcSlaveState.html
+  name: ST_EcSlaveState
+  nameWithType: ST_EcSlaveState
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveState
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  commentId: T:TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.ST_EcSlaveIdentity.html
+  name: ST_EcSlaveIdentity
+  nameWithType: ST_EcSlaveIdentity
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+- uid: TwinSharp.EtherCAT.ST_EcSlaveConfigData
+  commentId: T:TwinSharp.EtherCAT.ST_EcSlaveConfigData
+  href: TwinSharp.EtherCAT.ST_EcSlaveConfigData.html
+  name: ST_EcSlaveConfigData
+  nameWithType: ST_EcSlaveConfigData
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveConfigData
+- uid: TwinSharp.EtherCAT.ST_TopologyDataEx
+  commentId: T:TwinSharp.EtherCAT.ST_TopologyDataEx
+  href: TwinSharp.EtherCAT.ST_TopologyDataEx.html
+  name: ST_TopologyDataEx
+  nameWithType: ST_TopologyDataEx
+  fullName: TwinSharp.EtherCAT.ST_TopologyDataEx
+- uid: TwinSharp.EtherCAT.ST_PortAddr
+  commentId: T:TwinSharp.EtherCAT.ST_PortAddr
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.ST_PortAddr.html
+  name: ST_PortAddr
+  nameWithType: ST_PortAddr
+  fullName: TwinSharp.EtherCAT.ST_PortAddr
+- uid: TwinSharp.EtherCAT.ST_EcCrcErrorEx
+  commentId: T:TwinSharp.EtherCAT.ST_EcCrcErrorEx
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.ST_EcCrcErrorEx.html
+  name: ST_EcCrcErrorEx
+  nameWithType: ST_EcCrcErrorEx
+  fullName: TwinSharp.EtherCAT.ST_EcCrcErrorEx
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  href: TwinSharp.html
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html

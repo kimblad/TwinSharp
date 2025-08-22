@@ -22,7 +22,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: RTimeCpuLatency
     path: ../TwinSharp/Structs.cs
-    startLine: 35
+    startLine: 33
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -56,7 +56,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Current
     path: ../TwinSharp/Structs.cs
-    startLine: 38
+    startLine: 36
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -85,7 +85,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Maximum
     path: ../TwinSharp/Structs.cs
-    startLine: 41
+    startLine: 39
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -114,7 +114,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Limit
     path: ../TwinSharp/Structs.cs
-    startLine: 44
+    startLine: 42
   assemblies:
   - TwinSharp
   namespace: TwinSharp

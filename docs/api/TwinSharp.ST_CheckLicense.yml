@@ -27,7 +27,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ST_CheckLicense
     path: ../TwinSharp/Structs.cs
-    startLine: 50
+    startLine: 48
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: LicenseId
     path: ../TwinSharp/Structs.cs
-    startLine: 55
+    startLine: 53
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -89,7 +89,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ExpirationTime
     path: ../TwinSharp/Structs.cs
-    startLine: 60
+    startLine: 58
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ExpirationTimeString
     path: ../TwinSharp/Structs.cs
-    startLine: 65
+    startLine: 63
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -147,7 +147,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: eResult
     path: ../TwinSharp/Structs.cs
-    startLine: 70
+    startLine: 68
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: nCount
     path: ../TwinSharp/Structs.cs
-    startLine: 75
+    startLine: 73
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -205,7 +205,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: LicenseName
     path: ../TwinSharp/Structs.cs
-    startLine: 80
+    startLine: 78
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -234,7 +234,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: .ctor
     path: ../TwinSharp/Structs.cs
-    startLine: 88
+    startLine: 86
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -276,7 +276,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ToString
     path: ../TwinSharp/Structs.cs
-    startLine: 118
+    startLine: 116
   assemblies:
   - TwinSharp
   namespace: TwinSharp

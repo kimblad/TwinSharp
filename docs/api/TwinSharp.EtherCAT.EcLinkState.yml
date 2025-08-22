@@ -1,0 +1,331 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.EtherCAT.EcLinkState
+  commentId: T:TwinSharp.EtherCAT.EcLinkState
+  id: EcLinkState
+  parent: TwinSharp.EtherCAT
+  children:
+  - TwinSharp.EtherCAT.EcLinkState.AdditionalLink
+  - TwinSharp.EtherCAT.EcLinkState.MissingLink
+  - TwinSharp.EtherCAT.EcLinkState.NotPresent
+  - TwinSharp.EtherCAT.EcLinkState.Ok
+  - TwinSharp.EtherCAT.EcLinkState.PortA
+  - TwinSharp.EtherCAT.EcLinkState.PortB
+  - TwinSharp.EtherCAT.EcLinkState.PortC
+  - TwinSharp.EtherCAT.EcLinkState.PortD
+  - TwinSharp.EtherCAT.EcLinkState.WithoutCommunication
+  langs:
+  - csharp
+  - vb
+  name: EcLinkState
+  nameWithType: EcLinkState
+  fullName: TwinSharp.EtherCAT.EcLinkState
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EcLinkState
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 45
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: 'Link status of an EtherCAT slave. The Link state can consist of an ORing of the following bits:'
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum EcLinkState : ushort
+    content.vb: >-
+      <Flags>
+
+      Public Enum EcLinkState As UShort
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: TwinSharp.EtherCAT.EcLinkState.Ok
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.Ok
+  id: Ok
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: Ok
+  nameWithType: EcLinkState.Ok
+  fullName: TwinSharp.EtherCAT.EcLinkState.Ok
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Ok
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 49
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Link is ok.
+  example: []
+  syntax:
+    content: Ok = 0
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.NotPresent
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.NotPresent
+  id: NotPresent
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: NotPresent
+  nameWithType: EcLinkState.NotPresent
+  fullName: TwinSharp.EtherCAT.EcLinkState.NotPresent
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NotPresent
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 52
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: No EtherCAT communication with the EtherCAT slave.
+  example: []
+  syntax:
+    content: NotPresent = 1
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.WithoutCommunication
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.WithoutCommunication
+  id: WithoutCommunication
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: WithoutCommunication
+  nameWithType: EcLinkState.WithoutCommunication
+  fullName: TwinSharp.EtherCAT.EcLinkState.WithoutCommunication
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WithoutCommunication
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 55
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Error at port X (specified through EC_LINK_STATE_PORT_A/B/C/D). The port has a link, but no communication is possible via this port..
+  example: []
+  syntax:
+    content: WithoutCommunication = 2
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.MissingLink
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.MissingLink
+  id: MissingLink
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: MissingLink
+  nameWithType: EcLinkState.MissingLink
+  fullName: TwinSharp.EtherCAT.EcLinkState.MissingLink
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MissingLink
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 58
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Missing link at port X (specified through EC_LINK_STATE_PORT_A/B/C/D).
+  example: []
+  syntax:
+    content: MissingLink = 4
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.AdditionalLink
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.AdditionalLink
+  id: AdditionalLink
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: AdditionalLink
+  nameWithType: EcLinkState.AdditionalLink
+  fullName: TwinSharp.EtherCAT.EcLinkState.AdditionalLink
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AdditionalLink
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 61
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Additional link at port X (specified through EC_LINK_STATE_PORT_A/B/C/D).
+  example: []
+  syntax:
+    content: AdditionalLink = 8
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.PortA
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.PortA
+  id: PortA
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: PortA
+  nameWithType: EcLinkState.PortA
+  fullName: TwinSharp.EtherCAT.EcLinkState.PortA
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PortA
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 64
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Port 0.
+  example: []
+  syntax:
+    content: PortA = 16
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.PortB
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.PortB
+  id: PortB
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: PortB
+  nameWithType: EcLinkState.PortB
+  fullName: TwinSharp.EtherCAT.EcLinkState.PortB
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PortB
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 67
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Port 1.
+  example: []
+  syntax:
+    content: PortB = 32
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.PortC
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.PortC
+  id: PortC
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: PortC
+  nameWithType: EcLinkState.PortC
+  fullName: TwinSharp.EtherCAT.EcLinkState.PortC
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PortC
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 70
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Port 2.
+  example: []
+  syntax:
+    content: PortC = 64
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+- uid: TwinSharp.EtherCAT.EcLinkState.PortD
+  commentId: F:TwinSharp.EtherCAT.EcLinkState.PortD
+  id: PortD
+  parent: TwinSharp.EtherCAT.EcLinkState
+  langs:
+  - csharp
+  - vb
+  name: PortD
+  nameWithType: EcLinkState.PortD
+  fullName: TwinSharp.EtherCAT.EcLinkState.PortD
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Enums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PortD
+    path: ../TwinSharp/EtherCAT/Enums.cs
+    startLine: 73
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Port 3.
+  example: []
+  syntax:
+    content: PortD = 128
+    return:
+      type: TwinSharp.EtherCAT.EcLinkState
+references:
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  href: TwinSharp.html
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+- uid: TwinSharp.EtherCAT.EcLinkState
+  commentId: T:TwinSharp.EtherCAT.EcLinkState
+  parent: TwinSharp.EtherCAT
+  href: TwinSharp.EtherCAT.EcLinkState.html
+  name: EcLinkState
+  nameWithType: EcLinkState
+  fullName: TwinSharp.EtherCAT.EcLinkState

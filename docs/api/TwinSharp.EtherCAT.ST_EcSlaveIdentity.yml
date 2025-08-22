@@ -1,0 +1,487 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  commentId: T:TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  id: ST_EcSlaveIdentity
+  parent: TwinSharp.EtherCAT
+  children:
+  - TwinSharp.EtherCAT.ST_EcSlaveIdentity.#ctor(System.Byte[])
+  - TwinSharp.EtherCAT.ST_EcSlaveIdentity.ProductCode
+  - TwinSharp.EtherCAT.ST_EcSlaveIdentity.RevisionNo
+  - TwinSharp.EtherCAT.ST_EcSlaveIdentity.SerialNo
+  - TwinSharp.EtherCAT.ST_EcSlaveIdentity.VendorId
+  langs:
+  - csharp
+  - vb
+  name: ST_EcSlaveIdentity
+  nameWithType: ST_EcSlaveIdentity
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ST_EcSlaveIdentity
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 37
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: The structure ST_EcSlaveIdentity contains the EtherCAT identity data for an EtherCAT slave device.
+  example: []
+  syntax:
+    content: public struct ST_EcSlaveIdentity
+    content.vb: Public Structure ST_EcSlaveIdentity
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity.VendorId
+  commentId: F:TwinSharp.EtherCAT.ST_EcSlaveIdentity.VendorId
+  id: VendorId
+  parent: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  langs:
+  - csharp
+  - vb
+  name: VendorId
+  nameWithType: ST_EcSlaveIdentity.VendorId
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity.VendorId
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: VendorId
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 42
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Vendor-ID of the slave device
+  example: []
+  syntax:
+    content: public uint VendorId
+    return:
+      type: System.UInt32
+    content.vb: Public VendorId As UInteger
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity.ProductCode
+  commentId: F:TwinSharp.EtherCAT.ST_EcSlaveIdentity.ProductCode
+  id: ProductCode
+  parent: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  langs:
+  - csharp
+  - vb
+  name: ProductCode
+  nameWithType: ST_EcSlaveIdentity.ProductCode
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity.ProductCode
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProductCode
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 47
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Product code of the slave device
+  example: []
+  syntax:
+    content: public uint ProductCode
+    return:
+      type: System.UInt32
+    content.vb: Public ProductCode As UInteger
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity.RevisionNo
+  commentId: F:TwinSharp.EtherCAT.ST_EcSlaveIdentity.RevisionNo
+  id: RevisionNo
+  parent: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  langs:
+  - csharp
+  - vb
+  name: RevisionNo
+  nameWithType: ST_EcSlaveIdentity.RevisionNo
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity.RevisionNo
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RevisionNo
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 52
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Indicates the revision number of the slave device.
+  example: []
+  syntax:
+    content: public uint RevisionNo
+    return:
+      type: System.UInt32
+    content.vb: Public RevisionNo As UInteger
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity.SerialNo
+  commentId: F:TwinSharp.EtherCAT.ST_EcSlaveIdentity.SerialNo
+  id: SerialNo
+  parent: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  langs:
+  - csharp
+  - vb
+  name: SerialNo
+  nameWithType: ST_EcSlaveIdentity.SerialNo
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity.SerialNo
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SerialNo
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 57
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Indicates the serial number of the slave device.
+  example: []
+  syntax:
+    content: public uint SerialNo
+    return:
+      type: System.UInt32
+    content.vb: Public SerialNo As UInteger
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity.#ctor(System.Byte[])
+  commentId: M:TwinSharp.EtherCAT.ST_EcSlaveIdentity.#ctor(System.Byte[])
+  id: '#ctor(System.Byte[])'
+  parent: TwinSharp.EtherCAT.ST_EcSlaveIdentity
+  langs:
+  - csharp
+  - vb
+  name: ST_EcSlaveIdentity(byte[])
+  nameWithType: ST_EcSlaveIdentity.ST_EcSlaveIdentity(byte[])
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity.ST_EcSlaveIdentity(byte[])
+  type: Constructor
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: .ctor
+    path: ../TwinSharp/EtherCAT/Structs.cs
+    startLine: 64
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Constructor for ST_EcSlaveIdentity from a byte array of length 16.
+  example: []
+  syntax:
+    content: public ST_EcSlaveIdentity(byte[] bytes)
+    parameters:
+    - id: bytes
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Sub New(bytes As Byte())
+  overload: TwinSharp.EtherCAT.ST_EcSlaveIdentity.#ctor*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: ''
+  nameWithType.vb: ST_EcSlaveIdentity.New(Byte())
+  fullName.vb: TwinSharp.EtherCAT.ST_EcSlaveIdentity.New(Byte())
+  name.vb: New(Byte())
+references:
+- uid: TwinSharp.EtherCAT
+  commentId: N:TwinSharp.EtherCAT
+  href: TwinSharp.html
+  name: TwinSharp.EtherCAT
+  nameWithType: TwinSharp.EtherCAT
+  fullName: TwinSharp.EtherCAT
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.EtherCAT
+    name: EtherCAT
+    href: TwinSharp.EtherCAT.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: TwinSharp.EtherCAT.ST_EcSlaveIdentity.#ctor*
+  commentId: Overload:TwinSharp.EtherCAT.ST_EcSlaveIdentity.#ctor
+  href: TwinSharp.EtherCAT.ST_EcSlaveIdentity.html#TwinSharp_EtherCAT_ST_EcSlaveIdentity__ctor_System_Byte___
+  name: ST_EcSlaveIdentity
+  nameWithType: ST_EcSlaveIdentity.ST_EcSlaveIdentity
+  fullName: TwinSharp.EtherCAT.ST_EcSlaveIdentity.ST_EcSlaveIdentity
+  nameWithType.vb: ST_EcSlaveIdentity.New
+  fullName.vb: TwinSharp.EtherCAT.ST_EcSlaveIdentity.New
+  name.vb: New
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

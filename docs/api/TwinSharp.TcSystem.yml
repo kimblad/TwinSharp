@@ -28,7 +28,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: TcSystem
     path: ../TwinSharp/TcSystem.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -72,7 +72,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: .ctor
     path: ../TwinSharp/TcSystem.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -107,7 +107,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Realtime
     path: ../TwinSharp/TcSystem.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -138,7 +138,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: License
     path: ../TwinSharp/TcSystem.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -169,7 +169,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: FileSystem
     path: ../TwinSharp/TcSystem.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -200,7 +200,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SwitchToConfigMode
     path: ../TwinSharp/TcSystem.cs
-    startLine: 56
+    startLine: 57
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -231,7 +231,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Restart
     path: ../TwinSharp/TcSystem.cs
-    startLine: 69
+    startLine: 70
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -262,7 +262,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Stop
     path: ../TwinSharp/TcSystem.cs
-    startLine: 81
+    startLine: 82
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -290,7 +290,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ListEtherCatMasters
     path: ../TwinSharp/TcSystem.cs
-    startLine: 94
+    startLine: 95
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -299,7 +299,7 @@ items:
   syntax:
     content: public EtherCatMaster[] ListEtherCatMasters()
     return:
-      type: TwinSharp.EtherCatMaster[]
+      type: TwinSharp.EtherCAT.EtherCatMaster[]
       description: ''
     content.vb: Public Function ListEtherCatMasters() As EtherCatMaster()
   overload: TwinSharp.TcSystem.ListEtherCatMasters*
@@ -321,7 +321,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ListLocalStaticRoutes
     path: ../TwinSharp/TcSystem.cs
-    startLine: 179
+    startLine: 180
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -683,25 +683,25 @@ references:
   name: ListEtherCatMasters
   nameWithType: TcSystem.ListEtherCatMasters
   fullName: TwinSharp.TcSystem.ListEtherCatMasters
-- uid: TwinSharp.EtherCatMaster[]
+- uid: TwinSharp.EtherCAT.EtherCatMaster[]
   isExternal: true
-  href: TwinSharp.EtherCatMaster.html
+  href: TwinSharp.EtherCAT.EtherCatMaster.html
   name: EtherCatMaster[]
   nameWithType: EtherCatMaster[]
-  fullName: TwinSharp.EtherCatMaster[]
+  fullName: TwinSharp.EtherCAT.EtherCatMaster[]
   nameWithType.vb: EtherCatMaster()
-  fullName.vb: TwinSharp.EtherCatMaster()
+  fullName.vb: TwinSharp.EtherCAT.EtherCatMaster()
   name.vb: EtherCatMaster()
   spec.csharp:
-  - uid: TwinSharp.EtherCatMaster
+  - uid: TwinSharp.EtherCAT.EtherCatMaster
     name: EtherCatMaster
-    href: TwinSharp.EtherCatMaster.html
+    href: TwinSharp.EtherCAT.EtherCatMaster.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: TwinSharp.EtherCatMaster
+  - uid: TwinSharp.EtherCAT.EtherCatMaster
     name: EtherCatMaster
-    href: TwinSharp.EtherCatMaster.html
+    href: TwinSharp.EtherCAT.EtherCatMaster.html
   - name: (
   - name: )
 - uid: System.IO.FileNotFoundException
