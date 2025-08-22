@@ -367,7 +367,6 @@ namespace TwinSharp.EtherCAT
         }
 
 
-
         /// <summary>
         /// Returns a string representation of the EtherCAT master. 
         /// </summary>
