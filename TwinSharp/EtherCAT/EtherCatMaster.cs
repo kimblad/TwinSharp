@@ -370,7 +370,6 @@ namespace TwinSharp.EtherCAT
         /// <summary>
         /// Gets all the EtherCAT slaves on this master
         /// </summary>
-        /// <param name="slaveAdress">Typically starts at 1001.</param>
         /// <returns></returns>
         public IEnumerable<EtherCatSlave> GetAllSlaves() 
         { 
