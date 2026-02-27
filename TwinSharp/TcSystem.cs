@@ -101,7 +101,7 @@ namespace TwinSharp
             const uint IOADS_IOF_READDEVCOUNT = 0x2;
             const uint IOADS_IOF_READDEVNETID = 0x5;
             const uint IOADS_IOF_READDEVTYPE = 0x7;
-
+            const ushort CX7000_DEVICE_ID = 3;
 
             using var client = new AdsClient();
             client.Connect(target, AmsPort.R0_IO);
@@ -128,10 +128,17 @@ namespace TwinSharp
                 deviceIDs[i] = br.ReadUInt16();
             }
 
+            var numberOfMasters = 0;
             // Skip the device count, which is at the first index
             for (int i = 1; i <= deviceCount; i++)
             {
                 ushort deviceID = deviceIDs[i];
+
+                if (deviceID == CX7000_DEVICE_ID)
+                {
+                    // Skip CX7000 devices, as they are not EtherCAT masters and do not have an AMS net id.
+                    continue;
+                }
 
                 ushort deviceType = client.ReadAny<ushort>(
                     IOADS_IGR_IODEVICESTATE_BASE + deviceID,
@@ -167,8 +174,10 @@ namespace TwinSharp
                     Name = deviceName
                 };
 
-                etherCatMasters[i - 1] = ecMaster;
+                etherCatMasters[numberOfMasters++] = ecMaster;
             }
+
+            Array.Resize(ref etherCatMasters, numberOfMasters);
 
             return etherCatMasters;
         }
