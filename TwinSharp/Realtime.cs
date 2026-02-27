@@ -7,10 +7,12 @@ namespace TwinSharp
     /// It allows setting shared cores configuration, reading CPU settings, reading CPU latency,
     /// and getting the current CPU usage. It uses the AdsClient to communicate with the TwinCAT system.
     /// </summary>
-    public class Realtime
-    {
+    public class Realtime: IDisposable
+  {
         readonly AdsClient client;
         readonly AmsNetId target;
+        private bool disposedValue;
+
         internal Realtime(AmsNetId target)
         {
             this.target = target;
@@ -123,6 +125,28 @@ namespace TwinSharp
         public uint CpuUsage
         {
             get => client.ReadAny<uint>(0x1, 0x6);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    client?.Dispose();
+        }
+
+                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+                // TODO: set large fields to null
+                disposedValue = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
         }
     }
 }
