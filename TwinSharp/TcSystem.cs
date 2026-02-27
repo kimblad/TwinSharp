@@ -177,6 +177,8 @@ namespace TwinSharp
                 etherCatMasters[numberOfMasters++] = ecMaster;
             }
 
+            Array.Resize(ref etherCatMasters, numberOfMasters);
+
             return etherCatMasters;
         }
 
