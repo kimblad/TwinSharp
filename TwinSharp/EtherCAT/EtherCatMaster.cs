@@ -368,10 +368,27 @@ namespace TwinSharp.EtherCAT
 
 
         /// <summary>
-        /// Returns a string representation of the EtherCAT master. 
+        /// Gets all the EtherCAT slaves on this master
         /// </summary>
+        /// <param name="slaveAdress">Typically starts at 1001.</param>
         /// <returns></returns>
-        public override string ToString()
+        public IEnumerable<EtherCatSlave> GetAllSlaves() 
+        { 
+            if (GetAllSlaveAddr().Length <= 0)
+            {
+                return Array.Empty<EtherCatSlave>();
+            }
+      
+            var slaveAddresses = GetAllSlaveAddr();
+            return slaveAddresses.Select(s => new EtherCatSlave(client, s));
+
+        }
+
+    /// <summary>
+    /// Returns a string representation of the EtherCAT master. 
+    /// </summary>
+    /// <returns></returns>
+    public override string ToString()
         {
             return Name + " " + AmsNetId.ToString();
         }
