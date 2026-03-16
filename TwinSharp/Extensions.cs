@@ -37,6 +37,27 @@ namespace TwinSharp
         }
 
         /// <summary>
+        /// Reads a ULINT or UDINT symbol as ulong. On the TwinCAT usermode runtime some
+        /// counter fields are exposed as UDINT (4 bytes) instead of ULINT (8 bytes).
+        /// Tries to read 8 bytes first; if the runtime returns only 4 bytes it retries
+        /// as uint and widens the result.
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="handle"></param>
+        /// <returns></returns>
+        public static ulong ReadUlintOrUdint(this AdsClient client, uint handle)
+        {
+            try
+            {
+                return client.ReadAny<ulong>(handle);
+            }
+            catch (AdsErrorException)
+            {
+                return client.ReadAny<uint>(handle);
+            }
+        }
+
+        /// <summary>
         /// Converts a byte array to a uint.
         /// </summary>
         /// <param name="buffer"></param>
