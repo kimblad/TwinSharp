@@ -28,7 +28,7 @@ namespace TwinSharp.PLC
             get
             {
                 uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.ObjId");
-                return client.ReadAny<ulong>(handle);
+                return client.ReadUlintOrUdint(handle);
             }
         }
 
@@ -154,7 +154,7 @@ namespace TwinSharp.PLC
             get
             {
                 uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.TaskCnt");
-                return client.ReadAny<ulong>(handle);
+                return client.ReadUlintOrUdint(handle);
             }
         }
 
@@ -166,7 +166,7 @@ namespace TwinSharp.PLC
             get
             {
                 uint handle = GetOrCreateVariableHandle("TwinCAT_SystemInfoVarList._AppInfo.OnlineChangeCnt");
-                return client.ReadAny<ulong>(handle);
+                return client.ReadUlintOrUdint(handle);
             }
         }
 
