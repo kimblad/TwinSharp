@@ -318,7 +318,7 @@ namespace TwinSharp.EtherCAT
         public void RequestState(EcDeviceState state)
         {
             //Length is 0 bytes. State corresponds to the index offset that gets the write.
-            client.WriteAny(0x3, (uint)state);
+            client.Write(0x3, (uint)state);
         }
 
         /// <summary>

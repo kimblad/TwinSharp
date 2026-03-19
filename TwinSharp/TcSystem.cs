@@ -180,9 +180,26 @@ namespace TwinSharp
         /// <exception cref="FileNotFoundException"></exception>
         public static AmsRoute[] ListLocalStaticRoutes()
         {
-            const string filePath = "C:\\TwinCAT\\3.1\\Target\\StaticRoutes.xml";
+            string[] filePaths =
+            {
+                "C:\\Program Files (x86)\\Beckhoff\\TwinCAT\\3.1\\Target\\StaticRoutes.xml",
+                "C:\\TwinCAT\\3.1\\Target\\StaticRoutes.xml"
+            };
 
-            if (!File.Exists(filePath))
+            string filePath = string.Empty;
+            bool fileFound = false;
+
+            foreach (string path in filePaths)
+            {
+                if(File.Exists(path))
+                {
+                    fileFound = true;
+                    filePath = path;
+                    break;
+                }
+            }
+
+            if (!fileFound)
             {
                 throw new FileNotFoundException("The file StaticRoutes.xml was not found. Make sure that TwinCAT is installed locally.");
             }

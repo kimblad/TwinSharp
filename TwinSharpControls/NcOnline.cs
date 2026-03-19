@@ -38,6 +38,15 @@ namespace TwinSharpControls
             set => timerUpdate.Interval = value;
         }
 
+        /// <summary>
+        /// Enable or disable auto-refresh.
+        /// </summary>
+        public bool AutoRefresh
+        {
+            get => timerUpdate.Enabled;
+            set => timerUpdate.Enabled = value;
+        }
+
         private void InitEditableTextBoxes()
         {
             if (axis == null)

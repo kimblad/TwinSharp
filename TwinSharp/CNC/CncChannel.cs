@@ -16,8 +16,11 @@ namespace TwinSharp.CNC
         readonly AdsClient comClient;
 
 
+        readonly AdsClient plcClient;
+
         internal CncChannel(AdsClient plcClient, AdsClient geoClient, AdsClient sdaClient, AdsClient comClient, int channelNumber, Dictionary<string, ObjectDescription> descriptions)
         {
+            this.plcClient = plcClient;
             this.comClient = comClient;
             ChannelNumber = channelNumber;
             this.Descriptions = descriptions;
@@ -43,6 +46,21 @@ namespace TwinSharp.CNC
         /// The unique channel number of this CNC channel.
         /// </summary>
         public int ChannelNumber { get; private set; }
+
+        /// <summary>
+        /// Registers the PLC as present on this channel. Must be set to TRUE before the CNC
+        /// will accept any HLI commands. Writes to gpCh[n]^.head.plc_present_w.
+        /// </summary>
+        public bool PlcPresent
+        {
+            set
+            {
+                uint handle = plcClient.CreateVariableHandle(
+                    $"HLI_Global_Variables.gpCh[{ChannelNumber - 1}]^.head.plc_present_w");
+                plcClient.WriteAny(handle, value);
+                plcClient.DeleteVariableHandle(handle);
+            }
+        }
 
         /// <summary>
         /// Gets an object that  provides an methods and properties to manage and control the operation modes and states

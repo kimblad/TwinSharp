@@ -33,5 +33,18 @@ namespace TwinSharpControls
                 ncFunctions1.Axis = axis;
             }
         }
+
+        /// <summary>
+        /// Enable or disable auto-refresh.
+        /// </summary>
+        public bool AutoRefresh
+        {
+            get => ncOnline1.AutoRefresh;
+            set
+            {
+                ncOnline1.AutoRefresh = value;
+                ncFunctions1.AutoRefresh = value;
+            }
+        }
     }
 }

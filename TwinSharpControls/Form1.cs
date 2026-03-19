@@ -39,8 +39,62 @@ namespace TwinSharpControls
 
         private void comboBoxTargets_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Find axes at new target.
-            PopulateAxesInComboBox();
+
+
+            //Update all dashboard targets
+            if (comboBoxTargets.SelectedItem is ComboBoxTargetItem targetItem)
+            {
+                etherCatHealthDashboard1.Target = targetItem.AmsNetId;
+                ipcSystemMonitor1.Target = targetItem.AmsNetId;
+                dataLogger1.Target = targetItem.AmsNetId;
+                multiAxisMotionVisualizer1.Target = targetItem.AmsNetId;
+                plcRuntimeMonitor1.Target = targetItem.AmsNetId;
+                plcSymbolBrowser1.Target = targetItem.AmsNetId;
+            }
+
+            // Activate timers for the currently selected tab
+            UpdateActiveTab();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateActiveTab();
+        }
+
+        private void UpdateActiveTab()
+        {
+            // Stop all timers first
+            ncAxis1.AutoRefresh = false;
+            etherCatHealthDashboard1.AutoRefresh = false;
+            ipcSystemMonitor1.AutoRefresh = false;
+            multiAxisMotionVisualizer1.AutoRefresh = false;
+            plcRuntimeMonitor1.AutoRefresh = false;
+
+            // Start timer only for the active tab
+            if(tabControl1.SelectedTab == tabPageAxis)
+            {
+                // Update axes in combo box
+                PopulateAxesInComboBox();
+                ncAxis1.AutoRefresh = true;
+            }
+            else if (tabControl1.SelectedTab == tabPageEtherCAT)
+            {
+                etherCatHealthDashboard1.AutoRefresh = true;
+            }
+            else if (tabControl1.SelectedTab == tabPageIPC)
+            {
+                ipcSystemMonitor1.AutoRefresh = true;
+            }
+            else if (tabControl1.SelectedTab == tabPageMotionVisualizer)
+            {
+                multiAxisMotionVisualizer1.AutoRefresh = true;
+            }
+            else if (tabControl1.SelectedTab == tabPagePlcRuntime)
+            {
+                plcRuntimeMonitor1.AutoRefresh = true;
+            }
+            // Note: DataLogger and SlaveInspector don't have auto-refresh - they are manually controlled
+            // Note: NC Axis tab doesn't have a timer
         }
 
         private void comboBoxAxes_SelectedIndexChanged(object sender, EventArgs e)

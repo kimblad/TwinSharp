@@ -102,6 +102,20 @@ namespace TwinSharp.CNC
             set => plcClient.WriteAny(variableHandles[Identifier.InterfaceExists], value);
         }
 
+        /// <summary>
+        /// TRUE while the CNC is processing the last command. The CNC sets this back to FALSE after acceptance.
+        /// Only write a new command when this is FALSE.
+        /// </summary>
+        public bool CommandPending
+            => plcClient.ReadAny<bool>(variableHandles[Identifier.CommandSempahor]);
+
+        /// <summary>
+        /// Force-clears the command semaphore to FALSE so a fresh command can be sent.
+        /// Call this before writing a command if the semaphore appears stuck.
+        /// </summary>
+        public void ClearCommandSemaphore()
+            => plcClient.WriteAny(variableHandles[Identifier.CommandSempahor], false);
+
 
         private Dictionary<Identifier, uint> CreateVariableHandles(int channelNumber)
         {

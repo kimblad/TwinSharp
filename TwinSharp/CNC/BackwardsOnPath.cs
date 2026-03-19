@@ -49,12 +49,18 @@ namespace TwinSharp.CNC
             handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed.command_w");
             handles.Add(Identifier.SetSpecifyExternalPathVelocity, handle);
 
+            handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed.enable_w");
+            handles.Add(Identifier.SetEnableExternalPathVelocity, handle);
+
             handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed.state_r");
             handles.Add(Identifier.GetSpecifyExternalPathVelocity, handle);
 
 
             handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed_valid.command_w");
             handles.Add(Identifier.SetActivateExternalPathVelocity, handle);
+
+            handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed_valid.enable_w");
+            handles.Add(Identifier.SetEnableActivateExternalPathVelocity, handle);
 
             handle = plcClient.CreateVariableHandle(prefix + ".ext_command_speed_valid.state_r");
             handles.Add(Identifier.GetActivateExternalPathVelocity, handle);
@@ -74,11 +80,24 @@ namespace TwinSharp.CNC
 
 
         /// <summary>
-        /// Signal to CNC that we want to use this interface.
+        /// Signal to CNC that we want to use the backward motion interface.
         /// </summary>
         public bool EnableInterface
         {
             set => plcClient.WriteAny(variableHandles[Identifier.SetEnableBackwardMotion], value);
+        }
+
+        /// <summary>
+        /// Signal to CNC that we want to use the external path velocity interface (ext_command_speed and ext_command_speed_valid).
+        /// Must be set to true before ExternalPathVelocity and ActivateExternalPathVelocity will be acknowledged.
+        /// </summary>
+        public bool EnableExternalPathVelocityInterface
+        {
+            set
+            {
+                plcClient.WriteAny(variableHandles[Identifier.SetEnableExternalPathVelocity], value);
+                plcClient.WriteAny(variableHandles[Identifier.SetEnableActivateExternalPathVelocity], value);
+            }
         }
 
         /// <summary>
@@ -133,6 +152,8 @@ namespace TwinSharp.CNC
             SetActivateExternalPathVelocity,
             GetActivateExternalPathVelocity,
             SetEnableBackwardMotion,
+            SetEnableExternalPathVelocity,
+            SetEnableActivateExternalPathVelocity,
         }
     }
 }

@@ -15,12 +15,18 @@ namespace TwinSharp.CNC
     {
         readonly AdsClient plcClient;
         readonly int channelNumber;
-
+        readonly uint _enableHandle;
+        readonly uint _commandHandle;
+        readonly uint _semaphorHandle;
 
         internal ManualOperation(AdsClient plcClient, int channelNumber)
         {
             this.plcClient = plcClient;
             this.channelNumber = channelNumber;
+            string pfx = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.activation";
+            _enableHandle   = plcClient.CreateVariableHandle($"{pfx}.enable_w");
+            _commandHandle  = plcClient.CreateVariableHandle($"{pfx}.command_w");
+            _semaphorHandle = plcClient.CreateVariableHandle($"{pfx}.command_semaphor_rw");
             TipParameters = new TipParameters(plcClient, channelNumber);
             JogParameters = new JogParameters(plcClient, channelNumber);
             HrParameters = new HrParameters(plcClient, channelNumber);
@@ -130,22 +136,14 @@ namespace TwinSharp.CNC
         /// </summary>
         /// <param name="enabled"></param>
         public void EnableControlElement(bool enabled)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.activation.enable_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, enabled);
-        }
+            => plcClient.WriteAny(_enableHandle, enabled);
 
         /// <summary>
         /// Write the command data for one of the manual control elements to the CNC.
         /// </summary>
         /// <param name="controlElement"></param>
         public void WriteCommandElement(HLI_HB_ACTIVATION controlElement)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.activation.command_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, controlElement);
-        }
+            => plcClient.WriteAny(_commandHandle, controlElement);
 
         /// <summary>
         /// CNC accepts the commanded data if this element has the value TRUE and sets
@@ -154,11 +152,13 @@ namespace TwinSharp.CNC
         /// </summary>
         /// <param name="signal"></param>
         public void SignalCommandSemaphor(bool signal)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.activation.command_semaphor_rw";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, signal);
-        }
+            => plcClient.WriteAny(_semaphorHandle, signal);
+
+        /// <summary>
+        /// TRUE while the CNC is still processing the last ACTIVATION command.
+        /// Poll this after SignalCommandSemaphor(true) and wait until it returns false before sending KEY.
+        /// </summary>
+        public bool CommandPending => plcClient.ReadAny<bool>(_semaphorHandle);
     }
 
     /// <summary>
@@ -246,7 +246,7 @@ namespace TwinSharp.CNC
         /// <param name="signal"></param>
         public void SignalCommandSemaphor(bool signal)
         {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.hr_paramater.command_semaphor_rw";
+            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.hr_parameter.command_semaphor_rw";
             uint handle = plcClient.CreateVariableHandle(symbol);
             plcClient.WriteAny(handle, signal);
         }
@@ -258,49 +258,38 @@ namespace TwinSharp.CNC
     /// </summary>
     public class JogParameters
     {
-        private AdsClient plcClient;
-        private int channelNumber;
+        private readonly AdsClient plcClient;
+        private readonly uint _enableHandle;
+        private readonly uint _commandHandle;
+        private readonly uint _semaphorHandle;
 
         internal JogParameters(AdsClient plcClient, int channelNumber)
         {
             this.plcClient = plcClient;
-            this.channelNumber = channelNumber;
+            string pfx = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.jog_parameter";
+            _enableHandle   = plcClient.CreateVariableHandle($"{pfx}.enable_w");
+            _commandHandle  = plcClient.CreateVariableHandle($"{pfx}.command_w");
+            _semaphorHandle = plcClient.CreateVariableHandle($"{pfx}.command_semaphor_rw");
         }
 
-        /// <summary>
-        /// Signal to CNC that the interface exists and we want to use it.
-        /// </summary>
-        /// <param name="enabled"></param>
+        /// <summary>Signal to CNC that the interface exists and we want to use it.</summary>
         public void EnableControlElement(bool enabled)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.jog_parameter.enable_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, enabled);
-        }
+            => plcClient.WriteAny(_enableHandle, enabled);
 
-        /// <summary>
-        /// Write the parameters for the incremental jog mode to the CNC.
-        /// </summary>
-        /// <param name="data"></param>
+        /// <summary>Write the parameters for the incremental jog mode to the CNC.</summary>
         public void WriteCommandElement(HLI_HB_JOG_PARAMETER data)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.jog_parameter.command_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, data);
-        }
+            => plcClient.WriteAny(_commandHandle, data);
 
         /// <summary>
         /// CNC accepts the commanded data if this element has the value TRUE and sets
         /// this element to the value FALSE after complete acceptance of the data.
         /// You should set this element to the value TRUE if all data to be commanded has been written.
         /// </summary>
-        /// <param name="signal"></param>
         public void SignalCommandSemaphor(bool signal)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.jog_paramater.command_semaphor_rw";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, signal);
-        }
+            => plcClient.WriteAny(_semaphorHandle, signal);
+
+        /// <summary>TRUE while the CNC is still processing the last command. Wait until false before sending the next command.</summary>
+        public bool CommandPending => plcClient.ReadAny<bool>(_semaphorHandle);
     }
 
     /// <summary>
@@ -310,49 +299,37 @@ namespace TwinSharp.CNC
     public class TipParameters
     {
         readonly AdsClient plcClient;
-        readonly int channelNumber;
+        readonly uint _enableHandle;
+        readonly uint _commandHandle;
+        readonly uint _semaphorHandle;
 
         internal TipParameters(AdsClient plcClient, int channelNumber)
         {
             this.plcClient = plcClient;
-            this.channelNumber = channelNumber;
+            string pfx = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter";
+            _enableHandle   = plcClient.CreateVariableHandle($"{pfx}.enable_w");
+            _commandHandle  = plcClient.CreateVariableHandle($"{pfx}.command_w");
+            _semaphorHandle = plcClient.CreateVariableHandle($"{pfx}.command_semaphor_rw");
         }
 
-        /// <summary>
-        /// Signal to CNC that the interface exists and we want to use it.
-        /// </summary>
-        /// <param name="enabled"></param>
+        /// <summary>Signal to CNC that the interface exists and we want to use it.</summary>
         public void EnableControlElement(bool enabled)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.enable_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, enabled);
-        }
+            => plcClient.WriteAny(_enableHandle, enabled);
 
-
-        /// <summary>
-        /// Write the parameters for continuous jog mode to the CNC.
-        /// </summary>
-        /// <param name="data"></param>
+        /// <summary>Write the parameters for continuous jog mode to the CNC.</summary>
         public void WriteCommandElement(HLI_HB_TIP_PARAMETER data)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.command_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, data);
-        }
+            => plcClient.WriteAny(_commandHandle, data);
 
         /// <summary>
         /// CNC accepts the commanded data if this element has the value TRUE and sets
         /// this element to the value FALSE after complete acceptance of the data.
         /// You should set this element to the value TRUE if all data to be commanded has been written.
         /// </summary>
-        /// <param name="signal"></param>
         public void SignalCommandSemaphor(bool signal)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.tip_parameter.command_semaphor_rw";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, signal);
-        }
+            => plcClient.WriteAny(_semaphorHandle, signal);
+
+        /// <summary>TRUE while the CNC is still processing the last command. Wait until false before sending the next command.</summary>
+        public bool CommandPending => plcClient.ReadAny<bool>(_semaphorHandle);
     }
 
 
@@ -363,50 +340,37 @@ namespace TwinSharp.CNC
     public class Key
     {
         readonly AdsClient plcClient;
-        readonly int channelNumber;
-        readonly int keyIndex;
+        readonly uint _enableHandle;
+        readonly uint _commandHandle;
+        readonly uint _semaphorHandle;
 
         internal Key(AdsClient plcClient, int channelNumber, int keyIndex)
         {
             this.plcClient = plcClient;
-            this.channelNumber = channelNumber;
-            this.keyIndex = keyIndex;
+            string pfx = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}]";
+            _enableHandle   = plcClient.CreateVariableHandle($"{pfx}.enable_w");
+            _commandHandle  = plcClient.CreateVariableHandle($"{pfx}.command_w");
+            _semaphorHandle = plcClient.CreateVariableHandle($"{pfx}.command_semaphor_rw");
         }
 
-        /// <summary>
-        /// Signal to CNC that the interface exists and we want to use it.
-        /// </summary>
-        /// <param name="enabled"></param>
+        /// <summary>Signal to CNC that the interface exists and we want to use it.</summary>
         public void EnableControlElement(bool enabled)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].enable_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, enabled);
-        }
+            => plcClient.WriteAny(_enableHandle, enabled);
 
-        /// <summary>
-        /// Write the command data for the key to the CNC.
-        /// </summary>
-        /// <param name="data"></param>
+        /// <summary>Write the command data for the key to the CNC.</summary>
         public void WriteCommandElement(HLI_HB_KEY data)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].command_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, data);
-        }
+            => plcClient.WriteAny(_commandHandle, data);
 
         /// <summary>
         /// CNC accepts the commanded data if this element has the value TRUE and sets
         /// this element to the value FALSE after complete acceptance of the data.
         /// You should set this element to the value TRUE if all data to be commanded has been written.
         /// </summary>
-        /// <param name="signal"></param>
         public void SignalCommandSemaphor(bool signal)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.key[{keyIndex}].command_semaphor_rw";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, signal);
-        }
+            => plcClient.WriteAny(_semaphorHandle, signal);
+
+        /// <summary>TRUE while the CNC is still processing the last command. Wait until false before sending the next command.</summary>
+        public bool CommandPending => plcClient.ReadAny<bool>(_semaphorHandle);
     }
 
 
@@ -418,47 +382,36 @@ namespace TwinSharp.CNC
     public class RapidKey
     {
         readonly AdsClient plcClient;
-        readonly int channelNumber;
+        readonly uint _enableHandle;
+        readonly uint _commandHandle;
+        readonly uint _semaphorHandle;
 
         internal RapidKey(AdsClient plcClient, int channelNumber)
         {
             this.plcClient = plcClient;
-            this.channelNumber = channelNumber;
+            string pfx = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key";
+            _enableHandle   = plcClient.CreateVariableHandle($"{pfx}.enable_w");
+            _commandHandle  = plcClient.CreateVariableHandle($"{pfx}.command_w");
+            _semaphorHandle = plcClient.CreateVariableHandle($"{pfx}.command_semaphor_rw");
         }
 
-        /// <summary>
-        /// Signal to CNC that the interface exists and we want to use it.
-        /// </summary>
-        /// <param name="enabled"></param>
+        /// <summary>Signal to CNC that the interface exists and we want to use it.</summary>
         public void EnableControlElement(bool enabled)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.enable_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, enabled);
-        }
+            => plcClient.WriteAny(_enableHandle, enabled);
 
-        /// <summary>
-        /// Write the command data for the rapid key to the CNC.
-        /// </summary>
-        /// <param name="data"></param>
+        /// <summary>Write the command data for the rapid key to the CNC.</summary>
         public void WriteCommandElement(HLI_HB_RAPID_KEY data)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.command_w";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, data);
-        }
+            => plcClient.WriteAny(_commandHandle, data);
 
         /// <summary>
         /// CNC accepts the commanded data if this element has the value TRUE and sets
         /// this element to the value FALSE after complete acceptance of the data.
         /// You should set this element to the value TRUE if all data to be commanded has been written.
         /// </summary>
-        /// <param name="signal"></param>
         public void SignalCommandSemaphor(bool signal)
-        {
-            string symbol = $"HLI_Global_Variables.gpCh[{channelNumber - 1}]^.hb_mc_control.rapid_key.command_semaphor_rw";
-            uint handle = plcClient.CreateVariableHandle(symbol);
-            plcClient.WriteAny(handle, signal);
-        }
+            => plcClient.WriteAny(_semaphorHandle, signal);
+
+        /// <summary>TRUE while the CNC is still processing the last command. Wait until false before sending the next command.</summary>
+        public bool CommandPending => plcClient.ReadAny<bool>(_semaphorHandle);
     }
 }
