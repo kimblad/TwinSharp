@@ -5,6 +5,7 @@ items:
   id: ManualOperation
   parent: TwinSharp.CNC
   children:
+  - TwinSharp.CNC.ManualOperation.CommandPending
   - TwinSharp.CNC.ManualOperation.EnableControlElement(System.Boolean)
   - TwinSharp.CNC.ManualOperation.GetControlElementNumber(System.Int32)
   - TwinSharp.CNC.ManualOperation.GetManualModeState(System.Int32)
@@ -72,7 +73,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: TipParameters
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 46
+    startLine: 52
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -106,7 +107,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: JogParameters
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 52
+    startLine: 58
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -140,7 +141,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HrParameters
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 58
+    startLine: 64
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -174,7 +175,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Keys
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 64
+    startLine: 70
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -208,7 +209,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: RapidKey
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 69
+    startLine: 75
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -239,7 +240,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HandWheelIncs
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 75
+    startLine: 81
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -273,7 +274,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: GetManualModeState
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 83
+    startLine: 89
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -311,7 +312,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: GetOperationModeState
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 95
+    startLine: 101
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -349,7 +350,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: GetControlElementNumber
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 107
+    startLine: 113
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -387,7 +388,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: GetPathVelocityContinous
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 119
+    startLine: 125
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -425,7 +426,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: EnableControlElement
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 131
+    startLine: 137
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -460,7 +461,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: WriteCommandElement
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 142
+    startLine: 144
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -492,7 +493,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SignalCommandSemaphor
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 155
+    startLine: 153
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -514,6 +515,40 @@ items:
   nameWithType.vb: ManualOperation.SignalCommandSemaphor(Boolean)
   fullName.vb: TwinSharp.CNC.ManualOperation.SignalCommandSemaphor(Boolean)
   name.vb: SignalCommandSemaphor(Boolean)
+- uid: TwinSharp.CNC.ManualOperation.CommandPending
+  commentId: P:TwinSharp.CNC.ManualOperation.CommandPending
+  id: CommandPending
+  parent: TwinSharp.CNC.ManualOperation
+  langs:
+  - csharp
+  - vb
+  name: CommandPending
+  nameWithType: ManualOperation.CommandPending
+  fullName: TwinSharp.CNC.ManualOperation.CommandPending
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/ManualOperation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CommandPending
+    path: ../TwinSharp/CNC/ManualOperation.cs
+    startLine: 160
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    TRUE while the CNC is still processing the last ACTIVATION command.
+
+    Poll this after SignalCommandSemaphor(true) and wait until it returns false before sending KEY.
+  example: []
+  syntax:
+    content: public bool CommandPending { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CommandPending As Boolean
+  overload: TwinSharp.CNC.ManualOperation.CommandPending*
 references:
 - uid: TwinSharp.CNC
   commentId: N:TwinSharp.CNC
@@ -962,3 +997,9 @@ references:
   name: SignalCommandSemaphor
   nameWithType: ManualOperation.SignalCommandSemaphor
   fullName: TwinSharp.CNC.ManualOperation.SignalCommandSemaphor
+- uid: TwinSharp.CNC.ManualOperation.CommandPending*
+  commentId: Overload:TwinSharp.CNC.ManualOperation.CommandPending
+  href: TwinSharp.CNC.ManualOperation.html#TwinSharp_CNC_ManualOperation_CommandPending
+  name: CommandPending
+  nameWithType: ManualOperation.CommandPending
+  fullName: TwinSharp.CNC.ManualOperation.CommandPending

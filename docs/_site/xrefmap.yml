@@ -606,6 +606,19 @@ references:
   isSpec: "True"
   fullName: TwinSharp.CNC.BackwardsOnPath.ActivateExternalPathVelocity
   nameWithType: BackwardsOnPath.ActivateExternalPathVelocity
+- uid: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  name: EnableExternalPathVelocityInterface
+  href: api/TwinSharp.CNC.BackwardsOnPath.html#TwinSharp_CNC_BackwardsOnPath_EnableExternalPathVelocityInterface
+  commentId: P:TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  fullName: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  nameWithType: BackwardsOnPath.EnableExternalPathVelocityInterface
+- uid: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface*
+  name: EnableExternalPathVelocityInterface
+  href: api/TwinSharp.CNC.BackwardsOnPath.html#TwinSharp_CNC_BackwardsOnPath_EnableExternalPathVelocityInterface_
+  commentId: Overload:TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  isSpec: "True"
+  fullName: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  nameWithType: BackwardsOnPath.EnableExternalPathVelocityInterface
 - uid: TwinSharp.CNC.BackwardsOnPath.EnableInterface
   name: EnableInterface
   href: api/TwinSharp.CNC.BackwardsOnPath.html#TwinSharp_CNC_BackwardsOnPath_EnableInterface
@@ -1075,6 +1088,19 @@ references:
   isSpec: "True"
   fullName: TwinSharp.CNC.CncAxis.ExternalAxisCommanding
   nameWithType: CncAxis.ExternalAxisCommanding
+- uid: TwinSharp.CNC.CncAxis.PlcPresent
+  name: PlcPresent
+  href: api/TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_PlcPresent
+  commentId: P:TwinSharp.CNC.CncAxis.PlcPresent
+  fullName: TwinSharp.CNC.CncAxis.PlcPresent
+  nameWithType: CncAxis.PlcPresent
+- uid: TwinSharp.CNC.CncAxis.PlcPresent*
+  name: PlcPresent
+  href: api/TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_PlcPresent_
+  commentId: Overload:TwinSharp.CNC.CncAxis.PlcPresent
+  isSpec: "True"
+  fullName: TwinSharp.CNC.CncAxis.PlcPresent
+  nameWithType: CncAxis.PlcPresent
 - uid: TwinSharp.CNC.CncAxis.Status
   name: Status
   href: api/TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_Status
@@ -1347,6 +1373,19 @@ references:
   isSpec: "True"
   fullName: TwinSharp.CNC.CncChannel.PathFeedProgrammedWeighted
   nameWithType: CncChannel.PathFeedProgrammedWeighted
+- uid: TwinSharp.CNC.CncChannel.PlcPresent
+  name: PlcPresent
+  href: api/TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_PlcPresent
+  commentId: P:TwinSharp.CNC.CncChannel.PlcPresent
+  fullName: TwinSharp.CNC.CncChannel.PlcPresent
+  nameWithType: CncChannel.PlcPresent
+- uid: TwinSharp.CNC.CncChannel.PlcPresent*
+  name: PlcPresent
+  href: api/TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_PlcPresent_
+  commentId: Overload:TwinSharp.CNC.CncChannel.PlcPresent
+  isSpec: "True"
+  fullName: TwinSharp.CNC.CncChannel.PlcPresent
+  nameWithType: CncChannel.PlcPresent
 - uid: TwinSharp.CNC.CncChannel.SingleBlock
   name: SingleBlock
   href: api/TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_SingleBlock
@@ -4231,6 +4270,19 @@ references:
   commentId: T:TwinSharp.CNC.JogParameters
   fullName: TwinSharp.CNC.JogParameters
   nameWithType: JogParameters
+- uid: TwinSharp.CNC.JogParameters.CommandPending
+  name: CommandPending
+  href: api/TwinSharp.CNC.JogParameters.html#TwinSharp_CNC_JogParameters_CommandPending
+  commentId: P:TwinSharp.CNC.JogParameters.CommandPending
+  fullName: TwinSharp.CNC.JogParameters.CommandPending
+  nameWithType: JogParameters.CommandPending
+- uid: TwinSharp.CNC.JogParameters.CommandPending*
+  name: CommandPending
+  href: api/TwinSharp.CNC.JogParameters.html#TwinSharp_CNC_JogParameters_CommandPending_
+  commentId: Overload:TwinSharp.CNC.JogParameters.CommandPending
+  isSpec: "True"
+  fullName: TwinSharp.CNC.JogParameters.CommandPending
+  nameWithType: JogParameters.CommandPending
 - uid: TwinSharp.CNC.JogParameters.EnableControlElement(System.Boolean)
   name: EnableControlElement(bool)
   href: api/TwinSharp.CNC.JogParameters.html#TwinSharp_CNC_JogParameters_EnableControlElement_System_Boolean_
@@ -4282,6 +4334,19 @@ references:
   commentId: T:TwinSharp.CNC.Key
   fullName: TwinSharp.CNC.Key
   nameWithType: Key
+- uid: TwinSharp.CNC.Key.CommandPending
+  name: CommandPending
+  href: api/TwinSharp.CNC.Key.html#TwinSharp_CNC_Key_CommandPending
+  commentId: P:TwinSharp.CNC.Key.CommandPending
+  fullName: TwinSharp.CNC.Key.CommandPending
+  nameWithType: Key.CommandPending
+- uid: TwinSharp.CNC.Key.CommandPending*
+  name: CommandPending
+  href: api/TwinSharp.CNC.Key.html#TwinSharp_CNC_Key_CommandPending_
+  commentId: Overload:TwinSharp.CNC.Key.CommandPending
+  isSpec: "True"
+  fullName: TwinSharp.CNC.Key.CommandPending
+  nameWithType: Key.CommandPending
 - uid: TwinSharp.CNC.Key.EnableControlElement(System.Boolean)
   name: EnableControlElement(bool)
   href: api/TwinSharp.CNC.Key.html#TwinSharp_CNC_Key_EnableControlElement_System_Boolean_
@@ -4333,6 +4398,19 @@ references:
   commentId: T:TwinSharp.CNC.ManualOperation
   fullName: TwinSharp.CNC.ManualOperation
   nameWithType: ManualOperation
+- uid: TwinSharp.CNC.ManualOperation.CommandPending
+  name: CommandPending
+  href: api/TwinSharp.CNC.ManualOperation.html#TwinSharp_CNC_ManualOperation_CommandPending
+  commentId: P:TwinSharp.CNC.ManualOperation.CommandPending
+  fullName: TwinSharp.CNC.ManualOperation.CommandPending
+  nameWithType: ManualOperation.CommandPending
+- uid: TwinSharp.CNC.ManualOperation.CommandPending*
+  name: CommandPending
+  href: api/TwinSharp.CNC.ManualOperation.html#TwinSharp_CNC_ManualOperation_CommandPending_
+  commentId: Overload:TwinSharp.CNC.ManualOperation.CommandPending
+  isSpec: "True"
+  fullName: TwinSharp.CNC.ManualOperation.CommandPending
+  nameWithType: ManualOperation.CommandPending
 - uid: TwinSharp.CNC.ManualOperation.EnableControlElement(System.Boolean)
   name: EnableControlElement(bool)
   href: api/TwinSharp.CNC.ManualOperation.html#TwinSharp_CNC_ManualOperation_EnableControlElement_System_Boolean_
@@ -4699,6 +4777,32 @@ references:
   isSpec: "True"
   fullName: TwinSharp.CNC.OperationModeManager.Adresses
   nameWithType: OperationModeManager.Adresses
+- uid: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  name: ClearCommandSemaphore()
+  href: api/TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_ClearCommandSemaphore
+  commentId: M:TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  fullName: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore()
+  nameWithType: OperationModeManager.ClearCommandSemaphore()
+- uid: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore*
+  name: ClearCommandSemaphore
+  href: api/TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_ClearCommandSemaphore_
+  commentId: Overload:TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  isSpec: "True"
+  fullName: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  nameWithType: OperationModeManager.ClearCommandSemaphore
+- uid: TwinSharp.CNC.OperationModeManager.CommandPending
+  name: CommandPending
+  href: api/TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_CommandPending
+  commentId: P:TwinSharp.CNC.OperationModeManager.CommandPending
+  fullName: TwinSharp.CNC.OperationModeManager.CommandPending
+  nameWithType: OperationModeManager.CommandPending
+- uid: TwinSharp.CNC.OperationModeManager.CommandPending*
+  name: CommandPending
+  href: api/TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_CommandPending_
+  commentId: Overload:TwinSharp.CNC.OperationModeManager.CommandPending
+  isSpec: "True"
+  fullName: TwinSharp.CNC.OperationModeManager.CommandPending
+  nameWithType: OperationModeManager.CommandPending
 - uid: TwinSharp.CNC.OperationModeManager.Dispose
   name: Dispose()
   href: api/TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_Dispose
@@ -4866,6 +4970,19 @@ references:
   commentId: T:TwinSharp.CNC.RapidKey
   fullName: TwinSharp.CNC.RapidKey
   nameWithType: RapidKey
+- uid: TwinSharp.CNC.RapidKey.CommandPending
+  name: CommandPending
+  href: api/TwinSharp.CNC.RapidKey.html#TwinSharp_CNC_RapidKey_CommandPending
+  commentId: P:TwinSharp.CNC.RapidKey.CommandPending
+  fullName: TwinSharp.CNC.RapidKey.CommandPending
+  nameWithType: RapidKey.CommandPending
+- uid: TwinSharp.CNC.RapidKey.CommandPending*
+  name: CommandPending
+  href: api/TwinSharp.CNC.RapidKey.html#TwinSharp_CNC_RapidKey_CommandPending_
+  commentId: Overload:TwinSharp.CNC.RapidKey.CommandPending
+  isSpec: "True"
+  fullName: TwinSharp.CNC.RapidKey.CommandPending
+  nameWithType: RapidKey.CommandPending
 - uid: TwinSharp.CNC.RapidKey.EnableControlElement(System.Boolean)
   name: EnableControlElement(bool)
   href: api/TwinSharp.CNC.RapidKey.html#TwinSharp_CNC_RapidKey_EnableControlElement_System_Boolean_
@@ -5255,6 +5372,19 @@ references:
   commentId: T:TwinSharp.CNC.TipParameters
   fullName: TwinSharp.CNC.TipParameters
   nameWithType: TipParameters
+- uid: TwinSharp.CNC.TipParameters.CommandPending
+  name: CommandPending
+  href: api/TwinSharp.CNC.TipParameters.html#TwinSharp_CNC_TipParameters_CommandPending
+  commentId: P:TwinSharp.CNC.TipParameters.CommandPending
+  fullName: TwinSharp.CNC.TipParameters.CommandPending
+  nameWithType: TipParameters.CommandPending
+- uid: TwinSharp.CNC.TipParameters.CommandPending*
+  name: CommandPending
+  href: api/TwinSharp.CNC.TipParameters.html#TwinSharp_CNC_TipParameters_CommandPending_
+  commentId: Overload:TwinSharp.CNC.TipParameters.CommandPending
+  isSpec: "True"
+  fullName: TwinSharp.CNC.TipParameters.CommandPending
+  nameWithType: TipParameters.CommandPending
 - uid: TwinSharp.CNC.TipParameters.EnableControlElement(System.Boolean)
   name: EnableControlElement(bool)
   href: api/TwinSharp.CNC.TipParameters.html#TwinSharp_CNC_TipParameters_EnableControlElement_System_Boolean_
@@ -5907,6 +6037,19 @@ references:
   isSpec: "True"
   fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates
   nameWithType: EtherCatMaster.GetAllSlaveStates
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+  name: GetAllSlaves()
+  href: api/TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetAllSlaves
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves()
+  nameWithType: EtherCatMaster.GetAllSlaves()
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves*
+  name: GetAllSlaves
+  href: api/TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetAllSlaves_
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+  isSpec: "True"
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+  nameWithType: EtherCatMaster.GetAllSlaves
 - uid: TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves
   name: GetConfiguredSlaves()
   href: api/TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetConfiguredSlaves
@@ -6861,6 +7004,22 @@ references:
   isSpec: "True"
   fullName: TwinSharp.Extensions.ReadString
   nameWithType: Extensions.ReadString
+- uid: TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient,System.UInt32)
+  name: ReadUlintOrUdint(AdsClient, uint)
+  href: api/TwinSharp.Extensions.html#TwinSharp_Extensions_ReadUlintOrUdint_TwinCAT_Ads_AdsClient_System_UInt32_
+  commentId: M:TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient,System.UInt32)
+  name.vb: ReadUlintOrUdint(AdsClient, UInteger)
+  fullName: TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient, uint)
+  fullName.vb: TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient, UInteger)
+  nameWithType: Extensions.ReadUlintOrUdint(AdsClient, uint)
+  nameWithType.vb: Extensions.ReadUlintOrUdint(AdsClient, UInteger)
+- uid: TwinSharp.Extensions.ReadUlintOrUdint*
+  name: ReadUlintOrUdint
+  href: api/TwinSharp.Extensions.html#TwinSharp_Extensions_ReadUlintOrUdint_
+  commentId: Overload:TwinSharp.Extensions.ReadUlintOrUdint
+  isSpec: "True"
+  fullName: TwinSharp.Extensions.ReadUlintOrUdint
+  nameWithType: Extensions.ReadUlintOrUdint
 - uid: TwinSharp.Extensions.ToUint(System.Byte[])
   name: ToUint(byte[])
   href: api/TwinSharp.Extensions.html#TwinSharp_Extensions_ToUint_System_Byte___
@@ -15393,6 +15552,28 @@ references:
   isSpec: "True"
   fullName: TwinSharp.Realtime.CpuUsage
   nameWithType: Realtime.CpuUsage
+- uid: TwinSharp.Realtime.Dispose
+  name: Dispose()
+  href: api/TwinSharp.Realtime.html#TwinSharp_Realtime_Dispose
+  commentId: M:TwinSharp.Realtime.Dispose
+  fullName: TwinSharp.Realtime.Dispose()
+  nameWithType: Realtime.Dispose()
+- uid: TwinSharp.Realtime.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/TwinSharp.Realtime.html#TwinSharp_Realtime_Dispose_System_Boolean_
+  commentId: M:TwinSharp.Realtime.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: TwinSharp.Realtime.Dispose(bool)
+  fullName.vb: TwinSharp.Realtime.Dispose(Boolean)
+  nameWithType: Realtime.Dispose(bool)
+  nameWithType.vb: Realtime.Dispose(Boolean)
+- uid: TwinSharp.Realtime.Dispose*
+  name: Dispose
+  href: api/TwinSharp.Realtime.html#TwinSharp_Realtime_Dispose_
+  commentId: Overload:TwinSharp.Realtime.Dispose
+  isSpec: "True"
+  fullName: TwinSharp.Realtime.Dispose
+  nameWithType: Realtime.Dispose
 - uid: TwinSharp.Realtime.ReadCpuSettings
   name: ReadCpuSettings()
   href: api/TwinSharp.Realtime.html#TwinSharp_Realtime_ReadCpuSettings

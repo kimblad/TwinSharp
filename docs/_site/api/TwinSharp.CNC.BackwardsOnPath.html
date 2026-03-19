@@ -157,7 +157,7 @@ Class BackwardsOnPath  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="TwinSharp_CNC_BackwardsOnPath_ActivateExternalPathVelocity" data-uid="TwinSharp.CNC.BackwardsOnPath.ActivateExternalPathVelocity">
   ActivateExternalPathVelocity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Activate the velocity commanded in the ext_command_speed control unit. To reach the commanded velocity, all axes involved in the motion are accelerated or decelerated. If this value is TRUE, the sign is considered in the current path feed (active_feed_r control unit).</p>
@@ -185,14 +185,47 @@ Class BackwardsOnPath  <a class="header-action link-secondary" title="View sourc
 
 
 
+  <a id="TwinSharp_CNC_BackwardsOnPath_EnableExternalPathVelocityInterface_" data-uid="TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface*"></a>
+
+  <h3 id="TwinSharp_CNC_BackwardsOnPath_EnableExternalPathVelocityInterface" data-uid="TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface">
+  EnableExternalPathVelocityInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signal to CNC that we want to use the external path velocity interface (ext_command_speed and ext_command_speed_valid).
+Must be set to true before ExternalPathVelocity and ActivateExternalPathVelocity will be acknowledged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableExternalPathVelocityInterface { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="TwinSharp_CNC_BackwardsOnPath_EnableInterface_" data-uid="TwinSharp.CNC.BackwardsOnPath.EnableInterface*"></a>
 
   <h3 id="TwinSharp_CNC_BackwardsOnPath_EnableInterface" data-uid="TwinSharp.CNC.BackwardsOnPath.EnableInterface">
   EnableInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Signal to CNC that we want to use this interface.</p>
+  <div class="markdown level1 summary"><p>Signal to CNC that we want to use the backward motion interface.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -221,7 +254,7 @@ Class BackwardsOnPath  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="TwinSharp_CNC_BackwardsOnPath_ExternalPathVelocity" data-uid="TwinSharp.CNC.BackwardsOnPath.ExternalPathVelocity">
   ExternalPathVelocity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>External path velocity specified. The path velocity setting is activated by the control unit ext_command_speed_valid. If the velocity specified in negative, the tool moves backwards along the path
@@ -254,7 +287,7 @@ Unit: 1 μm/s</p>
 
   <h3 id="TwinSharp_CNC_BackwardsOnPath_ResetBackwardMotionMemory" data-uid="TwinSharp.CNC.BackwardsOnPath.ResetBackwardMotionMemory">
   ResetBackwardMotionMemory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deselects backward motion memory No further NC block is saved in the memory. The memory is deleted. The backward motion memory can only be cleared if no NC program is active.</p>
@@ -286,7 +319,7 @@ Unit: 1 μm/s</p>
 
   <h3 id="TwinSharp_CNC_BackwardsOnPath_SelectBackwardMotion" data-uid="TwinSharp.CNC.BackwardsOnPath.SelectBackwardMotion">
   SelectBackwardMotion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Select/deselect backward motion on the path In basic setting, M/H functions are executed without synchronisation(MOS) in this mode.</p>
@@ -318,7 +351,7 @@ Unit: 1 μm/s</p>
 
   <h3 id="TwinSharp_CNC_BackwardsOnPath_SelectSimulatedForwardMotion" data-uid="TwinSharp.CNC.BackwardsOnPath.SelectSimulatedForwardMotion">
   SelectSimulatedForwardMotion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BackwardsOnPath.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Select/deselect simulated forward motion on the path In basic setting, M/H functions are executed without synchronisation (MOS) in this mode. Sections in the NC program can be skipped during program runtime in combination with the NC command #OPTIONAL EXECUTION.</p>

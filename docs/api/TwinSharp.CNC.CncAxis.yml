@@ -7,6 +7,7 @@ items:
   children:
   - TwinSharp.CNC.CncAxis.DynamicPositionLimitation
   - TwinSharp.CNC.CncAxis.ExternalAxisCommanding
+  - TwinSharp.CNC.CncAxis.PlcPresent
   - TwinSharp.CNC.CncAxis.Status
   - TwinSharp.CNC.CncAxis.ToString
   langs:
@@ -44,6 +45,40 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.CncAxis.PlcPresent
+  commentId: P:TwinSharp.CNC.CncAxis.PlcPresent
+  id: PlcPresent
+  parent: TwinSharp.CNC.CncAxis
+  langs:
+  - csharp
+  - vb
+  name: PlcPresent
+  nameWithType: CncAxis.PlcPresent
+  fullName: TwinSharp.CNC.CncAxis.PlcPresent
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncAxis.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PlcPresent
+    path: ../TwinSharp/CNC/CncAxis.cs
+    startLine: 30
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Registers the PLC as present on this axis. Must be set to TRUE before the CNC
+
+    will accept HLI commands for the axis. Writes to gpAx[n]^.head.plc_present_w.
+  example: []
+  syntax:
+    content: public bool PlcPresent { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property PlcPresent As Boolean
+  overload: TwinSharp.CNC.CncAxis.PlcPresent*
 - uid: TwinSharp.CNC.CncAxis.Status
   commentId: P:TwinSharp.CNC.CncAxis.Status
   id: Status
@@ -62,7 +97,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Status
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 27
+    startLine: 45
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -96,7 +131,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ExternalAxisCommanding
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 32
+    startLine: 50
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -127,7 +162,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: DynamicPositionLimitation
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 37
+    startLine: 55
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -158,7 +193,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ToString
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 48
+    startLine: 66
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -408,6 +443,23 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: TwinSharp.CNC.CncAxis.PlcPresent*
+  commentId: Overload:TwinSharp.CNC.CncAxis.PlcPresent
+  href: TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_PlcPresent
+  name: PlcPresent
+  nameWithType: CncAxis.PlcPresent
+  fullName: TwinSharp.CNC.CncAxis.PlcPresent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: TwinSharp.CNC.CncAxis.Status*
   commentId: Overload:TwinSharp.CNC.CncAxis.Status
   href: TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_Status

@@ -193,6 +193,39 @@ These can be used to add device notificaitons by the user.</p>
 
 
 
+  <a id="TwinSharp_CNC_OperationModeManager_CommandPending_" data-uid="TwinSharp.CNC.OperationModeManager.CommandPending*"></a>
+
+  <h3 id="TwinSharp_CNC_OperationModeManager_CommandPending" data-uid="TwinSharp.CNC.OperationModeManager.CommandPending">
+  CommandPending
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/OperationModeManager.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>TRUE while the CNC is processing the last command. The CNC sets this back to FALSE after acceptance.
+Only write a new command when this is FALSE.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CommandPending { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="TwinSharp_CNC_OperationModeManager_InterfaceExists_" data-uid="TwinSharp.CNC.OperationModeManager.InterfaceExists*"></a>
 
   <h3 id="TwinSharp_CNC_OperationModeManager_InterfaceExists" data-uid="TwinSharp.CNC.OperationModeManager.InterfaceExists">
@@ -357,11 +390,39 @@ These can be used to add device notificaitons by the user.</p>
 </h2>
 
 
+  <a id="TwinSharp_CNC_OperationModeManager_ClearCommandSemaphore_" data-uid="TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore*"></a>
+
+  <h3 id="TwinSharp_CNC_OperationModeManager_ClearCommandSemaphore" data-uid="TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore">
+  ClearCommandSemaphore()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/OperationModeManager.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Force-clears the command semaphore to FALSE so a fresh command can be sent.
+Call this before writing a command if the semaphore appears stuck.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearCommandSemaphore()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="TwinSharp_CNC_OperationModeManager_Dispose_" data-uid="TwinSharp.CNC.OperationModeManager.Dispose*"></a>
 
   <h3 id="TwinSharp_CNC_OperationModeManager_Dispose" data-uid="TwinSharp.CNC.OperationModeManager.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/OperationModeManager.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/OperationModeManager.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Dispose the operation mode manager. Deletes all ADS device notifications.</p>
@@ -388,7 +449,7 @@ These can be used to add device notificaitons by the user.</p>
 
   <h3 id="TwinSharp_CNC_OperationModeManager_Reset" data-uid="TwinSharp.CNC.OperationModeManager.Reset">
   Reset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/OperationModeManager.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/OperationModeManager.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reset the operation mode to standby mode.</p>

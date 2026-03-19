@@ -154,11 +154,44 @@ Such as keys, rapid keys and hand wheels.</p>
 </h2>
 
 
+  <a id="TwinSharp_CNC_ManualOperation_CommandPending_" data-uid="TwinSharp.CNC.ManualOperation.CommandPending*"></a>
+
+  <h3 id="TwinSharp_CNC_ManualOperation_CommandPending" data-uid="TwinSharp.CNC.ManualOperation.CommandPending">
+  CommandPending
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>TRUE while the CNC is still processing the last ACTIVATION command.
+Poll this after SignalCommandSemaphor(true) and wait until it returns false before sending KEY.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CommandPending { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="TwinSharp_CNC_ManualOperation_HandWheelIncs_" data-uid="TwinSharp.CNC.ManualOperation.HandWheelIncs*"></a>
 
   <h3 id="TwinSharp_CNC_ManualOperation_HandWheelIncs" data-uid="TwinSharp.CNC.ManualOperation.HandWheelIncs">
   HandWheelIncs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Array of control units to manage the counts of handwheel increments for all
@@ -191,7 +224,7 @@ handwheels, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_HrParameters" data-uid="TwinSharp.CNC.ManualOperation.HrParameters">
   HrParameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Control unit to manage data for parameterising handwheel mode in manual mode,
@@ -224,7 +257,7 @@ including flow control of user data</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_JogParameters" data-uid="TwinSharp.CNC.ManualOperation.JogParameters">
   JogParameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Control unit to manage data for parameterising incremental jog mode in manual
@@ -257,7 +290,7 @@ manual, including flow control of user data</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_Keys" data-uid="TwinSharp.CNC.ManualOperation.Keys">
   Keys
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Control unit to manage data to enforce a button press in manual mode, including
@@ -290,7 +323,7 @@ flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_RapidKey" data-uid="TwinSharp.CNC.ManualOperation.RapidKey">
   RapidKey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>During continuous jog mode it is possible to switch between the normal velocity and rapid traverse velocity with this control unit.</p>
@@ -322,7 +355,7 @@ flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_TipParameters" data-uid="TwinSharp.CNC.ManualOperation.TipParameters">
   TipParameters
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Control unit to manage data for parameterising continuous jog mode in manual
@@ -359,7 +392,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_EnableControlElement_System_Boolean_" data-uid="TwinSharp.CNC.ManualOperation.EnableControlElement(System.Boolean)">
   EnableControlElement(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Present marker to the CNC that the interface exists and we want to use it.</p>
@@ -391,7 +424,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_GetControlElementNumber_System_Int32_" data-uid="TwinSharp.CNC.ManualOperation.GetControlElementNumber(System.Int32)">
   GetControlElementNumber(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Logical number of the control element currently linked to the axis in question.</p>
@@ -428,7 +461,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_GetManualModeState_System_Int32_" data-uid="TwinSharp.CNC.ManualOperation.GetManualModeState(System.Int32)">
   GetManualModeState(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the manual mode state of an axis for the supplied axis index.</p>
@@ -465,7 +498,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_GetOperationModeState_System_Int32_" data-uid="TwinSharp.CNC.ManualOperation.GetOperationModeState(System.Int32)">
   GetOperationModeState(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the operation mode state of an axis for the supplied axis index.</p>
@@ -502,7 +535,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_GetPathVelocityContinous_System_Int32_" data-uid="TwinSharp.CNC.ManualOperation.GetPathVelocityContinous(System.Int32)">
   GetPathVelocityContinous(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Path velocity of the axis in question when moved in continuous jog mode.</p>
@@ -539,7 +572,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_ManualOperation_SignalCommandSemaphor_System_Boolean_" data-uid="TwinSharp.CNC.ManualOperation.SignalCommandSemaphor(System.Boolean)">
   SignalCommandSemaphor(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>CNC accepts the commanded data if this element has the value TRUE and sets
@@ -573,7 +606,7 @@ You should set this element to the value TRUE if all data to be commanded has be
 
   <h3 id="TwinSharp_CNC_ManualOperation_WriteCommandElement_TwinSharp_CNC_HLI_HB_ACTIVATION_" data-uid="TwinSharp.CNC.ManualOperation.WriteCommandElement(TwinSharp.CNC.HLI_HB_ACTIVATION)">
   WriteCommandElement(HLI_HB_ACTIVATION)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Write the command data for one of the manual control elements to the CNC.</p>

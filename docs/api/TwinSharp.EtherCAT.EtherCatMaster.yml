@@ -15,6 +15,7 @@ items:
   - TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAbnormalStateChanges
   - TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveAddr
   - TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaveStates
+  - TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
   - TwinSharp.EtherCAT.EtherCatMaster.GetConfiguredSlaves
   - TwinSharp.EtherCAT.EtherCatMaster.GetSlave(System.UInt16)
   - TwinSharp.EtherCAT.EtherCatMaster.GetSlaveTopologyInfo
@@ -642,6 +643,37 @@ items:
   nameWithType.vb: EtherCatMaster.GetSlave(UShort)
   fullName.vb: TwinSharp.EtherCAT.EtherCatMaster.GetSlave(UShort)
   name.vb: GetSlave(UShort)
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+  commentId: M:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+  id: GetAllSlaves
+  parent: TwinSharp.EtherCAT.EtherCatMaster
+  langs:
+  - csharp
+  - vb
+  name: GetAllSlaves()
+  nameWithType: EtherCatMaster.GetAllSlaves()
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/EtherCAT/EtherCatMaster.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetAllSlaves
+    path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
+    startLine: 373
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.EtherCAT
+  summary: Gets all the EtherCAT slaves on this master
+  example: []
+  syntax:
+    content: public IEnumerable<EtherCatSlave> GetAllSlaves()
+    return:
+      type: System.Collections.Generic.IEnumerable{TwinSharp.EtherCAT.EtherCatSlave}
+      description: ''
+    content.vb: Public Function GetAllSlaves() As IEnumerable(Of EtherCatSlave)
+  overload: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves*
 - uid: TwinSharp.EtherCAT.EtherCatMaster.ToString
   commentId: M:TwinSharp.EtherCAT.EtherCatMaster.ToString
   id: ToString
@@ -660,7 +692,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ToString
     path: ../TwinSharp/EtherCAT/EtherCatMaster.cs
-    startLine: 373
+    startLine: 389
   assemblies:
   - TwinSharp
   namespace: TwinSharp.EtherCAT
@@ -1203,6 +1235,110 @@ references:
   name: EtherCatSlave
   nameWithType: EtherCatSlave
   fullName: TwinSharp.EtherCAT.EtherCatSlave
+- uid: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves*
+  commentId: Overload:TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+  href: TwinSharp.EtherCAT.EtherCatMaster.html#TwinSharp_EtherCAT_EtherCatMaster_GetAllSlaves
+  name: GetAllSlaves
+  nameWithType: EtherCatMaster.GetAllSlaves
+  fullName: TwinSharp.EtherCAT.EtherCatMaster.GetAllSlaves
+- uid: System.Collections.Generic.IEnumerable{TwinSharp.EtherCAT.EtherCatSlave}
+  commentId: T:System.Collections.Generic.IEnumerable{TwinSharp.EtherCAT.EtherCatSlave}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<EtherCatSlave>
+  nameWithType: IEnumerable<EtherCatSlave>
+  fullName: System.Collections.Generic.IEnumerable<TwinSharp.EtherCAT.EtherCatSlave>
+  nameWithType.vb: IEnumerable(Of EtherCatSlave)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TwinSharp.EtherCAT.EtherCatSlave)
+  name.vb: IEnumerable(Of EtherCatSlave)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: TwinSharp.EtherCAT.EtherCatSlave
+    name: EtherCatSlave
+    href: TwinSharp.EtherCAT.EtherCatSlave.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TwinSharp.EtherCAT.EtherCatSlave
+    name: EtherCatSlave
+    href: TwinSharp.EtherCAT.EtherCatSlave.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object

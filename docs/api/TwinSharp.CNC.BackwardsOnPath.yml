@@ -6,6 +6,7 @@ items:
   parent: TwinSharp.CNC
   children:
   - TwinSharp.CNC.BackwardsOnPath.ActivateExternalPathVelocity
+  - TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
   - TwinSharp.CNC.BackwardsOnPath.EnableInterface
   - TwinSharp.CNC.BackwardsOnPath.ExternalPathVelocity
   - TwinSharp.CNC.BackwardsOnPath.ResetBackwardMotionMemory
@@ -62,7 +63,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SelectBackwardMotion
     path: ../TwinSharp/CNC/BackwardsOnPath.cs
-    startLine: 68
+    startLine: 74
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -93,11 +94,11 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: EnableInterface
     path: ../TwinSharp/CNC/BackwardsOnPath.cs
-    startLine: 78
+    startLine: 84
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
-  summary: Signal to CNC that we want to use this interface.
+  summary: Signal to CNC that we want to use the backward motion interface.
   example: []
   syntax:
     content: public bool EnableInterface { set; }
@@ -106,6 +107,40 @@ items:
       type: System.Boolean
     content.vb: Public WriteOnly Property EnableInterface As Boolean
   overload: TwinSharp.CNC.BackwardsOnPath.EnableInterface*
+- uid: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  commentId: P:TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  id: EnableExternalPathVelocityInterface
+  parent: TwinSharp.CNC.BackwardsOnPath
+  langs:
+  - csharp
+  - vb
+  name: EnableExternalPathVelocityInterface
+  nameWithType: BackwardsOnPath.EnableExternalPathVelocityInterface
+  fullName: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/BackwardsOnPath.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EnableExternalPathVelocityInterface
+    path: ../TwinSharp/CNC/BackwardsOnPath.cs
+    startLine: 93
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Signal to CNC that we want to use the external path velocity interface (ext_command_speed and ext_command_speed_valid).
+
+    Must be set to true before ExternalPathVelocity and ActivateExternalPathVelocity will be acknowledged.
+  example: []
+  syntax:
+    content: public bool EnableExternalPathVelocityInterface { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property EnableExternalPathVelocityInterface As Boolean
+  overload: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface*
 - uid: TwinSharp.CNC.BackwardsOnPath.SelectSimulatedForwardMotion
   commentId: P:TwinSharp.CNC.BackwardsOnPath.SelectSimulatedForwardMotion
   id: SelectSimulatedForwardMotion
@@ -124,7 +159,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SelectSimulatedForwardMotion
     path: ../TwinSharp/CNC/BackwardsOnPath.cs
-    startLine: 86
+    startLine: 105
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -155,7 +190,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ResetBackwardMotionMemory
     path: ../TwinSharp/CNC/BackwardsOnPath.cs
-    startLine: 95
+    startLine: 114
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -186,7 +221,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ExternalPathVelocity
     path: ../TwinSharp/CNC/BackwardsOnPath.cs
-    startLine: 105
+    startLine: 124
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -220,7 +255,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ActivateExternalPathVelocity
     path: ../TwinSharp/CNC/BackwardsOnPath.cs
-    startLine: 115
+    startLine: 134
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -516,6 +551,12 @@ references:
   name: EnableInterface
   nameWithType: BackwardsOnPath.EnableInterface
   fullName: TwinSharp.CNC.BackwardsOnPath.EnableInterface
+- uid: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface*
+  commentId: Overload:TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
+  href: TwinSharp.CNC.BackwardsOnPath.html#TwinSharp_CNC_BackwardsOnPath_EnableExternalPathVelocityInterface
+  name: EnableExternalPathVelocityInterface
+  nameWithType: BackwardsOnPath.EnableExternalPathVelocityInterface
+  fullName: TwinSharp.CNC.BackwardsOnPath.EnableExternalPathVelocityInterface
 - uid: TwinSharp.CNC.BackwardsOnPath.SelectSimulatedForwardMotion*
   commentId: Overload:TwinSharp.CNC.BackwardsOnPath.SelectSimulatedForwardMotion
   href: TwinSharp.CNC.BackwardsOnPath.html#TwinSharp_CNC_BackwardsOnPath_SelectSimulatedForwardMotion

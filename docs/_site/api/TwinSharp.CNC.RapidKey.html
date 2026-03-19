@@ -89,7 +89,7 @@
 
 
   <h1 id="TwinSharp_CNC_RapidKey" data-uid="TwinSharp.CNC.RapidKey" class="text-break">
-Class RapidKey  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L418"><i class="bi bi-code-slash"></i></a>
+Class RapidKey  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L382"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -151,6 +151,42 @@ button is pushed and linked to an axis.</p>
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TwinSharp_CNC_RapidKey_CommandPending_" data-uid="TwinSharp.CNC.RapidKey.CommandPending*"></a>
+
+  <h3 id="TwinSharp_CNC_RapidKey_CommandPending" data-uid="TwinSharp.CNC.RapidKey.CommandPending">
+  CommandPending
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>TRUE while the CNC is still processing the last command. Wait until false before sending the next command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CommandPending { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -159,7 +195,7 @@ button is pushed and linked to an axis.</p>
 
   <h3 id="TwinSharp_CNC_RapidKey_EnableControlElement_System_Boolean_" data-uid="TwinSharp.CNC.RapidKey.EnableControlElement(System.Boolean)">
   EnableControlElement(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L399"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Signal to CNC that the interface exists and we want to use it.</p>
@@ -191,7 +227,7 @@ button is pushed and linked to an axis.</p>
 
   <h3 id="TwinSharp_CNC_RapidKey_SignalCommandSemaphor_System_Boolean_" data-uid="TwinSharp.CNC.RapidKey.SignalCommandSemaphor(System.Boolean)">
   SignalCommandSemaphor(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L457"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L411"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>CNC accepts the commanded data if this element has the value TRUE and sets
@@ -225,7 +261,7 @@ You should set this element to the value TRUE if all data to be commanded has be
 
   <h3 id="TwinSharp_CNC_RapidKey_WriteCommandElement_TwinSharp_CNC_HLI_HB_RAPID_KEY_" data-uid="TwinSharp.CNC.RapidKey.WriteCommandElement(TwinSharp.CNC.HLI_HB_RAPID_KEY)">
   WriteCommandElement(HLI_HB_RAPID_KEY)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L444"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L403"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Write the command data for the rapid key to the CNC.</p>
@@ -257,7 +293,7 @@ You should set this element to the value TRUE if all data to be commanded has be
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L418" class="edit-link">Edit this page</a>
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L382" class="edit-link">Edit this page</a>
         </div>
 
 

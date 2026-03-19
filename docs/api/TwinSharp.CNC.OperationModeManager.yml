@@ -6,6 +6,8 @@ items:
   parent: TwinSharp.CNC
   children:
   - TwinSharp.CNC.OperationModeManager.Adresses
+  - TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  - TwinSharp.CNC.OperationModeManager.CommandPending
   - TwinSharp.CNC.OperationModeManager.Dispose
   - TwinSharp.CNC.OperationModeManager.InterfaceExists
   - TwinSharp.CNC.OperationModeManager.OperationModeActual
@@ -315,6 +317,71 @@ items:
       type: System.Boolean
     content.vb: Public WriteOnly Property InterfaceExists As Boolean
   overload: TwinSharp.CNC.OperationModeManager.InterfaceExists*
+- uid: TwinSharp.CNC.OperationModeManager.CommandPending
+  commentId: P:TwinSharp.CNC.OperationModeManager.CommandPending
+  id: CommandPending
+  parent: TwinSharp.CNC.OperationModeManager
+  langs:
+  - csharp
+  - vb
+  name: CommandPending
+  nameWithType: OperationModeManager.CommandPending
+  fullName: TwinSharp.CNC.OperationModeManager.CommandPending
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/OperationModeManager.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CommandPending
+    path: ../TwinSharp/CNC/OperationModeManager.cs
+    startLine: 108
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    TRUE while the CNC is processing the last command. The CNC sets this back to FALSE after acceptance.
+
+    Only write a new command when this is FALSE.
+  example: []
+  syntax:
+    content: public bool CommandPending { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CommandPending As Boolean
+  overload: TwinSharp.CNC.OperationModeManager.CommandPending*
+- uid: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  commentId: M:TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  id: ClearCommandSemaphore
+  parent: TwinSharp.CNC.OperationModeManager
+  langs:
+  - csharp
+  - vb
+  name: ClearCommandSemaphore()
+  nameWithType: OperationModeManager.ClearCommandSemaphore()
+  fullName: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/OperationModeManager.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ClearCommandSemaphore
+    path: ../TwinSharp/CNC/OperationModeManager.cs
+    startLine: 115
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Force-clears the command semaphore to FALSE so a fresh command can be sent.
+
+    Call this before writing a command if the semaphore appears stuck.
+  example: []
+  syntax:
+    content: public void ClearCommandSemaphore()
+    content.vb: Public Sub ClearCommandSemaphore()
+  overload: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore*
 - uid: TwinSharp.CNC.OperationModeManager.Reset
   commentId: M:TwinSharp.CNC.OperationModeManager.Reset
   id: Reset
@@ -333,7 +400,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Reset
     path: ../TwinSharp/CNC/OperationModeManager.cs
-    startLine: 139
+    startLine: 153
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -361,7 +428,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Dispose
     path: ../TwinSharp/CNC/OperationModeManager.cs
-    startLine: 158
+    startLine: 172
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -740,6 +807,18 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: TwinSharp.CNC.OperationModeManager.CommandPending*
+  commentId: Overload:TwinSharp.CNC.OperationModeManager.CommandPending
+  href: TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_CommandPending
+  name: CommandPending
+  nameWithType: OperationModeManager.CommandPending
+  fullName: TwinSharp.CNC.OperationModeManager.CommandPending
+- uid: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore*
+  commentId: Overload:TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
+  href: TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_ClearCommandSemaphore
+  name: ClearCommandSemaphore
+  nameWithType: OperationModeManager.ClearCommandSemaphore
+  fullName: TwinSharp.CNC.OperationModeManager.ClearCommandSemaphore
 - uid: TwinSharp.CNC.OperationModeManager.Reset*
   commentId: Overload:TwinSharp.CNC.OperationModeManager.Reset
   href: TwinSharp.CNC.OperationModeManager.html#TwinSharp_CNC_OperationModeManager_Reset

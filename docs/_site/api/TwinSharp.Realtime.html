@@ -104,7 +104,7 @@ and getting the current CPU usage. It uses the AdsClient to communicate with the
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Realtime</code></pre>
+    <pre><code class="lang-csharp hljs">public class Realtime : IDisposable</code></pre>
   </div>
 
 
@@ -118,6 +118,12 @@ and getting the current CPU usage. It uses the AdsClient to communicate with the
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -159,7 +165,7 @@ and getting the current CPU usage. It uses the AdsClient to communicate with the
 
   <h3 id="TwinSharp_Realtime_CpuUsage" data-uid="TwinSharp.Realtime.CpuUsage">
   CpuUsage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the current CPU usage of a TwinCAT system. Corresponds to the function block TC_CpuUsage. This function corresponds to the display of CPU usage in the TwinCAT system menu under the real-time settings.</p>
@@ -191,11 +197,69 @@ and getting the current CPU usage. It uses the AdsClient to communicate with the
 </h2>
 
 
+  <a id="TwinSharp_Realtime_Dispose_" data-uid="TwinSharp.Realtime.Dispose*"></a>
+
+  <h3 id="TwinSharp_Realtime_Dispose" data-uid="TwinSharp.Realtime.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_Realtime_Dispose_" data-uid="TwinSharp.Realtime.Dispose*"></a>
+
+  <h3 id="TwinSharp_Realtime_Dispose_System_Boolean_" data-uid="TwinSharp.Realtime.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="TwinSharp_Realtime_ReadCpuSettings_" data-uid="TwinSharp.Realtime.ReadCpuSettings*"></a>
 
   <h3 id="TwinSharp_Realtime_ReadCpuSettings" data-uid="TwinSharp.Realtime.ReadCpuSettings">
   ReadCpuSettings()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reads the CPU settings of the TwinCAT system.</p>
@@ -227,7 +291,7 @@ and getting the current CPU usage. It uses the AdsClient to communicate with the
 
   <h3 id="TwinSharp_Realtime_ReadLatency" data-uid="TwinSharp.Realtime.ReadLatency">
   ReadLatency()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reads the CPU latency of the TwinCAT system.</p>
@@ -259,7 +323,7 @@ and getting the current CPU usage. It uses the AdsClient to communicate with the
 
   <h3 id="TwinSharp_Realtime_SetSharedCores_System_UInt32_" data-uid="TwinSharp.Realtime.SetSharedCores(System.UInt32)">
   SetSharedCores(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Realtime.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets the shared cores configuration for the TwinCAT system.</p>

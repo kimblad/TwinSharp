@@ -200,7 +200,7 @@ The class also provides properties to read the covered block motion percentage, 
 
   <h3 id="TwinSharp_CNC_CncChannel_BackwardsOnPath" data-uid="TwinSharp.CNC.CncChannel.BackwardsOnPath">
   BackwardsOnPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides functions for forward/backward motion on the path. Permits backward motion along the originally programmed path by means of a real-time signal when the NC program is active.</p>
@@ -232,7 +232,7 @@ The class also provides properties to read the covered block motion percentage, 
 
   <h3 id="TwinSharp_CNC_CncChannel_BlockSearch" data-uid="TwinSharp.CNC.CncChannel.BlockSearch">
   BlockSearch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides a tool so the operator can start machining at what is called the continuation position at any point in the program. After a program is interrupted (e.g. tool breakage), this is a quick method to reactivate machining at the point of interruption.
@@ -265,7 +265,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_CncChannel_ChannelNumber" data-uid="TwinSharp.CNC.CncChannel.ChannelNumber">
   ChannelNumber
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The unique channel number of this CNC channel.</p>
@@ -297,7 +297,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_CncChannel_ContourVisualization" data-uid="TwinSharp.CNC.CncChannel.ContourVisualization">
   ContourVisualization
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides tools to visualize the contour of NC programs.</p>
@@ -329,7 +329,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_CncChannel_ControlCommands" data-uid="TwinSharp.CNC.CncChannel.ControlCommands">
   ControlCommands
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides functions to control the CNC channel. Such as enablind and disabling skip modes. Control of optional stop.</p>
@@ -361,7 +361,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_CncChannel_CoveredBlockMotionPercent" data-uid="TwinSharp.CNC.CncChannel.CoveredBlockMotionPercent">
   CoveredBlockMotionPercent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Part of the path motion traversed in the current block in relation to the total path.
@@ -394,7 +394,7 @@ If a main axis participates in the motion, the covered path motion is in relatio
 
   <h3 id="TwinSharp_CNC_CncChannel_CoveredPathDistance" data-uid="TwinSharp.CNC.CncChannel.CoveredPathDistance">
   CoveredPathDistance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reads the current distance covered in the NC program since program start or since the last # DISTANCE PROG START CLEAR NC command. The calculation is based on the current position in the current NC block.
@@ -427,7 +427,7 @@ Unit: 0.1 µm</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_DataStreaming" data-uid="TwinSharp.CNC.CncChannel.DataStreaming">
   DataStreaming
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides a tool to use Data Streaming. With the incremental specification of motion commands (streaming), the CAD/CAM system or the PLC stipulates the next path segment to be travelled (or even several segments).
@@ -460,7 +460,7 @@ In this way, motion information not previously specified can still be modified u
 
   <h3 id="TwinSharp_CNC_CncChannel_DeleteDistanceToGo" data-uid="TwinSharp.CNC.CncChannel.DeleteDistanceToGo">
   DeleteDistanceToGo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides function to control the “Delete distance to go” function. It interrupts the actual path motion and starts a short cut by straight line to the target position of next block. The distance to go of the current (interrupted) block is then deleted.</p>
@@ -492,7 +492,7 @@ In this way, motion information not previously specified can still be modified u
 
   <h3 id="TwinSharp_CNC_CncChannel_ErrorManager" data-uid="TwinSharp.CNC.CncChannel.ErrorManager">
   ErrorManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets an object useful for error management. You can subscribe to recieve error notifications, reads error messages, and provides functions to acknowledge error.
@@ -525,7 +525,7 @@ When an error is received, it triggers the ErrorRecieved event with detailed err
 
   <h3 id="TwinSharp_CNC_CncChannel_FeedOverride" data-uid="TwinSharp.CNC.CncChannel.FeedOverride">
   FeedOverride
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides tools to read and control the feed override of this channel.</p>
@@ -557,7 +557,7 @@ When an error is received, it triggers the ErrorRecieved event with detailed err
 
   <h3 id="TwinSharp_CNC_CncChannel_Interpolator" data-uid="TwinSharp.CNC.CncChannel.Interpolator">
   Interpolator
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides functions to control the interpolator of this channel. Such as the interpolator's state, axis count,
@@ -590,7 +590,7 @@ moved path, velocity, tool life, and more.</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_LineCountNcProgram" data-uid="TwinSharp.CNC.CncChannel.LineCountNcProgram">
   LineCountNcProgram
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The datum indicates the NC program line which is the source of the command just processed by the interpolator.
@@ -623,7 +623,7 @@ The value is derived from the number of NC program lines which the decoder has r
 
   <h3 id="TwinSharp_CNC_CncChannel_ManualOperation" data-uid="TwinSharp.CNC.CncChannel.ManualOperation">
   ManualOperation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides a class that contains settings and functions for the manual operation of the CNC.
@@ -656,7 +656,7 @@ Such as keys, rapid keys and hand wheels.</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_OperationModeManager" data-uid="TwinSharp.CNC.CncChannel.OperationModeManager">
   OperationModeManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets an object that  provides an methods and properties to manage and control the operation modes and states</p>
@@ -688,7 +688,7 @@ Such as keys, rapid keys and hand wheels.</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_PathFeedProgrammed" data-uid="TwinSharp.CNC.CncChannel.PathFeedProgrammed">
   PathFeedProgrammed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Path feed that was was programmed by the F word in the NC program..
@@ -721,7 +721,7 @@ Unit: 1 µm/s</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_PathFeedProgrammedWeighted" data-uid="TwinSharp.CNC.CncChannel.PathFeedProgrammedWeighted">
   PathFeedProgrammedWeighted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L198"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Path feed was programmed in the NC program Weighted by the current real-time influences such as override.
@@ -750,11 +750,44 @@ Unit: 1 µm/s</p>
 
 
 
+  <a id="TwinSharp_CNC_CncChannel_PlcPresent_" data-uid="TwinSharp.CNC.CncChannel.PlcPresent*"></a>
+
+  <h3 id="TwinSharp_CNC_CncChannel_PlcPresent" data-uid="TwinSharp.CNC.CncChannel.PlcPresent">
+  PlcPresent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers the PLC as present on this channel. Must be set to TRUE before the CNC
+will accept any HLI commands. Writes to gpCh[n]^.head.plc_present_w.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PlcPresent { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="TwinSharp_CNC_CncChannel_SingleBlock_" data-uid="TwinSharp.CNC.CncChannel.SingleBlock*"></a>
 
   <h3 id="TwinSharp_CNC_CncChannel_SingleBlock" data-uid="TwinSharp.CNC.CncChannel.SingleBlock">
   SingleBlock
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Object that controls single-step mode. When it is active, the machine operator has the option to execute an NC program step by step. The operator releases every NC line one by one. Comment lines or comment blocks and skipped blocks are skipped</p>
@@ -786,7 +819,7 @@ Unit: 1 µm/s</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_TechnologyProcesses" data-uid="TwinSharp.CNC.CncChannel.TechnologyProcesses">
   TechnologyProcesses
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets an object that provides functions to subscribe to and acknowledge technology processes of this channel. Such as M, H, T and S functions/codes.</p>
@@ -818,7 +851,7 @@ Unit: 1 µm/s</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_ZeroOffsets" data-uid="TwinSharp.CNC.CncChannel.ZeroOffsets">
   ZeroOffsets
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Provides functions to control the zero offsets of this channel. Such as setting, reading, and resetting zero offsets.</p>
@@ -854,7 +887,7 @@ Unit: 1 µm/s</p>
 
   <h3 id="TwinSharp_CNC_CncChannel_Dispose" data-uid="TwinSharp.CNC.CncChannel.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/CncChannel.cs/#L211"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Dispose the CNC channel.</p>

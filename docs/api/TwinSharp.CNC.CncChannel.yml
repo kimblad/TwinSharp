@@ -24,6 +24,7 @@ items:
   - TwinSharp.CNC.CncChannel.OperationModeManager
   - TwinSharp.CNC.CncChannel.PathFeedProgrammed
   - TwinSharp.CNC.CncChannel.PathFeedProgrammedWeighted
+  - TwinSharp.CNC.CncChannel.PlcPresent
   - TwinSharp.CNC.CncChannel.SingleBlock
   - TwinSharp.CNC.CncChannel.TechnologyProcesses
   - TwinSharp.CNC.CncChannel.ZeroOffsets
@@ -114,7 +115,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ChannelNumber
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 44
+    startLine: 47
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -127,6 +128,40 @@ items:
       type: System.Int32
     content.vb: Public Property ChannelNumber As Integer
   overload: TwinSharp.CNC.CncChannel.ChannelNumber*
+- uid: TwinSharp.CNC.CncChannel.PlcPresent
+  commentId: P:TwinSharp.CNC.CncChannel.PlcPresent
+  id: PlcPresent
+  parent: TwinSharp.CNC.CncChannel
+  langs:
+  - csharp
+  - vb
+  name: PlcPresent
+  nameWithType: CncChannel.PlcPresent
+  fullName: TwinSharp.CNC.CncChannel.PlcPresent
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PlcPresent
+    path: ../TwinSharp/CNC/CncChannel.cs
+    startLine: 53
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Registers the PLC as present on this channel. Must be set to TRUE before the CNC
+
+    will accept any HLI commands. Writes to gpCh[n]^.head.plc_present_w.
+  example: []
+  syntax:
+    content: public bool PlcPresent { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property PlcPresent As Boolean
+  overload: TwinSharp.CNC.CncChannel.PlcPresent*
 - uid: TwinSharp.CNC.CncChannel.OperationModeManager
   commentId: P:TwinSharp.CNC.CncChannel.OperationModeManager
   id: OperationModeManager
@@ -145,7 +180,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: OperationModeManager
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 49
+    startLine: 67
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -176,7 +211,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Interpolator
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 55
+    startLine: 73
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -210,7 +245,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ControlCommands
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 60
+    startLine: 78
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -241,7 +276,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ContourVisualization
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 65
+    startLine: 83
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -272,7 +307,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: FeedOverride
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 70
+    startLine: 88
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -303,7 +338,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BackwardsOnPath
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 75
+    startLine: 93
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -334,7 +369,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SingleBlock
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 80
+    startLine: 98
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -365,7 +400,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BlockSearch
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 86
+    startLine: 104
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -399,7 +434,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: DeleteDistanceToGo
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 91
+    startLine: 109
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -430,7 +465,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: DataStreaming
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 97
+    startLine: 115
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -464,7 +499,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: TechnologyProcesses
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 102
+    startLine: 120
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -495,7 +530,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ErrorManager
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 108
+    startLine: 126
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -529,7 +564,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ZeroOffsets
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 113
+    startLine: 131
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -560,7 +595,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ManualOperation
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 119
+    startLine: 137
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -594,7 +629,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CoveredBlockMotionPercent
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 125
+    startLine: 143
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -628,7 +663,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CoveredPathDistance
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 139
+    startLine: 157
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -662,7 +697,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: LineCountNcProgram
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 152
+    startLine: 170
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -696,7 +731,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: PathFeedProgrammed
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 166
+    startLine: 184
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -730,7 +765,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: PathFeedProgrammedWeighted
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 179
+    startLine: 197
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -764,7 +799,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Dispose
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 192
+    startLine: 210
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -1177,6 +1212,23 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: TwinSharp.CNC.CncChannel.PlcPresent*
+  commentId: Overload:TwinSharp.CNC.CncChannel.PlcPresent
+  href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_PlcPresent
+  name: PlcPresent
+  nameWithType: CncChannel.PlcPresent
+  fullName: TwinSharp.CNC.CncChannel.PlcPresent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: TwinSharp.CNC.CncChannel.OperationModeManager*
   commentId: Overload:TwinSharp.CNC.CncChannel.OperationModeManager
   href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_OperationModeManager

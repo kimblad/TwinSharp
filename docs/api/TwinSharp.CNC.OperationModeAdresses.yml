@@ -22,7 +22,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: OperationModeAdresses
     path: ../TwinSharp/CNC/OperationModeManager.cs
-    startLine: 184
+    startLine: 198
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -59,7 +59,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: GeoIndexGroup
     path: ../TwinSharp/CNC/OperationModeManager.cs
-    startLine: 193
+    startLine: 207
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -90,7 +90,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: OperationStateActual
     path: ../TwinSharp/CNC/OperationModeManager.cs
-    startLine: 196
+    startLine: 210
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -121,7 +121,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: OperationModeActual
     path: ../TwinSharp/CNC/OperationModeManager.cs
-    startLine: 199
+    startLine: 213
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC

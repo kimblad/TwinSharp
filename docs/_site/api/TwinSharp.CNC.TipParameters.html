@@ -89,7 +89,7 @@
 
 
   <h1 id="TwinSharp_CNC_TipParameters" data-uid="TwinSharp.CNC.TipParameters" class="text-break">
-Class TipParameters  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L310"><i class="bi bi-code-slash"></i></a>
+Class TipParameters  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -150,6 +150,42 @@ mode, including flow control of user data.</p>
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="TwinSharp_CNC_TipParameters_CommandPending_" data-uid="TwinSharp.CNC.TipParameters.CommandPending*"></a>
+
+  <h3 id="TwinSharp_CNC_TipParameters_CommandPending" data-uid="TwinSharp.CNC.TipParameters.CommandPending">
+  CommandPending
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>TRUE while the CNC is still processing the last command. Wait until false before sending the next command.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CommandPending { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -158,7 +194,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_TipParameters_EnableControlElement_System_Boolean_" data-uid="TwinSharp.CNC.TipParameters.EnableControlElement(System.Boolean)">
   EnableControlElement(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Signal to CNC that the interface exists and we want to use it.</p>
@@ -190,7 +226,7 @@ mode, including flow control of user data.</p>
 
   <h3 id="TwinSharp_CNC_TipParameters_SignalCommandSemaphor_System_Boolean_" data-uid="TwinSharp.CNC.TipParameters.SignalCommandSemaphor(System.Boolean)">
   SignalCommandSemaphor(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>CNC accepts the commanded data if this element has the value TRUE and sets
@@ -224,7 +260,7 @@ You should set this element to the value TRUE if all data to be commanded has be
 
   <h3 id="TwinSharp_CNC_TipParameters_WriteCommandElement_TwinSharp_CNC_HLI_HB_TIP_PARAMETER_" data-uid="TwinSharp.CNC.TipParameters.WriteCommandElement(TwinSharp.CNC.HLI_HB_TIP_PARAMETER)">
   WriteCommandElement(HLI_HB_TIP_PARAMETER)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L320"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Write the parameters for continuous jog mode to the CNC.</p>
@@ -256,7 +292,7 @@ You should set this element to the value TRUE if all data to be commanded has be
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L310" class="edit-link">Edit this page</a>
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/ManualOperation.cs/#L299" class="edit-link">Edit this page</a>
         </div>
 
 

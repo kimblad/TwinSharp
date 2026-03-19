@@ -235,11 +235,53 @@ Class Extensions  <a class="header-action link-secondary" title="View source" hr
 
 
 
+  <a id="TwinSharp_Extensions_ReadUlintOrUdint_" data-uid="TwinSharp.Extensions.ReadUlintOrUdint*"></a>
+
+  <h3 id="TwinSharp_Extensions_ReadUlintOrUdint_TwinCAT_Ads_AdsClient_System_UInt32_" data-uid="TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient,System.UInt32)">
+  ReadUlintOrUdint(AdsClient, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Extensions.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads a ULINT or UDINT symbol as ulong. On the TwinCAT usermode runtime some
+counter fields are exposed as UDINT (4 bytes) instead of ULINT (8 bytes).
+Tries to read 8 bytes first; if the runtime returns only 4 bytes it retries
+as uint and widens the result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ulong ReadUlintOrUdint(this AdsClient client, uint handle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>client</code> <span class="xref">AdsClient</span></dt>
+    <dd></dd>
+    <dt><code>handle</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="TwinSharp_Extensions_ToUint_" data-uid="TwinSharp.Extensions.ToUint*"></a>
 
   <h3 id="TwinSharp_Extensions_ToUint_System_Byte___" data-uid="TwinSharp.Extensions.ToUint(System.Byte[])">
   ToUint(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Extensions.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/Extensions.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a byte array to a uint.</p>

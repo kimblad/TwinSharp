@@ -5,6 +5,7 @@ items:
   id: TipParameters
   parent: TwinSharp.CNC
   children:
+  - TwinSharp.CNC.TipParameters.CommandPending
   - TwinSharp.CNC.TipParameters.EnableControlElement(System.Boolean)
   - TwinSharp.CNC.TipParameters.SignalCommandSemaphor(System.Boolean)
   - TwinSharp.CNC.TipParameters.WriteCommandElement(TwinSharp.CNC.HLI_HB_TIP_PARAMETER)
@@ -22,7 +23,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: TipParameters
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 309
+    startLine: 298
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -62,7 +63,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: EnableControlElement
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 324
+    startLine: 315
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -73,7 +74,6 @@ items:
     parameters:
     - id: enabled
       type: System.Boolean
-      description: ''
     content.vb: Public Sub EnableControlElement(enabled As Boolean)
   overload: TwinSharp.CNC.TipParameters.EnableControlElement*
   nameWithType.vb: TipParameters.EnableControlElement(Boolean)
@@ -97,7 +97,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: WriteCommandElement
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 336
+    startLine: 319
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -108,7 +108,6 @@ items:
     parameters:
     - id: data
       type: TwinSharp.CNC.HLI_HB_TIP_PARAMETER
-      description: ''
     content.vb: Public Sub WriteCommandElement(data As HLI_HB_TIP_PARAMETER)
   overload: TwinSharp.CNC.TipParameters.WriteCommandElement*
 - uid: TwinSharp.CNC.TipParameters.SignalCommandSemaphor(System.Boolean)
@@ -129,7 +128,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SignalCommandSemaphor
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 349
+    startLine: 327
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -145,12 +144,42 @@ items:
     parameters:
     - id: signal
       type: System.Boolean
-      description: ''
     content.vb: Public Sub SignalCommandSemaphor(signal As Boolean)
   overload: TwinSharp.CNC.TipParameters.SignalCommandSemaphor*
   nameWithType.vb: TipParameters.SignalCommandSemaphor(Boolean)
   fullName.vb: TwinSharp.CNC.TipParameters.SignalCommandSemaphor(Boolean)
   name.vb: SignalCommandSemaphor(Boolean)
+- uid: TwinSharp.CNC.TipParameters.CommandPending
+  commentId: P:TwinSharp.CNC.TipParameters.CommandPending
+  id: CommandPending
+  parent: TwinSharp.CNC.TipParameters
+  langs:
+  - csharp
+  - vb
+  name: CommandPending
+  nameWithType: TipParameters.CommandPending
+  fullName: TwinSharp.CNC.TipParameters.CommandPending
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/ManualOperation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CommandPending
+    path: ../TwinSharp/CNC/ManualOperation.cs
+    startLine: 331
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE while the CNC is still processing the last command. Wait until false before sending the next command.
+  example: []
+  syntax:
+    content: public bool CommandPending { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CommandPending As Boolean
+  overload: TwinSharp.CNC.TipParameters.CommandPending*
 references:
 - uid: TwinSharp.CNC
   commentId: N:TwinSharp.CNC
@@ -447,3 +476,9 @@ references:
   name: SignalCommandSemaphor
   nameWithType: TipParameters.SignalCommandSemaphor
   fullName: TwinSharp.CNC.TipParameters.SignalCommandSemaphor
+- uid: TwinSharp.CNC.TipParameters.CommandPending*
+  commentId: Overload:TwinSharp.CNC.TipParameters.CommandPending
+  href: TwinSharp.CNC.TipParameters.html#TwinSharp_CNC_TipParameters_CommandPending
+  name: CommandPending
+  nameWithType: TipParameters.CommandPending
+  fullName: TwinSharp.CNC.TipParameters.CommandPending

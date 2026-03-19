@@ -6,6 +6,8 @@ items:
   parent: TwinSharp
   children:
   - TwinSharp.Realtime.CpuUsage
+  - TwinSharp.Realtime.Dispose
+  - TwinSharp.Realtime.Dispose(System.Boolean)
   - TwinSharp.Realtime.ReadCpuSettings
   - TwinSharp.Realtime.ReadLatency
   - TwinSharp.Realtime.SetSharedCores(System.UInt32)
@@ -35,10 +37,12 @@ items:
     and getting the current CPU usage. It uses the AdsClient to communicate with the TwinCAT system.
   example: []
   syntax:
-    content: public class Realtime
-    content.vb: Public Class Realtime
+    content: 'public class Realtime : IDisposable'
+    content.vb: Public Class Realtime Implements IDisposable
   inheritance:
   - System.Object
+  implements:
+  - System.IDisposable
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -65,7 +69,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SetSharedCores
     path: ../TwinSharp/Realtime.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -103,7 +107,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ReadCpuSettings
     path: ../TwinSharp/Realtime.cs
-    startLine: 65
+    startLine: 67
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -134,7 +138,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ReadLatency
     path: ../TwinSharp/Realtime.cs
-    startLine: 96
+    startLine: 98
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -165,7 +169,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CpuUsage
     path: ../TwinSharp/Realtime.cs
-    startLine: 122
+    startLine: 124
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -178,6 +182,68 @@ items:
       type: System.UInt32
     content.vb: Public ReadOnly Property CpuUsage As UInteger
   overload: TwinSharp.Realtime.CpuUsage*
+- uid: TwinSharp.Realtime.Dispose(System.Boolean)
+  commentId: M:TwinSharp.Realtime.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: TwinSharp.Realtime
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: Realtime.Dispose(bool)
+  fullName: TwinSharp.Realtime.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/Realtime.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Dispose
+    path: ../TwinSharp/Realtime.cs
+    startLine: 129
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: TwinSharp.Realtime.Dispose*
+  nameWithType.vb: Realtime.Dispose(Boolean)
+  fullName.vb: TwinSharp.Realtime.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+- uid: TwinSharp.Realtime.Dispose
+  commentId: M:TwinSharp.Realtime.Dispose
+  id: Dispose
+  parent: TwinSharp.Realtime
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Realtime.Dispose()
+  fullName: TwinSharp.Realtime.Dispose()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/Realtime.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Dispose
+    path: ../TwinSharp/Realtime.cs
+    startLine: 144
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: TwinSharp.Realtime.Dispose*
+  implements:
+  - System.IDisposable.Dispose
 references:
 - uid: TwinSharp
   commentId: N:TwinSharp
@@ -196,6 +262,14 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -500,3 +574,42 @@ references:
   name: CpuUsage
   nameWithType: Realtime.CpuUsage
   fullName: TwinSharp.Realtime.CpuUsage
+- uid: TwinSharp.Realtime.Dispose*
+  commentId: Overload:TwinSharp.Realtime.Dispose
+  href: TwinSharp.Realtime.html#TwinSharp_Realtime_Dispose_System_Boolean_
+  name: Dispose
+  nameWithType: Realtime.Dispose
+  fullName: TwinSharp.Realtime.Dispose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

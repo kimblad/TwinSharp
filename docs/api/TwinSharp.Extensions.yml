@@ -7,6 +7,7 @@ items:
   children:
   - TwinSharp.Extensions.ReadDateTime(TwinCAT.Ads.AdsClient,System.UInt32)
   - TwinSharp.Extensions.ReadString(TwinCAT.Ads.AdsClient,System.UInt32,System.UInt32,System.Int32)
+  - TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient,System.UInt32)
   - TwinSharp.Extensions.ToUint(System.Byte[])
   langs:
   - csharp
@@ -131,6 +132,55 @@ items:
   nameWithType.vb: Extensions.ReadDateTime(AdsClient, UInteger)
   fullName.vb: TwinSharp.Extensions.ReadDateTime(TwinCAT.Ads.AdsClient, UInteger)
   name.vb: ReadDateTime(AdsClient, UInteger)
+- uid: TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient,System.UInt32)
+  commentId: M:TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient,System.UInt32)
+  id: ReadUlintOrUdint(TwinCAT.Ads.AdsClient,System.UInt32)
+  isExtensionMethod: true
+  parent: TwinSharp.Extensions
+  langs:
+  - csharp
+  - vb
+  name: ReadUlintOrUdint(AdsClient, uint)
+  nameWithType: Extensions.ReadUlintOrUdint(AdsClient, uint)
+  fullName: TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient, uint)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/Extensions.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReadUlintOrUdint
+    path: ../TwinSharp/Extensions.cs
+    startLine: 47
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp
+  summary: >-
+    Reads a ULINT or UDINT symbol as ulong. On the TwinCAT usermode runtime some
+
+    counter fields are exposed as UDINT (4 bytes) instead of ULINT (8 bytes).
+
+    Tries to read 8 bytes first; if the runtime returns only 4 bytes it retries
+
+    as uint and widens the result.
+  example: []
+  syntax:
+    content: public static ulong ReadUlintOrUdint(this AdsClient client, uint handle)
+    parameters:
+    - id: client
+      type: TwinCAT.Ads.AdsClient
+      description: ''
+    - id: handle
+      type: System.UInt32
+      description: ''
+    return:
+      type: System.UInt64
+      description: ''
+    content.vb: Public Shared Function ReadUlintOrUdint(client As AdsClient, handle As UInteger) As ULong
+  overload: TwinSharp.Extensions.ReadUlintOrUdint*
+  nameWithType.vb: Extensions.ReadUlintOrUdint(AdsClient, UInteger)
+  fullName.vb: TwinSharp.Extensions.ReadUlintOrUdint(TwinCAT.Ads.AdsClient, UInteger)
+  name.vb: ReadUlintOrUdint(AdsClient, UInteger)
 - uid: TwinSharp.Extensions.ToUint(System.Byte[])
   commentId: M:TwinSharp.Extensions.ToUint(System.Byte[])
   id: ToUint(System.Byte[])
@@ -150,7 +200,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ToUint
     path: ../TwinSharp/Extensions.cs
-    startLine: 43
+    startLine: 64
   assemblies:
   - TwinSharp
   namespace: TwinSharp
@@ -499,6 +549,23 @@ references:
   nameWithType.vb: Date
   fullName.vb: Date
   name.vb: Date
+- uid: TwinSharp.Extensions.ReadUlintOrUdint*
+  commentId: Overload:TwinSharp.Extensions.ReadUlintOrUdint
+  href: TwinSharp.Extensions.html#TwinSharp_Extensions_ReadUlintOrUdint_TwinCAT_Ads_AdsClient_System_UInt32_
+  name: ReadUlintOrUdint
+  nameWithType: Extensions.ReadUlintOrUdint
+  fullName: TwinSharp.Extensions.ReadUlintOrUdint
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
 - uid: TwinSharp.Extensions.ToUint*
   commentId: Overload:TwinSharp.Extensions.ToUint
   href: TwinSharp.Extensions.html#TwinSharp_Extensions_ToUint_System_Byte___

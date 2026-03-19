@@ -5,6 +5,7 @@ items:
   id: RapidKey
   parent: TwinSharp.CNC
   children:
+  - TwinSharp.CNC.RapidKey.CommandPending
   - TwinSharp.CNC.RapidKey.EnableControlElement(System.Boolean)
   - TwinSharp.CNC.RapidKey.SignalCommandSemaphor(System.Boolean)
   - TwinSharp.CNC.RapidKey.WriteCommandElement(TwinSharp.CNC.HLI_HB_RAPID_KEY)
@@ -22,7 +23,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: RapidKey
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 417
+    startLine: 381
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -64,7 +65,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: EnableControlElement
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 432
+    startLine: 398
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -75,7 +76,6 @@ items:
     parameters:
     - id: enabled
       type: System.Boolean
-      description: ''
     content.vb: Public Sub EnableControlElement(enabled As Boolean)
   overload: TwinSharp.CNC.RapidKey.EnableControlElement*
   nameWithType.vb: RapidKey.EnableControlElement(Boolean)
@@ -99,7 +99,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: WriteCommandElement
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 443
+    startLine: 402
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -110,7 +110,6 @@ items:
     parameters:
     - id: data
       type: TwinSharp.CNC.HLI_HB_RAPID_KEY
-      description: ''
     content.vb: Public Sub WriteCommandElement(data As HLI_HB_RAPID_KEY)
   overload: TwinSharp.CNC.RapidKey.WriteCommandElement*
 - uid: TwinSharp.CNC.RapidKey.SignalCommandSemaphor(System.Boolean)
@@ -131,7 +130,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SignalCommandSemaphor
     path: ../TwinSharp/CNC/ManualOperation.cs
-    startLine: 456
+    startLine: 410
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -147,12 +146,42 @@ items:
     parameters:
     - id: signal
       type: System.Boolean
-      description: ''
     content.vb: Public Sub SignalCommandSemaphor(signal As Boolean)
   overload: TwinSharp.CNC.RapidKey.SignalCommandSemaphor*
   nameWithType.vb: RapidKey.SignalCommandSemaphor(Boolean)
   fullName.vb: TwinSharp.CNC.RapidKey.SignalCommandSemaphor(Boolean)
   name.vb: SignalCommandSemaphor(Boolean)
+- uid: TwinSharp.CNC.RapidKey.CommandPending
+  commentId: P:TwinSharp.CNC.RapidKey.CommandPending
+  id: CommandPending
+  parent: TwinSharp.CNC.RapidKey
+  langs:
+  - csharp
+  - vb
+  name: CommandPending
+  nameWithType: RapidKey.CommandPending
+  fullName: TwinSharp.CNC.RapidKey.CommandPending
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/ManualOperation.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CommandPending
+    path: ../TwinSharp/CNC/ManualOperation.cs
+    startLine: 414
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE while the CNC is still processing the last command. Wait until false before sending the next command.
+  example: []
+  syntax:
+    content: public bool CommandPending { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CommandPending As Boolean
+  overload: TwinSharp.CNC.RapidKey.CommandPending*
 references:
 - uid: TwinSharp.CNC
   commentId: N:TwinSharp.CNC
@@ -449,3 +478,9 @@ references:
   name: SignalCommandSemaphor
   nameWithType: RapidKey.SignalCommandSemaphor
   fullName: TwinSharp.CNC.RapidKey.SignalCommandSemaphor
+- uid: TwinSharp.CNC.RapidKey.CommandPending*
+  commentId: Overload:TwinSharp.CNC.RapidKey.CommandPending
+  href: TwinSharp.CNC.RapidKey.html#TwinSharp_CNC_RapidKey_CommandPending
+  name: CommandPending
+  nameWithType: RapidKey.CommandPending
+  fullName: TwinSharp.CNC.RapidKey.CommandPending
