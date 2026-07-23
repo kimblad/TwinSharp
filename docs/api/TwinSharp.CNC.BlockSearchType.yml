@@ -24,7 +24,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BlockSearchType
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 109
+    startLine: 142
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -51,7 +51,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: NoBlockSearch
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 112
+    startLine: 145
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -79,7 +79,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: FileOffset
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 115
+    startLine: 148
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -107,7 +107,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BlockCounter
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 118
+    startLine: 151
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BlockNumber
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 121
+    startLine: 154
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -163,7 +163,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ProgramEnd
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 127
+    startLine: 160
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC

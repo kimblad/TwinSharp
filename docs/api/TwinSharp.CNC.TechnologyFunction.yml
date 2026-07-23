@@ -23,7 +23,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: TechnologyFunction
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 168
+    startLine: 176
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -50,7 +50,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_INTF_M_FKT
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 171
+    startLine: 179
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -78,7 +78,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_INTF_H_FKT
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 174
+    startLine: 182
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -106,7 +106,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_INTF_SPINDEL
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 177
+    startLine: 185
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -134,7 +134,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_INTF_TOOL
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 180
+    startLine: 188
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC

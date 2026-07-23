@@ -61,7 +61,7 @@ namespace TwinSharp.CNC
         /// </summary>
         public int AdditiveVelocity
         {
-            set => plcClient.WriteAny(variableHandles[Identifier.AddedVelocity], value);
+            set =>  plcClient.WriteAny(variableHandles[Identifier.AddedVelocity], value);
         }
 
         enum Identifier

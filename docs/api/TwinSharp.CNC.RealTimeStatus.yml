@@ -1,0 +1,431 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.RealTimeStatus
+  commentId: T:TwinSharp.CNC.RealTimeStatus
+  id: RealTimeStatus
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.RealTimeStatus.Dispose
+  - TwinSharp.CNC.RealTimeStatus.State
+  langs:
+  - csharp
+  - vb
+  name: RealTimeStatus
+  nameWithType: RealTimeStatus
+  fullName: TwinSharp.CNC.RealTimeStatus
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/CNC/RealTimeStatus.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RealTimeStatus
+    path: ../TwinSharp/CNC/RealTimeStatus.cs
+    startLine: 12
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Provides read-only access to the real-time status of the CNC path interpolator
+
+    via the HLI <code>bahn_state</code> variable (<code>STATE_BAHN</code> struct).
+
+    <p>
+
+    All data is read in a single ADS call by accessing the entire <xref href="TwinSharp.CNC.StateBahn" data-throw-if-not-resolved="false"></xref>
+
+    struct via <xref href="TwinSharp.CNC.RealTimeStatus.State" data-throw-if-not-resolved="false"></xref>.
+
+    </p>
+  example: []
+  syntax:
+    content: 'public class RealTimeStatus : IDisposable'
+    content.vb: Public Class RealTimeStatus Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.CNC.RealTimeStatus.State
+  commentId: P:TwinSharp.CNC.RealTimeStatus.State
+  id: State
+  parent: TwinSharp.CNC.RealTimeStatus
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: RealTimeStatus.State
+  fullName: TwinSharp.CNC.RealTimeStatus.State
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/RealTimeStatus.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: State
+    path: ../TwinSharp/CNC/RealTimeStatus.cs
+    startLine: 27
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reads the complete real-time status from the CNC path interpolator in one ADS call.
+  example: []
+  syntax:
+    content: public StateBahn State { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.StateBahn
+    content.vb: Public ReadOnly Property State As StateBahn
+  overload: TwinSharp.CNC.RealTimeStatus.State*
+- uid: TwinSharp.CNC.RealTimeStatus.Dispose
+  commentId: M:TwinSharp.CNC.RealTimeStatus.Dispose
+  id: Dispose
+  parent: TwinSharp.CNC.RealTimeStatus
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: RealTimeStatus.Dispose()
+  fullName: TwinSharp.CNC.RealTimeStatus.Dispose()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/RealTimeStatus.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Dispose
+    path: ../TwinSharp/CNC/RealTimeStatus.cs
+    startLine: 30
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Disposes the RealTimeStatus and releases the ADS variable handle.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: TwinSharp.CNC.RealTimeStatus.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: TwinSharp.CNC.StateBahn
+  commentId: T:TwinSharp.CNC.StateBahn
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.StateBahn.html
+  name: StateBahn
+  nameWithType: StateBahn
+  fullName: TwinSharp.CNC.StateBahn
+- uid: TwinSharp.CNC.RealTimeStatus.State
+  commentId: P:TwinSharp.CNC.RealTimeStatus.State
+  href: TwinSharp.CNC.RealTimeStatus.html#TwinSharp_CNC_RealTimeStatus_State
+  name: State
+  nameWithType: RealTimeStatus.State
+  fullName: TwinSharp.CNC.RealTimeStatus.State
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.RealTimeStatus.State*
+  commentId: Overload:TwinSharp.CNC.RealTimeStatus.State
+  href: TwinSharp.CNC.RealTimeStatus.html#TwinSharp_CNC_RealTimeStatus_State
+  name: State
+  nameWithType: RealTimeStatus.State
+  fullName: TwinSharp.CNC.RealTimeStatus.State
+- uid: TwinSharp.CNC.RealTimeStatus.Dispose*
+  commentId: Overload:TwinSharp.CNC.RealTimeStatus.Dispose
+  href: TwinSharp.CNC.RealTimeStatus.html#TwinSharp_CNC_RealTimeStatus_Dispose
+  name: Dispose
+  nameWithType: RealTimeStatus.Dispose
+  fullName: TwinSharp.CNC.RealTimeStatus.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

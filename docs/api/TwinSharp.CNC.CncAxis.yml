@@ -5,6 +5,9 @@ items:
   id: CncAxis
   parent: TwinSharp.CNC
   children:
+  - TwinSharp.CNC.CncAxis.AxisCoupling
+  - TwinSharp.CNC.CncAxis.ControlCommands
+  - TwinSharp.CNC.CncAxis.DistanceControl
   - TwinSharp.CNC.CncAxis.DynamicPositionLimitation
   - TwinSharp.CNC.CncAxis.ExternalAxisCommanding
   - TwinSharp.CNC.CncAxis.PlcPresent
@@ -63,7 +66,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: PlcPresent
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -97,7 +100,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Status
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -131,7 +134,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ExternalAxisCommanding
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 50
+    startLine: 53
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -162,7 +165,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: DynamicPositionLimitation
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 55
+    startLine: 58
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -175,6 +178,108 @@ items:
       type: TwinSharp.CNC.DynamicPositionLimitation
     content.vb: Public Property DynamicPositionLimitation As DynamicPositionLimitation
   overload: TwinSharp.CNC.CncAxis.DynamicPositionLimitation*
+- uid: TwinSharp.CNC.CncAxis.DistanceControl
+  commentId: P:TwinSharp.CNC.CncAxis.DistanceControl
+  id: DistanceControl
+  parent: TwinSharp.CNC.CncAxis
+  langs:
+  - csharp
+  - vb
+  name: DistanceControl
+  nameWithType: CncAxis.DistanceControl
+  fullName: TwinSharp.CNC.CncAxis.DistanceControl
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncAxis.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DistanceControl
+    path: ../TwinSharp/CNC/CncAxis.cs
+    startLine: 64
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Gets the DistanceControl instance for TF5200 height/distance control on this axis.
+
+    Allows enabling, commanding (activate/freeze/deactivate), and monitoring the distance control HLI interface.
+  example: []
+  syntax:
+    content: public DistanceControl DistanceControl { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.DistanceControl
+    content.vb: Public Property DistanceControl As DistanceControl
+  overload: TwinSharp.CNC.CncAxis.DistanceControl*
+- uid: TwinSharp.CNC.CncAxis.AxisCoupling
+  commentId: P:TwinSharp.CNC.CncAxis.AxisCoupling
+  id: AxisCoupling
+  parent: TwinSharp.CNC.CncAxis
+  langs:
+  - csharp
+  - vb
+  name: AxisCoupling
+  nameWithType: CncAxis.AxisCoupling
+  fullName: TwinSharp.CNC.CncAxis.AxisCoupling
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncAxis.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisCoupling
+    path: ../TwinSharp/CNC/CncAxis.cs
+    startLine: 70
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Gets the AxisCoupling instance for HLI axis coupling (electronic gearing) on this axis.
+
+    Allows activating and deactivating coupling to one or more source axes.
+  example: []
+  syntax:
+    content: public AxisCoupling AxisCoupling { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.AxisCoupling
+    content.vb: Public Property AxisCoupling As AxisCoupling
+  overload: TwinSharp.CNC.CncAxis.AxisCoupling*
+- uid: TwinSharp.CNC.CncAxis.ControlCommands
+  commentId: P:TwinSharp.CNC.CncAxis.ControlCommands
+  id: ControlCommands
+  parent: TwinSharp.CNC.CncAxis
+  langs:
+  - csharp
+  - vb
+  name: ControlCommands
+  nameWithType: CncAxis.ControlCommands
+  fullName: TwinSharp.CNC.CncAxis.ControlCommands
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncAxis.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControlCommands
+    path: ../TwinSharp/CNC/CncAxis.cs
+    startLine: 76
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Gets the AxisControlCommands instance for the axis control commands of the HLI lr_mc_control
+
+    control unit (drive on, controller enable, feed enable, referencing, probing, park, ...).
+  example: []
+  syntax:
+    content: public AxisControlCommands ControlCommands { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.AxisControlCommands
+    content.vb: Public Property ControlCommands As AxisControlCommands
+  overload: TwinSharp.CNC.CncAxis.ControlCommands*
 - uid: TwinSharp.CNC.CncAxis.ToString
   commentId: M:TwinSharp.CNC.CncAxis.ToString
   id: ToString
@@ -193,7 +298,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ToString
     path: ../TwinSharp/CNC/CncAxis.cs
-    startLine: 66
+    startLine: 87
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -499,6 +604,45 @@ references:
   name: DynamicPositionLimitation
   nameWithType: DynamicPositionLimitation
   fullName: TwinSharp.CNC.DynamicPositionLimitation
+- uid: TwinSharp.CNC.CncAxis.DistanceControl*
+  commentId: Overload:TwinSharp.CNC.CncAxis.DistanceControl
+  href: TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_DistanceControl
+  name: DistanceControl
+  nameWithType: CncAxis.DistanceControl
+  fullName: TwinSharp.CNC.CncAxis.DistanceControl
+- uid: TwinSharp.CNC.DistanceControl
+  commentId: T:TwinSharp.CNC.DistanceControl
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControl.html
+  name: DistanceControl
+  nameWithType: DistanceControl
+  fullName: TwinSharp.CNC.DistanceControl
+- uid: TwinSharp.CNC.CncAxis.AxisCoupling*
+  commentId: Overload:TwinSharp.CNC.CncAxis.AxisCoupling
+  href: TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_AxisCoupling
+  name: AxisCoupling
+  nameWithType: CncAxis.AxisCoupling
+  fullName: TwinSharp.CNC.CncAxis.AxisCoupling
+- uid: TwinSharp.CNC.AxisCoupling
+  commentId: T:TwinSharp.CNC.AxisCoupling
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisCoupling.html
+  name: AxisCoupling
+  nameWithType: AxisCoupling
+  fullName: TwinSharp.CNC.AxisCoupling
+- uid: TwinSharp.CNC.CncAxis.ControlCommands*
+  commentId: Overload:TwinSharp.CNC.CncAxis.ControlCommands
+  href: TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_ControlCommands
+  name: ControlCommands
+  nameWithType: CncAxis.ControlCommands
+  fullName: TwinSharp.CNC.CncAxis.ControlCommands
+- uid: TwinSharp.CNC.AxisControlCommands
+  commentId: T:TwinSharp.CNC.AxisControlCommands
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisControlCommands.html
+  name: AxisControlCommands
+  nameWithType: AxisControlCommands
+  fullName: TwinSharp.CNC.AxisControlCommands
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object

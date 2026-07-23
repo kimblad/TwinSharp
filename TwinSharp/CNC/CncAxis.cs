@@ -22,6 +22,9 @@ namespace TwinSharp.CNC
             Status = new AxisStatus(number, comClient);
             ExternalAxisCommanding = new ExternalAxisCommanding(number, plcClient);
             DynamicPositionLimitation = new DynamicPositionLimitation(number, plcClient);
+            DistanceControl = new DistanceControl(number, plcClient);
+            AxisCoupling    = new AxisCoupling(number, plcClient);
+            ControlCommands = new AxisControlCommands(number, plcClient);
         }
 
         /// <summary>
@@ -54,6 +57,24 @@ namespace TwinSharp.CNC
         /// Gets the DynamicPositionLimitation instance which allows setting and monitoring dynamic position limits for the axis.
         /// </summary>
         public DynamicPositionLimitation DynamicPositionLimitation { get; private set; }
+
+        /// <summary>
+        /// Gets the DistanceControl instance for TF5200 height/distance control on this axis.
+        /// Allows enabling, commanding (activate/freeze/deactivate), and monitoring the distance control HLI interface.
+        /// </summary>
+        public DistanceControl DistanceControl { get; private set; }
+
+        /// <summary>
+        /// Gets the AxisCoupling instance for HLI axis coupling (electronic gearing) on this axis.
+        /// Allows activating and deactivating coupling to one or more source axes.
+        /// </summary>
+        public AxisCoupling AxisCoupling { get; private set; }
+
+        /// <summary>
+        /// Gets the AxisControlCommands instance for the axis control commands of the HLI lr_mc_control
+        /// control unit (drive on, controller enable, feed enable, referencing, probing, park, ...).
+        /// </summary>
+        public AxisControlCommands ControlCommands { get; private set; }
 
 
 

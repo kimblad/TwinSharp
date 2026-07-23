@@ -1,0 +1,414 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_MSG_SENDUNG
+  commentId: T:TwinSharp.CNC.HLI_MSG_SENDUNG
+  id: HLI_MSG_SENDUNG
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_MSG_SENDUNG.FillUp1
+  - TwinSharp.CNC.HLI_MSG_SENDUNG.Inhalt
+  - TwinSharp.CNC.HLI_MSG_SENDUNG.Typ
+  langs:
+  - csharp
+  - vb
+  name: HLI_MSG_SENDUNG
+  nameWithType: HLI_MSG_SENDUNG
+  fullName: TwinSharp.CNC.HLI_MSG_SENDUNG
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_MSG_SENDUNG
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1496
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Payload of an NC-program message sent via <code>#MSG PLC</code> or <code>#MSGINFO PLC</code>.
+
+    Mirrors <code>HLI_MSG_SENDUNG</code> from the HLI interface.
+
+    Layout: typ (UDINT) — fill_up_1 (DINT, mod-8 alignment pad) — inhalt (STRING(119)).
+  example: []
+  syntax:
+    content: public struct HLI_MSG_SENDUNG
+    content.vb: Public Structure HLI_MSG_SENDUNG
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_MSG_SENDUNG.Typ
+  commentId: F:TwinSharp.CNC.HLI_MSG_SENDUNG.Typ
+  id: Typ
+  parent: TwinSharp.CNC.HLI_MSG_SENDUNG
+  langs:
+  - csharp
+  - vb
+  name: Typ
+  nameWithType: HLI_MSG_SENDUNG.Typ
+  fullName: TwinSharp.CNC.HLI_MSG_SENDUNG.Typ
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Typ
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1503
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Message type: 1 = #MSG (text), 2 = #MSGINFO.
+
+    See <xref href="TwinSharp.CNC.HliConstants.HLI_MESSAGE_TYPE_TEXT" data-throw-if-not-resolved="false"></xref> etc.
+  example: []
+  syntax:
+    content: public uint Typ
+    return:
+      type: System.UInt32
+    content.vb: Public Typ As UInteger
+- uid: TwinSharp.CNC.HLI_MSG_SENDUNG.FillUp1
+  commentId: F:TwinSharp.CNC.HLI_MSG_SENDUNG.FillUp1
+  id: FillUp1
+  parent: TwinSharp.CNC.HLI_MSG_SENDUNG
+  langs:
+  - csharp
+  - vb
+  name: FillUp1
+  nameWithType: HLI_MSG_SENDUNG.FillUp1
+  fullName: TwinSharp.CNC.HLI_MSG_SENDUNG.FillUp1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FillUp1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1506
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Fill member for mod-8 alignment. Not used by the HMI.
+  example: []
+  syntax:
+    content: public int FillUp1
+    return:
+      type: System.Int32
+    content.vb: Public FillUp1 As Integer
+- uid: TwinSharp.CNC.HLI_MSG_SENDUNG.Inhalt
+  commentId: F:TwinSharp.CNC.HLI_MSG_SENDUNG.Inhalt
+  id: Inhalt
+  parent: TwinSharp.CNC.HLI_MSG_SENDUNG
+  langs:
+  - csharp
+  - vb
+  name: Inhalt
+  nameWithType: HLI_MSG_SENDUNG.Inhalt
+  fullName: TwinSharp.CNC.HLI_MSG_SENDUNG.Inhalt
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Inhalt
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1510
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Message text. Up to HLI_MSG_CONTENT_STRL (119) characters + null terminator.
+  example: []
+  syntax:
+    content: public string Inhalt
+    return:
+      type: System.String
+    content.vb: Public Inhalt As String
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.HliConstants.HLI_MESSAGE_TYPE_TEXT
+  commentId: F:TwinSharp.CNC.HliConstants.HLI_MESSAGE_TYPE_TEXT
+  href: TwinSharp.CNC.HliConstants.html#TwinSharp_CNC_HliConstants_HLI_MESSAGE_TYPE_TEXT
+  name: HLI_MESSAGE_TYPE_TEXT
+  nameWithType: HliConstants.HLI_MESSAGE_TYPE_TEXT
+  fullName: TwinSharp.CNC.HliConstants.HLI_MESSAGE_TYPE_TEXT
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

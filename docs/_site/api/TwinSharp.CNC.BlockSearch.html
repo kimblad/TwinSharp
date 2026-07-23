@@ -158,7 +158,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_BlockSearch_AutomaticResumption" data-uid="TwinSharp.CNC.BlockSearch.AutomaticResumption">
   AutomaticResumption
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This object defines that resumption of motion on the contour occurs automatically.</p>
@@ -190,7 +190,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_BlockSearch_BlockNumberToFind" data-uid="TwinSharp.CNC.BlockSearch.BlockNumberToFind">
   BlockNumberToFind
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Defines the block number at which point actual machining is to continue.</p>
@@ -222,7 +222,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_BlockSearch_BlockSearchType" data-uid="TwinSharp.CNC.BlockSearch.BlockSearchType">
   BlockSearchType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The continuation position can be defined using a number of different block search types (file offset, block counter, block number, etc.)</p>
@@ -254,7 +254,7 @@ The continuation position can be defined using a number of different block searc
 
   <h3 id="TwinSharp_CNC_BlockSearch_BreakPoint" data-uid="TwinSharp.CNC.BlockSearch.BreakPoint">
   BreakPoint
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This object defines an automatic breakpoint by specifying the distance from program start.
@@ -287,7 +287,7 @@ Unit [0.1 µm]</p>
 
   <h3 id="TwinSharp_CNC_BlockSearch_CoveredDistanceFromProgramStart" data-uid="TwinSharp.CNC.BlockSearch.CoveredDistanceFromProgramStart">
   CoveredDistanceFromProgramStart
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This object defines the distance from program start or #DISTANCE PROG START CLEAR at which machining is actually supposed to start.
@@ -320,7 +320,7 @@ Unit [0.1 µm]</p>
 
   <h3 id="TwinSharp_CNC_BlockSearch_CoveredDistanceMotionBlockInPerMill" data-uid="TwinSharp.CNC.BlockSearch.CoveredDistanceMotionBlockInPerMill">
   CoveredDistanceMotionBlockInPerMill
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This object defines the distance covered in the NC block in per mil at which machining is actually supposed to continue. The first part of the block in the block search is then executed without motion and only the remaining part is executed with moved axes. Value range: [0.0 to 1000.0]; default value= 0.0
@@ -353,7 +353,7 @@ Unit [0.1%]</p>
 
   <h3 id="TwinSharp_CNC_BlockSearch_MaxPathDeviation" data-uid="TwinSharp.CNC.BlockSearch.MaxPathDeviation">
   MaxPathDeviation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This object defines the maximum deviation of the axes between actual position and continuation position when machining is resumed after block search. If resumption of motion on the contour is automatic, the maximum path deviation is not considered since the exact continuation position has already been reached. (Default= 0)
@@ -386,7 +386,7 @@ Unit [0.1 µm]</p>
 
   <h3 id="TwinSharp_CNC_BlockSearch_NoStopOnResumption" data-uid="TwinSharp.CNC.BlockSearch.NoStopOnResumption">
   NoStopOnResumption
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>This object defines whether resumption of motion on the contour should occur directly without any operator input.</p>
@@ -418,7 +418,7 @@ Unit [0.1 µm]</p>
 
   <h3 id="TwinSharp_CNC_BlockSearch_ProgramStartAsOfFileOffset" data-uid="TwinSharp.CNC.BlockSearch.ProgramStartAsOfFileOffset">
   ProgramStartAsOfFileOffset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The file offset defines a jump to a known position in the NC program. The program part before the jump point is not evaluated. Processing starts at the jump point as for a program shortened by file offset. This object defines the file offset. (Default value= 0)</p>
@@ -436,6 +436,106 @@ Unit [0.1 µm]</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_BlockSearch_StartPositionFileName_" data-uid="TwinSharp.CNC.BlockSearch.StartPositionFileName*"></a>
+
+  <h3 id="TwinSharp_CNC_BlockSearch_StartPositionFileName" data-uid="TwinSharp.CNC.BlockSearch.StartPositionFileName">
+  StartPositionFileName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type 1: Name (full path) of the NC file that contains the start position.
+Must match the filename passed to program start exactly.
+IndexGroup 0x000201xx, offset 0x4F. Max 84 characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string StartPositionFileName { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_BlockSearch_StartPositionFileOffset_" data-uid="TwinSharp.CNC.BlockSearch.StartPositionFileOffset*"></a>
+
+  <h3 id="TwinSharp_CNC_BlockSearch_StartPositionFileOffset" data-uid="TwinSharp.CNC.BlockSearch.StartPositionFileOffset">
+  StartPositionFileOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type 1: File offset at which actual machining is to continue (start of the target NC row).
+IndexGroup 0x000201xx, offset 0x50.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StartPositionFileOffset { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_BlockSearch_StartPositionPathId_" data-uid="TwinSharp.CNC.BlockSearch.StartPositionPathId*"></a>
+
+  <h3 id="TwinSharp_CNC_BlockSearch_StartPositionPathId" data-uid="TwinSharp.CNC.BlockSearch.StartPositionPathId">
+  StartPositionPathId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/BlockSearch.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type 1: Whether the file is on the main-program (HP=0) or subroutine (UP=1) path.
+IndexGroup 0x000201xx, offset 0x4E.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort StartPositionPathId { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
     <dd></dd>
   </dl>
 

@@ -22,6 +22,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisControlCommands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisControlCommands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisCoupling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisCoupling.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisCouplingEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisCouplingEntry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.AxisCouplingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.AxisCouplingMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.AxisState.yml",
       "output": {
         ".html": {
@@ -192,6 +232,36 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.DistanceControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.DistanceControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.DistanceControlCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.DistanceControlCommand.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.DistanceControlState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.DistanceControlState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.DynamicPositionLimitation.yml",
       "output": {
         ".html": {
@@ -252,6 +322,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ExternalVariables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ExternalVariables.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.FeedOverride.yml",
       "output": {
         ".html": {
@@ -272,6 +352,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_ACHS_NAME.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_ACHS_NAME.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.HLI_ADD_CMD_VALUE.yml",
       "output": {
         ".html": {
@@ -282,10 +372,60 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_BLOCK_DYNAMIC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_BLOCK_DYNAMIC.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_CONVEYOR_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_CONVEYOR_DATA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.HLI_DYNPL_STATE.yml",
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.HLI_DYNPL_STATE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_EDGE_FUNCTION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_EDGE_FUNCTION.html"
         }
       },
       "version": ""
@@ -342,10 +482,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_FILE_NAME.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_FILE_NAME.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.HLI_HB_ACTIVATION.yml",
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.HLI_HB_ACTIVATION.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA.html"
         }
       },
       "version": ""
@@ -422,10 +582,60 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_LOOKAHEAD_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_LOOKAHEAD_DATA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_MC_IFC_ID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_MC_IFC_ID.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_MC_JOB_DESCR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_MC_JOB_DESCR.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_MC_JOB_STACK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_MC_JOB_STACK.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.HLI_MODUL_NAME.yml",
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.HLI_MODUL_NAME.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_MSG_SENDUNG.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_MSG_SENDUNG.html"
         }
       },
       "version": ""
@@ -456,6 +666,56 @@
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.HLI_RUMPF_NC_PROG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_STATE_TTD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_STATE_TTD.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_S_ADD_PROG_INFO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_S_ADD_PROG_INFO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD.html"
         }
       },
       "version": ""
@@ -522,10 +782,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.HliConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.HliConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.HrParameters.yml",
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.HrParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.InsertStopCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.InsertStopCommand.html"
         }
       },
       "version": ""
@@ -592,6 +872,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.NcMessageEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.NcMessageEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.NcMessageMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.NcMessageMonitor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.ObjectDescription.yml",
       "output": {
         ".html": {
@@ -646,6 +946,16 @@
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.RapidKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.RealTimeStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.RealTimeStatus.html"
         }
       },
       "version": ""
@@ -712,10 +1022,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.StateBahn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.StateBahn.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.StopConditionFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.StopConditionFlags.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TwinSharp.CNC.TECHNO_UNIT_CH.yml",
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.TECHNO_UNIT_CH.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs.html"
         }
       },
       "version": ""
@@ -746,6 +1086,16 @@
       "output": {
         ".html": {
           "relative_path": "api/TwinSharp.CNC.TipParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TwinSharp.CNC.ToolManagement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TwinSharp.CNC.ToolManagement.html"
         }
       },
       "version": ""

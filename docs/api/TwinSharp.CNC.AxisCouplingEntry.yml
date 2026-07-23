@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.AxisCouplingEntry
+  commentId: T:TwinSharp.CNC.AxisCouplingEntry
+  id: AxisCouplingEntry
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.AxisCouplingEntry.FractDenominator
+  - TwinSharp.CNC.AxisCouplingEntry.FractNumerator
+  - TwinSharp.CNC.AxisCouplingEntry.Mode
+  - TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber
+  langs:
+  - csharp
+  - vb
+  name: AxisCouplingEntry
+  nameWithType: AxisCouplingEntry
+  fullName: TwinSharp.CNC.AxisCouplingEntry
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisCouplingEntry
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 178
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Describes one source-axis relationship in an axis coupling command.
+
+    Pass an array of these to <xref href="TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry%5b%5d)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public readonly struct AxisCouplingEntry
+    content.vb: Public Structure AxisCouplingEntry
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber
+  commentId: P:TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber
+  id: SourceAxisNumber
+  parent: TwinSharp.CNC.AxisCouplingEntry
+  langs:
+  - csharp
+  - vb
+  name: SourceAxisNumber
+  nameWithType: AxisCouplingEntry.SourceAxisNumber
+  fullName: TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SourceAxisNumber
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 181
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Logical axis number of the source axis (1-based).
+  example: []
+  syntax:
+    content: public int SourceAxisNumber { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property SourceAxisNumber As Integer
+  overload: TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber*
+- uid: TwinSharp.CNC.AxisCouplingEntry.Mode
+  commentId: P:TwinSharp.CNC.AxisCouplingEntry.Mode
+  id: Mode
+  parent: TwinSharp.CNC.AxisCouplingEntry
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: AxisCouplingEntry.Mode
+  fullName: TwinSharp.CNC.AxisCouplingEntry.Mode
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Mode
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 183
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Coupling mode.
+  example: []
+  syntax:
+    content: public AxisCouplingMode Mode { get; init; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.AxisCouplingMode
+    content.vb: Public Property Mode As AxisCouplingMode
+  overload: TwinSharp.CNC.AxisCouplingEntry.Mode*
+- uid: TwinSharp.CNC.AxisCouplingEntry.FractNumerator
+  commentId: P:TwinSharp.CNC.AxisCouplingEntry.FractNumerator
+  id: FractNumerator
+  parent: TwinSharp.CNC.AxisCouplingEntry
+  langs:
+  - csharp
+  - vb
+  name: FractNumerator
+  nameWithType: AxisCouplingEntry.FractNumerator
+  fullName: TwinSharp.CNC.AxisCouplingEntry.FractNumerator
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FractNumerator
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 185
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Numerator of the coupling factor. Only used when <xref href="TwinSharp.CNC.AxisCouplingEntry.Mode" data-throw-if-not-resolved="false"></xref> is <xref href="TwinSharp.CNC.AxisCouplingMode.Fract" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public short FractNumerator { get; init; }
+    parameters: []
+    return:
+      type: System.Int16
+    content.vb: Public Property FractNumerator As Short
+  overload: TwinSharp.CNC.AxisCouplingEntry.FractNumerator*
+- uid: TwinSharp.CNC.AxisCouplingEntry.FractDenominator
+  commentId: P:TwinSharp.CNC.AxisCouplingEntry.FractDenominator
+  id: FractDenominator
+  parent: TwinSharp.CNC.AxisCouplingEntry
+  langs:
+  - csharp
+  - vb
+  name: FractDenominator
+  nameWithType: AxisCouplingEntry.FractDenominator
+  fullName: TwinSharp.CNC.AxisCouplingEntry.FractDenominator
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FractDenominator
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 187
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Denominator of the coupling factor. Must not be 0. Only used when <xref href="TwinSharp.CNC.AxisCouplingEntry.Mode" data-throw-if-not-resolved="false"></xref> is <xref href="TwinSharp.CNC.AxisCouplingMode.Fract" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public short FractDenominator { get; init; }
+    parameters: []
+    return:
+      type: System.Int16
+    content.vb: Public Property FractDenominator As Short
+  overload: TwinSharp.CNC.AxisCouplingEntry.FractDenominator*
+references:
+- uid: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  commentId: M:TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___
+  name: SetCouplings(AxisCouplingEntry[])
+  nameWithType: AxisCoupling.SetCouplings(AxisCouplingEntry[])
+  fullName: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  nameWithType.vb: AxisCoupling.SetCouplings(AxisCouplingEntry())
+  fullName.vb: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry())
+  name.vb: SetCouplings(AxisCouplingEntry())
+  spec.csharp:
+  - uid: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+    name: SetCouplings
+    href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___
+  - name: (
+  - uid: TwinSharp.CNC.AxisCouplingEntry
+    name: AxisCouplingEntry
+    href: TwinSharp.CNC.AxisCouplingEntry.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+    name: SetCouplings
+    href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___
+  - name: (
+  - uid: TwinSharp.CNC.AxisCouplingEntry
+    name: AxisCouplingEntry
+    href: TwinSharp.CNC.AxisCouplingEntry.html
+  - name: (
+  - name: )
+  - name: )
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber*
+  commentId: Overload:TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber
+  href: TwinSharp.CNC.AxisCouplingEntry.html#TwinSharp_CNC_AxisCouplingEntry_SourceAxisNumber
+  name: SourceAxisNumber
+  nameWithType: AxisCouplingEntry.SourceAxisNumber
+  fullName: TwinSharp.CNC.AxisCouplingEntry.SourceAxisNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.CNC.AxisCouplingEntry.Mode*
+  commentId: Overload:TwinSharp.CNC.AxisCouplingEntry.Mode
+  href: TwinSharp.CNC.AxisCouplingEntry.html#TwinSharp_CNC_AxisCouplingEntry_Mode
+  name: Mode
+  nameWithType: AxisCouplingEntry.Mode
+  fullName: TwinSharp.CNC.AxisCouplingEntry.Mode
+- uid: TwinSharp.CNC.AxisCouplingMode
+  commentId: T:TwinSharp.CNC.AxisCouplingMode
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisCouplingMode.html
+  name: AxisCouplingMode
+  nameWithType: AxisCouplingMode
+  fullName: TwinSharp.CNC.AxisCouplingMode
+- uid: TwinSharp.CNC.AxisCouplingEntry.Mode
+  commentId: P:TwinSharp.CNC.AxisCouplingEntry.Mode
+  href: TwinSharp.CNC.AxisCouplingEntry.html#TwinSharp_CNC_AxisCouplingEntry_Mode
+  name: Mode
+  nameWithType: AxisCouplingEntry.Mode
+  fullName: TwinSharp.CNC.AxisCouplingEntry.Mode
+- uid: TwinSharp.CNC.AxisCouplingMode.Fract
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Fract
+  href: TwinSharp.CNC.AxisCouplingMode.html#TwinSharp_CNC_AxisCouplingMode_Fract
+  name: Fract
+  nameWithType: AxisCouplingMode.Fract
+  fullName: TwinSharp.CNC.AxisCouplingMode.Fract
+- uid: TwinSharp.CNC.AxisCouplingEntry.FractNumerator*
+  commentId: Overload:TwinSharp.CNC.AxisCouplingEntry.FractNumerator
+  href: TwinSharp.CNC.AxisCouplingEntry.html#TwinSharp_CNC_AxisCouplingEntry_FractNumerator
+  name: FractNumerator
+  nameWithType: AxisCouplingEntry.FractNumerator
+  fullName: TwinSharp.CNC.AxisCouplingEntry.FractNumerator
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: TwinSharp.CNC.AxisCouplingEntry.FractDenominator*
+  commentId: Overload:TwinSharp.CNC.AxisCouplingEntry.FractDenominator
+  href: TwinSharp.CNC.AxisCouplingEntry.html#TwinSharp_CNC_AxisCouplingEntry_FractDenominator
+  name: FractDenominator
+  nameWithType: AxisCouplingEntry.FractDenominator
+  fullName: TwinSharp.CNC.AxisCouplingEntry.FractDenominator

@@ -133,7 +133,15 @@
         PROCESS_HOLD = 5,
 
         /// <summary> An error occurred while the NC program is executed, or error state for other modes. </summary>
-        PROCESS_ERROR = 6       
+        PROCESS_ERROR = 6,
+
+        /// <summary>
+        /// Explicit CNC reset within the current operation mode (no mode change).
+        /// Commanding this state triggers a reset and the CNC returns to PROCESS_SELECTED
+        /// in the same mode. Available from CNC build V2.10.1033.01 / V2.10.1507.02 / V2.10.1800.04.
+        /// Ref: TF5200 HLI Interface specification, chapter 8.
+        /// </summary>
+        RESETTING = 15
     }
 
 
@@ -179,5 +187,67 @@
 
         ///<summary> T-Function (tool) </summary>
         HLI_INTF_TOOL = 4,
+    }
+
+    /// <summary>
+    /// Flags indicating which condition(s) are currently stopping the CNC path interpolator.
+    /// Corresponds to the <c>stop_conditions_r</c> field of <c>STATE_BAHN</c>.
+    /// </summary>
+    [Flags]
+    public enum StopConditionFlags : uint
+    {
+        /// <summary>No stop condition active.</summary>
+        None = 0,
+
+        /// <summary>Feed hold active.</summary>
+        Feedhold = 0x00000001,
+
+        /// <summary>No axis feed enable.</summary>
+        NoAxisFeedEnable = 0x00000002,
+
+        /// <summary>Single-block mode active.</summary>
+        SingleBlock = 0x00000004,
+
+        /// <summary>M00 or M01 stop.</summary>
+        M00OrM01 = 0x00000010,
+
+        /// <summary>Waiting for PLC acknowledge.</summary>
+        PlcAcknowledge = 0x00000020,
+
+        /// <summary>Feed override is zero.</summary>
+        OverrideZero = 0x00000040,
+
+        /// <summary>Dwell time active.</summary>
+        DwellTime = 0x00000200,
+
+        /// <summary>Channel synchronisation active.</summary>
+        ChannelSync = 0x00000800,
+
+        /// <summary>Interpolator input buffer empty.</summary>
+        IpoInputEmpty = 0x00001000,
+
+        /// <summary>Read-in disabled.</summary>
+        ReadInDisabled = 0x00002000,
+
+        /// <summary>Waiting for axes to reach position.</summary>
+        WaitForAxes = 0x00008000,
+
+        /// <summary>Channel error.</summary>
+        ChannelError = 0x00010000,
+
+        /// <summary>Waiting for technology function acknowledge.</summary>
+        WaitTechnoAcknowledge = 0x00020000,
+
+        /// <summary>Waiting for continue after collision.</summary>
+        WaitContinueAfterCollision = 0x00040000,
+
+        /// <summary>Slope supply problem.</summary>
+        SlopeSupplyProblem = 0x00080000,
+
+        /// <summary>Backward interpolation active.</summary>
+        BackInterpolation = 0x00100000,
+
+        /// <summary>Stop reached because a stop mark inserted via the insert_cmd control unit was hit.</summary>
+        InsertStopAtDist = 0x08000000,
     }
 }

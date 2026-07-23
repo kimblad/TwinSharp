@@ -1,0 +1,2755 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.StateBahn
+  commentId: T:TwinSharp.CNC.StateBahn
+  id: StateBahn
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.StateBahn.ActiveDWord
+  - TwinSharp.CNC.StateBahn.ActiveFeed
+  - TwinSharp.CNC.StateBahn.ActiveFileOffset
+  - TwinSharp.CNC.StateBahn.ActiveFileOffsetNextNcbl
+  - TwinSharp.CNC.StateBahn.ActivePrgTraceFileOffset
+  - TwinSharp.CNC.StateBahn.AddProgInfo
+  - TwinSharp.CNC.StateBahn.ApproachActive
+  - TwinSharp.CNC.StateBahn.AreaMonViolationDetected
+  - TwinSharp.CNC.StateBahn.AxesInPosition
+  - TwinSharp.CNC.StateBahn.BackwardBufferEndReached
+  - TwinSharp.CNC.StateBahn.BlockCount
+  - TwinSharp.CNC.StateBahn.BlockDynamic
+  - TwinSharp.CNC.StateBahn.BlockInserted
+  - TwinSharp.CNC.StateBahn.BlockNumber
+  - TwinSharp.CNC.StateBahn.BlockSearchActive
+  - TwinSharp.CNC.StateBahn.BlockSearchPathDeviation
+  - TwinSharp.CNC.StateBahn.BlockSearchState
+  - TwinSharp.CNC.StateBahn.CallingBlockNumber
+  - TwinSharp.CNC.StateBahn.CommandFeed
+  - TwinSharp.CNC.StateBahn.CommandFeedActive
+  - TwinSharp.CNC.StateBahn.ConveyorData
+  - TwinSharp.CNC.StateBahn.Coord
+  - TwinSharp.CNC.StateBahn.CoveredDistance
+  - TwinSharp.CNC.StateBahn.DeleteDistanceToGoActive
+  - TwinSharp.CNC.StateBahn.DistanceFromProgramStart
+  - TwinSharp.CNC.StateBahn.DwellTimeActive
+  - TwinSharp.CNC.StateBahn.EdgeFunction
+  - TwinSharp.CNC.StateBahn.EdmActive
+  - TwinSharp.CNC.StateBahn.EsaDataValid
+  - TwinSharp.CNC.StateBahn.EsaVb
+  - TwinSharp.CNC.StateBahn.EscapeEnabled
+  - TwinSharp.CNC.StateBahn.EscapePathLength
+  - TwinSharp.CNC.StateBahn.EscapeStrategy
+  - TwinSharp.CNC.StateBahn.EscapeStrategyWaitChange
+  - TwinSharp.CNC.StateBahn.EscapeTriggerIsSuspended
+  - TwinSharp.CNC.StateBahn.FileName
+  - TwinSharp.CNC.StateBahn.G200Active
+  - TwinSharp.CNC.StateBahn.G201Active
+  - TwinSharp.CNC.StateBahn.InSingularityAvoidance
+  - TwinSharp.CNC.StateBahn.Inclination
+  - TwinSharp.CNC.StateBahn.InsideRtLoop
+  - TwinSharp.CNC.StateBahn.InterpId
+  - TwinSharp.CNC.StateBahn.InterpolationActive
+  - TwinSharp.CNC.StateBahn.JumpActive
+  - TwinSharp.CNC.StateBahn.Lookahead
+  - TwinSharp.CNC.StateBahn.MeasureActive
+  - TwinSharp.CNC.StateBahn.OrbitActive
+  - TwinSharp.CNC.StateBahn.OrbitRadiusZero
+  - TwinSharp.CNC.StateBahn.OrbitWaitExtendNcbl
+  - TwinSharp.CNC.StateBahn.ProgramEnd
+  - TwinSharp.CNC.StateBahn.RapidMode
+  - TwinSharp.CNC.StateBahn.RtLoopCount
+  - TwinSharp.CNC.StateBahn.SecantAngle
+  - TwinSharp.CNC.StateBahn.SecantAngleValid
+  - TwinSharp.CNC.StateBahn.SpeedLimitDetected
+  - TwinSharp.CNC.StateBahn.StStatus
+  - TwinSharp.CNC.StateBahn.StTurn
+  - TwinSharp.CNC.StateBahn.StopConditions
+  - TwinSharp.CNC.StateBahn.StopReversibleUsrVal
+  - TwinSharp.CNC.StateBahn.SynchState
+  - TwinSharp.CNC.StateBahn.TimeSinceBlockChainStart
+  - TwinSharp.CNC.StateBahn.TimeToDistance
+  - TwinSharp.CNC.StateBahn.TimeToNextFeedBlock
+  - TwinSharp.CNC.StateBahn.ToolPath
+  - TwinSharp.CNC.StateBahn.Trafo
+  - TwinSharp.CNC.StateBahn.VirtToolLength
+  - TwinSharp.CNC.StateBahn.WaitAxesInPosition
+  - TwinSharp.CNC.StateBahn.WaitContinue
+  - TwinSharp.CNC.StateBahn.WaitContinueAfterCollision
+  - TwinSharp.CNC.StateBahn.WaitErrorRemoval
+  - TwinSharp.CNC.StateBahn.WaitExtCommandSpeed
+  - TwinSharp.CNC.StateBahn.WaitTechnoAcknowledge
+  - TwinSharp.CNC.StateBahn.XyzComp
+  - TwinSharp.CNC.StateBahn.XyzCompValid
+  - TwinSharp.CNC.StateBahn.real64_free
+  langs:
+  - csharp
+  - vb
+  name: StateBahn
+  nameWithType: StateBahn
+  fullName: TwinSharp.CNC.StateBahn
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StateBahn
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1232
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Real-time status of the CNC path interpolator, mirroring the <code>STATE_BAHN</code> PLC struct.
+
+    Accessed via <code>HLI_Global_Variables.gpCh[n]^.bahn_state</code>.
+
+    Read in a single ADS call via <xref href="TwinSharp.CNC.RealTimeStatus.State" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public struct StateBahn
+    content.vb: Public Structure StateBahn
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.StateBahn.CoveredDistance
+  commentId: F:TwinSharp.CNC.StateBahn.CoveredDistance
+  id: CoveredDistance
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: CoveredDistance
+  nameWithType: StateBahn.CoveredDistance
+  fullName: TwinSharp.CNC.StateBahn.CoveredDistance
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CoveredDistance
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1236
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Path covered in the current block. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int CoveredDistance
+    return:
+      type: System.Int32
+    content.vb: Public CoveredDistance As Integer
+- uid: TwinSharp.CNC.StateBahn.CommandFeed
+  commentId: F:TwinSharp.CNC.StateBahn.CommandFeed
+  id: CommandFeed
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: CommandFeed
+  nameWithType: StateBahn.CommandFeed
+  fullName: TwinSharp.CNC.StateBahn.CommandFeed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CommandFeed
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1239
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Programmed feed rate (F word). Unit: 1 µm/s.'
+  example: []
+  syntax:
+    content: public int CommandFeed
+    return:
+      type: System.Int32
+    content.vb: Public CommandFeed As Integer
+- uid: TwinSharp.CNC.StateBahn.CommandFeedActive
+  commentId: F:TwinSharp.CNC.StateBahn.CommandFeedActive
+  id: CommandFeedActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: CommandFeedActive
+  nameWithType: StateBahn.CommandFeedActive
+  fullName: TwinSharp.CNC.StateBahn.CommandFeedActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CommandFeedActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1242
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Active command feed weighted by real-time influences. Unit: 1 µm/s.'
+  example: []
+  syntax:
+    content: public int CommandFeedActive
+    return:
+      type: System.Int32
+    content.vb: Public CommandFeedActive As Integer
+- uid: TwinSharp.CNC.StateBahn.ActiveFeed
+  commentId: F:TwinSharp.CNC.StateBahn.ActiveFeed
+  id: ActiveFeed
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ActiveFeed
+  nameWithType: StateBahn.ActiveFeed
+  fullName: TwinSharp.CNC.StateBahn.ActiveFeed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActiveFeed
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1245
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Actual interpolator feed rate. Unit: 1 µm/s.'
+  example: []
+  syntax:
+    content: public int ActiveFeed
+    return:
+      type: System.Int32
+    content.vb: Public ActiveFeed As Integer
+- uid: TwinSharp.CNC.StateBahn.SynchState
+  commentId: F:TwinSharp.CNC.StateBahn.SynchState
+  id: SynchState
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: SynchState
+  nameWithType: StateBahn.SynchState
+  fullName: TwinSharp.CNC.StateBahn.SynchState
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SynchState
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1248
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Synchronisation state of the channel.
+  example: []
+  syntax:
+    content: public uint SynchState
+    return:
+      type: System.UInt32
+    content.vb: Public SynchState As UInteger
+- uid: TwinSharp.CNC.StateBahn.ProgramEnd
+  commentId: F:TwinSharp.CNC.StateBahn.ProgramEnd
+  id: ProgramEnd
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ProgramEnd
+  nameWithType: StateBahn.ProgramEnd
+  fullName: TwinSharp.CNC.StateBahn.ProgramEnd
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProgramEnd
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1252
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the end of the NC program has been reached.
+  example: []
+  syntax:
+    content: public bool ProgramEnd
+    return:
+      type: System.Boolean
+    content.vb: Public ProgramEnd As Boolean
+- uid: TwinSharp.CNC.StateBahn.WaitErrorRemoval
+  commentId: F:TwinSharp.CNC.StateBahn.WaitErrorRemoval
+  id: WaitErrorRemoval
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: WaitErrorRemoval
+  nameWithType: StateBahn.WaitErrorRemoval
+  fullName: TwinSharp.CNC.StateBahn.WaitErrorRemoval
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitErrorRemoval
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1256
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the CNC is waiting for the operator to clear an error.
+  example: []
+  syntax:
+    content: public bool WaitErrorRemoval
+    return:
+      type: System.Boolean
+    content.vb: Public WaitErrorRemoval As Boolean
+- uid: TwinSharp.CNC.StateBahn.InterpolationActive
+  commentId: F:TwinSharp.CNC.StateBahn.InterpolationActive
+  id: InterpolationActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: InterpolationActive
+  nameWithType: StateBahn.InterpolationActive
+  fullName: TwinSharp.CNC.StateBahn.InterpolationActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpolationActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1260
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE while the path interpolator is actively generating motion commands.
+  example: []
+  syntax:
+    content: public bool InterpolationActive
+    return:
+      type: System.Boolean
+    content.vb: Public InterpolationActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.AxesInPosition
+  commentId: F:TwinSharp.CNC.StateBahn.AxesInPosition
+  id: AxesInPosition
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: AxesInPosition
+  nameWithType: StateBahn.AxesInPosition
+  fullName: TwinSharp.CNC.StateBahn.AxesInPosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxesInPosition
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1264
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when all participating axes have reached their target positions.
+  example: []
+  syntax:
+    content: public bool AxesInPosition
+    return:
+      type: System.Boolean
+    content.vb: Public AxesInPosition As Boolean
+- uid: TwinSharp.CNC.StateBahn.WaitTechnoAcknowledge
+  commentId: F:TwinSharp.CNC.StateBahn.WaitTechnoAcknowledge
+  id: WaitTechnoAcknowledge
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: WaitTechnoAcknowledge
+  nameWithType: StateBahn.WaitTechnoAcknowledge
+  fullName: TwinSharp.CNC.StateBahn.WaitTechnoAcknowledge
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitTechnoAcknowledge
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1268
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the CNC is waiting for a technology function (M/H/S/T) to be acknowledged.
+  example: []
+  syntax:
+    content: public bool WaitTechnoAcknowledge
+    return:
+      type: System.Boolean
+    content.vb: Public WaitTechnoAcknowledge As Boolean
+- uid: TwinSharp.CNC.StateBahn.WaitContinue
+  commentId: F:TwinSharp.CNC.StateBahn.WaitContinue
+  id: WaitContinue
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: WaitContinue
+  nameWithType: StateBahn.WaitContinue
+  fullName: TwinSharp.CNC.StateBahn.WaitContinue
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitContinue
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1272
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the CNC is waiting for a continue signal (e.g. after M00/M01).
+  example: []
+  syntax:
+    content: public bool WaitContinue
+    return:
+      type: System.Boolean
+    content.vb: Public WaitContinue As Boolean
+- uid: TwinSharp.CNC.StateBahn.DwellTimeActive
+  commentId: F:TwinSharp.CNC.StateBahn.DwellTimeActive
+  id: DwellTimeActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: DwellTimeActive
+  nameWithType: StateBahn.DwellTimeActive
+  fullName: TwinSharp.CNC.StateBahn.DwellTimeActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DwellTimeActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1276
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE during a programmed dwell time (G04).
+  example: []
+  syntax:
+    content: public bool DwellTimeActive
+    return:
+      type: System.Boolean
+    content.vb: Public DwellTimeActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.WaitAxesInPosition
+  commentId: F:TwinSharp.CNC.StateBahn.WaitAxesInPosition
+  id: WaitAxesInPosition
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: WaitAxesInPosition
+  nameWithType: StateBahn.WaitAxesInPosition
+  fullName: TwinSharp.CNC.StateBahn.WaitAxesInPosition
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitAxesInPosition
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1280
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the CNC is paused waiting for axes to reach their in-position window.
+  example: []
+  syntax:
+    content: public bool WaitAxesInPosition
+    return:
+      type: System.Boolean
+    content.vb: Public WaitAxesInPosition As Boolean
+- uid: TwinSharp.CNC.StateBahn.BlockSearchActive
+  commentId: F:TwinSharp.CNC.StateBahn.BlockSearchActive
+  id: BlockSearchActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BlockSearchActive
+  nameWithType: StateBahn.BlockSearchActive
+  fullName: TwinSharp.CNC.StateBahn.BlockSearchActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockSearchActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1284
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE while a block search is running.
+  example: []
+  syntax:
+    content: public bool BlockSearchActive
+    return:
+      type: System.Boolean
+    content.vb: Public BlockSearchActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.SpeedLimitDetected
+  commentId: F:TwinSharp.CNC.StateBahn.SpeedLimitDetected
+  id: SpeedLimitDetected
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: SpeedLimitDetected
+  nameWithType: StateBahn.SpeedLimitDetected
+  fullName: TwinSharp.CNC.StateBahn.SpeedLimitDetected
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SpeedLimitDetected
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1288
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when a speed limit has been detected on the current path segment.
+  example: []
+  syntax:
+    content: public bool SpeedLimitDetected
+    return:
+      type: System.Boolean
+    content.vb: Public SpeedLimitDetected As Boolean
+- uid: TwinSharp.CNC.StateBahn.RapidMode
+  commentId: F:TwinSharp.CNC.StateBahn.RapidMode
+  id: RapidMode
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: RapidMode
+  nameWithType: StateBahn.RapidMode
+  fullName: TwinSharp.CNC.StateBahn.RapidMode
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RapidMode
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1292
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when rapid mode (G00) is active.
+  example: []
+  syntax:
+    content: public bool RapidMode
+    return:
+      type: System.Boolean
+    content.vb: Public RapidMode As Boolean
+- uid: TwinSharp.CNC.StateBahn.WaitContinueAfterCollision
+  commentId: F:TwinSharp.CNC.StateBahn.WaitContinueAfterCollision
+  id: WaitContinueAfterCollision
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: WaitContinueAfterCollision
+  nameWithType: StateBahn.WaitContinueAfterCollision
+  fullName: TwinSharp.CNC.StateBahn.WaitContinueAfterCollision
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitContinueAfterCollision
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1296
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the CNC is waiting for continue after a collision detection event.
+  example: []
+  syntax:
+    content: public bool WaitContinueAfterCollision
+    return:
+      type: System.Boolean
+    content.vb: Public WaitContinueAfterCollision As Boolean
+- uid: TwinSharp.CNC.StateBahn.ToolPath
+  commentId: F:TwinSharp.CNC.StateBahn.ToolPath
+  id: ToolPath
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ToolPath
+  nameWithType: StateBahn.ToolPath
+  fullName: TwinSharp.CNC.StateBahn.ToolPath
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ToolPath
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1299
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Tool path orientation and tangent vectors (tool_path_r).
+  example: []
+  syntax:
+    content: public HLI_TOOL_PATH_DISP_DATA ToolPath
+    return:
+      type: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+    content.vb: Public ToolPath As HLI_TOOL_PATH_DISP_DATA
+- uid: TwinSharp.CNC.StateBahn.Coord
+  commentId: F:TwinSharp.CNC.StateBahn.Coord
+  id: Coord
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: Coord
+  nameWithType: StateBahn.Coord
+  fullName: TwinSharp.CNC.StateBahn.Coord
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Coord
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1302
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Per-axis coordinate display data. 32 elements [0..HLI_CH_AX_MAXIDX] (coord_r).
+  example: []
+  syntax:
+    content: public HLI_BAHN_COORD_DISP_DATA[] Coord
+    return:
+      type: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA[]
+    content.vb: Public Coord As HLI_BAHN_COORD_DISP_DATA()
+- uid: TwinSharp.CNC.StateBahn.AddProgInfo
+  commentId: F:TwinSharp.CNC.StateBahn.AddProgInfo
+  id: AddProgInfo
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: AddProgInfo
+  nameWithType: StateBahn.AddProgInfo
+  fullName: TwinSharp.CNC.StateBahn.AddProgInfo
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AddProgInfo
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1304
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Additive program info (job stack) for this channel (add_prog_info_r).
+  example: []
+  syntax:
+    content: public HLI_S_ADD_PROG_INFO AddProgInfo
+    return:
+      type: TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+    content.vb: Public AddProgInfo As HLI_S_ADD_PROG_INFO
+- uid: TwinSharp.CNC.StateBahn.StopConditions
+  commentId: F:TwinSharp.CNC.StateBahn.StopConditions
+  id: StopConditions
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: StopConditions
+  nameWithType: StateBahn.StopConditions
+  fullName: TwinSharp.CNC.StateBahn.StopConditions
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StopConditions
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1306
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Active stop conditions bitmask (stop_conditions_r). See <xref href="TwinSharp.CNC.StopConditionFlags" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public StopConditionFlags StopConditions
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+    content.vb: Public StopConditions As StopConditionFlags
+- uid: TwinSharp.CNC.StateBahn.BlockNumber
+  commentId: F:TwinSharp.CNC.StateBahn.BlockNumber
+  id: BlockNumber
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BlockNumber
+  nameWithType: StateBahn.BlockNumber
+  fullName: TwinSharp.CNC.StateBahn.BlockNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockNumber
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1309
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Current NC block number (block_nr_r).
+  example: []
+  syntax:
+    content: public int BlockNumber
+    return:
+      type: System.Int32
+    content.vb: Public BlockNumber As Integer
+- uid: TwinSharp.CNC.StateBahn.FileName
+  commentId: F:TwinSharp.CNC.StateBahn.FileName
+  id: FileName
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: FileName
+  nameWithType: StateBahn.FileName
+  fullName: TwinSharp.CNC.StateBahn.FileName
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FileName
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1312
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Active file name (file_name_r).
+  example: []
+  syntax:
+    content: public HLI_FILE_NAME FileName
+    return:
+      type: TwinSharp.CNC.HLI_FILE_NAME
+    content.vb: Public FileName As HLI_FILE_NAME
+- uid: TwinSharp.CNC.StateBahn.ActiveFileOffset
+  commentId: F:TwinSharp.CNC.StateBahn.ActiveFileOffset
+  id: ActiveFileOffset
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ActiveFileOffset
+  nameWithType: StateBahn.ActiveFileOffset
+  fullName: TwinSharp.CNC.StateBahn.ActiveFileOffset
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActiveFileOffset
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1315
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: File offset of the active NC block in bytes (active_fileoffset_r).
+  example: []
+  syntax:
+    content: public int ActiveFileOffset
+    return:
+      type: System.Int32
+    content.vb: Public ActiveFileOffset As Integer
+- uid: TwinSharp.CNC.StateBahn.EdgeFunction
+  commentId: F:TwinSharp.CNC.StateBahn.EdgeFunction
+  id: EdgeFunction
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EdgeFunction
+  nameWithType: StateBahn.EdgeFunction
+  fullName: TwinSharp.CNC.StateBahn.EdgeFunction
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EdgeFunction
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1317
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Edge function signals and bend angle (edge_function_r).
+  example: []
+  syntax:
+    content: public HLI_EDGE_FUNCTION EdgeFunction
+    return:
+      type: TwinSharp.CNC.HLI_EDGE_FUNCTION
+    content.vb: Public EdgeFunction As HLI_EDGE_FUNCTION
+- uid: TwinSharp.CNC.StateBahn.BlockDynamic
+  commentId: F:TwinSharp.CNC.StateBahn.BlockDynamic
+  id: BlockDynamic
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BlockDynamic
+  nameWithType: StateBahn.BlockDynamic
+  fullName: TwinSharp.CNC.StateBahn.BlockDynamic
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockDynamic
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1319
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Dynamic data of the active NC block (block_dynamic_r).
+  example: []
+  syntax:
+    content: public HLI_BLOCK_DYNAMIC BlockDynamic
+    return:
+      type: TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+    content.vb: Public BlockDynamic As HLI_BLOCK_DYNAMIC
+- uid: TwinSharp.CNC.StateBahn.Lookahead
+  commentId: F:TwinSharp.CNC.StateBahn.Lookahead
+  id: Lookahead
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: Lookahead
+  nameWithType: StateBahn.Lookahead
+  fullName: TwinSharp.CNC.StateBahn.Lookahead
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Lookahead
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1321
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Position look-ahead data (lookahead_r).
+  example: []
+  syntax:
+    content: public HLI_LOOKAHEAD_DATA Lookahead
+    return:
+      type: TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+    content.vb: Public Lookahead As HLI_LOOKAHEAD_DATA
+- uid: TwinSharp.CNC.StateBahn.CallingBlockNumber
+  commentId: F:TwinSharp.CNC.StateBahn.CallingBlockNumber
+  id: CallingBlockNumber
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: CallingBlockNumber
+  nameWithType: StateBahn.CallingBlockNumber
+  fullName: TwinSharp.CNC.StateBahn.CallingBlockNumber
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: CallingBlockNumber
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1324
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Block number of the calling NC block (calling_block_nr_r).
+  example: []
+  syntax:
+    content: public int CallingBlockNumber
+    return:
+      type: System.Int32
+    content.vb: Public CallingBlockNumber As Integer
+- uid: TwinSharp.CNC.StateBahn.BlockCount
+  commentId: F:TwinSharp.CNC.StateBahn.BlockCount
+  id: BlockCount
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BlockCount
+  nameWithType: StateBahn.BlockCount
+  fullName: TwinSharp.CNC.StateBahn.BlockCount
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockCount
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1327
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Number of NC blocks decoded since program start (block_count_r).
+  example: []
+  syntax:
+    content: public uint BlockCount
+    return:
+      type: System.UInt32
+    content.vb: Public BlockCount As UInteger
+- uid: TwinSharp.CNC.StateBahn.BlockInserted
+  commentId: F:TwinSharp.CNC.StateBahn.BlockInserted
+  id: BlockInserted
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BlockInserted
+  nameWithType: StateBahn.BlockInserted
+  fullName: TwinSharp.CNC.StateBahn.BlockInserted
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockInserted
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1331
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when a block has been inserted by the PLC (block_inserted_r).
+  example: []
+  syntax:
+    content: public bool BlockInserted
+    return:
+      type: System.Boolean
+    content.vb: Public BlockInserted As Boolean
+- uid: TwinSharp.CNC.StateBahn.G200Active
+  commentId: F:TwinSharp.CNC.StateBahn.G200Active
+  id: G200Active
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: G200Active
+  nameWithType: StateBahn.G200Active
+  fullName: TwinSharp.CNC.StateBahn.G200Active
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: G200Active
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1335
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when G200 is active (g200_active_r).
+  example: []
+  syntax:
+    content: public bool G200Active
+    return:
+      type: System.Boolean
+    content.vb: Public G200Active As Boolean
+- uid: TwinSharp.CNC.StateBahn.G201Active
+  commentId: F:TwinSharp.CNC.StateBahn.G201Active
+  id: G201Active
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: G201Active
+  nameWithType: StateBahn.G201Active
+  fullName: TwinSharp.CNC.StateBahn.G201Active
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: G201Active
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1339
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when G201 is active (g201_active_r).
+  example: []
+  syntax:
+    content: public bool G201Active
+    return:
+      type: System.Boolean
+    content.vb: Public G201Active As Boolean
+- uid: TwinSharp.CNC.StateBahn.MeasureActive
+  commentId: F:TwinSharp.CNC.StateBahn.MeasureActive
+  id: MeasureActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: MeasureActive
+  nameWithType: StateBahn.MeasureActive
+  fullName: TwinSharp.CNC.StateBahn.MeasureActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: MeasureActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1343
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when a measurement function is active (measure_active_r).
+  example: []
+  syntax:
+    content: public bool MeasureActive
+    return:
+      type: System.Boolean
+    content.vb: Public MeasureActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.EscapeEnabled
+  commentId: F:TwinSharp.CNC.StateBahn.EscapeEnabled
+  id: EscapeEnabled
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EscapeEnabled
+  nameWithType: StateBahn.EscapeEnabled
+  fullName: TwinSharp.CNC.StateBahn.EscapeEnabled
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EscapeEnabled
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1347
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the escape function is enabled (escape_enabled_r).
+  example: []
+  syntax:
+    content: public bool EscapeEnabled
+    return:
+      type: System.Boolean
+    content.vb: Public EscapeEnabled As Boolean
+- uid: TwinSharp.CNC.StateBahn.JumpActive
+  commentId: F:TwinSharp.CNC.StateBahn.JumpActive
+  id: JumpActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: JumpActive
+  nameWithType: StateBahn.JumpActive
+  fullName: TwinSharp.CNC.StateBahn.JumpActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: JumpActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1351
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when a jump is active (jump_active_r).
+  example: []
+  syntax:
+    content: public bool JumpActive
+    return:
+      type: System.Boolean
+    content.vb: Public JumpActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.ApproachActive
+  commentId: F:TwinSharp.CNC.StateBahn.ApproachActive
+  id: ApproachActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ApproachActive
+  nameWithType: StateBahn.ApproachActive
+  fullName: TwinSharp.CNC.StateBahn.ApproachActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ApproachActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1355
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when an approach move is active (approach_active_r).
+  example: []
+  syntax:
+    content: public bool ApproachActive
+    return:
+      type: System.Boolean
+    content.vb: Public ApproachActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.WaitExtCommandSpeed
+  commentId: F:TwinSharp.CNC.StateBahn.WaitExtCommandSpeed
+  id: WaitExtCommandSpeed
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: WaitExtCommandSpeed
+  nameWithType: StateBahn.WaitExtCommandSpeed
+  fullName: TwinSharp.CNC.StateBahn.WaitExtCommandSpeed
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitExtCommandSpeed
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1359
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when waiting for external command speed (wait_ext_command_speed_r).
+  example: []
+  syntax:
+    content: public bool WaitExtCommandSpeed
+    return:
+      type: System.Boolean
+    content.vb: Public WaitExtCommandSpeed As Boolean
+- uid: TwinSharp.CNC.StateBahn.DistanceFromProgramStart
+  commentId: F:TwinSharp.CNC.StateBahn.DistanceFromProgramStart
+  id: DistanceFromProgramStart
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: DistanceFromProgramStart
+  nameWithType: StateBahn.DistanceFromProgramStart
+  fullName: TwinSharp.CNC.StateBahn.DistanceFromProgramStart
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DistanceFromProgramStart
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1362
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Distance from program start. Unit: 0.1 µm (dist_prog_start).'
+  example: []
+  syntax:
+    content: public double DistanceFromProgramStart
+    return:
+      type: System.Double
+    content.vb: Public DistanceFromProgramStart As Double
+- uid: TwinSharp.CNC.StateBahn.RtLoopCount
+  commentId: F:TwinSharp.CNC.StateBahn.RtLoopCount
+  id: RtLoopCount
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: RtLoopCount
+  nameWithType: StateBahn.RtLoopCount
+  fullName: TwinSharp.CNC.StateBahn.RtLoopCount
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RtLoopCount
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1365
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Real-time loop count (rt_loop_count_r).
+  example: []
+  syntax:
+    content: public int RtLoopCount
+    return:
+      type: System.Int32
+    content.vb: Public RtLoopCount As Integer
+- uid: TwinSharp.CNC.StateBahn.ActivePrgTraceFileOffset
+  commentId: F:TwinSharp.CNC.StateBahn.ActivePrgTraceFileOffset
+  id: ActivePrgTraceFileOffset
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ActivePrgTraceFileOffset
+  nameWithType: StateBahn.ActivePrgTraceFileOffset
+  fullName: TwinSharp.CNC.StateBahn.ActivePrgTraceFileOffset
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActivePrgTraceFileOffset
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1368
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: File offset of the active program trace position (active_prg_trace_fileoffset_r).
+  example: []
+  syntax:
+    content: public int ActivePrgTraceFileOffset
+    return:
+      type: System.Int32
+    content.vb: Public ActivePrgTraceFileOffset As Integer
+- uid: TwinSharp.CNC.StateBahn.Trafo
+  commentId: F:TwinSharp.CNC.StateBahn.Trafo
+  id: Trafo
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: Trafo
+  nameWithType: StateBahn.Trafo
+  fullName: TwinSharp.CNC.StateBahn.Trafo
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Trafo
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1371
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Kinematic transformation display data. 3 elements [0..HLI_KIN_TRAFO_STEPS_MAXIDX] (trafo_r).
+  example: []
+  syntax:
+    content: public HLI_BAHN_TRAFO_DISP_DATA[] Trafo
+    return:
+      type: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA[]
+    content.vb: Public Trafo As HLI_BAHN_TRAFO_DISP_DATA()
+- uid: TwinSharp.CNC.StateBahn.DeleteDistanceToGoActive
+  commentId: F:TwinSharp.CNC.StateBahn.DeleteDistanceToGoActive
+  id: DeleteDistanceToGoActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: DeleteDistanceToGoActive
+  nameWithType: StateBahn.DeleteDistanceToGoActive
+  fullName: TwinSharp.CNC.StateBahn.DeleteDistanceToGoActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DeleteDistanceToGoActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1375
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when delete-distance-to-go is active (delete_distance_to_go_active_r).
+  example: []
+  syntax:
+    content: public bool DeleteDistanceToGoActive
+    return:
+      type: System.Boolean
+    content.vb: Public DeleteDistanceToGoActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.EdmActive
+  commentId: F:TwinSharp.CNC.StateBahn.EdmActive
+  id: EdmActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EdmActive
+  nameWithType: StateBahn.EdmActive
+  fullName: TwinSharp.CNC.StateBahn.EdmActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EdmActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1379
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when EDM (Electrical Discharge Machining) mode is active (edm_active_r).
+  example: []
+  syntax:
+    content: public bool EdmActive
+    return:
+      type: System.Boolean
+    content.vb: Public EdmActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.BlockSearchState
+  commentId: F:TwinSharp.CNC.StateBahn.BlockSearchState
+  id: BlockSearchState
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BlockSearchState
+  nameWithType: StateBahn.BlockSearchState
+  fullName: TwinSharp.CNC.StateBahn.BlockSearchState
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockSearchState
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1382
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Block search state. See HLI_BS_* constants (block_search_state_r).
+  example: []
+  syntax:
+    content: public short BlockSearchState
+    return:
+      type: System.Int16
+    content.vb: Public BlockSearchState As Short
+- uid: TwinSharp.CNC.StateBahn.BlockSearchPathDeviation
+  commentId: F:TwinSharp.CNC.StateBahn.BlockSearchPathDeviation
+  id: BlockSearchPathDeviation
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BlockSearchPathDeviation
+  nameWithType: StateBahn.BlockSearchPathDeviation
+  fullName: TwinSharp.CNC.StateBahn.BlockSearchPathDeviation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BlockSearchPathDeviation
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1385
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Path deviation during block search. Unit: 0.1 µm (block_search_path_deviation_r).'
+  example: []
+  syntax:
+    content: public uint BlockSearchPathDeviation
+    return:
+      type: System.UInt32
+    content.vb: Public BlockSearchPathDeviation As UInteger
+- uid: TwinSharp.CNC.StateBahn.InterpId
+  commentId: F:TwinSharp.CNC.StateBahn.InterpId
+  id: InterpId
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: InterpId
+  nameWithType: StateBahn.InterpId
+  fullName: TwinSharp.CNC.StateBahn.InterpId
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InterpId
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1388
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Interpolator instance identifier (interp_id).
+  example: []
+  syntax:
+    content: public uint InterpId
+    return:
+      type: System.UInt32
+    content.vb: Public InterpId As UInteger
+- uid: TwinSharp.CNC.StateBahn.TimeToNextFeedBlock
+  commentId: F:TwinSharp.CNC.StateBahn.TimeToNextFeedBlock
+  id: TimeToNextFeedBlock
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: TimeToNextFeedBlock
+  nameWithType: StateBahn.TimeToNextFeedBlock
+  fullName: TwinSharp.CNC.StateBahn.TimeToNextFeedBlock
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimeToNextFeedBlock
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1391
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Time until the next feed block in the lookahead. Unit: µs (time_to_next_feed_block_r).'
+  example: []
+  syntax:
+    content: public uint TimeToNextFeedBlock
+    return:
+      type: System.UInt32
+    content.vb: Public TimeToNextFeedBlock As UInteger
+- uid: TwinSharp.CNC.StateBahn.StopReversibleUsrVal
+  commentId: F:TwinSharp.CNC.StateBahn.StopReversibleUsrVal
+  id: StopReversibleUsrVal
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: StopReversibleUsrVal
+  nameWithType: StateBahn.StopReversibleUsrVal
+  fullName: TwinSharp.CNC.StateBahn.StopReversibleUsrVal
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StopReversibleUsrVal
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1394
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: User-defined value for reversible stop (stop_reversible_usr_val_r).
+  example: []
+  syntax:
+    content: public uint StopReversibleUsrVal
+    return:
+      type: System.UInt32
+    content.vb: Public StopReversibleUsrVal As UInteger
+- uid: TwinSharp.CNC.StateBahn.TimeSinceBlockChainStart
+  commentId: F:TwinSharp.CNC.StateBahn.TimeSinceBlockChainStart
+  id: TimeSinceBlockChainStart
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: TimeSinceBlockChainStart
+  nameWithType: StateBahn.TimeSinceBlockChainStart
+  fullName: TwinSharp.CNC.StateBahn.TimeSinceBlockChainStart
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimeSinceBlockChainStart
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1397
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Time elapsed since the start of the current block chain. Unit: µs (time_since_block_chain_start_r).'
+  example: []
+  syntax:
+    content: public uint TimeSinceBlockChainStart
+    return:
+      type: System.UInt32
+    content.vb: Public TimeSinceBlockChainStart As UInteger
+- uid: TwinSharp.CNC.StateBahn.TimeToDistance
+  commentId: F:TwinSharp.CNC.StateBahn.TimeToDistance
+  id: TimeToDistance
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: TimeToDistance
+  nameWithType: StateBahn.TimeToDistance
+  fullName: TwinSharp.CNC.StateBahn.TimeToDistance
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimeToDistance
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1399
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Triple-buffered time-to-distance state (time_to_distance_r).
+  example: []
+  syntax:
+    content: public HLI_STATE_TTD_TRIPLE_BUF TimeToDistance
+    return:
+      type: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+    content.vb: Public TimeToDistance As HLI_STATE_TTD_TRIPLE_BUF
+- uid: TwinSharp.CNC.StateBahn.SecantAngle
+  commentId: F:TwinSharp.CNC.StateBahn.SecantAngle
+  id: SecantAngle
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: SecantAngle
+  nameWithType: StateBahn.SecantAngle
+  fullName: TwinSharp.CNC.StateBahn.SecantAngle
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SecantAngle
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1402
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Secant angle at the current path position (secant_angle). Unit: 0.001°.'
+  example: []
+  syntax:
+    content: public int SecantAngle
+    return:
+      type: System.Int32
+    content.vb: Public SecantAngle As Integer
+- uid: TwinSharp.CNC.StateBahn.SecantAngleValid
+  commentId: F:TwinSharp.CNC.StateBahn.SecantAngleValid
+  id: SecantAngleValid
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: SecantAngleValid
+  nameWithType: StateBahn.SecantAngleValid
+  fullName: TwinSharp.CNC.StateBahn.SecantAngleValid
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SecantAngleValid
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1406
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when SecantAngle contains a valid value (secant_angle_valid).
+  example: []
+  syntax:
+    content: public bool SecantAngleValid
+    return:
+      type: System.Boolean
+    content.vb: Public SecantAngleValid As Boolean
+- uid: TwinSharp.CNC.StateBahn.AreaMonViolationDetected
+  commentId: F:TwinSharp.CNC.StateBahn.AreaMonViolationDetected
+  id: AreaMonViolationDetected
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: AreaMonViolationDetected
+  nameWithType: StateBahn.AreaMonViolationDetected
+  fullName: TwinSharp.CNC.StateBahn.AreaMonViolationDetected
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AreaMonViolationDetected
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1410
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when an area monitoring violation has been detected (area_mon_violation_detected_r).
+  example: []
+  syntax:
+    content: public bool AreaMonViolationDetected
+    return:
+      type: System.Boolean
+    content.vb: Public AreaMonViolationDetected As Boolean
+- uid: TwinSharp.CNC.StateBahn.EscapeTriggerIsSuspended
+  commentId: F:TwinSharp.CNC.StateBahn.EscapeTriggerIsSuspended
+  id: EscapeTriggerIsSuspended
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EscapeTriggerIsSuspended
+  nameWithType: StateBahn.EscapeTriggerIsSuspended
+  fullName: TwinSharp.CNC.StateBahn.EscapeTriggerIsSuspended
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EscapeTriggerIsSuspended
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1414
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the escape trigger is suspended (escape_trigger_is_suspended_r).
+  example: []
+  syntax:
+    content: public bool EscapeTriggerIsSuspended
+    return:
+      type: System.Boolean
+    content.vb: Public EscapeTriggerIsSuspended As Boolean
+- uid: TwinSharp.CNC.StateBahn.InsideRtLoop
+  commentId: F:TwinSharp.CNC.StateBahn.InsideRtLoop
+  id: InsideRtLoop
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: InsideRtLoop
+  nameWithType: StateBahn.InsideRtLoop
+  fullName: TwinSharp.CNC.StateBahn.InsideRtLoop
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InsideRtLoop
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1418
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the interpolator is currently inside its real-time loop (inside_rt_loop_r).
+  example: []
+  syntax:
+    content: public bool InsideRtLoop
+    return:
+      type: System.Boolean
+    content.vb: Public InsideRtLoop As Boolean
+- uid: TwinSharp.CNC.StateBahn.ActiveFileOffsetNextNcbl
+  commentId: F:TwinSharp.CNC.StateBahn.ActiveFileOffsetNextNcbl
+  id: ActiveFileOffsetNextNcbl
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ActiveFileOffsetNextNcbl
+  nameWithType: StateBahn.ActiveFileOffsetNextNcbl
+  fullName: TwinSharp.CNC.StateBahn.ActiveFileOffsetNextNcbl
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActiveFileOffsetNextNcbl
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1421
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'File offset of the next NC block (active_fileoffset_next_ncbl_r). Unit: bytes.'
+  example: []
+  syntax:
+    content: public int ActiveFileOffsetNextNcbl
+    return:
+      type: System.Int32
+    content.vb: Public ActiveFileOffsetNextNcbl As Integer
+- uid: TwinSharp.CNC.StateBahn.ActiveDWord
+  commentId: F:TwinSharp.CNC.StateBahn.ActiveDWord
+  id: ActiveDWord
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ActiveDWord
+  nameWithType: StateBahn.ActiveDWord
+  fullName: TwinSharp.CNC.StateBahn.ActiveDWord
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActiveDWord
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1424
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Active D word (active_d_word_r).
+  example: []
+  syntax:
+    content: public int ActiveDWord
+    return:
+      type: System.Int32
+    content.vb: Public ActiveDWord As Integer
+- uid: TwinSharp.CNC.StateBahn.EscapePathLength
+  commentId: F:TwinSharp.CNC.StateBahn.EscapePathLength
+  id: EscapePathLength
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EscapePathLength
+  nameWithType: StateBahn.EscapePathLength
+  fullName: TwinSharp.CNC.StateBahn.EscapePathLength
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EscapePathLength
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1427
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Path length of the escape movement (escape_path_length). Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public double EscapePathLength
+    return:
+      type: System.Double
+    content.vb: Public EscapePathLength As Double
+- uid: TwinSharp.CNC.StateBahn.EsaVb
+  commentId: F:TwinSharp.CNC.StateBahn.EsaVb
+  id: EsaVb
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EsaVb
+  nameWithType: StateBahn.EsaVb
+  fullName: TwinSharp.CNC.StateBahn.EsaVb
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EsaVb
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1430
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'ESA (Escape Strategy) velocity values. 3 elements [0..HLI_ESA_POINTS_MAXIDX]. Unit: 1 µm/s (esa_vb).'
+  example: []
+  syntax:
+    content: public double[] EsaVb
+    return:
+      type: System.Double[]
+    content.vb: Public EsaVb As Double()
+- uid: TwinSharp.CNC.StateBahn.EsaDataValid
+  commentId: F:TwinSharp.CNC.StateBahn.EsaDataValid
+  id: EsaDataValid
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EsaDataValid
+  nameWithType: StateBahn.EsaDataValid
+  fullName: TwinSharp.CNC.StateBahn.EsaDataValid
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EsaDataValid
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1434
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Validity flags for EsaVb. 3 elements [0..HLI_ESA_POINTS_MAXIDX] (esa_data_valid).
+  example: []
+  syntax:
+    content: public byte[] EsaDataValid
+    return:
+      type: System.Byte[]
+    content.vb: Public EsaDataValid As Byte()
+- uid: TwinSharp.CNC.StateBahn.XyzCompValid
+  commentId: F:TwinSharp.CNC.StateBahn.XyzCompValid
+  id: XyzCompValid
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: XyzCompValid
+  nameWithType: StateBahn.XyzCompValid
+  fullName: TwinSharp.CNC.StateBahn.XyzCompValid
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: XyzCompValid
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1438
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when XyzComp values are valid (xyz_comp_valid_r).
+  example: []
+  syntax:
+    content: public bool XyzCompValid
+    return:
+      type: System.Boolean
+    content.vb: Public XyzCompValid As Boolean
+- uid: TwinSharp.CNC.StateBahn.BackwardBufferEndReached
+  commentId: F:TwinSharp.CNC.StateBahn.BackwardBufferEndReached
+  id: BackwardBufferEndReached
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: BackwardBufferEndReached
+  nameWithType: StateBahn.BackwardBufferEndReached
+  fullName: TwinSharp.CNC.StateBahn.BackwardBufferEndReached
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BackwardBufferEndReached
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1442
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the backward interpolation buffer end has been reached (backward_buffer_end_reached_r).
+  example: []
+  syntax:
+    content: public bool BackwardBufferEndReached
+    return:
+      type: System.Boolean
+    content.vb: Public BackwardBufferEndReached As Boolean
+- uid: TwinSharp.CNC.StateBahn.OrbitActive
+  commentId: F:TwinSharp.CNC.StateBahn.OrbitActive
+  id: OrbitActive
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: OrbitActive
+  nameWithType: StateBahn.OrbitActive
+  fullName: TwinSharp.CNC.StateBahn.OrbitActive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OrbitActive
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1446
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when orbit mode is active (orbit_active_r).
+  example: []
+  syntax:
+    content: public bool OrbitActive
+    return:
+      type: System.Boolean
+    content.vb: Public OrbitActive As Boolean
+- uid: TwinSharp.CNC.StateBahn.EscapeStrategy
+  commentId: F:TwinSharp.CNC.StateBahn.EscapeStrategy
+  id: EscapeStrategy
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EscapeStrategy
+  nameWithType: StateBahn.EscapeStrategy
+  fullName: TwinSharp.CNC.StateBahn.EscapeStrategy
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EscapeStrategy
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1449
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Active escape strategy (escape_strategy_r).
+  example: []
+  syntax:
+    content: public ushort EscapeStrategy
+    return:
+      type: System.UInt16
+    content.vb: Public EscapeStrategy As UShort
+- uid: TwinSharp.CNC.StateBahn.EscapeStrategyWaitChange
+  commentId: F:TwinSharp.CNC.StateBahn.EscapeStrategyWaitChange
+  id: EscapeStrategyWaitChange
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: EscapeStrategyWaitChange
+  nameWithType: StateBahn.EscapeStrategyWaitChange
+  fullName: TwinSharp.CNC.StateBahn.EscapeStrategyWaitChange
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EscapeStrategyWaitChange
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1453
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when waiting for an escape strategy change (escape_strategy_wait_change_r).
+  example: []
+  syntax:
+    content: public bool EscapeStrategyWaitChange
+    return:
+      type: System.Boolean
+    content.vb: Public EscapeStrategyWaitChange As Boolean
+- uid: TwinSharp.CNC.StateBahn.OrbitRadiusZero
+  commentId: F:TwinSharp.CNC.StateBahn.OrbitRadiusZero
+  id: OrbitRadiusZero
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: OrbitRadiusZero
+  nameWithType: StateBahn.OrbitRadiusZero
+  fullName: TwinSharp.CNC.StateBahn.OrbitRadiusZero
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OrbitRadiusZero
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1457
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when the orbit radius is zero (orbit_radius_zero_r).
+  example: []
+  syntax:
+    content: public bool OrbitRadiusZero
+    return:
+      type: System.Boolean
+    content.vb: Public OrbitRadiusZero As Boolean
+- uid: TwinSharp.CNC.StateBahn.OrbitWaitExtendNcbl
+  commentId: F:TwinSharp.CNC.StateBahn.OrbitWaitExtendNcbl
+  id: OrbitWaitExtendNcbl
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: OrbitWaitExtendNcbl
+  nameWithType: StateBahn.OrbitWaitExtendNcbl
+  fullName: TwinSharp.CNC.StateBahn.OrbitWaitExtendNcbl
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OrbitWaitExtendNcbl
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1461
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when waiting to extend the orbit NC block (orbit_wait_extend_ncbl_r).
+  example: []
+  syntax:
+    content: public bool OrbitWaitExtendNcbl
+    return:
+      type: System.Boolean
+    content.vb: Public OrbitWaitExtendNcbl As Boolean
+- uid: TwinSharp.CNC.StateBahn.InSingularityAvoidance
+  commentId: F:TwinSharp.CNC.StateBahn.InSingularityAvoidance
+  id: InSingularityAvoidance
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: InSingularityAvoidance
+  nameWithType: StateBahn.InSingularityAvoidance
+  fullName: TwinSharp.CNC.StateBahn.InSingularityAvoidance
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InSingularityAvoidance
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1465
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when inside singularity avoidance movement (in_singularity_avoidance).
+  example: []
+  syntax:
+    content: public bool InSingularityAvoidance
+    return:
+      type: System.Boolean
+    content.vb: Public InSingularityAvoidance As Boolean
+- uid: TwinSharp.CNC.StateBahn.StStatus
+  commentId: F:TwinSharp.CNC.StateBahn.StStatus
+  id: StStatus
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: StStatus
+  nameWithType: StateBahn.StStatus
+  fullName: TwinSharp.CNC.StateBahn.StStatus
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StStatus
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1468
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Singularity tracking status (st_status).
+  example: []
+  syntax:
+    content: public ushort StStatus
+    return:
+      type: System.UInt16
+    content.vb: Public StStatus As UShort
+- uid: TwinSharp.CNC.StateBahn.StTurn
+  commentId: F:TwinSharp.CNC.StateBahn.StTurn
+  id: StTurn
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: StTurn
+  nameWithType: StateBahn.StTurn
+  fullName: TwinSharp.CNC.StateBahn.StTurn
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StTurn
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1471
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Singularity tracking turn number (st_turn).
+  example: []
+  syntax:
+    content: public ushort StTurn
+    return:
+      type: System.UInt16
+    content.vb: Public StTurn As UShort
+- uid: TwinSharp.CNC.StateBahn.XyzComp
+  commentId: F:TwinSharp.CNC.StateBahn.XyzComp
+  id: XyzComp
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: XyzComp
+  nameWithType: StateBahn.XyzComp
+  fullName: TwinSharp.CNC.StateBahn.XyzComp
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: XyzComp
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1475
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'XYZ compensation values. 3 elements [0..HLI_CS_AXES_MAXIDX]. Unit: 0.1 µm (xyz_comp_r).'
+  example: []
+  syntax:
+    content: public double[] XyzComp
+    return:
+      type: System.Double[]
+    content.vb: Public XyzComp As Double()
+- uid: TwinSharp.CNC.StateBahn.Inclination
+  commentId: F:TwinSharp.CNC.StateBahn.Inclination
+  id: Inclination
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: Inclination
+  nameWithType: StateBahn.Inclination
+  fullName: TwinSharp.CNC.StateBahn.Inclination
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Inclination
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1478
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Path inclination angle (inclination_r). Unit: 0.001°.'
+  example: []
+  syntax:
+    content: public uint Inclination
+    return:
+      type: System.UInt32
+    content.vb: Public Inclination As UInteger
+- uid: TwinSharp.CNC.StateBahn.VirtToolLength
+  commentId: F:TwinSharp.CNC.StateBahn.VirtToolLength
+  id: VirtToolLength
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: VirtToolLength
+  nameWithType: StateBahn.VirtToolLength
+  fullName: TwinSharp.CNC.StateBahn.VirtToolLength
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: VirtToolLength
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1481
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Virtual tool length (virt_tool_length_r). Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public uint VirtToolLength
+    return:
+      type: System.UInt32
+    content.vb: Public VirtToolLength As UInteger
+- uid: TwinSharp.CNC.StateBahn.ConveyorData
+  commentId: F:TwinSharp.CNC.StateBahn.ConveyorData
+  id: ConveyorData
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: ConveyorData
+  nameWithType: StateBahn.ConveyorData
+  fullName: TwinSharp.CNC.StateBahn.ConveyorData
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ConveyorData
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1484
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Conveyor synchronisation status (conveyor_data).
+  example: []
+  syntax:
+    content: public HLI_CONVEYOR_DATA ConveyorData
+    return:
+      type: TwinSharp.CNC.HLI_CONVEYOR_DATA
+    content.vb: Public ConveyorData As HLI_CONVEYOR_DATA
+- uid: TwinSharp.CNC.StateBahn.real64_free
+  commentId: F:TwinSharp.CNC.StateBahn.real64_free
+  id: real64_free
+  parent: TwinSharp.CNC.StateBahn
+  langs:
+  - csharp
+  - vb
+  name: real64_free
+  nameWithType: StateBahn.real64_free
+  fullName: TwinSharp.CNC.StateBahn.real64_free
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: real64_free
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1488
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use (real64_free_7..1). 7 × LREAL.
+  example: []
+  syntax:
+    content: public double[] real64_free
+    return:
+      type: System.Double[]
+    content.vb: Public real64_free As Double()
+references:
+- uid: TwinSharp.CNC.RealTimeStatus.State
+  commentId: P:TwinSharp.CNC.RealTimeStatus.State
+  href: TwinSharp.CNC.RealTimeStatus.html#TwinSharp_CNC_RealTimeStatus_State
+  name: State
+  nameWithType: RealTimeStatus.State
+  fullName: TwinSharp.CNC.RealTimeStatus.State
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+  commentId: T:TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA.html
+  name: HLI_TOOL_PATH_DISP_DATA
+  nameWithType: HLI_TOOL_PATH_DISP_DATA
+  fullName: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA[]
+  isExternal: true
+  href: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.html
+  name: HLI_BAHN_COORD_DISP_DATA[]
+  nameWithType: HLI_BAHN_COORD_DISP_DATA[]
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA[]
+  nameWithType.vb: HLI_BAHN_COORD_DISP_DATA()
+  fullName.vb: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA()
+  name.vb: HLI_BAHN_COORD_DISP_DATA()
+  spec.csharp:
+  - uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+    name: HLI_BAHN_COORD_DISP_DATA
+    href: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+    name: HLI_BAHN_COORD_DISP_DATA
+    href: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.html
+  - name: (
+  - name: )
+- uid: TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+  commentId: T:TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_S_ADD_PROG_INFO.html
+  name: HLI_S_ADD_PROG_INFO
+  nameWithType: HLI_S_ADD_PROG_INFO
+  fullName: TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+- uid: TwinSharp.CNC.StopConditionFlags
+  commentId: T:TwinSharp.CNC.StopConditionFlags
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.StopConditionFlags.html
+  name: StopConditionFlags
+  nameWithType: StopConditionFlags
+  fullName: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.HLI_FILE_NAME
+  commentId: T:TwinSharp.CNC.HLI_FILE_NAME
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_FILE_NAME.html
+  name: HLI_FILE_NAME
+  nameWithType: HLI_FILE_NAME
+  fullName: TwinSharp.CNC.HLI_FILE_NAME
+- uid: TwinSharp.CNC.HLI_EDGE_FUNCTION
+  commentId: T:TwinSharp.CNC.HLI_EDGE_FUNCTION
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_EDGE_FUNCTION.html
+  name: HLI_EDGE_FUNCTION
+  nameWithType: HLI_EDGE_FUNCTION
+  fullName: TwinSharp.CNC.HLI_EDGE_FUNCTION
+- uid: TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+  commentId: T:TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_BLOCK_DYNAMIC.html
+  name: HLI_BLOCK_DYNAMIC
+  nameWithType: HLI_BLOCK_DYNAMIC
+  fullName: TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+- uid: TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+  commentId: T:TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_LOOKAHEAD_DATA.html
+  name: HLI_LOOKAHEAD_DATA
+  nameWithType: HLI_LOOKAHEAD_DATA
+  fullName: TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA[]
+  isExternal: true
+  href: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA.html
+  name: HLI_BAHN_TRAFO_DISP_DATA[]
+  nameWithType: HLI_BAHN_TRAFO_DISP_DATA[]
+  fullName: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA[]
+  nameWithType.vb: HLI_BAHN_TRAFO_DISP_DATA()
+  fullName.vb: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA()
+  name.vb: HLI_BAHN_TRAFO_DISP_DATA()
+  spec.csharp:
+  - uid: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA
+    name: HLI_BAHN_TRAFO_DISP_DATA
+    href: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA
+    name: HLI_BAHN_TRAFO_DISP_DATA
+    href: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA.html
+  - name: (
+  - name: )
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  commentId: T:TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.html
+  name: HLI_STATE_TTD_TRIPLE_BUF
+  nameWithType: HLI_STATE_TTD_TRIPLE_BUF
+  fullName: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+- uid: System.Double[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: TwinSharp.CNC.HLI_CONVEYOR_DATA
+  commentId: T:TwinSharp.CNC.HLI_CONVEYOR_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_CONVEYOR_DATA.html
+  name: HLI_CONVEYOR_DATA
+  nameWithType: HLI_CONVEYOR_DATA
+  fullName: TwinSharp.CNC.HLI_CONVEYOR_DATA

@@ -1,0 +1,595 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.StopConditionFlags
+  commentId: T:TwinSharp.CNC.StopConditionFlags
+  id: StopConditionFlags
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.StopConditionFlags.BackInterpolation
+  - TwinSharp.CNC.StopConditionFlags.ChannelError
+  - TwinSharp.CNC.StopConditionFlags.ChannelSync
+  - TwinSharp.CNC.StopConditionFlags.DwellTime
+  - TwinSharp.CNC.StopConditionFlags.Feedhold
+  - TwinSharp.CNC.StopConditionFlags.InsertStopAtDist
+  - TwinSharp.CNC.StopConditionFlags.IpoInputEmpty
+  - TwinSharp.CNC.StopConditionFlags.M00OrM01
+  - TwinSharp.CNC.StopConditionFlags.NoAxisFeedEnable
+  - TwinSharp.CNC.StopConditionFlags.None
+  - TwinSharp.CNC.StopConditionFlags.OverrideZero
+  - TwinSharp.CNC.StopConditionFlags.PlcAcknowledge
+  - TwinSharp.CNC.StopConditionFlags.ReadInDisabled
+  - TwinSharp.CNC.StopConditionFlags.SingleBlock
+  - TwinSharp.CNC.StopConditionFlags.SlopeSupplyProblem
+  - TwinSharp.CNC.StopConditionFlags.WaitContinueAfterCollision
+  - TwinSharp.CNC.StopConditionFlags.WaitForAxes
+  - TwinSharp.CNC.StopConditionFlags.WaitTechnoAcknowledge
+  langs:
+  - csharp
+  - vb
+  name: StopConditionFlags
+  nameWithType: StopConditionFlags
+  fullName: TwinSharp.CNC.StopConditionFlags
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StopConditionFlags
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 195
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Flags indicating which condition(s) are currently stopping the CNC path interpolator.
+
+    Corresponds to the <code>stop_conditions_r</code> field of <code>STATE_BAHN</code>.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum StopConditionFlags : uint
+    content.vb: >-
+      <Flags>
+
+      Public Enum StopConditionFlags As UInteger
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: TwinSharp.CNC.StopConditionFlags.None
+  commentId: F:TwinSharp.CNC.StopConditionFlags.None
+  id: None
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: StopConditionFlags.None
+  fullName: TwinSharp.CNC.StopConditionFlags.None
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: None
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 199
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: No stop condition active.
+  example: []
+  syntax:
+    content: None = 0
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.Feedhold
+  commentId: F:TwinSharp.CNC.StopConditionFlags.Feedhold
+  id: Feedhold
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: Feedhold
+  nameWithType: StopConditionFlags.Feedhold
+  fullName: TwinSharp.CNC.StopConditionFlags.Feedhold
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Feedhold
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 202
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Feed hold active.
+  example: []
+  syntax:
+    content: Feedhold = 1
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.NoAxisFeedEnable
+  commentId: F:TwinSharp.CNC.StopConditionFlags.NoAxisFeedEnable
+  id: NoAxisFeedEnable
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: NoAxisFeedEnable
+  nameWithType: StopConditionFlags.NoAxisFeedEnable
+  fullName: TwinSharp.CNC.StopConditionFlags.NoAxisFeedEnable
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NoAxisFeedEnable
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 205
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: No axis feed enable.
+  example: []
+  syntax:
+    content: NoAxisFeedEnable = 2
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.SingleBlock
+  commentId: F:TwinSharp.CNC.StopConditionFlags.SingleBlock
+  id: SingleBlock
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: SingleBlock
+  nameWithType: StopConditionFlags.SingleBlock
+  fullName: TwinSharp.CNC.StopConditionFlags.SingleBlock
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SingleBlock
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 208
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Single-block mode active.
+  example: []
+  syntax:
+    content: SingleBlock = 4
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.M00OrM01
+  commentId: F:TwinSharp.CNC.StopConditionFlags.M00OrM01
+  id: M00OrM01
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: M00OrM01
+  nameWithType: StopConditionFlags.M00OrM01
+  fullName: TwinSharp.CNC.StopConditionFlags.M00OrM01
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: M00OrM01
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 211
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: M00 or M01 stop.
+  example: []
+  syntax:
+    content: M00OrM01 = 16
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.PlcAcknowledge
+  commentId: F:TwinSharp.CNC.StopConditionFlags.PlcAcknowledge
+  id: PlcAcknowledge
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: PlcAcknowledge
+  nameWithType: StopConditionFlags.PlcAcknowledge
+  fullName: TwinSharp.CNC.StopConditionFlags.PlcAcknowledge
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: PlcAcknowledge
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 214
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Waiting for PLC acknowledge.
+  example: []
+  syntax:
+    content: PlcAcknowledge = 32
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.OverrideZero
+  commentId: F:TwinSharp.CNC.StopConditionFlags.OverrideZero
+  id: OverrideZero
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: OverrideZero
+  nameWithType: StopConditionFlags.OverrideZero
+  fullName: TwinSharp.CNC.StopConditionFlags.OverrideZero
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OverrideZero
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 217
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Feed override is zero.
+  example: []
+  syntax:
+    content: OverrideZero = 64
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.DwellTime
+  commentId: F:TwinSharp.CNC.StopConditionFlags.DwellTime
+  id: DwellTime
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: DwellTime
+  nameWithType: StopConditionFlags.DwellTime
+  fullName: TwinSharp.CNC.StopConditionFlags.DwellTime
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DwellTime
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 220
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Dwell time active.
+  example: []
+  syntax:
+    content: DwellTime = 512
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.ChannelSync
+  commentId: F:TwinSharp.CNC.StopConditionFlags.ChannelSync
+  id: ChannelSync
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: ChannelSync
+  nameWithType: StopConditionFlags.ChannelSync
+  fullName: TwinSharp.CNC.StopConditionFlags.ChannelSync
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ChannelSync
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 223
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Channel synchronisation active.
+  example: []
+  syntax:
+    content: ChannelSync = 2048
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.IpoInputEmpty
+  commentId: F:TwinSharp.CNC.StopConditionFlags.IpoInputEmpty
+  id: IpoInputEmpty
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: IpoInputEmpty
+  nameWithType: StopConditionFlags.IpoInputEmpty
+  fullName: TwinSharp.CNC.StopConditionFlags.IpoInputEmpty
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: IpoInputEmpty
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 226
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Interpolator input buffer empty.
+  example: []
+  syntax:
+    content: IpoInputEmpty = 4096
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.ReadInDisabled
+  commentId: F:TwinSharp.CNC.StopConditionFlags.ReadInDisabled
+  id: ReadInDisabled
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: ReadInDisabled
+  nameWithType: StopConditionFlags.ReadInDisabled
+  fullName: TwinSharp.CNC.StopConditionFlags.ReadInDisabled
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReadInDisabled
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 229
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Read-in disabled.
+  example: []
+  syntax:
+    content: ReadInDisabled = 8192
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.WaitForAxes
+  commentId: F:TwinSharp.CNC.StopConditionFlags.WaitForAxes
+  id: WaitForAxes
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: WaitForAxes
+  nameWithType: StopConditionFlags.WaitForAxes
+  fullName: TwinSharp.CNC.StopConditionFlags.WaitForAxes
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitForAxes
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 232
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Waiting for axes to reach position.
+  example: []
+  syntax:
+    content: WaitForAxes = 32768
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.ChannelError
+  commentId: F:TwinSharp.CNC.StopConditionFlags.ChannelError
+  id: ChannelError
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: ChannelError
+  nameWithType: StopConditionFlags.ChannelError
+  fullName: TwinSharp.CNC.StopConditionFlags.ChannelError
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ChannelError
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 235
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Channel error.
+  example: []
+  syntax:
+    content: ChannelError = 65536
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.WaitTechnoAcknowledge
+  commentId: F:TwinSharp.CNC.StopConditionFlags.WaitTechnoAcknowledge
+  id: WaitTechnoAcknowledge
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: WaitTechnoAcknowledge
+  nameWithType: StopConditionFlags.WaitTechnoAcknowledge
+  fullName: TwinSharp.CNC.StopConditionFlags.WaitTechnoAcknowledge
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitTechnoAcknowledge
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 238
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Waiting for technology function acknowledge.
+  example: []
+  syntax:
+    content: WaitTechnoAcknowledge = 131072
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.WaitContinueAfterCollision
+  commentId: F:TwinSharp.CNC.StopConditionFlags.WaitContinueAfterCollision
+  id: WaitContinueAfterCollision
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: WaitContinueAfterCollision
+  nameWithType: StopConditionFlags.WaitContinueAfterCollision
+  fullName: TwinSharp.CNC.StopConditionFlags.WaitContinueAfterCollision
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: WaitContinueAfterCollision
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 241
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Waiting for continue after collision.
+  example: []
+  syntax:
+    content: WaitContinueAfterCollision = 262144
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.SlopeSupplyProblem
+  commentId: F:TwinSharp.CNC.StopConditionFlags.SlopeSupplyProblem
+  id: SlopeSupplyProblem
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: SlopeSupplyProblem
+  nameWithType: StopConditionFlags.SlopeSupplyProblem
+  fullName: TwinSharp.CNC.StopConditionFlags.SlopeSupplyProblem
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SlopeSupplyProblem
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 244
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Slope supply problem.
+  example: []
+  syntax:
+    content: SlopeSupplyProblem = 524288
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.BackInterpolation
+  commentId: F:TwinSharp.CNC.StopConditionFlags.BackInterpolation
+  id: BackInterpolation
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: BackInterpolation
+  nameWithType: StopConditionFlags.BackInterpolation
+  fullName: TwinSharp.CNC.StopConditionFlags.BackInterpolation
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: BackInterpolation
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 247
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Backward interpolation active.
+  example: []
+  syntax:
+    content: BackInterpolation = 1048576
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+- uid: TwinSharp.CNC.StopConditionFlags.InsertStopAtDist
+  commentId: F:TwinSharp.CNC.StopConditionFlags.InsertStopAtDist
+  id: InsertStopAtDist
+  parent: TwinSharp.CNC.StopConditionFlags
+  langs:
+  - csharp
+  - vb
+  name: InsertStopAtDist
+  nameWithType: StopConditionFlags.InsertStopAtDist
+  fullName: TwinSharp.CNC.StopConditionFlags.InsertStopAtDist
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InsertStopAtDist
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 250
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Stop reached because a stop mark inserted via the insert_cmd control unit was hit.
+  example: []
+  syntax:
+    content: InsertStopAtDist = 134217728
+    return:
+      type: TwinSharp.CNC.StopConditionFlags
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.StopConditionFlags
+  commentId: T:TwinSharp.CNC.StopConditionFlags
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.StopConditionFlags.html
+  name: StopConditionFlags
+  nameWithType: StopConditionFlags
+  fullName: TwinSharp.CNC.StopConditionFlags

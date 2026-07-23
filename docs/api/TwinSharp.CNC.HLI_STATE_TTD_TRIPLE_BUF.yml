@@ -1,0 +1,365 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  commentId: T:TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  id: HLI_STATE_TTD_TRIPLE_BUF
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.data
+  - TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.head
+  langs:
+  - csharp
+  - vb
+  name: HLI_STATE_TTD_TRIPLE_BUF
+  nameWithType: HLI_STATE_TTD_TRIPLE_BUF
+  fullName: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_STATE_TTD_TRIPLE_BUF
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1077
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Triple-buffered time-to-distance state. Mirrors <code>HLI_STATE_TTD_TRIPLE_BUF</code>.
+  example: []
+  syntax:
+    content: public struct HLI_STATE_TTD_TRIPLE_BUF
+    content.vb: Public Structure HLI_STATE_TTD_TRIPLE_BUF
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.head
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.head
+  id: head
+  parent: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  langs:
+  - csharp
+  - vb
+  name: head
+  nameWithType: HLI_STATE_TTD_TRIPLE_BUF.head
+  fullName: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.head
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: head
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1081
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Triple buffer management header.
+  example: []
+  syntax:
+    content: public HLI_TRIPLE_BUF_HEAD head
+    return:
+      type: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+    content.vb: Public head As HLI_TRIPLE_BUF_HEAD
+- uid: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.data
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.data
+  id: data
+  parent: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  langs:
+  - csharp
+  - vb
+  name: data
+  nameWithType: HLI_STATE_TTD_TRIPLE_BUF.data
+  fullName: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.data
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: data
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1085
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Triple buffer data slots. 3 elements [0..2].
+  example: []
+  syntax:
+    content: public HLI_STATE_TTD[] data
+    return:
+      type: TwinSharp.CNC.HLI_STATE_TTD[]
+    content.vb: Public data As HLI_STATE_TTD()
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+  commentId: T:TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD.html
+  name: HLI_TRIPLE_BUF_HEAD
+  nameWithType: HLI_TRIPLE_BUF_HEAD
+  fullName: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+- uid: TwinSharp.CNC.HLI_STATE_TTD[]
+  isExternal: true
+  href: TwinSharp.CNC.HLI_STATE_TTD.html
+  name: HLI_STATE_TTD[]
+  nameWithType: HLI_STATE_TTD[]
+  fullName: TwinSharp.CNC.HLI_STATE_TTD[]
+  nameWithType.vb: HLI_STATE_TTD()
+  fullName.vb: TwinSharp.CNC.HLI_STATE_TTD()
+  name.vb: HLI_STATE_TTD()
+  spec.csharp:
+  - uid: TwinSharp.CNC.HLI_STATE_TTD
+    name: HLI_STATE_TTD
+    href: TwinSharp.CNC.HLI_STATE_TTD.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.CNC.HLI_STATE_TTD
+    name: HLI_STATE_TTD
+    href: TwinSharp.CNC.HLI_STATE_TTD.html
+  - name: (
+  - name: )

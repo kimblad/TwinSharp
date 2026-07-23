@@ -33,8 +33,8 @@ namespace TwinSharp.CNC
         /// </summary>
         public uint OutputGridSize
         {
-            get => comClient.ReadAny<uint>(group, 0x89);
-            set => comClient.WriteAny(group, 0x8A, value);
+            get => comClient.ReadAny<uint>(group, 0x8A);
+            set => comClient.WriteAny(group, 0x89, value);
         }
 
         /// <summary>

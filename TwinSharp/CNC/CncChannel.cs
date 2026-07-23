@@ -39,7 +39,12 @@ namespace TwinSharp.CNC
             TechnologyProcesses = new TechnologyProcesses(plcClient, channelNumber);
             ErrorManager = new ErrorManagement(plcClient, channelNumber);
             ZeroOffsets = new ZeroOffsets(sdaClient, channelNumber);
+            ToolManagement = new ToolManagement(sdaClient, channelNumber);
+            ExternalVariables = new ExternalVariables(sdaClient, channelNumber);
             ManualOperation = new ManualOperation(plcClient, channelNumber);
+            RealTimeStatus = new RealTimeStatus(plcClient, channelNumber);
+            InsertStop = new InsertStopCommand(plcClient, channelNumber);
+            NcMessages = new NcMessageMonitor(plcClient, channelNumber);
         }
 
         /// <summary>
@@ -132,10 +137,41 @@ namespace TwinSharp.CNC
         public ZeroOffsets ZeroOffsets { get; private set; }
 
         /// <summary>
+        /// Provides functions to read and write tool table entries (radius, length, etc.) for this channel.
+        /// </summary>
+        public ToolManagement ToolManagement { get; private set; }
+
+        /// <summary>
+        /// Provides read/write access to CNC External Variables (V.E.*) for this channel.
+        /// These persist across M30 and new program starts, surviving until CNC reboot.
+        /// </summary>
+        public ExternalVariables ExternalVariables { get; private set; }
+
+        /// <summary>
         /// Provides a class that contains settings and functions for the manual operation of the CNC.
         /// Such as keys, rapid keys and hand wheels.
         /// </summary>
         public ManualOperation ManualOperation { get; private set; }
+
+        /// <summary>
+        /// Provides read-only access to the real-time status of the CNC path interpolator.
+        /// Reads the complete <see cref="StateBahn"/> struct from <c>bahn_state</c> in a single ADS call.
+        /// </summary>
+        public RealTimeStatus RealTimeStatus { get; private set; }
+
+        /// <summary>
+        /// Allows insertion of CNC stop marks into a running NC program at runtime.
+        /// In POSITION mode the CNC stops the first time a commanded axis reaches the specified position.
+        /// Requires <c>P-STUP-00033</c> (fb_storage_size) to be non-zero.
+        /// </summary>
+        public InsertStopCommand InsertStop { get; private set; }
+
+        /// <summary>
+        /// Monitors NC-program messages sent to the PLC via <c>#MSG PLC "text"</c> or
+        /// <c>#MSGINFO PLC "text"</c>. Call <see cref="NcMessageMonitor.Enable"/> once after
+        /// connecting to register the PLC as present on the control unit.
+        /// </summary>
+        public NcMessageMonitor NcMessages { get; private set; }
 
         /// <summary>
         /// Part of the path motion traversed in the current block in relation to the total path.
@@ -211,6 +247,8 @@ namespace TwinSharp.CNC
         public void Dispose()
         {
             OperationModeManager?.Dispose();
+            RealTimeStatus?.Dispose();
+            NcMessages?.Dispose();
 
             GC.SuppressFinalize(this);
         }

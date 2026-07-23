@@ -1,0 +1,462 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_MC_JOB_STACK
+  commentId: T:TwinSharp.CNC.HLI_MC_JOB_STACK
+  id: HLI_MC_JOB_STACK
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_MC_JOB_STACK.count
+  - TwinSharp.CNC.HLI_MC_JOB_STACK.fill_up_1
+  - TwinSharp.CNC.HLI_MC_JOB_STACK.id_control
+  - TwinSharp.CNC.HLI_MC_JOB_STACK.iterator
+  - TwinSharp.CNC.HLI_MC_JOB_STACK.job
+  langs:
+  - csharp
+  - vb
+  name: HLI_MC_JOB_STACK
+  nameWithType: HLI_MC_JOB_STACK
+  fullName: TwinSharp.CNC.HLI_MC_JOB_STACK
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_MC_JOB_STACK
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 787
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Job stack containing up to <code>HLI_MC_JOB_STACK_MAX</code> (15) job descriptors.
+
+    Mirrors <code>HLI_MC_JOB_STACK</code>.
+  example: []
+  syntax:
+    content: public struct HLI_MC_JOB_STACK
+    content.vb: Public Structure HLI_MC_JOB_STACK
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_MC_JOB_STACK.count
+  commentId: F:TwinSharp.CNC.HLI_MC_JOB_STACK.count
+  id: count
+  parent: TwinSharp.CNC.HLI_MC_JOB_STACK
+  langs:
+  - csharp
+  - vb
+  name: count
+  nameWithType: HLI_MC_JOB_STACK.count
+  fullName: TwinSharp.CNC.HLI_MC_JOB_STACK.count
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: count
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 791
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Number of active jobs in the stack.
+  example: []
+  syntax:
+    content: public ushort count
+    return:
+      type: System.UInt16
+    content.vb: Public count As UShort
+- uid: TwinSharp.CNC.HLI_MC_JOB_STACK.iterator
+  commentId: F:TwinSharp.CNC.HLI_MC_JOB_STACK.iterator
+  id: iterator
+  parent: TwinSharp.CNC.HLI_MC_JOB_STACK
+  langs:
+  - csharp
+  - vb
+  name: iterator
+  nameWithType: HLI_MC_JOB_STACK.iterator
+  fullName: TwinSharp.CNC.HLI_MC_JOB_STACK.iterator
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: iterator
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 793
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Current iterator position.
+  example: []
+  syntax:
+    content: public ushort iterator
+    return:
+      type: System.UInt16
+    content.vb: Public iterator As UShort
+- uid: TwinSharp.CNC.HLI_MC_JOB_STACK.id_control
+  commentId: F:TwinSharp.CNC.HLI_MC_JOB_STACK.id_control
+  id: id_control
+  parent: TwinSharp.CNC.HLI_MC_JOB_STACK
+  langs:
+  - csharp
+  - vb
+  name: id_control
+  nameWithType: HLI_MC_JOB_STACK.id_control
+  fullName: TwinSharp.CNC.HLI_MC_JOB_STACK.id_control
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: id_control
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 795
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: ID control field.
+  example: []
+  syntax:
+    content: public ushort id_control
+    return:
+      type: System.UInt16
+    content.vb: Public id_control As UShort
+- uid: TwinSharp.CNC.HLI_MC_JOB_STACK.fill_up_1
+  commentId: F:TwinSharp.CNC.HLI_MC_JOB_STACK.fill_up_1
+  id: fill_up_1
+  parent: TwinSharp.CNC.HLI_MC_JOB_STACK
+  langs:
+  - csharp
+  - vb
+  name: fill_up_1
+  nameWithType: HLI_MC_JOB_STACK.fill_up_1
+  fullName: TwinSharp.CNC.HLI_MC_JOB_STACK.fill_up_1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: fill_up_1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 797
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Fill-up for alignment.
+  example: []
+  syntax:
+    content: public ushort fill_up_1
+    return:
+      type: System.UInt16
+    content.vb: Public fill_up_1 As UShort
+- uid: TwinSharp.CNC.HLI_MC_JOB_STACK.job
+  commentId: F:TwinSharp.CNC.HLI_MC_JOB_STACK.job
+  id: job
+  parent: TwinSharp.CNC.HLI_MC_JOB_STACK
+  langs:
+  - csharp
+  - vb
+  name: job
+  nameWithType: HLI_MC_JOB_STACK.job
+  fullName: TwinSharp.CNC.HLI_MC_JOB_STACK.job
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: job
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 800
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Job descriptor array. 15 elements [0..HLI_MC_JOB_STACK_MAXIDX].
+  example: []
+  syntax:
+    content: public HLI_MC_JOB_DESCR[] job
+    return:
+      type: TwinSharp.CNC.HLI_MC_JOB_DESCR[]
+    content.vb: Public job As HLI_MC_JOB_DESCR()
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: TwinSharp.CNC.HLI_MC_JOB_DESCR[]
+  isExternal: true
+  href: TwinSharp.CNC.HLI_MC_JOB_DESCR.html
+  name: HLI_MC_JOB_DESCR[]
+  nameWithType: HLI_MC_JOB_DESCR[]
+  fullName: TwinSharp.CNC.HLI_MC_JOB_DESCR[]
+  nameWithType.vb: HLI_MC_JOB_DESCR()
+  fullName.vb: TwinSharp.CNC.HLI_MC_JOB_DESCR()
+  name.vb: HLI_MC_JOB_DESCR()
+  spec.csharp:
+  - uid: TwinSharp.CNC.HLI_MC_JOB_DESCR
+    name: HLI_MC_JOB_DESCR
+    href: TwinSharp.CNC.HLI_MC_JOB_DESCR.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.CNC.HLI_MC_JOB_DESCR
+    name: HLI_MC_JOB_DESCR
+    href: TwinSharp.CNC.HLI_MC_JOB_DESCR.html
+  - name: (
+  - name: )

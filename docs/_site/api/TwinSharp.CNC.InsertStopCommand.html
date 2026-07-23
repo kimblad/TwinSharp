@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class InsertStopCommand | TwinSharp Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class InsertStopCommand | TwinSharp Documentation ">
+      
+      <meta name="description" content="Allows insertion of CNC stop marks into a running NC program at runtime via the HLI bahn_mc_control.insert_cmd control unit.  In POSITION mode (logicalAxisNumber &amp;gt; 0 in ) the CNC stops the first time the specified axis reaches the commanded position. The stop behaves like M00 — the operator presses Continue to resume. Requires P-STUP-00033 (fb_storage_size) to be non-zero on the machine.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_CNC_InsertStopCommand.md&amp;value=---%0Auid%3A%20TwinSharp.CNC.InsertStopCommand%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.CNC.InsertStopCommand">
+
+
+
+  <h1 id="TwinSharp_CNC_InsertStopCommand" data-uid="TwinSharp.CNC.InsertStopCommand" class="text-break">
+Class InsertStopCommand  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.CNC.html">CNC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Allows insertion of CNC stop marks into a running NC program at runtime via the HLI
+<code>bahn_mc_control.insert_cmd</code> control unit.</p>
+<p>
+In POSITION mode (logicalAxisNumber &gt; 0 in <a class="xref" href="TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtPosition_System_Double_System_UInt32_">InsertAtPosition(double, uint)</a>) the CNC
+stops the first time the specified axis reaches the commanded position. The stop behaves
+like M00 — the operator presses Continue to resume.
+</p><p>Requires <code>P-STUP-00033</code> (fb_storage_size) to be non-zero on the machine.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class InsertStopCommand : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">InsertStopCommand</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_Clear_" data-uid="TwinSharp.CNC.InsertStopCommand.Clear*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_Clear" data-uid="TwinSharp.CNC.InsertStopCommand.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancels any pending insert stop that has not yet been reached.
+Sending dist=0 with rel_abs_mode=0 (relative iterative) instructs the CNC to clear the stop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_Dispose_" data-uid="TwinSharp.CNC.InsertStopCommand.Dispose*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_Dispose" data-uid="TwinSharp.CNC.InsertStopCommand.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_Enable_" data-uid="TwinSharp.CNC.InsertStopCommand.Enable*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_Enable" data-uid="TwinSharp.CNC.InsertStopCommand.Enable">
+  Enable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signals to the CNC that this interface is present. Must be called once after connect
+before any insert commands will be acknowledged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Enable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_GetDistanceOfNextStopMm_" data-uid="TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_GetDistanceOfNextStopMm" data-uid="TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm">
+  GetDistanceOfNextStopMm()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the absolute path distance (dist_prog_start) at which the CNC will trigger
+the next stop, in mm. Returns -1 if no stop has been found yet in the look-ahead
+buffer (the stop may still be found as more blocks are pre-processed).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetDistanceOfNextStopMm()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_GetEnable_" data-uid="TwinSharp.CNC.InsertStopCommand.GetEnable*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_GetEnable" data-uid="TwinSharp.CNC.InsertStopCommand.GetEnable">
+  GetEnable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads whether the control unit is enabled (enable_w).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetEnable()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_GetSemaphore_" data-uid="TwinSharp.CNC.InsertStopCommand.GetSemaphore*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_GetSemaphore" data-uid="TwinSharp.CNC.InsertStopCommand.GetSemaphore">
+  GetSemaphore()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the current semaphore value.
+TRUE means the CNC has not yet consumed the last command.
+FALSE means the CNC has read and processed it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetSemaphore()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_GetState_" data-uid="TwinSharp.CNC.InsertStopCommand.GetState*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_GetState" data-uid="TwinSharp.CNC.InsertStopCommand.GetState">
+  GetState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the current insert-command state.
+0 = no stop commanded; 1 = stop commanded but not yet reached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetState()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_InsertAtAbsoluteDistance_" data-uid="TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_InsertAtAbsoluteDistance_System_Double_" data-uid="TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance(System.Double)">
+  InsertAtAbsoluteDistance(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a one-shot M00 stop at an absolute cumulative path distance
+of <code class="paramref">absoluteDistMm</code> mm from the program start.
+Uses DISTANCE mode (<code>axis_nr = 0</code>) with <code>rel_abs_mode = 1</code>
+(one-off absolute distance from the program start).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertAtAbsoluteDistance(double absoluteDistMm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>absoluteDistMm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Absolute path distance from program start in mm.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_InsertAtPosition_" data-uid="TwinSharp.CNC.InsertStopCommand.InsertAtPosition*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_InsertAtPosition_System_Double_System_UInt32_" data-uid="TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)">
+  InsertAtPosition(double, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a one-shot absolute stop (M00) the first time <code class="paramref">logicalAxisNumber</code>
+reaches <code class="paramref">positionMm</code>. If the program is already past that position the
+stop is triggered immediately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertAtPosition(double positionMm, uint logicalAxisNumber)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>positionMm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Target axis position in mm.</p>
+</dd>
+    <dt><code>logicalAxisNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>Logical axis number (&gt; 0). Use the X-axis logical
+number for a marker-based stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_InsertStopCommand_InsertAtRelativeDistance_" data-uid="TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance*"></a>
+
+  <h3 id="TwinSharp_CNC_InsertStopCommand_InsertAtRelativeDistance_System_Double_" data-uid="TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance(System.Double)">
+  InsertAtRelativeDistance(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts a one-shot M00 stop after the CNC's path interpolator has traveled
+<code class="paramref">remainingMm</code> more mm from its current position.
+Uses DISTANCE mode (<code>axis_nr = 0</code>) with <code>rel_abs_mode = 2</code>
+(one-off relative distance from the current interpolator position).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertAtRelativeDistance(double remainingMm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>remainingMm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>Distance to travel before stopping, in mm.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/InsertStopCommand.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

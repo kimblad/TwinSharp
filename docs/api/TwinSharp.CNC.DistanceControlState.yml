@@ -1,0 +1,292 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.DistanceControlState
+  commentId: T:TwinSharp.CNC.DistanceControlState
+  id: DistanceControlState
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.DistanceControlState.Active
+  - TwinSharp.CNC.DistanceControlState.ActiveConstDistance
+  - TwinSharp.CNC.DistanceControlState.DryrunConstDistance
+  - TwinSharp.CNC.DistanceControlState.DryrunSetPos
+  - TwinSharp.CNC.DistanceControlState.Error
+  - TwinSharp.CNC.DistanceControlState.Freeze
+  - TwinSharp.CNC.DistanceControlState.Inactive
+  - TwinSharp.CNC.DistanceControlState.TurningOff
+  langs:
+  - csharp
+  - vb
+  name: DistanceControlState
+  nameWithType: DistanceControlState
+  fullName: TwinSharp.CNC.DistanceControlState
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DistanceControlState
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 187
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: State machine states reported by the TF5200 distance control module.
+  example: []
+  syntax:
+    content: public enum DistanceControlState
+    content.vb: Public Enum DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.Inactive
+  commentId: F:TwinSharp.CNC.DistanceControlState.Inactive
+  id: Inactive
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: Inactive
+  nameWithType: DistanceControlState.Inactive
+  fullName: TwinSharp.CNC.DistanceControlState.Inactive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Inactive
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 190
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Distance control is off; no offset is applied.
+  example: []
+  syntax:
+    content: Inactive = 0
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.Active
+  commentId: F:TwinSharp.CNC.DistanceControlState.Active
+  id: Active
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: Active
+  nameWithType: DistanceControlState.Active
+  fullName: TwinSharp.CNC.DistanceControlState.Active
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Active
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 192
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Active in SET_POS mode — axis is tracking the surface position.
+  example: []
+  syntax:
+    content: Active = 1
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.Freeze
+  commentId: F:TwinSharp.CNC.DistanceControlState.Freeze
+  id: Freeze
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: Freeze
+  nameWithType: DistanceControlState.Freeze
+  fullName: TwinSharp.CNC.DistanceControlState.Freeze
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Freeze
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 194
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Offset is frozen at its last value; sensor is no longer tracked.
+  example: []
+  syntax:
+    content: Freeze = 2
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.TurningOff
+  commentId: F:TwinSharp.CNC.DistanceControlState.TurningOff
+  id: TurningOff
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: TurningOff
+  nameWithType: DistanceControlState.TurningOff
+  fullName: TwinSharp.CNC.DistanceControlState.TurningOff
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TurningOff
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 196
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Transitional: offset is ramping to zero before returning to Inactive.'
+  example: []
+  syntax:
+    content: TurningOff = 3
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.ActiveConstDistance
+  commentId: F:TwinSharp.CNC.DistanceControlState.ActiveConstDistance
+  id: ActiveConstDistance
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: ActiveConstDistance
+  nameWithType: DistanceControlState.ActiveConstDistance
+  fullName: TwinSharp.CNC.DistanceControlState.ActiveConstDistance
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActiveConstDistance
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 198
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Active in constant-distance mode — axis maintains a fixed gap.
+  example: []
+  syntax:
+    content: ActiveConstDistance = 4
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.Error
+  commentId: F:TwinSharp.CNC.DistanceControlState.Error
+  id: Error
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: DistanceControlState.Error
+  fullName: TwinSharp.CNC.DistanceControlState.Error
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Error
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 200
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Error state — invalid command transition or position control error.
+  example: []
+  syntax:
+    content: Error = 5
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.DryrunConstDistance
+  commentId: F:TwinSharp.CNC.DistanceControlState.DryrunConstDistance
+  id: DryrunConstDistance
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: DryrunConstDistance
+  nameWithType: DistanceControlState.DryrunConstDistance
+  fullName: TwinSharp.CNC.DistanceControlState.DryrunConstDistance
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DryrunConstDistance
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 202
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Dry-run constant-distance mode — no axis motion, for filter evaluation.
+  example: []
+  syntax:
+    content: DryrunConstDistance = 6
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlState.DryrunSetPos
+  commentId: F:TwinSharp.CNC.DistanceControlState.DryrunSetPos
+  id: DryrunSetPos
+  parent: TwinSharp.CNC.DistanceControlState
+  langs:
+  - csharp
+  - vb
+  name: DryrunSetPos
+  nameWithType: DistanceControlState.DryrunSetPos
+  fullName: TwinSharp.CNC.DistanceControlState.DryrunSetPos
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DryrunSetPos
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 204
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Dry-run SET_POS mode — no axis motion, for filter evaluation.
+  example: []
+  syntax:
+    content: DryrunSetPos = 7
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.DistanceControlState
+  commentId: T:TwinSharp.CNC.DistanceControlState
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControlState.html
+  name: DistanceControlState
+  nameWithType: DistanceControlState
+  fullName: TwinSharp.CNC.DistanceControlState

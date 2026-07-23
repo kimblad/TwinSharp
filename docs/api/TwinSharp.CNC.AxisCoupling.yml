@@ -1,0 +1,677 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.AxisCoupling
+  commentId: T:TwinSharp.CNC.AxisCoupling
+  id: AxisCoupling
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.AxisCoupling.Dispose
+  - TwinSharp.CNC.AxisCoupling.Enable
+  - TwinSharp.CNC.AxisCoupling.IsActive
+  - TwinSharp.CNC.AxisCoupling.RemoveCouplings
+  - TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  langs:
+  - csharp
+  - vb
+  name: AxisCoupling
+  nameWithType: AxisCoupling
+  fullName: TwinSharp.CNC.AxisCoupling
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisCoupling
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 27
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Wraps the HLI axis coupling interface for a single CNC axis
+
+    (<code>gpAx[n].lr_mc_control.axis_coupling</code>).
+
+
+    Axis coupling (electronic gearing) makes a target axis follow one or more source axes
+
+    according to a specified coupling factor.  Typical uses include tandem/gantry axes and
+
+    secondary cutting heads (MultiJet).
+
+
+    <p><b>Precondition:</b> all involved axes must be at standstill (velocity = 0) before calling
+
+    <xref href="TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry%5b%5d)" data-throw-if-not-resolved="false"></xref> or <xref href="TwinSharp.CNC.AxisCoupling.RemoveCouplings" data-throw-if-not-resolved="false"></xref>.  The CNC will raise error 70200
+
+    if this is violated.
+
+    </p><p><b>NC programmability:</b> if the coupled target axis also needs to respond to motion
+
+    commands in the NC program, include a self-coupling entry in the descriptor list
+
+    (source axis = target axis, mode = <xref href="TwinSharp.CNC.AxisCouplingMode.Direct" data-throw-if-not-resolved="false"></xref>).
+
+    </p>
+
+
+    Semaphore handshake: after writing descriptors, <code>semaphor_rw</code> is set to <code>true</code>.
+
+    The CNC latches the command and clears the semaphore automatically.
+  example: []
+  syntax:
+    content: 'public class AxisCoupling : IDisposable'
+    content.vb: Public Class AxisCoupling Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.CNC.AxisCoupling.Enable
+  commentId: M:TwinSharp.CNC.AxisCoupling.Enable
+  id: Enable
+  parent: TwinSharp.CNC.AxisCoupling
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: AxisCoupling.Enable()
+  fullName: TwinSharp.CNC.AxisCoupling.Enable()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Enable
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 72
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Signals to the CNC that this HLI interface is present.
+
+    Must be called once after connect before any coupling commands will be accepted.
+  example: []
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable()
+  overload: TwinSharp.CNC.AxisCoupling.Enable*
+- uid: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  commentId: M:TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  id: SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  parent: TwinSharp.CNC.AxisCoupling
+  langs:
+  - csharp
+  - vb
+  name: SetCouplings(AxisCouplingEntry[])
+  nameWithType: AxisCoupling.SetCouplings(AxisCouplingEntry[])
+  fullName: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SetCouplings
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 90
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Activates axis coupling with the specified descriptor list.
+
+    Writes each entry's fields, writes <xref href="TwinSharp.CNC.AxisCouplingMode.Inactive" data-throw-if-not-resolved="false"></xref> as the
+
+    terminator immediately after the last entry, then pulses the semaphore.
+  example: []
+  syntax:
+    content: public void SetCouplings(AxisCouplingEntry[] specs)
+    parameters:
+    - id: specs
+      type: TwinSharp.CNC.AxisCouplingEntry[]
+      description: >-
+        Ordered list of coupling descriptors. Must not exceed
+
+        <xref href="TwinSharp.CNC.HliConstants.HLI_AX_COUPLING_MAXIDX" data-throw-if-not-resolved="false"></xref> + 1 entries (= 4).
+    content.vb: Public Sub SetCouplings(specs As AxisCouplingEntry())
+  overload: TwinSharp.CNC.AxisCoupling.SetCouplings*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown when <code class="paramref">specs</code> has more than 4 entries (no room for the terminator).
+  nameWithType.vb: AxisCoupling.SetCouplings(AxisCouplingEntry())
+  fullName.vb: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry())
+  name.vb: SetCouplings(AxisCouplingEntry())
+- uid: TwinSharp.CNC.AxisCoupling.RemoveCouplings
+  commentId: M:TwinSharp.CNC.AxisCoupling.RemoveCouplings
+  id: RemoveCouplings
+  parent: TwinSharp.CNC.AxisCoupling
+  langs:
+  - csharp
+  - vb
+  name: RemoveCouplings()
+  nameWithType: AxisCoupling.RemoveCouplings()
+  fullName: TwinSharp.CNC.AxisCoupling.RemoveCouplings()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RemoveCouplings
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 119
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Removes all couplings from this axis by writing a single INACTIVE descriptor
+
+    at index 0 and pulsing the semaphore.
+
+    All involved axes must be at standstill.
+  example: []
+  syntax:
+    content: public void RemoveCouplings()
+    content.vb: Public Sub RemoveCouplings()
+  overload: TwinSharp.CNC.AxisCoupling.RemoveCouplings*
+- uid: TwinSharp.CNC.AxisCoupling.IsActive
+  commentId: M:TwinSharp.CNC.AxisCoupling.IsActive
+  id: IsActive
+  parent: TwinSharp.CNC.AxisCoupling
+  langs:
+  - csharp
+  - vb
+  name: IsActive()
+  nameWithType: AxisCoupling.IsActive()
+  fullName: TwinSharp.CNC.AxisCoupling.IsActive()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: IsActive
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 130
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Returns <code>true</code> when axis coupling is currently active on this axis
+
+    (<code>state_r.active_r</code>).
+  example: []
+  syntax:
+    content: public bool IsActive()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsActive() As Boolean
+  overload: TwinSharp.CNC.AxisCoupling.IsActive*
+- uid: TwinSharp.CNC.AxisCoupling.Dispose
+  commentId: M:TwinSharp.CNC.AxisCoupling.Dispose
+  id: Dispose
+  parent: TwinSharp.CNC.AxisCoupling
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: AxisCoupling.Dispose()
+  fullName: TwinSharp.CNC.AxisCoupling.Dispose()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Dispose
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 136
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: TwinSharp.CNC.AxisCoupling.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  commentId: M:TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___
+  name: SetCouplings(AxisCouplingEntry[])
+  nameWithType: AxisCoupling.SetCouplings(AxisCouplingEntry[])
+  fullName: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+  nameWithType.vb: AxisCoupling.SetCouplings(AxisCouplingEntry())
+  fullName.vb: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry())
+  name.vb: SetCouplings(AxisCouplingEntry())
+  spec.csharp:
+  - uid: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+    name: SetCouplings
+    href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___
+  - name: (
+  - uid: TwinSharp.CNC.AxisCouplingEntry
+    name: AxisCouplingEntry
+    href: TwinSharp.CNC.AxisCouplingEntry.html
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.AxisCoupling.SetCouplings(TwinSharp.CNC.AxisCouplingEntry[])
+    name: SetCouplings
+    href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___
+  - name: (
+  - uid: TwinSharp.CNC.AxisCouplingEntry
+    name: AxisCouplingEntry
+    href: TwinSharp.CNC.AxisCouplingEntry.html
+  - name: (
+  - name: )
+  - name: )
+- uid: TwinSharp.CNC.AxisCoupling.RemoveCouplings
+  commentId: M:TwinSharp.CNC.AxisCoupling.RemoveCouplings
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_RemoveCouplings
+  name: RemoveCouplings()
+  nameWithType: AxisCoupling.RemoveCouplings()
+  fullName: TwinSharp.CNC.AxisCoupling.RemoveCouplings()
+  spec.csharp:
+  - uid: TwinSharp.CNC.AxisCoupling.RemoveCouplings
+    name: RemoveCouplings
+    href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_RemoveCouplings
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.AxisCoupling.RemoveCouplings
+    name: RemoveCouplings
+    href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_RemoveCouplings
+  - name: (
+  - name: )
+- uid: TwinSharp.CNC.AxisCouplingMode.Direct
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Direct
+  href: TwinSharp.CNC.AxisCouplingMode.html#TwinSharp_CNC_AxisCouplingMode_Direct
+  name: Direct
+  nameWithType: AxisCouplingMode.Direct
+  fullName: TwinSharp.CNC.AxisCouplingMode.Direct
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.AxisCoupling.Enable*
+  commentId: Overload:TwinSharp.CNC.AxisCoupling.Enable
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_Enable
+  name: Enable
+  nameWithType: AxisCoupling.Enable
+  fullName: TwinSharp.CNC.AxisCoupling.Enable
+- uid: TwinSharp.CNC.AxisCouplingMode.Inactive
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Inactive
+  href: TwinSharp.CNC.AxisCouplingMode.html#TwinSharp_CNC_AxisCouplingMode_Inactive
+  name: Inactive
+  nameWithType: AxisCouplingMode.Inactive
+  fullName: TwinSharp.CNC.AxisCouplingMode.Inactive
+- uid: TwinSharp.CNC.HliConstants.HLI_AX_COUPLING_MAXIDX
+  commentId: F:TwinSharp.CNC.HliConstants.HLI_AX_COUPLING_MAXIDX
+  href: TwinSharp.CNC.HliConstants.html#TwinSharp_CNC_HliConstants_HLI_AX_COUPLING_MAXIDX
+  name: HLI_AX_COUPLING_MAXIDX
+  nameWithType: HliConstants.HLI_AX_COUPLING_MAXIDX
+  fullName: TwinSharp.CNC.HliConstants.HLI_AX_COUPLING_MAXIDX
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: TwinSharp.CNC.AxisCoupling.SetCouplings*
+  commentId: Overload:TwinSharp.CNC.AxisCoupling.SetCouplings
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___
+  name: SetCouplings
+  nameWithType: AxisCoupling.SetCouplings
+  fullName: TwinSharp.CNC.AxisCoupling.SetCouplings
+- uid: TwinSharp.CNC.AxisCouplingEntry[]
+  isExternal: true
+  href: TwinSharp.CNC.AxisCouplingEntry.html
+  name: AxisCouplingEntry[]
+  nameWithType: AxisCouplingEntry[]
+  fullName: TwinSharp.CNC.AxisCouplingEntry[]
+  nameWithType.vb: AxisCouplingEntry()
+  fullName.vb: TwinSharp.CNC.AxisCouplingEntry()
+  name.vb: AxisCouplingEntry()
+  spec.csharp:
+  - uid: TwinSharp.CNC.AxisCouplingEntry
+    name: AxisCouplingEntry
+    href: TwinSharp.CNC.AxisCouplingEntry.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: TwinSharp.CNC.AxisCouplingEntry
+    name: AxisCouplingEntry
+    href: TwinSharp.CNC.AxisCouplingEntry.html
+  - name: (
+  - name: )
+- uid: TwinSharp.CNC.AxisCoupling.RemoveCouplings*
+  commentId: Overload:TwinSharp.CNC.AxisCoupling.RemoveCouplings
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_RemoveCouplings
+  name: RemoveCouplings
+  nameWithType: AxisCoupling.RemoveCouplings
+  fullName: TwinSharp.CNC.AxisCoupling.RemoveCouplings
+- uid: TwinSharp.CNC.AxisCoupling.IsActive*
+  commentId: Overload:TwinSharp.CNC.AxisCoupling.IsActive
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_IsActive
+  name: IsActive
+  nameWithType: AxisCoupling.IsActive
+  fullName: TwinSharp.CNC.AxisCoupling.IsActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TwinSharp.CNC.AxisCoupling.Dispose*
+  commentId: Overload:TwinSharp.CNC.AxisCoupling.Dispose
+  href: TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_Dispose
+  name: Dispose
+  nameWithType: AxisCoupling.Dispose
+  fullName: TwinSharp.CNC.AxisCoupling.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

@@ -23,7 +23,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: AxisState
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 142
+    startLine: 150
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -50,7 +50,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_AXIS_READY
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 147
+    startLine: 155
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -78,7 +78,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_AXIS_ACTIVE
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 152
+    startLine: 160
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -106,7 +106,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_AXIS_HOLD
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 157
+    startLine: 165
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -134,7 +134,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: HLI_AXIS_ERROR
     path: ../TwinSharp/CNC/CncEnums.cs
-    startLine: 162
+    startLine: 170
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC

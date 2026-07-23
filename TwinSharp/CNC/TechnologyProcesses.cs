@@ -18,6 +18,11 @@ namespace TwinSharp.CNC
         /// </summary>
         public event EventHandler<HcodeNeedsAcknowledgeEventArgs>? HcodeNeedsAcknowledge;
 
+        /// <summary>
+        /// Event that is triggered when a T code (tool selection) needs to be acknowledged.
+        /// </summary>
+        public event EventHandler<TcodeNeedsAcknowledgeEventArgs>? TcodeNeedsAcknowledge;
+
         readonly AdsClient plcClient;
         readonly int channelNumber;
 
@@ -82,8 +87,17 @@ namespace TwinSharp.CNC
                 else if (unit.TechnologyType == TechnologyFunction.HLI_INTF_H_FKT)
                 {
                     var mHProcess = ReadMHinfo(unit.MSTH_PROCESS_CH);
-
                     TriggerHcodeNeedsAck(mHProcess, i);
+                }
+                else if (unit.TechnologyType == TechnologyFunction.HLI_INTF_TOOL)
+                {
+                    var mHProcess = ReadMHinfo(unit.MSTH_PROCESS_CH);
+
+                    string symbol = string.Format("HLI_Global_Variables.gpCh[{0}]^.techno_unit_std_sync[{1}].please_rw", channelNumber - 1, i);
+                    uint handle = plcClient.CreateVariableHandle(symbol);
+                    plcClient.WriteAny(handle, false);
+
+                    TriggerTcodeNeedsAck(mHProcess, i);
                 }
             }
         }
@@ -98,6 +112,12 @@ namespace TwinSharp.CNC
         {
             var ea = new HcodeNeedsAcknowledgeEventArgs(indexToAck, unitInfo);
             HcodeNeedsAcknowledge?.Invoke(this, ea);
+        }
+
+        private void TriggerTcodeNeedsAck(HLI_M_H_PROZESS unitInfo, int indexToAck)
+        {
+            var ea = new TcodeNeedsAcknowledgeEventArgs(indexToAck, unitInfo);
+            TcodeNeedsAcknowledge?.Invoke(this, ea);
         }
 
         private Dictionary<Identifier, uint> CreateVariableHandles(int channelNumber)
@@ -231,7 +251,26 @@ namespace TwinSharp.CNC
 
         internal HcodeNeedsAcknowledgeEventArgs(int indexToAck, HLI_M_H_PROZESS mHProcess)
         {
-            this.MhProcess = mHProcess;
+            IndexToAcknowledge = indexToAck;
+            MhProcess = mHProcess;
+        }
+    }
+
+    /// <summary>
+    /// Event args supplied when a T code (tool selection) needs to be acknowledged.
+    /// </summary>
+    public class TcodeNeedsAcknowledgeEventArgs
+    {
+        /// <summary> Index of technology to acknowledge when you are done processing this T-code.</summary>
+        public readonly int IndexToAcknowledge;
+
+        /// <summary> The T-number (tool number) programmed in the NC block. </summary>
+        public readonly uint ToolNumber;
+
+        internal TcodeNeedsAcknowledgeEventArgs(int indexToAck, HLI_M_H_PROZESS mHProcess)
+        {
+            IndexToAcknowledge = indexToAck;
+            ToolNumber = mHProcess.Number;
         }
     }
 

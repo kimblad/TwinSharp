@@ -1,0 +1,882 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.DistanceControl
+  commentId: T:TwinSharp.CNC.DistanceControl
+  id: DistanceControl
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)
+  - TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)
+  - TwinSharp.CNC.DistanceControl.Deactivate
+  - TwinSharp.CNC.DistanceControl.Dispose
+  - TwinSharp.CNC.DistanceControl.Enable
+  - TwinSharp.CNC.DistanceControl.Freeze
+  - TwinSharp.CNC.DistanceControl.GetActualOffsetMm
+  - TwinSharp.CNC.DistanceControl.GetActualPositionMm
+  - TwinSharp.CNC.DistanceControl.GetState
+  - TwinSharp.CNC.DistanceControl.Reference(System.Double)
+  langs:
+  - csharp
+  - vb
+  name: DistanceControl
+  nameWithType: DistanceControl
+  fullName: TwinSharp.CNC.DistanceControl
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DistanceControl
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 24
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Wraps the TF5200 distance control HLI for a single CNC axis.
+
+    Allows enabling the interface, issuing commands (activate/freeze/deactivate),
+
+    and reading state and position feedback via ADS variable handles.
+
+
+    Two activation modes are supported:
+
+    <ul><li><b>SET_POS mode</b> (<xref href="TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)" data-throw-if-not-resolved="false"></xref>): the CNC adjusts the axis
+      to hold the workpiece surface at a commanded absolute position.</li><li><b>Constant-distance mode</b> (<xref href="TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)" data-throw-if-not-resolved="false"></xref>): the CNC
+      maintains a fixed gap between tool and workpiece surface.</li></ul>
+
+    The sensor must be wired as Encoder 2 on the axis and configured in TwinCAT.
+
+    Parameter P-AXIS-00328 must be set to enable the distance control function globally for the axis.
+
+
+    Semaphore handshake: after writing a command, <code>command_semaphor_rw</code> is set to <code>true</code>.
+
+    The CNC clears it back to <code>false</code> once the command is latched. In debug contexts it is
+
+    acceptable not to wait for clearance before issuing the next command.
+  example: []
+  syntax:
+    content: 'public class DistanceControl : IDisposable'
+    content.vb: Public Class DistanceControl Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.CNC.DistanceControl.Enable
+  commentId: M:TwinSharp.CNC.DistanceControl.Enable
+  id: Enable
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: DistanceControl.Enable()
+  fullName: TwinSharp.CNC.DistanceControl.Enable()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Enable
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 66
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Signals to the CNC that this HLI interface is present.
+
+    Creates the ADS variable handles on first call — this is where AdsErrorCode 1808 will
+
+    surface if TF5200 is not configured on the machine or the axis.
+
+    Must be called once after connect before any distance control commands will be accepted.
+  example: []
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable()
+  overload: TwinSharp.CNC.DistanceControl.Enable*
+- uid: TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)
+  commentId: M:TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)
+  id: ActivateSetPos(System.Double)
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: ActivateSetPos(double)
+  nameWithType: DistanceControl.ActivateSetPos(double)
+  fullName: TwinSharp.CNC.DistanceControl.ActivateSetPos(double)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActivateSetPos
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 76
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Activates distance control in SET_POS mode. The CNC will adjust the axis so that
+
+    the workpiece surface is held at <code class="paramref">positionMm</code> (absolute, in mm).
+  example: []
+  syntax:
+    content: public void ActivateSetPos(double positionMm)
+    parameters:
+    - id: positionMm
+      type: System.Double
+    content.vb: Public Sub ActivateSetPos(positionMm As Double)
+  overload: TwinSharp.CNC.DistanceControl.ActivateSetPos*
+  nameWithType.vb: DistanceControl.ActivateSetPos(Double)
+  fullName.vb: TwinSharp.CNC.DistanceControl.ActivateSetPos(Double)
+  name.vb: ActivateSetPos(Double)
+- uid: TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)
+  commentId: M:TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)
+  id: ActivateConstDistance(System.Double)
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: ActivateConstDistance(double)
+  nameWithType: DistanceControl.ActivateConstDistance(double)
+  fullName: TwinSharp.CNC.DistanceControl.ActivateConstDistance(double)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ActivateConstDistance
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 89
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Activates distance control in constant-distance mode. The CNC will maintain a fixed
+
+    gap of <code class="paramref">distanceMm</code> mm between tool and workpiece surface.
+  example: []
+  syntax:
+    content: public void ActivateConstDistance(double distanceMm)
+    parameters:
+    - id: distanceMm
+      type: System.Double
+    content.vb: Public Sub ActivateConstDistance(distanceMm As Double)
+  overload: TwinSharp.CNC.DistanceControl.ActivateConstDistance*
+  nameWithType.vb: DistanceControl.ActivateConstDistance(Double)
+  fullName.vb: TwinSharp.CNC.DistanceControl.ActivateConstDistance(Double)
+  name.vb: ActivateConstDistance(Double)
+- uid: TwinSharp.CNC.DistanceControl.Freeze
+  commentId: M:TwinSharp.CNC.DistanceControl.Freeze
+  id: Freeze
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: Freeze()
+  nameWithType: DistanceControl.Freeze()
+  fullName: TwinSharp.CNC.DistanceControl.Freeze()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Freeze
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 102
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Freezes the current distance control offset. The axis stops tracking the sensor;
+
+    the last-applied offset remains active. Transitions to <xref href="TwinSharp.CNC.DistanceControlState.Freeze" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Freeze()
+    content.vb: Public Sub Freeze()
+  overload: TwinSharp.CNC.DistanceControl.Freeze*
+- uid: TwinSharp.CNC.DistanceControl.Deactivate
+  commentId: M:TwinSharp.CNC.DistanceControl.Deactivate
+  id: Deactivate
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: Deactivate()
+  nameWithType: DistanceControl.Deactivate()
+  fullName: TwinSharp.CNC.DistanceControl.Deactivate()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Deactivate
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 114
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Deactivates distance control. The offset ramps to zero and the state transitions to
+
+    <xref href="TwinSharp.CNC.DistanceControlState.TurningOff" data-throw-if-not-resolved="false"></xref>, then automatically to
+
+    <xref href="TwinSharp.CNC.DistanceControlState.Inactive" data-throw-if-not-resolved="false"></xref> once the ramp completes.
+  example: []
+  syntax:
+    content: public void Deactivate()
+    content.vb: Public Sub Deactivate()
+  overload: TwinSharp.CNC.DistanceControl.Deactivate*
+- uid: TwinSharp.CNC.DistanceControl.Reference(System.Double)
+  commentId: M:TwinSharp.CNC.DistanceControl.Reference(System.Double)
+  id: Reference(System.Double)
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: Reference(double)
+  nameWithType: DistanceControl.Reference(double)
+  fullName: TwinSharp.CNC.DistanceControl.Reference(double)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Reference
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 126
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    References the sensor zero point. Use when the sensor is not absolute and a known
+
+    reference position must be latched. Transitions to <xref href="TwinSharp.CNC.DistanceControlState.Inactive" data-throw-if-not-resolved="false"></xref>
+
+    after referencing completes.
+  example: []
+  syntax:
+    content: public void Reference(double refPositionMm)
+    parameters:
+    - id: refPositionMm
+      type: System.Double
+    content.vb: Public Sub Reference(refPositionMm As Double)
+  overload: TwinSharp.CNC.DistanceControl.Reference*
+  nameWithType.vb: DistanceControl.Reference(Double)
+  fullName.vb: TwinSharp.CNC.DistanceControl.Reference(Double)
+  name.vb: Reference(Double)
+- uid: TwinSharp.CNC.DistanceControl.GetState
+  commentId: M:TwinSharp.CNC.DistanceControl.GetState
+  id: GetState
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: GetState()
+  nameWithType: DistanceControl.GetState()
+  fullName: TwinSharp.CNC.DistanceControl.GetState()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetState
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 139
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reads the current distance control state (0 = Inactive, 1 = Active, …).
+
+    Requires <xref href="TwinSharp.CNC.DistanceControl.Enable" data-throw-if-not-resolved="false"></xref> to have been called first.
+  example: []
+  syntax:
+    content: public DistanceControlState GetState()
+    return:
+      type: TwinSharp.CNC.DistanceControlState
+    content.vb: Public Function GetState() As DistanceControlState
+  overload: TwinSharp.CNC.DistanceControl.GetState*
+- uid: TwinSharp.CNC.DistanceControl.GetActualPositionMm
+  commentId: M:TwinSharp.CNC.DistanceControl.GetActualPositionMm
+  id: GetActualPositionMm
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: GetActualPositionMm()
+  nameWithType: DistanceControl.GetActualPositionMm()
+  fullName: TwinSharp.CNC.DistanceControl.GetActualPositionMm()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetActualPositionMm
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 149
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reads the workpiece surface position currently measured by the sensor, in mm.
+
+    Requires <xref href="TwinSharp.CNC.DistanceControl.Enable" data-throw-if-not-resolved="false"></xref> to have been called first.
+  example: []
+  syntax:
+    content: public double GetActualPositionMm()
+    return:
+      type: System.Double
+    content.vb: Public Function GetActualPositionMm() As Double
+  overload: TwinSharp.CNC.DistanceControl.GetActualPositionMm*
+- uid: TwinSharp.CNC.DistanceControl.GetActualOffsetMm
+  commentId: M:TwinSharp.CNC.DistanceControl.GetActualOffsetMm
+  id: GetActualOffsetMm
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: GetActualOffsetMm()
+  nameWithType: DistanceControl.GetActualOffsetMm()
+  fullName: TwinSharp.CNC.DistanceControl.GetActualOffsetMm()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetActualOffsetMm
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 160
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reads the position offset currently being applied to the axis by the distance
+
+    controller, in mm. Zero when inactive.
+
+    Requires <xref href="TwinSharp.CNC.DistanceControl.Enable" data-throw-if-not-resolved="false"></xref> to have been called first.
+  example: []
+  syntax:
+    content: public double GetActualOffsetMm()
+    return:
+      type: System.Double
+    content.vb: Public Function GetActualOffsetMm() As Double
+  overload: TwinSharp.CNC.DistanceControl.GetActualOffsetMm*
+- uid: TwinSharp.CNC.DistanceControl.Dispose
+  commentId: M:TwinSharp.CNC.DistanceControl.Dispose
+  id: Dispose
+  parent: TwinSharp.CNC.DistanceControl
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DistanceControl.Dispose()
+  fullName: TwinSharp.CNC.DistanceControl.Dispose()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Dispose
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 166
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: TwinSharp.CNC.DistanceControl.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)
+  commentId: M:TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)
+  isExternal: true
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateSetPos_System_Double_
+  name: ActivateSetPos(double)
+  nameWithType: DistanceControl.ActivateSetPos(double)
+  fullName: TwinSharp.CNC.DistanceControl.ActivateSetPos(double)
+  nameWithType.vb: DistanceControl.ActivateSetPos(Double)
+  fullName.vb: TwinSharp.CNC.DistanceControl.ActivateSetPos(Double)
+  name.vb: ActivateSetPos(Double)
+  spec.csharp:
+  - uid: TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)
+    name: ActivateSetPos
+    href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateSetPos_System_Double_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)
+    name: ActivateSetPos
+    href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateSetPos_System_Double_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)
+  commentId: M:TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)
+  isExternal: true
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateConstDistance_System_Double_
+  name: ActivateConstDistance(double)
+  nameWithType: DistanceControl.ActivateConstDistance(double)
+  fullName: TwinSharp.CNC.DistanceControl.ActivateConstDistance(double)
+  nameWithType.vb: DistanceControl.ActivateConstDistance(Double)
+  fullName.vb: TwinSharp.CNC.DistanceControl.ActivateConstDistance(Double)
+  name.vb: ActivateConstDistance(Double)
+  spec.csharp:
+  - uid: TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)
+    name: ActivateConstDistance
+    href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateConstDistance_System_Double_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)
+    name: ActivateConstDistance
+    href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateConstDistance_System_Double_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.DistanceControl.Enable*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.Enable
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Enable
+  name: Enable
+  nameWithType: DistanceControl.Enable
+  fullName: TwinSharp.CNC.DistanceControl.Enable
+- uid: TwinSharp.CNC.DistanceControl.ActivateSetPos*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.ActivateSetPos
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateSetPos_System_Double_
+  name: ActivateSetPos
+  nameWithType: DistanceControl.ActivateSetPos
+  fullName: TwinSharp.CNC.DistanceControl.ActivateSetPos
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TwinSharp.CNC.DistanceControl.ActivateConstDistance*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.ActivateConstDistance
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateConstDistance_System_Double_
+  name: ActivateConstDistance
+  nameWithType: DistanceControl.ActivateConstDistance
+  fullName: TwinSharp.CNC.DistanceControl.ActivateConstDistance
+- uid: TwinSharp.CNC.DistanceControlState.Freeze
+  commentId: F:TwinSharp.CNC.DistanceControlState.Freeze
+  href: TwinSharp.CNC.DistanceControlState.html#TwinSharp_CNC_DistanceControlState_Freeze
+  name: Freeze
+  nameWithType: DistanceControlState.Freeze
+  fullName: TwinSharp.CNC.DistanceControlState.Freeze
+- uid: TwinSharp.CNC.DistanceControl.Freeze*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.Freeze
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Freeze
+  name: Freeze
+  nameWithType: DistanceControl.Freeze
+  fullName: TwinSharp.CNC.DistanceControl.Freeze
+- uid: TwinSharp.CNC.DistanceControlState.TurningOff
+  commentId: F:TwinSharp.CNC.DistanceControlState.TurningOff
+  href: TwinSharp.CNC.DistanceControlState.html#TwinSharp_CNC_DistanceControlState_TurningOff
+  name: TurningOff
+  nameWithType: DistanceControlState.TurningOff
+  fullName: TwinSharp.CNC.DistanceControlState.TurningOff
+- uid: TwinSharp.CNC.DistanceControlState.Inactive
+  commentId: F:TwinSharp.CNC.DistanceControlState.Inactive
+  href: TwinSharp.CNC.DistanceControlState.html#TwinSharp_CNC_DistanceControlState_Inactive
+  name: Inactive
+  nameWithType: DistanceControlState.Inactive
+  fullName: TwinSharp.CNC.DistanceControlState.Inactive
+- uid: TwinSharp.CNC.DistanceControl.Deactivate*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.Deactivate
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Deactivate
+  name: Deactivate
+  nameWithType: DistanceControl.Deactivate
+  fullName: TwinSharp.CNC.DistanceControl.Deactivate
+- uid: TwinSharp.CNC.DistanceControl.Reference*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.Reference
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Reference_System_Double_
+  name: Reference
+  nameWithType: DistanceControl.Reference
+  fullName: TwinSharp.CNC.DistanceControl.Reference
+- uid: TwinSharp.CNC.DistanceControl.Enable
+  commentId: M:TwinSharp.CNC.DistanceControl.Enable
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Enable
+  name: Enable()
+  nameWithType: DistanceControl.Enable()
+  fullName: TwinSharp.CNC.DistanceControl.Enable()
+  spec.csharp:
+  - uid: TwinSharp.CNC.DistanceControl.Enable
+    name: Enable
+    href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Enable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.DistanceControl.Enable
+    name: Enable
+    href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Enable
+  - name: (
+  - name: )
+- uid: TwinSharp.CNC.DistanceControl.GetState*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.GetState
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_GetState
+  name: GetState
+  nameWithType: DistanceControl.GetState
+  fullName: TwinSharp.CNC.DistanceControl.GetState
+- uid: TwinSharp.CNC.DistanceControlState
+  commentId: T:TwinSharp.CNC.DistanceControlState
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControlState.html
+  name: DistanceControlState
+  nameWithType: DistanceControlState
+  fullName: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControl.GetActualPositionMm*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.GetActualPositionMm
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_GetActualPositionMm
+  name: GetActualPositionMm
+  nameWithType: DistanceControl.GetActualPositionMm
+  fullName: TwinSharp.CNC.DistanceControl.GetActualPositionMm
+- uid: TwinSharp.CNC.DistanceControl.GetActualOffsetMm*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.GetActualOffsetMm
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_GetActualOffsetMm
+  name: GetActualOffsetMm
+  nameWithType: DistanceControl.GetActualOffsetMm
+  fullName: TwinSharp.CNC.DistanceControl.GetActualOffsetMm
+- uid: TwinSharp.CNC.DistanceControl.Dispose*
+  commentId: Overload:TwinSharp.CNC.DistanceControl.Dispose
+  href: TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Dispose
+  name: Dispose
+  nameWithType: DistanceControl.Dispose
+  fullName: TwinSharp.CNC.DistanceControl.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

@@ -14,6 +14,9 @@ items:
   - TwinSharp.CNC.BlockSearch.MaxPathDeviation
   - TwinSharp.CNC.BlockSearch.NoStopOnResumption
   - TwinSharp.CNC.BlockSearch.ProgramStartAsOfFileOffset
+  - TwinSharp.CNC.BlockSearch.StartPositionFileName
+  - TwinSharp.CNC.BlockSearch.StartPositionFileOffset
+  - TwinSharp.CNC.BlockSearch.StartPositionPathId
   langs:
   - csharp
   - vb
@@ -68,7 +71,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BlockSearchType
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -99,7 +102,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BlockNumberToFind
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 32
+    startLine: 34
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -130,7 +133,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: AutomaticResumption
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 41
+    startLine: 43
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -161,7 +164,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: NoStopOnResumption
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 50
+    startLine: 52
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -192,7 +195,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: MaxPathDeviation
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 61
+    startLine: 63
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -226,7 +229,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ProgramStartAsOfFileOffset
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 70
+    startLine: 72
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -239,6 +242,110 @@ items:
       type: System.Int32
     content.vb: Public WriteOnly Property ProgramStartAsOfFileOffset As Integer
   overload: TwinSharp.CNC.BlockSearch.ProgramStartAsOfFileOffset*
+- uid: TwinSharp.CNC.BlockSearch.StartPositionFileOffset
+  commentId: P:TwinSharp.CNC.BlockSearch.StartPositionFileOffset
+  id: StartPositionFileOffset
+  parent: TwinSharp.CNC.BlockSearch
+  langs:
+  - csharp
+  - vb
+  name: StartPositionFileOffset
+  nameWithType: BlockSearch.StartPositionFileOffset
+  fullName: TwinSharp.CNC.BlockSearch.StartPositionFileOffset
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StartPositionFileOffset
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 84
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Type 1: File offset at which actual machining is to continue (start of the target NC row).
+
+    IndexGroup 0x000201xx, offset 0x50.
+  example: []
+  syntax:
+    content: public int StartPositionFileOffset { set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public WriteOnly Property StartPositionFileOffset As Integer
+  overload: TwinSharp.CNC.BlockSearch.StartPositionFileOffset*
+- uid: TwinSharp.CNC.BlockSearch.StartPositionFileName
+  commentId: P:TwinSharp.CNC.BlockSearch.StartPositionFileName
+  id: StartPositionFileName
+  parent: TwinSharp.CNC.BlockSearch
+  langs:
+  - csharp
+  - vb
+  name: StartPositionFileName
+  nameWithType: BlockSearch.StartPositionFileName
+  fullName: TwinSharp.CNC.BlockSearch.StartPositionFileName
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StartPositionFileName
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 94
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Type 1: Name (full path) of the NC file that contains the start position.
+
+    Must match the filename passed to program start exactly.
+
+    IndexGroup 0x000201xx, offset 0x4F. Max 84 characters.
+  example: []
+  syntax:
+    content: public string StartPositionFileName { set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public WriteOnly Property StartPositionFileName As String
+  overload: TwinSharp.CNC.BlockSearch.StartPositionFileName*
+- uid: TwinSharp.CNC.BlockSearch.StartPositionPathId
+  commentId: P:TwinSharp.CNC.BlockSearch.StartPositionPathId
+  id: StartPositionPathId
+  parent: TwinSharp.CNC.BlockSearch
+  langs:
+  - csharp
+  - vb
+  name: StartPositionPathId
+  nameWithType: BlockSearch.StartPositionPathId
+  fullName: TwinSharp.CNC.BlockSearch.StartPositionPathId
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/BlockSearch.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: StartPositionPathId
+    path: ../TwinSharp/CNC/BlockSearch.cs
+    startLine: 103
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Type 1: Whether the file is on the main-program (HP=0) or subroutine (UP=1) path.
+
+    IndexGroup 0x000201xx, offset 0x4E.
+  example: []
+  syntax:
+    content: public ushort StartPositionPathId { set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public WriteOnly Property StartPositionPathId As UShort
+  overload: TwinSharp.CNC.BlockSearch.StartPositionPathId*
 - uid: TwinSharp.CNC.BlockSearch.BreakPoint
   commentId: P:TwinSharp.CNC.BlockSearch.BreakPoint
   id: BreakPoint
@@ -257,7 +364,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BreakPoint
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 79
+    startLine: 112
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -291,7 +398,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CoveredDistanceFromProgramStart
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 89
+    startLine: 122
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -325,7 +432,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CoveredDistanceMotionBlockInPerMill
     path: ../TwinSharp/CNC/BlockSearch.cs
-    startLine: 99
+    startLine: 132
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -677,6 +784,46 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: TwinSharp.CNC.BlockSearch.StartPositionFileOffset*
+  commentId: Overload:TwinSharp.CNC.BlockSearch.StartPositionFileOffset
+  href: TwinSharp.CNC.BlockSearch.html#TwinSharp_CNC_BlockSearch_StartPositionFileOffset
+  name: StartPositionFileOffset
+  nameWithType: BlockSearch.StartPositionFileOffset
+  fullName: TwinSharp.CNC.BlockSearch.StartPositionFileOffset
+- uid: TwinSharp.CNC.BlockSearch.StartPositionFileName*
+  commentId: Overload:TwinSharp.CNC.BlockSearch.StartPositionFileName
+  href: TwinSharp.CNC.BlockSearch.html#TwinSharp_CNC_BlockSearch_StartPositionFileName
+  name: StartPositionFileName
+  nameWithType: BlockSearch.StartPositionFileName
+  fullName: TwinSharp.CNC.BlockSearch.StartPositionFileName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TwinSharp.CNC.BlockSearch.StartPositionPathId*
+  commentId: Overload:TwinSharp.CNC.BlockSearch.StartPositionPathId
+  href: TwinSharp.CNC.BlockSearch.html#TwinSharp_CNC_BlockSearch_StartPositionPathId
+  name: StartPositionPathId
+  nameWithType: BlockSearch.StartPositionPathId
+  fullName: TwinSharp.CNC.BlockSearch.StartPositionPathId
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
 - uid: TwinSharp.CNC.BlockSearch.BreakPoint*
   commentId: Overload:TwinSharp.CNC.BlockSearch.BreakPoint
   href: TwinSharp.CNC.BlockSearch.html#TwinSharp_CNC_BlockSearch_BreakPoint

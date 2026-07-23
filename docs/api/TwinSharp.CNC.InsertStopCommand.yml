@@ -1,0 +1,855 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.InsertStopCommand
+  commentId: T:TwinSharp.CNC.InsertStopCommand
+  id: InsertStopCommand
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.InsertStopCommand.Clear
+  - TwinSharp.CNC.InsertStopCommand.Dispose
+  - TwinSharp.CNC.InsertStopCommand.Enable
+  - TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm
+  - TwinSharp.CNC.InsertStopCommand.GetEnable
+  - TwinSharp.CNC.InsertStopCommand.GetSemaphore
+  - TwinSharp.CNC.InsertStopCommand.GetState
+  - TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance(System.Double)
+  - TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)
+  - TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance(System.Double)
+  langs:
+  - csharp
+  - vb
+  name: InsertStopCommand
+  nameWithType: InsertStopCommand
+  fullName: TwinSharp.CNC.InsertStopCommand
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InsertStopCommand
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 14
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Allows insertion of CNC stop marks into a running NC program at runtime via the HLI
+
+    <code>bahn_mc_control.insert_cmd</code> control unit.
+
+    <p>
+
+    In POSITION mode (logicalAxisNumber &gt; 0 in <xref href="TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double%2cSystem.UInt32)" data-throw-if-not-resolved="false"></xref>) the CNC
+
+    stops the first time the specified axis reaches the commanded position. The stop behaves
+
+    like M00 — the operator presses Continue to resume.
+
+    </p><p>Requires <code>P-STUP-00033</code> (fb_storage_size) to be non-zero on the machine.</p>
+  example: []
+  syntax:
+    content: 'public class InsertStopCommand : IDisposable'
+    content.vb: Public Class InsertStopCommand Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.CNC.InsertStopCommand.Enable
+  commentId: M:TwinSharp.CNC.InsertStopCommand.Enable
+  id: Enable
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: InsertStopCommand.Enable()
+  fullName: TwinSharp.CNC.InsertStopCommand.Enable()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Enable
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 46
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Signals to the CNC that this interface is present. Must be called once after connect
+
+    before any insert commands will be acknowledged.
+  example: []
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable()
+  overload: TwinSharp.CNC.InsertStopCommand.Enable*
+- uid: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)
+  commentId: M:TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)
+  id: InsertAtPosition(System.Double,System.UInt32)
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: InsertAtPosition(double, uint)
+  nameWithType: InsertStopCommand.InsertAtPosition(double, uint)
+  fullName: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(double, uint)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InsertAtPosition
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 57
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Inserts a one-shot absolute stop (M00) the first time <code class="paramref">logicalAxisNumber</code>
+
+    reaches <code class="paramref">positionMm</code>. If the program is already past that position the
+
+    stop is triggered immediately.
+  example: []
+  syntax:
+    content: public void InsertAtPosition(double positionMm, uint logicalAxisNumber)
+    parameters:
+    - id: positionMm
+      type: System.Double
+      description: Target axis position in mm.
+    - id: logicalAxisNumber
+      type: System.UInt32
+      description: >-
+        Logical axis number (&gt; 0). Use the X-axis logical
+            number for a marker-based stop.
+    content.vb: Public Sub InsertAtPosition(positionMm As Double, logicalAxisNumber As UInteger)
+  overload: TwinSharp.CNC.InsertStopCommand.InsertAtPosition*
+  nameWithType.vb: InsertStopCommand.InsertAtPosition(Double, UInteger)
+  fullName.vb: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(Double, UInteger)
+  name.vb: InsertAtPosition(Double, UInteger)
+- uid: TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance(System.Double)
+  commentId: M:TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance(System.Double)
+  id: InsertAtRelativeDistance(System.Double)
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: InsertAtRelativeDistance(double)
+  nameWithType: InsertStopCommand.InsertAtRelativeDistance(double)
+  fullName: TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance(double)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InsertAtRelativeDistance
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 80
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Inserts a one-shot M00 stop after the CNC's path interpolator has traveled
+
+    <code class="paramref">remainingMm</code> more mm from its current position.
+
+    Uses DISTANCE mode (<code>axis_nr = 0</code>) with <code>rel_abs_mode = 2</code>
+
+    (one-off relative distance from the current interpolator position).
+  example: []
+  syntax:
+    content: public void InsertAtRelativeDistance(double remainingMm)
+    parameters:
+    - id: remainingMm
+      type: System.Double
+      description: Distance to travel before stopping, in mm.
+    content.vb: Public Sub InsertAtRelativeDistance(remainingMm As Double)
+  overload: TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance*
+  nameWithType.vb: InsertStopCommand.InsertAtRelativeDistance(Double)
+  fullName.vb: TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance(Double)
+  name.vb: InsertAtRelativeDistance(Double)
+- uid: TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance(System.Double)
+  commentId: M:TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance(System.Double)
+  id: InsertAtAbsoluteDistance(System.Double)
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: InsertAtAbsoluteDistance(double)
+  nameWithType: InsertStopCommand.InsertAtAbsoluteDistance(double)
+  fullName: TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance(double)
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InsertAtAbsoluteDistance
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 102
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Inserts a one-shot M00 stop at an absolute cumulative path distance
+
+    of <code class="paramref">absoluteDistMm</code> mm from the program start.
+
+    Uses DISTANCE mode (<code>axis_nr = 0</code>) with <code>rel_abs_mode = 1</code>
+
+    (one-off absolute distance from the program start).
+  example: []
+  syntax:
+    content: public void InsertAtAbsoluteDistance(double absoluteDistMm)
+    parameters:
+    - id: absoluteDistMm
+      type: System.Double
+      description: Absolute path distance from program start in mm.
+    content.vb: Public Sub InsertAtAbsoluteDistance(absoluteDistMm As Double)
+  overload: TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance*
+  nameWithType.vb: InsertStopCommand.InsertAtAbsoluteDistance(Double)
+  fullName.vb: TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance(Double)
+  name.vb: InsertAtAbsoluteDistance(Double)
+- uid: TwinSharp.CNC.InsertStopCommand.Clear
+  commentId: M:TwinSharp.CNC.InsertStopCommand.Clear
+  id: Clear
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: InsertStopCommand.Clear()
+  fullName: TwinSharp.CNC.InsertStopCommand.Clear()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Clear
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 121
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Cancels any pending insert stop that has not yet been reached.
+
+    Sending dist=0 with rel_abs_mode=0 (relative iterative) instructs the CNC to clear the stop.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: TwinSharp.CNC.InsertStopCommand.Clear*
+- uid: TwinSharp.CNC.InsertStopCommand.GetState
+  commentId: M:TwinSharp.CNC.InsertStopCommand.GetState
+  id: GetState
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: GetState()
+  nameWithType: InsertStopCommand.GetState()
+  fullName: TwinSharp.CNC.InsertStopCommand.GetState()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetState
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 135
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reads the current insert-command state.
+
+    0 = no stop commanded; 1 = stop commanded but not yet reached.
+  example: []
+  syntax:
+    content: public int GetState()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetState() As Integer
+  overload: TwinSharp.CNC.InsertStopCommand.GetState*
+- uid: TwinSharp.CNC.InsertStopCommand.GetEnable
+  commentId: M:TwinSharp.CNC.InsertStopCommand.GetEnable
+  id: GetEnable
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: GetEnable()
+  nameWithType: InsertStopCommand.GetEnable()
+  fullName: TwinSharp.CNC.InsertStopCommand.GetEnable()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetEnable
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 141
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reads whether the control unit is enabled (enable_w).
+  example: []
+  syntax:
+    content: public bool GetEnable()
+    return:
+      type: System.Boolean
+    content.vb: Public Function GetEnable() As Boolean
+  overload: TwinSharp.CNC.InsertStopCommand.GetEnable*
+- uid: TwinSharp.CNC.InsertStopCommand.GetSemaphore
+  commentId: M:TwinSharp.CNC.InsertStopCommand.GetSemaphore
+  id: GetSemaphore
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: GetSemaphore()
+  nameWithType: InsertStopCommand.GetSemaphore()
+  fullName: TwinSharp.CNC.InsertStopCommand.GetSemaphore()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetSemaphore
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 149
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reads the current semaphore value.
+
+    TRUE means the CNC has not yet consumed the last command.
+
+    FALSE means the CNC has read and processed it.
+  example: []
+  syntax:
+    content: public bool GetSemaphore()
+    return:
+      type: System.Boolean
+    content.vb: Public Function GetSemaphore() As Boolean
+  overload: TwinSharp.CNC.InsertStopCommand.GetSemaphore*
+- uid: TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm
+  commentId: M:TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm
+  id: GetDistanceOfNextStopMm
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: GetDistanceOfNextStopMm()
+  nameWithType: InsertStopCommand.GetDistanceOfNextStopMm()
+  fullName: TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GetDistanceOfNextStopMm
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 157
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reads the absolute path distance (dist_prog_start) at which the CNC will trigger
+
+    the next stop, in mm. Returns -1 if no stop has been found yet in the look-ahead
+
+    buffer (the stop may still be found as more blocks are pre-processed).
+  example: []
+  syntax:
+    content: public double GetDistanceOfNextStopMm()
+    return:
+      type: System.Double
+    content.vb: Public Function GetDistanceOfNextStopMm() As Double
+  overload: TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm*
+- uid: TwinSharp.CNC.InsertStopCommand.Dispose
+  commentId: M:TwinSharp.CNC.InsertStopCommand.Dispose
+  id: Dispose
+  parent: TwinSharp.CNC.InsertStopCommand
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: InsertStopCommand.Dispose()
+  fullName: TwinSharp.CNC.InsertStopCommand.Dispose()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/InsertStopCommand.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Dispose
+    path: ../TwinSharp/CNC/InsertStopCommand.cs
+    startLine: 160
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: TwinSharp.CNC.InsertStopCommand.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)
+  commentId: M:TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)
+  isExternal: true
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtPosition_System_Double_System_UInt32_
+  name: InsertAtPosition(double, uint)
+  nameWithType: InsertStopCommand.InsertAtPosition(double, uint)
+  fullName: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(double, uint)
+  nameWithType.vb: InsertStopCommand.InsertAtPosition(Double, UInteger)
+  fullName.vb: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(Double, UInteger)
+  name.vb: InsertAtPosition(Double, UInteger)
+  spec.csharp:
+  - uid: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)
+    name: InsertAtPosition
+    href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtPosition_System_Double_System_UInt32_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.InsertStopCommand.InsertAtPosition(System.Double,System.UInt32)
+    name: InsertAtPosition
+    href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtPosition_System_Double_System_UInt32_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: )
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.InsertStopCommand.Enable*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.Enable
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_Enable
+  name: Enable
+  nameWithType: InsertStopCommand.Enable
+  fullName: TwinSharp.CNC.InsertStopCommand.Enable
+- uid: TwinSharp.CNC.InsertStopCommand.InsertAtPosition*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.InsertAtPosition
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtPosition_System_Double_System_UInt32_
+  name: InsertAtPosition
+  nameWithType: InsertStopCommand.InsertAtPosition
+  fullName: TwinSharp.CNC.InsertStopCommand.InsertAtPosition
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtRelativeDistance_System_Double_
+  name: InsertAtRelativeDistance
+  nameWithType: InsertStopCommand.InsertAtRelativeDistance
+  fullName: TwinSharp.CNC.InsertStopCommand.InsertAtRelativeDistance
+- uid: TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtAbsoluteDistance_System_Double_
+  name: InsertAtAbsoluteDistance
+  nameWithType: InsertStopCommand.InsertAtAbsoluteDistance
+  fullName: TwinSharp.CNC.InsertStopCommand.InsertAtAbsoluteDistance
+- uid: TwinSharp.CNC.InsertStopCommand.Clear*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.Clear
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_Clear
+  name: Clear
+  nameWithType: InsertStopCommand.Clear
+  fullName: TwinSharp.CNC.InsertStopCommand.Clear
+- uid: TwinSharp.CNC.InsertStopCommand.GetState*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.GetState
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_GetState
+  name: GetState
+  nameWithType: InsertStopCommand.GetState
+  fullName: TwinSharp.CNC.InsertStopCommand.GetState
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.CNC.InsertStopCommand.GetEnable*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.GetEnable
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_GetEnable
+  name: GetEnable
+  nameWithType: InsertStopCommand.GetEnable
+  fullName: TwinSharp.CNC.InsertStopCommand.GetEnable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TwinSharp.CNC.InsertStopCommand.GetSemaphore*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.GetSemaphore
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_GetSemaphore
+  name: GetSemaphore
+  nameWithType: InsertStopCommand.GetSemaphore
+  fullName: TwinSharp.CNC.InsertStopCommand.GetSemaphore
+- uid: TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_GetDistanceOfNextStopMm
+  name: GetDistanceOfNextStopMm
+  nameWithType: InsertStopCommand.GetDistanceOfNextStopMm
+  fullName: TwinSharp.CNC.InsertStopCommand.GetDistanceOfNextStopMm
+- uid: TwinSharp.CNC.InsertStopCommand.Dispose*
+  commentId: Overload:TwinSharp.CNC.InsertStopCommand.Dispose
+  href: TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_Dispose
+  name: Dispose
+  nameWithType: InsertStopCommand.Dispose
+  fullName: TwinSharp.CNC.InsertStopCommand.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

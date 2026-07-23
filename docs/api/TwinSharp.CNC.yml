@@ -4,6 +4,10 @@ items:
   commentId: N:TwinSharp.CNC
   id: TwinSharp.CNC
   children:
+  - TwinSharp.CNC.AxisControlCommands
+  - TwinSharp.CNC.AxisCoupling
+  - TwinSharp.CNC.AxisCouplingEntry
+  - TwinSharp.CNC.AxisCouplingMode
   - TwinSharp.CNC.AxisState
   - TwinSharp.CNC.AxisStatus
   - TwinSharp.CNC.AxisStatusInChannel
@@ -21,22 +25,34 @@ items:
   - TwinSharp.CNC.ControlCommands
   - TwinSharp.CNC.DataStreaming
   - TwinSharp.CNC.DeleteDistanceToGo
+  - TwinSharp.CNC.DistanceControl
+  - TwinSharp.CNC.DistanceControlCommand
+  - TwinSharp.CNC.DistanceControlState
   - TwinSharp.CNC.DynamicPositionLimitation
   - TwinSharp.CNC.ErrorCodes
   - TwinSharp.CNC.ErrorManagement
   - TwinSharp.CNC.ErrorRecievedEventArgs
   - TwinSharp.CNC.Extensions
   - TwinSharp.CNC.ExternalAxisCommanding
+  - TwinSharp.CNC.ExternalVariables
   - TwinSharp.CNC.FeedOverride
   - TwinSharp.CNC.FeedOverrideAdresses
+  - TwinSharp.CNC.HLI_ACHS_NAME
   - TwinSharp.CNC.HLI_ADD_CMD_VALUE
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  - TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA
+  - TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+  - TwinSharp.CNC.HLI_CONVEYOR_DATA
   - TwinSharp.CNC.HLI_DYNPL_STATE
+  - TwinSharp.CNC.HLI_EDGE_FUNCTION
   - TwinSharp.CNC.HLI_ERROR_MASKE
   - TwinSharp.CNC.HLI_ERROR_SATZ
   - TwinSharp.CNC.HLI_ERROR_SATZ_KOPF
   - TwinSharp.CNC.HLI_ERROR_SATZ_RUMPF
   - TwinSharp.CNC.HLI_FB_ZEITANGABE
+  - TwinSharp.CNC.HLI_FILE_NAME
   - TwinSharp.CNC.HLI_HB_ACTIVATION
+  - TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
   - TwinSharp.CNC.HLI_HB_HR_PARAMETER
   - TwinSharp.CNC.HLI_HB_JOG_PARAMETER
   - TwinSharp.CNC.HLI_HB_KEY
@@ -44,39 +60,58 @@ items:
   - TwinSharp.CNC.HLI_HB_TIP_PARAMETER
   - TwinSharp.CNC.HLI_IMCM_MODE_STATE
   - TwinSharp.CNC.HLI_INTF_VERSION_NAME
+  - TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+  - TwinSharp.CNC.HLI_MC_IFC_ID
+  - TwinSharp.CNC.HLI_MC_JOB_DESCR
+  - TwinSharp.CNC.HLI_MC_JOB_STACK
   - TwinSharp.CNC.HLI_MODUL_NAME
+  - TwinSharp.CNC.HLI_MSG_SENDUNG
   - TwinSharp.CNC.HLI_M_H_PROZESS
   - TwinSharp.CNC.HLI_PROC_TRANS_TO_MODE_STATE
   - TwinSharp.CNC.HLI_RUMPF_NC_PROG
+  - TwinSharp.CNC.HLI_STATE_TTD
+  - TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  - TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+  - TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+  - TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
   - TwinSharp.CNC.HLI_WERT
   - TwinSharp.CNC.HLI_WERT_B
   - TwinSharp.CNC.HLI_WERT_B_DATA
   - TwinSharp.CNC.HLI_WERT_DATA
   - TwinSharp.CNC.HandWheelInc
   - TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs
+  - TwinSharp.CNC.HliConstants
   - TwinSharp.CNC.HrParameters
+  - TwinSharp.CNC.InsertStopCommand
   - TwinSharp.CNC.Interpolator
   - TwinSharp.CNC.InterpolatorAdresses
   - TwinSharp.CNC.JogParameters
   - TwinSharp.CNC.Key
   - TwinSharp.CNC.ManualOperation
   - TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs
+  - TwinSharp.CNC.NcMessageEventArgs
+  - TwinSharp.CNC.NcMessageMonitor
   - TwinSharp.CNC.ObjectDescription
   - TwinSharp.CNC.OperationMode
   - TwinSharp.CNC.OperationModeAdresses
   - TwinSharp.CNC.OperationModeManager
   - TwinSharp.CNC.OperationState
   - TwinSharp.CNC.RapidKey
+  - TwinSharp.CNC.RealTimeStatus
   - TwinSharp.CNC.SOLLKONT_VISU_ACHS_DATA_STD
   - TwinSharp.CNC.SOLLKONT_VISU_CH_DATA_STD
   - TwinSharp.CNC.SOLLKONT_VISU_DATA_V0
   - TwinSharp.CNC.SOLLKONT_VISU_PDU
   - TwinSharp.CNC.SingleBlock
   - TwinSharp.CNC.SkipModes
+  - TwinSharp.CNC.StateBahn
+  - TwinSharp.CNC.StopConditionFlags
   - TwinSharp.CNC.TECHNO_UNIT_CH
+  - TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs
   - TwinSharp.CNC.TechnologyFunction
   - TwinSharp.CNC.TechnologyProcesses
   - TwinSharp.CNC.TipParameters
+  - TwinSharp.CNC.ToolManagement
   - TwinSharp.CNC.ZeroOffsets
   langs:
   - csharp
@@ -88,6 +123,33 @@ items:
   assemblies:
   - TwinSharp
 references:
+- uid: TwinSharp.CNC.AxisControlCommands
+  commentId: T:TwinSharp.CNC.AxisControlCommands
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisControlCommands.html
+  name: AxisControlCommands
+  nameWithType: AxisControlCommands
+  fullName: TwinSharp.CNC.AxisControlCommands
+- uid: TwinSharp.CNC.AxisCoupling
+  commentId: T:TwinSharp.CNC.AxisCoupling
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisCoupling.html
+  name: AxisCoupling
+  nameWithType: AxisCoupling
+  fullName: TwinSharp.CNC.AxisCoupling
+- uid: TwinSharp.CNC.AxisCouplingMode
+  commentId: T:TwinSharp.CNC.AxisCouplingMode
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisCouplingMode.html
+  name: AxisCouplingMode
+  nameWithType: AxisCouplingMode
+  fullName: TwinSharp.CNC.AxisCouplingMode
+- uid: TwinSharp.CNC.AxisCouplingEntry
+  commentId: T:TwinSharp.CNC.AxisCouplingEntry
+  href: TwinSharp.CNC.AxisCouplingEntry.html
+  name: AxisCouplingEntry
+  nameWithType: AxisCouplingEntry
+  fullName: TwinSharp.CNC.AxisCouplingEntry
 - uid: TwinSharp.CNC.AxisStatus
   commentId: T:TwinSharp.CNC.AxisStatus
   parent: TwinSharp.CNC
@@ -196,6 +258,13 @@ references:
   name: TechnologyFunction
   nameWithType: TechnologyFunction
   fullName: TwinSharp.CNC.TechnologyFunction
+- uid: TwinSharp.CNC.StopConditionFlags
+  commentId: T:TwinSharp.CNC.StopConditionFlags
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.StopConditionFlags.html
+  name: StopConditionFlags
+  nameWithType: StopConditionFlags
+  fullName: TwinSharp.CNC.StopConditionFlags
 - uid: TwinSharp.CNC.CncPlatform
   commentId: T:TwinSharp.CNC.CncPlatform
   parent: TwinSharp.CNC
@@ -237,6 +306,27 @@ references:
   name: DeleteDistanceToGo
   nameWithType: DeleteDistanceToGo
   fullName: TwinSharp.CNC.DeleteDistanceToGo
+- uid: TwinSharp.CNC.DistanceControl
+  commentId: T:TwinSharp.CNC.DistanceControl
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControl.html
+  name: DistanceControl
+  nameWithType: DistanceControl
+  fullName: TwinSharp.CNC.DistanceControl
+- uid: TwinSharp.CNC.DistanceControlState
+  commentId: T:TwinSharp.CNC.DistanceControlState
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControlState.html
+  name: DistanceControlState
+  nameWithType: DistanceControlState
+  fullName: TwinSharp.CNC.DistanceControlState
+- uid: TwinSharp.CNC.DistanceControlCommand
+  commentId: T:TwinSharp.CNC.DistanceControlCommand
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControlCommand.html
+  name: DistanceControlCommand
+  nameWithType: DistanceControlCommand
+  fullName: TwinSharp.CNC.DistanceControlCommand
 - uid: TwinSharp.CNC.DynamicPositionLimitation
   commentId: T:TwinSharp.CNC.DynamicPositionLimitation
   parent: TwinSharp.CNC
@@ -283,6 +373,13 @@ references:
   name: ExternalAxisCommanding
   nameWithType: ExternalAxisCommanding
   fullName: TwinSharp.CNC.ExternalAxisCommanding
+- uid: TwinSharp.CNC.ExternalVariables
+  commentId: T:TwinSharp.CNC.ExternalVariables
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.ExternalVariables.html
+  name: ExternalVariables
+  nameWithType: ExternalVariables
+  fullName: TwinSharp.CNC.ExternalVariables
 - uid: TwinSharp.CNC.FeedOverride
   commentId: T:TwinSharp.CNC.FeedOverride
   parent: TwinSharp.CNC
@@ -297,6 +394,19 @@ references:
   name: FeedOverrideAdresses
   nameWithType: FeedOverrideAdresses
   fullName: TwinSharp.CNC.FeedOverrideAdresses
+- uid: TwinSharp.CNC.HliConstants
+  commentId: T:TwinSharp.CNC.HliConstants
+  href: TwinSharp.CNC.HliConstants.html
+  name: HliConstants
+  nameWithType: HliConstants
+  fullName: TwinSharp.CNC.HliConstants
+- uid: TwinSharp.CNC.InsertStopCommand
+  commentId: T:TwinSharp.CNC.InsertStopCommand
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.InsertStopCommand.html
+  name: InsertStopCommand
+  nameWithType: InsertStopCommand
+  fullName: TwinSharp.CNC.InsertStopCommand
 - uid: TwinSharp.CNC.Interpolator
   commentId: T:TwinSharp.CNC.Interpolator
   parent: TwinSharp.CNC
@@ -358,6 +468,19 @@ references:
   name: RapidKey
   nameWithType: RapidKey
   fullName: TwinSharp.CNC.RapidKey
+- uid: TwinSharp.CNC.NcMessageMonitor
+  commentId: T:TwinSharp.CNC.NcMessageMonitor
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.NcMessageMonitor.html
+  name: NcMessageMonitor
+  nameWithType: NcMessageMonitor
+  fullName: TwinSharp.CNC.NcMessageMonitor
+- uid: TwinSharp.CNC.NcMessageEventArgs
+  commentId: T:TwinSharp.CNC.NcMessageEventArgs
+  href: TwinSharp.CNC.NcMessageEventArgs.html
+  name: NcMessageEventArgs
+  nameWithType: NcMessageEventArgs
+  fullName: TwinSharp.CNC.NcMessageEventArgs
 - uid: TwinSharp.CNC.OperationModeManager
   commentId: T:TwinSharp.CNC.OperationModeManager
   parent: TwinSharp.CNC
@@ -372,6 +495,13 @@ references:
   name: OperationModeAdresses
   nameWithType: OperationModeAdresses
   fullName: TwinSharp.CNC.OperationModeAdresses
+- uid: TwinSharp.CNC.RealTimeStatus
+  commentId: T:TwinSharp.CNC.RealTimeStatus
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.RealTimeStatus.html
+  name: RealTimeStatus
+  nameWithType: RealTimeStatus
+  fullName: TwinSharp.CNC.RealTimeStatus
 - uid: TwinSharp.CNC.SingleBlock
   commentId: T:TwinSharp.CNC.SingleBlock
   parent: TwinSharp.CNC
@@ -561,6 +691,134 @@ references:
   name: HLI_HB_HR_PARAMETER
   nameWithType: HLI_HB_HR_PARAMETER
   fullName: TwinSharp.CNC.HLI_HB_HR_PARAMETER
+- uid: TwinSharp.CNC.HLI_MC_IFC_ID
+  commentId: T:TwinSharp.CNC.HLI_MC_IFC_ID
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_MC_IFC_ID.html
+  name: HLI_MC_IFC_ID
+  nameWithType: HLI_MC_IFC_ID
+  fullName: TwinSharp.CNC.HLI_MC_IFC_ID
+- uid: TwinSharp.CNC.HLI_MC_JOB_DESCR
+  commentId: T:TwinSharp.CNC.HLI_MC_JOB_DESCR
+  href: TwinSharp.CNC.HLI_MC_JOB_DESCR.html
+  name: HLI_MC_JOB_DESCR
+  nameWithType: HLI_MC_JOB_DESCR
+  fullName: TwinSharp.CNC.HLI_MC_JOB_DESCR
+- uid: TwinSharp.CNC.HLI_MC_JOB_STACK
+  commentId: T:TwinSharp.CNC.HLI_MC_JOB_STACK
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_MC_JOB_STACK.html
+  name: HLI_MC_JOB_STACK
+  nameWithType: HLI_MC_JOB_STACK
+  fullName: TwinSharp.CNC.HLI_MC_JOB_STACK
+- uid: TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+  commentId: T:TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_S_ADD_PROG_INFO.html
+  name: HLI_S_ADD_PROG_INFO
+  nameWithType: HLI_S_ADD_PROG_INFO
+  fullName: TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+- uid: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+  commentId: T:TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD.html
+  name: HLI_TRIPLE_BUF_HEAD
+  nameWithType: HLI_TRIPLE_BUF_HEAD
+  fullName: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+- uid: TwinSharp.CNC.HLI_STATE_TTD
+  commentId: T:TwinSharp.CNC.HLI_STATE_TTD
+  href: TwinSharp.CNC.HLI_STATE_TTD.html
+  name: HLI_STATE_TTD
+  nameWithType: HLI_STATE_TTD
+  fullName: TwinSharp.CNC.HLI_STATE_TTD
+- uid: TwinSharp.CNC.HLI_ACHS_NAME
+  commentId: T:TwinSharp.CNC.HLI_ACHS_NAME
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_ACHS_NAME.html
+  name: HLI_ACHS_NAME
+  nameWithType: HLI_ACHS_NAME
+  fullName: TwinSharp.CNC.HLI_ACHS_NAME
+- uid: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+  commentId: T:TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA.html
+  name: HLI_HB_AXIS_DISPLAY_DATA
+  nameWithType: HLI_HB_AXIS_DISPLAY_DATA
+  fullName: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  commentId: T:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  href: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.html
+  name: HLI_BAHN_COORD_DISP_DATA
+  nameWithType: HLI_BAHN_COORD_DISP_DATA
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+- uid: TwinSharp.CNC.HLI_CONVEYOR_DATA
+  commentId: T:TwinSharp.CNC.HLI_CONVEYOR_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_CONVEYOR_DATA.html
+  name: HLI_CONVEYOR_DATA
+  nameWithType: HLI_CONVEYOR_DATA
+  fullName: TwinSharp.CNC.HLI_CONVEYOR_DATA
+- uid: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  commentId: T:TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.html
+  name: HLI_STATE_TTD_TRIPLE_BUF
+  nameWithType: HLI_STATE_TTD_TRIPLE_BUF
+  fullName: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+- uid: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA
+  commentId: T:TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA
+  href: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA.html
+  name: HLI_BAHN_TRAFO_DISP_DATA
+  nameWithType: HLI_BAHN_TRAFO_DISP_DATA
+  fullName: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA
+- uid: TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+  commentId: T:TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_LOOKAHEAD_DATA.html
+  name: HLI_LOOKAHEAD_DATA
+  nameWithType: HLI_LOOKAHEAD_DATA
+  fullName: TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+- uid: TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+  commentId: T:TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_BLOCK_DYNAMIC.html
+  name: HLI_BLOCK_DYNAMIC
+  nameWithType: HLI_BLOCK_DYNAMIC
+  fullName: TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+- uid: TwinSharp.CNC.HLI_EDGE_FUNCTION
+  commentId: T:TwinSharp.CNC.HLI_EDGE_FUNCTION
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_EDGE_FUNCTION.html
+  name: HLI_EDGE_FUNCTION
+  nameWithType: HLI_EDGE_FUNCTION
+  fullName: TwinSharp.CNC.HLI_EDGE_FUNCTION
+- uid: TwinSharp.CNC.HLI_FILE_NAME
+  commentId: T:TwinSharp.CNC.HLI_FILE_NAME
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_FILE_NAME.html
+  name: HLI_FILE_NAME
+  nameWithType: HLI_FILE_NAME
+  fullName: TwinSharp.CNC.HLI_FILE_NAME
+- uid: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+  commentId: T:TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA.html
+  name: HLI_TOOL_PATH_DISP_DATA
+  nameWithType: HLI_TOOL_PATH_DISP_DATA
+  fullName: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+- uid: TwinSharp.CNC.StateBahn
+  commentId: T:TwinSharp.CNC.StateBahn
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.StateBahn.html
+  name: StateBahn
+  nameWithType: StateBahn
+  fullName: TwinSharp.CNC.StateBahn
+- uid: TwinSharp.CNC.HLI_MSG_SENDUNG
+  commentId: T:TwinSharp.CNC.HLI_MSG_SENDUNG
+  href: TwinSharp.CNC.HLI_MSG_SENDUNG.html
+  name: HLI_MSG_SENDUNG
+  nameWithType: HLI_MSG_SENDUNG
+  fullName: TwinSharp.CNC.HLI_MSG_SENDUNG
 - uid: TwinSharp.CNC.TechnologyProcesses
   commentId: T:TwinSharp.CNC.TechnologyProcesses
   parent: TwinSharp.CNC
@@ -574,12 +832,25 @@ references:
   name: HcodeNeedsAcknowledgeEventArgs
   nameWithType: HcodeNeedsAcknowledgeEventArgs
   fullName: TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs
+- uid: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs
+  commentId: T:TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs
+  href: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs.html
+  name: TcodeNeedsAcknowledgeEventArgs
+  nameWithType: TcodeNeedsAcknowledgeEventArgs
+  fullName: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs
 - uid: TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs
   commentId: T:TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs
   href: TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs.html
   name: McodeNeedsAcknowledgeEventArgs
   nameWithType: McodeNeedsAcknowledgeEventArgs
   fullName: TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs
+- uid: TwinSharp.CNC.ToolManagement
+  commentId: T:TwinSharp.CNC.ToolManagement
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.ToolManagement.html
+  name: ToolManagement
+  nameWithType: ToolManagement
+  fullName: TwinSharp.CNC.ToolManagement
 - uid: TwinSharp.CNC.ZeroOffsets
   commentId: T:TwinSharp.CNC.ZeroOffsets
   parent: TwinSharp.CNC

@@ -1,0 +1,2804 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.AxisControlCommands
+  commentId: T:TwinSharp.CNC.AxisControlCommands
+  id: AxisControlCommands
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand
+  - TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable
+  - TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest
+  - TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState
+  - TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand
+  - TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable
+  - TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest
+  - TwinSharp.CNC.AxisControlCommands.ControllerEnableState
+  - TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand
+  - TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable
+  - TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest
+  - TwinSharp.CNC.AxisControlCommands.DeactivateAxisState
+  - TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand
+  - TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable
+  - TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest
+  - TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState
+  - TwinSharp.CNC.AxisControlCommands.Dispose
+  - TwinSharp.CNC.AxisControlCommands.DriveOnCommand
+  - TwinSharp.CNC.AxisControlCommands.DriveOnEnable
+  - TwinSharp.CNC.AxisControlCommands.DriveOnRequest
+  - TwinSharp.CNC.AxisControlCommands.DriveOnState
+  - TwinSharp.CNC.AxisControlCommands.EnableAll
+  - TwinSharp.CNC.AxisControlCommands.FeedEnableCommand
+  - TwinSharp.CNC.AxisControlCommands.FeedEnableEnable
+  - TwinSharp.CNC.AxisControlCommands.FeedEnableRequest
+  - TwinSharp.CNC.AxisControlCommands.FeedEnableState
+  - TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand
+  - TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable
+  - TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest
+  - TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState
+  - TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand
+  - TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable
+  - TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest
+  - TwinSharp.CNC.AxisControlCommands.ProbingPositionState
+  - TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+  - TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+  - TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest
+  - TwinSharp.CNC.AxisControlCommands.ProbingSignalState
+  - TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand
+  - TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable
+  - TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest
+  - TwinSharp.CNC.AxisControlCommands.ReferenceCamState
+  - TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+  - TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable
+  - TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest
+  - TwinSharp.CNC.AxisControlCommands.ReferencePositionState
+  - TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+  - TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable
+  - TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest
+  - TwinSharp.CNC.AxisControlCommands.SetReferencePositionState
+  - TwinSharp.CNC.AxisControlCommands.TimestampCommand
+  - TwinSharp.CNC.AxisControlCommands.TimestampEnable
+  - TwinSharp.CNC.AxisControlCommands.TimestampRequest
+  - TwinSharp.CNC.AxisControlCommands.TimestampState
+  - TwinSharp.CNC.AxisControlCommands.TrackingModeCommand
+  - TwinSharp.CNC.AxisControlCommands.TrackingModeEnable
+  - TwinSharp.CNC.AxisControlCommands.TrackingModeRequest
+  - TwinSharp.CNC.AxisControlCommands.TrackingModeState
+  langs:
+  - csharp
+  - vb
+  name: AxisControlCommands
+  nameWithType: AxisControlCommands
+  fullName: TwinSharp.CNC.AxisControlCommands
+  type: Class
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisControlCommands
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 34
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Wraps the axis control commands of the HLI <code>lr_mc_control</code> control unit for a single CNC axis
+
+    (<code>gpAx[n].lr_mc_control.*</code>), as described in section "Axis control commands" of the HLI documentation.
+
+
+    <p>
+
+    Every command in this class is an MC control unit with four elements:
+
+    <ul><li><code>enable_w</code> — the PLC declares that it uses this control unit.
+      <b>The unit has no effect at all until this is TRUE</b>, so call the matching
+      <code>...Enable</code> setter (or <xref href="TwinSharp.CNC.AxisControlCommands.EnableAll" data-throw-if-not-resolved="false"></xref>) once after connecting.</li><li><code>command_w</code> — the value commanded by the PLC.</li><li><code>request_r</code> — the value requested by a GUI communicating directly with the CNC.
+      The PLC may accept the request by copying it into <code>command_w</code>, or ignore it.</li><li><code>state_r</code> — the CNC acknowledgement, used to check whether the command took effect.</li></ul></p><p>
+    Other parts of <code>lr_mc_control</code> live in their own classes:
+
+    <xref href="TwinSharp.CNC.AxisCoupling" data-throw-if-not-resolved="false"></xref> (<code>axis_coupling</code>), <xref href="TwinSharp.CNC.DistanceControl" data-throw-if-not-resolved="false"></xref> (<code>distance_control</code>)
+
+    and <xref href="TwinSharp.CNC.ExternalAxisCommanding" data-throw-if-not-resolved="false"></xref> (<code>add_cmd_values</code>).
+
+    The axis control commands that sit under <code>ipo_mc_control</code> (feedhold, override, reduced velocity, …)
+
+    are not part of this class.
+
+    </p><p><b>Precondition:</b><xref href="TwinSharp.CNC.CncAxis.PlcPresent" data-throw-if-not-resolved="false"></xref> must be set to <code>true</code> before the CNC
+
+    accepts any HLI command for the axis.
+
+    </p>
+  example: []
+  syntax:
+    content: 'public class AxisControlCommands : IDisposable'
+    content.vb: Public Class AxisControlCommands Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TwinSharp.CNC.AxisControlCommands.EnableAll
+  commentId: M:TwinSharp.CNC.AxisControlCommands.EnableAll
+  id: EnableAll
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: EnableAll()
+  nameWithType: AxisControlCommands.EnableAll()
+  fullName: TwinSharp.CNC.AxisControlCommands.EnableAll()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: EnableAll
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 96
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Declares to the CNC that the PLC uses <i>all</i> axis control commands of this axis
+
+    by setting every <code>enable_w</code> to <code>true</code>.
+
+    Creates the ADS variable handles on first call — this is where AdsErrorCode 1808 will surface
+
+    if the HLI is not available on the target.
+  example: []
+  syntax:
+    content: public void EnableAll()
+    content.vb: Public Sub EnableAll()
+  overload: TwinSharp.CNC.AxisControlCommands.EnableAll*
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.FeedEnableEnable
+  id: FeedEnableEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: FeedEnableEnable
+  nameWithType: AxisControlCommands.FeedEnableEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FeedEnableEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 109
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Declares that the PLC uses the axis-specific feed rate enable control unit.
+
+    Writes <code>release_feedhold.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool FeedEnableEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property FeedEnableEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.FeedEnableEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.FeedEnableCommand
+  id: FeedEnableCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: FeedEnableCommand
+  nameWithType: AxisControlCommands.FeedEnableCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FeedEnableCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 119
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Axis-specific feed rate enable. Must be set for every axis that is to be moved,
+
+    otherwise no path motion occurs.
+
+    <code>true</code> = drive enable, <code>false</code> = drive STOP. On a <code>true</code> → <code>false</code> transition
+
+    the drive is shut down in compliance with the acceleration parameters.
+
+    With SERCOS drives this is derived from bit 13 of the control word.
+
+    Writes <code>release_feedhold.command_w</code>.
+  example: []
+  syntax:
+    content: public bool FeedEnableCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FeedEnableCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.FeedEnableCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.FeedEnableRequest
+  id: FeedEnableRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: FeedEnableRequest
+  nameWithType: AxisControlCommands.FeedEnableRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FeedEnableRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 126
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Feed rate enable requested by a GUI. Reads <code>release_feedhold.request_r</code>.
+  example: []
+  syntax:
+    content: public bool FeedEnableRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property FeedEnableRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.FeedEnableRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.FeedEnableState
+  id: FeedEnableState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: FeedEnableState
+  nameWithType: AxisControlCommands.FeedEnableState
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: FeedEnableState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 132
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    CNC acknowledgement of the feed rate enable.
+
+    <code>true</code> = drive enable, <code>false</code> = drive STOP. Reads <code>release_feedhold.state_r</code>.
+  example: []
+  syntax:
+    content: public bool FeedEnableState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property FeedEnableState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.FeedEnableState*
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DriveOnEnable
+  id: DriveOnEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DriveOnEnable
+  nameWithType: AxisControlCommands.DriveOnEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DriveOnEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 141
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the drive ON control unit. Writes <code>drive_on.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool DriveOnEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property DriveOnEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DriveOnEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DriveOnCommand
+  id: DriveOnCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DriveOnCommand
+  nameWithType: AxisControlCommands.DriveOnCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DriveOnCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 149
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Drive ON. <code>true</code> = drive ON, <code>false</code> = drive OFF. On a <code>true</code> → <code>false</code>
+
+    transition the drive is shut down in the best possible manner.
+
+    With SERCOS drives this is derived from bit 15 of the control word.
+
+    Writes <code>drive_on.command_w</code>.
+  example: []
+  syntax:
+    content: public bool DriveOnCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DriveOnCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DriveOnCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DriveOnRequest
+  id: DriveOnRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DriveOnRequest
+  nameWithType: AxisControlCommands.DriveOnRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DriveOnRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 156
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Drive ON requested by a GUI. Reads <code>drive_on.request_r</code>.
+  example: []
+  syntax:
+    content: public bool DriveOnRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property DriveOnRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DriveOnRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DriveOnState
+  id: DriveOnState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DriveOnState
+  nameWithType: AxisControlCommands.DriveOnState
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DriveOnState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 162
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    CNC acknowledgement of drive ON. <code>true</code> = drive ON, <code>false</code> = drive OFF.
+
+    Reads <code>drive_on.state_r</code>.
+  example: []
+  syntax:
+    content: public bool DriveOnState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property DriveOnState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DriveOnState*
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable
+  id: ControllerEnableEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ControllerEnableEnable
+  nameWithType: AxisControlCommands.ControllerEnableEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControllerEnableEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 171
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the controller enable control unit. Writes <code>torque_permission.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool ControllerEnableEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property ControllerEnableEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand
+  id: ControllerEnableCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ControllerEnableCommand
+  nameWithType: AxisControlCommands.ControllerEnableCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControllerEnableCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 179
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Controller enable — axis-specific torque connection.
+
+    <code>true</code> = torque connection, <code>false</code> = drive is torque-free.
+
+    With SERCOS drives this is derived from bit 14 of the control word.
+
+    Writes <code>torque_permission.command_w</code>.
+  example: []
+  syntax:
+    content: public bool ControllerEnableCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ControllerEnableCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest
+  id: ControllerEnableRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ControllerEnableRequest
+  nameWithType: AxisControlCommands.ControllerEnableRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControllerEnableRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 186
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Controller enable requested by a GUI. Reads <code>torque_permission.request_r</code>.
+  example: []
+  syntax:
+    content: public bool ControllerEnableRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ControllerEnableRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ControllerEnableState
+  id: ControllerEnableState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ControllerEnableState
+  nameWithType: AxisControlCommands.ControllerEnableState
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ControllerEnableState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 189
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: CNC acknowledgement of the controller enable. Reads <code>torque_permission.state_r</code>.
+  example: []
+  syntax:
+    content: public bool ControllerEnableState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ControllerEnableState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ControllerEnableState*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable
+  id: ReferenceCamEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferenceCamEnable
+  nameWithType: AxisControlCommands.ReferenceCamEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferenceCamEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 198
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the reference cam control unit. Writes <code>reference_cam.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool ReferenceCamEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property ReferenceCamEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand
+  id: ReferenceCamCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferenceCamCommand
+  nameWithType: AxisControlCommands.ReferenceCamCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferenceCamCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 207
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reference cam signal when homing.
+
+    <code>true</code> = reference cam switched, <code>false</code> = reference cam not switched.
+
+    Only acts if <code>lr_hw[i].cam_direct_access</code> (P-AXIS-00036) is 0 in the axis parameter list.
+
+    <code>lr_hw[i].cam_level</code> (P-AXIS-00038) can invert this from high-active to low-active.
+
+    Writes <code>reference_cam.command_w</code>.
+  example: []
+  syntax:
+    content: public bool ReferenceCamCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ReferenceCamCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest
+  id: ReferenceCamRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferenceCamRequest
+  nameWithType: AxisControlCommands.ReferenceCamRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferenceCamRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 214
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reference cam requested by a GUI. Reads <code>reference_cam.request_r</code>.
+  example: []
+  syntax:
+    content: public bool ReferenceCamRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ReferenceCamRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferenceCamState
+  id: ReferenceCamState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferenceCamState
+  nameWithType: AxisControlCommands.ReferenceCamState
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferenceCamState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 217
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: CNC acknowledgement of the reference cam signal. Reads <code>reference_cam.state_r</code>.
+  example: []
+  syntax:
+    content: public bool ReferenceCamState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ReferenceCamState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ReferenceCamState*
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TrackingModeEnable
+  id: TrackingModeEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TrackingModeEnable
+  nameWithType: AxisControlCommands.TrackingModeEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TrackingModeEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 226
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the tracking mode control unit. Writes <code>follow_up.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool TrackingModeEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property TrackingModeEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.TrackingModeEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TrackingModeCommand
+  id: TrackingModeCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TrackingModeCommand
+  nameWithType: AxisControlCommands.TrackingModeCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TrackingModeCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 234
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Tracking mode. While <code>true</code> the control loop is open: the command value is set identical to
+
+    the actual value read in, so the position lag becomes 0.
+
+    Beware that an external force (for example the weight of the axis) can then slowly drift the axis position.
+
+    Writes <code>follow_up.command_w</code>.
+  example: []
+  syntax:
+    content: public bool TrackingModeCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property TrackingModeCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.TrackingModeCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TrackingModeRequest
+  id: TrackingModeRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TrackingModeRequest
+  nameWithType: AxisControlCommands.TrackingModeRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TrackingModeRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 241
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Tracking mode requested by a GUI. Reads <code>follow_up.request_r</code>.
+  example: []
+  syntax:
+    content: public bool TrackingModeRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TrackingModeRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.TrackingModeRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TrackingModeState
+  id: TrackingModeState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TrackingModeState
+  nameWithType: AxisControlCommands.TrackingModeState
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TrackingModeState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 244
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: CNC acknowledgement of tracking mode. Reads <code>follow_up.state_r</code>.
+  example: []
+  syntax:
+    content: public bool TrackingModeState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TrackingModeState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.TrackingModeState*
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable
+  id: GantryDifferenceRunoutEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: GantryDifferenceRunoutEnable
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GantryDifferenceRunoutEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 253
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the gantry difference runout control unit. Writes <code>gantry_on.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool GantryDifferenceRunoutEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property GantryDifferenceRunoutEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand
+  id: GantryDifferenceRunoutCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: GantryDifferenceRunoutCommand
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GantryDifferenceRunoutCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 260
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Run out gantry difference. If the axis is a gantry slave axis and both master and slave are
+
+    referenced, the gantry difference is run out. <code>true</code> = runout permitted.
+
+    Writes <code>gantry_on.command_w</code>.
+  example: []
+  syntax:
+    content: public bool GantryDifferenceRunoutCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property GantryDifferenceRunoutCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest
+  id: GantryDifferenceRunoutRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: GantryDifferenceRunoutRequest
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GantryDifferenceRunoutRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 267
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Gantry difference runout requested by a GUI. Reads <code>gantry_on.request_r</code>.
+  example: []
+  syntax:
+    content: public bool GantryDifferenceRunoutRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property GantryDifferenceRunoutRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState
+  id: GantryDifferenceRunoutState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: GantryDifferenceRunoutState
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutState
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: GantryDifferenceRunoutState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 270
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: CNC acknowledgement of the gantry difference runout. Reads <code>gantry_on.state_r</code>.
+  example: []
+  syntax:
+    content: public bool GantryDifferenceRunoutState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property GantryDifferenceRunoutState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState*
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable
+  id: SetReferencePositionEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: SetReferencePositionEnable
+  nameWithType: AxisControlCommands.SetReferencePositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SetReferencePositionEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 280
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Declares that the PLC uses the accept reference position control unit.
+
+    Writes <code>set_reference_position.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool SetReferencePositionEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property SetReferencePositionEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+  id: SetReferencePositionCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: SetReferencePositionCommand
+  nameWithType: AxisControlCommands.SetReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SetReferencePositionCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 294
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Accept the reference position and mark the axis as referenced on a <b>rising edge</b>
+
+    (<code>false</code> → <code>true</code>). The value the actual axis position is set to depends on P-AXIS-00278:
+
+    <ul><li><code>ABSOLUT</code> — value of P-AXIS-00152.</li><li><code>OFFSET</code> — drive encoder position + P-AXIS-00279.</li><li><code>PLC</code> — value of <xref href="TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand" data-throw-if-not-resolved="false"></xref>.</li><li><code>PLC_OFFSET</code> — drive encoder position + <xref href="TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand" data-throw-if-not-resolved="false"></xref>.</li></ul>
+
+    Works for axes with an absolute measuring system too.
+
+    Writes <code>set_reference_position.command_w</code>.
+  example: []
+  syntax:
+    content: public bool SetReferencePositionCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SetReferencePositionCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest
+  id: SetReferencePositionRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: SetReferencePositionRequest
+  nameWithType: AxisControlCommands.SetReferencePositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SetReferencePositionRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 301
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Acceptance of the reference position requested by a GUI. Reads <code>set_reference_position.request_r</code>.
+  example: []
+  syntax:
+    content: public bool SetReferencePositionRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property SetReferencePositionRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.SetReferencePositionState
+  id: SetReferencePositionState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: SetReferencePositionState
+  nameWithType: AxisControlCommands.SetReferencePositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: SetReferencePositionState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 307
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Indicates whether the reference position was set manually and the coordinate system was shifted
+
+    as a result. Cleared by CNC-controlled homing (G74). Reads <code>set_reference_position.state_r</code>.
+  example: []
+  syntax:
+    content: public bool SetReferencePositionState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property SetReferencePositionState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.SetReferencePositionState*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable
+  id: ReferencePositionEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferencePositionEnable
+  nameWithType: AxisControlCommands.ReferencePositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferencePositionEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 316
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the reference position control unit. Writes <code>refpos_position.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool ReferencePositionEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property ReferencePositionEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+  id: ReferencePositionCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferencePositionCommand
+  nameWithType: AxisControlCommands.ReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferencePositionCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 324
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reference position to be set, used by <xref href="TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand" data-throw-if-not-resolved="false"></xref> when P-AXIS-00278
+
+    is <code>PLC</code> (this value is the setting position) or <code>PLC_OFFSET</code> (drive encoder position + this value).
+
+    Unit: 0.1 µm or 10⁻⁴ °.
+
+    Writes <code>refpos_position.command_w</code>.
+  example: []
+  syntax:
+    content: public int ReferencePositionCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ReferencePositionCommand As Integer
+  overload: TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest
+  id: ReferencePositionRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferencePositionRequest
+  nameWithType: AxisControlCommands.ReferencePositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferencePositionRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 334
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Reference position requested by a GUI. Unit: 0.1 µm or 10⁻⁴ °.
+
+    Reads <code>refpos_position.request_r</code>.
+  example: []
+  syntax:
+    content: public int ReferencePositionRequest { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ReferencePositionRequest As Integer
+  overload: TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferencePositionState
+  id: ReferencePositionState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ReferencePositionState
+  nameWithType: AxisControlCommands.ReferencePositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ReferencePositionState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 340
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    CNC acknowledgement of the reference position. Unit: 0.1 µm or 10⁻⁴ °.
+
+    Reads <code>refpos_position.state_r</code>.
+  example: []
+  syntax:
+    content: public int ReferencePositionState { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ReferencePositionState As Integer
+  overload: TwinSharp.CNC.AxisControlCommands.ReferencePositionState*
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable
+  id: ClearReferencePositionEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ClearReferencePositionEnable
+  nameWithType: AxisControlCommands.ClearReferencePositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ClearReferencePositionEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 350
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Declares that the PLC uses the clear referencing control unit.
+
+    Writes <code>clear_reference_position.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool ClearReferencePositionEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property ClearReferencePositionEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand
+  id: ClearReferencePositionCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ClearReferencePositionCommand
+  nameWithType: AxisControlCommands.ClearReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ClearReferencePositionCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 359
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Clears the referenced state of an axis that was homed by setting the reference position or by G74.
+
+    As long as this is <code>true</code> the axis is regarded as not referenced — which also temporarily
+
+    switches off the software limit switches — and it can be marked as referenced again via
+
+    <xref href="TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand" data-throw-if-not-resolved="false"></xref>. Any offset activated by "set reference position" is not cleared.
+
+    Writes <code>clear_reference_position.command_w</code>.
+  example: []
+  syntax:
+    content: public bool ClearReferencePositionCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ClearReferencePositionCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest
+  id: ClearReferencePositionRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ClearReferencePositionRequest
+  nameWithType: AxisControlCommands.ClearReferencePositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ClearReferencePositionRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 366
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Clearing of the referencing requested by a GUI. Reads <code>clear_reference_position.request_r</code>.
+  example: []
+  syntax:
+    content: public bool ClearReferencePositionRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ClearReferencePositionRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState
+  id: ClearReferencePositionState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ClearReferencePositionState
+  nameWithType: AxisControlCommands.ClearReferencePositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ClearReferencePositionState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 371
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Indicates whether the axis is currently not referenced. Reads <code>clear_reference_position.state_r</code>.
+  example: []
+  syntax:
+    content: public bool ClearReferencePositionState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ClearReferencePositionState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState*
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable
+  id: DisablePositionLagMonitoringEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DisablePositionLagMonitoringEnable
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DisablePositionLagMonitoringEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 381
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Declares that the PLC uses the position lag monitoring control unit.
+
+    Writes <code>disable_pos_lag_mon.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool DisablePositionLagMonitoringEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property DisablePositionLagMonitoringEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand
+  id: DisablePositionLagMonitoringCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DisablePositionLagMonitoringCommand
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DisablePositionLagMonitoringCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 387
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Suppresses / disables position lag monitoring while <code>true</code>.
+
+    Writes <code>disable_pos_lag_mon.command_w</code>.
+  example: []
+  syntax:
+    content: public bool DisablePositionLagMonitoringCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisablePositionLagMonitoringCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest
+  id: DisablePositionLagMonitoringRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DisablePositionLagMonitoringRequest
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DisablePositionLagMonitoringRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 394
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Suppression of position lag monitoring requested by a GUI. Reads <code>disable_pos_lag_mon.request_r</code>.
+  example: []
+  syntax:
+    content: public bool DisablePositionLagMonitoringRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property DisablePositionLagMonitoringRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState
+  id: DisablePositionLagMonitoringState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DisablePositionLagMonitoringState
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringState
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DisablePositionLagMonitoringState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 397
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: CNC acknowledgement of the suppressed position lag monitoring. Reads <code>disable_pos_lag_mon.state_r</code>.
+  example: []
+  syntax:
+    content: public bool DisablePositionLagMonitoringState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property DisablePositionLagMonitoringState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+  id: ProbingSignalEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingSignalEnable
+  nameWithType: AxisControlCommands.ProbingSignalEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingSignalEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 406
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the probing signal control unit. Writes <code>probing_signal.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool ProbingSignalEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property ProbingSignalEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+  id: ProbingSignalCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingSignalCommand
+  nameWithType: AxisControlCommands.ProbingSignalCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingSignalCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 414
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Transfers the probing signal to the CNC. Requires <code>kenngr.measure.signal</code> (P-AXIS-00516)
+
+    to be set to <code>PLC</code> or <code>PLC_TIMESTAMP</code> in the axis parameter list.
+
+    The measured value is accepted on the edge parameterised in <code>kenngr.mess_neg_flanke</code> (P-AXIS-00518).
+
+    Writes <code>probing_signal.command_w</code>.
+  example: []
+  syntax:
+    content: public bool ProbingSignalCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ProbingSignalCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest
+  id: ProbingSignalRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingSignalRequest
+  nameWithType: AxisControlCommands.ProbingSignalRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingSignalRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 421
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Probing signal requested by a GUI. Reads <code>probing_signal.request_r</code>.
+  example: []
+  syntax:
+    content: public bool ProbingSignalRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ProbingSignalRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingSignalState
+  id: ProbingSignalState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingSignalState
+  nameWithType: AxisControlCommands.ProbingSignalState
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingSignalState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 424
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: CNC acknowledgement of the probing signal. Reads <code>probing_signal.state_r</code>.
+  example: []
+  syntax:
+    content: public bool ProbingSignalState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ProbingSignalState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingSignalState*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable
+  id: ProbingPositionEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingPositionEnable
+  nameWithType: AxisControlCommands.ProbingPositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingPositionEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 433
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the measured value control unit. Writes <code>probing_position.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool ProbingPositionEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property ProbingPositionEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand
+  id: ProbingPositionCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingPositionCommand
+  nameWithType: AxisControlCommands.ProbingPositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingPositionCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 443
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Measured value transferred via the HLI, used when P-AXIS-00257 or <code>#MEAS [...SIGNAL=PLC]</code>
+
+    switched the probing signal source to <xref href="TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand" data-throw-if-not-resolved="false"></xref>.
+
+    The value is passed to the decoder unchanged. If this control unit is <i>not</i> enabled, the actual
+
+    axis position on the rising edge of <xref href="TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand" data-throw-if-not-resolved="false"></xref> is used instead.
+
+    Unit: 0.1 µm or 10⁻⁴ °.
+
+    Writes <code>probing_position.command_w</code>.
+  example: []
+  syntax:
+    content: public int ProbingPositionCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ProbingPositionCommand As Integer
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest
+  id: ProbingPositionRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingPositionRequest
+  nameWithType: AxisControlCommands.ProbingPositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingPositionRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 450
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Measured value requested by a GUI. Unit: 0.1 µm or 10⁻⁴ °. Reads <code>probing_position.request_r</code>.'
+  example: []
+  syntax:
+    content: public int ProbingPositionRequest { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ProbingPositionRequest As Integer
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingPositionState
+  id: ProbingPositionState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: ProbingPositionState
+  nameWithType: AxisControlCommands.ProbingPositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ProbingPositionState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 453
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'CNC acknowledgement of the measured value. Unit: 0.1 µm or 10⁻⁴ °. Reads <code>probing_position.state_r</code>.'
+  example: []
+  syntax:
+    content: public int ProbingPositionState { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ProbingPositionState As Integer
+  overload: TwinSharp.CNC.AxisControlCommands.ProbingPositionState*
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable
+  id: DeactivateAxisEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DeactivateAxisEnable
+  nameWithType: AxisControlCommands.DeactivateAxisEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DeactivateAxisEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 462
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the axis deactivation control unit. Writes <code>deactivate_axis.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool DeactivateAxisEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property DeactivateAxisEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand
+  id: DeactivateAxisCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DeactivateAxisCommand
+  nameWithType: AxisControlCommands.DeactivateAxisCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DeactivateAxisCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 471
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Deactivates (parks) the axis. While <code>true</code> the NC kernel does not signal drive errors,
+
+    does not transfer HLI control bits to the drive, and a CNC reset does not trigger a drive reset.
+
+    Moving a parked axis produces error P-ERR-70265.
+
+    On PROFIDRIVE drives bit 0x80 is set in control word 2 (STW2).
+
+    Writes <code>deactivate_axis.command_w</code>.
+  example: []
+  syntax:
+    content: public bool DeactivateAxisCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DeactivateAxisCommand As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest
+  id: DeactivateAxisRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DeactivateAxisRequest
+  nameWithType: AxisControlCommands.DeactivateAxisRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DeactivateAxisRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 478
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Axis deactivation requested by a GUI. Reads <code>deactivate_axis.request_r</code>.
+  example: []
+  syntax:
+    content: public bool DeactivateAxisRequest { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property DeactivateAxisRequest As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.DeactivateAxisState
+  id: DeactivateAxisState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: DeactivateAxisState
+  nameWithType: AxisControlCommands.DeactivateAxisState
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DeactivateAxisState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 481
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: CNC acknowledgement of the axis deactivation. Reads <code>deactivate_axis.state_r</code>.
+  example: []
+  syntax:
+    content: public bool DeactivateAxisState { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property DeactivateAxisState As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.DeactivateAxisState*
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TimestampEnable
+  id: TimestampEnable
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TimestampEnable
+  nameWithType: AxisControlCommands.TimestampEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampEnable
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimestampEnable
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 490
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Declares that the PLC uses the timestamp control unit. Writes <code>timestamp.enable_w</code>.
+  example: []
+  syntax:
+    content: public bool TimestampEnable { set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public WriteOnly Property TimestampEnable As Boolean
+  overload: TwinSharp.CNC.AxisControlCommands.TimestampEnable*
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TimestampCommand
+  id: TimestampCommand
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TimestampCommand
+  nameWithType: AxisControlCommands.TimestampCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampCommand
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimestampCommand
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 498
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Transfers the timestamp of a digital input terminal to the CNC. Unit: ns.
+
+    When used for "measure with distributed clocks timestamp", <xref href="TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable" data-throw-if-not-resolved="false"></xref>
+
+    must be set as well. Available as of CNC Build V3.01.3079.28.
+
+    Writes <code>timestamp.command_w</code>.
+  example: []
+  syntax:
+    content: public long TimestampCommand { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property TimestampCommand As Long
+  overload: TwinSharp.CNC.AxisControlCommands.TimestampCommand*
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampRequest
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TimestampRequest
+  id: TimestampRequest
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TimestampRequest
+  nameWithType: AxisControlCommands.TimestampRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampRequest
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimestampRequest
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 505
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Timestamp requested by a GUI. Unit: ns. Reads <code>timestamp.request_r</code>.'
+  example: []
+  syntax:
+    content: public long TimestampRequest { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property TimestampRequest As Long
+  overload: TwinSharp.CNC.AxisControlCommands.TimestampRequest*
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampState
+  commentId: P:TwinSharp.CNC.AxisControlCommands.TimestampState
+  id: TimestampState
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: TimestampState
+  nameWithType: AxisControlCommands.TimestampState
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampState
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TimestampState
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 508
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'CNC acknowledgement of the timestamp. Unit: ns. Reads <code>timestamp.state_r</code>.'
+  example: []
+  syntax:
+    content: public long TimestampState { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property TimestampState As Long
+  overload: TwinSharp.CNC.AxisControlCommands.TimestampState*
+- uid: TwinSharp.CNC.AxisControlCommands.Dispose
+  commentId: M:TwinSharp.CNC.AxisControlCommands.Dispose
+  id: Dispose
+  parent: TwinSharp.CNC.AxisControlCommands
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: AxisControlCommands.Dispose()
+  fullName: TwinSharp.CNC.AxisControlCommands.Dispose()
+  type: Method
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisControlCommands.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Dispose
+    path: ../TwinSharp/CNC/AxisControlCommands.cs
+    startLine: 527
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Disposes of the ADS variable handles.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: TwinSharp.CNC.AxisControlCommands.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: TwinSharp.CNC.AxisControlCommands.EnableAll
+  commentId: M:TwinSharp.CNC.AxisControlCommands.EnableAll
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_EnableAll
+  name: EnableAll()
+  nameWithType: AxisControlCommands.EnableAll()
+  fullName: TwinSharp.CNC.AxisControlCommands.EnableAll()
+  spec.csharp:
+  - uid: TwinSharp.CNC.AxisControlCommands.EnableAll
+    name: EnableAll
+    href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_EnableAll
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.AxisControlCommands.EnableAll
+    name: EnableAll
+    href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_EnableAll
+  - name: (
+  - name: )
+- uid: TwinSharp.CNC.AxisCoupling
+  commentId: T:TwinSharp.CNC.AxisCoupling
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisCoupling.html
+  name: AxisCoupling
+  nameWithType: AxisCoupling
+  fullName: TwinSharp.CNC.AxisCoupling
+- uid: TwinSharp.CNC.DistanceControl
+  commentId: T:TwinSharp.CNC.DistanceControl
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControl.html
+  name: DistanceControl
+  nameWithType: DistanceControl
+  fullName: TwinSharp.CNC.DistanceControl
+- uid: TwinSharp.CNC.ExternalAxisCommanding
+  commentId: T:TwinSharp.CNC.ExternalAxisCommanding
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.ExternalAxisCommanding.html
+  name: ExternalAxisCommanding
+  nameWithType: ExternalAxisCommanding
+  fullName: TwinSharp.CNC.ExternalAxisCommanding
+- uid: TwinSharp.CNC.CncAxis.PlcPresent
+  commentId: P:TwinSharp.CNC.CncAxis.PlcPresent
+  href: TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_PlcPresent
+  name: PlcPresent
+  nameWithType: CncAxis.PlcPresent
+  fullName: TwinSharp.CNC.CncAxis.PlcPresent
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.AxisControlCommands.EnableAll*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.EnableAll
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_EnableAll
+  name: EnableAll
+  nameWithType: AxisControlCommands.EnableAll
+  fullName: TwinSharp.CNC.AxisControlCommands.EnableAll
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.FeedEnableEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_FeedEnableEnable
+  name: FeedEnableEnable
+  nameWithType: AxisControlCommands.FeedEnableEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableEnable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.FeedEnableCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_FeedEnableCommand
+  name: FeedEnableCommand
+  nameWithType: AxisControlCommands.FeedEnableCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableCommand
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.FeedEnableRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_FeedEnableRequest
+  name: FeedEnableRequest
+  nameWithType: AxisControlCommands.FeedEnableRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableRequest
+- uid: TwinSharp.CNC.AxisControlCommands.FeedEnableState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.FeedEnableState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_FeedEnableState
+  name: FeedEnableState
+  nameWithType: AxisControlCommands.FeedEnableState
+  fullName: TwinSharp.CNC.AxisControlCommands.FeedEnableState
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DriveOnEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DriveOnEnable
+  name: DriveOnEnable
+  nameWithType: AxisControlCommands.DriveOnEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnEnable
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DriveOnCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DriveOnCommand
+  name: DriveOnCommand
+  nameWithType: AxisControlCommands.DriveOnCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnCommand
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DriveOnRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DriveOnRequest
+  name: DriveOnRequest
+  nameWithType: AxisControlCommands.DriveOnRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnRequest
+- uid: TwinSharp.CNC.AxisControlCommands.DriveOnState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DriveOnState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DriveOnState
+  name: DriveOnState
+  nameWithType: AxisControlCommands.DriveOnState
+  fullName: TwinSharp.CNC.AxisControlCommands.DriveOnState
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ControllerEnableEnable
+  name: ControllerEnableEnable
+  nameWithType: AxisControlCommands.ControllerEnableEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableEnable
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ControllerEnableCommand
+  name: ControllerEnableCommand
+  nameWithType: AxisControlCommands.ControllerEnableCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableCommand
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ControllerEnableRequest
+  name: ControllerEnableRequest
+  nameWithType: AxisControlCommands.ControllerEnableRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableRequest
+- uid: TwinSharp.CNC.AxisControlCommands.ControllerEnableState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ControllerEnableState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ControllerEnableState
+  name: ControllerEnableState
+  nameWithType: AxisControlCommands.ControllerEnableState
+  fullName: TwinSharp.CNC.AxisControlCommands.ControllerEnableState
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferenceCamEnable
+  name: ReferenceCamEnable
+  nameWithType: AxisControlCommands.ReferenceCamEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamEnable
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferenceCamCommand
+  name: ReferenceCamCommand
+  nameWithType: AxisControlCommands.ReferenceCamCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamCommand
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferenceCamRequest
+  name: ReferenceCamRequest
+  nameWithType: AxisControlCommands.ReferenceCamRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamRequest
+- uid: TwinSharp.CNC.AxisControlCommands.ReferenceCamState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferenceCamState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferenceCamState
+  name: ReferenceCamState
+  nameWithType: AxisControlCommands.ReferenceCamState
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferenceCamState
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TrackingModeEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TrackingModeEnable
+  name: TrackingModeEnable
+  nameWithType: AxisControlCommands.TrackingModeEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeEnable
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TrackingModeCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TrackingModeCommand
+  name: TrackingModeCommand
+  nameWithType: AxisControlCommands.TrackingModeCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeCommand
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TrackingModeRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TrackingModeRequest
+  name: TrackingModeRequest
+  nameWithType: AxisControlCommands.TrackingModeRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeRequest
+- uid: TwinSharp.CNC.AxisControlCommands.TrackingModeState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TrackingModeState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TrackingModeState
+  name: TrackingModeState
+  nameWithType: AxisControlCommands.TrackingModeState
+  fullName: TwinSharp.CNC.AxisControlCommands.TrackingModeState
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_GantryDifferenceRunoutEnable
+  name: GantryDifferenceRunoutEnable
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutEnable
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_GantryDifferenceRunoutCommand
+  name: GantryDifferenceRunoutCommand
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutCommand
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_GantryDifferenceRunoutRequest
+  name: GantryDifferenceRunoutRequest
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutRequest
+- uid: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_GantryDifferenceRunoutState
+  name: GantryDifferenceRunoutState
+  nameWithType: AxisControlCommands.GantryDifferenceRunoutState
+  fullName: TwinSharp.CNC.AxisControlCommands.GantryDifferenceRunoutState
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_SetReferencePositionEnable
+  name: SetReferencePositionEnable
+  nameWithType: AxisControlCommands.SetReferencePositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionEnable
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferencePositionCommand
+  name: ReferencePositionCommand
+  nameWithType: AxisControlCommands.ReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_SetReferencePositionCommand
+  name: SetReferencePositionCommand
+  nameWithType: AxisControlCommands.SetReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_SetReferencePositionRequest
+  name: SetReferencePositionRequest
+  nameWithType: AxisControlCommands.SetReferencePositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionRequest
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.SetReferencePositionState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_SetReferencePositionState
+  name: SetReferencePositionState
+  nameWithType: AxisControlCommands.SetReferencePositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionState
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferencePositionEnable
+  name: ReferencePositionEnable
+  nameWithType: AxisControlCommands.ReferencePositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionEnable
+- uid: TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_SetReferencePositionCommand
+  name: SetReferencePositionCommand
+  nameWithType: AxisControlCommands.SetReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.SetReferencePositionCommand
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferencePositionCommand
+  name: ReferencePositionCommand
+  nameWithType: AxisControlCommands.ReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionCommand
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferencePositionRequest
+  name: ReferencePositionRequest
+  nameWithType: AxisControlCommands.ReferencePositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionRequest
+- uid: TwinSharp.CNC.AxisControlCommands.ReferencePositionState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ReferencePositionState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ReferencePositionState
+  name: ReferencePositionState
+  nameWithType: AxisControlCommands.ReferencePositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.ReferencePositionState
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ClearReferencePositionEnable
+  name: ClearReferencePositionEnable
+  nameWithType: AxisControlCommands.ClearReferencePositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionEnable
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ClearReferencePositionCommand
+  name: ClearReferencePositionCommand
+  nameWithType: AxisControlCommands.ClearReferencePositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionCommand
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ClearReferencePositionRequest
+  name: ClearReferencePositionRequest
+  nameWithType: AxisControlCommands.ClearReferencePositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionRequest
+- uid: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ClearReferencePositionState
+  name: ClearReferencePositionState
+  nameWithType: AxisControlCommands.ClearReferencePositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.ClearReferencePositionState
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DisablePositionLagMonitoringEnable
+  name: DisablePositionLagMonitoringEnable
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringEnable
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DisablePositionLagMonitoringCommand
+  name: DisablePositionLagMonitoringCommand
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringCommand
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DisablePositionLagMonitoringRequest
+  name: DisablePositionLagMonitoringRequest
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringRequest
+- uid: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DisablePositionLagMonitoringState
+  name: DisablePositionLagMonitoringState
+  nameWithType: AxisControlCommands.DisablePositionLagMonitoringState
+  fullName: TwinSharp.CNC.AxisControlCommands.DisablePositionLagMonitoringState
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingSignalEnable
+  name: ProbingSignalEnable
+  nameWithType: AxisControlCommands.ProbingSignalEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingSignalCommand
+  name: ProbingSignalCommand
+  nameWithType: AxisControlCommands.ProbingSignalCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingSignalRequest
+  name: ProbingSignalRequest
+  nameWithType: AxisControlCommands.ProbingSignalRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalRequest
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingSignalState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingSignalState
+  name: ProbingSignalState
+  nameWithType: AxisControlCommands.ProbingSignalState
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalState
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingPositionEnable
+  name: ProbingPositionEnable
+  nameWithType: AxisControlCommands.ProbingPositionEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionEnable
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingSignalCommand
+  name: ProbingSignalCommand
+  nameWithType: AxisControlCommands.ProbingSignalCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalCommand
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingPositionCommand
+  name: ProbingPositionCommand
+  nameWithType: AxisControlCommands.ProbingPositionCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionCommand
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingPositionRequest
+  name: ProbingPositionRequest
+  nameWithType: AxisControlCommands.ProbingPositionRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionRequest
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingPositionState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.ProbingPositionState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingPositionState
+  name: ProbingPositionState
+  nameWithType: AxisControlCommands.ProbingPositionState
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingPositionState
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DeactivateAxisEnable
+  name: DeactivateAxisEnable
+  nameWithType: AxisControlCommands.DeactivateAxisEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisEnable
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DeactivateAxisCommand
+  name: DeactivateAxisCommand
+  nameWithType: AxisControlCommands.DeactivateAxisCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisCommand
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DeactivateAxisRequest
+  name: DeactivateAxisRequest
+  nameWithType: AxisControlCommands.DeactivateAxisRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisRequest
+- uid: TwinSharp.CNC.AxisControlCommands.DeactivateAxisState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.DeactivateAxisState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_DeactivateAxisState
+  name: DeactivateAxisState
+  nameWithType: AxisControlCommands.DeactivateAxisState
+  fullName: TwinSharp.CNC.AxisControlCommands.DeactivateAxisState
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampEnable*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TimestampEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TimestampEnable
+  name: TimestampEnable
+  nameWithType: AxisControlCommands.TimestampEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampEnable
+- uid: TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+  commentId: P:TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_ProbingSignalEnable
+  name: ProbingSignalEnable
+  nameWithType: AxisControlCommands.ProbingSignalEnable
+  fullName: TwinSharp.CNC.AxisControlCommands.ProbingSignalEnable
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampCommand*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TimestampCommand
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TimestampCommand
+  name: TimestampCommand
+  nameWithType: AxisControlCommands.TimestampCommand
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampCommand
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampRequest*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TimestampRequest
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TimestampRequest
+  name: TimestampRequest
+  nameWithType: AxisControlCommands.TimestampRequest
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampRequest
+- uid: TwinSharp.CNC.AxisControlCommands.TimestampState*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.TimestampState
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_TimestampState
+  name: TimestampState
+  nameWithType: AxisControlCommands.TimestampState
+  fullName: TwinSharp.CNC.AxisControlCommands.TimestampState
+- uid: TwinSharp.CNC.AxisControlCommands.Dispose*
+  commentId: Overload:TwinSharp.CNC.AxisControlCommands.Dispose
+  href: TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_Dispose
+  name: Dispose
+  nameWithType: AxisControlCommands.Dispose
+  fullName: TwinSharp.CNC.AxisControlCommands.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

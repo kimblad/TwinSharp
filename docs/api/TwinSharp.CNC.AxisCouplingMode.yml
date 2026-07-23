@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.AxisCouplingMode
+  commentId: T:TwinSharp.CNC.AxisCouplingMode
+  id: AxisCouplingMode
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.AxisCouplingMode.Direct
+  - TwinSharp.CNC.AxisCouplingMode.Fract
+  - TwinSharp.CNC.AxisCouplingMode.Inactive
+  - TwinSharp.CNC.AxisCouplingMode.Mirror
+  - TwinSharp.CNC.AxisCouplingMode.Zero
+  langs:
+  - csharp
+  - vb
+  name: AxisCouplingMode
+  nameWithType: AxisCouplingMode
+  fullName: TwinSharp.CNC.AxisCouplingMode
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: AxisCouplingMode
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 160
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Coupling mode for one descriptor entry in an axis coupling specification.
+  example: []
+  syntax:
+    content: public enum AxisCouplingMode
+    content.vb: Public Enum AxisCouplingMode
+- uid: TwinSharp.CNC.AxisCouplingMode.Inactive
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Inactive
+  id: Inactive
+  parent: TwinSharp.CNC.AxisCouplingMode
+  langs:
+  - csharp
+  - vb
+  name: Inactive
+  nameWithType: AxisCouplingMode.Inactive
+  fullName: TwinSharp.CNC.AxisCouplingMode.Inactive
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Inactive
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 163
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Marks the end of the descriptor list. All following entries are also inactive.
+  example: []
+  syntax:
+    content: Inactive = 0
+    return:
+      type: TwinSharp.CNC.AxisCouplingMode
+- uid: TwinSharp.CNC.AxisCouplingMode.Zero
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Zero
+  id: Zero
+  parent: TwinSharp.CNC.AxisCouplingMode
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: AxisCouplingMode.Zero
+  fullName: TwinSharp.CNC.AxisCouplingMode.Zero
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Zero
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 165
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Coupling factor = 0. The axis is held stationary; it can still be a source for others.
+  example: []
+  syntax:
+    content: Zero = 1
+    return:
+      type: TwinSharp.CNC.AxisCouplingMode
+- uid: TwinSharp.CNC.AxisCouplingMode.Direct
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Direct
+  id: Direct
+  parent: TwinSharp.CNC.AxisCouplingMode
+  langs:
+  - csharp
+  - vb
+  name: Direct
+  nameWithType: AxisCouplingMode.Direct
+  fullName: TwinSharp.CNC.AxisCouplingMode.Direct
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Direct
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 167
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Coupling factor = 1:1. The target follows the source 1:1.
+  example: []
+  syntax:
+    content: Direct = 2
+    return:
+      type: TwinSharp.CNC.AxisCouplingMode
+- uid: TwinSharp.CNC.AxisCouplingMode.Mirror
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Mirror
+  id: Mirror
+  parent: TwinSharp.CNC.AxisCouplingMode
+  langs:
+  - csharp
+  - vb
+  name: Mirror
+  nameWithType: AxisCouplingMode.Mirror
+  fullName: TwinSharp.CNC.AxisCouplingMode.Mirror
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Mirror
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 169
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Coupling factor = −1:1. The target mirrors the source.
+  example: []
+  syntax:
+    content: Mirror = 3
+    return:
+      type: TwinSharp.CNC.AxisCouplingMode
+- uid: TwinSharp.CNC.AxisCouplingMode.Fract
+  commentId: F:TwinSharp.CNC.AxisCouplingMode.Fract
+  id: Fract
+  parent: TwinSharp.CNC.AxisCouplingMode
+  langs:
+  - csharp
+  - vb
+  name: Fract
+  nameWithType: AxisCouplingMode.Fract
+  fullName: TwinSharp.CNC.AxisCouplingMode.Fract
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/AxisCoupling.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Fract
+    path: ../TwinSharp/CNC/AxisCoupling.cs
+    startLine: 171
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Coupling factor = <code>FractNumerator / FractDenominator</code>.
+  example: []
+  syntax:
+    content: Fract = 4
+    return:
+      type: TwinSharp.CNC.AxisCouplingMode
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.AxisCouplingMode
+  commentId: T:TwinSharp.CNC.AxisCouplingMode
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.AxisCouplingMode.html
+  name: AxisCouplingMode
+  nameWithType: AxisCouplingMode
+  fullName: TwinSharp.CNC.AxisCouplingMode

@@ -12,6 +12,7 @@ items:
   - TwinSharp.CNC.OperationState.PROCESS_HOLD
   - TwinSharp.CNC.OperationState.PROCESS_READY
   - TwinSharp.CNC.OperationState.PROCESS_SELECTED
+  - TwinSharp.CNC.OperationState.RESETTING
   langs:
   - csharp
   - vb
@@ -229,6 +230,41 @@ items:
   example: []
   syntax:
     content: PROCESS_ERROR = 6
+    return:
+      type: TwinSharp.CNC.OperationState
+- uid: TwinSharp.CNC.OperationState.RESETTING
+  commentId: F:TwinSharp.CNC.OperationState.RESETTING
+  id: RESETTING
+  parent: TwinSharp.CNC.OperationState
+  langs:
+  - csharp
+  - vb
+  name: RESETTING
+  nameWithType: OperationState.RESETTING
+  fullName: TwinSharp.CNC.OperationState.RESETTING
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/CncEnums.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RESETTING
+    path: ../TwinSharp/CNC/CncEnums.cs
+    startLine: 143
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Explicit CNC reset within the current operation mode (no mode change).
+
+    Commanding this state triggers a reset and the CNC returns to PROCESS_SELECTED
+
+    in the same mode. Available from CNC build V2.10.1033.01 / V2.10.1507.02 / V2.10.1800.04.
+
+    Ref: TF5200 HLI Interface specification, chapter 8.
+  example: []
+  syntax:
+    content: RESETTING = 15
     return:
       type: TwinSharp.CNC.OperationState
 references:

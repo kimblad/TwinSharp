@@ -17,16 +17,21 @@ items:
   - TwinSharp.CNC.CncChannel.Descriptions
   - TwinSharp.CNC.CncChannel.Dispose
   - TwinSharp.CNC.CncChannel.ErrorManager
+  - TwinSharp.CNC.CncChannel.ExternalVariables
   - TwinSharp.CNC.CncChannel.FeedOverride
+  - TwinSharp.CNC.CncChannel.InsertStop
   - TwinSharp.CNC.CncChannel.Interpolator
   - TwinSharp.CNC.CncChannel.LineCountNcProgram
   - TwinSharp.CNC.CncChannel.ManualOperation
+  - TwinSharp.CNC.CncChannel.NcMessages
   - TwinSharp.CNC.CncChannel.OperationModeManager
   - TwinSharp.CNC.CncChannel.PathFeedProgrammed
   - TwinSharp.CNC.CncChannel.PathFeedProgrammedWeighted
   - TwinSharp.CNC.CncChannel.PlcPresent
+  - TwinSharp.CNC.CncChannel.RealTimeStatus
   - TwinSharp.CNC.CncChannel.SingleBlock
   - TwinSharp.CNC.CncChannel.TechnologyProcesses
+  - TwinSharp.CNC.CncChannel.ToolManagement
   - TwinSharp.CNC.CncChannel.ZeroOffsets
   langs:
   - csharp
@@ -115,7 +120,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ChannelNumber
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 47
+    startLine: 52
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -146,7 +151,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: PlcPresent
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 53
+    startLine: 58
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -180,7 +185,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: OperationModeManager
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 67
+    startLine: 72
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -211,7 +216,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Interpolator
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 73
+    startLine: 78
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -245,7 +250,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ControlCommands
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 78
+    startLine: 83
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -276,7 +281,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ContourVisualization
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 83
+    startLine: 88
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -307,7 +312,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: FeedOverride
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 88
+    startLine: 93
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -338,7 +343,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BackwardsOnPath
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 93
+    startLine: 98
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -369,7 +374,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: SingleBlock
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 98
+    startLine: 103
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -400,7 +405,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: BlockSearch
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 104
+    startLine: 109
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -434,7 +439,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: DeleteDistanceToGo
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 109
+    startLine: 114
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -465,7 +470,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: DataStreaming
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 115
+    startLine: 120
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -499,7 +504,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: TechnologyProcesses
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 120
+    startLine: 125
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -530,7 +535,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ErrorManager
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 126
+    startLine: 131
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -564,7 +569,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ZeroOffsets
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 131
+    startLine: 136
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -577,6 +582,71 @@ items:
       type: TwinSharp.CNC.ZeroOffsets
     content.vb: Public Property ZeroOffsets As ZeroOffsets
   overload: TwinSharp.CNC.CncChannel.ZeroOffsets*
+- uid: TwinSharp.CNC.CncChannel.ToolManagement
+  commentId: P:TwinSharp.CNC.CncChannel.ToolManagement
+  id: ToolManagement
+  parent: TwinSharp.CNC.CncChannel
+  langs:
+  - csharp
+  - vb
+  name: ToolManagement
+  nameWithType: CncChannel.ToolManagement
+  fullName: TwinSharp.CNC.CncChannel.ToolManagement
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ToolManagement
+    path: ../TwinSharp/CNC/CncChannel.cs
+    startLine: 141
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Provides functions to read and write tool table entries (radius, length, etc.) for this channel.
+  example: []
+  syntax:
+    content: public ToolManagement ToolManagement { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.ToolManagement
+    content.vb: Public Property ToolManagement As ToolManagement
+  overload: TwinSharp.CNC.CncChannel.ToolManagement*
+- uid: TwinSharp.CNC.CncChannel.ExternalVariables
+  commentId: P:TwinSharp.CNC.CncChannel.ExternalVariables
+  id: ExternalVariables
+  parent: TwinSharp.CNC.CncChannel
+  langs:
+  - csharp
+  - vb
+  name: ExternalVariables
+  nameWithType: CncChannel.ExternalVariables
+  fullName: TwinSharp.CNC.CncChannel.ExternalVariables
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: ExternalVariables
+    path: ../TwinSharp/CNC/CncChannel.cs
+    startLine: 147
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Provides read/write access to CNC External Variables (V.E.*) for this channel.
+
+    These persist across M30 and new program starts, surviving until CNC reboot.
+  example: []
+  syntax:
+    content: public ExternalVariables ExternalVariables { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.ExternalVariables
+    content.vb: Public Property ExternalVariables As ExternalVariables
+  overload: TwinSharp.CNC.CncChannel.ExternalVariables*
 - uid: TwinSharp.CNC.CncChannel.ManualOperation
   commentId: P:TwinSharp.CNC.CncChannel.ManualOperation
   id: ManualOperation
@@ -595,7 +665,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: ManualOperation
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 137
+    startLine: 153
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -611,6 +681,112 @@ items:
       type: TwinSharp.CNC.ManualOperation
     content.vb: Public Property ManualOperation As ManualOperation
   overload: TwinSharp.CNC.CncChannel.ManualOperation*
+- uid: TwinSharp.CNC.CncChannel.RealTimeStatus
+  commentId: P:TwinSharp.CNC.CncChannel.RealTimeStatus
+  id: RealTimeStatus
+  parent: TwinSharp.CNC.CncChannel
+  langs:
+  - csharp
+  - vb
+  name: RealTimeStatus
+  nameWithType: CncChannel.RealTimeStatus
+  fullName: TwinSharp.CNC.CncChannel.RealTimeStatus
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: RealTimeStatus
+    path: ../TwinSharp/CNC/CncChannel.cs
+    startLine: 159
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Provides read-only access to the real-time status of the CNC path interpolator.
+
+    Reads the complete <xref href="TwinSharp.CNC.StateBahn" data-throw-if-not-resolved="false"></xref> struct from <code>bahn_state</code> in a single ADS call.
+  example: []
+  syntax:
+    content: public RealTimeStatus RealTimeStatus { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.RealTimeStatus
+    content.vb: Public Property RealTimeStatus As RealTimeStatus
+  overload: TwinSharp.CNC.CncChannel.RealTimeStatus*
+- uid: TwinSharp.CNC.CncChannel.InsertStop
+  commentId: P:TwinSharp.CNC.CncChannel.InsertStop
+  id: InsertStop
+  parent: TwinSharp.CNC.CncChannel
+  langs:
+  - csharp
+  - vb
+  name: InsertStop
+  nameWithType: CncChannel.InsertStop
+  fullName: TwinSharp.CNC.CncChannel.InsertStop
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: InsertStop
+    path: ../TwinSharp/CNC/CncChannel.cs
+    startLine: 166
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Allows insertion of CNC stop marks into a running NC program at runtime.
+
+    In POSITION mode the CNC stops the first time a commanded axis reaches the specified position.
+
+    Requires <code>P-STUP-00033</code> (fb_storage_size) to be non-zero.
+  example: []
+  syntax:
+    content: public InsertStopCommand InsertStop { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.InsertStopCommand
+    content.vb: Public Property InsertStop As InsertStopCommand
+  overload: TwinSharp.CNC.CncChannel.InsertStop*
+- uid: TwinSharp.CNC.CncChannel.NcMessages
+  commentId: P:TwinSharp.CNC.CncChannel.NcMessages
+  id: NcMessages
+  parent: TwinSharp.CNC.CncChannel
+  langs:
+  - csharp
+  - vb
+  name: NcMessages
+  nameWithType: CncChannel.NcMessages
+  fullName: TwinSharp.CNC.CncChannel.NcMessages
+  type: Property
+  source:
+    remote:
+      path: TwinSharp/CNC/CncChannel.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: NcMessages
+    path: ../TwinSharp/CNC/CncChannel.cs
+    startLine: 173
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: >-
+    Monitors NC-program messages sent to the PLC via <code>#MSG PLC "text"</code> or
+
+    <code>#MSGINFO PLC "text"</code>. Call <xref href="TwinSharp.CNC.NcMessageMonitor.Enable" data-throw-if-not-resolved="false"></xref> once after
+
+    connecting to register the PLC as present on the control unit.
+  example: []
+  syntax:
+    content: public NcMessageMonitor NcMessages { get; }
+    parameters: []
+    return:
+      type: TwinSharp.CNC.NcMessageMonitor
+    content.vb: Public Property NcMessages As NcMessageMonitor
+  overload: TwinSharp.CNC.CncChannel.NcMessages*
 - uid: TwinSharp.CNC.CncChannel.CoveredBlockMotionPercent
   commentId: P:TwinSharp.CNC.CncChannel.CoveredBlockMotionPercent
   id: CoveredBlockMotionPercent
@@ -629,7 +805,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CoveredBlockMotionPercent
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 143
+    startLine: 179
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -663,7 +839,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CoveredPathDistance
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 157
+    startLine: 193
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -697,7 +873,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: LineCountNcProgram
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 170
+    startLine: 206
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -731,7 +907,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: PathFeedProgrammed
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 184
+    startLine: 220
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -765,7 +941,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: PathFeedProgrammedWeighted
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 197
+    startLine: 233
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -799,7 +975,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Dispose
     path: ../TwinSharp/CNC/CncChannel.cs
-    startLine: 210
+    startLine: 246
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -1398,6 +1574,32 @@ references:
   name: ZeroOffsets
   nameWithType: ZeroOffsets
   fullName: TwinSharp.CNC.ZeroOffsets
+- uid: TwinSharp.CNC.CncChannel.ToolManagement*
+  commentId: Overload:TwinSharp.CNC.CncChannel.ToolManagement
+  href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_ToolManagement
+  name: ToolManagement
+  nameWithType: CncChannel.ToolManagement
+  fullName: TwinSharp.CNC.CncChannel.ToolManagement
+- uid: TwinSharp.CNC.ToolManagement
+  commentId: T:TwinSharp.CNC.ToolManagement
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.ToolManagement.html
+  name: ToolManagement
+  nameWithType: ToolManagement
+  fullName: TwinSharp.CNC.ToolManagement
+- uid: TwinSharp.CNC.CncChannel.ExternalVariables*
+  commentId: Overload:TwinSharp.CNC.CncChannel.ExternalVariables
+  href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_ExternalVariables
+  name: ExternalVariables
+  nameWithType: CncChannel.ExternalVariables
+  fullName: TwinSharp.CNC.CncChannel.ExternalVariables
+- uid: TwinSharp.CNC.ExternalVariables
+  commentId: T:TwinSharp.CNC.ExternalVariables
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.ExternalVariables.html
+  name: ExternalVariables
+  nameWithType: ExternalVariables
+  fullName: TwinSharp.CNC.ExternalVariables
 - uid: TwinSharp.CNC.CncChannel.ManualOperation*
   commentId: Overload:TwinSharp.CNC.CncChannel.ManualOperation
   href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_ManualOperation
@@ -1411,6 +1613,70 @@ references:
   name: ManualOperation
   nameWithType: ManualOperation
   fullName: TwinSharp.CNC.ManualOperation
+- uid: TwinSharp.CNC.StateBahn
+  commentId: T:TwinSharp.CNC.StateBahn
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.StateBahn.html
+  name: StateBahn
+  nameWithType: StateBahn
+  fullName: TwinSharp.CNC.StateBahn
+- uid: TwinSharp.CNC.CncChannel.RealTimeStatus*
+  commentId: Overload:TwinSharp.CNC.CncChannel.RealTimeStatus
+  href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_RealTimeStatus
+  name: RealTimeStatus
+  nameWithType: CncChannel.RealTimeStatus
+  fullName: TwinSharp.CNC.CncChannel.RealTimeStatus
+- uid: TwinSharp.CNC.RealTimeStatus
+  commentId: T:TwinSharp.CNC.RealTimeStatus
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.RealTimeStatus.html
+  name: RealTimeStatus
+  nameWithType: RealTimeStatus
+  fullName: TwinSharp.CNC.RealTimeStatus
+- uid: TwinSharp.CNC.CncChannel.InsertStop*
+  commentId: Overload:TwinSharp.CNC.CncChannel.InsertStop
+  href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_InsertStop
+  name: InsertStop
+  nameWithType: CncChannel.InsertStop
+  fullName: TwinSharp.CNC.CncChannel.InsertStop
+- uid: TwinSharp.CNC.InsertStopCommand
+  commentId: T:TwinSharp.CNC.InsertStopCommand
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.InsertStopCommand.html
+  name: InsertStopCommand
+  nameWithType: InsertStopCommand
+  fullName: TwinSharp.CNC.InsertStopCommand
+- uid: TwinSharp.CNC.NcMessageMonitor.Enable
+  commentId: M:TwinSharp.CNC.NcMessageMonitor.Enable
+  href: TwinSharp.CNC.NcMessageMonitor.html#TwinSharp_CNC_NcMessageMonitor_Enable
+  name: Enable()
+  nameWithType: NcMessageMonitor.Enable()
+  fullName: TwinSharp.CNC.NcMessageMonitor.Enable()
+  spec.csharp:
+  - uid: TwinSharp.CNC.NcMessageMonitor.Enable
+    name: Enable
+    href: TwinSharp.CNC.NcMessageMonitor.html#TwinSharp_CNC_NcMessageMonitor_Enable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: TwinSharp.CNC.NcMessageMonitor.Enable
+    name: Enable
+    href: TwinSharp.CNC.NcMessageMonitor.html#TwinSharp_CNC_NcMessageMonitor_Enable
+  - name: (
+  - name: )
+- uid: TwinSharp.CNC.CncChannel.NcMessages*
+  commentId: Overload:TwinSharp.CNC.CncChannel.NcMessages
+  href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_NcMessages
+  name: NcMessages
+  nameWithType: CncChannel.NcMessages
+  fullName: TwinSharp.CNC.CncChannel.NcMessages
+- uid: TwinSharp.CNC.NcMessageMonitor
+  commentId: T:TwinSharp.CNC.NcMessageMonitor
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.NcMessageMonitor.html
+  name: NcMessageMonitor
+  nameWithType: NcMessageMonitor
+  fullName: TwinSharp.CNC.NcMessageMonitor
 - uid: TwinSharp.CNC.CncChannel.CoveredBlockMotionPercent*
   commentId: Overload:TwinSharp.CNC.CncChannel.CoveredBlockMotionPercent
   href: TwinSharp.CNC.CncChannel.html#TwinSharp_CNC_CncChannel_CoveredBlockMotionPercent

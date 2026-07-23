@@ -10,12 +10,14 @@ namespace TwinSharp.CNC
     public class BlockSearch
     {
         readonly AdsClient comClient;
-        readonly uint indexGroup;
+        readonly uint indexGroup;       // 0x120100 + ch  — general block search params (COM task)
+        readonly uint indexGroupType1;  // 0x00020100 + ch — Type 1 start/end position params
 
         internal BlockSearch(AdsClient comClient, int channelNumber)
         {
             this.comClient = comClient;
-            indexGroup =  0x120100 + (uint)channelNumber;
+            indexGroup      = 0x120100   + (uint)channelNumber;
+            indexGroupType1 = 0x00020100 + (uint)channelNumber;
         }
 
         /// <summary>
@@ -73,9 +75,40 @@ namespace TwinSharp.CNC
             set => comClient.WriteAny(indexGroup, 0x11, value);
         }
 
+        // ── Type 1 (file offset) start-position parameters ────────────────────────────────────────
+        // These use a different index group (0x000201xx) from the general block-search parameters.
+
+        /// <summary>
+        /// Type 1: File offset at which actual machining is to continue (start of the target NC row).
+        /// IndexGroup 0x000201xx, offset 0x50.
+        /// </summary>
+        public int StartPositionFileOffset
+        {
+            set => comClient.WriteAny(indexGroupType1, 0x50, value);
+        }
+
+        /// <summary>
+        /// Type 1: Name (full path) of the NC file that contains the start position.
+        /// Must match the filename passed to program start exactly.
+        /// IndexGroup 0x000201xx, offset 0x4F. Max 84 characters.
+        /// </summary>
+        public string StartPositionFileName
+        {
+            set => comClient.WriteAny(indexGroupType1, 0x4F, value);
+        }
+
+        /// <summary>
+        /// Type 1: Whether the file is on the main-program (HP=0) or subroutine (UP=1) path.
+        /// IndexGroup 0x000201xx, offset 0x4E.
+        /// </summary>
+        public ushort StartPositionPathId
+        {
+            set => comClient.WriteAny(indexGroupType1, 0x4E, value);
+        }
+
         /// <summary>
         /// This object defines an automatic breakpoint by specifying the distance from program start.
-        /// Unit [0.1 µm] 
+        /// Unit [0.1 µm]
         /// </summary>
         public double BreakPoint
         {

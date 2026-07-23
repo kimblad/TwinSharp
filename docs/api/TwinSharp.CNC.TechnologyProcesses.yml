@@ -11,6 +11,7 @@ items:
   - TwinSharp.CNC.TechnologyProcesses.GetBlockByBlockSynchTechnologies
   - TwinSharp.CNC.TechnologyProcesses.HcodeNeedsAcknowledge
   - TwinSharp.CNC.TechnologyProcesses.McodeNeedsAcknowledge
+  - TwinSharp.CNC.TechnologyProcesses.TcodeNeedsAcknowledge
   langs:
   - csharp
   - vb
@@ -107,6 +108,35 @@ items:
     return:
       type: System.EventHandler{TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs}
     content.vb: Public Event HcodeNeedsAcknowledge As EventHandler(Of HcodeNeedsAcknowledgeEventArgs)
+- uid: TwinSharp.CNC.TechnologyProcesses.TcodeNeedsAcknowledge
+  commentId: E:TwinSharp.CNC.TechnologyProcesses.TcodeNeedsAcknowledge
+  id: TcodeNeedsAcknowledge
+  parent: TwinSharp.CNC.TechnologyProcesses
+  langs:
+  - csharp
+  - vb
+  name: TcodeNeedsAcknowledge
+  nameWithType: TechnologyProcesses.TcodeNeedsAcknowledge
+  fullName: TwinSharp.CNC.TechnologyProcesses.TcodeNeedsAcknowledge
+  type: Event
+  source:
+    remote:
+      path: TwinSharp/CNC/TechnologyProcesses.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: TcodeNeedsAcknowledge
+    path: ../TwinSharp/CNC/TechnologyProcesses.cs
+    startLine: 23
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Event that is triggered when a T code (tool selection) needs to be acknowledged.
+  example: []
+  syntax:
+    content: public event EventHandler<TcodeNeedsAcknowledgeEventArgs>? TcodeNeedsAcknowledge
+    return:
+      type: System.EventHandler{TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs}
+    content.vb: Public Event TcodeNeedsAcknowledge As EventHandler(Of TcodeNeedsAcknowledgeEventArgs)
 - uid: TwinSharp.CNC.TechnologyProcesses.GetBlockByBlockSynchTechnologies
   commentId: M:TwinSharp.CNC.TechnologyProcesses.GetBlockByBlockSynchTechnologies
   id: GetBlockByBlockSynchTechnologies
@@ -125,7 +155,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: GetBlockByBlockSynchTechnologies
     path: ../TwinSharp/CNC/TechnologyProcesses.cs
-    startLine: 141
+    startLine: 161
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -156,7 +186,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: AcknowledgeTecnologyUnit
     path: ../TwinSharp/CNC/TechnologyProcesses.cs
-    startLine: 153
+    startLine: 173
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -191,7 +221,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: Dispose
     path: ../TwinSharp/CNC/TechnologyProcesses.cs
-    startLine: 191
+    startLine: 211
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -221,7 +251,7 @@ items:
       repo: https://github.com/kimblad/TwinSharp.git
     id: CountToBeAcknowledgedInThisBlock
     path: ../TwinSharp/CNC/TechnologyProcesses.cs
-    startLine: 206
+    startLine: 226
   assemblies:
   - TwinSharp
   namespace: TwinSharp.CNC
@@ -595,6 +625,39 @@ references:
   - uid: TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs
     name: HcodeNeedsAcknowledgeEventArgs
     href: TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs.html
+  - name: )
+- uid: System.EventHandler{TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs}
+  commentId: T:System.EventHandler{TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TcodeNeedsAcknowledgeEventArgs>
+  nameWithType: EventHandler<TcodeNeedsAcknowledgeEventArgs>
+  fullName: System.EventHandler<TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs>
+  nameWithType.vb: EventHandler(Of TcodeNeedsAcknowledgeEventArgs)
+  fullName.vb: System.EventHandler(Of TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs)
+  name.vb: EventHandler(Of TcodeNeedsAcknowledgeEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs
+    name: TcodeNeedsAcknowledgeEventArgs
+    href: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs
+    name: TcodeNeedsAcknowledgeEventArgs
+    href: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs.html
   - name: )
 - uid: TwinSharp.CNC.TechnologyProcesses.GetBlockByBlockSynchTechnologies*
   commentId: Overload:TwinSharp.CNC.TechnologyProcesses.GetBlockByBlockSynchTechnologies

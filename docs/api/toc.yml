@@ -65,6 +65,18 @@ items:
   name: TwinSharp.CNC
   type: Namespace
   items:
+  - uid: TwinSharp.CNC.AxisControlCommands
+    name: AxisControlCommands
+    type: Class
+  - uid: TwinSharp.CNC.AxisCoupling
+    name: AxisCoupling
+    type: Class
+  - uid: TwinSharp.CNC.AxisCouplingEntry
+    name: AxisCouplingEntry
+    type: Struct
+  - uid: TwinSharp.CNC.AxisCouplingMode
+    name: AxisCouplingMode
+    type: Enum
   - uid: TwinSharp.CNC.AxisState
     name: AxisState
     type: Enum
@@ -116,6 +128,15 @@ items:
   - uid: TwinSharp.CNC.DeleteDistanceToGo
     name: DeleteDistanceToGo
     type: Class
+  - uid: TwinSharp.CNC.DistanceControl
+    name: DistanceControl
+    type: Class
+  - uid: TwinSharp.CNC.DistanceControlCommand
+    name: DistanceControlCommand
+    type: Enum
+  - uid: TwinSharp.CNC.DistanceControlState
+    name: DistanceControlState
+    type: Enum
   - uid: TwinSharp.CNC.DynamicPositionLimitation
     name: DynamicPositionLimitation
     type: Class
@@ -134,18 +155,39 @@ items:
   - uid: TwinSharp.CNC.ExternalAxisCommanding
     name: ExternalAxisCommanding
     type: Class
+  - uid: TwinSharp.CNC.ExternalVariables
+    name: ExternalVariables
+    type: Class
   - uid: TwinSharp.CNC.FeedOverride
     name: FeedOverride
     type: Class
   - uid: TwinSharp.CNC.FeedOverrideAdresses
     name: FeedOverrideAdresses
     type: Class
+  - uid: TwinSharp.CNC.HLI_ACHS_NAME
+    name: HLI_ACHS_NAME
+    type: Struct
   - uid: TwinSharp.CNC.HLI_ADD_CMD_VALUE
     name: HLI_ADD_CMD_VALUE
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+    name: HLI_BAHN_COORD_DISP_DATA
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA
+    name: HLI_BAHN_TRAFO_DISP_DATA
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_BLOCK_DYNAMIC
+    name: HLI_BLOCK_DYNAMIC
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_CONVEYOR_DATA
+    name: HLI_CONVEYOR_DATA
     type: Struct
   - uid: TwinSharp.CNC.HLI_DYNPL_STATE
     name: HLI_DYNPL_STATE
     type: Enum
+  - uid: TwinSharp.CNC.HLI_EDGE_FUNCTION
+    name: HLI_EDGE_FUNCTION
+    type: Struct
   - uid: TwinSharp.CNC.HLI_ERROR_MASKE
     name: HLI_ERROR_MASKE
     type: Struct
@@ -161,8 +203,14 @@ items:
   - uid: TwinSharp.CNC.HLI_FB_ZEITANGABE
     name: HLI_FB_ZEITANGABE
     type: Struct
+  - uid: TwinSharp.CNC.HLI_FILE_NAME
+    name: HLI_FILE_NAME
+    type: Struct
   - uid: TwinSharp.CNC.HLI_HB_ACTIVATION
     name: HLI_HB_ACTIVATION
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+    name: HLI_HB_AXIS_DISPLAY_DATA
     type: Struct
   - uid: TwinSharp.CNC.HLI_HB_HR_PARAMETER
     name: HLI_HB_HR_PARAMETER
@@ -185,8 +233,23 @@ items:
   - uid: TwinSharp.CNC.HLI_INTF_VERSION_NAME
     name: HLI_INTF_VERSION_NAME
     type: Struct
+  - uid: TwinSharp.CNC.HLI_LOOKAHEAD_DATA
+    name: HLI_LOOKAHEAD_DATA
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_MC_IFC_ID
+    name: HLI_MC_IFC_ID
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_MC_JOB_DESCR
+    name: HLI_MC_JOB_DESCR
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_MC_JOB_STACK
+    name: HLI_MC_JOB_STACK
+    type: Struct
   - uid: TwinSharp.CNC.HLI_MODUL_NAME
     name: HLI_MODUL_NAME
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_MSG_SENDUNG
+    name: HLI_MSG_SENDUNG
     type: Struct
   - uid: TwinSharp.CNC.HLI_M_H_PROZESS
     name: HLI_M_H_PROZESS
@@ -196,6 +259,21 @@ items:
     type: Struct
   - uid: TwinSharp.CNC.HLI_RUMPF_NC_PROG
     name: HLI_RUMPF_NC_PROG
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_STATE_TTD
+    name: HLI_STATE_TTD
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF
+    name: HLI_STATE_TTD_TRIPLE_BUF
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_S_ADD_PROG_INFO
+    name: HLI_S_ADD_PROG_INFO
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA
+    name: HLI_TOOL_PATH_DISP_DATA
+    type: Struct
+  - uid: TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD
+    name: HLI_TRIPLE_BUF_HEAD
     type: Struct
   - uid: TwinSharp.CNC.HLI_WERT
     name: HLI_WERT
@@ -215,8 +293,14 @@ items:
   - uid: TwinSharp.CNC.HcodeNeedsAcknowledgeEventArgs
     name: HcodeNeedsAcknowledgeEventArgs
     type: Class
+  - uid: TwinSharp.CNC.HliConstants
+    name: HliConstants
+    type: Class
   - uid: TwinSharp.CNC.HrParameters
     name: HrParameters
+    type: Class
+  - uid: TwinSharp.CNC.InsertStopCommand
+    name: InsertStopCommand
     type: Class
   - uid: TwinSharp.CNC.Interpolator
     name: Interpolator
@@ -236,6 +320,12 @@ items:
   - uid: TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs
     name: McodeNeedsAcknowledgeEventArgs
     type: Class
+  - uid: TwinSharp.CNC.NcMessageEventArgs
+    name: NcMessageEventArgs
+    type: Class
+  - uid: TwinSharp.CNC.NcMessageMonitor
+    name: NcMessageMonitor
+    type: Class
   - uid: TwinSharp.CNC.ObjectDescription
     name: ObjectDescription
     type: Class
@@ -253,6 +343,9 @@ items:
     type: Enum
   - uid: TwinSharp.CNC.RapidKey
     name: RapidKey
+    type: Class
+  - uid: TwinSharp.CNC.RealTimeStatus
+    name: RealTimeStatus
     type: Class
   - uid: TwinSharp.CNC.SOLLKONT_VISU_ACHS_DATA_STD
     name: SOLLKONT_VISU_ACHS_DATA_STD
@@ -272,9 +365,18 @@ items:
   - uid: TwinSharp.CNC.SkipModes
     name: SkipModes
     type: Enum
+  - uid: TwinSharp.CNC.StateBahn
+    name: StateBahn
+    type: Struct
+  - uid: TwinSharp.CNC.StopConditionFlags
+    name: StopConditionFlags
+    type: Enum
   - uid: TwinSharp.CNC.TECHNO_UNIT_CH
     name: TECHNO_UNIT_CH
     type: Struct
+  - uid: TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs
+    name: TcodeNeedsAcknowledgeEventArgs
+    type: Class
   - uid: TwinSharp.CNC.TechnologyFunction
     name: TechnologyFunction
     type: Enum
@@ -283,6 +385,9 @@ items:
     type: Class
   - uid: TwinSharp.CNC.TipParameters
     name: TipParameters
+    type: Class
+  - uid: TwinSharp.CNC.ToolManagement
+    name: ToolManagement
     type: Class
   - uid: TwinSharp.CNC.ZeroOffsets
     name: ZeroOffsets

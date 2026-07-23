@@ -95,6 +95,44 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisControlCommands.html">AxisControlCommands</a></dt>
+      <dd><p>Wraps the axis control commands of the HLI <code>lr_mc_control</code> control unit for a single CNC axis
+(<code>gpAx[n].lr_mc_control.*</code>), as described in section &quot;Axis control commands&quot; of the HLI documentation.</p>
+<p>
+Every command in this class is an MC control unit with four elements:
+<ul><li><code>enable_w</code> — the PLC declares that it uses this control unit.
+  <b>The unit has no effect at all until this is TRUE</b>, so call the matching
+  <code>...Enable</code> setter (or <a class="xref" href="TwinSharp.CNC.AxisControlCommands.html#TwinSharp_CNC_AxisControlCommands_EnableAll">EnableAll()</a>) once after connecting.</li><li><code>command_w</code> — the value commanded by the PLC.</li><li><code>request_r</code> — the value requested by a GUI communicating directly with the CNC.
+  The PLC may accept the request by copying it into <code>command_w</code>, or ignore it.</li><li><code>state_r</code> — the CNC acknowledgement, used to check whether the command took effect.</li></ul><p>
+Other parts of <code>lr_mc_control</code> live in their own classes:
+<a class="xref" href="TwinSharp.CNC.AxisCoupling.html">AxisCoupling</a> (<code>axis_coupling</code>), <a class="xref" href="TwinSharp.CNC.DistanceControl.html">DistanceControl</a> (<code>distance_control</code>)
+and <a class="xref" href="TwinSharp.CNC.ExternalAxisCommanding.html">ExternalAxisCommanding</a> (<code>add_cmd_values</code>).
+The axis control commands that sit under <code>ipo_mc_control</code> (feedhold, override, reduced velocity, …)
+are not part of this class.
+</p><p><b>Precondition:</b><a class="xref" href="TwinSharp.CNC.CncAxis.html#TwinSharp_CNC_CncAxis_PlcPresent">PlcPresent</a> must be set to <code>true</code> before the CNC
+accepts any HLI command for the axis.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisCoupling.html">AxisCoupling</a></dt>
+      <dd><p>Wraps the HLI axis coupling interface for a single CNC axis
+(<code>gpAx[n].lr_mc_control.axis_coupling</code>).</p>
+<p>Axis coupling (electronic gearing) makes a target axis follow one or more source axes
+according to a specified coupling factor.  Typical uses include tandem/gantry axes and
+secondary cutting heads (MultiJet).</p>
+<p><b>Precondition:</b> all involved axes must be at standstill (velocity = 0) before calling
+<a class="xref" href="TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___">SetCouplings(AxisCouplingEntry[])</a> or <a class="xref" href="TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_RemoveCouplings">RemoveCouplings()</a>.  The CNC will raise error 70200
+if this is violated.
+</p><p><b>NC programmability:</b> if the coupled target axis also needs to respond to motion
+commands in the NC program, include a self-coupling entry in the descriptor list
+(source axis = target axis, mode = <a class="xref" href="TwinSharp.CNC.AxisCouplingMode.html#TwinSharp_CNC_AxisCouplingMode_Direct">Direct</a>).
+</p>
+<p>Semaphore handshake: after writing descriptors, <code>semaphor_rw</code> is set to <code>true</code>.
+The CNC latches the command and clears the semaphore automatically.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.AxisStatus.html">AxisStatus</a></dt>
       <dd><p>Axis status as taken from HLI. <a href="https://infosys.beckhoff.com/content/1033/tf5200_hli_interface/174749195.html?id=8719845080216701702">https://infosys.beckhoff.com/content/1033/tf5200_hli_interface/174749195.html?id=8719845080216701702</a></p>
 </dd>
@@ -173,6 +211,22 @@ In this way, motion information not previously specified can still be modified u
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.DistanceControl.html">DistanceControl</a></dt>
+      <dd><p>Wraps the TF5200 distance control HLI for a single CNC axis.
+Allows enabling the interface, issuing commands (activate/freeze/deactivate),
+and reading state and position feedback via ADS variable handles.</p>
+<p>Two activation modes are supported:</p>
+<ul><li><b>SET_POS mode</b> (<a class="xref" href="TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateSetPos_System_Double_">ActivateSetPos(double)</a>): the CNC adjusts the axis
+  to hold the workpiece surface at a commanded absolute position.</li><li><b>Constant-distance mode</b> (<a class="xref" href="TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateConstDistance_System_Double_">ActivateConstDistance(double)</a>): the CNC
+  maintains a fixed gap between tool and workpiece surface.</li></ul>
+<p>The sensor must be wired as Encoder 2 on the axis and configured in TwinCAT.
+Parameter P-AXIS-00328 must be set to enable the distance control function globally for the axis.</p>
+<p>Semaphore handshake: after writing a command, <code>command_semaphor_rw</code> is set to <code>true</code>.
+The CNC clears it back to <code>false</code> once the command is latched. In debug contexts it is
+acceptable not to wait for clearance before issuing the next command.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.DynamicPositionLimitation.html">DynamicPositionLimitation</a></dt>
       <dd><p>Additionally needs to be activated in the startup parameters by using the keyword FCT_DYN_POS_LIMIT of the parameter P-STUP-00070</p>
 </dd>
@@ -204,6 +258,20 @@ It subscribes to error notifications, reads error messages, and provides functio
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ExternalVariables.html">ExternalVariables</a></dt>
+      <dd><p>Reads and writes CNC External Variables (V.E.*) via the SDA variable-by-name interface.</p>
+<p>V.E. variables are shared data memory between the CNC NC channel, the HMI, and the PLC.
+Unlike P-parameters, they persist across M30 and new program starts — values survive
+the entire lifetime of the ADS connection and are only re-initialised at CNC boot.</p>
+<p>Variables must be declared in a .lis ASCII list file configured at CNC start-up
+(machine integrator responsibility). The HMI accesses them by their short name
+(e.g. &quot;rotation_angle&quot;); the full NC/ADS name is &quot;V.E.&lt;name&gt;&quot; (channel scope)
+or &quot;V.E.G.&lt;name&gt;&quot; (global scope — not handled here).</p>
+<p>Variable access: SDA port (552), index group 0x122300 + channelNumber.
+Uses 0x48 (read by name) and 0x4A (write by name) per TF5200 §4.3.5/§4.3.7.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.FeedOverride.html">FeedOverride</a></dt>
       <dd><p>Provides properties to read and control the feed override of a channel.</p>
 </dd>
@@ -224,9 +292,27 @@ It subscribes to error notifications, reads error messages, and provides functio
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HliConstants.html">HliConstants</a></dt>
+      <dd><p>Global HLI constants from <code>HLI_Global_Constants</code> (VAR_GLOBAL CONSTANT).
+These mirror the ISG TwinCAT CNC HLI library constants verbatim.
+Use these values when sizing structs or interpreting HLI status fields.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.HrParameters.html">HrParameters</a></dt>
       <dd><p>Control unit to manage data for parameterising handwheel mode in manual mode,
 including flow control of user data</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.InsertStopCommand.html">InsertStopCommand</a></dt>
+      <dd><p>Allows insertion of CNC stop marks into a running NC program at runtime via the HLI
+<code>bahn_mc_control.insert_cmd</code> control unit.</p>
+<p>
+In POSITION mode (logicalAxisNumber &gt; 0 in <a class="xref" href="TwinSharp.CNC.InsertStopCommand.html#TwinSharp_CNC_InsertStopCommand_InsertAtPosition_System_Double_System_UInt32_">InsertAtPosition(double, uint)</a>) the CNC
+stops the first time the specified axis reaches the commanded position. The stop behaves
+like M00 — the operator presses Continue to resume.
+</p><p>Requires <code>P-STUP-00033</code> (fb_storage_size) to be non-zero on the machine.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -266,6 +352,25 @@ Such as keys, rapid keys and hand wheels.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.NcMessageEventArgs.html">NcMessageEventArgs</a></dt>
+      <dd><p>Event arguments for <a class="xref" href="TwinSharp.CNC.NcMessageMonitor.html#TwinSharp_CNC_NcMessageMonitor_MessageReceived">MessageReceived</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.NcMessageMonitor.html">NcMessageMonitor</a></dt>
+      <dd><p>Monitors NC-program messages sent to the PLC via <code>#MSG PLC &quot;text&quot;</code> or
+<code>#MSGINFO PLC &quot;text&quot;</code> in the NC program.</p>
+<p>
+When the CNC places a message in the HLI <code>msg_mc_control</code> control unit, this class
+fires <a class="xref" href="TwinSharp.CNC.NcMessageMonitor.html#TwinSharp_CNC_NcMessageMonitor_MessageReceived">MessageReceived</a> with the message text and type, then acknowledges the
+semaphore so the CNC can deliver the next message.
+</p><p>
+Call <a class="xref" href="TwinSharp.CNC.NcMessageMonitor.html#TwinSharp_CNC_NcMessageMonitor_Enable">Enable()</a> once after connecting to register the PLC as present on this
+control unit. Without it the CNC will not deliver messages.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.ObjectDescription.html">ObjectDescription</a></dt>
       <dd><p>Represents the description of a TASK COM object.</p>
 </dd>
@@ -289,9 +394,24 @@ button is pushed and linked to an axis.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.RealTimeStatus.html">RealTimeStatus</a></dt>
+      <dd><p>Provides read-only access to the real-time status of the CNC path interpolator
+via the HLI <code>bahn_state</code> variable (<code>STATE_BAHN</code> struct).</p>
+<p>
+All data is read in a single ADS call by accessing the entire <a class="xref" href="TwinSharp.CNC.StateBahn.html">StateBahn</a>
+struct via <a class="xref" href="TwinSharp.CNC.RealTimeStatus.html#TwinSharp_CNC_RealTimeStatus_State">State</a>.
+</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.SingleBlock.html">SingleBlock</a></dt>
       <dd><p>When single-step mode is active, the machine operator has the option to execute an NC program step by step.
 The operator releases every NC line one by one. Comment lines or comment blocks and skipped blocks are skipped.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs.html">TcodeNeedsAcknowledgeEventArgs</a></dt>
+      <dd><p>Event args supplied when a T code (tool selection) needs to be acknowledged.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -307,6 +427,17 @@ mode, including flow control of user data.</p>
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.ToolManagement.html">ToolManagement</a></dt>
+      <dd><p>Reads and writes tool table entries (V.G.WZ[j].*) via the SDA variable-by-name interface.
+Writes to V.G.WZ[j].R persist across mode changes and program resets,
+unlike WZ_AKT.R which is a runtime overlay that resets on tool deselect.
+Requires CNC build ≥ 3.1.3079.08 and internal tool table (not external tool management).</p>
+<p>Variable access: SDA port (552), index group 0x122300 + channelNumber.
+Uses 0x48 (read by name) and 0x4A (write by name) per TF5200 ADS Access on CNC §4.3.5/§4.3.7.
+V.G.WZ[j].R does not support the handle lookup (0x46) — access by name is required.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.ZeroOffsets.html">ZeroOffsets</a></dt>
       <dd><p>The ZeroOffsets class is responsible for handling zero offsets (G54 etc) in the CNC system.</p>
 </dd>
@@ -315,10 +446,47 @@ mode, including flow control of user data.</p>
 Structs
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisCouplingEntry.html">AxisCouplingEntry</a></dt>
+      <dd><p>Describes one source-axis relationship in an axis coupling command.
+Pass an array of these to <a class="xref" href="TwinSharp.CNC.AxisCoupling.html#TwinSharp_CNC_AxisCoupling_SetCouplings_TwinSharp_CNC_AxisCouplingEntry___">SetCouplings(AxisCouplingEntry[])</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_ACHS_NAME.html">HLI_ACHS_NAME</a></dt>
+      <dd><p>Axis name string. Mirrors <code>HLI_ACHS_NAME</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.HLI_ADD_CMD_VALUE.html">HLI_ADD_CMD_VALUE</a></dt>
       <dd><p>Specifying velocity or position command values by the SPS effective in addition to
 the interpolator.No monitoring takes place of transferred values for compliance
 with the dynamic axis limits. To activate this interface, set the parameter P- AXIS-00732 to 1.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.html">HLI_BAHN_COORD_DISP_DATA</a></dt>
+      <dd><p>Per-axis coordinate display data. Mirrors <code>HLI_BAHN_COORD_DISP_DATA</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_BAHN_TRAFO_DISP_DATA.html">HLI_BAHN_TRAFO_DISP_DATA</a></dt>
+      <dd><p>Kinematic transformation display data for one transformation step.
+Mirrors <code>HLI_BAHN_TRAFO_DISP_DATA</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_BLOCK_DYNAMIC.html">HLI_BLOCK_DYNAMIC</a></dt>
+      <dd><p>Dynamic data for the active NC block. Mirrors <code>HLI_BLOCK_DYNAMIC</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_CONVEYOR_DATA.html">HLI_CONVEYOR_DATA</a></dt>
+      <dd><p>Conveyor synchronisation status data. Mirrors <code>HLI_CONVEYOR_DATA</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_EDGE_FUNCTION.html">HLI_EDGE_FUNCTION</a></dt>
+      <dd><p>Edge function status signals and bend angle. Mirrors <code>HLI_EDGE_FUNCTION</code>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -347,8 +515,18 @@ with the dynamic axis limits. To activate this interface, set the parameter P- A
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_FILE_NAME.html">HLI_FILE_NAME</a></dt>
+      <dd><p>A CNC file name string. Mirrors <code>HLI_FILE_NAME</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_ACTIVATION.html">HLI_HB_ACTIVATION</a></dt>
       <dd><p>Control unit to manage data to activate a control element and assign it to an axis in manual mode.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA.html">HLI_HB_AXIS_DISPLAY_DATA</a></dt>
+      <dd><p>Manual mode display data for one axis. Mirrors <code>HLI_HB_AXIS_DISPLAY_DATA</code>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -387,8 +565,36 @@ with the dynamic axis limits. To activate this interface, set the parameter P- A
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_LOOKAHEAD_DATA.html">HLI_LOOKAHEAD_DATA</a></dt>
+      <dd><p>Position look-ahead data. Mirrors <code>HLI_LOOKAHEAD_DATA</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_MC_IFC_ID.html">HLI_MC_IFC_ID</a></dt>
+      <dd><p>Combined interface identifier: index + class. Mirrors <code>HLI_MC_IFC_ID</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_MC_JOB_DESCR.html">HLI_MC_JOB_DESCR</a></dt>
+      <dd><p>Job descriptor: job ID and interface identifier. Mirrors <code>HLI_MC_JOB_DESCR</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_MC_JOB_STACK.html">HLI_MC_JOB_STACK</a></dt>
+      <dd><p>Job stack containing up to <code>HLI_MC_JOB_STACK_MAX</code> (15) job descriptors.
+Mirrors <code>HLI_MC_JOB_STACK</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.HLI_MODUL_NAME.html">HLI_MODUL_NAME</a></dt>
       <dd><p>Structure that contains the name of one module.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_MSG_SENDUNG.html">HLI_MSG_SENDUNG</a></dt>
+      <dd><p>Payload of an NC-program message sent via <code>#MSG PLC</code> or <code>#MSGINFO PLC</code>.
+Mirrors <code>HLI_MSG_SENDUNG</code> from the HLI interface.
+Layout: typ (UDINT) — fill_up_1 (DINT, mod-8 alignment pad) — inhalt (STRING(119)).</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -404,6 +610,33 @@ with the dynamic axis limits. To activate this interface, set the parameter P- A
     <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.HLI_RUMPF_NC_PROG.html">HLI_RUMPF_NC_PROG</a></dt>
       <dd><p>Error information in relation to NC program.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_STATE_TTD.html">HLI_STATE_TTD</a></dt>
+      <dd><p>Time-to-distance data for one triple-buffer slot. Mirrors <code>HLI_STATE_TTD</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_STATE_TTD_TRIPLE_BUF.html">HLI_STATE_TTD_TRIPLE_BUF</a></dt>
+      <dd><p>Triple-buffered time-to-distance state. Mirrors <code>HLI_STATE_TTD_TRIPLE_BUF</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_S_ADD_PROG_INFO.html">HLI_S_ADD_PROG_INFO</a></dt>
+      <dd><p>Additive program info block containing the job stack.
+Mirrors <code>HLI_S_ADD_PROG_INFO</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_TOOL_PATH_DISP_DATA.html">HLI_TOOL_PATH_DISP_DATA</a></dt>
+      <dd><p>Tool path display data: orientation, tangent, and normal vectors in the coordinate system.
+Mirrors <code>HLI_TOOL_PATH_DISP_DATA</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.HLI_TRIPLE_BUF_HEAD.html">HLI_TRIPLE_BUF_HEAD</a></dt>
+      <dd><p>Header for a lock-free triple buffer. Mirrors <code>HLI_TRIPLE_BUF_HEAD</code>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -447,6 +680,13 @@ with the dynamic axis limits. To activate this interface, set the parameter P- A
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.StateBahn.html">StateBahn</a></dt>
+      <dd><p>Real-time status of the CNC path interpolator, mirroring the <code>STATE_BAHN</code> PLC struct.
+Accessed via <code>HLI_Global_Variables.gpCh[n]^.bahn_state</code>.
+Read in a single ADS call via <a class="xref" href="TwinSharp.CNC.RealTimeStatus.html#TwinSharp_CNC_RealTimeStatus_State">State</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.TECHNO_UNIT_CH.html">TECHNO_UNIT_CH</a></dt>
       <dd><p>A technology control unit contains elements for commanding, acknowledging and transferring any required parameters</p>
 </dd>
@@ -454,6 +694,11 @@ with the dynamic axis limits. To activate this interface, set the parameter P- A
     <h3 id="enums">
 Enums
 </h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.AxisCouplingMode.html">AxisCouplingMode</a></dt>
+      <dd><p>Coupling mode for one descriptor entry in an axis coupling specification.</p>
+</dd>
+    </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.AxisState.html">AxisState</a></dt>
       <dd><p>Enumeration that lists the possible states of an axis.</p>
@@ -467,6 +712,16 @@ Enums
     <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.ChannelMode.html">ChannelMode</a></dt>
       <dd><p>Enum for selection of a special channel mode such as syntax check or machining time calculation</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.DistanceControlCommand.html">DistanceControlCommand</a></dt>
+      <dd><p>Command values for the <code>command_w.transition</code> field of the distance control HLI.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.DistanceControlState.html">DistanceControlState</a></dt>
+      <dd><p>State machine states reported by the TF5200 distance control module.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -488,6 +743,12 @@ This enumeration lists the operating modes that are defined.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="TwinSharp.CNC.SkipModes.html">SkipModes</a></dt>
       <dd><p>Enumeration that describes the skip mode at interpreter level. Skip levels active simultaneously are enabled by bitwise ORing.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="TwinSharp.CNC.StopConditionFlags.html">StopConditionFlags</a></dt>
+      <dd><p>Flags indicating which condition(s) are currently stopping the CNC path interpolator.
+Corresponds to the <code>stop_conditions_r</code> field of <code>STATE_BAHN</code>.</p>
 </dd>
     </dl>
     <dl class="jumplist">

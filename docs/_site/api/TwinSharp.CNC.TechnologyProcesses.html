@@ -164,7 +164,7 @@ It handles the acknowledgment of M and H codes, processes notifications from the
 
   <h3 id="TwinSharp_CNC_TechnologyProcesses_CountToBeAcknowledgedInThisBlock" data-uid="TwinSharp.CNC.TechnologyProcesses.CountToBeAcknowledgedInThisBlock">
   CountToBeAcknowledgedInThisBlock
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L227"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Number of entries in the array ATechnoUnitChannel_Std ( = number of technology functions to be acknowledged in this block)</p>
@@ -200,7 +200,7 @@ It handles the acknowledgment of M and H codes, processes notifications from the
 
   <h3 id="TwinSharp_CNC_TechnologyProcesses_AcknowledgeTecnologyUnit_System_Int32_" data-uid="TwinSharp.CNC.TechnologyProcesses.AcknowledgeTecnologyUnit(System.Int32)">
   AcknowledgeTecnologyUnit(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Acknowledge a technology unit. This is necessary to inform the CNC that processing of the NC program should continue.</p>
@@ -232,7 +232,7 @@ It handles the acknowledgment of M and H codes, processes notifications from the
 
   <h3 id="TwinSharp_CNC_TechnologyProcesses_Dispose" data-uid="TwinSharp.CNC.TechnologyProcesses.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Dispose the object. Deletes device notifications and handles on ADS side.</p>
@@ -259,7 +259,7 @@ It handles the acknowledgment of M and H codes, processes notifications from the
 
   <h3 id="TwinSharp_CNC_TechnologyProcesses_GetBlockByBlockSynchTechnologies" data-uid="TwinSharp.CNC.TechnologyProcesses.GetBlockByBlockSynchTechnologies">
   GetBlockByBlockSynchTechnologies()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Array of M/H/S/T technology functions with block-by-block synchronisation.</p>
@@ -344,6 +344,37 @@ It handles the acknowledgment of M and H codes, processes notifications from the
   <h4 class="section">Event Type</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TwinSharp.CNC.McodeNeedsAcknowledgeEventArgs.html">McodeNeedsAcknowledgeEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="TwinSharp_CNC_TechnologyProcesses_TcodeNeedsAcknowledge" data-uid="TwinSharp.CNC.TechnologyProcesses.TcodeNeedsAcknowledge">
+  TcodeNeedsAcknowledge
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/TechnologyProcesses.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Event that is triggered when a T code (tool selection) needs to be acknowledged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler&lt;TcodeNeedsAcknowledgeEventArgs&gt;? TcodeNeedsAcknowledge</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="TwinSharp.CNC.TcodeNeedsAcknowledgeEventArgs.html">TcodeNeedsAcknowledgeEventArgs</a>&gt;</dt>
     <dd></dd>
   </dl>
 

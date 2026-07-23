@@ -1,0 +1,1209 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  commentId: T:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  id: HLI_BAHN_COORD_DISP_DATA
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.acs_position_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.act_position_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_mcs_dyn_cs_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_pcs_dyn_cs_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_name_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_type_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.cmd_position_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.conv_sync_state_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.current_position_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_geometry_end_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_go_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.hb_display_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.homing_done_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.log_achs_nr_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.man_offset_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.pcs_position_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.real64_free
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_1
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_2
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_5
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_6
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_7
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_8
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.state_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.total_offset_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_acceleration_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_position_r
+  - TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_velocity_r
+  langs:
+  - csharp
+  - vb
+  name: HLI_BAHN_COORD_DISP_DATA
+  nameWithType: HLI_BAHN_COORD_DISP_DATA
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_BAHN_COORD_DISP_DATA
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 959
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Per-axis coordinate display data. Mirrors <code>HLI_BAHN_COORD_DISP_DATA</code>.
+  example: []
+  syntax:
+    content: public struct HLI_BAHN_COORD_DISP_DATA
+    content.vb: Public Structure HLI_BAHN_COORD_DISP_DATA
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_name_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_name_r
+  id: axis_name_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: axis_name_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.axis_name_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_name_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: axis_name_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 963
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Axis name.
+  example: []
+  syntax:
+    content: public HLI_ACHS_NAME axis_name_r
+    return:
+      type: TwinSharp.CNC.HLI_ACHS_NAME
+    content.vb: Public axis_name_r As HLI_ACHS_NAME
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.log_achs_nr_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.log_achs_nr_r
+  id: log_achs_nr_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: log_achs_nr_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.log_achs_nr_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.log_achs_nr_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: log_achs_nr_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 966
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Logical axis number.
+  example: []
+  syntax:
+    content: public ushort log_achs_nr_r
+    return:
+      type: System.UInt16
+    content.vb: Public log_achs_nr_r As UShort
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_type_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_type_r
+  id: axis_type_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: axis_type_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.axis_type_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.axis_type_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: axis_type_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 969
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Axis type. See HLI_AXIS_TYPE_* constants.
+  example: []
+  syntax:
+    content: public ushort axis_type_r
+    return:
+      type: System.UInt16
+    content.vb: Public axis_type_r As UShort
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.state_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.state_r
+  id: state_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: state_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.state_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.state_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: state_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 972
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Axis state.
+  example: []
+  syntax:
+    content: public ushort state_r
+    return:
+      type: System.UInt16
+    content.vb: Public state_r As UShort
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.homing_done_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.homing_done_r
+  id: homing_done_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: homing_done_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.homing_done_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.homing_done_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: homing_done_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 976
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: TRUE when homing has been completed.
+  example: []
+  syntax:
+    content: public bool homing_done_r
+    return:
+      type: System.Boolean
+    content.vb: Public homing_done_r As Boolean
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.conv_sync_state_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.conv_sync_state_r
+  id: conv_sync_state_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: conv_sync_state_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.conv_sync_state_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.conv_sync_state_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: conv_sync_state_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 979
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Conveyor synchronisation state. See HLI_CONV_SYNC_STATE_* constants.
+  example: []
+  syntax:
+    content: public byte conv_sync_state_r
+    return:
+      type: System.Byte
+    content.vb: Public conv_sync_state_r As Byte
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.cmd_position_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.cmd_position_r
+  id: cmd_position_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: cmd_position_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.cmd_position_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.cmd_position_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: cmd_position_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 982
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Command position. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int cmd_position_r
+    return:
+      type: System.Int32
+    content.vb: Public cmd_position_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.current_position_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.current_position_r
+  id: current_position_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: current_position_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.current_position_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.current_position_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: current_position_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 985
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Interpolated position. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int current_position_r
+    return:
+      type: System.Int32
+    content.vb: Public current_position_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.act_position_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.act_position_r
+  id: act_position_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: act_position_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.act_position_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.act_position_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: act_position_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 988
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Actual position from the position controller. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int act_position_r
+    return:
+      type: System.Int32
+    content.vb: Public act_position_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_pcs_dyn_cs_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_pcs_dyn_cs_r
+  id: active_pos_pcs_dyn_cs_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: active_pos_pcs_dyn_cs_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.active_pos_pcs_dyn_cs_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_pcs_dyn_cs_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: active_pos_pcs_dyn_cs_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 991
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'PCS active position compensated by dynamic coordinate system (output of dyn. CS). Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int active_pos_pcs_dyn_cs_r
+    return:
+      type: System.Int32
+    content.vb: Public active_pos_pcs_dyn_cs_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_mcs_dyn_cs_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_mcs_dyn_cs_r
+  id: active_pos_mcs_dyn_cs_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: active_pos_mcs_dyn_cs_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.active_pos_mcs_dyn_cs_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.active_pos_mcs_dyn_cs_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: active_pos_mcs_dyn_cs_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 994
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'MCS active position compensated by dynamic coordinate system (output of dyn. CS). Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int active_pos_mcs_dyn_cs_r
+    return:
+      type: System.Int32
+    content.vb: Public active_pos_mcs_dyn_cs_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.man_offset_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.man_offset_r
+  id: man_offset_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: man_offset_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.man_offset_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.man_offset_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: man_offset_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 997
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Offset from manual mode. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int man_offset_r
+    return:
+      type: System.Int32
+    content.vb: Public man_offset_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_go_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_go_r
+  id: dist_to_go_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: dist_to_go_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.dist_to_go_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_go_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: dist_to_go_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1000
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Distance to go in the current block. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int dist_to_go_r
+    return:
+      type: System.Int32
+    content.vb: Public dist_to_go_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.total_offset_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.total_offset_r
+  id: total_offset_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: total_offset_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.total_offset_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.total_offset_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: total_offset_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1003
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Total offset (zero offsets + manual offset). Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int total_offset_r
+    return:
+      type: System.Int32
+    content.vb: Public total_offset_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.acs_position_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.acs_position_r
+  id: acs_position_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: acs_position_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.acs_position_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.acs_position_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: acs_position_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1006
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'ACS position after transformation, or PCS position with offsets. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int acs_position_r
+    return:
+      type: System.Int32
+    content.vb: Public acs_position_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_position_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_position_r
+  id: w0_position_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: w0_position_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.w0_position_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_position_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: w0_position_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1009
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'W0 position: TCP position in the base Cartesian machine coordinate system (active_position_mcs). Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int w0_position_r
+    return:
+      type: System.Int32
+    content.vb: Public w0_position_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_1
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_1
+  id: sgn32_free_1
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_1
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.sgn32_free_1
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1012
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int sgn32_free_1
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_1 As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.hb_display_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.hb_display_r
+  id: hb_display_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: hb_display_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.hb_display_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.hb_display_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: hb_display_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1015
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Manual mode display data for this axis.
+  example: []
+  syntax:
+    content: public HLI_HB_AXIS_DISPLAY_DATA hb_display_r
+    return:
+      type: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+    content.vb: Public hb_display_r As HLI_HB_AXIS_DISPLAY_DATA
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_velocity_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_velocity_r
+  id: w0_velocity_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: w0_velocity_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.w0_velocity_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_velocity_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: w0_velocity_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1018
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Velocity of the TCP in the base Cartesian machine coordinate system. Unit: 1 µm/s.'
+  example: []
+  syntax:
+    content: public int w0_velocity_r
+    return:
+      type: System.Int32
+    content.vb: Public w0_velocity_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_acceleration_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_acceleration_r
+  id: w0_acceleration_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: w0_acceleration_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.w0_acceleration_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.w0_acceleration_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: w0_acceleration_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1021
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Acceleration of the TCP in the base Cartesian machine coordinate system. Unit: 1 µm/s².'
+  example: []
+  syntax:
+    content: public int w0_acceleration_r
+    return:
+      type: System.Int32
+    content.vb: Public w0_acceleration_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.pcs_position_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.pcs_position_r
+  id: pcs_position_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: pcs_position_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.pcs_position_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.pcs_position_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: pcs_position_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1024
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'PCS position. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int pcs_position_r
+    return:
+      type: System.Int32
+    content.vb: Public pcs_position_r As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_2
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_2
+  id: sgn32_free_2
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_2
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.sgn32_free_2
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_2
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1027
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int sgn32_free_2
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_2 As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_geometry_end_r
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_geometry_end_r
+  id: dist_to_geometry_end_r
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: dist_to_geometry_end_r
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.dist_to_geometry_end_r
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.dist_to_geometry_end_r
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: dist_to_geometry_end_r
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1030
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Distance to go to end of geometry marked with #DIST TO GO [AX]. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public double dist_to_geometry_end_r
+    return:
+      type: System.Double
+    content.vb: Public dist_to_geometry_end_r As Double
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_5
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_5
+  id: sgn32_free_5
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_5
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.sgn32_free_5
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_5
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_5
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1033
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int sgn32_free_5
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_5 As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_6
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_6
+  id: sgn32_free_6
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_6
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.sgn32_free_6
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_6
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_6
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1035
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int sgn32_free_6
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_6 As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_7
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_7
+  id: sgn32_free_7
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_7
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.sgn32_free_7
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_7
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_7
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1037
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int sgn32_free_7
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_7 As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_8
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_8
+  id: sgn32_free_8
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_8
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.sgn32_free_8
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.sgn32_free_8
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_8
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1039
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use.
+  example: []
+  syntax:
+    content: public int sgn32_free_8
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_8 As Integer
+- uid: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.real64_free
+  commentId: F:TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.real64_free
+  id: real64_free
+  parent: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA
+  langs:
+  - csharp
+  - vb
+  name: real64_free
+  nameWithType: HLI_BAHN_COORD_DISP_DATA.real64_free
+  fullName: TwinSharp.CNC.HLI_BAHN_COORD_DISP_DATA.real64_free
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: real64_free
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 1043
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reserved for future use (real64_free_10..1). 10 × LREAL.
+  example: []
+  syntax:
+    content: public double[] real64_free
+    return:
+      type: System.Double[]
+    content.vb: Public real64_free As Double()
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TwinSharp.CNC.HLI_ACHS_NAME
+  commentId: T:TwinSharp.CNC.HLI_ACHS_NAME
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_ACHS_NAME.html
+  name: HLI_ACHS_NAME
+  nameWithType: HLI_ACHS_NAME
+  fullName: TwinSharp.CNC.HLI_ACHS_NAME
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+  commentId: T:TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA.html
+  name: HLI_HB_AXIS_DISPLAY_DATA
+  nameWithType: HLI_HB_AXIS_DISPLAY_DATA
+  fullName: TwinSharp.CNC.HLI_HB_AXIS_DISPLAY_DATA
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Double[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )

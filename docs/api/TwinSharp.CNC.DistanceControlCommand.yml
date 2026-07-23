@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.DistanceControlCommand
+  commentId: T:TwinSharp.CNC.DistanceControlCommand
+  id: DistanceControlCommand
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.DistanceControlCommand.Freeze
+  - TwinSharp.CNC.DistanceControlCommand.Off
+  - TwinSharp.CNC.DistanceControlCommand.On
+  - TwinSharp.CNC.DistanceControlCommand.OnConstDist
+  - TwinSharp.CNC.DistanceControlCommand.Reference
+  langs:
+  - csharp
+  - vb
+  name: DistanceControlCommand
+  nameWithType: DistanceControlCommand
+  fullName: TwinSharp.CNC.DistanceControlCommand
+  type: Enum
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: DistanceControlCommand
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 208
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Command values for the <code>command_w.transition</code> field of the distance control HLI.
+  example: []
+  syntax:
+    content: public enum DistanceControlCommand
+    content.vb: Public Enum DistanceControlCommand
+- uid: TwinSharp.CNC.DistanceControlCommand.Off
+  commentId: F:TwinSharp.CNC.DistanceControlCommand.Off
+  id: Off
+  parent: TwinSharp.CNC.DistanceControlCommand
+  langs:
+  - csharp
+  - vb
+  name: Off
+  nameWithType: DistanceControlCommand.Off
+  fullName: TwinSharp.CNC.DistanceControlCommand.Off
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Off
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 211
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Deactivate distance control; offset ramps to zero.
+  example: []
+  syntax:
+    content: Off = 0
+    return:
+      type: TwinSharp.CNC.DistanceControlCommand
+- uid: TwinSharp.CNC.DistanceControlCommand.On
+  commentId: F:TwinSharp.CNC.DistanceControlCommand.On
+  id: On
+  parent: TwinSharp.CNC.DistanceControlCommand
+  langs:
+  - csharp
+  - vb
+  name: On
+  nameWithType: DistanceControlCommand.On
+  fullName: TwinSharp.CNC.DistanceControlCommand.On
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: On
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 213
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Activate in SET_POS mode.
+  example: []
+  syntax:
+    content: On = 1
+    return:
+      type: TwinSharp.CNC.DistanceControlCommand
+- uid: TwinSharp.CNC.DistanceControlCommand.Freeze
+  commentId: F:TwinSharp.CNC.DistanceControlCommand.Freeze
+  id: Freeze
+  parent: TwinSharp.CNC.DistanceControlCommand
+  langs:
+  - csharp
+  - vb
+  name: Freeze
+  nameWithType: DistanceControlCommand.Freeze
+  fullName: TwinSharp.CNC.DistanceControlCommand.Freeze
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Freeze
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 215
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Freeze the current offset.
+  example: []
+  syntax:
+    content: Freeze = 2
+    return:
+      type: TwinSharp.CNC.DistanceControlCommand
+- uid: TwinSharp.CNC.DistanceControlCommand.Reference
+  commentId: F:TwinSharp.CNC.DistanceControlCommand.Reference
+  id: Reference
+  parent: TwinSharp.CNC.DistanceControlCommand
+  langs:
+  - csharp
+  - vb
+  name: Reference
+  nameWithType: DistanceControlCommand.Reference
+  fullName: TwinSharp.CNC.DistanceControlCommand.Reference
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: Reference
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 217
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Reference the sensor zero point.
+  example: []
+  syntax:
+    content: Reference = 3
+    return:
+      type: TwinSharp.CNC.DistanceControlCommand
+- uid: TwinSharp.CNC.DistanceControlCommand.OnConstDist
+  commentId: F:TwinSharp.CNC.DistanceControlCommand.OnConstDist
+  id: OnConstDist
+  parent: TwinSharp.CNC.DistanceControlCommand
+  langs:
+  - csharp
+  - vb
+  name: OnConstDist
+  nameWithType: DistanceControlCommand.OnConstDist
+  fullName: TwinSharp.CNC.DistanceControlCommand.OnConstDist
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/DistanceControl.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: OnConstDist
+    path: ../TwinSharp/CNC/DistanceControl.cs
+    startLine: 219
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Activate in constant-distance mode.
+  example: []
+  syntax:
+    content: OnConstDist = 4
+    return:
+      type: TwinSharp.CNC.DistanceControlCommand
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: TwinSharp.CNC.DistanceControlCommand
+  commentId: T:TwinSharp.CNC.DistanceControlCommand
+  parent: TwinSharp.CNC
+  href: TwinSharp.CNC.DistanceControlCommand.html
+  name: DistanceControlCommand
+  nameWithType: DistanceControlCommand
+  fullName: TwinSharp.CNC.DistanceControlCommand

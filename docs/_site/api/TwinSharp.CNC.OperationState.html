@@ -137,6 +137,12 @@ Enum OperationState  <a class="header-action link-secondary" title="View source"
     <dt id="TwinSharp_CNC_OperationState_PROCESS_SELECTED"><code>PROCESS_SELECTED = 2</code></dt>
     <dd><p>Operation mode is selected.</p>
 </dd>
+    <dt id="TwinSharp_CNC_OperationState_RESETTING"><code>RESETTING = 15</code></dt>
+    <dd><p>Explicit CNC reset within the current operation mode (no mode change).
+Commanding this state triggers a reset and the CNC returns to PROCESS_SELECTED
+in the same mode. Available from CNC build V2.10.1033.01 / V2.10.1507.02 / V2.10.1800.04.
+Ref: TF5200 HLI Interface specification, chapter 8.</p>
+</dd>
   </dl>
 
 

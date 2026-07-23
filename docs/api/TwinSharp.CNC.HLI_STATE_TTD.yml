@@ -1,0 +1,866 @@
+### YamlMime:ManagedReference
+items:
+- uid: TwinSharp.CNC.HLI_STATE_TTD
+  commentId: T:TwinSharp.CNC.HLI_STATE_TTD
+  id: HLI_STATE_TTD
+  parent: TwinSharp.CNC
+  children:
+  - TwinSharp.CNC.HLI_STATE_TTD.edge_position
+  - TwinSharp.CNC.HLI_STATE_TTD.edge_velocity
+  - TwinSharp.CNC.HLI_STATE_TTD.enlacement
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_1
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_2
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_3
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_1
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_2
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_3
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_4
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_5
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_6
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_7
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_8
+  - TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_9
+  - TwinSharp.CNC.HLI_STATE_TTD.time_to_distance
+  - TwinSharp.CNC.HLI_STATE_TTD.time_to_distance_valid
+  langs:
+  - csharp
+  - vb
+  name: HLI_STATE_TTD
+  nameWithType: HLI_STATE_TTD
+  fullName: TwinSharp.CNC.HLI_STATE_TTD
+  type: Struct
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: HLI_STATE_TTD
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 854
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Time-to-distance data for one triple-buffer slot. Mirrors <code>HLI_STATE_TTD</code>.
+  example: []
+  syntax:
+    content: public struct HLI_STATE_TTD
+    content.vb: Public Structure HLI_STATE_TTD
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: TwinSharp.CNC.HLI_STATE_TTD.time_to_distance
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.time_to_distance
+  id: time_to_distance
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: time_to_distance
+  nameWithType: HLI_STATE_TTD.time_to_distance
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.time_to_distance
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: time_to_distance
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 859
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Calculated time-to-distance values. 10 elements [0..HLI_BAHN_POS_TIME_LAH_MAXIDX]. Unit: µs.'
+  example: []
+  syntax:
+    content: public int[] time_to_distance
+    return:
+      type: System.Int32[]
+    content.vb: Public time_to_distance As Integer()
+- uid: TwinSharp.CNC.HLI_STATE_TTD.time_to_distance_valid
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.time_to_distance_valid
+  id: time_to_distance_valid
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: time_to_distance_valid
+  nameWithType: HLI_STATE_TTD.time_to_distance_valid
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.time_to_distance_valid
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: time_to_distance_valid
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 863
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Validity flags for time_to_distance. 10 elements [0..HLI_BAHN_POS_TIME_LAH_MAXIDX].
+  example: []
+  syntax:
+    content: public byte[] time_to_distance_valid
+    return:
+      type: System.Byte[]
+    content.vb: Public time_to_distance_valid As Byte()
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_3
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_3
+  id: sgn16_free_3
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn16_free_3
+  nameWithType: HLI_STATE_TTD.sgn16_free_3
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_3
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn16_free_3
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 866
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public short sgn16_free_3
+    return:
+      type: System.Int16
+    content.vb: Public sgn16_free_3 As Short
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_2
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_2
+  id: sgn16_free_2
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn16_free_2
+  nameWithType: HLI_STATE_TTD.sgn16_free_2
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn16_free_2
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 868
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public short sgn16_free_2
+    return:
+      type: System.Int16
+    content.vb: Public sgn16_free_2 As Short
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_1
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_1
+  id: sgn16_free_1
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn16_free_1
+  nameWithType: HLI_STATE_TTD.sgn16_free_1
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn16_free_1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn16_free_1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 870
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public short sgn16_free_1
+    return:
+      type: System.Int16
+    content.vb: Public sgn16_free_1 As Short
+- uid: TwinSharp.CNC.HLI_STATE_TTD.enlacement
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.enlacement
+  id: enlacement
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: enlacement
+  nameWithType: HLI_STATE_TTD.enlacement
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.enlacement
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: enlacement
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 873
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Enlacement of the edge at the pressure roll.
+  example: []
+  syntax:
+    content: public uint enlacement
+    return:
+      type: System.UInt32
+    content.vb: Public enlacement As UInteger
+- uid: TwinSharp.CNC.HLI_STATE_TTD.edge_velocity
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.edge_velocity
+  id: edge_velocity
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: edge_velocity
+  nameWithType: HLI_STATE_TTD.edge_velocity
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.edge_velocity
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: edge_velocity
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 876
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Velocity of the edge in the power applicator. Unit: 1 µm/s.'
+  example: []
+  syntax:
+    content: public int edge_velocity
+    return:
+      type: System.Int32
+    content.vb: Public edge_velocity As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.edge_position
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.edge_position
+  id: edge_position
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: edge_position
+  nameWithType: HLI_STATE_TTD.edge_position
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.edge_position
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: edge_position
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 879
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: 'Length of consumed edge since start of TTD function. Unit: 0.1 µm.'
+  example: []
+  syntax:
+    content: public int edge_position
+    return:
+      type: System.Int32
+    content.vb: Public edge_position As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_9
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_9
+  id: sgn32_free_9
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_9
+  nameWithType: HLI_STATE_TTD.sgn32_free_9
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_9
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_9
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 882
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_9
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_9 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_8
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_8
+  id: sgn32_free_8
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_8
+  nameWithType: HLI_STATE_TTD.sgn32_free_8
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_8
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_8
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 884
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_8
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_8 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_7
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_7
+  id: sgn32_free_7
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_7
+  nameWithType: HLI_STATE_TTD.sgn32_free_7
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_7
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_7
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 886
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_7
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_7 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_6
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_6
+  id: sgn32_free_6
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_6
+  nameWithType: HLI_STATE_TTD.sgn32_free_6
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_6
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_6
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 888
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_6
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_6 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_5
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_5
+  id: sgn32_free_5
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_5
+  nameWithType: HLI_STATE_TTD.sgn32_free_5
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_5
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_5
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 890
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_5
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_5 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_4
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_4
+  id: sgn32_free_4
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_4
+  nameWithType: HLI_STATE_TTD.sgn32_free_4
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_4
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_4
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 892
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_4
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_4 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_3
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_3
+  id: sgn32_free_3
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_3
+  nameWithType: HLI_STATE_TTD.sgn32_free_3
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_3
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_3
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 894
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_3
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_3 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_2
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_2
+  id: sgn32_free_2
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_2
+  nameWithType: HLI_STATE_TTD.sgn32_free_2
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_2
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_2
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 896
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_2
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_2 As Integer
+- uid: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_1
+  commentId: F:TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_1
+  id: sgn32_free_1
+  parent: TwinSharp.CNC.HLI_STATE_TTD
+  langs:
+  - csharp
+  - vb
+  name: sgn32_free_1
+  nameWithType: HLI_STATE_TTD.sgn32_free_1
+  fullName: TwinSharp.CNC.HLI_STATE_TTD.sgn32_free_1
+  type: Field
+  source:
+    remote:
+      path: TwinSharp/CNC/Structs.cs
+      branch: main
+      repo: https://github.com/kimblad/TwinSharp.git
+    id: sgn32_free_1
+    path: ../TwinSharp/CNC/Structs.cs
+    startLine: 898
+  assemblies:
+  - TwinSharp
+  namespace: TwinSharp.CNC
+  summary: Unused.
+  example: []
+  syntax:
+    content: public int sgn32_free_1
+    return:
+      type: System.Int32
+    content.vb: Public sgn32_free_1 As Integer
+references:
+- uid: TwinSharp.CNC
+  commentId: N:TwinSharp.CNC
+  href: TwinSharp.html
+  name: TwinSharp.CNC
+  nameWithType: TwinSharp.CNC
+  fullName: TwinSharp.CNC
+  spec.csharp:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+  spec.vb:
+  - uid: TwinSharp
+    name: TwinSharp
+    href: TwinSharp.html
+  - name: .
+  - uid: TwinSharp.CNC
+    name: CNC
+    href: TwinSharp.CNC.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

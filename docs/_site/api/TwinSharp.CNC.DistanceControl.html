@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DistanceControl | TwinSharp Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DistanceControl | TwinSharp Documentation ">
+      
+      <meta name="description" content="Wraps the TF5200 distance control HLI for a single CNC axis. Allows enabling the interface, issuing commands (activate/freeze/deactivate), and reading state and position feedback via ADS variable handles. Two activation modes are supported: SET_POS mode (): the CNC adjusts the axis   to hold the workpiece surface at a commanded absolute position.Constant-distance mode (): the CNC   maintains a fixed gap between tool and workpiece surface. The sensor must be wired as Encoder 2 on the axis and configured in TwinCAT. Parameter P-AXIS-00328 must be set to enable the distance control function globally for the axis. Semaphore handshake: after writing a command, command_semaphor_rw is set to true. The CNC clears it back to false once the command is latched. In debug contexts it is acceptable not to wait for clearance before issuing the next command.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/kimblad/TwinSharp/new/main/apiSpec/new?filename=TwinSharp_CNC_DistanceControl.md&amp;value=---%0Auid%3A%20TwinSharp.CNC.DistanceControl%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="TwinSharp">
+            TwinSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TwinSharp.CNC.DistanceControl">
+
+
+
+  <h1 id="TwinSharp_CNC_DistanceControl" data-uid="TwinSharp.CNC.DistanceControl" class="text-break">
+Class DistanceControl  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TwinSharp.html">TwinSharp</a>.<a class="xref" href="TwinSharp.CNC.html">CNC</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TwinSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Wraps the TF5200 distance control HLI for a single CNC axis.
+Allows enabling the interface, issuing commands (activate/freeze/deactivate),
+and reading state and position feedback via ADS variable handles.</p>
+<p>Two activation modes are supported:</p>
+<ul><li><b>SET_POS mode</b> (<a class="xref" href="TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateSetPos_System_Double_">ActivateSetPos(double)</a>): the CNC adjusts the axis
+  to hold the workpiece surface at a commanded absolute position.</li><li><b>Constant-distance mode</b> (<a class="xref" href="TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_ActivateConstDistance_System_Double_">ActivateConstDistance(double)</a>): the CNC
+  maintains a fixed gap between tool and workpiece surface.</li></ul>
+<p>The sensor must be wired as Encoder 2 on the axis and configured in TwinCAT.
+Parameter P-AXIS-00328 must be set to enable the distance control function globally for the axis.</p>
+<p>Semaphore handshake: after writing a command, <code>command_semaphor_rw</code> is set to <code>true</code>.
+The CNC clears it back to <code>false</code> once the command is latched. In debug contexts it is
+acceptable not to wait for clearance before issuing the next command.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DistanceControl : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DistanceControl</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TwinSharp_CNC_DistanceControl_ActivateConstDistance_" data-uid="TwinSharp.CNC.DistanceControl.ActivateConstDistance*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_ActivateConstDistance_System_Double_" data-uid="TwinSharp.CNC.DistanceControl.ActivateConstDistance(System.Double)">
+  ActivateConstDistance(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activates distance control in constant-distance mode. The CNC will maintain a fixed
+gap of <code class="paramref">distanceMm</code> mm between tool and workpiece surface.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActivateConstDistance(double distanceMm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>distanceMm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_ActivateSetPos_" data-uid="TwinSharp.CNC.DistanceControl.ActivateSetPos*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_ActivateSetPos_System_Double_" data-uid="TwinSharp.CNC.DistanceControl.ActivateSetPos(System.Double)">
+  ActivateSetPos(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activates distance control in SET_POS mode. The CNC will adjust the axis so that
+the workpiece surface is held at <code class="paramref">positionMm</code> (absolute, in mm).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActivateSetPos(double positionMm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>positionMm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_Deactivate_" data-uid="TwinSharp.CNC.DistanceControl.Deactivate*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_Deactivate" data-uid="TwinSharp.CNC.DistanceControl.Deactivate">
+  Deactivate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deactivates distance control. The offset ramps to zero and the state transitions to
+<a class="xref" href="TwinSharp.CNC.DistanceControlState.html#TwinSharp_CNC_DistanceControlState_TurningOff">TurningOff</a>, then automatically to
+<a class="xref" href="TwinSharp.CNC.DistanceControlState.html#TwinSharp_CNC_DistanceControlState_Inactive">Inactive</a> once the ramp completes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_Dispose_" data-uid="TwinSharp.CNC.DistanceControl.Dispose*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_Dispose" data-uid="TwinSharp.CNC.DistanceControl.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_Enable_" data-uid="TwinSharp.CNC.DistanceControl.Enable*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_Enable" data-uid="TwinSharp.CNC.DistanceControl.Enable">
+  Enable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Signals to the CNC that this HLI interface is present.
+Creates the ADS variable handles on first call — this is where AdsErrorCode 1808 will
+surface if TF5200 is not configured on the machine or the axis.
+Must be called once after connect before any distance control commands will be accepted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Enable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_Freeze_" data-uid="TwinSharp.CNC.DistanceControl.Freeze*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_Freeze" data-uid="TwinSharp.CNC.DistanceControl.Freeze">
+  Freeze()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Freezes the current distance control offset. The axis stops tracking the sensor;
+the last-applied offset remains active. Transitions to <a class="xref" href="TwinSharp.CNC.DistanceControlState.html#TwinSharp_CNC_DistanceControlState_Freeze">Freeze</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Freeze()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_GetActualOffsetMm_" data-uid="TwinSharp.CNC.DistanceControl.GetActualOffsetMm*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_GetActualOffsetMm" data-uid="TwinSharp.CNC.DistanceControl.GetActualOffsetMm">
+  GetActualOffsetMm()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the position offset currently being applied to the axis by the distance
+controller, in mm. Zero when inactive.
+Requires <a class="xref" href="TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Enable">Enable()</a> to have been called first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetActualOffsetMm()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_GetActualPositionMm_" data-uid="TwinSharp.CNC.DistanceControl.GetActualPositionMm*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_GetActualPositionMm" data-uid="TwinSharp.CNC.DistanceControl.GetActualPositionMm">
+  GetActualPositionMm()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the workpiece surface position currently measured by the sensor, in mm.
+Requires <a class="xref" href="TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Enable">Enable()</a> to have been called first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetActualPositionMm()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_GetState_" data-uid="TwinSharp.CNC.DistanceControl.GetState*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_GetState" data-uid="TwinSharp.CNC.DistanceControl.GetState">
+  GetState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the current distance control state (0 = Inactive, 1 = Active, …).
+Requires <a class="xref" href="TwinSharp.CNC.DistanceControl.html#TwinSharp_CNC_DistanceControl_Enable">Enable()</a> to have been called first.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DistanceControlState GetState()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TwinSharp.CNC.DistanceControlState.html">DistanceControlState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TwinSharp_CNC_DistanceControl_Reference_" data-uid="TwinSharp.CNC.DistanceControl.Reference*"></a>
+
+  <h3 id="TwinSharp_CNC_DistanceControl_Reference_System_Double_" data-uid="TwinSharp.CNC.DistanceControl.Reference(System.Double)">
+  Reference(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>References the sensor zero point. Use when the sensor is not absolute and a known
+reference position must be latched. Transitions to <a class="xref" href="TwinSharp.CNC.DistanceControlState.html#TwinSharp_CNC_DistanceControlState_Inactive">Inactive</a>
+after referencing completes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reference(double refPositionMm)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>refPositionMm</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/kimblad/TwinSharp/blob/main/TwinSharp/CNC/DistanceControl.cs/#L25" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
